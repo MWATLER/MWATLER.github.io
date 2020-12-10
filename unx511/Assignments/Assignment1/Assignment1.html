@@ -1,0 +1,202 @@
+<h2>UNX511 – Assignment 1: A Network Monitor</h2>
+
+<h3>Due: Friday, November 13, 2020</h3>
+
+<h4><b><u>Business Case</u></b> (Marketing, Project Manager, Senior Executives)</h4>
+<p>Your job will be to create a network monitor, which monitors the performance of all network interface devices.
+    Monitoring network interfaces can help in debugging system problems as well as in enhancing system performance
+    through a central intelligent networking device.</p>
+
+<p>Currently on our virtual machine, we have two network interfaces: <b>ens33</b> and <b>lo</b>. On other machines such as routers,
+    there may be as many as 64 network interfaces, some of them running in the order of 10GBits/second. For routers
+    and other networking equipment, it is crucial to know the performance of each interface and to control each interface,
+    therefore we are going to create a network monitor.</p>
+
+<h4><b><u>Requirements</u></b> (Marketing, Project Manager, Project Lead)</h4>
+<ol>
+<li>Our network monitor must be able to monitor any set of network interfaces requested by the user.</li>
+<li>The statistics for each network interface can be found under Linux’s <b>/sys</b> directory, specifically <b>/sys/class/net/</b>&lt;interface-name&gt;.
+    The <b>/sys</b> directory is another directory like <b>/proc</b> and <b>/dev</b> which can be accessed to set or obtain information about the kernel's view of the system.<br><br>
+    
+    The statistics to be monitored are:<br>
+    The operating state – <b>operstate</b><br>
+    The up-count (number of times the interface has been up) – <b>carrier_up_count</b><br>
+    The down-count (number of times the interface has been down) – <b>carrier_down_count</b><br>
+    The number of received bytes – <b>rx_bytes</b><br>
+    The number of dropped received bytes – <b>rx_dropped</b><br>
+    The number of erroneous received bytes – <b>rx_errors</b><br>
+    The number of received packets – <b>rx_packets</b><br>
+    The number of transmitted bytes – <b>tx_bytes</b><br>
+    The number of dropped transmitted bytes – <b>tx_dropped</b><br>
+    The number of erroneous transmitted bytes – <b>tx_errors</b><br>
+    The number of transmitted packets – <b>tx_packets</b></li>
+    
+<li>If an interface goes down (see <b>operstate</b>) then your network monitor must set it back up.</li>
+    
+<li>Your network monitor must shut down gracefully. That means it must intercept a <b>ctrl-C</b> to shutdown the program.
+    The shutdown might include the following – close file connections, deallocate memory, etc…</li>
+    
+<li>The network monitor will act synchronously. It will not instantly react to any changes in the statistics. Rather, it will poll the statistics every one second.</li>
+    
+<li>Your network monitor will print out the following once every second for each network interface:<br>
+    <b>Interface:</b>&lt;interface-name&gt; <b>state:</b>&lt;state&gt; <b>up_count:</b>&lt;up-count&gt; <b>down_count:</b>&lt;down-count&gt;<br>
+    <b>rx_bytes:</b>&lt;rx-bytes&gt; <b>rx_dropped:</b>&lt;rx-dropped&gt; <b>rx_errors:</b>&lt;rx-errors&gt; <b>rx_packets:</b>&lt;rx-packets&gt;<br>
+    <b>tx_bytes:</b>&lt;tx-bytes&gt; <b>tx_dropped:</b>&lt;tx-dropped&gt; <b>tx_errors:</b>&lt;tx-errors&gt; <b>tx_packets:</b>&lt;tx-packets&gt;</li>
+    
+</ol>
+
+<h4><b><u>Design</u></b> (Project Lead, Senior Engineers)</h4>
+<p>There are two parts to the design – the interface monitor and the network monitor itself.
+    There may be one or more interface monitors but there is only one network monitor.</p>
+
+<p><b>The Interface Monitor</b><br>
+    Each interface will have a process dedicated to it. This is called the interface monitor. For instance, if there are three network
+    interfaces on a Linux machine, three instances of the interface monitor process will be running. Each interface monitor will:
+<ul>
+<li>Communicate with the network monitor through a temporary socket file in the <b>/tmp</b> directory.</li>
+<li>Inform the network monitor when it is ready to start monitoring.</li>
+<li>Monitor and print out the statistics for a given interface as per instructed by the network monitor.</li>
+<li>Report to the network monitor if its interface does down.</li>
+<li>Be able to set an interface link up as per instructed by the network monitor.</li>
+<li>Perform a controlled shutdown if it receives a <b>ctrl-C</b> of if instructed by the network monitor by closing the socket connection to the network monitor then exiting.</li>
+</ul>    
+</p>
+
+<p><b>The Network Monitor</b><br>
+    The network monitor controls all interface monitors running on the system. In a <a href="https://www.ciena.com/insights/what-is/What-Is-SDN.html" target="_blank">software defined network</a>,
+    it is common to centralize all intelligence in one spot in order to coordinate the operations of all network devices. In our case, intelligence is centralized in the
+    network monitor and the work is done by the interface monitors. The network monitor will:
+<ul>
+<li>Query the user for the number of interfaces and the name of each interface.</li>
+<li>It will create and bind a socket to a temporary socket file in the <b>/tmp</b> directory.</li>
+<li>It will maintain separate socket connections to each interface monitor.</li>
+<li>Once an interface is ready, the network monitor will instruct the interface monitor to monitor and print out the statistics for its interface once every second.</li>
+<li>If the interface monitor indicates that its link is down, the network monitor will instruct the interface monitor to put the link back up.</li>
+<li>On shutdown, the network monitor will intercept the SIGINT interrupt (ctrl-C, kill -2), send a shut down message to each interface monitor, close all connections, then exit.</li>
+</ul>    
+</p>
+
+<img src="NetworkMonitorArch.PNG">
+
+<h4><b><u>Implementation</u></b> (Junior and Senior Engineers)</h4>
+<ul>
+<li>The network monitor will communicate with each of its interface monitors through a socket file in the <b>/tmp</b> directory.
+<ul>
+<li>The network monitor will create and bind a socket to a temporary socket file in the <b>/tmp</b> directory. This will be its master file descriptor.</li>
+<li>The network monitor will listen with the master file descriptor.</li>
+<li>The network monitor will fork() and exec() all the interface monitors, providing the interface name as an argument to each interface monitor.</li>
+<li>The interface monitor will create a socket and attempt to connect to the socket file in the <b>/tmp</b> directory.</li>
+<li>The network monitor will now accept all connections storing the file descriptor of each connection in an FD_SET.</li>
+<li>The network monitor now has its master file descriptor and a descriptor for each connection with its interface monitors.</li>
+<li>Each interface monitor has now connected to the network monitor.</li></li>
+</ul>
+<li>The communications between the network monitor and its interface monitors is synchronous, in that whenever the network monitor writes to
+    an interface monitor, it waits to read something back before writing again.</li>
+<li>The communications between the network monitor and its interface monitors is with select. When the network monitor receives a message,
+    it has to search through its list of connections to see which interface monitor it is communicating with.</li>
+<li>The protocol between the network monitor and the interface monitor is as follows:
+<ul>
+<li>Once the network monitor has received a set of interfaces from the user, the network monitor starts up each interface monitor via fork() and exec() as follows:<br>
+<b>./intfMonitor &lt;interface-name&gt;</b></li>
+<li>The network monitor waits for a connection request from each interface monitor.</li>
+<li>The interface monitor writes “Ready” to the network monitor through a socket.</li>
+<li>The network monitor writes “Monitor” to the interface monitor to monitor and print out the statistics of a given interface once per second.
+The interface monitor responds by writing “Monitoring” to the network monitor.</li>
+<li>If a link goes down, the interface monitor writes “Link Down” to the network monitor, in which case the network monitor will send “Set Link Up” to the interface monitor.</li>
+<li>If the interface monitor receives “Set Link Up” from the network monitor, it will execute an IOCTL command to set the link back up.
+If the IOCTL command fails, the interface monitor will print out the system error message.
+(see <a href="https://stackoverflow.com/questions/5858655/linux-programmatically-up-down-an-interface-kernel" target="_blank">linux-programmatically-up-down-an-interface-kernel</a>)</li>
+<li>If the network monitor receives a SIGINT (ctrl-C, kill -2), it will send a “Shut Down” message to each interface monitor, close all of its connections, and exit. The network monitor
+    might not be able to shut down each interface monitor by a socket command if the interface monitor is in the middle of monitoring statistics. You might prefer that 
+    the network monitor send a SIGINT to each interface monitor instead.</li>
+<li>If the interface monitor receives a SIGINT or a “Shut Down” message from the network monitor, it will write “Done” to the network monitor (if possible), close the connection and exit.</li>
+<li>If the network monitor is still alive and receives “Done” from an interface monitor, it will close that socket connection.</li></li>
+</ul>
+<li>Monitoring statistics for each interface is quite simple. Each interface monitor simply has to open each file in the <b>/sys/class/net/</b>&lt;interface-name&gt;
+    directory and read one value. No parsing is necessary.</li>
+</ul>
+
+<h4><b><u>Testing and Rework</u></b> (Junior and Senior Engineers, Product Support)</h4>
+<ul>
+<li>You might have to run your network monitor as super user:<br>
+    <b>$ sudo ./networkMonitor</b></li>
+    
+<li>You may wish to insert a DEBUG flag in your Makefile and in your code to perform debug printf’s/cout’s while debugging.
+    If you make your code with your debug flag, then code within the following blocks will be executed:<br>
+    <b>#ifdef DEBUG<br>
+    cout&lt;&lt;&quot;DEBUG:...&quot;&lt;&lt;endl<br>
+    #endif</b><br>
+    
+    When you are satisfied with your code, you can build your code without the debug flag.</li>
+    
+<li>When you run your network monitor, compare the statistics that is printed out with the values in the <b>/sys/class/net/</b>&lt;interface-name&gt; directory.</li>
+    
+<li>When you run your network monitor, compare the statistics that is printed out with those shown with <b>$ ifconfig</b>.</li>
+    
+<li>To test the link down/link up feature of your interface monitor, put a link down (for example lo) with the following command from the command line:<br>
+    <b>$ sudo ip link set lo down</b><br>
+    
+    Your interface monitor should indicate that the link is down temporarily, then indicate when it has come back up. Your up_count and down_count should each increment by one as well.</li>
+    
+<li>A correctly running network monitor will look something like:<br>
+    <img src="sampleRun.png">
+</li>
+</ul>
+
+<h4><b><u>Questions</u></b></h4>
+<ol>
+<li>In a few sentences, describe the general architecture of your interface monitor. [0.5 mark]</li>
+<li>In a few sentences, describe the general architecture of your network monitor. [0.5 mark]</li>
+<li>Could the interface monitor and network monitor all be contained within one process, if so how? [0.5 mark]</li>
+<li>Could the interface monitor and network monitor all be contained within one process, assuming 128 network
+    interfaces running at several Giga-bits per second, which require a polling interval of one millisecond per interface. [0.5 mark]</li>
+<li>What is a software defined network? In doing so, describe the applications layer, the control layer, and the forwarding layer. [2 marks]</li>
+</ol>
+
+<h4><b><u>Timeline</u></b></h4>
+
+<p><b>Days 1-7:</b> Complete and test the interface monitor as a stand-alone unit.</p>
+
+<p><b>Days 8-14:</b> Complete the network monitor with socket interface to the interface monitor.</p>
+
+<p><b>Days 15-21:</b> Test and Rework. Answer Questions. Submit Assignment.</p>
+
+<h4><b><u>Marking Rubric</u></b></h4>
+
+<p>Assignment 1 is worth 15% of your final grade and as such is marked out of 15 as follows:</p>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+table {
+    width: 800;
+}
+</style>
+<table>
+    <tr><th></th><th>Does not meet expectations</th><th>Satisfactory</th><th>Good</th><th>Exceeds Expectations</th></tr>
+    <tr><td><b>Interface Monitor<br>(4 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>Network Monitor<br>(4 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>Documentation<br>(3 marks)</b></td><td>Does not contain documentation</td><td>Contains header documentation for either all files or for all functions within each file</td>
+        <td>Contains header documentation for all files and for most functions within each file</td><td>Contains header documentation for all files and for all functions within each file.
+            Documents unclear code.</td></tr>
+    <tr><td><b>Questions<br>(4 marks)</b></td><td>Answers no question correctly</td><td>Answers some questions correctly</td>
+        <td>Answers most questions correctly</td><td>Answers all Questions correctly</td></tr>
+</table>
+
+<h4><b><u>Submission</u></b></h4>
+
+<p>Please email all source code and answers to questions to:
+    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+         
+    <p><b>NB: My last name is Watler, not Walter.</b></p>
+
+<p>Your questions can be submitted in a separate document or embedded within your source code.</p>
+
+<h4><b><u>Late Policy</u></b></h4>
+
+<p>You will be docked 10% if your assignment is submitted 1-2 days late.<br>
+   You will be docked 20% if your assignment is submitted 3-4 days late.<br>
+   You will be docked 30% if your assignment is submitted 5-6 days late.<br>
+   You will be docked 40% if your assignment is submitted 7 days late.<br>
+   You will be docked 50% if your assignment is submitted over 7 days late.</p>
