@@ -1,0 +1,6 @@
+From Week1:
+* sudo passwd root
+* Linux System Functions
+* perror(), strerror() and conditional compilation
+
+Week2:

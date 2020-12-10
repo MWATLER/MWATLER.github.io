@@ -1,0 +1,1 @@
+cmd_/home/miguelwatler/src/Week2/device_driver/kernel/simple-module.o := ld -m elf_x86_64  -z max-page-size=0x200000    -r -o /home/miguelwatler/src/Week2/device_driver/kernel/simple-module.o /home/miguelwatler/src/Week2/device_driver/kernel/main.o /home/miguelwatler/src/Week2/device_driver/kernel/device_file.o

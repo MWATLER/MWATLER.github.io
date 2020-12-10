@@ -1,0 +1,58 @@
+<h1>Week 10 - November 23-27</h1>
+
+<h3>Introduction</h3>
+<p>This week we study semaphores.
+    Semaphores provide us with a synchronization mechanism to protect shared resources used by multiple processes.
+</p>
+
+<h3>Videos</h3>
+<table>
+    <tr><td></td><td>Semaphores</td><td><a href="https://www.youtube.com/watch?v=6heMm23ofFo" target="_blank">Intro To Computer Systems: Semaphores Explained</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=TYnNKdf7cZM" target="_blank">C Programming in Linux Tutorial #046 - Semaphore pthread</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<ul>
+    <li><b>Quiz 9</b> (November 24) will be on semaphores. Study chapter 53 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a></li>
+		<!--<li>Your quiz can be found <a href="Quiz9.docx" target="_blank">here</a>.</li>-->
+</ul>
+
+<h3>Lecture Material</h3>
+<ul>
+    <li>Semaphores - Chapter 53 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+</ul>
+
+<h3>Lab</h3>
+<ul>
+    <li><a href="../Labs/Lab8/Lab8.html" target="_blank">Lab 8</a> (worth 2%, due December 4) - Server with Multiple Clients and a Receive Thread with Mutexing.</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p>Introduction to <a href="../Assignment2/Assignment2.html">Assignment 2</a>. (due December 11).</p>
+
+<h3>Sample Code</h3>
+
+<p><em>Semaphores</em></p>
+<ul>
+    <li>Code that demonstrates non-named semaphores can be found in
+        <a href="sem_init/client1.cpp" target="_blank">client1.cpp</a> and
+        <a href="sem_init/client2.cpp" target="_blank">client2.cpp</a> with their
+        <a href="sem_init/Makefile" target="_blank">Makefile</a>.
+        </li>
+        <li>Code that demonstrates named semaphores that can be used across two processes can be found in
+        <a href="sem_open/client.h" target="_blank">client.h</a>,
+        <a href="sem_open/client1.cpp" target="_blank">client1.cpp</a> and
+        <a href="sem_open/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="sem_open/Makefile" target="_blank">Makefile</a>.
+    </li>
+    <li>Code that restricts access to a data base using named semaphores between three processes can be found in
+        <a href="dataBase/client.h" target="_blank">client.h</a>,
+        <a href="dataBase/dataBase.cpp" target="_blank">dataBase.cpp</a>,
+        <a href="dataBase/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="dataBase/client2.cpp" target="_blank">client2.cpp</a> and
+        <a href="dataBase/client3.cpp" target="_blank">client3.cpp</a> with its
+        <a href="dataBase/Makefile" target="_blank">Makefile</a>.
+    </li>
+</ul>

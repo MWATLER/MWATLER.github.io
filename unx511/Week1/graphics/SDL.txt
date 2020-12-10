@@ -1,0 +1,17 @@
+For installing it:
+sudo apt install libsdl2-2.0
+sudo apt-get install libsdl2-image-2.0-0
+sudo apt-get install libsdl2-image-dev
+
+and for installing everything necessary to build programs that use SDL:
+sudo apt install libsdl2-dev
+
+Include from the SDL2 directory:
+#include <SDL2/SDL.h>
+
+A good tutorial:
+http://lazyfoo.net/tutorials/SDL/index.php
+https://www.youtube.com/watch?v=yFLa3ln16w0
+
+SDL Reference:
+https://wiki.libsdl.org/CategoryAPI
