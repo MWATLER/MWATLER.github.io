@@ -1,0 +1,49 @@
+<h2>DSP912 – Lab 1: Monitoring Process Memory Usage</h2>
+
+<h3>Due: Friday, September 25, 2020</h3>
+
+<p>Information on all processes running on a Linux system is contained within the <b>/proc</b> directory. All directories under <b>/proc</b> which are digits represent a process.
+    If you issue the command <b>ps aux</b> you will see all processes that are running. You can also see the processes ordered by cpu usage by issuing the command <b>top</b>.</p>
+
+<p>In this lab, you will write a C/CPP program to scan all processes running on the system and report on those which have used more than 10Mbytes of resident memory.
+    You can do this by going through each process directory in <b>/proc</b> and looking at the file <b>status</b>. For instance, let’s say you want to look at the
+    status information for process 10167:</p>
+
+<p><b>$ cd /proc/10167</b><br>
+<b>$ vim status</b></p>
+
+<p>Inside the file <b>status</b> are variables such as <b>Name:</b> (the process name) and <b>Pid:</b> (the process pid).
+    Virtual Memory is represented by <b>VmSize:</b> and Resident memory is represented by <b>VmRSS:</b></p>
+
+<ol>
+    <li>Write and execute a C/CPP program that will scan every directory in <b>/proc</b> that represents a process
+        (each directory that begin with a number represents a process). Open the file <b>status</b>.
+        If <b>VmRSS:</b> is greater than 10000 kB, then print out the process name, the process id and the memory used.
+        See the code at the following link as an example on how to get all files in a directory:<br>
+        <a href="https://www.unix.com/programming/33263-unix-c-get-files-folder.html" target="_blank">https://www.unix.com/programming/33263-unix-c-get-files-folder.html</a>.
+    </li><br>
+    <li>Open a second command line and execute the command <b>top</b> which orders processes by cpu usage.<br> 
+        <b>$ top</b><br>
+        Compare the processes reported in <b>top</b> with those reported by your program. You can cancel the execution of <b>top</b> with <b><i>ctrl-c</i></b>.<br>
+        See the following link for an explanation of top:<br>
+        <a href="https://linux.die.net/man/1/top" target="_blank">https://linux.die.net/man/1/top</a>.
+    </li><br>
+    <li>Explain the difference between virtual memory and resident memory. What is virtual memory? What is resident memory?
+    </li><br>
+    <li>Research and report on any of the three of the processes returned by your program. Simply explain what these processes do.
+    </li>
+</ol>
+
+<p>The following web-page contains detailed information about each of the files under <b>/proc:</b><br>
+    proc – process information pseudo-filesystem: <a href="https://linux.die.net/sag/proc-fs.html" target="_blank">https://linux.die.net/sag/proc-fs.html</a>.</p>
+	
+<p>Sample source code that retrieves system information such as model name, cpu speed, memory usage, processes running/blocked, up time and idle time can be seen at
+<a href="MemMonitor.cpp" target="_blank">MemMonitor.cpp</a>.
+</p>
+
+<h3>Lab Submission:</h3>
+
+<p>Email me your C/CPP file and Makefile (#1 above) as well as a short document (#3 and #4 above) to:
+    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+
+<p><b>NB: My last name is Watler, not Walter.</b></p>
