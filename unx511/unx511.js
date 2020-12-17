@@ -47,6 +47,8 @@ function SetContent(content) {
         elem=document.querySelector('#Quiz9');
     } else if(content=='Quiz10') {
         elem=document.querySelector('#Quiz10');
+    } else if(content=='Quiz11') {
+        elem=document.querySelector('#Quiz11');
     } else if(content=='Lab1') {
         elem=document.querySelector('#Lab1');
     } else if(content=='Lab2') {
@@ -65,6 +67,10 @@ function SetContent(content) {
         elem=document.querySelector('#Lab8');
     } else if(content=='Lab9') {
         elem=document.querySelector('#Lab9');
+    } else if(content=='Lab10') {
+        elem=document.querySelector('#Lab10');
+    } else if(content=='Lab11') {
+        elem=document.querySelector('#Lab11');
     } else if(content=='Assignment1') {
         elem=document.querySelector('#Assignment1');
     } else if(content=='Assignment2') {
@@ -93,6 +99,10 @@ function SetContent(content) {
         elem=document.querySelector('#Week11');
     } else if(content=='Week12') {
         elem=document.querySelector('#Week12');
+    } else if(content=='Week13') {
+        elem=document.querySelector('#Week13');
+    } else if(content=='Week14') {
+        elem=document.querySelector('#Week14');
     }
     if(elem!=undefined) {
         SetActive(elem);
