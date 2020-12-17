@@ -1,27 +1,100 @@
-<h1>Week 6 - October 19-23</h1>
+<h1>Week 6 - February 15-19</h1>
 
 <h3>Introduction</h3>
-This week we will have a mid-term review and a mid-term test.
+<p>This week we will look at how to fork a process
+    and how to exec a process. We will also look at signals (a software interrupt); how to generate them,
+    how to handle them, and where they are generally used.
+</p>
 
 <h3>Videos</h3>
-None.<br>
+<table>
+    <tr><td></td><td>fork(), exec()</td><td><a href="https://www.youtube.com/watch?v=ss1-REMJ9GA" target="_blank">Creating new processes with fork()!</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=kDxjcyHu_Qs" target="_blank">Making forked clones more useful with exec()!</a></td></tr>
+    <tr><td></td><td>Signals</td><td><a href="https://www.youtube.com/watch?v=rggw61JtGz0" target="_blank">C Programming in Linux - Signals</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=83M5-NPDeWs" target="_blank">Sending and Handling Signals in Linux</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=xzwwWxyfFJo" target="_blank">Signals in Linux</a></td></tr>
+</table>
+
 <h3>Quiz</h3>
-None.<br>
+<ul>
+<li><b>Quiz 5</b> (February 15) will be on signals. Study Chapter 20 of
+    <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+</ul>
 
 <h3>Midterm</h3>
-<ul><li>Mid-Term Review. If you can answer the questions in <a href="MidTermReview.docx" target="_blank">MidTermReview</a>, you should get 100%.</li>
+<ul>
+    <li>Mid-Term Review. If you can answer the questions in <a href="../Week7/MidTermReview.docx" target="_blank">MidTermReview</a>, you should get 100%.</li>
 </ul>
 
 <h3>Lecture Material</h3>
-None.<br>
+<ul>
+    <li>Processes, memory layout of a process - Chapter 6 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a></li>
+    <li>Process creation, termination, and monitoring child processes- Chapters 24-26 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a></li>
+    <li>Signals, generating and handling- Chapter 20 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a></li>
+    <li><a href="ProcessAddressSpace.docx" target="_blank">Process Address Space</a></li>
+    <li><a href="https://www.tldp.org/LDP/tlk/dd/interrupts.html" target="_blank">Interrupts and Interrupt Handlers</a></li>
+    <li><a href="https://bash.cyberciti.biz/guide/Sending_signal_to_Processes" target="_blank">Sending signals to Processes</a></li>
+    <li><a href="http://www.linuxhowtos.org/C_C++/socket.htm" target="_blank">Sockets Tutorial</a></li>
+</ul>
 
 <h3>Lab</h3>
 <ul>
-<li><a href="../Labs/Lab5/Lab5.html" target="_blank">Lab 5, cont'd</a> (due October 23) - server/client communications.</li>
+  <li><a href="../Labs/Lab5/Lab5.html" target="_blank">Lab 5</a> (due February 26) - signals.</li>
 </ul>
 
-<h3>Assignment</h3>
-<p>Introduction to <a href="../Assignment1/Assignment1.html" target="_blank">Assignment 1</a> (due November 13).</p>
+<h3>Assignment(s)</h3>
+<p>None.</p>
 
 <h3>Sample Code</h3>
-None.
+
+<p><em>Processes</em></p>
+<ul>
+    <li>Before we look at process creation and termination, we have to understand the memory space of a process. A document describing the memory layout of a process can be found
+        <a href="ProcessAddressSpace.docx" target="_blank">here</a>. The linux command <a href="https://linux.die.net/man/1/pmap" target="_blank">pmap</a> can be used to report the memory map of a process.</li>
+    <li>We study process creation and termination using
+    <a href="http://man7.org/linux/man-pages/man2/fork.2.html" target="_blank">fork()</a>,
+    <a href="http://man7.org/linux/man-pages/man2/vfork.2.html" target="_blank">vfork()</a>,
+    <a href="http://man7.org/linux/man-pages/man3/exit.3.html" target="_blank">exit()</a>,
+    <a href="http://man7.org/linux/man-pages/man3/atexit.3.html" target="_blank">atexit()</a>,
+    <a href="http://man7.org/linux/man-pages/man3/on_exit.3.html" target="_blank">on_exit()</a>,
+    <a href="http://man7.org/linux/man-pages/man2/wait.2.html" target="_blank">wait(), waitpid()</a>, and
+    <a href="http://man7.org/linux/man-pages/man3/exec.3.html" target="_blank">execve()</a>.
+    A document summarizing these functionalities can be found <a href="ProcessCreationAndTermination.docx" target="_blank">here</a>.</li>
+    <li>Code that demonstrates a simple fork() can be found in <a href="fork/fork1.cpp" target="_blank">fork1.cpp</a>.</li>
+    <li>Code that demonstrates the wait() function can be found in <a href="fork/fork2.cpp" target="_blank">fork2.cpp</a></li>
+    <li>The makefile for fork1.cpp and fork2.cpp can be found in <a href="fork/Makefile" target="_blank">Makefile</a>.</li>
+    <li>Code demonstrating exec() can be found in <a href="exec/exec1.cpp" target="_blank">exec1.cpp</a>. Here is its <a href="exec/Makefile" target="_blank">Makefile</a>.</li>
+    <li>Code demonstrating the on_exit() functionality can be found in <a href="exit/openTest.cpp" target="_blank">openTest.cpp</a> and <a href="exit/fopenTest.cpp" target="_blank">fopenTest.cpp</a>, with its <a href="exit/Makefile" target="_blank">Makefile</a>.</li>
+    <li>System monitoring using fork can be found in <a href="systemMonitor/fork/sysmonFork.cpp" target="_blank">sysmonFork.cpp</a> with it's <a href="systemMonitor/fork/Makefile" target="_blank">Makefile</a>.
+    sysmonFork.cpp spawns two child processes using fork(), where each child process monitors a network interface.</li>
+    <li>System monitoring using fork and exec can be found in <a href="systemMonitor/exec/sysmonExec.cpp" target="_blank">sysmonExec.cpp</a> and
+    <a href="systemMonitor/exec/intfMonitor.cpp" target="_blank">intfMonitor.cpp</a>. Here is the <a href="systemMonitor/exec/Makefile" target="_blank">Makefile</a>.
+    sysmonExec.cpp spawns two child processes using fork() and exec(), where intfMonitor.cpp contains the code for the child process. Each child process monitors a network
+    interface.</li>
+</ul>
+
+<p><em>Signals</em></p>
+<ul>
+    <li>Lecture: Introduction to Signals. Signals are a form of software interrupt, in that they interrupt what a program is doing.
+    These signals can be handled by the program or they can perform their default behaviour.
+    If a program is written to handle signals, then when a signal is received the program will interrupt what it is doing,
+    go to the handler, perform tasks in the handler, then return to what it was doing.
+    For a general discussion on software interrupts, see <a href="http://www.linfo.org/software_interrupt.htm" target="_blank">software interrupt</a>.
+    You might want to look at hardware interrupts as well, but this is out of scope for this course.
+    For a general discussion on hardware interrupts, see <a href="https://www.tldp.org/LDP/tlk/dd/interrupts.html" target="_blank">Interrupts and Interrupt Handlers</a>.</li>
+    <li>For a complete list of signals, see <a href="signals.pdf" target="_blank">List of Signals</a>.</li>
+    <li>Signals can be sent via the kill function either from the command line or from within a program.
+    To send kill from within a program, see <a href="http://man7.org/linux/man-pages/man2/kill.2.html" target="_blank">kill</a>.</li>
+    <li>To send kill from the command line, see <a href="https://bash.cyberciti.biz/guide/Sending_signal_to_Processes" target="_blank">Sending signals to Processes</a>.</li>
+    <li>Signal handlers can be registered from within a C/CPP program with <a href="http://man7.org/linux/man-pages/man2/signal.2.html" target="_blank">signal</a> or
+    <a href="http://man7.org/linux/man-pages/man2/sigaction.2.html" target="_blank">sigaction</a>. sigaction() is the preferred way.</li>
+    <li>A program that sends signals to a particular process is <a href="sigint/sendsig.cpp" target="_blank">sendsig.cpp</a>.
+    A program that does not handle signals is <a href="sigint/recvsig.cpp" target="_blank">recvsig.cpp</a> and a program that handles signals is <a href="sigint/recvsig2.cpp" target="_blank">recvsig2.cpp</a>.
+    Their Makefile can be found <a href="sigint/Makefile" target="_blank">here</a>.</li>
+    <li>A program that forks 4 child processes, where the parent shuts each down one by one can be found in <a href="sigaction/sigact.cpp" target="_blank">sigact.cpp</a>.
+    Its Makefile can be found <a href="sigaction/Makefile" target="_blank">here</a>.</li>
+    <li>A program that cannot be interrupted by ctrl-C or ctrl-Z is shown in <a href="uninterrupt/uninterrupt.cpp">uninterrupt.cpp</a>.</li>
+</ul>

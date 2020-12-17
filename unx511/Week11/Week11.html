@@ -1,88 +1,87 @@
-<h1>Week 11 - November 30-December 4</h1>
+<h1>Week 11 - March 29-April 2</h1>
 
 <h3>Introduction</h3>
-<p>This week we will look at the last method of inter-process communications - shared memory.
-    Shared memory is different from the others stored because it is primarily a hardware-based form of
-    inter-process communications. It is faster than the other methods studied, but it is also 
-    the most primitive form of interprocess communication.</p>
-<p>We will also have a final exam review.</p>
+<p>This week we study threads and mutexes. Threads allow us to perform parallel programming within a process.
+    Mutexes provide us with a synchronization mechanism to protect shared resources used by multiple threads.
+    We will also look at server design.
+</p>
 
 <h3>Videos</h3>
 <table>
-    <tr><td>Shared Memory</td><td><a href="https://www.youtube.com/watch?v=SMeDw2GDMsE" target="_blank">C Programming in Linux Tutorial #036 - Shared Memory</a></td></tr>
+    <tr><td></td><td>Threads</td><td><a href="https://www.youtube.com/watch?v=h_HwkHobfs0" target="_blank">Processes and threads - Gary explains</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=ZXW-iVivWF4" target="_blank">An introduction to Linux Threads</a></td></tr>
+    <tr><td></td><td>Mutexes</td><td><a href="https://www.youtube.com/watch?v=nlHIuG3RQ0g" target="_blank">Thread synchronization with mutexes in C</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=xDwcm8bQ-Mg" target="_blank">Deadlock and conditions for deadlock in OS</a></td></tr>
 </table>
 
 <h3>Quiz</h3>
 <ul>
-    <li><b>Quiz 10</b> (December 1) will be on shared memory. Study chapter 48 of
-        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a></li>
-</ul>
-
-<h3>Lab</h3>
-<ul>
-    <li><a href="../Labs/Lab10/Lab10.html" target="_blank">Lab 10</a> (due December 11) - Semaphores with Shared Memory.</li>
-</ul>
-
-<h3>Final Assessment</h3>
-<ul>
-<li>Final Review: see <a href="../FinalReview/FinalReview.docx" target="_blank">FinalReview.docx</a>.</li>
+    <li><b>Quiz 9</b> (March 29) will be on threads. Study chapter 29 and 30 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
 </ul>
 
 <h3>Lecture Material</h3>
 <ul>
-    <li>Shared Memory - Chapter 48 of
+    <li>Threads - Chapter 29 of
         <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+    <li>Thread synchronization - Chapter 30 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+    <li><a href="msgPump/Sockets%20and%20the%20Implementation%20of%20a%20World%20Wide%20Messaging%20System.ppt" target="_blank">Sockets and the Implementation of a World Wide Messaging System</a>.</li>
+    <li><a href="https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/" target="_blank">What’s the Diff: Programs, Processes, and Threads</a>.</li>
 </ul>
 
-<h3>Lab(s)</h3>
+<h3>Lab</h3>
 <ul>
-    <li><a href="../Labs/Lab9/Lab9.html" target="_blank">Lab 9</a> (due December 11) - Semaphores with Shared Memory.<br>
+    <li><a href="../Labs/Lab9/Lab9.html" target="_blank">Lab 9</a> (due April 9) - Server with Multiple Clients and a Receive Thread with Mutexing.</li>
 </ul>
 
-<h3>Assignment(s)</h3>
-<p><a href="../Assignment2/Assignment2.html" target="_blank">Assignment 2</a>. (due December 11).</p>
+<h3>Assignment</h3>
+<p>Introduction to <a href="../Assignment2/Assignment2.html">Assignment 2</a>. (due April 16).</p>
 
 <h3>Sample Code</h3>
 
-<p><em>Shared Memory</em></p>
+<p><em>Threads and Mutexes</em></p>
 <ul>
-    <li>Code that demonstrates shared memory via Linux utilities can be found in
-        <a href="transfer/client.h" target="_blank">client.h</a>,
-        <a href="transfer/client1.cpp" target="_blank">client1.cpp</a> and
-        <a href="transfer/client2.cpp" target="_blank">client2.cpp</a> with its
-        <a href="transfer/Makefile" target="_blank">Makefile</a>.
+    <li>A simple introduction to threads can be found in <a href="thread/counter.cpp" target="_blank">counter.cpp</a>. This program simply starts off 5 threads with a 1 second delay between each. Each thread counts 10 seconds.<br>
+        Note that in the <a href="thread/Makefile" target="_blank">Makefile</a> a link to the pthread library is made (LIBS=-lpthread). This is required wherever threads are used in the code.</li>
+    <li>For a good discussion of processes vs threads, see the article
+        <a href="https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/" target="_blank">What’s the Diff: Programs, Processes, and Threads</a>.</li>
+        <li>This week we study threads and mutexes. Mutexing is to ensure our threads are synchronized and operations are atomic.
+        <a href="https://www.techopedia.com/definition/3466/atomic-operation" target="_blank">Atomic</a> operations are the foundation on which other synchronization methods are built,
+        they provide instructions that execute atomically, without interruption.  Atomic operators are indivisible instructions.</li>
+        <li>Code that demonstrates the need for mutexes can be found in
+        <a href="mutex/counterNoMutex.cpp" target="_blank">counterNoMutex.cpp</a>,
+        <a href="mutex/counterMutex.cpp" target="_blank">counterMutex.cpp</a>, and
+        <a href="mutex/Makefile" target="_blank">Makefile</a>.</li>
+        <li>In synchronizing threads with mutexes, one has to avoid thread deadlock.
+        <a href="https://www.geeksforgeeks.org/operating-system-process-management-deadlock-introduction/" target="_blank">Deadlock</a> is a situation where a set of
+        processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process.</li>
+        <li>Code that demonstrates deadlock can be found in
+        <a href="deadlock/deadlock.cpp" target="_blank">deadlock.cpp</a> and
+        <a href="deadlock/Makefile" target="_blank">Makefile</a>.</li>
+        <li>Code that demonstrates stream sockets with a separate receive thread for socket reads can be found in
+        <a href="clientServer/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="clientServer/server.cpp" target="_blank">server.cpp</a>, and
+        <a href="clientServer/Makefile" target="_blank">Makefile</a>.
+        Note that common resources are mutexed.
         </li>
-        <li>Code that demonstrates shared memory via a memory pool can be found in
-        <a href="mempool/client.h" target="_blank">client.h</a>,
-        <a href="mempool/client1.cpp" target="_blank">client1.cpp</a> and
-        <a href="mempool/client2.cpp" target="_blank">client2.cpp</a> with its
-        <a href="mempool/Makefile" target="_blank">Makefile</a>.
-        This will give a segmentation fault. The address of the memory pool of client1
-        has been passed to client2, therefore it should be possible to read the contents
-        of the memory pool in client2. However, each process has its own virtual address
-        space, so the address passed by client1 will not be the same address when read
-        by client2. THIS DOES NOT WORK.<br>
-        Linux has its own shared memory utilities. It is better to use those.
+        <li>Code that demonstrates INET sockets with a separate receive thread for socket reads can be found in
+        <a href="msgServer/msgClient.cpp" target="_blank">msgClient.cpp</a>,
+        <a href="msgServer/msgServer.cpp" target="_blank">msgServer.cpp</a>, and
+        <a href="msgServer/Makefile" target="_blank">Makefile</a>.
+        Note that common resources are mutexed.
         </li>
-        <li>Code for two processes which send messages to each other via shared memory can be found at:
-        <a href="dispatch/client.h" target="_blank">client.h</a>,
-        <a href="dispatch/client1.cpp" target="_blank">client1.cpp</a> and
-        <a href="dispatch/client2.cpp" target="_blank">client2.cpp</a> with its
-	<a href="transfer/Makefile" target="_blank">Makefile</a>.<br>
-	The messages passed back and forth between the clients have been taken from the Monty Python
-	skit: <a href="https://www.youtube.com/watch?v=U4VjZKPjxnE" target="_blank">The Funniest Joke</a>.
+        <li>A server can act as a message pump or dispatcher if it accepts messages from a number of clients and redirects these messages to a number of clients.
+        A client creates a message with the source client information and destination client information embedded in the messsage. The client sends this message
+        to a server which redirects it to the destination client.
+        Code that demonstrates this message pump or dispatcher using INET sockets with a separate receive thread for socket reads can be found in
+        <a href="msgPump/msgClient.cpp" target="_blank">msgClient.cpp</a>,
+        <a href="msgPump/msgPump.cpp" target="_blank">msgPump.cpp</a>,
+        <a href="msgPump/startClient.sh" target="_blank">startClient.sh</a>,
+        <a href="msgPump/stopClient.sh" target="_blank">stopClient.sh</a>, and
+        <a href="msgPump/Makefile" target="_blank">Makefile</a>.
+        Note that common resources are mutexed.<br>
+        For the rationale behind such a central server, see the first six slides of
+        <a href="msgPump/Sockets%20and%20the%20Implementation%20of%20a%20World%20Wide%20Messaging%20System.ppt" target="_blank">Sockets and the Implementation of a World Wide Messaging System</a>.
     </li>
-    <li>Code that simulates 16 clients trying to write to a radio with four channels can be found at:
-        <a href="radioChannels/client.h" target="_blank">client.h</a>,
-        <a href="radioChannels/client.cpp" target="_blank">client.cpp</a>,
-        <a href="radioChannels/memoryManager.cpp" target="_blank">memoryManager.cpp</a> and
-        <a href="radioChannels/Makefile" target="_blank">Makefile</a>.<br>
-	The memory map can be seen at:
-        <a href="radioChannels/RadioChannelsMemoryMap.docx" target="_blank">RadioChannelsMemoryMap.docx</a>.<br>
-        Scripts for starting and stopping the simulation can be found at:
-        <a href="radioChannels/start.sh" target="_blank">start.sh</a> and
-        <a href="radioChannels/stop.sh" target="_blank">stop.sh</a>.<br>
-        Each channel uses a part of shared memory. The clients write to one of the channels by writing into the channel's shared memory.
-        The use of semaphores ensures that the number of clients writing to the radio's channels is limited to four.
-    </li>    
 </ul>

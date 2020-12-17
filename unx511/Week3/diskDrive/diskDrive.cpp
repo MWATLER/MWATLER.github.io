@@ -1,6 +1,6 @@
 #include <fcntl.h> 
-#include <linux/hdreg.h> 
-#include <linux/fs.h> 
+#include <linux/hdreg.h>//for HDIO_GETGEO
+#include <linux/fs.h>//for BLKGETSIZE 
 #include <string.h>
 #include <sys/ioctl.h> 
 #include <sys/stat.h> 
@@ -39,7 +39,10 @@ int main()
         switch(choice) {
             case 1:
                 cout << "Retrieving the disk parameters" << endl;
+		//See https://www.kernel.org/doc/Documentation/ioctl/hdio.txt
+		memset(&hdGeo, 0, sizeof(hdGeo));
                 ret = ioctl(fd, HDIO_GETGEO, &hdGeo);
+//              retVal = ioctl(file_descriptor, command, &parameter_or_structure);
                 if(ret<0) {
                     cout << strerror(errno) << endl;
                 } else {
@@ -48,7 +51,10 @@ int main()
                     cout << "There are " << hdGeo.sectors << " sectors" << endl;
                     cout << "There are " << hdGeo.cylinders << " cylinders" << endl;
                     cout << "Start is " << hdGeo.start << endl;
+		    printf("There are %d heads, %d sectors, %u cylinders, and start is %lu\n",
+				    hdGeo.heads, hdGeo.sectors, hdGeo.cylinders, hdGeo.start); 
                 }
+		memset(&hdGeo, 0, sizeof(hdGeo));
                 ret = ioctl(fd1, HDIO_GETGEO, &hdGeo);
                 if(ret<0) {
                     cout << strerror(errno) << endl;
@@ -58,6 +64,8 @@ int main()
                     cout << "There are " << hdGeo.sectors << " sectors" << endl;
                     cout << "There are " << hdGeo.cylinders << " cylinders" << endl;
                     cout << "Start is " << hdGeo.start << endl;
+		    printf("There are %d heads, %d sectors, %u cylinders, and start is %lu\n",
+				    hdGeo.heads, hdGeo.sectors, hdGeo.cylinders, hdGeo.start); 
                 }
                 sleep(5);
 	        break;
