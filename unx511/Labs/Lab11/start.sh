@@ -1,5 +1,5 @@
 ./client1 &
-sleep 0.7
+sleep 1
 ./client2 &
-sleep 0.7
+sleep 1
 ./client3 &

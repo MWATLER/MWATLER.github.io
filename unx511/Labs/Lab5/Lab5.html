@@ -1,37 +1,50 @@
-<h2>DSP912 – Lab 5: Server/Client Communications</h2>
+<h2>DSP912 – Lab 5: Signals</h2>
 
-<h3>Due: Friday, November 6, 2020</h3>
+<h3>Due: Friday, February 26, 2021</h3>
 
-<p>In this lab you will create two processes: <b>server</b> and <b>client</b>. They will communicate with each other through a socket connection.
-    The relationship of the <b>server</b> to the <b>client</b> is that of a master to a slave. The <b>server</b> will send commands to the <b>client</b>
-    and the <b>client</b> will obey and respond. This type of communications is called synchronous, in that the <b>server</b> does not send any more data
-    until it has received a response from the <b>client</b>.</p>
+<p>In this lab you will use signals as a method of communication between a parent process and its children processes.
+    Signals will be used to synchronize the start-up and shutdown of all children processes.</p>
 
-<ul>
-<li>The <b>server</b> and <b>client</b> will communicate via a socket file <b>/tmp/lab5</b>.</li>
-<li>The socket type is <b>AF_UNIX</b>, <b>SOCK_STREAM</b>. The socket family is <b>AF_UNIX</b>.</li>
-<li>The <b>client</b> will run inside an infinite while loop whereas the <b>server</b> will send specific commands then quit.</li>
-<li>The sequence of commands are as follows:
-    <ol>
-<li>The <b>server</b> will send the command “<b>Pid</b>” to the <b>client</b> to request the client’s pid.</li>
-<li>The <b>client</b> will respond with “<b>This client has pid &lt;pid&gt;</b>”, where &lt;pid&gt; can be obtained from <b>getpid()</b>.</li>
-<li>The <b>server</b> will print out the response from the <b>client</b>.</li>
-<li>The <b>server</b> will then send the command “<b>Sleep</b>” to the <b>client</b> to request the <b>client</b> to sleep for 5 seconds.</li>
-<li>The <b>client</b> will sleep for 5 seconds then respond to the <b>server</b> with “<b>Done</b>”.</li>
-<li>When the <b>server</b> receives “<b>Done</b>” from the <b>client</b>, the <b>server</b> will send the command “<b>Quit</b>” to tell the <b>client</b> to shutdown.</li>
-<li>The <b>client</b> will break out of its infinite while loop, close the socket connection, then return 0.</li>
-<li>The <b>server</b> will close all socket connections, unlink the socket file <b>/tmp/lab5</b>, then return 0.</li>
-    </ol>
-</li>
-<li>Be sure to add error handling in your code.</li>
-<li>Please add debug printf’s/cout’s throughout your code to keep track of what your <b>server</b> and <b>client</b> are doing.</li>
-<li>A sample run for the <b>server</b> and <b>client</b> are as follows (be sure to run the <b>server</b> first):</li>
-</ul>
-<img src="clientServer.PNG">
+<p>The particular application in mind is a network monitor. The parent will start up children to monitor the network
+    interfaces on a machine. In our case, there are two interfaces: <b>ens33</b> and <b>lo</b>. There will therefore
+    be two children. One child will monitor <b>ens33</b> and one child will monitor <b>lo</b>.</p>
+
+<p>The parent process (<b>sysmonExec</b>) will spawn two children (<b>intfMonitor</b>) as follows:<br>
+    <b>$ ./intfMonitor lo<br></b>
+    <b>$ ./intfMonitor ens33<br></b>
+</p>
+
+<p>For the parent, you will have to send the start signal (SIGUSR1) to the children, sleep for 30 seconds,
+    then send the stop signal (SIGUSR2) to the children. The parent should wait for all children to shutdown
+    before shutting itself down.</p>
+<p>For the child, you will have to register signal handlers for start-up (SIGUSR1), shutdown (SIGUSR2), ctrl-C and ctrl-Z.
+    For ctrl-C and ctrl-Z, your signal handler will simply discard them, meaning your program will not shutdown on ctrl-C
+    nor be put in the background on ctrl-Z. Your child will have to wait until it receives a start signal from the parent
+    before starting. The child's signal handler will handle 4 signals as follows:
+    <ul>
+        <li>If the signal handler receives a SIGUSR1, the following message should appear on the screen:<br>
+        <b>intfMonitor: starting up</b></li>
+        <li>If the signal handler receives a ctrl-C, the following message should appear on the screen:<br>
+        <b>intfMonitor: ctrl-C discarded</b></li>
+        <li>If the signal handler receives a ctrl-Z, the following message should appear on the screen:<br>
+        <b>intfMonitor: ctrl-Z discarded</b></li>
+        <li>If the signal handler receives a SIGUSR2, the following message should appear on the screen:<br>
+        <b>intfMonitor: shutting down</b></li>
+        <li>If the signal handler receives any other signal, the following message should appear on the screen:<br>
+        <b>intfMonitor: undefined signal</b></li>
+    </ul>
+
+    When the child receives the shutdown signal, it should stop processing and exit.
+</p>
+
+<p>Code has been given to you so you can concentrate on the signals portion only. Simply fill in the parts indicated by <b>TODO</b>.</p>
+<p>The Makefile can be found at <a href="Makefile" target="_blank">Makefile</a>.<br>
+    The code for the parent can be found at <a href="sysmonExec.cpp" target="_blank">sysmonExec.cpp</a>.<br>
+    The code for the child can be found at <a href="intfMonitor.cpp" target="_blank">intfMonitor.cpp</a>.<br></p>
 
 <h3>Lab Submission:</h3>
 
-<p>Email me your Makefile, and your server.cpp and client.cpp to:
+<p>Email me your completed sysmonExec.cpp and intfMonitor.cpp to:
    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
         
 <p><b>NB: My last name is Watler, not Walter.</b></p>

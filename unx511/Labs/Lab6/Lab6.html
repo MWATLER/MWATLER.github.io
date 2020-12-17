@@ -1,62 +1,37 @@
-<h2>DSP912 – Lab 6: Pipes Between Processes</h2>
+<h2>DSP912 – Lab 6: Server/Client Communications</h2>
 
-<h3>Due: Friday, November 13, 2020</h3>
+<h3>Due: Friday, March 19, 2021</h3>
 
-<p>In this lab you will create a program that will take two arguments, with the intention that the output of the first argument will be piped to the second argument.
-    This is done to simulate shell behaviour. Your program will be invoked as follows:<br>
-    $ <b>./Lab6 &lt;argument1&gt; &lt;argument2&gt;</b></p>
-    
-<p><b>&lt;argument1&gt;</b> and <b>&lt;argument2&gt;</b> could be one, two or three strings in length.<br>
-    If an argument is more than one string in length, it has to be put in quotes.</p>
-    
-<p>For instance, say you want to see if any syslog processes are running on your machine, you would type the following from the command line:<br>
-    $ <b>ps -aux | grep -i syslog</b></p>
-    
-<p>Your program should do the exact same thing if invoked as follows:<br>
-    $ <b>./Lab6 “ps -aux” “grep -i syslog”</b></p>
-    
-<p>where <b>&lt;argument1&gt;=”ps -aux”</b> and <b>&lt;argument2&gt;=”grep -i syslog”</b>.</p>
-    
-<p>The idea basically is to use <b>pipe()</b> in your code to pipe the output of one process (<b>&lt;argument1&gt;</b>) into the
-    input of the second process (<b>&lt;argument2&gt;</b>) and display the results on the screen.</p>
-    
-<p>You may have problems breaking up argument1 and/or argument2 into separate strings. Here is one way to do so:<br>
-<b>     const int LEN=32;<br><br>
-    
-        char argument1[LEN];<br>
-        char argument2[LEN];<br>
-        strcpy(argument1, argv[1]);<br>
-        strcpy(argument2, argv[2]);<br>
-        char arg1[3][LEN];//max 3 strings<br>
-        char arg2[3][LEN];//max 3 strings<br>
-        int len1=0, len2=0;<br><br>
-    
-        char *token=strtok(argument1, " ");<br>
-        while(token!=NULL) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;            strcpy(arg1[len1], token);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;            token=strtok(NULL, " ");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;            ++len1;<br>
-        }<br>
-        token=strtok(argument2, " ");<br>
-        while(token!=NULL) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;            strcpy(arg2[len2], token);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;            token=strtok(NULL, " ");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;            ++len2;<br>
-        }</b></p>
+<p>In this lab you will create two processes: <b>server</b> and <b>client</b>. They will communicate with each other through a socket connection.
+    The relationship of the <b>server</b> to the <b>client</b> is that of a master to a slave. The <b>server</b> will send commands to the <b>client</b>
+    and the <b>client</b> will obey and respond. This type of communications is called synchronous, in that the <b>server</b> does not send any more data
+    until it has received a response from the <b>client</b>.</p>
 
-<p>For assistance on this, please see the video:<br>
-    <a href="https://www.youtube.com/watch?v=pO1wuN3hJZ4" target="_blank">Pipe, fork, dup exec explained</a></p>
-
-<p>In your submission of Lab6.cpp, please answer the following questions in your own words:
-<ol>
-<li>How does dup() work?</li>
-<li>How does dup2() work?</li>
-<li>How does execlp() work?</li>
-</ol></p>
+<ul>
+<li>The <b>server</b> and <b>client</b> will communicate via a socket file <b>/tmp/lab5</b>.</li>
+<li>The socket type is <b>AF_UNIX</b>, <b>SOCK_STREAM</b>. The socket family is <b>AF_UNIX</b>.</li>
+<li>The <b>client</b> will run inside an infinite while loop whereas the <b>server</b> will send specific commands then quit.</li>
+<li>The sequence of commands are as follows:
+    <ol>
+<li>The <b>server</b> will send the command “<b>Pid</b>” to the <b>client</b> to request the client’s pid.</li>
+<li>The <b>client</b> will respond with “<b>This client has pid &lt;pid&gt;</b>”, where &lt;pid&gt; can be obtained from <b>getpid()</b>.</li>
+<li>The <b>server</b> will print out the response from the <b>client</b>.</li>
+<li>The <b>server</b> will then send the command “<b>Sleep</b>” to the <b>client</b> to request the <b>client</b> to sleep for 5 seconds.</li>
+<li>The <b>client</b> will sleep for 5 seconds then respond to the <b>server</b> with “<b>Done</b>”.</li>
+<li>When the <b>server</b> receives “<b>Done</b>” from the <b>client</b>, the <b>server</b> will send the command “<b>Quit</b>” to tell the <b>client</b> to shutdown.</li>
+<li>The <b>client</b> will break out of its infinite while loop, close the socket connection, then return 0.</li>
+<li>The <b>server</b> will close all socket connections, unlink the socket file <b>/tmp/lab5</b>, then return 0.</li>
+    </ol>
+</li>
+<li>Be sure to add error handling in your code.</li>
+<li>Please add debug printf’s/cout’s throughout your code to keep track of what your <b>server</b> and <b>client</b> are doing.</li>
+<li>A sample run for the <b>server</b> and <b>client</b> are as follows (be sure to run the <b>server</b> first):</li>
+</ul>
+<img src="clientServer.PNG">
 
 <h3>Lab Submission:</h3>
 
-<p>Please embed your answers to the above questions in your <b>Lab6.cpp</b> and mail your <b>Lab6.cpp</b> and <b>Makefile</b> to:
+<p>Email me your Makefile, and your server.cpp and client.cpp to:
    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
         
 <p><b>NB: My last name is Watler, not Walter.</b></p>

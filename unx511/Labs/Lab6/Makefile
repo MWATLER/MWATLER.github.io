@@ -1,13 +1,16 @@
 CC=g++
 CFLAGS=-I
 CFLAGS+=-Wall
-CFLAGS+=-DDEBUG
-FILES=Lab6.cpp
+FILES1=client.cpp
+FILES2=server.cpp
 
-Lab6: $(FILES)
-	$(CC) $(CFLAGS) $^ -o $@
+client: .
+	$(CC) $(CFLAGS) $(FILES1) -o client
+
+server: .
+	$(CC) $(CFLAGS) $(FILES2) -o server
 
 clean:
-	rm -f *.o Lab6
+	rm -f *.o client server
 
-all: Lab6
+all: client server

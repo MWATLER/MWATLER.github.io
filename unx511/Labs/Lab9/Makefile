@@ -1,21 +1,23 @@
 CC=g++
 CFLAGS=-I
 CFLAGS+=-Wall
-FILES1=client1.cpp
-FILES2=client2.cpp
-FILES3=client3.cpp
+FILES1=client.cpp
+FILES2=server.cpp
 LIBS=-lpthread
 
 client1: $(FILES1)
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS)
 
-client2: $(FILES2)
+client2: $(FILES1)
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS)
 
-client3: $(FILES3)
+client3: $(FILES1)
+	$(CC) $(CFLAGS) $^ -o $@ $(LIBS)
+
+server: $(FILES2)
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS)
 
 clean:
-	rm -f *.o client1 client2 client3
+	rm -f *.o client1 client2 client3 server
 
-all: client1 client2 client3
+all: client1 client2 client3 server
