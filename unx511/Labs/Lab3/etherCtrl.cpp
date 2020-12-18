@@ -20,15 +20,14 @@ int main()
     struct ifreq ifr;
     char if_name[NAME_SIZE];
     unsigned char *mac=NULL;
-    struct sockaddr_in *addr=NULL;
 
     cout << "Enter the interface name: ";
     cin >> if_name;
 
     size_t if_name_len=strlen(if_name);
     if (if_name_len<sizeof(ifr.ifr_name)) {
-        memcpy(ifr.ifr_name, if_name, if_name_len);
-        ifr.ifr_name[if_name_len]=0;//NULL terminate
+        memcpy(ifr.ifr_name,if_name,if_name_len);
+        ifr.ifr_name[if_name_len]=0;
     } else {
         cout << "Interface name is too long!" << endl;
 	return -1;
@@ -62,31 +61,10 @@ int main()
 	    }
             break;
         case 2:
-            ret = ioctl(fd, SIOCGIFADDR, &ifr);
-            if(ret<0) {
-                cout << strerror(errno);
-            } else {
-                addr = (struct sockaddr_in*)&ifr.ifr_addr;
-                cout << "IP Address: " << inet_ntoa(addr->sin_addr) << endl;
-	    }
             break;
         case 3:
-            ret = ioctl(fd, SIOCGIFNETMASK, &ifr);
-            if(ret<0) {
-                cout << strerror(errno);
-            } else {
-                addr = (struct sockaddr_in*)&ifr.ifr_netmask;
-                cout << "IP Address: " << inet_ntoa(addr->sin_addr) << endl;
-	    }
             break;
         case 4:
-            ret = ioctl(fd, SIOCGIFBRDADDR, &ifr);
-            if(ret<0) {
-                cout << strerror(errno);
-            } else {
-                addr = (struct sockaddr_in*)&ifr.ifr_broadaddr;
-                cout << "IP Address: " << inet_ntoa(addr->sin_addr) << endl;
-	    }
             break;
         }
 	if(selection!=0) {
@@ -101,3 +79,4 @@ int main()
     close(fd); 
     return 0;
 }
+
