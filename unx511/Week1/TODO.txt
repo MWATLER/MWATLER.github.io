@@ -1,3 +1,0 @@
-Finish Makefiles - did MathLib, do again
-Look inside libraries
-File I/O
