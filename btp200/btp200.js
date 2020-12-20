@@ -47,6 +47,10 @@ function SetContent(content) {
         elem=document.querySelector('#Week11');
     } else if(content=='Week12') {
         elem=document.querySelector('#Week12');
+    } else if(content=='Week13') {
+        elem=document.querySelector('#Week13');
+    } else if(content=='Week14') {
+        elem=document.querySelector('#Week14');
     }
     if(elem!=undefined) {
         SetActive(elem);
