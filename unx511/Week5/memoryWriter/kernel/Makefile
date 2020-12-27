@@ -3,6 +3,8 @@
 # 22-Dec-20  M. Watler          Created.
 #
 TARGET_MODULE:=Memory-Writer
+device=memwr
+#major=250
 
 # If we running by kernel building system
 ifneq ($(KERNELRELEASE),)
@@ -22,11 +24,5 @@ all :
 clean:
 # run kernel build system to cleanup in current directory
 	$(MAKE) -C $(BUILDSYSTEM_DIR) M=$(PWD) clean
-
-load:
-	insmod ./$(TARGET_MODULE).ko
-
-unload:
-	rmmod ./$(TARGET_MODULE).ko
 
 endif
