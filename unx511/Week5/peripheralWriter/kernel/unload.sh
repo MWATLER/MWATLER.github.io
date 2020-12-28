@@ -1,6 +1,6 @@
 #!/bin/sh
-module="Memory-Writer"
-device="memwr"
+module="Peripheral-Writer"
+device="perwr"
 
 # invoke insmod with all arguments we were passed
 # and use a pathname, as newer modutils don't look in . by default

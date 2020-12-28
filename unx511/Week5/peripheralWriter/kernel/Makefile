@@ -1,14 +1,12 @@
-# Makefile - makefile for kernel level memory writer
+# Makefile - makefile for kernel level peripheral writer
 #
 # 22-Dec-20  M. Watler          Created.
 #
-TARGET_MODULE:=Memory-Writer
-device=memwr
-#major=250
+TARGET_MODULE:=Peripheral-Writer
 
 # If we running by kernel building system
 ifneq ($(KERNELRELEASE),)
-	$(TARGET_MODULE)-objs := memoryWriter.o
+	$(TARGET_MODULE)-objs := peripheralWriter.o
 	obj-m := $(TARGET_MODULE).o
 
 # If we are running without kernel build system
