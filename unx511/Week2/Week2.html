@@ -32,8 +32,29 @@
 
 <p><em>Static Libraries</em></p>
 <ul>
+  <li>We looked at a <a href="MathLib/Makefile" target="_blank">Makefile</a> for building a static library libMath.a from the files
+    <a href="MathLib/General.cpp" target="_blank">General.cpp</a>,
+    <a href="MathLib/Geometry.cpp" target="_blank">Geometry.cpp</a>, and
+    <a href="MathLib/Conversions.cpp" target="_blank">Conversions.cpp</a>.
+    This Makefile also had an "install" rule to copy the static library along with the header files to a general place.
+    </li>
+    <li>We looked at a <a href="MathTest/Makefile" target="_blank">Makefile</a> for that links in the static library libMath.a
+    with its header files to build MathTest with the following CPP file:
+    <a href="MathTest/MathTest.cpp" target="_blank">MathTest.cpp</a>.
+    </li>
 </ul>
 
 <p><em>Shared Libraries</em></p>
 <ul>
+  <li>We did not look at shared libraries, but this <a href="MathLib/shared/Makefile" target="_blank">Makefile</a>
+    creates a shared library from the following files:
+    <a href="MathLib/shared/General.cpp" target="_blank">General.cpp</a>,
+    <a href="MathLib/shared/Geometry.cpp" target="_blank">Geometry.cpp</a>, and
+    <a href="MathLib/shared/Conversions.cpp" target="_blank">Conversions.cpp</a>.
+    This Makefile also had an "install" rule to copy the shared library along with the header files to a general place.
+    </li>
+    <li>And this <a href="MathTest/shared/Makefile" target="_blank">Makefile</a> links in a shared library libMath.so
+    with its header files to build the MathTest executable with the following CPP file:
+    <a href="MathTest/shared/MathTest.cpp" target="_blank">MathTest.cpp</a>.
+    </li>
 </ul>
