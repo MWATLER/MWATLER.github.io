@@ -2,12 +2,37 @@
 
 <h3>Due: Friday, February 19, 2021</h3>
 
-<p>.</p>
+<p>In this lab you will complete the missing sections of a hardware device driver. Most of the code is given to you. You have to implement the read and ioctl function of the device driver.</p>
 
-<p>
+<p>The source code for the hardware device driver can be found at 
+   <a href="kernel/Makefile" target="_blank">Makefile</a>,
+   <a href="kernel/hardwareDevice.h" target="_blank">hardwareDevice.h</a>, and
+   <a href="kernel/hardwareDevice.c" target="_blank">hardwareDevice.c</a>.<br>
+   Scripts to load the module into the kernal and unload the module from the kernel can be found at
+   <a href="kernel/load.sh" target="_blank">load.sh</a> and
+   <a href="kernel/unload.sh" target="_blank">unload.sh</a>.<br>
+   A script that unloads, builds and loads the kernel module all in one can be found at
+   <a href="kernel/build.sh" target="_blank">build.sh</a>.
+</p>
+
+<p>The hardware device driver is simply a buffer running in a thread that is updated once per second. You have to implement the read function so a
+   program from user-space can read the contents of the buffer. You also have to implement the ioctl function with two ioctl commands: <b>HARDWARE_DEVICE_HALT</b> and <b>HARDWARE_DEVICE_RESUME</b>.
+   The command <b>HARDWARE_DEVICE_HALT</b> will halt the buffer from updating, and the command <b>HARDWARE_DEVICE_RESUME</b> will resume the updating of the buffer once per second.
+   Details for <b>HARDWARE_DEVICE_HALT</b> and <b>HARDWARE_DEVICE_RESUME</b> can be found in the header file <b>hardwareDevice.h</b>.
+</p>
+
+<p>A user-space program has been provided to test your work. This code can be found at
+   <a href="user/Makefile" target="_blank">Makefile</a> and
+   <a href="user/userHardware.cpp" target="_blank">userHardware.cpp</a>.<br>
+   This program simply reads the buffer three times once every three seconds, issues an ioctl command to halt, reads the buffer three times once every three seconds again,
+   then issues an ioctl command to resume, then reads the buffer three times once every three seconds then finishes.<br>
+   Please note the directory structure. The Makefile for userHardware.cpp has to include the kernel header file hardwareDevice.h. It expects hardwareDevice.h to reside
+   in a directory whose relative path is <b>../kernel</b>.
+</p>
+
 <h3>Lab Submission:</h3>
 
-<p>Email me your completed code to:
+<p>Email me your completed hardwareDevice.c to:
    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
         
 <p><b>NB: My last name is Watler, not Walter.</b></p>

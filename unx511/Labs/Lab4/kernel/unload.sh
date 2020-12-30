@@ -1,6 +1,6 @@
 #!/bin/sh
-module="Peripheral-Writer"
-device="perwr"
+module="Hardware-Device"
+device="hardware"
 
 # invoke rmmod to remove the module from the kernel
 /sbin/rmmod ./$module.ko
