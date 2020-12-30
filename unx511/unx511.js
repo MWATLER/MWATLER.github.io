@@ -69,8 +69,6 @@ function SetContent(content) {
         elem=document.querySelector('#Lab9');
     } else if(content=='Lab10') {
         elem=document.querySelector('#Lab10');
-    } else if(content=='Lab11') {
-        elem=document.querySelector('#Lab11');
     } else if(content=='Assignment1') {
         elem=document.querySelector('#Assignment1');
     } else if(content=='Assignment2') {
