@@ -2,7 +2,9 @@
 
 <h3>Due: Friday, February 19, 2021</h3>
 
-<p>In this lab you will complete the missing sections of a hardware device driver. Most of the code is given to you. You have to implement the read and ioctl function of the device driver.</p>
+<p>In this lab you will complete the missing sections of a hardware device driver. Most of the code is given to you. You have to implement the read and ioctl functions of the device driver.
+   See the <b>TODO</b> sections inside the driver.
+</p>
 
 <p>The source code for the hardware device driver can be found at 
    <a href="kernel/Makefile" target="_blank">Makefile</a>,
@@ -24,15 +26,15 @@
 <p>A user-space program has been provided to test your work. This code can be found at
    <a href="user/Makefile" target="_blank">Makefile</a> and
    <a href="user/userHardware.cpp" target="_blank">userHardware.cpp</a>.<br>
-   This program simply reads the buffer three times once every three seconds, issues an ioctl command to halt, reads the buffer three times once every three seconds again,
+   This program simply reads the buffer from kernel space three times once every three seconds, issues an ioctl command to halt, reads the buffer three times once every three seconds again,
    then issues an ioctl command to resume, then reads the buffer three times once every three seconds then finishes.<br>
-   Please note the directory structure. The Makefile for userHardware.cpp has to include the kernel header file hardwareDevice.h. It expects hardwareDevice.h to reside
+   Please note the directory structure. The Makefile for <b>userHardware.cpp</b> has to include the kernel header file <b>hardwareDevice.h</b>. It expects <b>hardwareDevice.h</b> to reside
    in a directory whose relative path is <b>../kernel</b>.
 </p>
 
 <h3>Lab Submission:</h3>
 
-<p>Email me your completed hardwareDevice.c to:
+<p>Email me your completed <b>hardwareDevice.c</b> to:
    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
         
 <p><b>NB: My last name is Watler, not Walter.</b></p>
