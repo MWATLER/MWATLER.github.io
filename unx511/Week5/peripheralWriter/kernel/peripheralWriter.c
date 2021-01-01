@@ -1,4 +1,6 @@
-//peripheralWriter.cpp - A kernel level program for writing directly to RAM
+//peripheralWriter.cpp - A kernel level program for writing directly to a peripheral
+//                       The peripheral is simulated by four buffers representing the
+//                       channels of the peripheral
 //
 // 22-Dec-20  M. Watler:        Created.
 
