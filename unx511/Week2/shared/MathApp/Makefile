@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-I/home/miguelwatler/src/Week1/Maths/shared
+CFLAGS=-I../MathRepository
 CFLAGS+=-Wall
 FILES=MathTest.cpp
 LIBS = -L/usr/lib -lMath

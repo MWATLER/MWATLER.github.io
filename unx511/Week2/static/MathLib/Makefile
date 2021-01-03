@@ -20,8 +20,8 @@ lib: $(OBJFILES)
 	$(AR) $(ARFLAGS) libMath.a $(OBJFILES)
 
 install:
-	cp libMath.a /home/miguelwatler/src/Week1/Maths
-	cp *.h /home/miguelwatler/src/Week1/Maths
+	cp libMath.a ../MathRepository
+	cp *.h ../MathRepository
 
 clean:
 	rm -f *.o *.a
