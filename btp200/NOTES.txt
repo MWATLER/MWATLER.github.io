@@ -1,0 +1,13 @@
+Workshops released on Friday.
+Part 1 is due Wednesday, part 2 due Sunday. (Workshops 1-6)
+Quiz on Monday.
+Lab on Monday.
+
+Add tests to BTP200, add questions.
+Limit to 10 minutes.
+Make available.
+
+Add links in the Addendum.
+
+Use Addendum Schedule, not Timeline
+
