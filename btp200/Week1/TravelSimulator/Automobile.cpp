@@ -27,18 +27,18 @@ void Automobile::drive(double _distance)
 {
     //liters consumed = liters/100km divide by 100km to get liters/km
     //                  then multiply that by the distance in km
-    double fuelConsumed = fuelEfficiency/100 * _distance;
+    double fuelConsumed = fuelEfficiency / 100 * _distance;
     fuelInTank -= fuelConsumed;
-    if(fuelInTank < 0) {
+    if (fuelInTank < 0) {
         fuelInTank = 0;
-	char message[64];
-	sprintf(message, "WARNING: The %s %d %s %s has no gas left in the tank\n", colour.c_str(), year, make.c_str(), model.c_str());
-	cout<<message;
+        char message[128];
+        sprintf(message, "WARNING: The %s %d %s %s has no gas left in the tank\n", colour.c_str(), year, make.c_str(), model.c_str());
+        cout << message;
     }
 }
 
 void Automobile::displayReport()
 {
-    cout<<"The "<<colour<<" "<<year<<" "<<make<<" "<<model<<" has "<<fuelInTank<<" left in the tank"<<endl;
+    cout << "The " << colour << " " << year << " " << make << " " << model << " has " << fuelInTank << " left in the tank" << endl;
 }
 
