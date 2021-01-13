@@ -87,5 +87,8 @@ The Linux Operating System will be introduced. We will learn how to create a sim
     <li>Sample code that demonstrates error messages from linux system functions can be seen in <a href="ErrorMsg/ErrorMsg.cpp" target="_blank">ErrorMsg.cpp</a>. This code demonstrates both
     <a href="http://man7.org/linux/man-pages/man3/perror.3.html" target="_blank">perror()</a> and <a href="http://man7.org/linux/man-pages/man3/strerror.3.html" target="_blank">strerror()</a></li>
     <li>Sample code that demonstrates custom error messages can be seen in the file <a href="ErrorMsg/MiniMath.cpp" target="_blank">MiniMath.cpp</a>.</li>
-    <li>The <a href="ErrorMsg/Makefile" target="_blank">Makefile</a> for MiniMath.cpp and ErrorMsg.cpp also demonstrates conditional compilation. Conditional compilation is not considered good programming practice.</li>
+    <li>The <a href="ErrorMsg/Makefile" target="_blank">Makefile</a> for MiniMath.cpp and ErrorMsg.cpp also demonstrates conditional compilation. Conditional compilation is not considered good programming practice.
+	Conditional compilation is useful in debugging. You can define a debug variable in your Makefile and run your code and look at the debug printf's that occur. When you are satisfied with your code, you can then
+	undefine debug in your Makefile and your code will run without debug. Conditional compilation is also useful for code with a rich feature set, where you can enable certain features and disable certain
+	features through defines in your Makefile.</li>
 </ul>
