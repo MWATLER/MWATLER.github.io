@@ -42,6 +42,10 @@
     with its header files to build MathTest with the following CPP file:
     <a href="static/MathApp/MathTest.cpp" target="_blank">MathTest.cpp</a>.
     </li>
+  <li>To look at symbols in a static library we can use the <a href="https://linux.die.net/man/1/nm" target="_blank">nm</a> command:<br>
+  <b>$ nm libMath.a</b></li>
+  <li>To display the table of contents of an archive, we can use <b>ar tv</b>, where <b>t</b> represents the table of contents and <b>v</b> indicates verbose:<br>
+  <b>$ ar tv libMath.a</b></li>
 </ul>
 
 <p><em>Shared Libraries</em></p>
@@ -58,7 +62,35 @@
     with its header files to build the MathTest executable with the following CPP file:
     <a href="shared/MathApp/MathTest.cpp" target="_blank">MathTest.cpp</a>.
     </li>
-</ul>
+    <li>To look at the dynamic dependencies within a shared library we can use the <a href="https://man7.org/linux/man-pages/man1/ldd.1.html" target="_blank">ldd</a> command:<br>
+    <b>$ ldd libMath.so</b></li>
+    <li>Shared libraries are often collections of other shared libraries, but if there are any functions defined within a shared library, they can also be seen with
+      the <a href="https://linux.die.net/man/1/nm" target="_blank">nm</a> command.</li>
+    <li>After a shared library is created, it must be made available to the entire system. This can be achieved with
+      the <a href="https://man7.org/linux/man-pages/man8/ldconfig.8.html" target="_blank">ldconfig</a> command.</li>
+  </ul>
+
+<p><em>Static Libraries vs Shared Libraries</em></p>
+<p>Because  they  provide  several  advantages  over  static  libraries,  shared  libraries are  the  predominant  type  of  library  in  use
+  on  contemporary  UNIX  systems.  The advantages of shared libraries spring primarily from the fact that when a program is linked against the
+  library, copies of the object modules required by the program are  not  included  in  the  resulting  executable.  Instead,  the  (static)
+  linker  merely includes  information  in  the  executable  file  about  the  shared  libraries  that  are required at run time. When the file
+  is executed, the dynamic linker uses this information  to  load  the  required  shared  libraries.  At  run  time,  all  programs  using
+  the same  shared  library  share  a  single  copy  of  that  library  in  memory.  Since  shared libraries are not copied into executable
+  files, and a single memory-resident copy of the  shared  library  is  employed  by  all  programs  at  run  time,  shared  libraries
+  reduce the amount of disk space and memory required by the system</p>
+<p>Although it is almost always preferable to use shared libraries, there are occasional
+  situations  where  static  libraries  may  be  appropriate.  In  particular,  the  fact  that  a
+  statically linked application contains all of the code that it requires at run time can
+  be advantageous. For example, static linking is  useful  if  the  user  can’t,  or  doesn’t
+  wish to, install a shared library on the system where the program is to be used, or if
+  the  program  is  to  be  run  in  an  environment  (perhaps  a  chroot  jail,  for  example)
+  where  shared  libraries  are  unavailable.  In  addition,  even  a  compatible  shared
+  library upgrade may unintentionally introduce a bug that breaks an application. By
+  linking an application statically, we can ensure that it is immune to changes in the
+  shared libraries on a system and that it has all of the code it requires to run (at the
+  expense  of  a  larger  program  size,  and  consequent  increased  disk  and  memory
+  requirements).</p>
 
 <p><em>SDL Graphics Library</em></p>
 <ul>
