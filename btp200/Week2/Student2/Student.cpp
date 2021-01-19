@@ -1,6 +1,7 @@
 //Student.cpp - student information
 
-#include <iostream>
+#include <iostream>     // std::cout, std::fixed
+#include <iomanip>      // std::setprecision
 #include "Student.h"
 
 using namespace std;
@@ -25,5 +26,5 @@ double Student::average() {
 }
 
 void Student::displayInformation() {
-    cout << name << ", student number " << no << ", has an average of " << aveMark << endl << endl;
+    cout << name << ", student number " << no << ", has an average of " << fixed << setprecision(2) << aveMark << endl << endl;
 }
