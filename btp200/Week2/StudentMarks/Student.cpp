@@ -10,7 +10,7 @@ void Student::enterInformation() {
     cin >> name;
     cout << "Enter the student number: ";
     cin >> no;
-    cout << "Enter the student's marks (5 in total):" << endl;
+    cout << "Enter the student's marks (3 in total):" << endl;
     for (int i = 0; i < N_MARKS; ++i) {
         cout << "Mark " << i + 1 << ": ";
         cin >> marks[i];

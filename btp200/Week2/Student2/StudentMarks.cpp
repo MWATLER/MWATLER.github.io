@@ -16,7 +16,10 @@ int main(void) {
 		pStudent[i]->displayInformation();
 	}
 
-	for (int i = 0; i < NO_STUDENTS; ++i) delete pStudent[i];
+	for (int i = 0; i < NO_STUDENTS; ++i) {
+		delete pStudent[i];
+		pStudent[i] = nullptr;
+	}
 
 	return 0;
 }
