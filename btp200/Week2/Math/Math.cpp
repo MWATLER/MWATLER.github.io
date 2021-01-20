@@ -16,3 +16,8 @@ double square(int numerator, int denominator)
 {
 	return (double)(numerator * numerator) / (denominator * denominator);
 }
+
+double square(double numerator, double denominator)
+{
+	return (numerator * numerator) / (denominator * denominator);
+}
