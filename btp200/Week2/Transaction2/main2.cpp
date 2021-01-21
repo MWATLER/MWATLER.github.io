@@ -13,7 +13,8 @@ int main() {
     for (i = 0; i < NO_TRANSACTIONS; i++) {
         tr.enter();
         tr.display();
-        tr.add(balance);
+        tr.add(balance);//appears to be pass by value,
+		                //but is in fact pass by address.
         std::cout << "balance is now " << balance << std::endl;
     }
 }
