@@ -50,38 +50,3 @@ use them. We will also look at IOCTLs which are user-space calls into the Linux 
   can be found at <a href="https://www.kernel.org/doc/Documentation/ioctl/hdio.txt" target="_blank">Summary of HDIO_ IOCTL calls</a> and
   <a href="https://man7.org/linux/man-pages/man4/sd.4.html" target="_blank">sd - driver for SCSI disk drives</a>.</li>
 </ul>
-
-<p><em>Device Drivers (out of scope)</em></p>
-<ul>
-  <li>For a tutorial on how to write device drivers see
-    <a href="https://www.apriorit.com/dev-blog/195-simple-driver-for-linux-os" target="_blank">Linux Device Drivers: Tutorial for Linux Driver Development</a>.</li>
-  <li>A kernel driver has been written that simply passes a hello message from kernel space to user space.
-  See <a href="device_driver/kernel/Makefile" target="_blank">Makefile</a>,
-  <a href="device_driver/kernel/device_file.h" target="_blank">device_file.h</a>,
-  <a href="device_driver/kernel/device_file.c" target="_blank">device_file.c</a>, and
-  <a href="device_driver/kernel/main.c" target="_blank">main.c</a>. This makefile creates a kernel module <b>simple-module.ko</b> which is installed with the following command (note: you have to be super-user):<br>
-  $ <em>sudo insmod simple-module.ko</em><br>
-  The kernel module can be removed with:<br>
-  $ <em>sudo rmmod simple-module.ko</em><br>
-  The Makefile in this example has rules for <b>insmod</b> and <b>rmmod</b> (make load, make unload).<br>
-  You can look in <b>/proc/modules</b> to see the name of the driver (simple-driver).
-  You can also look in <b>/proc/devices</b> to see that the simple-driver entry has been added with its major number.<br>
-  To access this driver from user space, you have to treat it as a file. To do so, <b>simple-driver</b> has to be added to the <b>/dev</b> directory with its major number.
-  This can be accomplished as follows, assuming its major number is 250:<br>
-  $ <em>sudo mknod /dev/simple-driver c 250 0</em><br>
-  If you look inside the <b>/dev</b> directory, you should now see an entry <b>simple-driver</b>.<br>
-  The following command will remove simple-driver from /dev:<br>
-  $ <em>sudo unlink /dev/simple-driver</em></li>
-  <li>A user application for calling this kernel module can be found in the file <a href="device_driver/user/user_file.cpp" target="_blank">user_file.cpp</a>.
-    For the makefile see <a href="device_driver/user/Makefile" target="_blank">Makefile</a>. The user application <b>user_file</b> opens <b>/dev/simple-driver</b> and executes a <b>read()</b>,
-  as if the device were a file. Be sure to run <b>user_file</b> as super-user.</li>
-  <li>You can see a list of kernel modules with:<br>
-  $ <a href="http://man7.org/linux/man-pages/man8/lsmod.8.html" target="_blank">lsmod</a><br>
-  You can see kernel debug messages with:<br>
-  $ <a href="http://man7.org/linux/man-pages/man1/dmesg.1.html" target="_blank">dmesg</a><br>
-  You can see kernel debug messages continuously with:<br>
-  $ <em>dmesg -wH</em><br>
-  With the commands <a href="http://man7.org/linux/man-pages/man8/insmod.8.html" target="_blank">insmod</a> and
-  <a href="http://man7.org/linux/man-pages/man8/rmmod.8.html" target="_blank">rmmod</a>, modules can be added and removed from the Linux kernel without rebooting the machine!!
-  The writing of kernel drivers is out of scope for this course but you have to learn how to use them.</li>
-</ul>
