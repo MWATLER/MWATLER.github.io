@@ -27,28 +27,6 @@ function SetContent(content) {
         elem=document.querySelector('#MidTerm');
     } else if(content=='FinalAssessment') {
         elem=document.querySelector('#FinalAssessment');
-    } else if(content=='Quiz1') {
-        elem=document.querySelector('#Quiz1');
-    } else if(content=='Quiz2') {
-        elem=document.querySelector('#Quiz2');
-    } else if(content=='Quiz3') {
-        elem=document.querySelector('#Quiz3');
-    } else if(content=='Quiz4') {
-        elem=document.querySelector('#Quiz4');
-    } else if(content=='Quiz5') {
-        elem=document.querySelector('#Quiz5');
-    } else if(content=='Quiz6') {
-        elem=document.querySelector('#Quiz6');
-    } else if(content=='Quiz7') {
-        elem=document.querySelector('#Quiz7');
-    } else if(content=='Quiz8') {
-        elem=document.querySelector('#Quiz8');
-    } else if(content=='Quiz9') {
-        elem=document.querySelector('#Quiz9');
-    } else if(content=='Quiz10') {
-        elem=document.querySelector('#Quiz10');
-    } else if(content=='Quiz11') {
-        elem=document.querySelector('#Quiz11');
     } else if(content=='Lab1') {
         elem=document.querySelector('#Lab1');
     } else if(content=='Lab2') {
