@@ -2,23 +2,85 @@
 
 <h3>Due: </h3>
 
-<p>This lab monitor temperature for four days. It records the high and low for each day, and validates the entries. At the end, the program prints a report.</p>
+<p>This lab monitors temperature for four days. It records the high and low for each day, and validates the entries. At the end, the program prints a report.</p>
 
 <p>This lab will test your ability to store information in arrays and use loops.</p>
 
-<p>Your program should be called <b>tempMonitor.c</b> and should run as follows:<br><br>
-<b>Temperature Monitor</b><br>
-<br>
+<p>Your program should be called <b>tempMonitor.c</b> and should run as follows:
+<ul>
+    <li>It should prompt the user to enter the high temperature and the low temperature for each day.</li>
+    <li>It should validate the entries as follows:
+        <ul>
+            <li>The high temperature should not be greater than 40.</li>
+            <li>The low temperature should not be less than -40.</li>
+            <li>The low temperature should not be higher than the high temperature.</li>
+        </ul>
+    </li>
+    <li>It should record the temperature for four days, using arrays to keep track of the high and low temperatures for each day.</li>
+    <li>It should record the highest temperature and the day it occurred.</li>
+    <li>It should record the lowest temperature and the day it occurred.</li>
+    <li>It should calculate the average high temperature, the average low temperature, and the average temperature overall.</li>
+    <li>At the end it should report the following:
+        <ul>
+            <li>The average low temperature.</li>
+            <li>The average high temperature.</li>
+            <li>The average temperature.</li>
+            <li>The highest temperature and the day it occurred.</li>
+            <li>The lowest temperature and the day it occurred.</li>
+        </ul>
+    </li>
+</ul>
+</p>
 
-<p>A sample run is as follows:<br><br>
-<b>Temperature Monitor</b><br>
-<br>
+<p>A sample run is as follows:<br><br><b>
+    ---=== SEP Temperature Analyzer ===---<br>
+    Enter the high value for day 1: 41<br>
+    Enter the low value for day 1: 12<br><br>
+    
+    Incorrect values, temperatures must be in the range -40 to 40, high must be greater than low.<br><br>
+    
+    Enter the high value for day 1: 40<br>
+    Enter the low value for day 1: 12<br><br>
+    
+    Enter the high value for day 2: 13<br>
+    Enter the low value for day 2: 22<br>
+    
+    Incorrect values, temperatures must be in the range -40 to 40, high must be greater than low.<br><br>
+    
+    Enter the high value for day 2: 22<br>
+    Enter the low value for day 2: 13<br><br>
+    
+    Enter the high value for day 3: 34<br>
+    Enter the low value for day 3: 0<br><br>
+    
+    Enter the high value for day 4: 12<br>
+    Enter the low value for day 4: -41<br><br>
+    
+    Incorrect values, temperatures must be in the range -40 to 40, high must be greater than low.<br><br>
+    
+    Enter the high value for day 4: 12<br>
+    Enter the low value for day 4: -3<br><br>
+    
+    The high temperatures were: 40 22 34 12<br>
+    The low temperatures were: 12 13 0 -3<br>
+    The average LOW temperature was: 5.50<br>
+    The average HIGH temperature was: 27.00<br>
+    The average temperature was: 16.25<br>
+    The highest temperature was 40, on day 1<br>
+    The lowest temperature was -3, on day 4</b>
+</p>
 
 <p>Be sure to document your code with the file name, your name and student number. Add comments throughout the code where necessary.</p>
 
-<p>Question: ?</p>
+<h3>Questions:</h3>
+<ol>
+    <li>What variable type did you use to store your temperatures and why?</li>
+    <li>What variable type did you use to store the indices into your arrays and why?</li>
+    <li>What variable type did you use to store the averages and why?</li>
+    <li>Would you prefer not to use arrays in this scenario?</li>
+</ol>
 
 <h3>Lab Submission:</h3>
 
-<p>Please email your <b>tempMonitor.c</b> and the answer to the question to:
+<p>Please email your <b>tempMonitor.c</b> and the answers to the questions to:
     <a href="mailto: ">@senecacollege.ca</a></p>
