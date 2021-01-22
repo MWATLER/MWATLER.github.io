@@ -2,12 +2,13 @@
 
 <h3>Introduction</h3>
 <p>We will look at programming concepts and file I/O. In Linux, everything is a file, so it is important to know how to 
-use them. We will also look at IOCTLs which are user-space calls into the Linux kernel.</p>
+use them. We will also look at IOCTLs which are user-space calls into the Linux kernel. We also will look at the gdb debugger.</p>
 <h3>Videos</h3>
 <table>
   <tr><td>File I/O</td><td><a href="https://www.youtube.com/watch?v=dP3N8g7h8gY" target="_blank">Linux file input/output</a></td></tr>
   <tr><td></td><td><a href="https://www.youtube.com/watch?v=BQJBe4IbsvQ" target="_blank">open() vs fopen()</a></td></tr>
   <tr><td>IOCTLs</td><td><a href="https://www.youtube.com/watch?v=-sigllMLte4" target="_blank">Linux IOCTL's</a></td></tr>
+  <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=J7L2x1ATOgk" target="_blank">gdb And How To Debug C And C++ Code</a></td></tr>
 </table>
 
 <h3>Quiz</h3>
@@ -49,4 +50,24 @@ use them. We will also look at IOCTLs which are user-space calls into the Linux 
   device driver for two file systems to get sector size, number of head, cylinders etc... Documentation on how to use this IOCTL
   can be found at <a href="https://www.kernel.org/doc/Documentation/ioctl/hdio.txt" target="_blank">Summary of HDIO_ IOCTL calls</a> and
   <a href="https://man7.org/linux/man-pages/man4/sd.4.html" target="_blank">sd - driver for SCSI disk drives</a>.</li>
+</ul>
+
+<p><em>GDB - a Linux debugger</em></p>
+<ul>
+<li>We looked briefly at the Linux debugger <b>GDB</b>. A tutorial on GDB can be found at
+    <a href="https://www.cs.cmu.edu/~gilpin/tutorial/" target="_blank">Debugging Under Unix: gdb Tutorial</a> or<br> 
+    <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/developer_guide/debugging-running-application" target="_blank">
+	    Red Hat Customer Portal: Chapter 20. Debugging a Running Application</a>.<br><br>
+    Source code that was used to demo GDB can be found at
+    <a href="gdb/Makefile" target="_blank">Makefile</a>,
+    <a href="gdb/Math.cpp" target="_blank">Math.cpp</a>,
+    <a href="gdb/Math.h" target="_blank">Math.h</a>,
+    <a href="gdb/Conversions.cpp" target="_blank">Conversions.cpp</a>,
+    <a href="gdb/Conversions.h" target="_blank">Conversions.h</a>,
+    <a href="gdb/General.cpp" target="_blank">General.cpp</a>,
+    <a href="gdb/General.h" target="_blank">General.h</a>,
+    <a href="gdb/Geometry.cpp" target="_blank">Geometry.cpp</a>,
+    <a href="gdb/Geometry.h" target="_blank">Geometry.h</a>.<br>
+    In this source code the function <b>CelsiusToFahrenheit</b> was made to crash when the flag <b>CRASH</b> was enabled in the <b>Makefile</b>.
+    </li>
 </ul>
