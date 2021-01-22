@@ -27,39 +27,7 @@ use them. We will also look at IOCTLs which are user-space calls into the Linux 
 <h3>Labs</h3>
 <ul>
   <li><a href="../Labs/Lab1/Lab1.html" target="_blank">Lab 1</a> (due January 29) - monitoring process memory usage.</li>
-  <li><a href="../Labs/Lab2/Lab2.html" target="_blank">Lab 2</a> (due February 5) - file input/output.<br>
-    If you want to see the header files for the screen (<b>linux/fb.h</b>) you can find them under the <b>/usr/src</b> directory.
-    The Linux operating system presents you with binaries and header files. To find these header files, first you have to know which exact version
-    of linux you are using. This can be found with <b>uname -r</b> as follows:<br>
-    miguelwatler@ubuntu:~$ <b>uname -r</b><br>
-    4.15.0-109-generic<br><br>
-    So <b>uname -r</b> returned <b>4.15.0-109-generic</b>. Therefore I can find these header files under <b>4.15.0-109-generic</b> or <b>4.15.0-109</b>. For my machine it is
-    under <b>4.15.0-109</b>:<br>
-    miguelwatler@ubuntu:~$ <b>cd /usr/src/linux-headers-4.15.0-109</b><br>
-    miguelwatler@ubuntu:/usr/src/linux-headers-4.15.0-109$ <b>du -a | grep \/fb.h</b><br>
-4       ./arch/sparc/include/asm/fb.h<br>
-4       ./arch/sh/include/asm/fb.h<br>
-4       ./arch/cris/include/asm/fb.h<br>
-4       ./arch/arm64/include/asm/fb.h<br>
-4       ./arch/x86/include/asm/fb.h<br>
-4       ./arch/arc/include/asm/fb.h<br>
-4       ./arch/m32r/include/asm/fb.h<br>
-4       ./arch/ia64/include/asm/fb.h<br>
-4       ./arch/m68k/include/asm/fb.h<br>
-4       ./arch/mips/include/asm/fb.h<br>
-4       ./arch/parisc/include/asm/fb.h<br>
-4       ./arch/powerpc/include/asm/fb.h<br>
-4       ./arch/arm/mach-s3c24xx/include/mach/fb.h<br>
-4       ./arch/arm/plat-samsung/include/plat/fb.h<br>
-4       ./arch/arm/include/asm/fb.h<br>
-20      ./include/uapi/linux/fb.h<br>
-32      ./include/linux/fb.h<br>
-4       ./include/asm-generic/fb.h<br><br>
-UAPI stands for User API and is the name of a folder in the kernel sources that contains the user-accessible kernel headers.
-    So, the header file for the ioctls is under <b>include/uapi/linux</b>. I go to this directory and look at the header file <b>fb.h</b>:<br>
-    miguelwatler@ubuntu:/usr/src/linux-headers-4.15.0-109$ <b>cd include/uapi/linux/</b><br>
-    miguelwatler@ubuntu:/usr/src/linux-headers-4.15.0-109/include/uapi/linux$ <b>vim fb.h</b><br><br>
-    </li>
+  <li><a href="../Labs/Lab2/Lab2.html" target="_blank">Lab 2</a> (due February 5) - using a static library.</li>
 </ul>
 
 <h3>Assignment(s)</h3>
