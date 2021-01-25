@@ -1,1 +1,0 @@
-cmd_/home/miguelwatler/src/Week2/device_driver/kernel/simple-module.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/miguelwatler/src/Week2/device_driver/kernel/simple-module.ko /home/miguelwatler/src/Week2/device_driver/kernel/simple-module.o /home/miguelwatler/src/Week2/device_driver/kernel/simple-module.mod.o;  true

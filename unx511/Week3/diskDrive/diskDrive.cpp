@@ -47,12 +47,10 @@ int main()
                     cout << strerror(errno) << endl;
                 } else {
                     cout << "For " << diskFile << endl;
-                    cout << "There are " << hdGeo.heads << " heads" << endl;
-                    cout << "There are " << hdGeo.sectors << " sectors" << endl;
+                    cout << "There are " << (int)hdGeo.heads << " heads" << endl;
+                    cout << "There are " << (int)hdGeo.sectors << " sectors" << endl;
                     cout << "There are " << hdGeo.cylinders << " cylinders" << endl;
                     cout << "Start is " << hdGeo.start << endl;
-		    printf("There are %d heads, %d sectors, %u cylinders, and start is %lu\n",
-				    hdGeo.heads, hdGeo.sectors, hdGeo.cylinders, hdGeo.start); 
                 }
 		memset(&hdGeo, 0, sizeof(hdGeo));
                 ret = ioctl(fd1, HDIO_GETGEO, &hdGeo);
@@ -60,12 +58,10 @@ int main()
                     cout << strerror(errno) << endl;
                 } else {
                     cout << "For " << disk1File << endl;
-                    cout << "There are " << hdGeo.heads << " heads" << endl;
-                    cout << "There are " << hdGeo.sectors << " sectors" << endl;
+                    cout << "There are " << (int)hdGeo.heads << " heads" << endl;
+                    cout << "There are " << (int)hdGeo.sectors << " sectors" << endl;
                     cout << "There are " << hdGeo.cylinders << " cylinders" << endl;
                     cout << "Start is " << hdGeo.start << endl;
-		    printf("There are %d heads, %d sectors, %u cylinders, and start is %lu\n",
-				    hdGeo.heads, hdGeo.sectors, hdGeo.cylinders, hdGeo.start); 
                 }
                 sleep(5);
 	        break;

@@ -9,7 +9,7 @@ FILES+=General.cpp
 FILES+=Geometry.cpp
 
 Math: $(FILES)
-	$(CC) $(CFLAGS) $^ -o $@
+	$(CC) $(CFLAGS) $(FILES) -o Math
 
 clean:
 	rm -f *.o Math

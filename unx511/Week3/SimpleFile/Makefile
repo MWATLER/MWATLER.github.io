@@ -4,10 +4,10 @@ CFLAGS+=-Wall
 FILES1=SimpleFile.cpp
 FILES2=SeekFile.cpp
 
-SimpleFile: .
+SimpleFile: $(FILES)
 	$(CC) $(CFLAGS) $(FILES1) -o SimpleFile
 
-SeekFile: .
+SeekFile: $(FILES)
 	$(CC) $(CFLAGS) $(FILES2) -o SeekFile
 
 clean:
