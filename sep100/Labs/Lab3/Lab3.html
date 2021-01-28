@@ -1,0 +1,245 @@
+<h2>SEP100 – Lab 3: The Employee Database</h2>
+
+<h3>Due: </h3>
+
+<p>This lab will test your ability to use structures and arrays of structures.</p>
+
+<p>Your program files should be called <b>Employee.c</b> and <b>Employee.h</b>. Skeleton code has been prepared for
+    you: <a href="Employee.c" target="_blank">Employee.c</a> and <a href="Employee.h" target="_blank">Employee.h</a>.<br>
+    Your program will keep a database of employee information through an array of structures of type Employee.
+    Your program should be able to display the data of all employees
+    in the database, add an employee to the database, update the salary of an existing employee, and
+    remove an employee from the database. The database is limited in size. Your program should run as follows:
+<ul>
+    <li>The Employee data structure should appear in <b>Employee.h</b> and contain the following elements:<br>
+        <b>id</b>  - integer<br>
+        <b>age</b> - integer<br>
+        <b>salary</b> - double precision floating point</li>
+    <li>The remainder of your code should appear in <b>Employee.c</b> which will include <b>Employee.h</b>.</li>
+    <li>There should be a maximum of <b>SIZE</b> employees in the database, where <b>SIZE</b>=4. This means you
+    create an array of type <b>Employee</b> that can hold up to <b>SIZE</b> employees.</li>
+    <li>The user interface should look as follows:<br>
+        ---=== EMPLOYEE DATA ===---<br>
+        1. Display Employee Information<br>
+        2. Add Employee<br>
+        3. Update Employee Salary<br>
+        4. Remove Employee<br>
+        0. Exit<br>
+        Please select from the above options:</li>
+    <li><b>Display Employee Information</b> should display employee <b>id</b>, <b>age</b> and <b>salary</b> for each employee. The
+        loop construct will be run for <b>SIZE</b> times and will only display Employee data where the EmployeeID is
+        greater than 0.</li>
+    <li><b>Add Employee</b> will look for an open spot in the employee array (where employee <b>id</b>=0), then will
+    prompt the user for employee data. If the employee database is full, an error message is printed to the screen:<br>
+    ERROR!!! Maximum Number of Employees Reached.</li>
+    <li><b>Update Employee Salary</b> will prompt the user for the employee's <b>id</b> and search the employee array
+        for the employee by <b>id</b>. If the employee is found, the user is prompted for the new salary.
+        If the employee is not found, an error message is printed:<br>
+        *** ERROR: Employee ID not found! ***</li>
+    <li><b>Remove Employee</b> will prompt the user for the employee's <b>id</b> and search the employee array
+        for the employee by <b>id</b>. If the employee is found, the employee is removed from the array by
+        setting the employee's <b>id</b> to 0. If the employee is not found, an error message is printed:<br>
+        *** ERROR: Employee ID not found! ***</li>
+    <li><b>Exit</b> will exit the program. As the program is exiting, the following is printed to the screen:<br>
+        Exiting Employee Data Program. Good Bye!!!</li>
+    <li>Any selection other than 0-4 will result in the following printed to the screen:<br>
+        ERROR: Incorrect Option: Try Again</li>
+</ul>
+</p>
+
+<p>A sample run is as follows:<br><br><b>
+    ---=== EMPLOYEE DATA ===---<br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 5<br>
+    ERROR: Incorrect Option: Try Again<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 1<br><br>
+    EMP ID  EMP AGE EMP SALARY<br>
+    ======  ======= ==========<br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 2<br>
+    Adding Employee<br>
+    ===============<br>
+    Enter Employee ID: 222<br>
+    Enter Employee Age: 22<br>
+    Enter Employee Salary: 22222.22<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 2<br>
+    Adding Employee<br>
+    ===============<br>
+    Enter Employee ID: 333<br>
+    Enter Employee Age: 33<br>
+    Enter Employee Salary: 33333.33<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 2<br>
+    Adding Employee<br>
+    ===============<br>
+    Enter Employee ID: 444<br>
+    Enter Employee Age: 44<br>
+    Enter Employee Salary: 44444.44<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 2<br>
+    Adding Employee<br>
+    ===============<br>
+    Enter Employee ID: 555<br>
+    Enter Employee Age: 55<br>
+    Enter Employee Salary: 55555.55<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 2<br>
+    Adding Employee<br>
+    ===============<br>
+    ERROR!!! Maximum Number of Employees Reached<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 1<br>
+    EMP ID  EMP AGE EMP SALARY<br>
+    ======  ======= ==========<br>
+    222       22   22222.22<br>
+    333       33   33333.33<br>
+    444       44   44444.44<br>
+    555       55   55555.55<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 3<br>
+    Update Employee Salary<br>
+    ======================<br>
+    Enter Employee ID: 123<br>
+    *** ERROR: Employee ID not found! ***<br>
+    Enter Employee ID: 321<br>
+    *** ERROR: Employee ID not found! ***<br>
+    Enter Employee ID: 333<br>
+    The current salary is 33333.33<br>
+    Enter Employee New Salary: 99999.99<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 1<br>
+    EMP ID  EMP AGE EMP SALARY<br>
+    ======  ======= ==========<br>
+    222       22   22222.22<br>
+    333       33   99999.99<br>
+    444       44   44444.44<br>
+    555       55   55555.55<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 4<br>
+    Remove Employee<br>
+    ===============<br>
+    Enter Employee ID: 789<br>
+    *** ERROR: Employee ID not found! ***<br>
+    Enter Employee ID: 987<br>
+    *** ERROR: Employee ID not found! ***<br>
+    Enter Employee ID: 333<br>
+    Employee 333 will be removed<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 1<br>
+    EMP ID  EMP AGE EMP SALARY<br>
+    ======  ======= ==========<br>
+    222       22   22222.22<br>
+    444       44   44444.44<br>
+    555       55   55555.55<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 2<br>
+    Adding Employee<br>
+    ===============<br>
+    Enter Employee ID: 666<br>
+    Enter Employee Age: 66<br>
+    Enter Employee Salary: 66666.66<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 1<br>
+    EMP ID  EMP AGE EMP SALARY<br>
+    ======  ======= ==========<br>
+    222       22   22222.22<br>
+    666       66   66666.66<br>
+    444       44   44444.44<br>
+    555       55   55555.55<br><br>
+    1. Display Employee Information<br>
+    2. Add Employee<br>
+    3. Update Employee Salary<br>
+    4. Remove Employee<br>
+    0. Exit<br>
+    Please select from the above options: 0<br>
+    Exiting Employee Data Program. Good Bye!!!
+</b></p>
+
+<p>Be sure to document your code with the file name, your name and student number. Add comments throughout the code where necessary.</p>
+
+<h3>Questions:</h3>
+<ol>
+    <li>Would you prefer to use parallel arrays for <b>id</b>, <b>age</b> and <b>salary</b> or do you prefer an array of structures, and why?</li>
+    <li>How closely related is a structure in C to a schema in a database (you may have to research what a database schema is)?</li>
+    <li>What will be the output of the following program:<br>
+        #include<stdio.h><br>
+            struct course<br>
+            {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;int courseno;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;char coursename[25];<br>
+            };<br>
+            int main()<br>
+            {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;struct course c[] = { {102, "C"}, <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{103, "C++"}, <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{104, "Java"}     <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;};<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("%d ", c[1].courseno);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("%s\n", (*(c+2)).coursename);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+            }
+    </li>
+</ol>
+
+<h3>Lab Submission:</h3>
+
+<p>Please email your <b>Employee.c</b> and <b>Employee.h</b> and the answers to the questions to:
+    <a href="mailto: ">@senecacollege.ca</a></p>
