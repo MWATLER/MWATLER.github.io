@@ -11,28 +11,20 @@
 
 using namespace std;
 
+#ifdef DEBUG
+void SetErrorChannel(const char* file) {
+    int fd1 = open(file, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+    if(fd1>0) {
+        dup2(fd1, STDERR_FILENO);
+    }
+}
+#endif
+
 int main(void)
 {
     int rc=0;
 #ifdef DEBUG
-    int fd1, fdErr;
-    const char file[]="Error.log";
-
-    fd1 = open(file, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-    if(fd1<0) {
-	rc=-1;
-    }
-    //int dup(int oldfd);
-    //Returns (new) file descriptor on success, or –1 on error
-    if(rc==0) {
-        fdErr = dup(STDERR_FILENO);
-        if(fdErr<0) {
-            close(fd1);
-	    rc=-1;
-        } else {
-            dup2(fd1, STDERR_FILENO);
-        }
-    }
+    SetErrorChannel("Error.log");
 #endif
     if(rc==0) {
         int selection=1;
@@ -173,10 +165,5 @@ int main(void)
                 sleep(3);
             }
         }
-#ifdef DEBUG
-    //STDERR_FILENO becomes fdErr
-    dup2(fdErr, STDERR_FILENO);
-    close(fdErr);
-#endif
     }
 }

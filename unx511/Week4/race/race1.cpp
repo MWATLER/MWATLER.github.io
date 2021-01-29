@@ -16,7 +16,7 @@ int main(void)
     int fd1;
     const char file[]="race.txt";
 
-    fd1 = open(file, O_RDWR | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
+    fd1 = open(file, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 //  fd1 = open(file, O_RDWR | O_CREAT | O_EXCL, S_IRUSR | S_IWUSR);
 //  fd1 = open(file, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
     if(fd1<0) {

@@ -1,6 +1,4 @@
-main: KilogramsToPounds(45)
-KilogramsToPounds(kilograms: 45):
-main: InchesToCentimeters(45)
-InchesToCentimeter(inches: 45):
-main: CelsiusToFahrenheit(44)
-CelsiusToFahrenheit(celsius: 44):
+main: FahrenheitToCelsius(4)
+FahrenheitToCelsius(fahrenheit: 4):
+main: PoundsToKilograms(210)
+PoundsToKilograms(pounds: 210):
