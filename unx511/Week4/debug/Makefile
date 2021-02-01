@@ -1,7 +1,6 @@
 CC=g++
 CFLAGS=-I
 CFLAGS+=-Wall
-CFLAGS+=-ggdb
 CFLAGS+=-DCRASH
 CFLAGS+=-DDEBUG
 FILES=Math.cpp
@@ -10,7 +9,7 @@ FILES+=General.cpp
 FILES+=Geometry.cpp
 
 Math: $(FILES)
-	$(CC) $(CFLAGS) $^ -o $@
+	$(CC) $(CFLAGS) $(FILES) -o Math 
 
 clean:
 	rm -f *.o Math
