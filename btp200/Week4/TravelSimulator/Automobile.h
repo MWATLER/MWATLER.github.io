@@ -17,7 +17,7 @@ private:
 
 public:
     //NOTE: Should have a default constructor
-    Automobile(string _make, string _model, string _colour, int _year);
+	Automobile(string _make, string _model, string _colour, int _year);
     void setFuelEfficiency(double _efficiency);
     void addFuel(double _liters);
     void drive(double _distance);

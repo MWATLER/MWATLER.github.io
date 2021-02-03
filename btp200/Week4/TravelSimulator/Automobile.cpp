@@ -13,6 +13,7 @@ Automobile::Automobile(string _make, string _model, string _colour, int _year)
     colour = _colour;
     year = _year;
     fuelInTank = 0;
+	fuelEfficiency = 0;
 }
 /*
 Automobile::Automobile(string make, string model, string colour, int year)

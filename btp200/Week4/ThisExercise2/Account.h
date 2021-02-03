@@ -11,10 +11,14 @@ class Account {
 public:
 	Account();
 	Account(std::string name, double age);
-	Account& SetUsername(std::string username);
+	void SetUsername(std::string username);
 	~Account();
 	void SetPassword(void);
+	void GetPassword(char* password) const;
 	void showUsernamePassword() const;
 	void CopyAccount(Account& acct);
 	void destroy();
 };
+
+
+//int GetStrength(Account acct);

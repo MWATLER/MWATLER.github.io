@@ -18,6 +18,7 @@ int main(void) {
 	personal[2] = new PersonalInfo("Park", "22-2617 Windwood Drive", 34);
 	personal[3] = new PersonalInfo("Ali", "3467 Sunlight Drive", 54);
 	personal[4] = new PersonalInfo("Van Boxmeer", "1282 Bell Harbour Way", 36);
+
 	for (int i = 5; i < NUM; ++i) personal[i] = new PersonalInfo();
 	success = personal[5]->setInfo("Chin", "1801-299 Mill Road", 24);
 	if (success) success = personal[6]->setInfo("Morris", "15 Saltcoats Court", 55);
