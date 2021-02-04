@@ -13,6 +13,9 @@ PersonalInfo::PersonalInfo() {
 }
 
 PersonalInfo::PersonalInfo(const char* _name, const char* _address, const int _age) {
+	name = nullptr;
+	address = nullptr;
+	age = 0;
 	setInfo(_name, _address, _age);
 }
 

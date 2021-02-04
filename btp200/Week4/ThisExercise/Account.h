@@ -10,6 +10,7 @@ class Account {
 
 public:
 	Account(std::string name, double age);
+	Account();
 	Account &SetUsername(std::string username);
 	~Account();
 	void SetPassword(void);

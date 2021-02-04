@@ -10,18 +10,27 @@ Account::Account(std::string name, double age) {
 	this->username = "";
 	this->password = nullptr;
 	if (name.size() > 0) {
-		this->name = name;
+		this->name = name;//I have distinguished between name passed as a 
+		                  //parameter and name that belongs to an object of 
+		                  //the Account class
 	} 
 	if (age > 0) {
 		this->age = age;
 	}
 }
 
+Account::Account() {
+	this->name = "";
+	this->age = 0.0;
+	this->username = "";
+	this->password = nullptr;
+}
+
 Account &Account::SetUsername(std::string username) {
 	if (username.size() > 0) {
 		this->username = username;
 	}
-	return *this;
+	return *this;//*this actually refers to acct1 in main()
 }
 
 void Account::SetPassword(void) {
@@ -29,7 +38,8 @@ void Account::SetPassword(void) {
 	password = new char[len+1];
 	int i;
 	for (i = 0; i < len; ++i) {
-		password[i] = username.at(i) + 1;
+		password[i] = username.at(i) + 1;//C++ string type. at(i) is the same as [i]
+		                                 //username.at(i) is similar to username[i]
 	}
 	password[i] = '\0';
 }
