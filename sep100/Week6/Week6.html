@@ -123,18 +123,15 @@
   If the IAD is $25,000 or less, taxes = 0<br>
 </p>
 <ul>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-</ul>
-
-<p><em></em></p>
-<ul>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
+  <li>Extract the nouns and adjectives. We see <b>name</b> (char array), <b>social insurance number</b> (int),
+    <b>annual income</b> (float), <b>charitable donations</b> (float), <b>number of children under 18</b> (int),
+    <b>RRSP contributions</b> (float), and <b>income tax</b> (float). Since these are all related to a person,
+       we can group them under the structure <b>Person</b>.</li>
+  <li>Extract the verbs. We see that the deductible has to be calculated. Modularize this operation with 
+    the function <b>CalculateDeductible</b>. We see that income tax has to be calculated based on the income
+  after deductibles. Modularize this operation with the function <b>CalculateIncomeTax</b>.</li>
+  <li>Input/Output operations are required with a user. Prompt the use for all required data
+    and present the income tax owed by that person at the end.</li>
+  <li>Similar operations have to be performed for each of the three persons. Code this repetitive action
+    with a loop that repeats its operations three times.</li>
 </ul>
