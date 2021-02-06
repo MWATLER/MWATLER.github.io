@@ -13,5 +13,6 @@ struct Person {
 	float incomeTax;
 };
 
+void utilClearInputBuffer();
 void CalculateDeductible(struct Person* person);
 void CalculateIncomeTax(struct Person* person);

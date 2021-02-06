@@ -13,7 +13,7 @@ int main(void) {
 		printf("\n");
 		printf("Enter the name for person %d: ", i + 1);
 		scanf("%[^\n]s", person[i].name);//scan to the end of the line
-		while (getchar() != '\n');//get rid of extra characters in the input buffer
+		utilClearInputBuffer();
 		printf("Enter %s's social insurance number: ", person[i].name);
 		scanf("%d", &person[i].sin);
 		printf("Enter %s's annual income: $", person[i].name);
@@ -26,7 +26,7 @@ int main(void) {
 		scanf("%f", &person[i].rrspContribution);
 		CalculateDeductible(&person[i]);
 		CalculateIncomeTax(&person[i]);
-		while (getchar() != '\n');//get rid of extra characters in the input buffer
+		utilClearInputBuffer();
 	}
 
 	//Print a report for all the clients
@@ -37,6 +37,10 @@ int main(void) {
 	}
 
 	return 0;
+}
+
+void utilClearInputBuffer() {
+	while (getchar() != '\n');//get rid of extra characters in the input buffer
 }
 
 void CalculateDeductible(struct Person* person) {
