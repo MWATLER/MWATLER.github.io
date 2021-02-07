@@ -28,7 +28,7 @@ static int peripheral_writer_close(struct inode *inode, struct file *file);
 static long peripheral_writer_ioctl(struct file *file, unsigned int cmd, unsigned long arg);
 
 /*===============================================================================================*/
-/* Registers the device with the kernel. See Chapter 3 of Linux Device Drivers pages 55-56. */
+/* Registers the device with the kernel. See Chapter 3 of Linux Device Drivers pages 55-57. */
 static int peripheral_writer_init(void)
 {
     int result = 0;
@@ -47,7 +47,7 @@ static void peripheral_writer_exit(void)
 }
 
 /*===============================================================================================*/
-/* Specifies the init and exit functions for the kernel */
+/* Specifies the init and exit functions for the kernel. See Chapter 2 of Linux Device Drivers page 31-32. */
 module_init(peripheral_writer_init);
 module_exit(peripheral_writer_exit);
 
@@ -62,7 +62,7 @@ static struct file_operations simple_driver_fops =
     .write = peripheral_writer_write,
     .open = peripheral_writer_open,
     .release = peripheral_writer_close,
-    .unlocked_ioctl = peripheral_writer_ioctl
+    .unlocked_ioctl = peripheral_writer_ioctl//an improvement to .ioctl, see https://lwn.net/Articles/119652/
 };
 
 /*===============================================================================================*/
@@ -106,6 +106,7 @@ void unregister_device(void)
     printk( KERN_NOTICE "Peripheral-Writer: unregister_device() is called\n" );
     if(device_file_major_number != 0)
     {
+        /*See Chapter 3 of Linux Device Drivers page 57.*/
         unregister_chrdev(device_file_major_number, device_name);
     }
 }
