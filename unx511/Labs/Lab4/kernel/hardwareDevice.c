@@ -79,6 +79,7 @@ int hardwareSim(void *data)
             buffer[BUF_LEN-1]='\0';
             msleep(1000);
         }
+        msleep(1000);
     }
     return 0;
 }
