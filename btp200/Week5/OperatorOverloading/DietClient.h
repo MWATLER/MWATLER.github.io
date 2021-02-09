@@ -12,10 +12,11 @@ class DietClient {
 public:
 	DietClient();
 	DietClient(std::string _name, double _height, double _weight);
+	operator bool() const;//It is known that bool is either true or false
 	DietClient& operator+=(int);//Add calories to the client
 	DietClient& operator+=(std::string);//Add a food item
 	DietClient& operator++();//Pre-increment the number of days
 	DietClient& operator++(int);//Post-increment the number of days
 	double GetCaloriesPerDay() const;
-	void PrintReport();
+	std::ostream& PrintReport();
 };
