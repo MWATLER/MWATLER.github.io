@@ -10,6 +10,9 @@ int main(void) {
 	DietClient client2("Stan Marsh", 1.78, 90);
 	DietClient client3("Kyle Broslovski", 1.75, 80);
 
+	if (client1) {
+		cout << "client1 exists" << endl;
+	}
 	client1 += 4000;
 	client2 += 2000;
 	client3 += 1000;
@@ -20,7 +23,7 @@ int main(void) {
 	client2++;
 	++client3;
 
-	client1.PrintReport();
-	client2.PrintReport();
+	client1.PrintReport() << endl << endl;
+	client2.PrintReport() << endl << endl;
 	client3.PrintReport();
 }

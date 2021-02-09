@@ -19,6 +19,15 @@ DietClient::DietClient(string _name, double _height, double _weight) {
 	calories = 0;
 }
 
+DietClient::operator bool() const {//The return type of bool is implied to be bool
+	bool retval = false;
+	if (name.size() > 0) {
+		retval = true;
+	}
+	return retval;
+}
+
+
 //Add calories to the client
 DietClient& DietClient::operator+=(int _calories) {
 	calories += _calories;
@@ -64,7 +73,7 @@ double DietClient::GetCaloriesPerDay() const {
 	return (double)calories / numDays;
 }
 
-void DietClient::PrintReport() {
+std::ostream& DietClient::PrintReport() {
 	double weightGain = numDays * (GetCaloriesPerDay() - caloriesBurntPerDay) / caloriesPerKg;
 	weight += weightGain;//Due to this, PrintReport() cannot be const
 	double bodyMassIndex = weight / (height * height);//BMI = weight/height^2 , where weight is in kg and height in m
@@ -85,7 +94,6 @@ void DietClient::PrintReport() {
 	else {
 		cout << name << " has not changed weight." << endl;
 	}
-	cout << endl;
-	cout << endl;
+	return cout;
 }
 
