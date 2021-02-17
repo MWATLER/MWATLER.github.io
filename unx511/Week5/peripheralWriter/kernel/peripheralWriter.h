@@ -10,6 +10,6 @@ typedef struct peripheral_info {
 
 //IOCTL prototypes
 //See https://01.org/linuxgraphics/gfx-docs/drm/ioctl/ioctl-number.html for macro syntax
-#define PERIPHERAL_WRITER_GET_INFO          _IOR('b','b',PERIPHERAL_INFO*)
-#define PERIPHERAL_WRITER_GET_CHANNEL_INDEX _IOR('a','b',int*)
-#define PERIPHERAL_WRITER_SET_CHANNEL_INDEX _IOW('a','b',int*)
+#define PERIPHERAL_WRITER_GET_INFO          _IOR('b','b',PERIPHERAL_INFO*)//IOCTL get (read) command
+#define PERIPHERAL_WRITER_GET_CHANNEL_INDEX _IOR('a','b',int*)//IOCTL get (read) command
+#define PERIPHERAL_WRITER_SET_CHANNEL_INDEX _IOW('a','b',int*)//IOCTL set (write) command
