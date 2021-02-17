@@ -16,7 +16,8 @@ public:
 	int GetTokens() const;
 	void SetTokens(int num);
 	void DisplayInfo() const;
+	friend void operator>>(Player& p1, Player& p2);
 };
 
-void operator>>(Player& p1, Player& p2);
-void operator<<(Player& p1, Player& p2);
+void operator>>(Player& p1, Player& p2);//p1>>p2;
+void operator<<(Player& p1, Player& p2);//p1<<p2;

@@ -20,7 +20,7 @@ Player::Player(std::string nm, int tokens) {
 }
 
 void Player::PlayCard() {
-	if (numTokens > 0) {
+	if (numTokens > 0) {//21%10 -> 21/10 = 2 remainder 1. 1 is 21%10
 		card = rand() % 10 + 1;//random number between 1 and 10
 	}
 	else {
@@ -46,10 +46,14 @@ void Player::DisplayInfo() const {
 }
 
 void operator>>(Player& p1, Player& p2) {
-	int tokens = p1.GetTokens();
+/*	int tokens = p1.GetTokens();
 	tokens += p2.GetTokens();
 	p2.SetTokens(tokens);
-	p1.SetTokens(0);
+	p1.SetTokens(0);*/
+	int tokens = p1.numTokens;//operator>> is a friend to class Player
+	tokens += p2.numTokens;   //and therefore has access to all the private
+	p2.numTokens = tokens;    //members and functions of class Player
+	p1.numTokens = 0;
 }
 
 void operator<<(Player& p1, Player& p2) {
