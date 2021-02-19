@@ -1,121 +1,138 @@
-<h2>SEP100 – Lab 5: Stock Price Evaluation</h2>
+<h2>SEP100 – Lab 6: Corporate Information Database Access</h2>
 
 <h3>Due: </h3>
 
-<p>This lab will test your ability to design and implement software from a real world problem.</p>
+<p>This lab will test your ability to use structures, arrays and files.</p>
 
-<h3>The Dividend Yield</h3>
+<h3>The Corporate Information</h3>
 
-<p>There are many well known valuation techniques for determining the value of a stock. For mature, 
-    well-established companies, valuation can be determined through its dividend yield. Dividends
-    are payments a company makes to share profits with its stockholders. They're paid on a regular basis.</p>
-<p>The annual dividend is the dividend paid per share each year. For instance, if a company pays 
-    a dividend of $0.50 per share and you have 1000 shares, you will receive a dividend payment of
-    $500 per year (or $125 per quarter).</p>
-<p>The dividend yield is the dividend per share divided by the price per share. This means, 
-    a certain percentage of the share price is returned as a dividend. For instance, if a 
-    company pays a dividend of $0.50 per share and the share price is $12.00, the dividend 
-    yield is 100%*0.50/12.00 or 4.17%. To put it as a formula:<br>
-<b>Yield = 100% x Dividend_Per_Share / Share_Price</b></p>
-<p>Some companies cannot afford to pay the dividends they offer and have to cut their 
-    dividend. One should look at the dividend payout ratio to see if a company can in fact
-    afford the dividend it offers. A dividend payout ratio of 1.00 means the company is
-    paying all its profits out as dividends. But that is another story, and not relevant to this lab.</p>
-<p>The following is a list of well-known well-established companies that offer dividends:
-<style>
-    table, th, td {
-        border: 1px solid black;
-    }
-</style>
-<table>
-    <tr><th>Company</th><th>Stock Symbol</th><th>Share Price</th><th>Annual Dividend</th><th>Dividend Yield</th><th>Dividend Payout Ratio</th></tr>
-    <tr><td>TC Energy</td><td>TRP.TO</td><td>$55.00</td><td>$3.24</td><td>5.89%</td><td>0.685</td></tr>
-    <tr><td>Canadian Utilities</td><td>CU.TO</td><td>$31.70</td><td>$1.76</td><td>5.55%</td><td>1.181</td></tr>
-    <tr><td>Bank of Nova Scotia</td><td>BNS.TO</td><td>$70.08</td><td>$3.60</td><td>5.13%</td><td>0.679</td></tr>
-    <tr><td>TransAlta Renewables</td><td>RNW.TO</td><td>$21.75</td><td>$0.94</td><td>4.32%</td><td>2.848</td></tr>
-    <tr><td>Toronto Dominion Bank</td><td>TD.TO</td><td>$74.81</td><td>$3.16</td><td>4.22%</td><td>0.491</td></tr>
-</table>
-From an analysis of the above table, you probably wouldn't want to purchase shares in Canadian Utilities or TransAlta Renewables, 
-as these companies may have problems paying their dividends in the future. But if they are sitting on a lot of cash then there
-isn't anything to worry about, for now.
-</p>
+<p>A corporation maintains a database of employee information consisting of each employee's name, position, salary and age. The corporation wants to also keep track 
+    of some basic statistics such as the average salary, the average age, the maximum salary, and which employee has the maximum salary. Code for populating the 
+    corporate information structure has already been presented in the lecture of Week 8. Now it is time to add some database access functions.</p>
 
 <h3>The Problem</h3>
+<p>We want to give the user the ability to perform the following on the database:</p>
+<ol>
+    <li>Get employee information by employee name</li>
+    <li>Get employee information for all employees</li>
+    <li>Correct an employee name given the employee name</li>
+    <li>Correct an employee age given the employee name</li>
+    <li>Change an employee position given the employee name</li>
+    <li>Change an employee salary given the employee name</li>
+    <li>Commit all changes to the database (write to the file EmployeeDB.txt)</li>
+</ol>
+<p>The user should also have the choice to exit the program.</p>
 
-<ul>
-    <li>Prompt the user to enter data for a company. The data required is:
-        <ul>
-            <li>the company name,</li>
-            <li>the company's stock symbol,</li>
-            <li>the share price, and</li>
-            <li>the annual dividend per share.</li>
-        </ul>
-    </li>
-    <li>The user will enter data for five companies. You can use the data in the above table if you wish
-        (ignore the dividend payout ratio).</li>
-    <li>Calculate the dividend yield for each company as follows:<br>
-        <b>the dividend yield = 100% x dividend_per_share / share_price.</b></li>
-    <li>Given the current rate of inflation, a dividend yield of 5% is considered to be good. If a company
-        has a yield of over 5% then that company is undervalued. If a company has a yield of under 5% then
-        that company is considered to be overvalued. If a company has a yield of exactly 5% then that
-        company is considered fully valued.<br>
-        Go through each company and determine whether the company is undervalued, overvalued or fully valued.</li>
-    <li>Print a report at the end with the following information:<br>
-    <b>company name</b>, <b>stock symbol</b>, <b>share price</b>, <b>annual dividend</b>, <b>dividend yield</b>, <b>valuation</b>.</li>
-    <li>You need to determine your data structure(s) as well as the types for each variable in that structure. You may wish 
-        to add variables for the dividend yield and the valuation to your structure.</li>
-    <li>You have to determine if any functions are required. It is always best for structured programming that
-        each function perform a specific task.</li>
-    <li>You need to determine if any loops are required.</li>
-    <li>Be wary of any divide-by-zero possibilities in the code.</li>
-    <li>Be sure to clear out your input buffer whenever required.</li>
-    <li>You have to decide on your mechanism of input and output that is user friendly. You may want to
-        format your output into a neat table.</li>
-</ul>
+<h3>Complete the Code</h3>
+<p>The complete code for corporation information has been given to you with eight empty functions. You are to 
+    complete these functions based on their prototype and embedded instructions.
+    The data structure for the employee can be found in <a href="EmployeeInfo.h" target="_blank">EmployeeInfo.h</a>. The employee database can be found in the 
+    file <a href="EmployeeDB.txt" target="_blank">EmployeeDB.txt</a>.
+     The data structure for corporate information and related function prototypes can be found in <a href="CorporateInfo.h" target="_blank">CorporateInfo.h</a>
+     and the function definitions for the corporation can be found in <a href="CorporateInfo.c" target="_blank">CorporateInfo.c</a>. The main program is
+    <a href="CorporateInfoMain.c" target="_blank">CorporateInfoMain.c</a>.<br>
+    <b>Complete all eight incomplete functions inside <a href="CorporateInfo.c" target="_blank">CorporateInfo.c</a></b>. Some utility functions have been 
+    provided to facilitate data input from the keyboard.</p>
 
-<p>A sample run is as follows:<br><br>
+<h3>Sample Run</h3>
+
+<p>A sample run for some user inputs is as follows:<br><br>
 <pre>
-    Enter the company name: TC Energy
-    Enter TC Energy's stock symbol: TRP.TO
-    Enter TC Energy's current stock price: 55
-    Enter TC Energy's annual dividend per share: 3.24
-    
-    Enter the company name: Canadian Utilities
-    Enter Canadian Utilities's stock symbol: CU.TO
-    Enter Canadian Utilities's current stock price: 31.70
-    Enter Canadian Utilities's annual dividend per share: 1.76
-    
-    Enter the company name: Bank of Nova Scotia
-    Enter Bank of Nova Scotia's stock symbol: BNS.TO
-    Enter Bank of Nova Scotia's current stock price: 70.08
-    Enter Bank of Nova Scotia's annual dividend per share: 3.60
-    
-    Enter the company name: TransAlta Renewables
-    Enter TransAlta Renewables's stock symbol: RNW.TO
-    Enter TransAlta Renewables's current stock price: 21.75
-    Enter TransAlta Renewables's annual dividend per share: 0.94
-    
-    Enter the company name: Toronto Dominion Bank
-    Enter Toronto Dominion Bank's stock symbol: TD.TO
-    Enter Toronto Dominion Bank's current stock price: 74.81
-    Enter Toronto Dominion Bank's annual dividend per share: 3.16
-    
-                  COMPANY   SYMBOL  PRICE   DIV   YIELD   VALUATION
-                TC Energy   TRP.TO  55.00  3.240  5.891   Under Valued
-       Canadian Utilities    CU.TO  31.70  1.760  5.552   Under Valued
-      Bank of Nova Scotia   BNS.TO  70.08  3.600  5.137   Under Valued
-     TransAlta Renewables   RNW.TO  21.75  0.940  4.322    Over Valued
-    Toronto Dominion Bank    TD.TO  74.81  3.160  4.224    Over Valued  
+    The average salary is $85083.33
+    The average age is 40.58 years
+    The maximum salary is $110000.00.
+    This salary belongs to Kumar Swamy, Software Architect, age 44.00.
+    (Press Enter to continue)
 </pre>
-</b></p>
+<p>Pressing enter will clear the screen then you will see:</p>
+<pre>
+    1. Get Employee Information
+    2. Get All Employee Information
+    3. Correct Employee Name
+    4. Correct Employee Age
+    5. Change Employee Position
+    6. Change Employee Salary
+    7. Commit to database
+    0. Exit
 
+    choice (0-7):
+</pre>
+<p>Pressing 1 to get employee information for Carol Smith will display the following:</p>
+<pre>
+    1. Get Employee Information
+    2. Get All Employee Information
+    3. Correct Employee Name
+    4. Correct Employee Age
+    5. Change Employee Position
+    6. Change Employee Salary
+    7. Commit to database
+    0. Exit
+    
+    choice (0-7): 1
+    Enter the employee's full name: Carol Smith
+    Carol Smith, Project Manager, is 39.00 years old and has a salary of 99000.00
+    (Press Enter to continue)    
+</pre>
+<p>Pressing enter will clear the screen. Pressing 3 to correct the name of Wendell Chu results in the following:</p>
+<pre>
+    1. Get Employee Information
+    2. Get All Employee Information
+    3. Correct Employee Name
+    4. Correct Employee Age
+    5. Change Employee Position
+    6. Change Employee Salary
+    7. Commit to database
+    0. Exit
+
+    choice (0-7): 3
+    Enter the employee's full name: Wendell Chu
+    Enter the employee's new full name: Xian Chu
+    (Press Enter to continue)
+</pre>
+<p>Pressing enter will clear the screen. Pressing 6 to change an employee's salary results in the following:</p>
+<pre>
+    1. Get Employee Information
+    2. Get All Employee Information
+    3. Correct Employee Name
+    4. Correct Employee Age
+    5. Change Employee Position
+    6. Change Employee Salary
+    7. Commit to database
+    0. Exit
+    
+    choice (0-7): 6
+    Enter the employee's full name: Elizabeth Doe
+    Enter the employee's new salary: 98000
+    (Press Enter to continue)    
+</pre>
+<p>Pressing 7 to commit the changes to the database will result in the following:</p>
+<pre>
+    1. Get Employee Information
+    2. Get All Employee Information
+    3. Correct Employee Name
+    4. Correct Employee Age
+    5. Change Employee Position
+    6. Change Employee Salary
+    7. Commit to database
+    0. Exit
+    
+    choice (0-7): 7
+    Database committed!
+    (Press Enter to continue)    
+</pre>
+<p>You can now observe the changes in the file <b>EmployeeDB.txt</b>.</p>
+</p>
 <p>Be sure to document your code with the file name, your name and student number. Add comments throughout the code where necessary.</p>
 
 <h3>Questions:</h3>
 <ol>
-    <li>Explain whether a structure was necessary and if so, explain why you composed your structure as you did.</li>
-    <li>Explain whether any functions were necessary, and explain why you composed the functions as you did.</li>
-    <li>Explain whether any loops were necessary, and why.</li>
+    <li>Data members which are related are grouped into a data structure. What about functions that act on that data? Would it be convenient to somehow 
+        group functions that act on a data structure with that data structure somehow? Give reasons why or why not.
+    </li>
+    <li>If you pass an array to a function by address, is it possible for the function to know the length of the array? If not, how could we tell 
+        the function the length of the array?
+    </li>
+    <li>Databases are based on a schema. This is a schematic of how data is stored. What would be the schema for employee information?</li>
 </ol>
 
 <h3>Lab Submission:</h3>

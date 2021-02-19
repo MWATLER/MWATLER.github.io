@@ -69,7 +69,7 @@ int main(void) {
 			printf("6. Change Employee Salary\n");//find the employee by name, then change the salary
 			printf("7. Commit to database\n");//Write all changes to the file EmployeeDB.txt
 			printf("0. Exit\n\n");
-			printf("choice (0-6): ");
+			printf("choice (0-7): ");
 			choice = getInt();
 			switch (choice) {
 			case 1:
