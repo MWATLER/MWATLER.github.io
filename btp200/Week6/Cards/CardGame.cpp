@@ -12,7 +12,7 @@ int main(void) {
 	Player* player[NUM];
 
 	player[0] = new Player("Tony Soprano", 100);
-	player[1] = new Player("Pauli Walnuts Gualtieri", 100);
+	player[1] = new Player("Pauli \"Walnuts\" Gualtieri", 100);
 	player[2] = new Player("Furio Guinta", 100);
 
 	while (player[0]->GetTokens() < 300 && player[1]->GetTokens() < 300 && player[2]->GetTokens() < 300) {

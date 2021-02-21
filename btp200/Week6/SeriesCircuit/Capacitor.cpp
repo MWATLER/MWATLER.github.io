@@ -28,10 +28,16 @@ Capacitor::Capacitor(const Capacitor& capacitor) {//Copy constructor
 }
 
 Capacitor& Capacitor::operator=(const Capacitor& capacitor) {//Copy assignment
-	this->capacitance = capacitor.capacitance;
-	this->current = capacitor.current;
-	this->voltage[0] = capacitor.voltage[0];
-	this->voltage[1] = capacitor.voltage[1];
+	if (this != &capacitor) {
+		this->capacitance = capacitor.capacitance;
+		this->current = capacitor.current;
+		delete[] this->voltage;
+		if (capacitor.voltage != nullptr) {
+			this->voltage = new double[2];
+			this->voltage[0] = capacitor.voltage[0];
+			this->voltage[1] = capacitor.voltage[1];
+		}
+	}
 	return *this;
 }
 

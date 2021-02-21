@@ -25,9 +25,15 @@ Inductor::Inductor(const Inductor& inductor) {//Copy constructor
 }
 
 Inductor& Inductor::operator=(const Inductor& inductor) {//Copy assignment
-	this->inductance = inductor.inductance;
-	this->current[0] = inductor.current[0];
-	this->current[1] = inductor.current[1];
+	if (this != &inductor) {
+		this->inductance = inductor.inductance;
+		delete [] this->current;
+		if (inductor.current != nullptr) {
+			this->current = new double[2];
+			this->current[0] = inductor.current[0];
+			this->current[1] = inductor.current[1];
+		}
+	}
 	return *this;
 }
 

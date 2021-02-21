@@ -19,8 +19,10 @@ Resistor::Resistor(const Resistor& resistor) {//Copy constructor
 }
 
 Resistor& Resistor::operator=(const Resistor& resistor) {//Copy assignment
-	this->resistance = resistor.resistance;
-	this->current = resistor.current;
+	if (this != &resistor) {
+		this->resistance = resistor.resistance;
+		this->current = resistor.current;
+	}
 	return *this;
 }
 

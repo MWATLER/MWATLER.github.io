@@ -50,15 +50,19 @@ void operator>>(Player& p1, Player& p2) {
 	tokens += p2.GetTokens();
 	p2.SetTokens(tokens);
 	p1.SetTokens(0);*/
-	int tokens = p1.numTokens;//operator>> is a friend to class Player
-	tokens += p2.numTokens;   //and therefore has access to all the private
-	p2.numTokens = tokens;    //members and functions of class Player
-	p1.numTokens = 0;
+	if (&p1 != &p2) {
+		int tokens = p1.numTokens;//operator>> is a friend to class Player
+		tokens += p2.numTokens;   //and therefore has access to all the private
+		p2.numTokens = tokens;    //members and functions of class Player
+		p1.numTokens = 0;
+	}
 }
 
 void operator<<(Player& p1, Player& p2) {
-	int tokens = p2.GetTokens();
-	tokens += p1.GetTokens();
-	p1.SetTokens(tokens);
-	p2.SetTokens(0);
+	if (&p1 != &p2) {
+		int tokens = p2.GetTokens();
+		tokens += p1.GetTokens();
+		p1.SetTokens(tokens);
+		p2.SetTokens(0);
+	}
 }
