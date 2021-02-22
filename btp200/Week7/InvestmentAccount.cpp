@@ -10,35 +10,37 @@ InvestmentAccount::InvestmentAccount() {
 	cash = 0;
 	stocks = 0;
 	name = "";
+	transactions = new int[20];
 }
 
 InvestmentAccount::InvestmentAccount(std::string name, double cash) {
 	this->cash = cash;
 	stocks = 0;
 	this->name = name;
+	transactions = new int[20];
 }
 
-bool InvestmentAccount::PurchaseStocks(double cash) {
+bool InvestmentAccount::PurchaseStocks(double amount) {
 	bool success = true;
-	if (this->cash < cash) {
+	if (this->cash < amount) {
 		success = false;
 	}
 	else {
-		this->cash -= cash;
-		stocks += cash;
+		this->cash -= amount;
+		stocks += amount;
 	}
 
 	return success;
 }
 
-bool InvestmentAccount::SellStocks(double cash) {
+bool InvestmentAccount::SellStocks(double amount) {
 	bool success = true;
-	if (stocks < cash) {
+	if (stocks < amount) {
 		success = false;
 	}
 	else {
-		this->cash += cash;
-		stocks -= cash;
+		this->cash += amount;
+		stocks -= amount;
 	}
 	return success;
 }
@@ -59,9 +61,9 @@ double InvestmentAccount::GetCash() const {
 	return cash;
 }
 
-const InvestmentAccount& InvestmentAccount::operator+=(double cash) {//add cash
-	if (cash > 0) {
-		this->cash += cash;
+const InvestmentAccount& InvestmentAccount::operator+=(double amount) {//add cash
+	if (amount > 0) {
+		this->cash += amount;
 	}
 	else {
 		cout << "Invalid transaction" << endl;
@@ -69,20 +71,24 @@ const InvestmentAccount& InvestmentAccount::operator+=(double cash) {//add cash
 	return *this;
 }
 
-const InvestmentAccount& InvestmentAccount::operator-=(double cash) {//withdraw cash
-	if (cash < 0) {
+const InvestmentAccount& InvestmentAccount::operator-=(double amount) {//withdraw cash
+	if (amount < 0) {
 		cout << "Invalid transaction" << endl;
 	}
-	else if (cash > this->cash) {
+	else if (amount > this->cash) {
 		cout << "Not enough funds" << endl;
 	}
 	else {
-		this->cash -= cash;
+		this->cash -= amount;
 	}
 	return *this;
 }
 
 InvestmentAccount::~InvestmentAccount() {//wipe out all information
+	if (transactions != nullptr) {
+		delete[] transactions;
+		transactions = nullptr;
+	}
 	name = "";
 	cash = 0.0;
 	stocks = 0.0;
