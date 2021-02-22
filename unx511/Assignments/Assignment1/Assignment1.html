@@ -108,7 +108,7 @@ If the IOCTL command fails, the interface monitor will print out the system erro
 (see <a href="https://stackoverflow.com/questions/5858655/linux-programmatically-up-down-an-interface-kernel" target="_blank">linux-programmatically-up-down-an-interface-kernel</a>)</li>
 <li>If the network monitor receives a SIGINT (ctrl-C, kill -2), it will send a “Shut Down” message to each interface monitor, close all of its connections, and exit. The network monitor
     might not be able to shut down each interface monitor by a socket command if the interface monitor is in the middle of monitoring statistics. You might prefer that 
-    the network monitor send a SIGINT to each interface monitor instead.</li>
+    the network monitor send a SIGINT to each interface monitor instead. Or you might want to set the socket read on the interface monitor as non-blocking using <b>setsockopt</b>.</li>
 <li>If the interface monitor receives a SIGINT or a “Shut Down” message from the network monitor, it will write “Done” to the network monitor (if possible), close the connection and exit.</li>
 <li>If the network monitor is still alive and receives “Done” from an interface monitor, it will close that socket connection.</li></li>
 </ul>
