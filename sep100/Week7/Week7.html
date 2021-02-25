@@ -78,11 +78,35 @@ byte until it has parsed "Length" bytes of data.</p>
 
 <p>Code that does all of this can be seen as follows: <a href="UDPPacket/UDPPacket.h" target="_blank">UDPPacket.h</a> and <a href="UDPPacket/UDPPacket.c" target="_blank">UDPPacket.c</a>.</p>
 
-<p><em></em></p>
-<ul>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-</ul>
+<p><em>College Ratings</em></p>
+<p>One thing high school graduates wonder is whether it is worth paying a lot of tuition to attend a particular higher learning institution. One thing that can be checked 
+  is the employer satisfaction rating for a particular College or University. If one divides the employer satisfaction by the tuition, one can come up with a ratio to 
+  determine where might be the best place to study for the cost.</p>
+
+<p>We are going to write a program that collects information for Colleges, which will request the College name, tuition, and employer satisfaction. We need to calculate the 
+  satisfaction to tuition ratio for each College.</p>
+
+<p>First we collect the nouns and adjective. The college name, tuition, and employer satisfaction are all variables that relate to a College, so we could put them 
+  into a college information structure:<br>
+  <pre>
+#define MAX_STR 256
+
+struct CollegeInfo {
+	char name[MAX_STR];
+	double tuition;
+	double employerSatisfaction;//Choose a variable name that represents what it is
+};
+  </pre>
+</p>
+
+<p>Then we collect the verbs. For each college a satisfaction to tuition ratio has to be calculated, and the College with the best ratio has to be noted. We can 
+  create a function that accepts College information as input, and returns the satisfaction to tuition ratio. We can do this two ways. The function can accept 
+college information as input, and return the ratio as an output. But how to we show if data is invalid? The function could therefore accept college information 
+as pass by value, the ratio as pass-by-address where we will store the result, and the function could return a boolean to indicate valid data or not. The function 
+prototype could therefore look as follows:<br>
+<pre>
+bool GetRatio(struct CollegeInfo coll, double* ratio);
+</pre><br>
+Note that since we are not changing anything inside the structure CollegeInfo, it is passed by value. Since ratio is the output, that variable is passed by address.</p>
+
+<p>The full code can be seen at <a href="BestDeal/CollegeInfo.h" target="_blank">CollegeInfo.h</a> and <a href="BestDeal/CollegeMain.c" target="_blank">CollegeMain.c</a>.</p>
