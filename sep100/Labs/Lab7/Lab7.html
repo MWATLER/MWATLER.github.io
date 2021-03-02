@@ -1,0 +1,52 @@
+<h2>SEP100 – Lab 7: Grocery List</h2>
+
+<h3>Due: </h3>
+
+<p>This lab will test your ability to create classes and use objects.</p>
+
+<h3>The Grocery List</h3>
+
+<p>We are going to create a grocery list of grocery items. Each item will have a name, barcode, cost, and whether it is taxable. The tax applied is the HST (currently 13%%). 
+   for each grocery item, we will need to set and get all of these, including a function to calculate the taxes (if applicable).</p>
+<p>The grocery list will consist of up to 5 grocery items. For each grocery item the program will prompt the user for the name (1 or more strings), the 
+    barcode (up to 7 digits, cannot be negative), the cost (must be 0 or greater), and whether it is taxable (Yes/No). Indicate to the user any 
+    invalid entries and prompt the user for input again.</p>
+<p>Once all grocery items have been entered, the program will print out the name, cost and taxes for each grocery item; and at the end a subtotal, taxes,
+    and total. For each grocery item the cost and taxes have to be to two decimal places. The name has to be left justified inside a field of 20 characters.
+    For assistance with formatting, see <a href="https://codescracker.com/cpp/cpp-formatting-output.htm" target="_blank">C++ Formatting Output.</a>.</p>
+
+<h3>Sample Run</h3>
+<pre>
+Enter the number of grocery items (5 max): 3
+Enter the name of the grocery item: Gala Apple
+Enter the barcode of the grocery item (up to 7 digits): 21525215
+Invalid barcode
+Enter the barcode of the grocery item (up to 7 digits): 124124
+Enter the cost of the grocery item : $12.33
+Is the grocery item taxable? [Y/N] y
+
+Enter the name of the grocery item: Pear
+Enter the barcode of the grocery item (up to 7 digits): 125125
+Enter the cost of the grocery item : $11.33
+Is the grocery item taxable? [Y/N] n
+
+Enter the name of the grocery item: Florida Orange
+Enter the barcode of the grocery item (up to 7 digits): 125215
+Enter the cost of the grocery item : $-1
+Invalid cost
+Enter the cost of the grocery item : $2.55
+Is the grocery item taxable? [Y/N] y
+
+name: Gala Apple           cost: $12.33 tax: $1.60
+name: Pear                 cost: $11.33 tax: $0.00
+name: Florida Orange       cost: $2.55 tax: $0.33
+-----------------------------
+Subtotal: $26.21
+Taxes: $1.93
+Total: $28.14
+</pre>>
+
+<h3>Lab Submission:</h3>
+
+<p>Please email your files and the answers to the questions to:
+    <a href="mailto: ">@senecacollege.ca</a></p>
