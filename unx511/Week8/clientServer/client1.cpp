@@ -41,7 +41,8 @@ cout << "client1: connect()" << endl;
 
 cout << "client1: read(STDIN_FILENO)" << endl;
     //Read from the standard input (keyboard)
-    while( isRunning && (rc=read(STDIN_FILENO, buf, sizeof(buf))) > 0) {
+    while( isRunning ) {
+		rc=read(STDIN_FILENO, buf, sizeof(buf));
 cout << "client1: write(" << buf << ")" << endl;
         //Write to the socket
         if (write(fd, buf, rc) != rc) {
