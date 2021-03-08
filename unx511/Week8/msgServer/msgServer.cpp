@@ -63,6 +63,14 @@ int main(void)
     }
 
     is_running = true;
+
+    //Set a socket timeout of 5 seconds
+    struct timeval tv;
+    tv.tv_sec = 5;
+    tv.tv_usec = 0;
+
+    setsockopt(fd, SOL_SOCKET, SO_RCVTIMEO, (const char*)&tv, sizeof tv);
+
     while(is_running) {
 #ifdef DEBUG
         cout<<"waiting on "<<inet_ntoa(myaddr.sin_addr)<<":"<<PORT<<endl;
@@ -74,15 +82,17 @@ int main(void)
 	if(len > 0) {
             buf[len] = '\0';
             cout<<"received message: "<<buf<<endl;
-        }
-	if(strcmp(buf,"Quit")==0) is_running=false;
+	    if(strcmp(buf,"Quit")==0) is_running=false;
 
-        len = sprintf(buf, "DONE")+1;
-        ret = sendto(fd, buf, len, 0, (struct sockaddr *)&remaddr, sizeof(remaddr));
+            len = sprintf(buf, "DONE")+1;
+            ret = sendto(fd, buf, len, 0, (struct sockaddr *)&remaddr, sizeof(remaddr));
+        } else {
+            cout<<"Timed out, reading again"<<endl;
+	}
     }
 
 #ifdef DEBUG
-        cout<<"Server is quitting..."<<endl;
+    cout<<"Server is quitting..."<<endl;
 #endif
 
     close(fd);
