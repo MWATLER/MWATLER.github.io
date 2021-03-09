@@ -8,7 +8,7 @@
     until it has received a response from the <b>client</b>.</p>
 
 <ul>
-<li>The <b>server</b> and <b>client</b> will communicate via a socket file <b>/tmp/lab5</b>.</li>
+<li>The <b>server</b> and <b>client</b> will communicate via a socket file <b>/tmp/lab6</b>.</li>
 <li>The socket type is <b>AF_UNIX</b>, <b>SOCK_STREAM</b>. The socket family is <b>AF_UNIX</b>.</li>
 <li>The <b>client</b> will run inside an infinite while loop whereas the <b>server</b> will send specific commands then quit.</li>
 <li>The sequence of commands are as follows:
@@ -20,7 +20,7 @@
 <li>The <b>client</b> will sleep for 5 seconds then respond to the <b>server</b> with “<b>Done</b>”.</li>
 <li>When the <b>server</b> receives “<b>Done</b>” from the <b>client</b>, the <b>server</b> will send the command “<b>Quit</b>” to tell the <b>client</b> to shutdown.</li>
 <li>The <b>client</b> will break out of its infinite while loop, close the socket connection, then return 0.</li>
-<li>The <b>server</b> will close all socket connections, unlink the socket file <b>/tmp/lab5</b>, then return 0.</li>
+<li>The <b>server</b> will close all socket connections, unlink the socket file <b>/tmp/lab6</b>, then return 0.</li>
     </ol>
 </li>
 <li>Be sure to add error handling in your code.</li>
