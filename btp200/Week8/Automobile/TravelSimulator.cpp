@@ -38,7 +38,7 @@ int main()
     train1.setFuelEfficiency(9.0);
     train1.drive(300.0);
     train2.setFuelEfficiency(10.8);
-    train2.drive(200.0);
+    train2.drive(300.0);
 
     //display the results
     std::cout << std::endl << std::endl;
@@ -47,14 +47,14 @@ int main()
     train1.displayReport();
     train2.displayReport();
 
-    car1 >> car2;
-    car1 += 50;
+    car1 >> car2;//take all the fuel from car1 and put in car2
+    car1 += 50;//add 50L of fuel to car1
 
-    train2 >> train1;
-    train2 += 1000;
+    train2 >> train1;//take all the fuel from train2 and put in train1
+    train2 += 1000;//add 1000L to train2
     std::cout << std::endl << std::endl;
 
-    train2.displayReport(1000);
+    train2.displayReport(1000.0);
 
     std::cout << std::endl << std::endl;
     car1.displayReport();

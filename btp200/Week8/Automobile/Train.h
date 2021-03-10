@@ -20,9 +20,9 @@ public:
     void removeFuel(double _liters);
     void drive(double _distance);
     void displayReport() const;
-    using Vehicle::displayReport;
+    using Vehicle::displayReport;//use overloaded displayReport functions in the parent class
     ~Train();
 };
 
-void operator>>(Train& v1, Train& v2);
-void operator+=(Train& v, double fuel);
+void operator>>(Train& v1, Train& v2);//v1 >> v2
+void operator+=(Train& v, double fuel);//v += fuel

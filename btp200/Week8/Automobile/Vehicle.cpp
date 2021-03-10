@@ -33,13 +33,12 @@ int Vehicle::GetYear() const {
     return year; 
 }
 
-void Vehicle::displayReport() const
-{
-    cout << "This is a " << GetColour() << " " << GetYear() << " " << GetMake() << " " << GetModel() << endl;
+void Vehicle::displayReport() const {
+    cout << "This is a " << colour << " " << year << " " << make << " " << model << endl;
 }
 
 void Vehicle::displayReport(double fuel) const {
-    cout << "The " << GetColour() << " " << GetYear() << " " << GetMake() << " " << GetModel() << " has " << fuel << " left in the tank" << endl;
+    cout << "The " << colour << " " << year << " " << make << " " << model << " has " << fuel << " left in the tank" << endl;
 }
 
 Vehicle::~Vehicle() {

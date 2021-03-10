@@ -23,5 +23,5 @@ public:
     ~Car();
 };
 
-void operator>>(Car& v1, Car& v2);
-void operator+=(Car& v, double fuel);
+void operator>>(Car& v1, Car& v2);//v1 >> v2
+void operator+=(Car& v, double fuel);//v += fuel
