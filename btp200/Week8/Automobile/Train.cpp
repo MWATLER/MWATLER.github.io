@@ -53,7 +53,7 @@ void Train::drive(double _distance)
 
 void Train::displayReport() const
 {
-    cout << "The " << GetColour() << " " << GetYear() << " " << GetMake() << " " << GetModel() << " has " << fuelInTank << " left in the tank" << endl;
+    cout << "The " << GetColour() << " " << GetYear() << " " << GetMake() << " " << GetModel() << " has " << fuelInTank << "L left in the tank" << endl;
 }
 
 Train::~Train() {
@@ -61,12 +61,12 @@ Train::~Train() {
 }
 
 
-void operator>>(Train& v1, Train& v2) {
+void operator>>(Train& v1, Train& v2) {//v1 >> v2
     double fuel = v1.getFuel();
     v1.removeFuel(fuel);
     v2.addFuel(fuel);
 }
 
-void operator+=(Train& v, double fuel) {
+void operator+=(Train& v, double fuel) {//v += fuel
     v.addFuel(fuel);
 }

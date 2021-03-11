@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 
 class Shape {
     double width;
@@ -15,9 +17,9 @@ public:
         radius = r;
         cout << "Shape::Shape" << endl;
     };
-    double CalculateArea() {//could this be moved to protected
-        return length * width;
-    };
+	double CalculateArea() {//could this be moved to protected
+		return length * width;
+	};
     ~Shape() {
         cout << "Shape::~Shape" << endl;
     }

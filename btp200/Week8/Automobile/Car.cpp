@@ -54,19 +54,19 @@ void Car::drive(double _distance)
 void Car::displayReport() const
 {
     Vehicle::displayReport();
-    cout << "The " << GetColour() << " " << GetYear() << " " << GetMake() << " " << GetModel() << " has " << fuelInTank << " left in the tank" << endl;
+    cout << "The " << GetColour() << " " << GetYear() << " " << GetMake() << " " << GetModel() << " has " << fuelInTank << "L left in the tank" << endl;
 }
 
 Car::~Car() {
     cout << "Car::~Car" << endl;
 }
 
-void operator>>(Car& v1, Car& v2) {
-    double fuel = v1.getFuel();
+void operator>>(Car& v1, Car& v2) {//v1 >> v2
+    double fuel = v1.getFuel();//getFuel() returns fuelInTank
     v1.removeFuel(fuel);
     v2.addFuel(fuel);
 }
 
-void operator+=(Car& v, double fuel) {
+void operator+=(Car& v, double fuel) {//v += fuel
     v.addFuel(fuel);
 }

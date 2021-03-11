@@ -18,7 +18,7 @@ private:
 public:
     //NOTE: Should have a default constructor
     Vehicle(std::string _make, std::string _model, std::string _colour, int _year);
-    std::string GetMake() const;
+	std::string GetMake() const;
     std::string GetModel() const;
     std::string GetColour() const;
     int GetYear() const;
