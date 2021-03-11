@@ -1,0 +1,40 @@
+2217 Windwood Drive, Unit 22
+3
+2
+350000
+4000
+300
+300
+400
+2217 Windwood Drive, Unit 7
+3
+2
+450000
+4200
+300
+300
+400
+1334 Montevideo Road, Unit 18
+3
+2
+440000
+4100
+250
+350
+450
+12 Darling Road, Unit 33
+4
+3
+650000
+5000
+350
+500
+440
+581 Cawthra Road, Unit 1
+3
+2
+320000
+3000
+300
+250
+250
