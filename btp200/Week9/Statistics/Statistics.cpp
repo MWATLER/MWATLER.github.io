@@ -10,8 +10,8 @@
 using namespace std;
 
 Statistics::Statistics(const char* filename, unsigned precision) {
-	int len = strlen(filename);
-	this->filename = new char[len+1];
+	int len = strlen(filename);//data.txt, len=
+	this->filename = new char[len+1];//allocate 9 chars, 1 for the null terminator
 	strcpy(this->filename, filename);
 	this->precision = precision;
 }
@@ -26,15 +26,15 @@ Statistics::Statistics(const Statistics& other) {
 	}
 }
 
-Statistics& Statistics::operator=(const Statistics& rhs) {
+Statistics& Statistics::operator=(const Statistics& rhs) {//statistics2 = statistics1;
 	if (this != &rhs && rhs.filename != nullptr) {
 		delete[] filename;
+//		filename = nullptr;
 		int len = strlen(rhs.filename);
 		filename = new char[len+1];
 		strcpy(filename, rhs.filename);
 		precision = rhs.precision;
 		loadData();
-
 	}
 	return *this;
 }
@@ -46,9 +46,10 @@ void Statistics::loadData() {
 		if (data != nullptr) delete[]data;
 		data = new double[numData];
 		for(int i=0; i<numData; ++i) {
-			file >> data[i];
+			file >> data[i];//cin >> data[i]
 			file.ignore(1000, 'a');
 		}
+		file.close();
 	}
 }
 
@@ -58,7 +59,8 @@ void Statistics::getNumData() {
 	while (file) {
 		numData += (file.get() == 'a');
 	}
-	++numData;
+	file.close();
+	++numData;//There is no separator after the last data
 }
 
 

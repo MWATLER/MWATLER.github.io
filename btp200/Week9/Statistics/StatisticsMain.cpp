@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 	Statistics statistics1("data.txt");
-	Statistics statistics2("data2.txt");
+	Statistics statistics2("data2.txt", 3);
 
 	cout << "statistics1:" << endl;
 	statistics1.loadData();
@@ -23,17 +23,16 @@ int main() {
 
 	Statistics statistics3(statistics2);
 	cout << "statistics3:" << endl;
-	statistics3.loadData();
 	statistics3.GetAverage();
 	statistics3.GetStandardDeviation();
 	statistics3.PrintReport();
 
 	statistics2 = statistics1;
 	cout << "statistics2:" << endl;
-	statistics2.loadData();
 	statistics2.GetAverage();
 	statistics2.GetStandardDeviation();
 	statistics2.PrintReport();
 
 	return 0;
 }
+//This is where destruction occurs, as soon as your objects are out of scope.
