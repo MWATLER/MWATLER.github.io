@@ -6,8 +6,9 @@
 #define _COMPONENT_H_
 
 #include <iostream>
+#include "iComponent.h"
 
-class Component {
+class Component : public iComponent{
 	double voltage;
 	double current;
 public:
@@ -27,7 +28,8 @@ public:
 	virtual ~Component() {
 		std::cout << "Component::~Component()" << std::endl; 
 	}
-//	virtual void Print() {}
 };
+
+iComponent* CreateComponent();
 
 #endif//_COMPONENT_H_

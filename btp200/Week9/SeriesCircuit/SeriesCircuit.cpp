@@ -35,6 +35,8 @@ int main(void) {
 	component[6] = new Capacitor(0.0001);
 	component[7] = new Capacitor(0.00005);
 
+//	component[0]->Print();
+
 	for (double current = 0; current < 1; current += 0.1) {
 		cout << "Current:" << current << endl;
 		for (int i = 0; i < NUM; ++i) {

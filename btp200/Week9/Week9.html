@@ -5,13 +5,13 @@
 
 <h3>Videos</h3>
 <table>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=oIV2KchSyGQ" target="_blank">Virtual Functions in C++</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=UWAdd13EfM8" target="_blank">Interfaces in C++ (Pure Virtual Functions)</a></td></tr>
 </table>
 
 <h3>Reference Material</h3>
 <table>
-  <tr><td>Text Reference:</td><td>Chapter  of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></td></tr>
+  <tr><td>Text Reference:</td><td>Chapter 15 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></td></tr>
 </table>
 
 <h3>Sample Code</h3>
@@ -36,7 +36,7 @@
     or parent class will be called Component. The derived classes or children classes are Resistor, Capacitor, and Inductor. The main() function will access these
     derived classes through their base class, allowing all objects of all three kinds to be treated similarly. <br>
     The UML diagram can be seen at:<br>
-    <a href="SeriesCircuit/.PNG" target="_blank">.PNG</a>,
+    <a href="SeriesCircuit/SeriesCircuit.PNG" target="_blank">SeriesCircuit.PNG</a>,
     The code can be seen at:<br>
     <a href="SeriesCircuit/Component.h" target="_blank">Component.h</a>,
     <a href="SeriesCircuit/Resistor.h" target="_blank">Resistor.h</a>,
@@ -46,5 +46,23 @@
     <a href="SeriesCircuit/Inductor.h" target="_blank">Inductor.h</a>,
     <a href="SeriesCircuit/Inductor.cpp" target="_blank">Inductor.cpp</a>, and
     <a href="SeriesCircuit/SeriesCircuit.cpp" target="_blank">SeriesCircuit.cpp</a>
+  </li>
+  <li>In order to demonstrate the C++ interface, an interface class has been introduced, which acts as the parent class to Component which in turn acts as the 
+    parent class to Resistor, Inductor and Capacitor. The interface class is accompanied by a CreateComponent function. The idea is, the user only sees the 
+    interface without knowing how the electronic components are built. The CreateComponent function will act as a user-interface to guide the user in 
+    building the electronic circuit.<br>
+    The UML diagram can be seen at:<br>
+    <a href="iSeriesCircuit/iSeriesCircuit.PNG" target="_blank">iSeriesCircuit.PNG</a>,
+    The code can be seen at:<br>
+    <a href="iSeriesCircuit/iComponent.h" target="_blank">iComponent.h</a>,
+    <a href="iSeriesCircuit/Component.h" target="_blank">Component.h</a>,
+    <a href="iSeriesCircuit/Component.cpp" target="_blank">Component.cpp</a>,
+    <a href="iSeriesCircuit/Resistor.h" target="_blank">Resistor.h</a>,
+    <a href="iSeriesCircuit/Resistor.cpp" target="_blank">Resistor.cpp</a>,
+    <a href="iSeriesCircuit/Capacitor.h" target="_blank">Capacitor.h</a>,
+    <a href="iSeriesCircuit/Capacitor.cpp" target="_blank">Capacitor.cpp</a>,
+    <a href="iSeriesCircuit/Inductor.h" target="_blank">Inductor.h</a>,
+    <a href="iSeriesCircuit/Inductor.cpp" target="_blank">Inductor.cpp</a>, and
+    <a href="iSeriesCircuit/SeriesCircuit.cpp" target="_blank">SeriesCircuit.cpp</a>
   </li>
 </ul>
