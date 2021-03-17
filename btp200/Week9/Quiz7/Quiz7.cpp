@@ -14,6 +14,7 @@ public:
 		return 0.0;
 	}
 	virtual double GetVolume() = 0;
+	virtual ~MathBase() { cout << "MathBase::~MathBase()" << endl; }
 };
 
 class Rectangle : public MathBase {
@@ -33,6 +34,7 @@ public:
 	double GetVolume() {
 		return length * width * height;
 	}
+	~Rectangle() { cout << "Rectangle::~Rectangle()" << endl; }
 };
 
 class Circle : public MathBase {
@@ -52,12 +54,13 @@ public:
 	double GetVolume() {
 		return PI * radius * radius * height;
 	}
+	~Circle() { cout << "Circle::~Circle()" << endl; }
 };
 
 void PrintGetArea(MathBase& shape) {
 	cout << shape.GetArea() << endl;
 }
-void PrintGetArea(Rectangle& shape) {
+void PrintGetArea(Circle& shape) {
 	cout << shape.MathBase::GetArea() << endl;
 }
 
@@ -73,10 +76,8 @@ int main(void) {
 		cout << "Shape " << (i + 1) << " Area:      " << math[i]->GetArea() << endl;
 		cout << "Shape " << (i + 1) << " Volume:    " << math[i]->GetVolume() << endl << endl;
 	}
-
-	cout << "Testing PrintGetArea()" << endl;
 	PrintGetArea(*math[0]);
-	PrintGetArea((Rectangle&)*math[1]);
+	PrintGetArea((Circle&)*math[1]);
 
 	for (int i = 0; i < NUM; ++i) delete math[i];
 
