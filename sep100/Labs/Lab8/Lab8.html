@@ -1,0 +1,67 @@
+<h2>SEP100 – Lab 8: Gravity</h2>
+
+<h3>Due: end of week 11</h3>
+
+<p>This lab will test your ability to create classes, use objects, and use constructors.</p>
+
+<h3>Gravity</h3>
+
+<p>We are going to simulate the displacement of an object on the moon and an object on the earth. For both places, an object will be dropped from 
+    a certain altitude with a constant horizontal velocity. Our program will simulate the <b>x</b> and <b>y</b> displacement of the object as a function 
+    of time.</p>
+
+<p>The earth object and moon object are similar, with two differences. The earth object will have a gravitational acceleration constant of 9.81 m/s<sup>2</sup> and
+the moon a gravitational acceleration constant of 1.625 m/s<sup>2</sup>. The earth object will have no initial vertical speed, but the moon object will.</p>
+
+<p>The earth object will have a gravitational acceleration constant, an initial height, a horizontal speed, an x position and a y position. It can be created 
+    through two constructors: one a default constructor and one a constructor which takes as arguments the initial height and the horizontal speed. 
+    The earth object will have setter functions to set the initial height and to set the horizontal speed. The setter functions perform validation on the 
+    entered values. They will return false if the entered value is less than or equal to 0, true otherwise. The earth 
+    object will have getter functions to get the <b>x</b> position (horizontal position) and the <b>y</b> position (vertical position):<br>
+    x-position = horizontal speed x time<br>
+    y-position = initial height - 0.5 x gravitational constant x time<sup>2</sup>
+</p>
+
+<p>The moon object will have a gravitational acceleration constant, an initial height, an initial vertical speed, a horizontal speed, an x position 
+    and a y position. It can be created through two constructors: one a default constructor and one a constructor which takes as arguments the initial 
+    height, the initial vertical speed, and the horizontal speed. The moon object will have setter functions to set the initial height, the initial 
+    vertical speed, and to set the horizontal speed. The setter functions perform validation on the entered values. They will return false if the
+    entered value is less than or equal to 0, true otherwise. The moon object will have getter functions to get the <b>x</b> position (horizontal position)
+    and the <b>y</b> position (vertical position):<br>
+    x-position = horizontal speed x time<br>
+    y-position = initial height + initial vertical speed x time - 0.5 x gravitational constant x time<sup>2</sup>
+</p>
+
+<p>Part of the <b>main()</b> function has been provided for you in the file <a href="ObjectMain.cpp" target="_blank">ObjectMain.cpp</a>.
+    You have to complete the <b>TODO</b> section, where you are to prompt the user to enter new parameters for the moon object and the earth object.
+    Be sure to perform validation on the entered values.</p>
+
+<h3>Sample Run</h3>
+<pre>
+    time:4.516
+    The moon object's horizontal position is 451.6m and vertical position is 128.59m
+    The earth object's horizontal position is 451.6m and vertical position is -0.0338257m
+
+    Enter the moon object's horizontal speed: 200
+    Enter the moon object's initial vertical speed: 5
+    Enter the moon object's initial height: 50
+    Enter the earth object's horizontal speed: 150
+    Enter the earth object's initial height: 300
+    
+    time:7.821
+    The moon object's horizontal position is 1564.2m and vertical position is 39.406m
+    The earth object's horizontal position is 1173.15m and vertical position is -0.0292411m
+</pre>
+
+<h3>Questions</h3>
+<ol>
+    <li>In this lab the constructor has been overloaded. Do you see any other functions that might require overloading in either class?</li>
+    <li>Do you prefer setting class variables by the constructor or by setter functions? Why?</li>
+    <li>The class for the moon object and the class for the earth object are so similar. Describe how you could merge both of them into 
+        one class called <b>Object</b>.</li>
+</ol>
+
+<h3>Lab Submission:</h3>
+
+<p>Please email your files and the answers to the questions to:
+    <a href="mailto: ">@senecacollege.ca</a></p>
