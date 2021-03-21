@@ -6,6 +6,7 @@
 #define CLIENT_H
 
 const int BUF_LEN=64;
+const char pathname[]="client1client2";
   
 // structure for message queue 
 typedef struct mymsg {

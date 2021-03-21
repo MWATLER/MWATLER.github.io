@@ -49,8 +49,14 @@ int main()
     int ret;
     pthread_t tid[4];
   
-    signal(SIGINT, shutdownHandler);
-    signal(SIGALRM, shutdownHandler);
+    //Set up a signal handler to terminate the program gracefully
+    struct sigaction action;
+    action.sa_handler = shutdownHandler;
+    sigemptyset(&action.sa_mask);
+    action.sa_flags = 0;
+    sigaction(SIGINT, &action, NULL);
+    sigaction(SIGALRM, &action, NULL);
+
     // ftok to generate unique key 
     key = ftok("client3client4", 65); 
 
