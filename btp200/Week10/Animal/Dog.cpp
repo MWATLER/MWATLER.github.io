@@ -23,6 +23,7 @@ void Dog::addWeight(double wt) {
 
 void Dog::reduceWeight(double wt) {
 	weight -= wt;
+	if (weight < 0) weight = 0;
 }
 
 

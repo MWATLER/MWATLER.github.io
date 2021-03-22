@@ -37,5 +37,9 @@ int main(void) {
 		cout << pets[i]->GetName() << " has a worth of $" << pets[i]->CalculateWorth() << endl;
 	}
 
+	for (int i = 0; i < NUM; ++i) {
+		delete pets[i];
+	}
+
 	return 0;
 }

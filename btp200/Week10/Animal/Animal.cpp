@@ -7,12 +7,16 @@
 
 using namespace std;
 
+// Cat cat;
+// cat<<2.0;
 void operator<<(Animal& an, double amt) {//add weight
     if (amt > 0) {
         an.addWeight(amt);
     }
 }
 
+// Dog dog;
+// dog>>5.0;
 void operator>>(Animal& an, double amt) {//reduce weight
     if (amt > 0) {
         an.reduceWeight(amt);
@@ -23,7 +27,7 @@ Animal* CreateAnimal() {
     Animal* an = nullptr;
     int sel=0;
     do {
-        system("CLS");
+        system("CLS");//clear the screen
         cout << "1.Cat" << endl;
         cout << "2.Dog" << endl;
         cout << "Make a selection: ";
