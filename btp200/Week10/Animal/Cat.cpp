@@ -23,6 +23,7 @@ void Cat::addWeight(double wt) {
 
 void Cat::reduceWeight(double wt) {
 	weight-=wt;
+	if (weight < 0) weight = 0;
 }
 
 
