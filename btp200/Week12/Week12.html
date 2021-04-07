@@ -19,7 +19,8 @@
 <ul>
 <li>A card player program has been written to simulate the card game 21. The object of this game is to draw cards in order that their sum is as close to 21 as possible without going over. In this game,
   a twist has been added. The user can draw "attack" cards which have positive values, but the user can also draw "dependent" cards, which have negative values. The players can play in regular mode, 
-  where all cards have integer values, or high-definition mode where all cards have double floating point values. Since the values of the cards could be one of two types (int or double), templates 
+  where all attack cards have integer values, or high-definition mode where all attack cards have double floating point values. All dependent cards have integer values. Since the values of the 
+  attack cards could be one of two types (int or double), templates 
   are introduced. There are two types of players - youth and adult. When youth draw cards, the maximum value of a card is 10. When adults draw cards, the maximum value of a card is 15. Both youth 
   and adults can draw as many "dependent" and "attack" cards as they want initially. They can choose to add an "attack" card or a "dependent" card only once afterwards. They are each given $1000
   to begin with. Each round they can bet between $10 and $300. The UML diagram can be found at:<br>
