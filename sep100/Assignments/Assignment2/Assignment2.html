@@ -1,0 +1,366 @@
+<h2>SEP100 – Assignment 2: Scientific Publication - Space Travel</h2>
+
+<h3>Due: end of week 13</h3>
+
+<h4><b><u>Abstract</u></b></h4>
+<p>With advances in nuclear technology, it is now possible to generate anti-matter particles from the collision of light. We therefore need a feasibility study 
+    to understand the limitations of many types of anti-matter driven spacecraft as they travel together through space, even though the practical realization
+    of such a study may be one or two generations away.</p>
+
+<h4><b><u>Introduction</u></b></h4>
+<p>Recent research has shown that photons, or high energy light, can be compelled to collide generating matter/anti-matter pairs of particles. The particles
+    generated are the electon (matter) and the positron (anti-matter version of the electron). In order to keep these particles from colliding, magnetic fields
+    are used to separate them into separate magnetic bottles. After large quantitues have been stored, they can then be brought to collide in a controlled way
+    to generate enormous amounts of energy according to Einstein's equation E=mc<sup>2</sup>. Such a collision of electrons and positrons will result in gamma
+    rays. Currently there is no known material that can reflect gamma rays. It is assumed such a material will be developed in the future, so these rays will
+    reflect off this material and propel the spaceship forward.</p>
+
+<h4><b><u>Materials and Methods</u></b></h4>
+<p>There are three types of spaceships: a cargo vessel, a starship, and a warbird. Each of these carries a payload and a propulsion system. The warbird
+    and starship also carry a weapons system. The mass of each spaceship has to be determined in order to calculate the energy required to accelerate 
+    a spaceship to a certain velocity, according to the equation for kinetic energy: E=0.5mv<sup>2</sup>. Knowing the energy required to accelerate a 
+    spaceship to a certain velocity, the amount of matter/anti-matter annihilation required to generate such energy (assuming 100% efficiency) can be
+    calculate from E=mc<sup>2</sup>, m=E/c<sup>2</sup>. Furthermore, since these spaceships are traveling through space, they have the ability to 
+    generate their own matter/anti-matter from the level of light around them.</p>
+
+<h4><b><u>Design - The Components of a Space Ship</u></b></h4>
+<ol>
+    <li><b>The Payload</b>. The payload consists of the following masses:
+    <ul>
+        <li>The mass of the passengers,</li>
+        <li>The mass of the cargo,</li>
+        <li>The mass of the workstations.</li>
+    </ul>
+    The payload can also perform the following actions:
+    <ul>
+        <li>Construct itself with default parameters (all masses set to 0),</li>
+        <li>Construct itself with the masses of the passengers, cargo, and workstation,</li>
+        <li>Get the mass (returns the mass of the passengers, cargo, and workstations in kg),</li>
+        <li>Add passengers (pass through the mass of the added passengers),</li>
+        <li>Add cargo (pass through the mass of the added cargo),</li>
+        <li>Add workstations (pass through the mass of the added workstations),</li>
+        <li>Generate a report that prints the mass of the passengers, cargo, and workstations.</li>
+    </ul>
+    </li>
+    <li><b>The Propulsion System</b>. The propulsion system consists of the following:
+    <ul>
+        <li>The fuel level in kg of matter/anti-matter,</li>
+        <li>The fuel tank capacity, fixed at 1000.0kg of matter/anti-matter,</li>
+        <li>The speed of light, fixed at 299,792,458 m/s,</li>
+        <li>The light to fuel conversion ratio, fixed at 0.000001 (1mg of matter/anti-matter generated every second for a light level of 1.0),</li>
+        <li>The light level, where a level of 1.0 is the light level on the surface of the sun.</li>
+    </ul>
+    The propulsion system can perform the following:
+    <ul>
+        <li>Construct itself with default parameters (fuel level and light level set to 0),</li>
+        <li>Construct itself with the fuel level and the light level,</li>
+        <li>Consume fuel (passing through the energy required, return true if there is enough fuel to provide the energy required and false otherwise).
+            Fuel is consumed according to Einstein's equation E=mc<sup>2</sup>, m=E/c<sup>2</sup>.</li>
+        <li>Add fuel (in kg of matter/anti-matter),</li>
+        <li>Generate fuel (passing through the time elapsed in seconds). The amount of fuel generated for a given number of seconds is the light to fuel
+             conversion ratio times the time in seconds.</li>
+        <li>Set the light level (passing through the light level),</li>
+        <li>Generate a report printing the fuel level in kg and light level.</li>
+    </ul>
+    </li>
+    <li><b>The Weapons System</b>. The weapons system consists of the following:
+    <ul>
+        <li>The number of torpedoes,</li>
+        <li>The number of laser cannons,</li>
+        <li>The torpedo capacity, fixed at 100,</li>
+        <li>The maximum number of laser cannons, fixed at 8,</li>
+        <li>The energy per second required to fire one laser cannon, fixed at 1000000000000.0 (1 million megaWatts).</li>
+    </ul>
+    The weapons system can perform the following:
+    <ul>
+        <li>Construct itself with default parameters (number of torpedoes and laser cannons set to 0),</li>
+        <li>Construct itself with the number of torpedoes and the number of laser cannons,</li>
+        <li>Fire torpedoes (passing through the number of torpedoes, return true if there are enough torpedoes available to fire and false otherwise),</li>
+        <li>Fire the laser cannons (passing through the time duration that the laser cannons were fired, returns the energy consumed according to the energy per second times the 
+            time duration in seconds),</li>
+        <li>Add torpedoes (passing through the number of torpedoes),</li>
+        <li>Add laser cannons (passing through the nuber of laser cannons),</li>
+        <li>Generate a report printing the number of laser cannons and the number of torpedoes.</li>
+    </ul>
+    </li>
+</ol>
+
+
+<h4><b><u>Implementation - The Construction of Space Ships</u></b></h4>
+<ol>
+    <li><b>The Cargo Ship</b>. The cargo ship consists of the following:
+        <ul>
+            <li>One propulsion system,</li>
+            <li>Two payloads (payload1, payload2),</li>
+            <li>The speed of travel in m/2.</li>
+            <li>The distance travelled in meters.</li>
+        </ul>
+        The cargo ship can perform the following:
+        <ul>
+            <li>Construct itself with the fuel level, light level, the mass of the passengers per payload, the mass of the cargo per payload, and the mass of the workstations per payload. The speed 
+                and distance are initialized to 0.</li>
+            <li>Change speed (passing through the change of speed in m/s, returning true whether the change is possible and false otherwise). The energy required is calculated
+                according to the equation for kinetic energy: E=0.5mv<sup>2</sup>. This energy is passed to the propulsion system to see how much fuel is consumed. 
+            </li>
+            <li>Travel (passing through the amount of time travelled as well as the light level). The distance travelled will be updated. The light level is set in the propulsion system. 
+                The amount of fuel generated in the propulsion system is calculated by passing through the time travelled.
+            </li>
+            <li>Generate a report printing the current speed in m/s and the distance travelled in km.</li>
+        </ul>
+    </li>
+    <li><b>The Starship</b>. The starship consists of the following:
+        <ul>
+            <li>One propulsion system,</li>
+            <li>One payload system,</li>
+            <li>One weapon system,</li>
+            <li>The speed of travel in m/2.</li>
+            <li>The distance travelled in meters.</li>
+        </ul>
+        The starship can perform the following:
+        <ul>
+            <li>Construct itself with the fuel level, light level, the mass of the passengers per payload, the mass of the cargo per payload, the mass of the workstations per payload, the number 
+                of torpedoes per weapons system, and the number of the laser cannons per weapons system. The speed and distance are initialized to 0.</li>
+            <li>Change speed (passing through the change of speed in m/s, returning true whether the change is possible and false otherwise). The energy required is calculated
+                according to the equation for kinetic energy: E=0.5mv<sup>2</sup>. This energy is passed to the propulsion system to see how much fuel is consumed.</li>
+            <li>Travel (passing through the amount of time travelled as well as the light level). The distance travelled will be updated. The light level is set in the propulsion system. 
+                The amount of fuel generated in the propulsion system is calculated by passing through the time travelled.</li>
+            <li>Fire torpedoes (passing through the number of torpedoes, returning true if those torpedoes are available and false otherwise).</li>
+            <li>Fire laser cannons (passing through the time duration of the firing of the laser cannons, returning true if such an action is possible and false otherwise). The energy 
+                required to fire the laser cannons is determined from the weapons system, and the fuel consumed by such an action is calculated from the propulsion system.</li>
+            <li>Generate a report printing the speed in m/s and distance travelled in m. It also calls the generate report functions of the propulsion system, payload, and weapons 
+                system.</li>
+        </ul>
+    </li>
+    <li><b>The Warbird</b>. The warbird consists of the following:
+        <ul>
+            <li>Two propulsion systems,</li>
+            <li>One payload system,</li>
+            <li>Two weapon systems,</li>
+            <li>The speed of travel in m/2.</li>
+            <li>The distance travelled in meters.</li>
+        </ul>
+        The warbird can perform the following:
+        <ul>
+            <li>Construct itself with the fuel level per propulsion system, light level per propulsion system, the mass of the passengers per payload, the mass of the cargo per payload,
+                the mass of the workstations per payload, the number of torpedoes per weapons system, and the number of the laser cannons per weapons system. The speed and distance are
+                initialized to 0.</li>
+            <li>Change speed (passing through the change of speed in m/s, returning true whether the change is possible and false otherwise). The energy required is calculated
+                according to the equation for kinetic energy: E=0.5mv<sup>2</sup>. This energy is passed to the propulsion systems to see how much fuel is consumed.</li>
+            <li>Travel (passing through the amount of time travelled as well as the light level). The distance travelled will be updated. The light level is set in the propulsion systems. 
+                The amount of fuel generated in the propulsion systems is calculated by passing through the time travelled.</li>
+            <li>Fire torpedoes (passing through the number of torpedoes, returning true if those torpedoes are available and false otherwise).</li>
+            <li>Fire laser cannons (passing through the time duration of the firing of the laser cannons, returning true if such an action is possible and false otherwise). The energy 
+                required to fire the laser cannons is determined from each weapons system, and the fuel consumed by such an action is calculated from the propulsion systems.</li>
+            <li>Generate a report printing the speed in m/s and distance travelled in m. It also calls the generate report functions of the propulsion systems, payload, and weapons 
+                systems.</li>
+        </ul>
+    </li>
+</ol>
+
+<h4><b><u>Testing and Rework</u></b></h4>
+<p><b>StarFleet.cpp</b>. The program <a href="StarFleet.cpp" target="_blank">StarFleet.cpp</a> contains the main() function and will test your system. It consists of a warbird,
+starship, and two cargo ships. Essential parameters are passed through in the construction of each spaceship. StarFleet.cpp will accelerate your ships by 0.01 the speed of
+light and will determine if all our ships can keep up. During the travel, fuel is generated. A report for all ships is generated. The program will then accelerate our ships
+by another 0.005 times the speed of light and will determine if all our ships can keep up. During the travel, fuel is generated. A report is generated. The program will once
+again accelerate our ships by another 0.005 times the speed of light and will determine if all our ships can keep up. During the travel, fuel is generated. A report is 
+generated. The ships will then engage in combat. The warbird fires torpedoes and laser cannons, and the starship fires laser cannons. A report is generated.</p>
+<p>A run of the test program StarFleet.cpp should provide the following output:
+    <pre>
+        ACCELERATION REPORT 1:
+        The war bird is travelling at 2997924.58m/s and has travelled 0.00m.
+        Propulsion: fuel level: 996.67kg of matter/anti-matter, light level:0.10.
+        Propulsion: fuel level: 996.67kg of matter/anti-matter, light level:0.10.
+        Payload: mass of passengers:30000.00kg, mass of cargo:100000.00kg, mass of workstations:3000.00kg.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        
+        The star ship is travelling at 2997924.58m/s and has travelled 0.00m.
+        Propulsion: fuel level: 979.50kg of matter/anti-matter, light level:0.10.
+        Payload: mass of passengers:100000.00kg, mass of cargo:300000.00kg, mass of workstations:10000.00kg.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        
+        The cargo ship is travelling at 2997924.58m/s and has travelled 0.00km.
+        Propulsion: fuel level: 399.00kg of matter/anti-matter, light level:0.10.
+        Payload: mass of passengers:1000000.00kg, mass of cargo:5000000.00kg, mass of workstations:10000.00kg.
+        Payload: mass of passengers:1000000.00kg, mass of cargo:5000000.00kg, mass of workstations:10000.00kg.
+        
+        The cargo ship is travelling at 2997924.58m/s and has travelled 0.00km.
+        Propulsion: fuel level: 98.50kg of matter/anti-matter, light level:0.10.
+        Payload: mass of passengers:1500000.00kg, mass of cargo:7500000.00kg, mass of workstations:15000.00kg.
+        Payload: mass of passengers:1500000.00kg, mass of cargo:7500000.00kg, mass of workstations:15000.00kg.
+        
+        TRAVEL REPORT 1:
+        The war bird is travelling at 2997924.58m/s and has travelled 107925284880.00m.
+        Propulsion: fuel level: 1000.00kg of matter/anti-matter, light level:0.01.
+        Propulsion: fuel level: 1000.00kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:30000.00kg, mass of cargo:100000.00kg, mass of workstations:3000.00kg.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        
+        The star ship is travelling at 2997924.58m/s and has travelled 107925284880.00m.
+        Propulsion: fuel level: 1000.00kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:100000.00kg, mass of cargo:300000.00kg, mass of workstations:10000.00kg.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        
+        The cargo ship is travelling at 2997924.58m/s and has travelled 107925284.88km.
+        Propulsion: fuel level: 759.00kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:1000000.00kg, mass of cargo:5000000.00kg, mass of workstations:10000.00kg.
+        Payload: mass of passengers:1000000.00kg, mass of cargo:5000000.00kg, mass of workstations:10000.00kg.
+        
+        The cargo ship is travelling at 2997924.58m/s and has travelled 107925284.88km.
+        Propulsion: fuel level: 458.50kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:1500000.00kg, mass of cargo:7500000.00kg, mass of workstations:15000.00kg.
+        Payload: mass of passengers:1500000.00kg, mass of cargo:7500000.00kg, mass of workstations:15000.00kg.
+        
+        ACCELERATION REPORT 2:
+        The war bird is travelling at 4496886.87m/s and has travelled 107925284880.00m.
+        Propulsion: fuel level: 999.17kg of matter/anti-matter, light level:0.01.
+        Propulsion: fuel level: 999.17kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:30000.00kg, mass of cargo:100000.00kg, mass of workstations:3000.00kg.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        
+        The star ship is travelling at 4496886.87m/s and has travelled 107925284880.00m.
+        Propulsion: fuel level: 994.88kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:100000.00kg, mass of cargo:300000.00kg, mass of workstations:10000.00kg.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        
+        The cargo ship is travelling at 4496886.87m/s and has travelled 107925284.88km.
+        Propulsion: fuel level: 608.75kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:1000000.00kg, mass of cargo:5000000.00kg, mass of workstations:10000.00kg.
+        Payload: mass of passengers:1000000.00kg, mass of cargo:5000000.00kg, mass of workstations:10000.00kg.
+        
+        The cargo ship is travelling at 4496886.87m/s and has travelled 107925284.88km.
+        Propulsion: fuel level: 233.12kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:1500000.00kg, mass of cargo:7500000.00kg, mass of workstations:15000.00kg.
+        Payload: mass of passengers:1500000.00kg, mass of cargo:7500000.00kg, mass of workstations:15000.00kg.
+        
+        TRAVEL REPORT 2:
+        The war bird is travelling at 4496886.87m/s and has travelled 269813212200.00m.
+        Propulsion: fuel level: 1000.00kg of matter/anti-matter, light level:0.01.
+        Propulsion: fuel level: 1000.00kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:30000.00kg, mass of cargo:100000.00kg, mass of workstations:3000.00kg.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        
+        The star ship is travelling at 4496886.87m/s and has travelled 269813212200.00m.
+        Propulsion: fuel level: 1000.00kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:100000.00kg, mass of cargo:300000.00kg, mass of workstations:10000.00kg.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        
+        The cargo ship is travelling at 4496886.87m/s and has travelled 269813212.20km.
+        Propulsion: fuel level: 968.75kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:1000000.00kg, mass of cargo:5000000.00kg, mass of workstations:10000.00kg.
+        Payload: mass of passengers:1000000.00kg, mass of cargo:5000000.00kg, mass of workstations:10000.00kg.
+        
+        The cargo ship is travelling at 4496886.87m/s and has travelled 269813212.20km.
+        Propulsion: fuel level: 593.12kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:1500000.00kg, mass of cargo:7500000.00kg, mass of workstations:15000.00kg.
+        Payload: mass of passengers:1500000.00kg, mass of cargo:7500000.00kg, mass of workstations:15000.00kg.
+        
+        ACCELERATION REPORT 3:
+        The war bird is travelling at 5995849.16m/s and has travelled 269813212200.00m.
+        Propulsion: fuel level: 999.17kg of matter/anti-matter, light level:0.01.
+        Propulsion: fuel level: 999.17kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:30000.00kg, mass of cargo:100000.00kg, mass of workstations:3000.00kg.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        
+        The star ship is travelling at 5995849.16m/s and has travelled 269813212200.00m.
+        Propulsion: fuel level: 994.88kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:100000.00kg, mass of cargo:300000.00kg, mass of workstations:10000.00kg.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        
+        The cargo ship is travelling at 5995849.16m/s and has travelled 269813212.20km.
+        Propulsion: fuel level: 818.50kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:1000000.00kg, mass of cargo:5000000.00kg, mass of workstations:10000.00kg.
+        Payload: mass of passengers:1000000.00kg, mass of cargo:5000000.00kg, mass of workstations:10000.00kg.
+        
+        The cargo ship is travelling at 5995849.16m/s and has travelled 269813212.20km.
+        Propulsion: fuel level: 367.75kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:1500000.00kg, mass of cargo:7500000.00kg, mass of workstations:15000.00kg.
+        Payload: mass of passengers:1500000.00kg, mass of cargo:7500000.00kg, mass of workstations:15000.00kg.
+        
+        COMBAT REPORT 1:
+        The war bird is travelling at 5995849.16m/s and has travelled 269813212200.00m.
+        Propulsion: fuel level: 999.16kg of matter/anti-matter, light level:0.01.
+        Propulsion: fuel level: 999.16kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:30000.00kg, mass of cargo:100000.00kg, mass of workstations:3000.00kg.
+        Weapon: number of laser cannons:5, number of torpedoes:95.
+        Weapon: number of laser cannons:5, number of torpedoes:95.
+        
+        The star ship is travelling at 5995849.16m/s and has travelled 269813212200.00m.
+        Propulsion: fuel level: 994.87kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:100000.00kg, mass of cargo:300000.00kg, mass of workstations:10000.00kg.
+        Weapon: number of laser cannons:5, number of torpedoes:100.
+        
+        The cargo ship is travelling at 5995849.16m/s and has travelled 269813212.20km.
+        Propulsion: fuel level: 818.50kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:1000000.00kg, mass of cargo:5000000.00kg, mass of workstations:10000.00kg.
+        Payload: mass of passengers:1000000.00kg, mass of cargo:5000000.00kg, mass of workstations:10000.00kg.
+        
+        The cargo ship is travelling at 5995849.16m/s and has travelled 269813212.20km.
+        Propulsion: fuel level: 367.75kg of matter/anti-matter, light level:0.01.
+        Payload: mass of passengers:1500000.00kg, mass of cargo:7500000.00kg, mass of workstations:15000.00kg.
+        Payload: mass of passengers:1500000.00kg, mass of cargo:7500000.00kg, mass of workstations:15000.00kg.
+    </pre>
+</p>
+
+
+<h4><b><u>Questions</u></b></h4>
+<ol>
+    <li>Given that the nearest star-system is 4.0 light years away, based on this study how long do you think it would take a warbird to get there from earth?</li>
+    <li>Do you think you could perform this assignment with just structures? Explain.</li>
+    <li>Do you think you could perform this assignment without classes or structures? Explain.</li>
+    <li>Would it be easy to present the cargo ship, starhip, and warbird as black boxes for another programmer to use? Explain.</li>
+</ol>
+
+<h4><b><u>Timeline</u></b></h4>
+
+<p><b>Days 1-7:</b> Complete the design - the components of a spaceship.</p>
+
+<p><b>Days 8-14:</b>Complete the implementation - the construction of the spaceships from its components.</p>
+
+<p><b>Days 15-21:</b>Putting it all together. Test and Rework. Questions.</p>
+
+<h4><b><u>Marking Rubric</u></b></h4>
+
+<p>Assignment 2 is worth 15% of your final grade and as such is marked out of 15 as follows:</p>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+table {
+    width: 800;
+}
+</style>
+<table>
+    <tr><th></th><th>Does not meet expectations</th><th>Satisfactory</th><th>Good</th><th>Exceeds Expectations</th></tr>
+    <tr><td><b>The Payload System<br>(2 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>The Propulsion System<br>(2 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>The Weapons System<br>(2 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>The Cargo Ship<br>(2 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>The Starship<br>(2 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>The Warbird<br>(2 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>Documentation<br>(1 mark)</b></td><td>Does not contain documentation</td><td>Contains header documentation for either all files or for all functions within each file</td>
+        <td>Contains header documentation for all files and for most functions within each file</td><td>Contains header documentation for all files and for all functions within each file.
+            Documents unclear code.</td></tr>
+    <tr><td><b>Questions<br>(2 marks)</b></td><td>Answers no question correctly</td><td>Answers some questions correctly</td>
+        <td>Answers most questions correctly</td><td>Answers all Questions correctly</td></tr>
+</table>
+
+<h4><b><u>Submission</u></b></h4>
+
+<p>Please email all source code and answers to questions to:
+    <a href="mailto: @senecacollege.ca">@senecacollege.ca</a></p>
+
+<p>Your questions can be submitted in a separate document or embedded within your source code.</p>
+
+<h4><b><u>Late Policy</u></b></h4>
+
+<p>You will be docked 10% if your assignment is submitted 1-2 days late.<br>
+   You will be docked 20% if your assignment is submitted 3-4 days late.<br>
+   You will be docked 30% if your assignment is submitted 5-6 days late.<br>
+   You will be docked 40% if your assignment is submitted 7 days late.<br>
+   You will be docked 50% if your assignment is submitted over 7 days late.</p>
