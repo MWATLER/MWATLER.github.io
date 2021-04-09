@@ -1,4 +1,4 @@
-<h2>SEP100 – Lab 9: </h2>
+<h2>SEP100 – Lab 9: Card Game</h2>
 
 <h3>Due: end of week 12</h3>
 
@@ -9,14 +9,92 @@
 <p>You will write a program that simulates a game of 21 with a few twists. The purpose of 21 is to draw cards that sum as closely to 21 without going over. The player with the highest sum 
     without going over 21 wins. In this game however, the players will have the option to steal the cards of other players.</p>
 
+<p>The player has a <b>name</b>, an unknown <b>number of cards</b> with values 1-10 each, and <b>cash</b>. The player will have to allocate the cards once the number of cards is known.</p>
+
+<p>The player <b>creates</b> itself given his/her name.<br>The player <b>draws cards</b> by deleting the cards it has and creating a new list of cards based on the number of cards requested. The value of each 
+    card is according to a random number generator that generates a random number from 1 to 10: <b>(rand()%10)+1</b>.<br>The player <b>sums cards</b> by going through the list of cards it has and 
+    returning the total points for all of them.<br>The player can <b>add cash</b> given an amount. This amount could be negative (the player lost). If the player has no cash left then <b>add cash</b>
+    returns a false, otherwise it returns a true.<br>The player can <b>steal cards</b> from another player. In this case the player has to delete its own cards, copy the cards from the other 
+    player, then delete the other player's cards. YOU HAVE TO ADD A TEST SO A PLAYER DOESN'T STEAL CARDS FROM ITSELF.<br>The player can generate a <b>report</b> printing the player's name and
+    cash left over.<br>The player can <b>destroy</b>itself by cleaning up any memory allocated.</p>
+
+<p>The file <a href="PlayerMain.cpp" target="_blank">PlayerMain.cpp</a> has been given to test your code.</p>
 
 <h3>Sample Run</h3>
+A sample run is as follows:
 <pre>
+    How much do you want to bet? $300
+    New York State of Mind, how many cards do you want to draw? 4
+    Street Smarts, how many cards do you want to draw? 3
+    
+    New York State of Mind, you have 16 points. Do you wish to steal the cards from Street Smarts? [Y/N]n
+    
+    Street Smarts, you have 24 points. Do you wish to steal the cards from New York State of Mind? [Y/N]y
+    New York State of Mind, your cards have been stolen. How many cards do you want to draw? 4
+    
+    New York State of Mind has drawn 23 points and Street Smarts has drawn 16 points.
+    
+    New York State of Mind has gone over the limit.
+    Street Smarts has won!
+    
+    New York State of Mind has $700 left over.
+    Street Smarts has $1300 left over.
+    
+    How much do you want to bet? $300
+    New York State of Mind, how many cards do you want to draw? 4
+    Street Smarts, how many cards do you want to draw? 4
+    
+    New York State of Mind, you have 18 points. Do you wish to steal the cards from Street Smarts? [Y/N]n
+    
+    Street Smarts, you have 19 points. Do you wish to steal the cards from New York State of Mind? [Y/N]n
+    
+    New York State of Mind has drawn 18 points and Street Smarts has drawn 19 points.
+    
+    Street Smarts has won!
+    
+    New York State of Mind has $400 left over.
+    Street Smarts has $1600 left over.
+    
+    How much do you want to bet? $300
+    New York State of Mind, how many cards do you want to draw? 5
+    Street Smarts, how many cards do you want to draw? 3
+    
+    New York State of Mind, you have 21 points. Do you wish to steal the cards from Street Smarts? [Y/N]n
+    
+    Street Smarts, you have 8 points. Do you wish to steal the cards from New York State of Mind? [Y/N]y
+    New York State of Mind, your cards have been stolen. How many cards do you want to draw? 4
+    
+    New York State of Mind has drawn 30 points and Street Smarts has drawn 21 points.
+    
+    New York State of Mind has gone over the limit.
+    Street Smarts has won!
+    
+    New York State of Mind has $100 left over.
+    Street Smarts has $1900 left over.
+    
+    How much do you want to bet? $200
+    New York State of Mind, how many cards do you want to draw? 3
+    Street Smarts, how many cards do you want to draw? 4
+    
+    New York State of Mind, you have 18 points. Do you wish to steal the cards from Street Smarts? [Y/N]n
+    
+    Street Smarts, you have 31 points. Do you wish to steal the cards from New York State of Mind? [Y/N]y
+    New York State of Mind, your cards have been stolen. How many cards do you want to draw? 4
+    
+    New York State of Mind has drawn 17 points and Street Smarts has drawn 18 points.
+    
+    Street Smarts has won!
+    
+    New York State of Mind has $-100 left over.
+    Street Smarts has $2100 left over.
 </pre>
 
 <h3>Questions</h3>
 <ol>
-    <li></li>
+    <li>Can you explain the danger when a program allocates memory but forgets to deallocate it?</li>
+    <li>For memory reallocation (creating new memory), where is the best place to deallocate memory in relation to its reallocation.
+        Should the deallocation be close to the reallocation or far from it and why?</li>
+    <li>How did you make use of the *this pointer in the lab?</li>
 </ol>
 
 <h3>Lab Submission:</h3>
