@@ -77,7 +77,7 @@ int main(void) {
     sleep(5);
     while(ShmPTR->status!=WRITTEN) sleep(1);
     for(int i=0; i<BUF_LEN; ++i) {
-        printf("client2: ShmPTR->data[%04d]: %08X\n", i, ShmPTR->data[i]);
+        printf("client1: ShmPTR->data[%04d]: %08X\n", i, ShmPTR->data[i]);
         usleep(10000);
     }
     ShmPTR->status=READ;
