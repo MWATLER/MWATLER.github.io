@@ -12,7 +12,7 @@ public:
 			Marks[i] = marks[i];
 		}
 	}
-	double GetAverage() {
+	T GetAverage() {
 		runningTotal = 0;
 		for (int i = 0; i < N; ++i) {
 			runningTotal += Marks[i];
