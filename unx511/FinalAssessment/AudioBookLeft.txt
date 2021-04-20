@@ -1,0 +1,6049 @@
+lt:Shakespeare | Romeo and Juliet | Entire play
+lt:ACT I
+lt:PROLOGUE
+lt:
+lt:    Two households, both alike in dignity,
+lt:    In fair Verona, where we lay our scene,
+lt:    From ancient grudge break to new mutiny,
+lt:    Where civil blood makes civil hands unclean.
+lt:    From forth the fatal loins of these two foes
+lt:    A pair of star-cross'd lovers take their life;
+lt:    Whose misadventured piteous overthrows
+lt:    Do with their death bury their parents' strife.
+lt:    The fearful passage of their death-mark'd love,
+lt:    And the continuance of their parents' rage,
+lt:    Which, but their children's end, nought could remove,
+lt:    Is now the two hours' traffic of our stage;
+lt:    The which if you with patient ears attend,
+lt:    What here shall miss, our toil shall strive to mend.
+lt:
+lt:SCENE I. Verona. A public place.
+lt:
+lt:    Enter SAMPSON and GREGORY, of the house of Capulet, armed with swords and bucklers 
+lt:
+lt:SAMPSON
+lt:
+lt:    Gregory, o' my word, we'll not carry coals.
+lt:
+lt:GREGORY
+lt:
+lt:    No, for then we should be colliers.
+lt:
+lt:SAMPSON
+lt:
+lt:    I mean, an we be in choler, we'll draw.
+lt:
+lt:GREGORY
+lt:
+lt:    Ay, while you live, draw your neck out o' the collar.
+lt:
+lt:SAMPSON
+lt:
+lt:    I strike quickly, being moved.
+lt:
+lt:GREGORY
+lt:
+lt:    But thou art not quickly moved to strike.
+lt:
+lt:SAMPSON
+lt:
+lt:    A dog of the house of Montague moves me.
+lt:
+lt:GREGORY
+lt:
+lt:    To move is to stir; and to be valiant is to stand:
+lt:    therefore, if thou art moved, thou runn'st away.
+lt:
+lt:SAMPSON
+lt:
+lt:    A dog of that house shall move me to stand: I will
+lt:    take the wall of any man or maid of Montague's.
+lt:
+lt:GREGORY
+lt:
+lt:    That shows thee a weak slave; for the weakest goes
+lt:    to the wall.
+lt:
+lt:SAMPSON
+lt:
+lt:    True; and therefore women, being the weaker vessels,
+lt:    are ever thrust to the wall: therefore I will push
+lt:    Montague's men from the wall, and thrust his maids
+lt:    to the wall.
+lt:
+lt:GREGORY
+lt:
+lt:    The quarrel is between our masters and us their men.
+lt:
+lt:SAMPSON
+lt:
+lt:    'Tis all one, I will show myself a tyrant: when I
+lt:    have fought with the men, I will be cruel with the
+lt:    maids, and cut off their heads.
+lt:
+lt:GREGORY
+lt:
+lt:    The heads of the maids?
+lt:
+lt:SAMPSON
+lt:
+lt:    Ay, the heads of the maids, or their maidenheads;
+lt:    take it in what sense thou wilt.
+lt:
+lt:GREGORY
+lt:
+lt:    They must take it in sense that feel it.
+lt:
+lt:SAMPSON
+lt:
+lt:    Me they shall feel while I am able to stand: and
+lt:    'tis known I am a pretty piece of flesh.
+lt:
+lt:GREGORY
+lt:
+lt:    'Tis well thou art not fish; if thou hadst, thou
+lt:    hadst been poor John. Draw thy tool! here comes
+lt:    two of the house of the Montagues.
+lt:
+lt:SAMPSON
+lt:
+lt:    My naked weapon is out: quarrel, I will back thee.
+lt:
+lt:GREGORY
+lt:
+lt:    How! turn thy back and run?
+lt:
+lt:SAMPSON
+lt:
+lt:    Fear me not.
+lt:
+lt:GREGORY
+lt:
+lt:    No, marry; I fear thee!
+lt:
+lt:SAMPSON
+lt:
+lt:    Let us take the law of our sides; let them begin.
+lt:
+lt:GREGORY
+lt:
+lt:    I will frown as I pass by, and let them take it as
+lt:    they list.
+lt:
+lt:SAMPSON
+lt:
+lt:    Nay, as they dare. I will bite my thumb at them;
+lt:    which is a disgrace to them, if they bear it.
+lt:
+lt:    Enter ABRAHAM and BALTHASAR
+lt:
+lt:ABRAHAM
+lt:
+lt:    Do you bite your thumb at us, sir?
+lt:
+lt:SAMPSON
+lt:
+lt:    I do bite my thumb, sir.
+lt:
+lt:ABRAHAM
+lt:
+lt:    Do you bite your thumb at us, sir?
+lt:
+lt:SAMPSON
+lt:
+lt:    [Aside to GREGORY] Is the law of our side, if I say
+lt:    ay?
+lt:
+lt:GREGORY
+lt:
+lt:    No.
+lt:
+lt:SAMPSON
+lt:
+lt:    No, sir, I do not bite my thumb at you, sir, but I
+lt:    bite my thumb, sir.
+lt:
+lt:GREGORY
+lt:
+lt:    Do you quarrel, sir?
+lt:
+lt:ABRAHAM
+lt:
+lt:    Quarrel sir! no, sir.
+lt:
+lt:SAMPSON
+lt:
+lt:    If you do, sir, I am for you: I serve as good a man as you.
+lt:
+lt:ABRAHAM
+lt:
+lt:    No better.
+lt:
+lt:SAMPSON
+lt:
+lt:    Well, sir.
+lt:
+lt:GREGORY
+lt:
+lt:    Say 'better:' here comes one of my master's kinsmen.
+lt:
+lt:SAMPSON
+lt:
+lt:    Yes, better, sir.
+lt:
+lt:ABRAHAM
+lt:
+lt:    You lie.
+lt:
+lt:SAMPSON
+lt:
+lt:    Draw, if you be men. Gregory, remember thy swashing blow.
+lt:
+lt:    They fight
+lt:
+lt:    Enter BENVOLIO
+lt:
+lt:BENVOLIO
+lt:
+lt:    Part, fools!
+lt:    Put up your swords; you know not what you do.
+lt:
+lt:    Beats down their swords
+lt:
+lt:    Enter TYBALT
+lt:
+lt:TYBALT
+lt:
+lt:    What, art thou drawn among these heartless hinds?
+lt:    Turn thee, Benvolio, look upon thy death.
+lt:
+lt:BENVOLIO
+lt:
+lt:    I do but keep the peace: put up thy sword,
+lt:    Or manage it to part these men with me.
+lt:
+lt:TYBALT
+lt:
+lt:    What, drawn, and talk of peace! I hate the word,
+lt:    As I hate hell, all Montagues, and thee:
+lt:    Have at thee, coward!
+lt:
+lt:    They fight
+lt:
+lt:    Enter, several of both houses, who join the fray; then enter Citizens, with clubs
+lt:
+lt:First Citizen
+lt:
+lt:    Clubs, bills, and partisans! strike! beat them down!
+lt:    Down with the Capulets! down with the Montagues!
+lt:
+lt:    Enter CAPULET in his gown, and LADY CAPULET
+lt:
+lt:CAPULET
+lt:
+lt:    What noise is this? Give me my long sword, ho!
+lt:
+lt:LADY CAPULET
+lt:
+lt:    A crutch, a crutch! why call you for a sword?
+lt:
+lt:CAPULET
+lt:
+lt:    My sword, I say! Old Montague is come,
+lt:    And flourishes his blade in spite of me.
+lt:
+lt:    Enter MONTAGUE and LADY MONTAGUE
+lt:
+lt:MONTAGUE
+lt:
+lt:    Thou villain Capulet,--Hold me not, let me go.
+lt:
+lt:LADY MONTAGUE
+lt:
+lt:    Thou shalt not stir a foot to seek a foe.
+lt:
+lt:    Enter PRINCE, with Attendants
+lt:
+lt:PRINCE
+lt:
+lt:    Rebellious subjects, enemies to peace,
+lt:    Profaners of this neighbour-stained steel,--
+lt:    Will they not hear? What, ho! you men, you beasts,
+lt:    That quench the fire of your pernicious rage
+lt:    With purple fountains issuing from your veins,
+lt:    On pain of torture, from those bloody hands
+lt:    Throw your mistemper'd weapons to the ground,
+lt:    And hear the sentence of your moved prince.
+lt:    Three civil brawls, bred of an airy word,
+lt:    By thee, old Capulet, and Montague,
+lt:    Have thrice disturb'd the quiet of our streets,
+lt:    And made Verona's ancient citizens
+lt:    Cast by their grave beseeming ornaments,
+lt:    To wield old partisans, in hands as old,
+lt:    Canker'd with peace, to part your canker'd hate:
+lt:    If ever you disturb our streets again,
+lt:    Your lives shall pay the forfeit of the peace.
+lt:    For this time, all the rest depart away:
+lt:    You Capulet; shall go along with me:
+lt:    And, Montague, come you this afternoon,
+lt:    To know our further pleasure in this case,
+lt:    To old Free-town, our common judgment-place.
+lt:    Once more, on pain of death, all men depart.
+lt:
+lt:    Exeunt all but MONTAGUE, LADY MONTAGUE, and BENVOLIO
+lt:
+lt:MONTAGUE
+lt:
+lt:    Who set this ancient quarrel new abroach?
+lt:    Speak, nephew, were you by when it began?
+lt:
+lt:BENVOLIO
+lt:
+lt:    Here were the servants of your adversary,
+lt:    And yours, close fighting ere I did approach:
+lt:    I drew to part them: in the instant came
+lt:    The fiery Tybalt, with his sword prepared,
+lt:    Which, as he breathed defiance to my ears,
+lt:    He swung about his head and cut the winds,
+lt:    Who nothing hurt withal hiss'd him in scorn:
+lt:    While we were interchanging thrusts and blows,
+lt:    Came more and more and fought on part and part,
+lt:    Till the prince came, who parted either part.
+lt:
+lt:LADY MONTAGUE
+lt:
+lt:    O, where is Romeo? saw you him to-day?
+lt:    Right glad I am he was not at this fray.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Madam, an hour before the worshipp'd sun
+lt:    Peer'd forth the golden window of the east,
+lt:    A troubled mind drave me to walk abroad;
+lt:    Where, underneath the grove of sycamore
+lt:    That westward rooteth from the city's side,
+lt:    So early walking did I see your son:
+lt:    Towards him I made, but he was ware of me
+lt:    And stole into the covert of the wood:
+lt:    I, measuring his affections by my own,
+lt:    That most are busied when they're most alone,
+lt:    Pursued my humour not pursuing his,
+lt:    And gladly shunn'd who gladly fled from me.
+lt:
+lt:MONTAGUE
+lt:
+lt:    Many a morning hath he there been seen,
+lt:    With tears augmenting the fresh morning dew.
+lt:    Adding to clouds more clouds with his deep sighs;
+lt:    But all so soon as the all-cheering sun
+lt:    Should in the furthest east begin to draw
+lt:    The shady curtains from Aurora's bed,
+lt:    Away from the light steals home my heavy son,
+lt:    And private in his chamber pens himself,
+lt:    Shuts up his windows, locks far daylight out
+lt:    And makes himself an artificial night:
+lt:    Black and portentous must this humour prove,
+lt:    Unless good counsel may the cause remove.
+lt:
+lt:BENVOLIO
+lt:
+lt:    My noble uncle, do you know the cause?
+lt:
+lt:MONTAGUE
+lt:
+lt:    I neither know it nor can learn of him.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Have you importuned him by any means?
+lt:
+lt:MONTAGUE
+lt:
+lt:    Both by myself and many other friends:
+lt:    But he, his own affections' counsellor,
+lt:    Is to himself--I will not say how true--
+lt:    But to himself so secret and so close,
+lt:    So far from sounding and discovery,
+lt:    As is the bud bit with an envious worm,
+lt:    Ere he can spread his sweet leaves to the air,
+lt:    Or dedicate his beauty to the sun.
+lt:    Could we but learn from whence his sorrows grow.
+lt:    We would as willingly give cure as know.
+lt:
+lt:    Enter ROMEO
+lt:
+lt:BENVOLIO
+lt:
+lt:    See, where he comes: so please you, step aside;
+lt:    I'll know his grievance, or be much denied.
+lt:
+lt:MONTAGUE
+lt:
+lt:    I would thou wert so happy by thy stay,
+lt:    To hear true shrift. Come, madam, let's away.
+lt:
+lt:    Exeunt MONTAGUE and LADY MONTAGUE
+lt:
+lt:BENVOLIO
+lt:
+lt:    Good-morrow, cousin.
+lt:
+lt:ROMEO
+lt:
+lt:    Is the day so young?
+lt:
+lt:BENVOLIO
+lt:
+lt:    But new struck nine.
+lt:
+lt:ROMEO
+lt:
+lt:    Ay me! sad hours seem long.
+lt:    Was that my father that went hence so fast?
+lt:
+lt:BENVOLIO
+lt:
+lt:    It was. What sadness lengthens Romeo's hours?
+lt:
+lt:ROMEO
+lt:
+lt:    Not having that, which, having, makes them short.
+lt:
+lt:BENVOLIO
+lt:
+lt:    In love?
+lt:
+lt:ROMEO
+lt:
+lt:    Out--
+lt:
+lt:BENVOLIO
+lt:
+lt:    Of love?
+lt:
+lt:ROMEO
+lt:
+lt:    Out of her favour, where I am in love.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Alas, that love, so gentle in his view,
+lt:    Should be so tyrannous and rough in proof!
+lt:
+lt:ROMEO
+lt:
+lt:    Alas, that love, whose view is muffled still,
+lt:    Should, without eyes, see pathways to his will!
+lt:    Where shall we dine? O me! What fray was here?
+lt:    Yet tell me not, for I have heard it all.
+lt:    Here's much to do with hate, but more with love.
+lt:    Why, then, O brawling love! O loving hate!
+lt:    O any thing, of nothing first create!
+lt:    O heavy lightness! serious vanity!
+lt:    Mis-shapen chaos of well-seeming forms!
+lt:    Feather of lead, bright smoke, cold fire,
+lt:    sick health!
+lt:    Still-waking sleep, that is not what it is!
+lt:    This love feel I, that feel no love in this.
+lt:    Dost thou not laugh?
+lt:
+lt:BENVOLIO
+lt:
+lt:    No, coz, I rather weep.
+lt:
+lt:ROMEO
+lt:
+lt:    Good heart, at what?
+lt:
+lt:BENVOLIO
+lt:
+lt:    At thy good heart's oppression.
+lt:
+lt:ROMEO
+lt:
+lt:    Why, such is love's transgression.
+lt:    Griefs of mine own lie heavy in my breast,
+lt:    Which thou wilt propagate, to have it prest
+lt:    With more of thine: this love that thou hast shown
+lt:    Doth add more grief to too much of mine own.
+lt:    Love is a smoke raised with the fume of sighs;
+lt:    Being purged, a fire sparkling in lovers' eyes;
+lt:    Being vex'd a sea nourish'd with lovers' tears:
+lt:    What is it else? a madness most discreet,
+lt:    A choking gall and a preserving sweet.
+lt:    Farewell, my coz.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Soft! I will go along;
+lt:    An if you leave me so, you do me wrong.
+lt:
+lt:ROMEO
+lt:
+lt:    Tut, I have lost myself; I am not here;
+lt:    This is not Romeo, he's some other where.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Tell me in sadness, who is that you love.
+lt:
+lt:ROMEO
+lt:
+lt:    What, shall I groan and tell thee?
+lt:
+lt:BENVOLIO
+lt:
+lt:    Groan! why, no.
+lt:    But sadly tell me who.
+lt:
+lt:ROMEO
+lt:
+lt:    Bid a sick man in sadness make his will:
+lt:    Ah, word ill urged to one that is so ill!
+lt:    In sadness, cousin, I do love a woman.
+lt:
+lt:BENVOLIO
+lt:
+lt:    I aim'd so near, when I supposed you loved.
+lt:
+lt:ROMEO
+lt:
+lt:    A right good mark-man! And she's fair I love.
+lt:
+lt:BENVOLIO
+lt:
+lt:    A right fair mark, fair coz, is soonest hit.
+lt:
+lt:ROMEO
+lt:
+lt:    Well, in that hit you miss: she'll not be hit
+lt:    With Cupid's arrow; she hath Dian's wit;
+lt:    And, in strong proof of chastity well arm'd,
+lt:    From love's weak childish bow she lives unharm'd.
+lt:    She will not stay the siege of loving terms,
+lt:    Nor bide the encounter of assailing eyes,
+lt:    Nor ope her lap to saint-seducing gold:
+lt:    O, she is rich in beauty, only poor,
+lt:    That when she dies with beauty dies her store.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Then she hath sworn that she will still live chaste?
+lt:
+lt:ROMEO
+lt:
+lt:    She hath, and in that sparing makes huge waste,
+lt:    For beauty starved with her severity
+lt:    Cuts beauty off from all posterity.
+lt:    She is too fair, too wise, wisely too fair,
+lt:    To merit bliss by making me despair:
+lt:    She hath forsworn to love, and in that vow
+lt:    Do I live dead that live to tell it now.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Be ruled by me, forget to think of her.
+lt:
+lt:ROMEO
+lt:
+lt:    O, teach me how I should forget to think.
+lt:
+lt:BENVOLIO
+lt:
+lt:    By giving liberty unto thine eyes;
+lt:    Examine other beauties.
+lt:
+lt:ROMEO
+lt:
+lt:    'Tis the way
+lt:    To call hers exquisite, in question more:
+lt:    These happy masks that kiss fair ladies' brows
+lt:    Being black put us in mind they hide the fair;
+lt:    He that is strucken blind cannot forget
+lt:    The precious treasure of his eyesight lost:
+lt:    Show me a mistress that is passing fair,
+lt:    What doth her beauty serve, but as a note
+lt:    Where I may read who pass'd that passing fair?
+lt:    Farewell: thou canst not teach me to forget.
+lt:
+lt:BENVOLIO
+lt:
+lt:    I'll pay that doctrine, or else die in debt.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE II. A street.
+lt:
+lt:    Enter CAPULET, PARIS, and Servant 
+lt:
+lt:CAPULET
+lt:
+lt:    But Montague is bound as well as I,
+lt:    In penalty alike; and 'tis not hard, I think,
+lt:    For men so old as we to keep the peace.
+lt:
+lt:PARIS
+lt:
+lt:    Of honourable reckoning are you both;
+lt:    And pity 'tis you lived at odds so long.
+lt:    But now, my lord, what say you to my suit?
+lt:
+lt:CAPULET
+lt:
+lt:    But saying o'er what I have said before:
+lt:    My child is yet a stranger in the world;
+lt:    She hath not seen the change of fourteen years,
+lt:    Let two more summers wither in their pride,
+lt:    Ere we may think her ripe to be a bride.
+lt:
+lt:PARIS
+lt:
+lt:    Younger than she are happy mothers made.
+lt:
+lt:CAPULET
+lt:
+lt:    And too soon marr'd are those so early made.
+lt:    The earth hath swallow'd all my hopes but she,
+lt:    She is the hopeful lady of my earth:
+lt:    But woo her, gentle Paris, get her heart,
+lt:    My will to her consent is but a part;
+lt:    An she agree, within her scope of choice
+lt:    Lies my consent and fair according voice.
+lt:    This night I hold an old accustom'd feast,
+lt:    Whereto I have invited many a guest,
+lt:    Such as I love; and you, among the store,
+lt:    One more, most welcome, makes my number more.
+lt:    At my poor house look to behold this night
+lt:    Earth-treading stars that make dark heaven light:
+lt:    Such comfort as do lusty young men feel
+lt:    When well-apparell'd April on the heel
+lt:    Of limping winter treads, even such delight
+lt:    Among fresh female buds shall you this night
+lt:    Inherit at my house; hear all, all see,
+lt:    And like her most whose merit most shall be:
+lt:    Which on more view, of many mine being one
+lt:    May stand in number, though in reckoning none,
+lt:    Come, go with me.
+lt:
+lt:    To Servant, giving a paper
+lt:    Go, sirrah, trudge about
+lt:    Through fair Verona; find those persons out
+lt:    Whose names are written there, and to them say,
+lt:    My house and welcome on their pleasure stay.
+lt:
+lt:    Exeunt CAPULET and PARIS
+lt:
+lt:Servant
+lt:
+lt:    Find them out whose names are written here! It is
+lt:    written, that the shoemaker should meddle with his
+lt:    yard, and the tailor with his last, the fisher with
+lt:    his pencil, and the painter with his nets; but I am
+lt:    sent to find those persons whose names are here
+lt:    writ, and can never find what names the writing
+lt:    person hath here writ. I must to the learned.--In good time.
+lt:
+lt:    Enter BENVOLIO and ROMEO
+lt:
+lt:BENVOLIO
+lt:
+lt:    Tut, man, one fire burns out another's burning,
+lt:    One pain is lessen'd by another's anguish;
+lt:    Turn giddy, and be holp by backward turning;
+lt:    One desperate grief cures with another's languish:
+lt:    Take thou some new infection to thy eye,
+lt:    And the rank poison of the old will die.
+lt:
+lt:ROMEO
+lt:
+lt:    Your plaintain-leaf is excellent for that.
+lt:
+lt:BENVOLIO
+lt:
+lt:    For what, I pray thee?
+lt:
+lt:ROMEO
+lt:
+lt:    For your broken shin.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Why, Romeo, art thou mad?
+lt:
+lt:ROMEO
+lt:
+lt:    Not mad, but bound more than a mad-man is;
+lt:    Shut up in prison, kept without my food,
+lt:    Whipp'd and tormented and--God-den, good fellow.
+lt:
+lt:Servant
+lt:
+lt:    God gi' god-den. I pray, sir, can you read?
+lt:
+lt:ROMEO
+lt:
+lt:    Ay, mine own fortune in my misery.
+lt:
+lt:Servant
+lt:
+lt:    Perhaps you have learned it without book: but, I
+lt:    pray, can you read any thing you see?
+lt:
+lt:ROMEO
+lt:
+lt:    Ay, if I know the letters and the language.
+lt:
+lt:Servant
+lt:
+lt:    Ye say honestly: rest you merry!
+lt:
+lt:ROMEO
+lt:
+lt:    Stay, fellow; I can read.
+lt:
+lt:    Reads
+lt:    'Signior Martino and his wife and daughters;
+lt:    County Anselme and his beauteous sisters; the lady
+lt:    widow of Vitravio; Signior Placentio and his lovely
+lt:    nieces; Mercutio and his brother Valentine; mine
+lt:    uncle Capulet, his wife and daughters; my fair niece
+lt:    Rosaline; Livia; Signior Valentio and his cousin
+lt:    Tybalt, Lucio and the lively Helena.' A fair
+lt:    assembly: whither should they come?
+lt:
+lt:Servant
+lt:
+lt:    Up.
+lt:
+lt:ROMEO
+lt:
+lt:    Whither?
+lt:
+lt:Servant
+lt:
+lt:    To supper; to our house.
+lt:
+lt:ROMEO
+lt:
+lt:    Whose house?
+lt:
+lt:Servant
+lt:
+lt:    My master's.
+lt:
+lt:ROMEO
+lt:
+lt:    Indeed, I should have ask'd you that before.
+lt:
+lt:Servant
+lt:
+lt:    Now I'll tell you without asking: my master is the
+lt:    great rich Capulet; and if you be not of the house
+lt:    of Montagues, I pray, come and crush a cup of wine.
+lt:    Rest you merry!
+lt:
+lt:    Exit
+lt:
+lt:BENVOLIO
+lt:
+lt:    At this same ancient feast of Capulet's
+lt:    Sups the fair Rosaline whom thou so lovest,
+lt:    With all the admired beauties of Verona:
+lt:    Go thither; and, with unattainted eye,
+lt:    Compare her face with some that I shall show,
+lt:    And I will make thee think thy swan a crow.
+lt:
+lt:ROMEO
+lt:
+lt:    When the devout religion of mine eye
+lt:    Maintains such falsehood, then turn tears to fires;
+lt:    And these, who often drown'd could never die,
+lt:    Transparent heretics, be burnt for liars!
+lt:    One fairer than my love! the all-seeing sun
+lt:    Ne'er saw her match since first the world begun.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Tut, you saw her fair, none else being by,
+lt:    Herself poised with herself in either eye:
+lt:    But in that crystal scales let there be weigh'd
+lt:    Your lady's love against some other maid
+lt:    That I will show you shining at this feast,
+lt:    And she shall scant show well that now shows best.
+lt:
+lt:ROMEO
+lt:
+lt:    I'll go along, no such sight to be shown,
+lt:    But to rejoice in splendor of mine own.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE III. A room in Capulet's house.
+lt:
+lt:    Enter LADY CAPULET and Nurse 
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Nurse, where's my daughter? call her forth to me.
+lt:
+lt:Nurse
+lt:
+lt:    Now, by my maidenhead, at twelve year old,
+lt:    I bade her come. What, lamb! what, ladybird!
+lt:    God forbid! Where's this girl? What, Juliet!
+lt:
+lt:    Enter JULIET
+lt:
+lt:JULIET
+lt:
+lt:    How now! who calls?
+lt:
+lt:Nurse
+lt:
+lt:    Your mother.
+lt:
+lt:JULIET
+lt:
+lt:    Madam, I am here.
+lt:    What is your will?
+lt:
+lt:LADY CAPULET
+lt:
+lt:    This is the matter:--Nurse, give leave awhile,
+lt:    We must talk in secret:--nurse, come back again;
+lt:    I have remember'd me, thou's hear our counsel.
+lt:    Thou know'st my daughter's of a pretty age.
+lt:
+lt:Nurse
+lt:
+lt:    Faith, I can tell her age unto an hour.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    She's not fourteen.
+lt:
+lt:Nurse
+lt:
+lt:    I'll lay fourteen of my teeth,--
+lt:    And yet, to my teeth be it spoken, I have but four--
+lt:    She is not fourteen. How long is it now
+lt:    To Lammas-tide?
+lt:
+lt:LADY CAPULET
+lt:
+lt:    A fortnight and odd days.
+lt:
+lt:Nurse
+lt:
+lt:    Even or odd, of all days in the year,
+lt:    Come Lammas-eve at night shall she be fourteen.
+lt:    Susan and she--God rest all Christian souls!--
+lt:    Were of an age: well, Susan is with God;
+lt:    She was too good for me: but, as I said,
+lt:    On Lammas-eve at night shall she be fourteen;
+lt:    That shall she, marry; I remember it well.
+lt:    'Tis since the earthquake now eleven years;
+lt:    And she was wean'd,--I never shall forget it,--
+lt:    Of all the days of the year, upon that day:
+lt:    For I had then laid wormwood to my dug,
+lt:    Sitting in the sun under the dove-house wall;
+lt:    My lord and you were then at Mantua:--
+lt:    Nay, I do bear a brain:--but, as I said,
+lt:    When it did taste the wormwood on the nipple
+lt:    Of my dug and felt it bitter, pretty fool,
+lt:    To see it tetchy and fall out with the dug!
+lt:    Shake quoth the dove-house: 'twas no need, I trow,
+lt:    To bid me trudge:
+lt:    And since that time it is eleven years;
+lt:    For then she could stand alone; nay, by the rood,
+lt:    She could have run and waddled all about;
+lt:    For even the day before, she broke her brow:
+lt:    And then my husband--God be with his soul!
+lt:    A' was a merry man--took up the child:
+lt:    'Yea,' quoth he, 'dost thou fall upon thy face?
+lt:    Thou wilt fall backward when thou hast more wit;
+lt:    Wilt thou not, Jule?' and, by my holidame,
+lt:    The pretty wretch left crying and said 'Ay.'
+lt:    To see, now, how a jest shall come about!
+lt:    I warrant, an I should live a thousand years,
+lt:    I never should forget it: 'Wilt thou not, Jule?' quoth he;
+lt:    And, pretty fool, it stinted and said 'Ay.'
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Enough of this; I pray thee, hold thy peace.
+lt:
+lt:Nurse
+lt:
+lt:    Yes, madam: yet I cannot choose but laugh,
+lt:    To think it should leave crying and say 'Ay.'
+lt:    And yet, I warrant, it had upon its brow
+lt:    A bump as big as a young cockerel's stone;
+lt:    A parlous knock; and it cried bitterly:
+lt:    'Yea,' quoth my husband,'fall'st upon thy face?
+lt:    Thou wilt fall backward when thou comest to age;
+lt:    Wilt thou not, Jule?' it stinted and said 'Ay.'
+lt:
+lt:JULIET
+lt:
+lt:    And stint thou too, I pray thee, nurse, say I.
+lt:
+lt:Nurse
+lt:
+lt:    Peace, I have done. God mark thee to his grace!
+lt:    Thou wast the prettiest babe that e'er I nursed:
+lt:    An I might live to see thee married once,
+lt:    I have my wish.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Marry, that 'marry' is the very theme
+lt:    I came to talk of. Tell me, daughter Juliet,
+lt:    How stands your disposition to be married?
+lt:
+lt:JULIET
+lt:
+lt:    It is an honour that I dream not of.
+lt:
+lt:Nurse
+lt:
+lt:    An honour! were not I thine only nurse,
+lt:    I would say thou hadst suck'd wisdom from thy teat.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Well, think of marriage now; younger than you,
+lt:    Here in Verona, ladies of esteem,
+lt:    Are made already mothers: by my count,
+lt:    I was your mother much upon these years
+lt:    That you are now a maid. Thus then in brief:
+lt:    The valiant Paris seeks you for his love.
+lt:
+lt:Nurse
+lt:
+lt:    A man, young lady! lady, such a man
+lt:    As all the world--why, he's a man of wax.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Verona's summer hath not such a flower.
+lt:
+lt:Nurse
+lt:
+lt:    Nay, he's a flower; in faith, a very flower.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    What say you? can you love the gentleman?
+lt:    This night you shall behold him at our feast;
+lt:    Read o'er the volume of young Paris' face,
+lt:    And find delight writ there with beauty's pen;
+lt:    Examine every married lineament,
+lt:    And see how one another lends content
+lt:    And what obscured in this fair volume lies
+lt:    Find written in the margent of his eyes.
+lt:    This precious book of love, this unbound lover,
+lt:    To beautify him, only lacks a cover:
+lt:    The fish lives in the sea, and 'tis much pride
+lt:    For fair without the fair within to hide:
+lt:    That book in many's eyes doth share the glory,
+lt:    That in gold clasps locks in the golden story;
+lt:    So shall you share all that he doth possess,
+lt:    By having him, making yourself no less.
+lt:
+lt:Nurse
+lt:
+lt:    No less! nay, bigger; women grow by men.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Speak briefly, can you like of Paris' love?
+lt:
+lt:JULIET
+lt:
+lt:    I'll look to like, if looking liking move:
+lt:    But no more deep will I endart mine eye
+lt:    Than your consent gives strength to make it fly.
+lt:
+lt:    Enter a Servant
+lt:
+lt:Servant
+lt:
+lt:    Madam, the guests are come, supper served up, you
+lt:    called, my young lady asked for, the nurse cursed in
+lt:    the pantry, and every thing in extremity. I must
+lt:    hence to wait; I beseech you, follow straight.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    We follow thee.
+lt:
+lt:    Exit Servant
+lt:    Juliet, the county stays.
+lt:
+lt:Nurse
+lt:
+lt:    Go, girl, seek happy nights to happy days.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE IV. A street.
+lt:
+lt:    Enter ROMEO, MERCUTIO, BENVOLIO, with five or six Maskers, Torch-bearers, and others 
+lt:
+lt:ROMEO
+lt:
+lt:    What, shall this speech be spoke for our excuse?
+lt:    Or shall we on without a apology?
+lt:
+lt:BENVOLIO
+lt:
+lt:    The date is out of such prolixity:
+lt:    We'll have no Cupid hoodwink'd with a scarf,
+lt:    Bearing a Tartar's painted bow of lath,
+lt:    Scaring the ladies like a crow-keeper;
+lt:    Nor no without-book prologue, faintly spoke
+lt:    After the prompter, for our entrance:
+lt:    But let them measure us by what they will;
+lt:    We'll measure them a measure, and be gone.
+lt:
+lt:ROMEO
+lt:
+lt:    Give me a torch: I am not for this ambling;
+lt:    Being but heavy, I will bear the light.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Nay, gentle Romeo, we must have you dance.
+lt:
+lt:ROMEO
+lt:
+lt:    Not I, believe me: you have dancing shoes
+lt:    With nimble soles: I have a soul of lead
+lt:    So stakes me to the ground I cannot move.
+lt:
+lt:MERCUTIO
+lt:
+lt:    You are a lover; borrow Cupid's wings,
+lt:    And soar with them above a common bound.
+lt:
+lt:ROMEO
+lt:
+lt:    I am too sore enpierced with his shaft
+lt:    To soar with his light feathers, and so bound,
+lt:    I cannot bound a pitch above dull woe:
+lt:    Under love's heavy burden do I sink.
+lt:
+lt:MERCUTIO
+lt:
+lt:    And, to sink in it, should you burden love;
+lt:    Too great oppression for a tender thing.
+lt:
+lt:ROMEO
+lt:
+lt:    Is love a tender thing? it is too rough,
+lt:    Too rude, too boisterous, and it pricks like thorn.
+lt:
+lt:MERCUTIO
+lt:
+lt:    If love be rough with you, be rough with love;
+lt:    Prick love for pricking, and you beat love down.
+lt:    Give me a case to put my visage in:
+lt:    A visor for a visor! what care I
+lt:    What curious eye doth quote deformities?
+lt:    Here are the beetle brows shall blush for me.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Come, knock and enter; and no sooner in,
+lt:    But every man betake him to his legs.
+lt:
+lt:ROMEO
+lt:
+lt:    A torch for me: let wantons light of heart
+lt:    Tickle the senseless rushes with their heels,
+lt:    For I am proverb'd with a grandsire phrase;
+lt:    I'll be a candle-holder, and look on.
+lt:    The game was ne'er so fair, and I am done.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Tut, dun's the mouse, the constable's own word:
+lt:    If thou art dun, we'll draw thee from the mire
+lt:    Of this sir-reverence love, wherein thou stick'st
+lt:    Up to the ears. Come, we burn daylight, ho!
+lt:
+lt:ROMEO
+lt:
+lt:    Nay, that's not so.
+lt:
+lt:MERCUTIO
+lt:
+lt:    I mean, sir, in delay
+lt:    We waste our lights in vain, like lamps by day.
+lt:    Take our good meaning, for our judgment sits
+lt:    Five times in that ere once in our five wits.
+lt:
+lt:ROMEO
+lt:
+lt:    And we mean well in going to this mask;
+lt:    But 'tis no wit to go.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Why, may one ask?
+lt:
+lt:ROMEO
+lt:
+lt:    I dream'd a dream to-night.
+lt:
+lt:MERCUTIO
+lt:
+lt:    And so did I.
+lt:
+lt:ROMEO
+lt:
+lt:    Well, what was yours?
+lt:
+lt:MERCUTIO
+lt:
+lt:    That dreamers often lie.
+lt:
+lt:ROMEO
+lt:
+lt:    In bed asleep, while they do dream things true.
+lt:
+lt:MERCUTIO
+lt:
+lt:    O, then, I see Queen Mab hath been with you.
+lt:    She is the fairies' midwife, and she comes
+lt:    In shape no bigger than an agate-stone
+lt:    On the fore-finger of an alderman,
+lt:    Drawn with a team of little atomies
+lt:    Athwart men's noses as they lie asleep;
+lt:    Her wagon-spokes made of long spiders' legs,
+lt:    The cover of the wings of grasshoppers,
+lt:    The traces of the smallest spider's web,
+lt:    The collars of the moonshine's watery beams,
+lt:    Her whip of cricket's bone, the lash of film,
+lt:    Her wagoner a small grey-coated gnat,
+lt:    Not so big as a round little worm
+lt:    Prick'd from the lazy finger of a maid;
+lt:    Her chariot is an empty hazel-nut
+lt:    Made by the joiner squirrel or old grub,
+lt:    Time out o' mind the fairies' coachmakers.
+lt:    And in this state she gallops night by night
+lt:    Through lovers' brains, and then they dream of love;
+lt:    O'er courtiers' knees, that dream on court'sies straight,
+lt:    O'er lawyers' fingers, who straight dream on fees,
+lt:    O'er ladies ' lips, who straight on kisses dream,
+lt:    Which oft the angry Mab with blisters plagues,
+lt:    Because their breaths with sweetmeats tainted are:
+lt:    Sometime she gallops o'er a courtier's nose,
+lt:    And then dreams he of smelling out a suit;
+lt:    And sometime comes she with a tithe-pig's tail
+lt:    Tickling a parson's nose as a' lies asleep,
+lt:    Then dreams, he of another benefice:
+lt:    Sometime she driveth o'er a soldier's neck,
+lt:    And then dreams he of cutting foreign throats,
+lt:    Of breaches, ambuscadoes, Spanish blades,
+lt:    Of healths five-fathom deep; and then anon
+lt:    Drums in his ear, at which he starts and wakes,
+lt:    And being thus frighted swears a prayer or two
+lt:    And sleeps again. This is that very Mab
+lt:    That plats the manes of horses in the night,
+lt:    And bakes the elflocks in foul sluttish hairs,
+lt:    Which once untangled, much misfortune bodes:
+lt:    This is the hag, when maids lie on their backs,
+lt:    That presses them and learns them first to bear,
+lt:    Making them women of good carriage:
+lt:    This is she--
+lt:
+lt:ROMEO
+lt:
+lt:    Peace, peace, Mercutio, peace!
+lt:    Thou talk'st of nothing.
+lt:
+lt:MERCUTIO
+lt:
+lt:    True, I talk of dreams,
+lt:    Which are the children of an idle brain,
+lt:    Begot of nothing but vain fantasy,
+lt:    Which is as thin of substance as the air
+lt:    And more inconstant than the wind, who wooes
+lt:    Even now the frozen bosom of the north,
+lt:    And, being anger'd, puffs away from thence,
+lt:    Turning his face to the dew-dropping south.
+lt:
+lt:BENVOLIO
+lt:
+lt:    This wind, you talk of, blows us from ourselves;
+lt:    Supper is done, and we shall come too late.
+lt:
+lt:ROMEO
+lt:
+lt:    I fear, too early: for my mind misgives
+lt:    Some consequence yet hanging in the stars
+lt:    Shall bitterly begin his fearful date
+lt:    With this night's revels and expire the term
+lt:    Of a despised life closed in my breast
+lt:    By some vile forfeit of untimely death.
+lt:    But He, that hath the steerage of my course,
+lt:    Direct my sail! On, lusty gentlemen.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Strike, drum.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE V. A hall in Capulet's house.
+lt:
+lt:    Musicians waiting. Enter Servingmen with napkins 
+lt:
+lt:First Servant
+lt:
+lt:    Where's Potpan, that he helps not to take away? He
+lt:    shift a trencher? he scrape a trencher!
+lt:
+lt:Second Servant
+lt:
+lt:    When good manners shall lie all in one or two men's
+lt:    hands and they unwashed too, 'tis a foul thing.
+lt:
+lt:First Servant
+lt:
+lt:    Away with the joint-stools, remove the
+lt:    court-cupboard, look to the plate. Good thou, save
+lt:    me a piece of marchpane; and, as thou lovest me, let
+lt:    the porter let in Susan Grindstone and Nell.
+lt:    Antony, and Potpan!
+lt:
+lt:Second Servant
+lt:
+lt:    Ay, boy, ready.
+lt:
+lt:First Servant
+lt:
+lt:    You are looked for and called for, asked for and
+lt:    sought for, in the great chamber.
+lt:
+lt:Second Servant
+lt:
+lt:    We cannot be here and there too. Cheerly, boys; be
+lt:    brisk awhile, and the longer liver take all.
+lt:
+lt:    Enter CAPULET, with JULIET and others of his house, meeting the Guests and Maskers
+lt:
+lt:CAPULET
+lt:
+lt:    Welcome, gentlemen! ladies that have their toes
+lt:    Unplagued with corns will have a bout with you.
+lt:    Ah ha, my mistresses! which of you all
+lt:    Will now deny to dance? she that makes dainty,
+lt:    She, I'll swear, hath corns; am I come near ye now?
+lt:    Welcome, gentlemen! I have seen the day
+lt:    That I have worn a visor and could tell
+lt:    A whispering tale in a fair lady's ear,
+lt:    Such as would please: 'tis gone, 'tis gone, 'tis gone:
+lt:    You are welcome, gentlemen! come, musicians, play.
+lt:    A hall, a hall! give room! and foot it, girls.
+lt:
+lt:    Music plays, and they dance
+lt:    More light, you knaves; and turn the tables up,
+lt:    And quench the fire, the room is grown too hot.
+lt:    Ah, sirrah, this unlook'd-for sport comes well.
+lt:    Nay, sit, nay, sit, good cousin Capulet;
+lt:    For you and I are past our dancing days:
+lt:    How long is't now since last yourself and I
+lt:    Were in a mask?
+lt:
+lt:Second Capulet
+lt:
+lt:    By'r lady, thirty years.
+lt:
+lt:CAPULET
+lt:
+lt:    What, man! 'tis not so much, 'tis not so much:
+lt:    'Tis since the nuptials of Lucentio,
+lt:    Come pentecost as quickly as it will,
+lt:    Some five and twenty years; and then we mask'd.
+lt:
+lt:Second Capulet
+lt:
+lt:    'Tis more, 'tis more, his son is elder, sir;
+lt:    His son is thirty.
+lt:
+lt:CAPULET
+lt:
+lt:    Will you tell me that?
+lt:    His son was but a ward two years ago.
+lt:
+lt:ROMEO
+lt:
+lt:    [To a Servingman] What lady is that, which doth
+lt:    enrich the hand
+lt:    Of yonder knight?
+lt:
+lt:Servant
+lt:
+lt:    I know not, sir.
+lt:
+lt:ROMEO
+lt:
+lt:    O, she doth teach the torches to burn bright!
+lt:    It seems she hangs upon the cheek of night
+lt:    Like a rich jewel in an Ethiope's ear;
+lt:    Beauty too rich for use, for earth too dear!
+lt:    So shows a snowy dove trooping with crows,
+lt:    As yonder lady o'er her fellows shows.
+lt:    The measure done, I'll watch her place of stand,
+lt:    And, touching hers, make blessed my rude hand.
+lt:    Did my heart love till now? forswear it, sight!
+lt:    For I ne'er saw true beauty till this night.
+lt:
+lt:TYBALT
+lt:
+lt:    This, by his voice, should be a Montague.
+lt:    Fetch me my rapier, boy. What dares the slave
+lt:    Come hither, cover'd with an antic face,
+lt:    To fleer and scorn at our solemnity?
+lt:    Now, by the stock and honour of my kin,
+lt:    To strike him dead, I hold it not a sin.
+lt:
+lt:CAPULET
+lt:
+lt:    Why, how now, kinsman! wherefore storm you so?
+lt:
+lt:TYBALT
+lt:
+lt:    Uncle, this is a Montague, our foe,
+lt:    A villain that is hither come in spite,
+lt:    To scorn at our solemnity this night.
+lt:
+lt:CAPULET
+lt:
+lt:    Young Romeo is it?
+lt:
+lt:TYBALT
+lt:
+lt:    'Tis he, that villain Romeo.
+lt:
+lt:CAPULET
+lt:
+lt:    Content thee, gentle coz, let him alone;
+lt:    He bears him like a portly gentleman;
+lt:    And, to say truth, Verona brags of him
+lt:    To be a virtuous and well-govern'd youth:
+lt:    I would not for the wealth of all the town
+lt:    Here in my house do him disparagement:
+lt:    Therefore be patient, take no note of him:
+lt:    It is my will, the which if thou respect,
+lt:    Show a fair presence and put off these frowns,
+lt:    And ill-beseeming semblance for a feast.
+lt:
+lt:TYBALT
+lt:
+lt:    It fits, when such a villain is a guest:
+lt:    I'll not endure him.
+lt:
+lt:CAPULET
+lt:
+lt:    He shall be endured:
+lt:    What, goodman boy! I say, he shall: go to;
+lt:    Am I the master here, or you? go to.
+lt:    You'll not endure him! God shall mend my soul!
+lt:    You'll make a mutiny among my guests!
+lt:    You will set cock-a-hoop! you'll be the man!
+lt:
+lt:TYBALT
+lt:
+lt:    Why, uncle, 'tis a shame.
+lt:
+lt:CAPULET
+lt:
+lt:    Go to, go to;
+lt:    You are a saucy boy: is't so, indeed?
+lt:    This trick may chance to scathe you, I know what:
+lt:    You must contrary me! marry, 'tis time.
+lt:    Well said, my hearts! You are a princox; go:
+lt:    Be quiet, or--More light, more light! For shame!
+lt:    I'll make you quiet. What, cheerly, my hearts!
+lt:
+lt:TYBALT
+lt:
+lt:    Patience perforce with wilful choler meeting
+lt:    Makes my flesh tremble in their different greeting.
+lt:    I will withdraw: but this intrusion shall
+lt:    Now seeming sweet convert to bitter gall.
+lt:
+lt:    Exit
+lt:
+lt:ROMEO
+lt:
+lt:    [To JULIET] If I profane with my unworthiest hand
+lt:    This holy shrine, the gentle fine is this:
+lt:    My lips, two blushing pilgrims, ready stand
+lt:    To smooth that rough touch with a tender kiss.
+lt:
+lt:JULIET
+lt:
+lt:    Good pilgrim, you do wrong your hand too much,
+lt:    Which mannerly devotion shows in this;
+lt:    For saints have hands that pilgrims' hands do touch,
+lt:    And palm to palm is holy palmers' kiss.
+lt:
+lt:ROMEO
+lt:
+lt:    Have not saints lips, and holy palmers too?
+lt:
+lt:JULIET
+lt:
+lt:    Ay, pilgrim, lips that they must use in prayer.
+lt:
+lt:ROMEO
+lt:
+lt:    O, then, dear saint, let lips do what hands do;
+lt:    They pray, grant thou, lest faith turn to despair.
+lt:
+lt:JULIET
+lt:
+lt:    Saints do not move, though grant for prayers' sake.
+lt:
+lt:ROMEO
+lt:
+lt:    Then move not, while my prayer's effect I take.
+lt:    Thus from my lips, by yours, my sin is purged.
+lt:
+lt:JULIET
+lt:
+lt:    Then have my lips the sin that they have took.
+lt:
+lt:ROMEO
+lt:
+lt:    Sin from thy lips? O trespass sweetly urged!
+lt:    Give me my sin again.
+lt:
+lt:JULIET
+lt:
+lt:    You kiss by the book.
+lt:
+lt:Nurse
+lt:
+lt:    Madam, your mother craves a word with you.
+lt:
+lt:ROMEO
+lt:
+lt:    What is her mother?
+lt:
+lt:Nurse
+lt:
+lt:    Marry, bachelor,
+lt:    Her mother is the lady of the house,
+lt:    And a good lady, and a wise and virtuous
+lt:    I nursed her daughter, that you talk'd withal;
+lt:    I tell you, he that can lay hold of her
+lt:    Shall have the chinks.
+lt:
+lt:ROMEO
+lt:
+lt:    Is she a Capulet?
+lt:    O dear account! my life is my foe's debt.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Away, begone; the sport is at the best.
+lt:
+lt:ROMEO
+lt:
+lt:    Ay, so I fear; the more is my unrest.
+lt:
+lt:CAPULET
+lt:
+lt:    Nay, gentlemen, prepare not to be gone;
+lt:    We have a trifling foolish banquet towards.
+lt:    Is it e'en so? why, then, I thank you all
+lt:    I thank you, honest gentlemen; good night.
+lt:    More torches here! Come on then, let's to bed.
+lt:    Ah, sirrah, by my fay, it waxes late:
+lt:    I'll to my rest.
+lt:
+lt:    Exeunt all but JULIET and Nurse
+lt:
+lt:JULIET
+lt:
+lt:    Come hither, nurse. What is yond gentleman?
+lt:
+lt:Nurse
+lt:
+lt:    The son and heir of old Tiberio.
+lt:
+lt:JULIET
+lt:
+lt:    What's he that now is going out of door?
+lt:
+lt:Nurse
+lt:
+lt:    Marry, that, I think, be young Petrucio.
+lt:
+lt:JULIET
+lt:
+lt:    What's he that follows there, that would not dance?
+lt:
+lt:Nurse
+lt:
+lt:    I know not.
+lt:
+lt:JULIET
+lt:
+lt:    Go ask his name: if he be married.
+lt:    My grave is like to be my wedding bed.
+lt:
+lt:Nurse
+lt:
+lt:    His name is Romeo, and a Montague;
+lt:    The only son of your great enemy.
+lt:
+lt:JULIET
+lt:
+lt:    My only love sprung from my only hate!
+lt:    Too early seen unknown, and known too late!
+lt:    Prodigious birth of love it is to me,
+lt:    That I must love a loathed enemy.
+lt:
+lt:Nurse
+lt:
+lt:    What's this? what's this?
+lt:
+lt:JULIET
+lt:
+lt:    A rhyme I learn'd even now
+lt:    Of one I danced withal.
+lt:
+lt:    One calls within 'Juliet.'
+lt:
+lt:Nurse
+lt:
+lt:    Anon, anon!
+lt:    Come, let's away; the strangers all are gone.
+lt:
+lt:    Exeunt
+lt:
+lt:ACT II
+lt:PROLOGUE
+lt:
+lt:    Enter Chorus 
+lt:
+lt:Chorus
+lt:
+lt:    Now old desire doth in his death-bed lie,
+lt:    And young affection gapes to be his heir;
+lt:    That fair for which love groan'd for and would die,
+lt:    With tender Juliet match'd, is now not fair.
+lt:    Now Romeo is beloved and loves again,
+lt:    Alike betwitched by the charm of looks,
+lt:    But to his foe supposed he must complain,
+lt:    And she steal love's sweet bait from fearful hooks:
+lt:    Being held a foe, he may not have access
+lt:    To breathe such vows as lovers use to swear;
+lt:    And she as much in love, her means much less
+lt:    To meet her new-beloved any where:
+lt:    But passion lends them power, time means, to meet
+lt:    Tempering extremities with extreme sweet.
+lt:
+lt:    Exit
+lt:
+lt:SCENE I. A lane by the wall of Capulet's orchard.
+lt:
+lt:    Enter ROMEO 
+lt:
+lt:ROMEO
+lt:
+lt:    Can I go forward when my heart is here?
+lt:    Turn back, dull earth, and find thy centre out.
+lt:
+lt:    He climbs the wall, and leaps down within it
+lt:
+lt:    Enter BENVOLIO and MERCUTIO
+lt:
+lt:BENVOLIO
+lt:
+lt:    Romeo! my cousin Romeo!
+lt:
+lt:MERCUTIO
+lt:
+lt:    He is wise;
+lt:    And, on my lie, hath stol'n him home to bed.
+lt:
+lt:BENVOLIO
+lt:
+lt:    He ran this way, and leap'd this orchard wall:
+lt:    Call, good Mercutio.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Nay, I'll conjure too.
+lt:    Romeo! humours! madman! passion! lover!
+lt:    Appear thou in the likeness of a sigh:
+lt:    Speak but one rhyme, and I am satisfied;
+lt:    Cry but 'Ay me!' pronounce but 'love' and 'dove;'
+lt:    Speak to my gossip Venus one fair word,
+lt:    One nick-name for her purblind son and heir,
+lt:    Young Adam Cupid, he that shot so trim,
+lt:    When King Cophetua loved the beggar-maid!
+lt:    He heareth not, he stirreth not, he moveth not;
+lt:    The ape is dead, and I must conjure him.
+lt:    I conjure thee by Rosaline's bright eyes,
+lt:    By her high forehead and her scarlet lip,
+lt:    By her fine foot, straight leg and quivering thigh
+lt:    And the demesnes that there adjacent lie,
+lt:    That in thy likeness thou appear to us!
+lt:
+lt:BENVOLIO
+lt:
+lt:    And if he hear thee, thou wilt anger him.
+lt:
+lt:MERCUTIO
+lt:
+lt:    This cannot anger him: 'twould anger him
+lt:    To raise a spirit in his mistress' circle
+lt:    Of some strange nature, letting it there stand
+lt:    Till she had laid it and conjured it down;
+lt:    That were some spite: my invocation
+lt:    Is fair and honest, and in his mistres s' name
+lt:    I conjure only but to raise up him.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Come, he hath hid himself among these trees,
+lt:    To be consorted with the humorous night:
+lt:    Blind is his love and best befits the dark.
+lt:
+lt:MERCUTIO
+lt:
+lt:    If love be blind, love cannot hit the mark.
+lt:    Now will he sit under a medlar tree,
+lt:    And wish his mistress were that kind of fruit
+lt:    As maids call medlars, when they laugh alone.
+lt:    Romeo, that she were, O, that she were
+lt:    An open et caetera, thou a poperin pear!
+lt:    Romeo, good night: I'll to my truckle-bed;
+lt:    This field-bed is too cold for me to sleep:
+lt:    Come, shall we go?
+lt:
+lt:BENVOLIO
+lt:
+lt:    Go, then; for 'tis in vain
+lt:    To seek him here that means not to be found.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE II. Capulet's orchard.
+lt:
+lt:    Enter ROMEO 
+lt:
+lt:ROMEO
+lt:
+lt:    He jests at scars that never felt a wound.
+lt:
+lt:    JULIET appears above at a window
+lt:    But, soft! what light through yonder window breaks?
+lt:    It is the east, and Juliet is the sun.
+lt:    Arise, fair sun, and kill the envious moon,
+lt:    Who is already sick and pale with grief,
+lt:    That thou her maid art far more fair than she:
+lt:    Be not her maid, since she is envious;
+lt:    Her vestal livery is but sick and green
+lt:    And none but fools do wear it; cast it off.
+lt:    It is my lady, O, it is my love!
+lt:    O, that she knew she were!
+lt:    She speaks yet she says nothing: what of that?
+lt:    Her eye discourses; I will answer it.
+lt:    I am too bold, 'tis not to me she speaks:
+lt:    Two of the fairest stars in all the heaven,
+lt:    Having some business, do entreat her eyes
+lt:    To twinkle in their spheres till they return.
+lt:    What if her eyes were there, they in her head?
+lt:    The brightness of her cheek would shame those stars,
+lt:    As daylight doth a lamp; her eyes in heaven
+lt:    Would through the airy region stream so bright
+lt:    That birds would sing and think it were not night.
+lt:    See, how she leans her cheek upon her hand!
+lt:    O, that I were a glove upon that hand,
+lt:    That I might touch that cheek!
+lt:
+lt:JULIET
+lt:
+lt:    Ay me!
+lt:
+lt:ROMEO
+lt:
+lt:    She speaks:
+lt:    O, speak again, bright angel! for thou art
+lt:    As glorious to this night, being o'er my head
+lt:    As is a winged messenger of heaven
+lt:    Unto the white-upturned wondering eyes
+lt:    Of mortals that fall back to gaze on him
+lt:    When he bestrides the lazy-pacing clouds
+lt:    And sails upon the bosom of the air.
+lt:
+lt:JULIET
+lt:
+lt:    O Romeo, Romeo! wherefore art thou Romeo?
+lt:    Deny thy father and refuse thy name;
+lt:    Or, if thou wilt not, be but sworn my love,
+lt:    And I'll no longer be a Capulet.
+lt:
+lt:ROMEO
+lt:
+lt:    [Aside] Shall I hear more, or shall I speak at this?
+lt:
+lt:JULIET
+lt:
+lt:    'Tis but thy name that is my enemy;
+lt:    Thou art thyself, though not a Montague.
+lt:    What's Montague? it is nor hand, nor foot,
+lt:    Nor arm, nor face, nor any other part
+lt:    Belonging to a man. O, be some other name!
+lt:    What's in a name? that which we call a rose
+lt:    By any other name would smell as sweet;
+lt:    So Romeo would, were he not Romeo call'd,
+lt:    Retain that dear perfection which he owes
+lt:    Without that title. Romeo, doff thy name,
+lt:    And for that name which is no part of thee
+lt:    Take all myself.
+lt:
+lt:ROMEO
+lt:
+lt:    I take thee at thy word:
+lt:    Call me but love, and I'll be new baptized;
+lt:    Henceforth I never will be Romeo.
+lt:
+lt:JULIET
+lt:
+lt:    What man art thou that thus bescreen'd in night
+lt:    So stumblest on my counsel?
+lt:
+lt:ROMEO
+lt:
+lt:    By a name
+lt:    I know not how to tell thee who I am:
+lt:    My name, dear saint, is hateful to myself,
+lt:    Because it is an enemy to thee;
+lt:    Had I it written, I would tear the word.
+lt:
+lt:JULIET
+lt:
+lt:    My ears have not yet drunk a hundred words
+lt:    Of that tongue's utterance, yet I know the sound:
+lt:    Art thou not Romeo and a Montague?
+lt:
+lt:ROMEO
+lt:
+lt:    Neither, fair saint, if either thee dislike.
+lt:
+lt:JULIET
+lt:
+lt:    How camest thou hither, tell me, and wherefore?
+lt:    The orchard walls are high and hard to climb,
+lt:    And the place death, considering who thou art,
+lt:    If any of my kinsmen find thee here.
+lt:
+lt:ROMEO
+lt:
+lt:    With love's light wings did I o'er-perch these walls;
+lt:    For stony limits cannot hold love out,
+lt:    And what love can do that dares love attempt;
+lt:    Therefore thy kinsmen are no let to me.
+lt:
+lt:JULIET
+lt:
+lt:    If they do see thee, they will murder thee.
+lt:
+lt:ROMEO
+lt:
+lt:    Alack, there lies more peril in thine eye
+lt:    Than twenty of their swords: look thou but sweet,
+lt:    And I am proof against their enmity.
+lt:
+lt:JULIET
+lt:
+lt:    I would not for the world they saw thee here.
+lt:
+lt:ROMEO
+lt:
+lt:    I have night's cloak to hide me from their sight;
+lt:    And but thou love me, let them find me here:
+lt:    My life were better ended by their hate,
+lt:    Than death prorogued, wanting of thy love.
+lt:
+lt:JULIET
+lt:
+lt:    By whose direction found'st thou out this place?
+lt:
+lt:ROMEO
+lt:
+lt:    By love, who first did prompt me to inquire;
+lt:    He lent me counsel and I lent him eyes.
+lt:    I am no pilot; yet, wert thou as far
+lt:    As that vast shore wash'd with the farthest sea,
+lt:    I would adventure for such merchandise.
+lt:
+lt:JULIET
+lt:
+lt:    Thou know'st the mask of night is on my face,
+lt:    Else would a maiden blush bepaint my cheek
+lt:    For that which thou hast heard me speak to-night
+lt:    Fain would I dwell on form, fain, fain deny
+lt:    What I have spoke: but farewell compliment!
+lt:    Dost thou love me? I know thou wilt say 'Ay,'
+lt:    And I will take thy word: yet if thou swear'st,
+lt:    Thou mayst prove false; at lovers' perjuries
+lt:    Then say, Jove laughs. O gentle Romeo,
+lt:    If thou dost love, pronounce it faithfully:
+lt:    Or if thou think'st I am too quickly won,
+lt:    I'll frown and be perverse an say thee nay,
+lt:    So thou wilt woo; but else, not for the world.
+lt:    In truth, fair Montague, I am too fond,
+lt:    And therefore thou mayst think my 'havior light:
+lt:    But trust me, gentleman, I'll prove more true
+lt:    Than those that have more cunning to be strange.
+lt:    I should have been more strange, I must confess,
+lt:    But that thou overheard'st, ere I was ware,
+lt:    My true love's passion: therefore pardon me,
+lt:    And not impute this yielding to light love,
+lt:    Which the dark night hath so discovered.
+lt:
+lt:ROMEO
+lt:
+lt:    Lady, by yonder blessed moon I swear
+lt:    That tips with silver all these fruit-tree tops--
+lt:
+lt:JULIET
+lt:
+lt:    O, swear not by the moon, the inconstant moon,
+lt:    That monthly changes in her circled orb,
+lt:    Lest that thy love prove likewise variable.
+lt:
+lt:ROMEO
+lt:
+lt:    What shall I swear by?
+lt:
+lt:JULIET
+lt:
+lt:    Do not swear at all;
+lt:    Or, if thou wilt, swear by thy gracious self,
+lt:    Which is the god of my idolatry,
+lt:    And I'll believe thee.
+lt:
+lt:ROMEO
+lt:
+lt:    If my heart's dear love--
+lt:
+lt:JULIET
+lt:
+lt:    Well, do not swear: although I joy in thee,
+lt:    I have no joy of this contract to-night:
+lt:    It is too rash, too unadvised, too sudden;
+lt:    Too like the lightning, which doth cease to be
+lt:    Ere one can say 'It lightens.' Sweet, good night!
+lt:    This bud of love, by summer's ripening breath,
+lt:    May prove a beauteous flower when next we meet.
+lt:    Good night, good night! as sweet repose and rest
+lt:    Come to thy heart as that within my breast!
+lt:
+lt:ROMEO
+lt:
+lt:    O, wilt thou leave me so unsatisfied?
+lt:
+lt:JULIET
+lt:
+lt:    What satisfaction canst thou have to-night?
+lt:
+lt:ROMEO
+lt:
+lt:    The exchange of thy love's faithful vow for mine.
+lt:
+lt:JULIET
+lt:
+lt:    I gave thee mine before thou didst request it:
+lt:    And yet I would it were to give again.
+lt:
+lt:ROMEO
+lt:
+lt:    Wouldst thou withdraw it? for what purpose, love?
+lt:
+lt:JULIET
+lt:
+lt:    But to be frank, and give it thee again.
+lt:    And yet I wish but for the thing I have:
+lt:    My bounty is as boundless as the sea,
+lt:    My love as deep; the more I give to thee,
+lt:    The more I have, for both are infinite.
+lt:
+lt:    Nurse calls within
+lt:    I hear some noise within; dear love, adieu!
+lt:    Anon, good nurse! Sweet Montague, be true.
+lt:    Stay but a little, I will come again.
+lt:
+lt:    Exit, above
+lt:
+lt:ROMEO
+lt:
+lt:    O blessed, blessed night! I am afeard.
+lt:    Being in night, all this is but a dream,
+lt:    Too flattering-sweet to be substantial.
+lt:
+lt:    Re-enter JULIET, above
+lt:
+lt:JULIET
+lt:
+lt:    Three words, dear Romeo, and good night indeed.
+lt:    If that thy bent of love be honourable,
+lt:    Thy purpose marriage, send me word to-morrow,
+lt:    By one that I'll procure to come to thee,
+lt:    Where and what time thou wilt perform the rite;
+lt:    And all my fortunes at thy foot I'll lay
+lt:    And follow thee my lord throughout the world.
+lt:
+lt:Nurse
+lt:
+lt:    [Within] Madam!
+lt:
+lt:JULIET
+lt:
+lt:    I come, anon.--But if thou mean'st not well,
+lt:    I do beseech thee--
+lt:
+lt:Nurse
+lt:
+lt:    [Within] Madam!
+lt:
+lt:JULIET
+lt:
+lt:    By and by, I come:--
+lt:    To cease thy suit, and leave me to my grief:
+lt:    To-morrow will I send.
+lt:
+lt:ROMEO
+lt:
+lt:    So thrive my soul--
+lt:
+lt:JULIET
+lt:
+lt:    A thousand times good night!
+lt:
+lt:    Exit, above
+lt:
+lt:ROMEO
+lt:
+lt:    A thousand times the worse, to want thy light.
+lt:    Love goes toward love, as schoolboys from
+lt:    their books,
+lt:    But love from love, toward school with heavy looks.
+lt:
+lt:    Retiring
+lt:
+lt:    Re-enter JULIET, above
+lt:
+lt:JULIET
+lt:
+lt:    Hist! Romeo, hist! O, for a falconer's voice,
+lt:    To lure this tassel-gentle back again!
+lt:    Bondage is hoarse, and may not speak aloud;
+lt:    Else would I tear the cave where Echo lies,
+lt:    And make her airy tongue more hoarse than mine,
+lt:    With repetition of my Romeo's name.
+lt:
+lt:ROMEO
+lt:
+lt:    It is my soul that calls upon my name:
+lt:    How silver-sweet sound lovers' tongues by night,
+lt:    Like softest music to attending ears!
+lt:
+lt:JULIET
+lt:
+lt:    Romeo!
+lt:
+lt:ROMEO
+lt:
+lt:    My dear?
+lt:
+lt:JULIET
+lt:
+lt:    At what o'clock to-morrow
+lt:    Shall I send to thee?
+lt:
+lt:ROMEO
+lt:
+lt:    At the hour of nine.
+lt:
+lt:JULIET
+lt:
+lt:    I will not fail: 'tis twenty years till then.
+lt:    I have forgot why I did call thee back.
+lt:
+lt:ROMEO
+lt:
+lt:    Let me stand here till thou remember it.
+lt:
+lt:JULIET
+lt:
+lt:    I shall forget, to have thee still stand there,
+lt:    Remembering how I love thy company.
+lt:
+lt:ROMEO
+lt:
+lt:    And I'll still stay, to have thee still forget,
+lt:    Forgetting any other home but this.
+lt:
+lt:JULIET
+lt:
+lt:    'Tis almost morning; I would have thee gone:
+lt:    And yet no further than a wanton's bird;
+lt:    Who lets it hop a little from her hand,
+lt:    Like a poor prisoner in his twisted gyves,
+lt:    And with a silk thread plucks it back again,
+lt:    So loving-jealous of his liberty.
+lt:
+lt:ROMEO
+lt:
+lt:    I would I were thy bird.
+lt:
+lt:JULIET
+lt:
+lt:    Sweet, so would I:
+lt:    Yet I should kill thee with much cherishing.
+lt:    Good night, good night! parting is such
+lt:    sweet sorrow,
+lt:    That I shall say good night till it be morrow.
+lt:
+lt:    Exit above
+lt:
+lt:ROMEO
+lt:
+lt:    Sleep dwell upon thine eyes, peace in thy breast!
+lt:    Would I were sleep and peace, so sweet to rest!
+lt:    Hence will I to my ghostly father's cell,
+lt:    His help to crave, and my dear hap to tell.
+lt:
+lt:    Exit
+lt:
+lt:SCENE III. Friar Laurence's cell.
+lt:
+lt:    Enter FRIAR LAURENCE, with a basket 
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    The grey-eyed morn smiles on the frowning night,
+lt:    Chequering the eastern clouds with streaks of light,
+lt:    And flecked darkness like a drunkard reels
+lt:    From forth day's path and Titan's fiery wheels:
+lt:    Now, ere the sun advance his burning eye,
+lt:    The day to cheer and night's dank dew to dry,
+lt:    I must up-fill this osier cage of ours
+lt:    With baleful weeds and precious-juiced flowers.
+lt:    The earth that's nature's mother is her tomb;
+lt:    What is her burying grave that is her womb,
+lt:    And from her womb children of divers kind
+lt:    We sucking on her natural bosom find,
+lt:    Many for many virtues excellent,
+lt:    None but for some and yet all different.
+lt:    O, mickle is the powerful grace that lies
+lt:    In herbs, plants, stones, and their true qualities:
+lt:    For nought so vile that on the earth doth live
+lt:    But to the earth some special good doth give,
+lt:    Nor aught so good but strain'd from that fair use
+lt:    Revolts from true birth, stumbling on abuse:
+lt:    Virtue itself turns vice, being misapplied;
+lt:    And vice sometimes by action dignified.
+lt:    Within the infant rind of this small flower
+lt:    Poison hath residence and medicine power:
+lt:    For this, being smelt, with that part cheers each part;
+lt:    Being tasted, slays all senses with the heart.
+lt:    Two such opposed kings encamp them still
+lt:    In man as well as herbs, grace and rude will;
+lt:    And where the worser is predominant,
+lt:    Full soon the canker death eats up that plant.
+lt:
+lt:    Enter ROMEO
+lt:
+lt:ROMEO
+lt:
+lt:    Good morrow, father.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Benedicite!
+lt:    What early tongue so sweet saluteth me?
+lt:    Young son, it argues a distemper'd head
+lt:    So soon to bid good morrow to thy bed:
+lt:    Care keeps his watch in every old man's eye,
+lt:    And where care lodges, sleep will never lie;
+lt:    But where unbruised youth with unstuff'd brain
+lt:    Doth couch his limbs, there golden sleep doth reign:
+lt:    Therefore thy earliness doth me assure
+lt:    Thou art up-roused by some distemperature;
+lt:    Or if not so, then here I hit it right,
+lt:    Our Romeo hath not been in bed to-night.
+lt:
+lt:ROMEO
+lt:
+lt:    That last is true; the sweeter rest was mine.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    God pardon sin! wast thou with Rosaline?
+lt:
+lt:ROMEO
+lt:
+lt:    With Rosaline, my ghostly father? no;
+lt:    I have forgot that name, and that name's woe.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    That's my good son: but where hast thou been, then?
+lt:
+lt:ROMEO
+lt:
+lt:    I'll tell thee, ere thou ask it me again.
+lt:    I have been feasting with mine enemy,
+lt:    Where on a sudden one hath wounded me,
+lt:    That's by me wounded: both our remedies
+lt:    Within thy help and holy physic lies:
+lt:    I bear no hatred, blessed man, for, lo,
+lt:    My intercession likewise steads my foe.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Be plain, good son, and homely in thy drift;
+lt:    Riddling confession finds but riddling shrift.
+lt:
+lt:ROMEO
+lt:
+lt:    Then plainly know my heart's dear love is set
+lt:    On the fair daughter of rich Capulet:
+lt:    As mine on hers, so hers is set on mine;
+lt:    And all combined, save what thou must combine
+lt:    By holy marriage: when and where and how
+lt:    We met, we woo'd and made exchange of vow,
+lt:    I'll tell thee as we pass; but this I pray,
+lt:    That thou consent to marry us to-day.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Holy Saint Francis, what a change is here!
+lt:    Is Rosaline, whom thou didst love so dear,
+lt:    So soon forsaken? young men's love then lies
+lt:    Not truly in their hearts, but in their eyes.
+lt:    Jesu Maria, what a deal of brine
+lt:    Hath wash'd thy sallow cheeks for Rosaline!
+lt:    How much salt water thrown away in waste,
+lt:    To season love, that of it doth not taste!
+lt:    The sun not yet thy sighs from heaven clears,
+lt:    Thy old groans ring yet in my ancient ears;
+lt:    Lo, here upon thy cheek the stain doth sit
+lt:    Of an old tear that is not wash'd off yet:
+lt:    If e'er thou wast thyself and these woes thine,
+lt:    Thou and these woes were all for Rosaline:
+lt:    And art thou changed? pronounce this sentence then,
+lt:    Women may fall, when there's no strength in men.
+lt:
+lt:ROMEO
+lt:
+lt:    Thou chid'st me oft for loving Rosaline.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    For doting, not for loving, pupil mine.
+lt:
+lt:ROMEO
+lt:
+lt:    And bad'st me bury love.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Not in a grave,
+lt:    To lay one in, another out to have.
+lt:
+lt:ROMEO
+lt:
+lt:    I pray thee, chide not; she whom I love now
+lt:    Doth grace for grace and love for love allow;
+lt:    The other did not so.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    O, she knew well
+lt:    Thy love did read by rote and could not spell.
+lt:    But come, young waverer, come, go with me,
+lt:    In one respect I'll thy assistant be;
+lt:    For this alliance may so happy prove,
+lt:    To turn your households' rancour to pure love.
+lt:
+lt:ROMEO
+lt:
+lt:    O, let us hence; I stand on sudden haste.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Wisely and slow; they stumble that run fast.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE IV. A street.
+lt:
+lt:    Enter BENVOLIO and MERCUTIO 
+lt:
+lt:MERCUTIO
+lt:
+lt:    Where the devil should this Romeo be?
+lt:    Came he not home to-night?
+lt:
+lt:BENVOLIO
+lt:
+lt:    Not to his father's; I spoke with his man.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Ah, that same pale hard-hearted wench, that Rosaline.
+lt:    Torments him so, that he will sure run mad.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Tybalt, the kinsman of old Capulet,
+lt:    Hath sent a letter to his father's house.
+lt:
+lt:MERCUTIO
+lt:
+lt:    A challenge, on my life.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Romeo will answer it.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Any man that can write may answer a letter.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Nay, he will answer the letter's master, how he
+lt:    dares, being dared.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Alas poor Romeo! he is already dead; stabbed with a
+lt:    white wench's black eye; shot through the ear with a
+lt:    love-song; the very pin of his heart cleft with the
+lt:    blind bow-boy's butt-shaft: and is he a man to
+lt:    encounter Tybalt?
+lt:
+lt:BENVOLIO
+lt:
+lt:    Why, what is Tybalt?
+lt:
+lt:MERCUTIO
+lt:
+lt:    More than prince of cats, I can tell you. O, he is
+lt:    the courageous captain of compliments. He fights as
+lt:    you sing prick-song, keeps time, distance, and
+lt:    proportion; rests me his minim rest, one, two, and
+lt:    the third in your bosom: the very butcher of a silk
+lt:    button, a duellist, a duellist; a gentleman of the
+lt:    very first house, of the first and second cause:
+lt:    ah, the immortal passado! the punto reverso! the
+lt:    hai!
+lt:
+lt:BENVOLIO
+lt:
+lt:    The what?
+lt:
+lt:MERCUTIO
+lt:
+lt:    The pox of such antic, lisping, affecting
+lt:    fantasticoes; these new tuners of accents! 'By Jesu,
+lt:    a very good blade! a very tall man! a very good
+lt:    whore!' Why, is not this a lamentable thing,
+lt:    grandsire, that we should be thus afflicted with
+lt:    these strange flies, these fashion-mongers, these
+lt:    perdona-mi's, who stand so much on the new form,
+lt:    that they cannot at ease on the old bench? O, their
+lt:    bones, their bones!
+lt:
+lt:    Enter ROMEO
+lt:
+lt:BENVOLIO
+lt:
+lt:    Here comes Romeo, here comes Romeo.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Without his roe, like a dried herring: flesh, flesh,
+lt:    how art thou fishified! Now is he for the numbers
+lt:    that Petrarch flowed in: Laura to his lady was but a
+lt:    kitchen-wench; marry, she had a better love to
+lt:    be-rhyme her; Dido a dowdy; Cleopatra a gipsy;
+lt:    Helen and Hero hildings and harlots; Thisbe a grey
+lt:    eye or so, but not to the purpose. Signior
+lt:    Romeo, bon jour! there's a French salutation
+lt:    to your French slop. You gave us the counterfeit
+lt:    fairly last night.
+lt:
+lt:ROMEO
+lt:
+lt:    Good morrow to you both. What counterfeit did I give you?
+lt:
+lt:MERCUTIO
+lt:
+lt:    The ship, sir, the slip; can you not conceive?
+lt:
+lt:ROMEO
+lt:
+lt:    Pardon, good Mercutio, my business was great; and in
+lt:    such a case as mine a man may strain courtesy.
+lt:
+lt:MERCUTIO
+lt:
+lt:    That's as much as to say, such a case as yours
+lt:    constrains a man to bow in the hams.
+lt:
+lt:ROMEO
+lt:
+lt:    Meaning, to court'sy.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Thou hast most kindly hit it.
+lt:
+lt:ROMEO
+lt:
+lt:    A most courteous exposition.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Nay, I am the very pink of courtesy.
+lt:
+lt:ROMEO
+lt:
+lt:    Pink for flower.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Right.
+lt:
+lt:ROMEO
+lt:
+lt:    Why, then is my pump well flowered.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Well said: follow me this jest now till thou hast
+lt:    worn out thy pump, that when the single sole of it
+lt:    is worn, the jest may remain after the wearing sole singular.
+lt:
+lt:ROMEO
+lt:
+lt:    O single-soled jest, solely singular for the
+lt:    singleness.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Come between us, good Benvolio; my wits faint.
+lt:
+lt:ROMEO
+lt:
+lt:    Switch and spurs, switch and spurs; or I'll cry a match.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Nay, if thy wits run the wild-goose chase, I have
+lt:    done, for thou hast more of the wild-goose in one of
+lt:    thy wits than, I am sure, I have in my whole five:
+lt:    was I with you there for the goose?
+lt:
+lt:ROMEO
+lt:
+lt:    Thou wast never with me for any thing when thou wast
+lt:    not there for the goose.
+lt:
+lt:MERCUTIO
+lt:
+lt:    I will bite thee by the ear for that jest.
+lt:
+lt:ROMEO
+lt:
+lt:    Nay, good goose, bite not.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Thy wit is a very bitter sweeting; it is a most
+lt:    sharp sauce.
+lt:
+lt:ROMEO
+lt:
+lt:    And is it not well served in to a sweet goose?
+lt:
+lt:MERCUTIO
+lt:
+lt:    O here's a wit of cheveril, that stretches from an
+lt:    inch narrow to an ell broad!
+lt:
+lt:ROMEO
+lt:
+lt:    I stretch it out for that word 'broad;' which added
+lt:    to the goose, proves thee far and wide a broad goose.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Why, is not this better now than groaning for love?
+lt:    now art thou sociable, now art thou Romeo; now art
+lt:    thou what thou art, by art as well as by nature:
+lt:    for this drivelling love is like a great natural,
+lt:    that runs lolling up and down to hide his bauble in a hole.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Stop there, stop there.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Thou desirest me to stop in my tale against the hair.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Thou wouldst else have made thy tale large.
+lt:
+lt:MERCUTIO
+lt:
+lt:    O, thou art deceived; I would have made it short:
+lt:    for I was come to the whole depth of my tale; and
+lt:    meant, indeed, to occupy the argument no longer.
+lt:
+lt:ROMEO
+lt:
+lt:    Here's goodly gear!
+lt:
+lt:    Enter Nurse and PETER
+lt:
+lt:MERCUTIO
+lt:
+lt:    A sail, a sail!
+lt:
+lt:BENVOLIO
+lt:
+lt:    Two, two; a shirt and a smock.
+lt:
+lt:Nurse
+lt:
+lt:    Peter!
+lt:
+lt:PETER
+lt:
+lt:    Anon!
+lt:
+lt:Nurse
+lt:
+lt:    My fan, Peter.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Good Peter, to hide her face; for her fan's the
+lt:    fairer face.
+lt:
+lt:Nurse
+lt:
+lt:    God ye good morrow, gentlemen.
+lt:
+lt:MERCUTIO
+lt:
+lt:    God ye good den, fair gentlewoman.
+lt:
+lt:Nurse
+lt:
+lt:    Is it good den?
+lt:
+lt:MERCUTIO
+lt:
+lt:    'Tis no less, I tell you, for the bawdy hand of the
+lt:    dial is now upon the prick of noon.
+lt:
+lt:Nurse
+lt:
+lt:    Out upon you! what a man are you!
+lt:
+lt:ROMEO
+lt:
+lt:    One, gentlewoman, that God hath made for himself to
+lt:    mar.
+lt:
+lt:Nurse
+lt:
+lt:    By my troth, it is well said; 'for himself to mar,'
+lt:    quoth a'? Gentlemen, can any of you tell me where I
+lt:    may find the young Romeo?
+lt:
+lt:ROMEO
+lt:
+lt:    I can tell you; but young Romeo will be older when
+lt:    you have found him than he was when you sought him:
+lt:    I am the youngest of that name, for fault of a worse.
+lt:
+lt:Nurse
+lt:
+lt:    You say well.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Yea, is the worst well? very well took, i' faith;
+lt:    wisely, wisely.
+lt:
+lt:Nurse
+lt:
+lt:    if you be he, sir, I desire some confidence with
+lt:    you.
+lt:
+lt:BENVOLIO
+lt:
+lt:    She will indite him to some supper.
+lt:
+lt:MERCUTIO
+lt:
+lt:    A bawd, a bawd, a bawd! so ho!
+lt:
+lt:ROMEO
+lt:
+lt:    What hast thou found?
+lt:
+lt:MERCUTIO
+lt:
+lt:    No hare, sir; unless a hare, sir, in a lenten pie,
+lt:    that is something stale and hoar ere it be spent.
+lt:
+lt:    Sings
+lt:    An old hare hoar,
+lt:    And an old hare hoar,
+lt:    Is very good meat in lent
+lt:    But a hare that is hoar
+lt:    Is too much for a score,
+lt:    When it hoars ere it be spent.
+lt:    Romeo, will you come to your father's? we'll
+lt:    to dinner, thither.
+lt:
+lt:ROMEO
+lt:
+lt:    I will follow you.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Farewell, ancient lady; farewell,
+lt:
+lt:    Singing
+lt:    'lady, lady, lady.'
+lt:
+lt:    Exeunt MERCUTIO and BENVOLIO
+lt:
+lt:Nurse
+lt:
+lt:    Marry, farewell! I pray you, sir, what saucy
+lt:    merchant was this, that was so full of his ropery?
+lt:
+lt:ROMEO
+lt:
+lt:    A gentleman, nurse, that loves to hear himself talk,
+lt:    and will speak more in a minute than he will stand
+lt:    to in a month.
+lt:
+lt:Nurse
+lt:
+lt:    An a' speak any thing against me, I'll take him
+lt:    down, an a' were lustier than he is, and twenty such
+lt:    Jacks; and if I cannot, I'll find those that shall.
+lt:    Scurvy knave! I am none of his flirt-gills; I am
+lt:    none of his skains-mates. And thou must stand by
+lt:    too, and suffer every knave to use me at his pleasure?
+lt:
+lt:PETER
+lt:
+lt:    I saw no man use you a pleasure; if I had, my weapon
+lt:    should quickly have been out, I warrant you: I dare
+lt:    draw as soon as another man, if I see occasion in a
+lt:    good quarrel, and the law on my side.
+lt:
+lt:Nurse
+lt:
+lt:    Now, afore God, I am so vexed, that every part about
+lt:    me quivers. Scurvy knave! Pray you, sir, a word:
+lt:    and as I told you, my young lady bade me inquire you
+lt:    out; what she bade me say, I will keep to myself:
+lt:    but first let me tell ye, if ye should lead her into
+lt:    a fool's paradise, as they say, it were a very gross
+lt:    kind of behavior, as they say: for the gentlewoman
+lt:    is young; and, therefore, if you should deal double
+lt:    with her, truly it were an ill thing to be offered
+lt:    to any gentlewoman, and very weak dealing.
+lt:
+lt:ROMEO
+lt:
+lt:    Nurse, commend me to thy lady and mistress. I
+lt:    protest unto thee--
+lt:
+lt:Nurse
+lt:
+lt:    Good heart, and, i' faith, I will tell her as much:
+lt:    Lord, Lord, she will be a joyful woman.
+lt:
+lt:ROMEO
+lt:
+lt:    What wilt thou tell her, nurse? thou dost not mark me.
+lt:
+lt:Nurse
+lt:
+lt:    I will tell her, sir, that you do protest; which, as
+lt:    I take it, is a gentlemanlike offer.
+lt:
+lt:ROMEO
+lt:
+lt:    Bid her devise
+lt:    Some means to come to shrift this afternoon;
+lt:    And there she shall at Friar Laurence' cell
+lt:    Be shrived and married. Here is for thy pains.
+lt:
+lt:Nurse
+lt:
+lt:    No truly sir; not a penny.
+lt:
+lt:ROMEO
+lt:
+lt:    Go to; I say you shall.
+lt:
+lt:Nurse
+lt:
+lt:    This afternoon, sir? well, she shall be there.
+lt:
+lt:ROMEO
+lt:
+lt:    And stay, good nurse, behind the abbey wall:
+lt:    Within this hour my man shall be with thee
+lt:    And bring thee cords made like a tackled stair;
+lt:    Which to the high top-gallant of my joy
+lt:    Must be my convoy in the secret night.
+lt:    Farewell; be trusty, and I'll quit thy pains:
+lt:    Farewell; commend me to thy mistress.
+lt:
+lt:Nurse
+lt:
+lt:    Now God in heaven bless thee! Hark you, sir.
+lt:
+lt:ROMEO
+lt:
+lt:    What say'st thou, my dear nurse?
+lt:
+lt:Nurse
+lt:
+lt:    Is your man secret? Did you ne'er hear say,
+lt:    Two may keep counsel, putting one away?
+lt:
+lt:ROMEO
+lt:
+lt:    I warrant thee, my man's as true as steel.
+lt:
+lt:NURSE
+lt:
+lt:    Well, sir; my mistress is the sweetest lady--Lord,
+lt:    Lord! when 'twas a little prating thing:--O, there
+lt:    is a nobleman in town, one Paris, that would fain
+lt:    lay knife aboard; but she, good soul, had as lief
+lt:    see a toad, a very toad, as see him. I anger her
+lt:    sometimes and tell her that Paris is the properer
+lt:    man; but, I'll warrant you, when I say so, she looks
+lt:    as pale as any clout in the versal world. Doth not
+lt:    rosemary and Romeo begin both with a letter?
+lt:
+lt:ROMEO
+lt:
+lt:    Ay, nurse; what of that? both with an R.
+lt:
+lt:Nurse
+lt:
+lt:    Ah. mocker! that's the dog's name; R is for
+lt:    the--No; I know it begins with some other
+lt:    letter:--and she hath the prettiest sententious of
+lt:    it, of you and rosemary, that it would do you good
+lt:    to hear it.
+lt:
+lt:ROMEO
+lt:
+lt:    Commend me to thy lady.
+lt:
+lt:Nurse
+lt:
+lt:    Ay, a thousand times.
+lt:
+lt:    Exit Romeo
+lt:    Peter!
+lt:
+lt:PETER
+lt:
+lt:    Anon!
+lt:
+lt:Nurse
+lt:
+lt:    Peter, take my fan, and go before and apace.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE V. Capulet's orchard.
+lt:
+lt:    Enter JULIET 
+lt:
+lt:JULIET
+lt:
+lt:    The clock struck nine when I did send the nurse;
+lt:    In half an hour she promised to return.
+lt:    Perchance she cannot meet him: that's not so.
+lt:    O, she is lame! love's heralds should be thoughts,
+lt:    Which ten times faster glide than the sun's beams,
+lt:    Driving back shadows over louring hills:
+lt:    Therefore do nimble-pinion'd doves draw love,
+lt:    And therefore hath the wind-swift Cupid wings.
+lt:    Now is the sun upon the highmost hill
+lt:    Of this day's journey, and from nine till twelve
+lt:    Is three long hours, yet she is not come.
+lt:    Had she affections and warm youthful blood,
+lt:    She would be as swift in motion as a ball;
+lt:    My words would bandy her to my sweet love,
+lt:    And his to me:
+lt:    But old folks, many feign as they were dead;
+lt:    Unwieldy, slow, heavy and pale as lead.
+lt:    O God, she comes!
+lt:
+lt:    Enter Nurse and PETER
+lt:    O honey nurse, what news?
+lt:    Hast thou met with him? Send thy man away.
+lt:
+lt:Nurse
+lt:
+lt:    Peter, stay at the gate.
+lt:
+lt:    Exit PETER
+lt:
+lt:JULIET
+lt:
+lt:    Now, good sweet nurse,--O Lord, why look'st thou sad?
+lt:    Though news be sad, yet tell them merrily;
+lt:    If good, thou shamest the music of sweet news
+lt:    By playing it to me with so sour a face.
+lt:
+lt:Nurse
+lt:
+lt:    I am a-weary, give me leave awhile:
+lt:    Fie, how my bones ache! what a jaunt have I had!
+lt:
+lt:JULIET
+lt:
+lt:    I would thou hadst my bones, and I thy news:
+lt:    Nay, come, I pray thee, speak; good, good nurse, speak.
+lt:
+lt:Nurse
+lt:
+lt:    Jesu, what haste? can you not stay awhile?
+lt:    Do you not see that I am out of breath?
+lt:
+lt:JULIET
+lt:
+lt:    How art thou out of breath, when thou hast breath
+lt:    To say to me that thou art out of breath?
+lt:    The excuse that thou dost make in this delay
+lt:    Is longer than the tale thou dost excuse.
+lt:    Is thy news good, or bad? answer to that;
+lt:    Say either, and I'll stay the circumstance:
+lt:    Let me be satisfied, is't good or bad?
+lt:
+lt:Nurse
+lt:
+lt:    Well, you have made a simple choice; you know not
+lt:    how to choose a man: Romeo! no, not he; though his
+lt:    face be better than any man's, yet his leg excels
+lt:    all men's; and for a hand, and a foot, and a body,
+lt:    though they be not to be talked on, yet they are
+lt:    past compare: he is not the flower of courtesy,
+lt:    but, I'll warrant him, as gentle as a lamb. Go thy
+lt:    ways, wench; serve God. What, have you dined at home?
+lt:
+lt:JULIET
+lt:
+lt:    No, no: but all this did I know before.
+lt:    What says he of our marriage? what of that?
+lt:
+lt:Nurse
+lt:
+lt:    Lord, how my head aches! what a head have I!
+lt:    It beats as it would fall in twenty pieces.
+lt:    My back o' t' other side,--O, my back, my back!
+lt:    Beshrew your heart for sending me about,
+lt:    To catch my death with jaunting up and down!
+lt:
+lt:JULIET
+lt:
+lt:    I' faith, I am sorry that thou art not well.
+lt:    Sweet, sweet, sweet nurse, tell me, what says my love?
+lt:
+lt:Nurse
+lt:
+lt:    Your love says, like an honest gentleman, and a
+lt:    courteous, and a kind, and a handsome, and, I
+lt:    warrant, a virtuous,--Where is your mother?
+lt:
+lt:JULIET
+lt:
+lt:    Where is my mother! why, she is within;
+lt:    Where should she be? How oddly thou repliest!
+lt:    'Your love says, like an honest gentleman,
+lt:    Where is your mother?'
+lt:
+lt:Nurse
+lt:
+lt:    O God's lady dear!
+lt:    Are you so hot? marry, come up, I trow;
+lt:    Is this the poultice for my aching bones?
+lt:    Henceforward do your messages yourself.
+lt:
+lt:JULIET
+lt:
+lt:    Here's such a coil! come, what says Romeo?
+lt:
+lt:Nurse
+lt:
+lt:    Have you got leave to go to shrift to-day?
+lt:
+lt:JULIET
+lt:
+lt:    I have.
+lt:
+lt:Nurse
+lt:
+lt:    Then hie you hence to Friar Laurence' cell;
+lt:    There stays a husband to make you a wife:
+lt:    Now comes the wanton blood up in your cheeks,
+lt:    They'll be in scarlet straight at any news.
+lt:    Hie you to church; I must another way,
+lt:    To fetch a ladder, by the which your love
+lt:    Must climb a bird's nest soon when it is dark:
+lt:    I am the drudge and toil in your delight,
+lt:    But you shall bear the burden soon at night.
+lt:    Go; I'll to dinner: hie you to the cell.
+lt:
+lt:JULIET
+lt:
+lt:    Hie to high fortune! Honest nurse, farewell.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE VI. Friar Laurence's cell.
+lt:
+lt:    Enter FRIAR LAURENCE and ROMEO 
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    So smile the heavens upon this holy act,
+lt:    That after hours with sorrow chide us not!
+lt:
+lt:ROMEO
+lt:
+lt:    Amen, amen! but come what sorrow can,
+lt:    It cannot countervail the exchange of joy
+lt:    That one short minute gives me in her sight:
+lt:    Do thou but close our hands with holy words,
+lt:    Then love-devouring death do what he dare;
+lt:    It is enough I may but call her mine.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    These violent delights have violent ends
+lt:    And in their triumph die, like fire and powder,
+lt:    Which as they kiss consume: the sweetest honey
+lt:    Is loathsome in his own deliciousness
+lt:    And in the taste confounds the appetite:
+lt:    Therefore love moderately; long love doth so;
+lt:    Too swift arrives as tardy as too slow.
+lt:
+lt:    Enter JULIET
+lt:    Here comes the lady: O, so light a foot
+lt:    Will ne'er wear out the everlasting flint:
+lt:    A lover may bestride the gossamer
+lt:    That idles in the wanton summer air,
+lt:    And yet not fall; so light is vanity.
+lt:
+lt:JULIET
+lt:
+lt:    Good even to my ghostly confessor.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Romeo shall thank thee, daughter, for us both.
+lt:
+lt:JULIET
+lt:
+lt:    As much to him, else is his thanks too much.
+lt:
+lt:ROMEO
+lt:
+lt:    Ah, Juliet, if the measure of thy joy
+lt:    Be heap'd like mine and that thy skill be more
+lt:    To blazon it, then sweeten with thy breath
+lt:    This neighbour air, and let rich music's tongue
+lt:    Unfold the imagined happiness that both
+lt:    Receive in either by this dear encounter.
+lt:
+lt:JULIET
+lt:
+lt:    Conceit, more rich in matter than in words,
+lt:    Brags of his substance, not of ornament:
+lt:    They are but beggars that can count their worth;
+lt:    But my true love is grown to such excess
+lt:    I cannot sum up sum of half my wealth.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Come, come with me, and we will make short work;
+lt:    For, by your leaves, you shall not stay alone
+lt:    Till holy church incorporate two in one.
+lt:
+lt:    Exeunt
+lt:
+lt:ACT III
+lt:SCENE I. A public place.
+lt:
+lt:    Enter MERCUTIO, BENVOLIO, Page, and Servants 
+lt:
+lt:BENVOLIO
+lt:
+lt:    I pray thee, good Mercutio, let's retire:
+lt:    The day is hot, the Capulets abroad,
+lt:    And, if we meet, we shall not scape a brawl;
+lt:    For now, these hot days, is the mad blood stirring.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Thou art like one of those fellows that when he
+lt:    enters the confines of a tavern claps me his sword
+lt:    upon the table and says 'God send me no need of
+lt:    thee!' and by the operation of the second cup draws
+lt:    it on the drawer, when indeed there is no need.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Am I like such a fellow?
+lt:
+lt:MERCUTIO
+lt:
+lt:    Come, come, thou art as hot a Jack in thy mood as
+lt:    any in Italy, and as soon moved to be moody, and as
+lt:    soon moody to be moved.
+lt:
+lt:BENVOLIO
+lt:
+lt:    And what to?
+lt:
+lt:MERCUTIO
+lt:
+lt:    Nay, an there were two such, we should have none
+lt:    shortly, for one would kill the other. Thou! why,
+lt:    thou wilt quarrel with a man that hath a hair more,
+lt:    or a hair less, in his beard, than thou hast: thou
+lt:    wilt quarrel with a man for cracking nuts, having no
+lt:    other reason but because thou hast hazel eyes: what
+lt:    eye but such an eye would spy out such a quarrel?
+lt:    Thy head is as fun of quarrels as an egg is full of
+lt:    meat, and yet thy head hath been beaten as addle as
+lt:    an egg for quarrelling: thou hast quarrelled with a
+lt:    man for coughing in the street, because he hath
+lt:    wakened thy dog that hath lain asleep in the sun:
+lt:    didst thou not fall out with a tailor for wearing
+lt:    his new doublet before Easter? with another, for
+lt:    tying his new shoes with old riband? and yet thou
+lt:    wilt tutor me from quarrelling!
+lt:
+lt:BENVOLIO
+lt:
+lt:    An I were so apt to quarrel as thou art, any man
+lt:    should buy the fee-simple of my life for an hour and a quarter.
+lt:
+lt:MERCUTIO
+lt:
+lt:    The fee-simple! O simple!
+lt:
+lt:BENVOLIO
+lt:
+lt:    By my head, here come the Capulets.
+lt:
+lt:MERCUTIO
+lt:
+lt:    By my heel, I care not.
+lt:
+lt:    Enter TYBALT and others
+lt:
+lt:TYBALT
+lt:
+lt:    Follow me close, for I will speak to them.
+lt:    Gentlemen, good den: a word with one of you.
+lt:
+lt:MERCUTIO
+lt:
+lt:    And but one word with one of us? couple it with
+lt:    something; make it a word and a blow.
+lt:
+lt:TYBALT
+lt:
+lt:    You shall find me apt enough to that, sir, an you
+lt:    will give me occasion.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Could you not take some occasion without giving?
+lt:
+lt:TYBALT
+lt:
+lt:    Mercutio, thou consort'st with Romeo,--
+lt:
+lt:MERCUTIO
+lt:
+lt:    Consort! what, dost thou make us minstrels? an
+lt:    thou make minstrels of us, look to hear nothing but
+lt:    discords: here's my fiddlestick; here's that shall
+lt:    make you dance. 'Zounds, consort!
+lt:
+lt:BENVOLIO
+lt:
+lt:    We talk here in the public haunt of men:
+lt:    Either withdraw unto some private place,
+lt:    And reason coldly of your grievances,
+lt:    Or else depart; here all eyes gaze on us.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Men's eyes were made to look, and let them gaze;
+lt:    I will not budge for no man's pleasure, I.
+lt:
+lt:    Enter ROMEO
+lt:
+lt:TYBALT
+lt:
+lt:    Well, peace be with you, sir: here comes my man.
+lt:
+lt:MERCUTIO
+lt:
+lt:    But I'll be hanged, sir, if he wear your livery:
+lt:    Marry, go before to field, he'll be your follower;
+lt:    Your worship in that sense may call him 'man.'
+lt:
+lt:TYBALT
+lt:
+lt:    Romeo, the hate I bear thee can afford
+lt:    No better term than this,--thou art a villain.
+lt:
+lt:ROMEO
+lt:
+lt:    Tybalt, the reason that I have to love thee
+lt:    Doth much excuse the appertaining rage
+lt:    To such a greeting: villain am I none;
+lt:    Therefore farewell; I see thou know'st me not.
+lt:
+lt:TYBALT
+lt:
+lt:    Boy, this shall not excuse the injuries
+lt:    That thou hast done me; therefore turn and draw.
+lt:
+lt:ROMEO
+lt:
+lt:    I do protest, I never injured thee,
+lt:    But love thee better than thou canst devise,
+lt:    Till thou shalt know the reason of my love:
+lt:    And so, good Capulet,--which name I tender
+lt:    As dearly as my own,--be satisfied.
+lt:
+lt:MERCUTIO
+lt:
+lt:    O calm, dishonourable, vile submission!
+lt:    Alla stoccata carries it away.
+lt:
+lt:    Draws
+lt:    Tybalt, you rat-catcher, will you walk?
+lt:
+lt:TYBALT
+lt:
+lt:    What wouldst thou have with me?
+lt:
+lt:MERCUTIO
+lt:
+lt:    Good king of cats, nothing but one of your nine
+lt:    lives; that I mean to make bold withal, and as you
+lt:    shall use me hereafter, drybeat the rest of the
+lt:    eight. Will you pluck your sword out of his pitcher
+lt:    by the ears? make haste, lest mine be about your
+lt:    ears ere it be out.
+lt:
+lt:TYBALT
+lt:
+lt:    I am for you.
+lt:
+lt:    Drawing
+lt:
+lt:ROMEO
+lt:
+lt:    Gentle Mercutio, put thy rapier up.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Come, sir, your passado.
+lt:
+lt:    They fight
+lt:
+lt:ROMEO
+lt:
+lt:    Draw, Benvolio; beat down their weapons.
+lt:    Gentlemen, for shame, forbear this outrage!
+lt:    Tybalt, Mercutio, the prince expressly hath
+lt:    Forbidden bandying in Verona streets:
+lt:    Hold, Tybalt! good Mercutio!
+lt:
+lt:    TYBALT under ROMEO's arm stabs MERCUTIO, and flies with his followers
+lt:
+lt:MERCUTIO
+lt:
+lt:    I am hurt.
+lt:    A plague o' both your houses! I am sped.
+lt:    Is he gone, and hath nothing?
+lt:
+lt:BENVOLIO
+lt:
+lt:    What, art thou hurt?
+lt:
+lt:MERCUTIO
+lt:
+lt:    Ay, ay, a scratch, a scratch; marry, 'tis enough.
+lt:    Where is my page? Go, villain, fetch a surgeon.
+lt:
+lt:    Exit Page
+lt:
+lt:ROMEO
+lt:
+lt:    Courage, man; the hurt cannot be much.
+lt:
+lt:MERCUTIO
+lt:
+lt:    No, 'tis not so deep as a well, nor so wide as a
+lt:    church-door; but 'tis enough,'twill serve: ask for
+lt:    me to-morrow, and you shall find me a grave man. I
+lt:    am peppered, I warrant, for this world. A plague o'
+lt:    both your houses! 'Zounds, a dog, a rat, a mouse, a
+lt:    cat, to scratch a man to death! a braggart, a
+lt:    rogue, a villain, that fights by the book of
+lt:    arithmetic! Why the devil came you between us? I
+lt:    was hurt under your arm.
+lt:
+lt:ROMEO
+lt:
+lt:    I thought all for the best.
+lt:
+lt:MERCUTIO
+lt:
+lt:    Help me into some house, Benvolio,
+lt:    Or I shall faint. A plague o' both your houses!
+lt:    They have made worms' meat of me: I have it,
+lt:    And soundly too: your houses!
+lt:
+lt:    Exeunt MERCUTIO and BENVOLIO
+lt:
+lt:ROMEO
+lt:
+lt:    This gentleman, the prince's near ally,
+lt:    My very friend, hath got his mortal hurt
+lt:    In my behalf; my reputation stain'd
+lt:    With Tybalt's slander,--Tybalt, that an hour
+lt:    Hath been my kinsman! O sweet Juliet,
+lt:    Thy beauty hath made me effeminate
+lt:    And in my temper soften'd valour's steel!
+lt:
+lt:    Re-enter BENVOLIO
+lt:
+lt:BENVOLIO
+lt:
+lt:    O Romeo, Romeo, brave Mercutio's dead!
+lt:    That gallant spirit hath aspired the clouds,
+lt:    Which too untimely here did scorn the earth.
+lt:
+lt:ROMEO
+lt:
+lt:    This day's black fate on more days doth depend;
+lt:    This but begins the woe, others must end.
+lt:
+lt:BENVOLIO
+lt:
+lt:    Here comes the furious Tybalt back again.
+lt:
+lt:ROMEO
+lt:
+lt:    Alive, in triumph! and Mercutio slain!
+lt:    Away to heaven, respective lenity,
+lt:    And fire-eyed fury be my conduct now!
+lt:
+lt:    Re-enter TYBALT
+lt:    Now, Tybalt, take the villain back again,
+lt:    That late thou gavest me; for Mercutio's soul
+lt:    Is but a little way above our heads,
+lt:    Staying for thine to keep him company:
+lt:    Either thou, or I, or both, must go with him.
+lt:
+lt:TYBALT
+lt:
+lt:    Thou, wretched boy, that didst consort him here,
+lt:    Shalt with him hence.
+lt:
+lt:ROMEO
+lt:
+lt:    This shall determine that.
+lt:
+lt:    They fight; TYBALT falls
+lt:
+lt:BENVOLIO
+lt:
+lt:    Romeo, away, be gone!
+lt:    The citizens are up, and Tybalt slain.
+lt:    Stand not amazed: the prince will doom thee death,
+lt:    If thou art taken: hence, be gone, away!
+lt:
+lt:ROMEO
+lt:
+lt:    O, I am fortune's fool!
+lt:
+lt:BENVOLIO
+lt:
+lt:    Why dost thou stay?
+lt:
+lt:    Exit ROMEO
+lt:
+lt:    Enter Citizens, & c
+lt:
+lt:First Citizen
+lt:
+lt:    Which way ran he that kill'd Mercutio?
+lt:    Tybalt, that murderer, which way ran he?
+lt:
+lt:BENVOLIO
+lt:
+lt:    There lies that Tybalt.
+lt:
+lt:First Citizen
+lt:
+lt:    Up, sir, go with me;
+lt:    I charge thee in the princes name, obey.
+lt:
+lt:    Enter Prince, attended; MONTAGUE, CAPULET, their Wives, and others
+lt:
+lt:PRINCE
+lt:
+lt:    Where are the vile beginners of this fray?
+lt:
+lt:BENVOLIO
+lt:
+lt:    O noble prince, I can discover all
+lt:    The unlucky manage of this fatal brawl:
+lt:    There lies the man, slain by young Romeo,
+lt:    That slew thy kinsman, brave Mercutio.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Tybalt, my cousin! O my brother's child!
+lt:    O prince! O cousin! husband! O, the blood is spilt
+lt:    O my dear kinsman! Prince, as thou art true,
+lt:    For blood of ours, shed blood of Montague.
+lt:    O cousin, cousin!
+lt:
+lt:PRINCE
+lt:
+lt:    Benvolio, who began this bloody fray?
+lt:
+lt:BENVOLIO
+lt:
+lt:    Tybalt, here slain, whom Romeo's hand did slay;
+lt:    Romeo that spoke him fair, bade him bethink
+lt:    How nice the quarrel was, and urged withal
+lt:    Your high displeasure: all this uttered
+lt:    With gentle breath, calm look, knees humbly bow'd,
+lt:    Could not take truce with the unruly spleen
+lt:    Of Tybalt deaf to peace, but that he tilts
+lt:    With piercing steel at bold Mercutio's breast,
+lt:    Who all as hot, turns deadly point to point,
+lt:    And, with a martial scorn, with one hand beats
+lt:    Cold death aside, and with the other sends
+lt:    It back to Tybalt, whose dexterity,
+lt:    Retorts it: Romeo he cries aloud,
+lt:    'Hold, friends! friends, part!' and, swifter than
+lt:    his tongue,
+lt:    His agile arm beats down their fatal points,
+lt:    And 'twixt them rushes; underneath whose arm
+lt:    An envious thrust from Tybalt hit the life
+lt:    Of stout Mercutio, and then Tybalt fled;
+lt:    But by and by comes back to Romeo,
+lt:    Who had but newly entertain'd revenge,
+lt:    And to 't they go like lightning, for, ere I
+lt:    Could draw to part them, was stout Tybalt slain.
+lt:    And, as he fell, did Romeo turn and fly.
+lt:    This is the truth, or let Benvolio die.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    He is a kinsman to the Montague;
+lt:    Affection makes him false; he speaks not true:
+lt:    Some twenty of them fought in this black strife,
+lt:    And all those twenty could but kill one life.
+lt:    I beg for justice, which thou, prince, must give;
+lt:    Romeo slew Tybalt, Romeo must not live.
+lt:
+lt:PRINCE
+lt:
+lt:    Romeo slew him, he slew Mercutio;
+lt:    Who now the price of his dear blood doth owe?
+lt:
+lt:MONTAGUE
+lt:
+lt:    Not Romeo, prince, he was Mercutio's friend;
+lt:    His fault concludes but what the law should end,
+lt:    The life of Tybalt.
+lt:
+lt:PRINCE
+lt:
+lt:    And for that offence
+lt:    Immediately we do exile him hence:
+lt:    I have an interest in your hate's proceeding,
+lt:    My blood for your rude brawls doth lie a-bleeding;
+lt:    But I'll amerce you with so strong a fine
+lt:    That you shall all repent the loss of mine:
+lt:    I will be deaf to pleading and excuses;
+lt:    Nor tears nor prayers shall purchase out abuses:
+lt:    Therefore use none: let Romeo hence in haste,
+lt:    Else, when he's found, that hour is his last.
+lt:    Bear hence this body and attend our will:
+lt:    Mercy but murders, pardoning those that kill.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE II. Capulet's orchard.
+lt:
+lt:    Enter JULIET 
+lt:
+lt:JULIET
+lt:
+lt:    Gallop apace, you fiery-footed steeds,
+lt:    Towards Phoebus' lodging: such a wagoner
+lt:    As Phaethon would whip you to the west,
+lt:    And bring in cloudy night immediately.
+lt:    Spread thy close curtain, love-performing night,
+lt:    That runaway's eyes may wink and Romeo
+lt:    Leap to these arms, untalk'd of and unseen.
+lt:    Lovers can see to do their amorous rites
+lt:    By their own beauties; or, if love be blind,
+lt:    It best agrees with night. Come, civil night,
+lt:    Thou sober-suited matron, all in black,
+lt:    And learn me how to lose a winning match,
+lt:    Play'd for a pair of stainless maidenhoods:
+lt:    Hood my unmann'd blood, bating in my cheeks,
+lt:    With thy black mantle; till strange love, grown bold,
+lt:    Think true love acted simple modesty.
+lt:    Come, night; come, Romeo; come, thou day in night;
+lt:    For thou wilt lie upon the wings of night
+lt:    Whiter than new snow on a raven's back.
+lt:    Come, gentle night, come, loving, black-brow'd night,
+lt:    Give me my Romeo; and, when he shall die,
+lt:    Take him and cut him out in little stars,
+lt:    And he will make the face of heaven so fine
+lt:    That all the world will be in love with night
+lt:    And pay no worship to the garish sun.
+lt:    O, I have bought the mansion of a love,
+lt:    But not possess'd it, and, though I am sold,
+lt:    Not yet enjoy'd: so tedious is this day
+lt:    As is the night before some festival
+lt:    To an impatient child that hath new robes
+lt:    And may not wear them. O, here comes my nurse,
+lt:    And she brings news; and every tongue that speaks
+lt:    But Romeo's name speaks heavenly eloquence.
+lt:
+lt:    Enter Nurse, with cords
+lt:    Now, nurse, what news? What hast thou there? the cords
+lt:    That Romeo bid thee fetch?
+lt:
+lt:Nurse
+lt:
+lt:    Ay, ay, the cords.
+lt:
+lt:    Throws them down
+lt:
+lt:JULIET
+lt:
+lt:    Ay me! what news? why dost thou wring thy hands?
+lt:
+lt:Nurse
+lt:
+lt:    Ah, well-a-day! he's dead, he's dead, he's dead!
+lt:    We are undone, lady, we are undone!
+lt:    Alack the day! he's gone, he's kill'd, he's dead!
+lt:
+lt:JULIET
+lt:
+lt:    Can heaven be so envious?
+lt:
+lt:Nurse
+lt:
+lt:    Romeo can,
+lt:    Though heaven cannot: O Romeo, Romeo!
+lt:    Who ever would have thought it? Romeo!
+lt:
+lt:JULIET
+lt:
+lt:    What devil art thou, that dost torment me thus?
+lt:    This torture should be roar'd in dismal hell.
+lt:    Hath Romeo slain himself? say thou but 'I,'
+lt:    And that bare vowel 'I' shall poison more
+lt:    Than the death-darting eye of cockatrice:
+lt:    I am not I, if there be such an I;
+lt:    Or those eyes shut, that make thee answer 'I.'
+lt:    If he be slain, say 'I'; or if not, no:
+lt:    Brief sounds determine of my weal or woe.
+lt:
+lt:Nurse
+lt:
+lt:    I saw the wound, I saw it with mine eyes,--
+lt:    God save the mark!--here on his manly breast:
+lt:    A piteous corse, a bloody piteous corse;
+lt:    Pale, pale as ashes, all bedaub'd in blood,
+lt:    All in gore-blood; I swounded at the sight.
+lt:
+lt:JULIET
+lt:
+lt:    O, break, my heart! poor bankrupt, break at once!
+lt:    To prison, eyes, ne'er look on liberty!
+lt:    Vile earth, to earth resign; end motion here;
+lt:    And thou and Romeo press one heavy bier!
+lt:
+lt:Nurse
+lt:
+lt:    O Tybalt, Tybalt, the best friend I had!
+lt:    O courteous Tybalt! honest gentleman!
+lt:    That ever I should live to see thee dead!
+lt:
+lt:JULIET
+lt:
+lt:    What storm is this that blows so contrary?
+lt:    Is Romeo slaughter'd, and is Tybalt dead?
+lt:    My dear-loved cousin, and my dearer lord?
+lt:    Then, dreadful trumpet, sound the general doom!
+lt:    For who is living, if those two are gone?
+lt:
+lt:Nurse
+lt:
+lt:    Tybalt is gone, and Romeo banished;
+lt:    Romeo that kill'd him, he is banished.
+lt:
+lt:JULIET
+lt:
+lt:    O God! did Romeo's hand shed Tybalt's blood?
+lt:
+lt:Nurse
+lt:
+lt:    It did, it did; alas the day, it did!
+lt:
+lt:JULIET
+lt:
+lt:    O serpent heart, hid with a flowering face!
+lt:    Did ever dragon keep so fair a cave?
+lt:    Beautiful tyrant! fiend angelical!
+lt:    Dove-feather'd raven! wolvish-ravening lamb!
+lt:    Despised substance of divinest show!
+lt:    Just opposite to what thou justly seem'st,
+lt:    A damned saint, an honourable villain!
+lt:    O nature, what hadst thou to do in hell,
+lt:    When thou didst bower the spirit of a fiend
+lt:    In moral paradise of such sweet flesh?
+lt:    Was ever book containing such vile matter
+lt:    So fairly bound? O that deceit should dwell
+lt:    In such a gorgeous palace!
+lt:
+lt:Nurse
+lt:
+lt:    There's no trust,
+lt:    No faith, no honesty in men; all perjured,
+lt:    All forsworn, all naught, all dissemblers.
+lt:    Ah, where's my man? give me some aqua vitae:
+lt:    These griefs, these woes, these sorrows make me old.
+lt:    Shame come to Romeo!
+lt:
+lt:JULIET
+lt:
+lt:    Blister'd be thy tongue
+lt:    For such a wish! he was not born to shame:
+lt:    Upon his brow shame is ashamed to sit;
+lt:    For 'tis a throne where honour may be crown'd
+lt:    Sole monarch of the universal earth.
+lt:    O, what a beast was I to chide at him!
+lt:
+lt:Nurse
+lt:
+lt:    Will you speak well of him that kill'd your cousin?
+lt:
+lt:JULIET
+lt:
+lt:    Shall I speak ill of him that is my husband?
+lt:    Ah, poor my lord, what tongue shall smooth thy name,
+lt:    When I, thy three-hours wife, have mangled it?
+lt:    But, wherefore, villain, didst thou kill my cousin?
+lt:    That villain cousin would have kill'd my husband:
+lt:    Back, foolish tears, back to your native spring;
+lt:    Your tributary drops belong to woe,
+lt:    Which you, mistaking, offer up to joy.
+lt:    My husband lives, that Tybalt would have slain;
+lt:    And Tybalt's dead, that would have slain my husband:
+lt:    All this is comfort; wherefore weep I then?
+lt:    Some word there was, worser than Tybalt's death,
+lt:    That murder'd me: I would forget it fain;
+lt:    But, O, it presses to my memory,
+lt:    Like damned guilty deeds to sinners' minds:
+lt:    'Tybalt is dead, and Romeo--banished;'
+lt:    That 'banished,' that one word 'banished,'
+lt:    Hath slain ten thousand Tybalts. Tybalt's death
+lt:    Was woe enough, if it had ended there:
+lt:    Or, if sour woe delights in fellowship
+lt:    And needly will be rank'd with other griefs,
+lt:    Why follow'd not, when she said 'Tybalt's dead,'
+lt:    Thy father, or thy mother, nay, or both,
+lt:    Which modern lamentations might have moved?
+lt:    But with a rear-ward following Tybalt's death,
+lt:    'Romeo is banished,' to speak that word,
+lt:    Is father, mother, Tybalt, Romeo, Juliet,
+lt:    All slain, all dead. 'Romeo is banished!'
+lt:    There is no end, no limit, measure, bound,
+lt:    In that word's death; no words can that woe sound.
+lt:    Where is my father, and my mother, nurse?
+lt:
+lt:Nurse
+lt:
+lt:    Weeping and wailing over Tybalt's corse:
+lt:    Will you go to them? I will bring you thither.
+lt:
+lt:JULIET
+lt:
+lt:    Wash they his wounds with tears: mine shall be spent,
+lt:    When theirs are dry, for Romeo's banishment.
+lt:    Take up those cords: poor ropes, you are beguiled,
+lt:    Both you and I; for Romeo is exiled:
+lt:    He made you for a highway to my bed;
+lt:    But I, a maid, die maiden-widowed.
+lt:    Come, cords, come, nurse; I'll to my wedding-bed;
+lt:    And death, not Romeo, take my maidenhead!
+lt:
+lt:Nurse
+lt:
+lt:    Hie to your chamber: I'll find Romeo
+lt:    To comfort you: I wot well where he is.
+lt:    Hark ye, your Romeo will be here at night:
+lt:    I'll to him; he is hid at Laurence' cell.
+lt:
+lt:JULIET
+lt:
+lt:    O, find him! give this ring to my true knight,
+lt:    And bid him come to take his last farewell.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE III. Friar Laurence's cell.
+lt:
+lt:    Enter FRIAR LAURENCE 
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Romeo, come forth; come forth, thou fearful man:
+lt:    Affliction is enamour'd of thy parts,
+lt:    And thou art wedded to calamity.
+lt:
+lt:    Enter ROMEO
+lt:
+lt:ROMEO
+lt:
+lt:    Father, what news? what is the prince's doom?
+lt:    What sorrow craves acquaintance at my hand,
+lt:    That I yet know not?
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Too familiar
+lt:    Is my dear son with such sour company:
+lt:    I bring thee tidings of the prince's doom.
+lt:
+lt:ROMEO
+lt:
+lt:    What less than dooms-day is the prince's doom?
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    A gentler judgment vanish'd from his lips,
+lt:    Not body's death, but body's banishment.
+lt:
+lt:ROMEO
+lt:
+lt:    Ha, banishment! be merciful, say 'death;'
+lt:    For exile hath more terror in his look,
+lt:    Much more than death: do not say 'banishment.'
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Hence from Verona art thou banished:
+lt:    Be patient, for the world is broad and wide.
+lt:
+lt:ROMEO
+lt:
+lt:    There is no world without Verona walls,
+lt:    But purgatory, torture, hell itself.
+lt:    Hence-banished is banish'd from the world,
+lt:    And world's exile is death: then banished,
+lt:    Is death mis-term'd: calling death banishment,
+lt:    Thou cutt'st my head off with a golden axe,
+lt:    And smilest upon the stroke that murders me.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    O deadly sin! O rude unthankfulness!
+lt:    Thy fault our law calls death; but the kind prince,
+lt:    Taking thy part, hath rush'd aside the law,
+lt:    And turn'd that black word death to banishment:
+lt:    This is dear mercy, and thou seest it not.
+lt:
+lt:ROMEO
+lt:
+lt:    'Tis torture, and not mercy: heaven is here,
+lt:    Where Juliet lives; and every cat and dog
+lt:    And little mouse, every unworthy thing,
+lt:    Live here in heaven and may look on her;
+lt:    But Romeo may not: more validity,
+lt:    More honourable state, more courtship lives
+lt:    In carrion-flies than Romeo: they my seize
+lt:    On the white wonder of dear Juliet's hand
+lt:    And steal immortal blessing from her lips,
+lt:    Who even in pure and vestal modesty,
+lt:    Still blush, as thinking their own kisses sin;
+lt:    But Romeo may not; he is banished:
+lt:    Flies may do this, but I from this must fly:
+lt:    They are free men, but I am banished.
+lt:    And say'st thou yet that exile is not death?
+lt:    Hadst thou no poison mix'd, no sharp-ground knife,
+lt:    No sudden mean of death, though ne'er so mean,
+lt:    But 'banished' to kill me?--'banished'?
+lt:    O friar, the damned use that word in hell;
+lt:    Howlings attend it: how hast thou the heart,
+lt:    Being a divine, a ghostly confessor,
+lt:    A sin-absolver, and my friend profess'd,
+lt:    To mangle me with that word 'banished'?
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Thou fond mad man, hear me but speak a word.
+lt:
+lt:ROMEO
+lt:
+lt:    O, thou wilt speak again of banishment.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    I'll give thee armour to keep off that word:
+lt:    Adversity's sweet milk, philosophy,
+lt:    To comfort thee, though thou art banished.
+lt:
+lt:ROMEO
+lt:
+lt:    Yet 'banished'? Hang up philosophy!
+lt:    Unless philosophy can make a Juliet,
+lt:    Displant a town, reverse a prince's doom,
+lt:    It helps not, it prevails not: talk no more.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    O, then I see that madmen have no ears.
+lt:
+lt:ROMEO
+lt:
+lt:    How should they, when that wise men have no eyes?
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Let me dispute with thee of thy estate.
+lt:
+lt:ROMEO
+lt:
+lt:    Thou canst not speak of that thou dost not feel:
+lt:    Wert thou as young as I, Juliet thy love,
+lt:    An hour but married, Tybalt murdered,
+lt:    Doting like me and like me banished,
+lt:    Then mightst thou speak, then mightst thou tear thy hair,
+lt:    And fall upon the ground, as I do now,
+lt:    Taking the measure of an unmade grave.
+lt:
+lt:    Knocking within
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Arise; one knocks; good Romeo, hide thyself.
+lt:
+lt:ROMEO
+lt:
+lt:    Not I; unless the breath of heartsick groans,
+lt:    Mist-like, infold me from the search of eyes.
+lt:
+lt:    Knocking
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Hark, how they knock! Who's there? Romeo, arise;
+lt:    Thou wilt be taken. Stay awhile! Stand up;
+lt:
+lt:    Knocking
+lt:    Run to my study. By and by! God's will,
+lt:    What simpleness is this! I come, I come!
+lt:
+lt:    Knocking
+lt:    Who knocks so hard? whence come you? what's your will?
+lt:
+lt:Nurse
+lt:
+lt:    [Within] Let me come in, and you shall know
+lt:    my errand;
+lt:    I come from Lady Juliet.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Welcome, then.
+lt:
+lt:    Enter Nurse
+lt:
+lt:Nurse
+lt:
+lt:    O holy friar, O, tell me, holy friar,
+lt:    Where is my lady's lord, where's Romeo?
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    There on the ground, with his own tears made drunk.
+lt:
+lt:Nurse
+lt:
+lt:    O, he is even in my mistress' case,
+lt:    Just in her case! O woful sympathy!
+lt:    Piteous predicament! Even so lies she,
+lt:    Blubbering and weeping, weeping and blubbering.
+lt:    Stand up, stand up; stand, and you be a man:
+lt:    For Juliet's sake, for her sake, rise and stand;
+lt:    Why should you fall into so deep an O?
+lt:
+lt:ROMEO
+lt:
+lt:    Nurse!
+lt:
+lt:Nurse
+lt:
+lt:    Ah sir! ah sir! Well, death's the end of all.
+lt:
+lt:ROMEO
+lt:
+lt:    Spakest thou of Juliet? how is it with her?
+lt:    Doth she not think me an old murderer,
+lt:    Now I have stain'd the childhood of our joy
+lt:    With blood removed but little from her own?
+lt:    Where is she? and how doth she? and what says
+lt:    My conceal'd lady to our cancell'd love?
+lt:
+lt:Nurse
+lt:
+lt:    O, she says nothing, sir, but weeps and weeps;
+lt:    And now falls on her bed; and then starts up,
+lt:    And Tybalt calls; and then on Romeo cries,
+lt:    And then down falls again.
+lt:
+lt:ROMEO
+lt:
+lt:    As if that name,
+lt:    Shot from the deadly level of a gun,
+lt:    Did murder her; as that name's cursed hand
+lt:    Murder'd her kinsman. O, tell me, friar, tell me,
+lt:    In what vile part of this anatomy
+lt:    Doth my name lodge? tell me, that I may sack
+lt:    The hateful mansion.
+lt:
+lt:    Drawing his sword
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Hold thy desperate hand:
+lt:    Art thou a man? thy form cries out thou art:
+lt:    Thy tears are womanish; thy wild acts denote
+lt:    The unreasonable fury of a beast:
+lt:    Unseemly woman in a seeming man!
+lt:    Or ill-beseeming beast in seeming both!
+lt:    Thou hast amazed me: by my holy order,
+lt:    I thought thy disposition better temper'd.
+lt:    Hast thou slain Tybalt? wilt thou slay thyself?
+lt:    And stay thy lady too that lives in thee,
+lt:    By doing damned hate upon thyself?
+lt:    Why rail'st thou on thy birth, the heaven, and earth?
+lt:    Since birth, and heaven, and earth, all three do meet
+lt:    In thee at once; which thou at once wouldst lose.
+lt:    Fie, fie, thou shamest thy shape, thy love, thy wit;
+lt:    Which, like a usurer, abound'st in all,
+lt:    And usest none in that true use indeed
+lt:    Which should bedeck thy shape, thy love, thy wit:
+lt:    Thy noble shape is but a form of wax,
+lt:    Digressing from the valour of a man;
+lt:    Thy dear love sworn but hollow perjury,
+lt:    Killing that love which thou hast vow'd to cherish;
+lt:    Thy wit, that ornament to shape and love,
+lt:    Misshapen in the conduct of them both,
+lt:    Like powder in a skitless soldier's flask,
+lt:    Is set afire by thine own ignorance,
+lt:    And thou dismember'd with thine own defence.
+lt:    What, rouse thee, man! thy Juliet is alive,
+lt:    For whose dear sake thou wast but lately dead;
+lt:    There art thou happy: Tybalt would kill thee,
+lt:    But thou slew'st Tybalt; there are thou happy too:
+lt:    The law that threaten'd death becomes thy friend
+lt:    And turns it to exile; there art thou happy:
+lt:    A pack of blessings lights up upon thy back;
+lt:    Happiness courts thee in her best array;
+lt:    But, like a misbehaved and sullen wench,
+lt:    Thou pout'st upon thy fortune and thy love:
+lt:    Take heed, take heed, for such die miserable.
+lt:    Go, get thee to thy love, as was decreed,
+lt:    Ascend her chamber, hence and comfort her:
+lt:    But look thou stay not till the watch be set,
+lt:    For then thou canst not pass to Mantua;
+lt:    Where thou shalt live, till we can find a time
+lt:    To blaze your marriage, reconcile your friends,
+lt:    Beg pardon of the prince, and call thee back
+lt:    With twenty hundred thousand times more joy
+lt:    Than thou went'st forth in lamentation.
+lt:    Go before, nurse: commend me to thy lady;
+lt:    And bid her hasten all the house to bed,
+lt:    Which heavy sorrow makes them apt unto:
+lt:    Romeo is coming.
+lt:
+lt:Nurse
+lt:
+lt:    O Lord, I could have stay'd here all the night
+lt:    To hear good counsel: O, what learning is!
+lt:    My lord, I'll tell my lady you will come.
+lt:
+lt:ROMEO
+lt:
+lt:    Do so, and bid my sweet prepare to chide.
+lt:
+lt:Nurse
+lt:
+lt:    Here, sir, a ring she bid me give you, sir:
+lt:    Hie you, make haste, for it grows very late.
+lt:
+lt:    Exit
+lt:
+lt:ROMEO
+lt:
+lt:    How well my comfort is revived by this!
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Go hence; good night; and here stands all your state:
+lt:    Either be gone before the watch be set,
+lt:    Or by the break of day disguised from hence:
+lt:    Sojourn in Mantua; I'll find out your man,
+lt:    And he shall signify from time to time
+lt:    Every good hap to you that chances here:
+lt:    Give me thy hand; 'tis late: farewell; good night.
+lt:
+lt:ROMEO
+lt:
+lt:    But that a joy past joy calls out on me,
+lt:    It were a grief, so brief to part with thee: Farewell.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE IV. A room in Capulet's house.
+lt:
+lt:    Enter CAPULET, LADY CAPULET, and PARIS 
+lt:
+lt:CAPULET
+lt:
+lt:    Things have fall'n out, sir, so unluckily,
+lt:    That we have had no time to move our daughter:
+lt:    Look you, she loved her kinsman Tybalt dearly,
+lt:    And so did I:--Well, we were born to die.
+lt:    'Tis very late, she'll not come down to-night:
+lt:    I promise you, but for your company,
+lt:    I would have been a-bed an hour ago.
+lt:
+lt:PARIS
+lt:
+lt:    These times of woe afford no time to woo.
+lt:    Madam, good night: commend me to your daughter.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    I will, and know her mind early to-morrow;
+lt:    To-night she is mew'd up to her heaviness.
+lt:
+lt:CAPULET
+lt:
+lt:    Sir Paris, I will make a desperate tender
+lt:    Of my child's love: I think she will be ruled
+lt:    In all respects by me; nay, more, I doubt it not.
+lt:    Wife, go you to her ere you go to bed;
+lt:    Acquaint her here of my son Paris' love;
+lt:    And bid her, mark you me, on Wednesday next--
+lt:    But, soft! what day is this?
+lt:
+lt:PARIS
+lt:
+lt:    Monday, my lord,
+lt:
+lt:CAPULET
+lt:
+lt:    Monday! ha, ha! Well, Wednesday is too soon,
+lt:    O' Thursday let it be: o' Thursday, tell her,
+lt:    She shall be married to this noble earl.
+lt:    Will you be ready? do you like this haste?
+lt:    We'll keep no great ado,--a friend or two;
+lt:    For, hark you, Tybalt being slain so late,
+lt:    It may be thought we held him carelessly,
+lt:    Being our kinsman, if we revel much:
+lt:    Therefore we'll have some half a dozen friends,
+lt:    And there an end. But what say you to Thursday?
+lt:
+lt:PARIS
+lt:
+lt:    My lord, I would that Thursday were to-morrow.
+lt:
+lt:CAPULET
+lt:
+lt:    Well get you gone: o' Thursday be it, then.
+lt:    Go you to Juliet ere you go to bed,
+lt:    Prepare her, wife, against this wedding-day.
+lt:    Farewell, my lord. Light to my chamber, ho!
+lt:    Afore me! it is so very very late,
+lt:    That we may call it early by and by.
+lt:    Good night.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE V. Capulet's orchard.
+lt:
+lt:    Enter ROMEO and JULIET above, at the window 
+lt:
+lt:JULIET
+lt:
+lt:    Wilt thou be gone? it is not yet near day:
+lt:    It was the nightingale, and not the lark,
+lt:    That pierced the fearful hollow of thine ear;
+lt:    Nightly she sings on yon pomegranate-tree:
+lt:    Believe me, love, it was the nightingale.
+lt:
+lt:ROMEO
+lt:
+lt:    It was the lark, the herald of the morn,
+lt:    No nightingale: look, love, what envious streaks
+lt:    Do lace the severing clouds in yonder east:
+lt:    Night's candles are burnt out, and jocund day
+lt:    Stands tiptoe on the misty mountain tops.
+lt:    I must be gone and live, or stay and die.
+lt:
+lt:JULIET
+lt:
+lt:    Yon light is not day-light, I know it, I:
+lt:    It is some meteor that the sun exhales,
+lt:    To be to thee this night a torch-bearer,
+lt:    And light thee on thy way to Mantua:
+lt:    Therefore stay yet; thou need'st not to be gone.
+lt:
+lt:ROMEO
+lt:
+lt:    Let me be ta'en, let me be put to death;
+lt:    I am content, so thou wilt have it so.
+lt:    I'll say yon grey is not the morning's eye,
+lt:    'Tis but the pale reflex of Cynthia's brow;
+lt:    Nor that is not the lark, whose notes do beat
+lt:    The vaulty heaven so high above our heads:
+lt:    I have more care to stay than will to go:
+lt:    Come, death, and welcome! Juliet wills it so.
+lt:    How is't, my soul? let's talk; it is not day.
+lt:
+lt:JULIET
+lt:
+lt:    It is, it is: hie hence, be gone, away!
+lt:    It is the lark that sings so out of tune,
+lt:    Straining harsh discords and unpleasing sharps.
+lt:    Some say the lark makes sweet division;
+lt:    This doth not so, for she divideth us:
+lt:    Some say the lark and loathed toad change eyes,
+lt:    O, now I would they had changed voices too!
+lt:    Since arm from arm that voice doth us affray,
+lt:    Hunting thee hence with hunt's-up to the day,
+lt:    O, now be gone; more light and light it grows.
+lt:
+lt:ROMEO
+lt:
+lt:    More light and light; more dark and dark our woes!
+lt:
+lt:    Enter Nurse, to the chamber
+lt:
+lt:Nurse
+lt:
+lt:    Madam!
+lt:
+lt:JULIET
+lt:
+lt:    Nurse?
+lt:
+lt:Nurse
+lt:
+lt:    Your lady mother is coming to your chamber:
+lt:    The day is broke; be wary, look about.
+lt:
+lt:    Exit
+lt:
+lt:JULIET
+lt:
+lt:    Then, window, let day in, and let life out.
+lt:
+lt:ROMEO
+lt:
+lt:    Farewell, farewell! one kiss, and I'll descend.
+lt:
+lt:    He goeth down
+lt:
+lt:JULIET
+lt:
+lt:    Art thou gone so? love, lord, ay, husband, friend!
+lt:    I must hear from thee every day in the hour,
+lt:    For in a minute there are many days:
+lt:    O, by this count I shall be much in years
+lt:    Ere I again behold my Romeo!
+lt:
+lt:ROMEO
+lt:
+lt:    Farewell!
+lt:    I will omit no opportunity
+lt:    That may convey my greetings, love, to thee.
+lt:
+lt:JULIET
+lt:
+lt:    O think'st thou we shall ever meet again?
+lt:
+lt:ROMEO
+lt:
+lt:    I doubt it not; and all these woes shall serve
+lt:    For sweet discourses in our time to come.
+lt:
+lt:JULIET
+lt:
+lt:    O God, I have an ill-divining soul!
+lt:    Methinks I see thee, now thou art below,
+lt:    As one dead in the bottom of a tomb:
+lt:    Either my eyesight fails, or thou look'st pale.
+lt:
+lt:ROMEO
+lt:
+lt:    And trust me, love, in my eye so do you:
+lt:    Dry sorrow drinks our blood. Adieu, adieu!
+lt:
+lt:    Exit
+lt:
+lt:JULIET
+lt:
+lt:    O fortune, fortune! all men call thee fickle:
+lt:    If thou art fickle, what dost thou with him.
+lt:    That is renown'd for faith? Be fickle, fortune;
+lt:    For then, I hope, thou wilt not keep him long,
+lt:    But send him back.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    [Within] Ho, daughter! are you up?
+lt:
+lt:JULIET
+lt:
+lt:    Who is't that calls? is it my lady mother?
+lt:    Is she not down so late, or up so early?
+lt:    What unaccustom'd cause procures her hither?
+lt:
+lt:    Enter LADY CAPULET
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Why, how now, Juliet!
+lt:
+lt:JULIET
+lt:
+lt:    Madam, I am not well.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Evermore weeping for your cousin's death?
+lt:    What, wilt thou wash him from his grave with tears?
+lt:    An if thou couldst, thou couldst not make him live;
+lt:    Therefore, have done: some grief shows much of love;
+lt:    But much of grief shows still some want of wit.
+lt:
+lt:JULIET
+lt:
+lt:    Yet let me weep for such a feeling loss.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    So shall you feel the loss, but not the friend
+lt:    Which you weep for.
+lt:
+lt:JULIET
+lt:
+lt:    Feeling so the loss,
+lt:    Cannot choose but ever weep the friend.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Well, girl, thou weep'st not so much for his death,
+lt:    As that the villain lives which slaughter'd him.
+lt:
+lt:JULIET
+lt:
+lt:    What villain madam?
+lt:
+lt:LADY CAPULET
+lt:
+lt:    That same villain, Romeo.
+lt:
+lt:JULIET
+lt:
+lt:    [Aside] Villain and he be many miles asunder.--
+lt:    God Pardon him! I do, with all my heart;
+lt:    And yet no man like he doth grieve my heart.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    That is, because the traitor murderer lives.
+lt:
+lt:JULIET
+lt:
+lt:    Ay, madam, from the reach of these my hands:
+lt:    Would none but I might venge my cousin's death!
+lt:
+lt:LADY CAPULET
+lt:
+lt:    We will have vengeance for it, fear thou not:
+lt:    Then weep no more. I'll send to one in Mantua,
+lt:    Where that same banish'd runagate doth live,
+lt:    Shall give him such an unaccustom'd dram,
+lt:    That he shall soon keep Tybalt company:
+lt:    And then, I hope, thou wilt be satisfied.
+lt:
+lt:JULIET
+lt:
+lt:    Indeed, I never shall be satisfied
+lt:    With Romeo, till I behold him--dead--
+lt:    Is my poor heart for a kinsman vex'd.
+lt:    Madam, if you could find out but a man
+lt:    To bear a poison, I would temper it;
+lt:    That Romeo should, upon receipt thereof,
+lt:    Soon sleep in quiet. O, how my heart abhors
+lt:    To hear him named, and cannot come to him.
+lt:    To wreak the love I bore my cousin
+lt:    Upon his body that slaughter'd him!
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Find thou the means, and I'll find such a man.
+lt:    But now I'll tell thee joyful tidings, girl.
+lt:
+lt:JULIET
+lt:
+lt:    And joy comes well in such a needy time:
+lt:    What are they, I beseech your ladyship?
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Well, well, thou hast a careful father, child;
+lt:    One who, to put thee from thy heaviness,
+lt:    Hath sorted out a sudden day of joy,
+lt:    That thou expect'st not nor I look'd not for.
+lt:
+lt:JULIET
+lt:
+lt:    Madam, in happy time, what day is that?
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Marry, my child, early next Thursday morn,
+lt:    The gallant, young and noble gentleman,
+lt:    The County Paris, at Saint Peter's Church,
+lt:    Shall happily make thee there a joyful bride.
+lt:
+lt:JULIET
+lt:
+lt:    Now, by Saint Peter's Church and Peter too,
+lt:    He shall not make me there a joyful bride.
+lt:    I wonder at this haste; that I must wed
+lt:    Ere he, that should be husband, comes to woo.
+lt:    I pray you, tell my lord and father, madam,
+lt:    I will not marry yet; and, when I do, I swear,
+lt:    It shall be Romeo, whom you know I hate,
+lt:    Rather than Paris. These are news indeed!
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Here comes your father; tell him so yourself,
+lt:    And see how he will take it at your hands.
+lt:
+lt:    Enter CAPULET and Nurse
+lt:
+lt:CAPULET
+lt:
+lt:    When the sun sets, the air doth drizzle dew;
+lt:    But for the sunset of my brother's son
+lt:    It rains downright.
+lt:    How now! a conduit, girl? what, still in tears?
+lt:    Evermore showering? In one little body
+lt:    Thou counterfeit'st a bark, a sea, a wind;
+lt:    For still thy eyes, which I may call the sea,
+lt:    Do ebb and flow with tears; the bark thy body is,
+lt:    Sailing in this salt flood; the winds, thy sighs;
+lt:    Who, raging with thy tears, and they with them,
+lt:    Without a sudden calm, will overset
+lt:    Thy tempest-tossed body. How now, wife!
+lt:    Have you deliver'd to her our decree?
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Ay, sir; but she will none, she gives you thanks.
+lt:    I would the fool were married to her grave!
+lt:
+lt:CAPULET
+lt:
+lt:    Soft! take me with you, take me with you, wife.
+lt:    How! will she none? doth she not give us thanks?
+lt:    Is she not proud? doth she not count her blest,
+lt:    Unworthy as she is, that we have wrought
+lt:    So worthy a gentleman to be her bridegroom?
+lt:
+lt:JULIET
+lt:
+lt:    Not proud, you have; but thankful, that you have:
+lt:    Proud can I never be of what I hate;
+lt:    But thankful even for hate, that is meant love.
+lt:
+lt:CAPULET
+lt:
+lt:    How now, how now, chop-logic! What is this?
+lt:    'Proud,' and 'I thank you,' and 'I thank you not;'
+lt:    And yet 'not proud,' mistress minion, you,
+lt:    Thank me no thankings, nor, proud me no prouds,
+lt:    But fettle your fine joints 'gainst Thursday next,
+lt:    To go with Paris to Saint Peter's Church,
+lt:    Or I will drag thee on a hurdle thither.
+lt:    Out, you green-sickness carrion! out, you baggage!
+lt:    You tallow-face!
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Fie, fie! what, are you mad?
+lt:
+lt:JULIET
+lt:
+lt:    Good father, I beseech you on my knees,
+lt:    Hear me with patience but to speak a word.
+lt:
+lt:CAPULET
+lt:
+lt:    Hang thee, young baggage! disobedient wretch!
+lt:    I tell thee what: get thee to church o' Thursday,
+lt:    Or never after look me in the face:
+lt:    Speak not, reply not, do not answer me;
+lt:    My fingers itch. Wife, we scarce thought us blest
+lt:    That God had lent us but this only child;
+lt:    But now I see this one is one too much,
+lt:    And that we have a curse in having her:
+lt:    Out on her, hilding!
+lt:
+lt:Nurse
+lt:
+lt:    God in heaven bless her!
+lt:    You are to blame, my lord, to rate her so.
+lt:
+lt:CAPULET
+lt:
+lt:    And why, my lady wisdom? hold your tongue,
+lt:    Good prudence; smatter with your gossips, go.
+lt:
+lt:Nurse
+lt:
+lt:    I speak no treason.
+lt:
+lt:CAPULET
+lt:
+lt:    O, God ye god-den.
+lt:
+lt:Nurse
+lt:
+lt:    May not one speak?
+lt:
+lt:CAPULET
+lt:
+lt:    Peace, you mumbling fool!
+lt:    Utter your gravity o'er a gossip's bowl;
+lt:    For here we need it not.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    You are too hot.
+lt:
+lt:CAPULET
+lt:
+lt:    God's bread! it makes me mad:
+lt:    Day, night, hour, tide, time, work, play,
+lt:    Alone, in company, still my care hath been
+lt:    To have her match'd: and having now provided
+lt:    A gentleman of noble parentage,
+lt:    Of fair demesnes, youthful, and nobly train'd,
+lt:    Stuff'd, as they say, with honourable parts,
+lt:    Proportion'd as one's thought would wish a man;
+lt:    And then to have a wretched puling fool,
+lt:    A whining mammet, in her fortune's tender,
+lt:    To answer 'I'll not wed; I cannot love,
+lt:    I am too young; I pray you, pardon me.'
+lt:    But, as you will not wed, I'll pardon you:
+lt:    Graze where you will you shall not house with me:
+lt:    Look to't, think on't, I do not use to jest.
+lt:    Thursday is near; lay hand on heart, advise:
+lt:    An you be mine, I'll give you to my friend;
+lt:    And you be not, hang, beg, starve, die in
+lt:    the streets,
+lt:    For, by my soul, I'll ne'er acknowledge thee,
+lt:    Nor what is mine shall never do thee good:
+lt:    Trust to't, bethink you; I'll not be forsworn.
+lt:
+lt:    Exit
+lt:
+lt:JULIET
+lt:
+lt:    Is there no pity sitting in the clouds,
+lt:    That sees into the bottom of my grief?
+lt:    O, sweet my mother, cast me not away!
+lt:    Delay this marriage for a month, a week;
+lt:    Or, if you do not, make the bridal bed
+lt:    In that dim monument where Tybalt lies.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Talk not to me, for I'll not speak a word:
+lt:    Do as thou wilt, for I have done with thee.
+lt:
+lt:    Exit
+lt:
+lt:JULIET
+lt:
+lt:    O God!--O nurse, how shall this be prevented?
+lt:    My husband is on earth, my faith in heaven;
+lt:    How shall that faith return again to earth,
+lt:    Unless that husband send it me from heaven
+lt:    By leaving earth? comfort me, counsel me.
+lt:    Alack, alack, that heaven should practise stratagems
+lt:    Upon so soft a subject as myself!
+lt:    What say'st thou? hast thou not a word of joy?
+lt:    Some comfort, nurse.
+lt:
+lt:Nurse
+lt:
+lt:    Faith, here it is.
+lt:    Romeo is banish'd; and all the world to nothing,
+lt:    That he dares ne'er come back to challenge you;
+lt:    Or, if he do, it needs must be by stealth.
+lt:    Then, since the case so stands as now it doth,
+lt:    I think it best you married with the county.
+lt:    O, he's a lovely gentleman!
+lt:    Romeo's a dishclout to him: an eagle, madam,
+lt:    Hath not so green, so quick, so fair an eye
+lt:    As Paris hath. Beshrew my very heart,
+lt:    I think you are happy in this second match,
+lt:    For it excels your first: or if it did not,
+lt:    Your first is dead; or 'twere as good he were,
+lt:    As living here and you no use of him.
+lt:
+lt:JULIET
+lt:
+lt:    Speakest thou from thy heart?
+lt:
+lt:Nurse
+lt:
+lt:    And from my soul too;
+lt:    Or else beshrew them both.
+lt:
+lt:JULIET
+lt:
+lt:    Amen!
+lt:
+lt:Nurse
+lt:
+lt:    What?
+lt:
+lt:JULIET
+lt:
+lt:    Well, thou hast comforted me marvellous much.
+lt:    Go in: and tell my lady I am gone,
+lt:    Having displeased my father, to Laurence' cell,
+lt:    To make confession and to be absolved.
+lt:
+lt:Nurse
+lt:
+lt:    Marry, I will; and this is wisely done.
+lt:
+lt:    Exit
+lt:
+lt:JULIET
+lt:
+lt:    Ancient damnation! O most wicked fiend!
+lt:    Is it more sin to wish me thus forsworn,
+lt:    Or to dispraise my lord with that same tongue
+lt:    Which she hath praised him with above compare
+lt:    So many thousand times? Go, counsellor;
+lt:    Thou and my bosom henceforth shall be twain.
+lt:    I'll to the friar, to know his remedy:
+lt:    If all else fail, myself have power to die.
+lt:
+lt:    Exit
+lt:
+lt:ACT IV
+lt:SCENE I. Friar Laurence's cell.
+lt:
+lt:    Enter FRIAR LAURENCE and PARIS 
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    On Thursday, sir? the time is very short.
+lt:
+lt:PARIS
+lt:
+lt:    My father Capulet will have it so;
+lt:    And I am nothing slow to slack his haste.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    You say you do not know the lady's mind:
+lt:    Uneven is the course, I like it not.
+lt:
+lt:PARIS
+lt:
+lt:    Immoderately she weeps for Tybalt's death,
+lt:    And therefore have I little talk'd of love;
+lt:    For Venus smiles not in a house of tears.
+lt:    Now, sir, her father counts it dangerous
+lt:    That she doth give her sorrow so much sway,
+lt:    And in his wisdom hastes our marriage,
+lt:    To stop the inundation of her tears;
+lt:    Which, too much minded by herself alone,
+lt:    May be put from her by society:
+lt:    Now do you know the reason of this haste.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    [Aside] I would I knew not why it should be slow'd.
+lt:    Look, sir, here comes the lady towards my cell.
+lt:
+lt:    Enter JULIET
+lt:
+lt:PARIS
+lt:
+lt:    Happily met, my lady and my wife!
+lt:
+lt:JULIET
+lt:
+lt:    That may be, sir, when I may be a wife.
+lt:
+lt:PARIS
+lt:
+lt:    That may be must be, love, on Thursday next.
+lt:
+lt:JULIET
+lt:
+lt:    What must be shall be.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    That's a certain text.
+lt:
+lt:PARIS
+lt:
+lt:    Come you to make confession to this father?
+lt:
+lt:JULIET
+lt:
+lt:    To answer that, I should confess to you.
+lt:
+lt:PARIS
+lt:
+lt:    Do not deny to him that you love me.
+lt:
+lt:JULIET
+lt:
+lt:    I will confess to you that I love him.
+lt:
+lt:PARIS
+lt:
+lt:    So will ye, I am sure, that you love me.
+lt:
+lt:JULIET
+lt:
+lt:    If I do so, it will be of more price,
+lt:    Being spoke behind your back, than to your face.
+lt:
+lt:PARIS
+lt:
+lt:    Poor soul, thy face is much abused with tears.
+lt:
+lt:JULIET
+lt:
+lt:    The tears have got small victory by that;
+lt:    For it was bad enough before their spite.
+lt:
+lt:PARIS
+lt:
+lt:    Thou wrong'st it, more than tears, with that report.
+lt:
+lt:JULIET
+lt:
+lt:    That is no slander, sir, which is a truth;
+lt:    And what I spake, I spake it to my face.
+lt:
+lt:PARIS
+lt:
+lt:    Thy face is mine, and thou hast slander'd it.
+lt:
+lt:JULIET
+lt:
+lt:    It may be so, for it is not mine own.
+lt:    Are you at leisure, holy father, now;
+lt:    Or shall I come to you at evening mass?
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    My leisure serves me, pensive daughter, now.
+lt:    My lord, we must entreat the time alone.
+lt:
+lt:PARIS
+lt:
+lt:    God shield I should disturb devotion!
+lt:    Juliet, on Thursday early will I rouse ye:
+lt:    Till then, adieu; and keep this holy kiss.
+lt:
+lt:    Exit
+lt:
+lt:JULIET
+lt:
+lt:    O shut the door! and when thou hast done so,
+lt:    Come weep with me; past hope, past cure, past help!
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Ah, Juliet, I already know thy grief;
+lt:    It strains me past the compass of my wits:
+lt:    I hear thou must, and nothing may prorogue it,
+lt:    On Thursday next be married to this county.
+lt:
+lt:JULIET
+lt:
+lt:    Tell me not, friar, that thou hear'st of this,
+lt:    Unless thou tell me how I may prevent it:
+lt:    If, in thy wisdom, thou canst give no help,
+lt:    Do thou but call my resolution wise,
+lt:    And with this knife I'll help it presently.
+lt:    God join'd my heart and Romeo's, thou our hands;
+lt:    And ere this hand, by thee to Romeo seal'd,
+lt:    Shall be the label to another deed,
+lt:    Or my true heart with treacherous revolt
+lt:    Turn to another, this shall slay them both:
+lt:    Therefore, out of thy long-experienced time,
+lt:    Give me some present counsel, or, behold,
+lt:    'Twixt my extremes and me this bloody knife
+lt:    Shall play the umpire, arbitrating that
+lt:    Which the commission of thy years and art
+lt:    Could to no issue of true honour bring.
+lt:    Be not so long to speak; I long to die,
+lt:    If what thou speak'st speak not of remedy.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Hold, daughter: I do spy a kind of hope,
+lt:    Which craves as desperate an execution.
+lt:    As that is desperate which we would prevent.
+lt:    If, rather than to marry County Paris,
+lt:    Thou hast the strength of will to slay thyself,
+lt:    Then is it likely thou wilt undertake
+lt:    A thing like death to chide away this shame,
+lt:    That copest with death himself to scape from it:
+lt:    And, if thou darest, I'll give thee remedy.
+lt:
+lt:JULIET
+lt:
+lt:    O, bid me leap, rather than marry Paris,
+lt:    From off the battlements of yonder tower;
+lt:    Or walk in thievish ways; or bid me lurk
+lt:    Where serpents are; chain me with roaring bears;
+lt:    Or shut me nightly in a charnel-house,
+lt:    O'er-cover'd quite with dead men's rattling bones,
+lt:    With reeky shanks and yellow chapless skulls;
+lt:    Or bid me go into a new-made grave
+lt:    And hide me with a dead man in his shroud;
+lt:    Things that, to hear them told, have made me tremble;
+lt:    And I will do it without fear or doubt,
+lt:    To live an unstain'd wife to my sweet love.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Hold, then; go home, be merry, give consent
+lt:    To marry Paris: Wednesday is to-morrow:
+lt:    To-morrow night look that thou lie alone;
+lt:    Let not thy nurse lie with thee in thy chamber:
+lt:    Take thou this vial, being then in bed,
+lt:    And this distilled liquor drink thou off;
+lt:    When presently through all thy veins shall run
+lt:    A cold and drowsy humour, for no pulse
+lt:    Shall keep his native progress, but surcease:
+lt:    No warmth, no breath, shall testify thou livest;
+lt:    The roses in thy lips and cheeks shall fade
+lt:    To paly ashes, thy eyes' windows fall,
+lt:    Like death, when he shuts up the day of life;
+lt:    Each part, deprived of supple government,
+lt:    Shall, stiff and stark and cold, appear like death:
+lt:    And in this borrow'd likeness of shrunk death
+lt:    Thou shalt continue two and forty hours,
+lt:    And then awake as from a pleasant sleep.
+lt:    Now, when the bridegroom in the morning comes
+lt:    To rouse thee from thy bed, there art thou dead:
+lt:    Then, as the manner of our country is,
+lt:    In thy best robes uncover'd on the bier
+lt:    Thou shalt be borne to that same ancient vault
+lt:    Where all the kindred of the Capulets lie.
+lt:    In the mean time, against thou shalt awake,
+lt:    Shall Romeo by my letters know our drift,
+lt:    And hither shall he come: and he and I
+lt:    Will watch thy waking, and that very night
+lt:    Shall Romeo bear thee hence to Mantua.
+lt:    And this shall free thee from this present shame;
+lt:    If no inconstant toy, nor womanish fear,
+lt:    Abate thy valour in the acting it.
+lt:
+lt:JULIET
+lt:
+lt:    Give me, give me! O, tell not me of fear!
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Hold; get you gone, be strong and prosperous
+lt:    In this resolve: I'll send a friar with speed
+lt:    To Mantua, with my letters to thy lord.
+lt:
+lt:JULIET
+lt:
+lt:    Love give me strength! and strength shall help afford.
+lt:    Farewell, dear father!
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE II. Hall in Capulet's house.
+lt:
+lt:    Enter CAPULET, LADY CAPULET, Nurse, and two Servingmen 
+lt:
+lt:CAPULET
+lt:
+lt:    So many guests invite as here are writ.
+lt:
+lt:    Exit First Servant
+lt:    Sirrah, go hire me twenty cunning cooks.
+lt:
+lt:Second Servant
+lt:
+lt:    You shall have none ill, sir; for I'll try if they
+lt:    can lick their fingers.
+lt:
+lt:CAPULET
+lt:
+lt:    How canst thou try them so?
+lt:
+lt:Second Servant
+lt:
+lt:    Marry, sir, 'tis an ill cook that cannot lick his
+lt:    own fingers: therefore he that cannot lick his
+lt:    fingers goes not with me.
+lt:
+lt:CAPULET
+lt:
+lt:    Go, be gone.
+lt:
+lt:    Exit Second Servant
+lt:    We shall be much unfurnished for this time.
+lt:    What, is my daughter gone to Friar Laurence?
+lt:
+lt:Nurse
+lt:
+lt:    Ay, forsooth.
+lt:
+lt:CAPULET
+lt:
+lt:    Well, he may chance to do some good on her:
+lt:    A peevish self-will'd harlotry it is.
+lt:
+lt:Nurse
+lt:
+lt:    See where she comes from shrift with merry look.
+lt:
+lt:    Enter JULIET
+lt:
+lt:CAPULET
+lt:
+lt:    How now, my headstrong! where have you been gadding?
+lt:
+lt:JULIET
+lt:
+lt:    Where I have learn'd me to repent the sin
+lt:    Of disobedient opposition
+lt:    To you and your behests, and am enjoin'd
+lt:    By holy Laurence to fall prostrate here,
+lt:    And beg your pardon: pardon, I beseech you!
+lt:    Henceforward I am ever ruled by you.
+lt:
+lt:CAPULET
+lt:
+lt:    Send for the county; go tell him of this:
+lt:    I'll have this knot knit up to-morrow morning.
+lt:
+lt:JULIET
+lt:
+lt:    I met the youthful lord at Laurence' cell;
+lt:    And gave him what becomed love I might,
+lt:    Not step o'er the bounds of modesty.
+lt:
+lt:CAPULET
+lt:
+lt:    Why, I am glad on't; this is well: stand up:
+lt:    This is as't should be. Let me see the county;
+lt:    Ay, marry, go, I say, and fetch him hither.
+lt:    Now, afore God! this reverend holy friar,
+lt:    Our whole city is much bound to him.
+lt:
+lt:JULIET
+lt:
+lt:    Nurse, will you go with me into my closet,
+lt:    To help me sort such needful ornaments
+lt:    As you think fit to furnish me to-morrow?
+lt:
+lt:LADY CAPULET
+lt:
+lt:    No, not till Thursday; there is time enough.
+lt:
+lt:CAPULET
+lt:
+lt:    Go, nurse, go with her: we'll to church to-morrow.
+lt:
+lt:    Exeunt JULIET and Nurse
+lt:
+lt:LADY CAPULET
+lt:
+lt:    We shall be short in our provision:
+lt:    'Tis now near night.
+lt:
+lt:CAPULET
+lt:
+lt:    Tush, I will stir about,
+lt:    And all things shall be well, I warrant thee, wife:
+lt:    Go thou to Juliet, help to deck up her;
+lt:    I'll not to bed to-night; let me alone;
+lt:    I'll play the housewife for this once. What, ho!
+lt:    They are all forth. Well, I will walk myself
+lt:    To County Paris, to prepare him up
+lt:    Against to-morrow: my heart is wondrous light,
+lt:    Since this same wayward girl is so reclaim'd.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE III. Juliet's chamber.
+lt:
+lt:    Enter JULIET and Nurse 
+lt:
+lt:JULIET
+lt:
+lt:    Ay, those attires are best: but, gentle nurse,
+lt:    I pray thee, leave me to my self to-night,
+lt:    For I have need of many orisons
+lt:    To move the heavens to smile upon my state,
+lt:    Which, well thou know'st, is cross, and full of sin.
+lt:
+lt:    Enter LADY CAPULET
+lt:
+lt:LADY CAPULET
+lt:
+lt:    What, are you busy, ho? need you my help?
+lt:
+lt:JULIET
+lt:
+lt:    No, madam; we have cull'd such necessaries
+lt:    As are behoveful for our state to-morrow:
+lt:    So please you, let me now be left alone,
+lt:    And let the nurse this night sit up with you;
+lt:    For, I am sure, you have your hands full all,
+lt:    In this so sudden business.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Good night:
+lt:    Get thee to bed, and rest; for thou hast need.
+lt:
+lt:    Exeunt LADY CAPULET and Nurse
+lt:
+lt:JULIET
+lt:
+lt:    Farewell! God knows when we shall meet again.
+lt:    I have a faint cold fear thrills through my veins,
+lt:    That almost freezes up the heat of life:
+lt:    I'll call them back again to comfort me:
+lt:    Nurse! What should she do here?
+lt:    My dismal scene I needs must act alone.
+lt:    Come, vial.
+lt:    What if this mixture do not work at all?
+lt:    Shall I be married then to-morrow morning?
+lt:    No, no: this shall forbid it: lie thou there.
+lt:
+lt:    Laying down her dagger
+lt:    What if it be a poison, which the friar
+lt:    Subtly hath minister'd to have me dead,
+lt:    Lest in this marriage he should be dishonour'd,
+lt:    Because he married me before to Romeo?
+lt:    I fear it is: and yet, methinks, it should not,
+lt:    For he hath still been tried a holy man.
+lt:    How if, when I am laid into the tomb,
+lt:    I wake before the time that Romeo
+lt:    Come to redeem me? there's a fearful point!
+lt:    Shall I not, then, be stifled in the vault,
+lt:    To whose foul mouth no healthsome air breathes in,
+lt:    And there die strangled ere my Romeo comes?
+lt:    Or, if I live, is it not very like,
+lt:    The horrible conceit of death and night,
+lt:    Together with the terror of the place,--
+lt:    As in a vault, an ancient receptacle,
+lt:    Where, for these many hundred years, the bones
+lt:    Of all my buried ancestors are packed:
+lt:    Where bloody Tybalt, yet but green in earth,
+lt:    Lies festering in his shroud; where, as they say,
+lt:    At some hours in the night spirits resort;--
+lt:    Alack, alack, is it not like that I,
+lt:    So early waking, what with loathsome smells,
+lt:    And shrieks like mandrakes' torn out of the earth,
+lt:    That living mortals, hearing them, run mad:--
+lt:    O, if I wake, shall I not be distraught,
+lt:    Environed with all these hideous fears?
+lt:    And madly play with my forefather's joints?
+lt:    And pluck the mangled Tybalt from his shroud?
+lt:    And, in this rage, with some great kinsman's bone,
+lt:    As with a club, dash out my desperate brains?
+lt:    O, look! methinks I see my cousin's ghost
+lt:    Seeking out Romeo, that did spit his body
+lt:    Upon a rapier's point: stay, Tybalt, stay!
+lt:    Romeo, I come! this do I drink to thee.
+lt:
+lt:    She falls upon her bed, within the curtains
+lt:
+lt:SCENE IV. Hall in Capulet's house.
+lt:
+lt:    Enter LADY CAPULET and Nurse 
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Hold, take these keys, and fetch more spices, nurse.
+lt:
+lt:Nurse
+lt:
+lt:    They call for dates and quinces in the pastry.
+lt:
+lt:    Enter CAPULET
+lt:
+lt:CAPULET
+lt:
+lt:    Come, stir, stir, stir! the second cock hath crow'd,
+lt:    The curfew-bell hath rung, 'tis three o'clock:
+lt:    Look to the baked meats, good Angelica:
+lt:    Spare not for the cost.
+lt:
+lt:Nurse
+lt:
+lt:    Go, you cot-quean, go,
+lt:    Get you to bed; faith, You'll be sick to-morrow
+lt:    For this night's watching.
+lt:
+lt:CAPULET
+lt:
+lt:    No, not a whit: what! I have watch'd ere now
+lt:    All night for lesser cause, and ne'er been sick.
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Ay, you have been a mouse-hunt in your time;
+lt:    But I will watch you from such watching now.
+lt:
+lt:    Exeunt LADY CAPULET and Nurse
+lt:
+lt:CAPULET
+lt:
+lt:    A jealous hood, a jealous hood!
+lt:
+lt:    Enter three or four Servingmen, with spits, logs, and baskets
+lt:    Now, fellow,
+lt:    What's there?
+lt:
+lt:First Servant
+lt:
+lt:    Things for the cook, sir; but I know not what.
+lt:
+lt:CAPULET
+lt:
+lt:    Make haste, make haste.
+lt:
+lt:    Exit First Servant
+lt:    Sirrah, fetch drier logs:
+lt:    Call Peter, he will show thee where they are.
+lt:
+lt:Second Servant
+lt:
+lt:    I have a head, sir, that will find out logs,
+lt:    And never trouble Peter for the matter.
+lt:
+lt:    Exit
+lt:
+lt:CAPULET
+lt:
+lt:    Mass, and well said; a merry whoreson, ha!
+lt:    Thou shalt be logger-head. Good faith, 'tis day:
+lt:    The county will be here with music straight,
+lt:    For so he said he would: I hear him near.
+lt:
+lt:    Music within
+lt:    Nurse! Wife! What, ho! What, nurse, I say!
+lt:
+lt:    Re-enter Nurse
+lt:    Go waken Juliet, go and trim her up;
+lt:    I'll go and chat with Paris: hie, make haste,
+lt:    Make haste; the bridegroom he is come already:
+lt:    Make haste, I say.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE V. Juliet's chamber.
+lt:
+lt:    Enter Nurse 
+lt:
+lt:Nurse
+lt:
+lt:    Mistress! what, mistress! Juliet! fast, I warrant her, she:
+lt:    Why, lamb! why, lady! fie, you slug-a-bed!
+lt:    Why, love, I say! madam! sweet-heart! why, bride!
+lt:    What, not a word? you take your pennyworths now;
+lt:    Sleep for a week; for the next night, I warrant,
+lt:    The County Paris hath set up his rest,
+lt:    That you shall rest but little. God forgive me,
+lt:    Marry, and amen, how sound is she asleep!
+lt:    I must needs wake her. Madam, madam, madam!
+lt:    Ay, let the county take you in your bed;
+lt:    He'll fright you up, i' faith. Will it not be?
+lt:
+lt:    Undraws the curtains
+lt:    What, dress'd! and in your clothes! and down again!
+lt:    I must needs wake you; Lady! lady! lady!
+lt:    Alas, alas! Help, help! my lady's dead!
+lt:    O, well-a-day, that ever I was born!
+lt:    Some aqua vitae, ho! My lord! my lady!
+lt:
+lt:    Enter LADY CAPULET
+lt:
+lt:LADY CAPULET
+lt:
+lt:    What noise is here?
+lt:
+lt:Nurse
+lt:
+lt:    O lamentable day!
+lt:
+lt:LADY CAPULET
+lt:
+lt:    What is the matter?
+lt:
+lt:Nurse
+lt:
+lt:    Look, look! O heavy day!
+lt:
+lt:LADY CAPULET
+lt:
+lt:    O me, O me! My child, my only life,
+lt:    Revive, look up, or I will die with thee!
+lt:    Help, help! Call help.
+lt:
+lt:    Enter CAPULET
+lt:
+lt:CAPULET
+lt:
+lt:    For shame, bring Juliet forth; her lord is come.
+lt:
+lt:Nurse
+lt:
+lt:    She's dead, deceased, she's dead; alack the day!
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Alack the day, she's dead, she's dead, she's dead!
+lt:
+lt:CAPULET
+lt:
+lt:    Ha! let me see her: out, alas! she's cold:
+lt:    Her blood is settled, and her joints are stiff;
+lt:    Life and these lips have long been separated:
+lt:    Death lies on her like an untimely frost
+lt:    Upon the sweetest flower of all the field.
+lt:
+lt:Nurse
+lt:
+lt:    O lamentable day!
+lt:
+lt:LADY CAPULET
+lt:
+lt:    O woful time!
+lt:
+lt:CAPULET
+lt:
+lt:    Death, that hath ta'en her hence to make me wail,
+lt:    Ties up my tongue, and will not let me speak.
+lt:
+lt:    Enter FRIAR LAURENCE and PARIS, with Musicians
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Come, is the bride ready to go to church?
+lt:
+lt:CAPULET
+lt:
+lt:    Ready to go, but never to return.
+lt:    O son! the night before thy wedding-day
+lt:    Hath Death lain with thy wife. There she lies,
+lt:    Flower as she was, deflowered by him.
+lt:    Death is my son-in-law, Death is my heir;
+lt:    My daughter he hath wedded: I will die,
+lt:    And leave him all; life, living, all is Death's.
+lt:
+lt:PARIS
+lt:
+lt:    Have I thought long to see this morning's face,
+lt:    And doth it give me such a sight as this?
+lt:
+lt:LADY CAPULET
+lt:
+lt:    Accursed, unhappy, wretched, hateful day!
+lt:    Most miserable hour that e'er time saw
+lt:    In lasting labour of his pilgrimage!
+lt:    But one, poor one, one poor and loving child,
+lt:    But one thing to rejoice and solace in,
+lt:    And cruel death hath catch'd it from my sight!
+lt:
+lt:Nurse
+lt:
+lt:    O woe! O woful, woful, woful day!
+lt:    Most lamentable day, most woful day,
+lt:    That ever, ever, I did yet behold!
+lt:    O day! O day! O day! O hateful day!
+lt:    Never was seen so black a day as this:
+lt:    O woful day, O woful day!
+lt:
+lt:PARIS
+lt:
+lt:    Beguiled, divorced, wronged, spited, slain!
+lt:    Most detestable death, by thee beguil'd,
+lt:    By cruel cruel thee quite overthrown!
+lt:    O love! O life! not life, but love in death!
+lt:
+lt:CAPULET
+lt:
+lt:    Despised, distressed, hated, martyr'd, kill'd!
+lt:    Uncomfortable time, why camest thou now
+lt:    To murder, murder our solemnity?
+lt:    O child! O child! my soul, and not my child!
+lt:    Dead art thou! Alack! my child is dead;
+lt:    And with my child my joys are buried.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Peace, ho, for shame! confusion's cure lives not
+lt:    In these confusions. Heaven and yourself
+lt:    Had part in this fair maid; now heaven hath all,
+lt:    And all the better is it for the maid:
+lt:    Your part in her you could not keep from death,
+lt:    But heaven keeps his part in eternal life.
+lt:    The most you sought was her promotion;
+lt:    For 'twas your heaven she should be advanced:
+lt:    And weep ye now, seeing she is advanced
+lt:    Above the clouds, as high as heaven itself?
+lt:    O, in this love, you love your child so ill,
+lt:    That you run mad, seeing that she is well:
+lt:    She's not well married that lives married long;
+lt:    But she's best married that dies married young.
+lt:    Dry up your tears, and stick your rosemary
+lt:    On this fair corse; and, as the custom is,
+lt:    In all her best array bear her to church:
+lt:    For though fond nature bids us an lament,
+lt:    Yet nature's tears are reason's merriment.
+lt:
+lt:CAPULET
+lt:
+lt:    All things that we ordained festival,
+lt:    Turn from their office to black funeral;
+lt:    Our instruments to melancholy bells,
+lt:    Our wedding cheer to a sad burial feast,
+lt:    Our solemn hymns to sullen dirges change,
+lt:    Our bridal flowers serve for a buried corse,
+lt:    And all things change them to the contrary.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Sir, go you in; and, madam, go with him;
+lt:    And go, Sir Paris; every one prepare
+lt:    To follow this fair corse unto her grave:
+lt:    The heavens do lour upon you for some ill;
+lt:    Move them no more by crossing their high will.
+lt:
+lt:    Exeunt CAPULET, LADY CAPULET, PARIS, and FRIAR LAURENCE
+lt:
+lt:First Musician
+lt:
+lt:    Faith, we may put up our pipes, and be gone.
+lt:
+lt:Nurse
+lt:
+lt:    Honest goodfellows, ah, put up, put up;
+lt:    For, well you know, this is a pitiful case.
+lt:
+lt:    Exit
+lt:
+lt:First Musician
+lt:
+lt:    Ay, by my troth, the case may be amended.
+lt:
+lt:    Enter PETER
+lt:
+lt:PETER
+lt:
+lt:    Musicians, O, musicians, 'Heart's ease, Heart's
+lt:    ease:' O, an you will have me live, play 'Heart's ease.'
+lt:
+lt:First Musician
+lt:
+lt:    Why 'Heart's ease?'
+lt:
+lt:PETER
+lt:
+lt:    O, musicians, because my heart itself plays 'My
+lt:    heart is full of woe:' O, play me some merry dump,
+lt:    to comfort me.
+lt:
+lt:First Musician
+lt:
+lt:    Not a dump we; 'tis no time to play now.
+lt:
+lt:PETER
+lt:
+lt:    You will not, then?
+lt:
+lt:First Musician
+lt:
+lt:    No.
+lt:
+lt:PETER
+lt:
+lt:    I will then give it you soundly.
+lt:
+lt:First Musician
+lt:
+lt:    What will you give us?
+lt:
+lt:PETER
+lt:
+lt:    No money, on my faith, but the gleek;
+lt:    I will give you the minstrel.
+lt:
+lt:First Musician
+lt:
+lt:    Then I will give you the serving-creature.
+lt:
+lt:PETER
+lt:
+lt:    Then will I lay the serving-creature's dagger on
+lt:    your pate. I will carry no crotchets: I'll re you,
+lt:    I'll fa you; do you note me?
+lt:
+lt:First Musician
+lt:
+lt:    An you re us and fa us, you note us.
+lt:
+lt:Second Musician
+lt:
+lt:    Pray you, put up your dagger, and put out your wit.
+lt:
+lt:PETER
+lt:
+lt:    Then have at you with my wit! I will dry-beat you
+lt:    with an iron wit, and put up my iron dagger. Answer
+lt:    me like men:
+lt:    'When griping grief the heart doth wound,
+lt:    And doleful dumps the mind oppress,
+lt:    Then music with her silver sound'--
+lt:    why 'silver sound'? why 'music with her silver
+lt:    sound'? What say you, Simon Catling?
+lt:
+lt:Musician
+lt:
+lt:    Marry, sir, because silver hath a sweet sound.
+lt:
+lt:PETER
+lt:
+lt:    Pretty! What say you, Hugh Rebeck?
+lt:
+lt:Second Musician
+lt:
+lt:    I say 'silver sound,' because musicians sound for silver.
+lt:
+lt:PETER
+lt:
+lt:    Pretty too! What say you, James Soundpost?
+lt:
+lt:Third Musician
+lt:
+lt:    Faith, I know not what to say.
+lt:
+lt:PETER
+lt:
+lt:    O, I cry you mercy; you are the singer: I will say
+lt:    for you. It is 'music with her silver sound,'
+lt:    because musicians have no gold for sounding:
+lt:    'Then music with her silver sound
+lt:    With speedy help doth lend redress.'
+lt:
+lt:    Exit
+lt:
+lt:First Musician
+lt:
+lt:    What a pestilent knave is this same!
+lt:
+lt:Second Musician
+lt:
+lt:    Hang him, Jack! Come, we'll in here; tarry for the
+lt:    mourners, and stay dinner.
+lt:
+lt:    Exeunt
+lt:
+lt:ACT V
+lt:SCENE I. Mantua. A street.
+lt:
+lt:    Enter ROMEO 
+lt:
+lt:ROMEO
+lt:
+lt:    If I may trust the flattering truth of sleep,
+lt:    My dreams presage some joyful news at hand:
+lt:    My bosom's lord sits lightly in his throne;
+lt:    And all this day an unaccustom'd spirit
+lt:    Lifts me above the ground with cheerful thoughts.
+lt:    I dreamt my lady came and found me dead--
+lt:    Strange dream, that gives a dead man leave
+lt:    to think!--
+lt:    And breathed such life with kisses in my lips,
+lt:    That I revived, and was an emperor.
+lt:    Ah me! how sweet is love itself possess'd,
+lt:    When but love's shadows are so rich in joy!
+lt:
+lt:    Enter BALTHASAR, booted
+lt:    News from Verona!--How now, Balthasar!
+lt:    Dost thou not bring me letters from the friar?
+lt:    How doth my lady? Is my father well?
+lt:    How fares my Juliet? that I ask again;
+lt:    For nothing can be ill, if she be well.
+lt:
+lt:BALTHASAR
+lt:
+lt:    Then she is well, and nothing can be ill:
+lt:    Her body sleeps in Capel's monument,
+lt:    And her immortal part with angels lives.
+lt:    I saw her laid low in her kindred's vault,
+lt:    And presently took post to tell it you:
+lt:    O, pardon me for bringing these ill news,
+lt:    Since you did leave it for my office, sir.
+lt:
+lt:ROMEO
+lt:
+lt:    Is it even so? then I defy you, stars!
+lt:    Thou know'st my lodging: get me ink and paper,
+lt:    And hire post-horses; I will hence to-night.
+lt:
+lt:BALTHASAR
+lt:
+lt:    I do beseech you, sir, have patience:
+lt:    Your looks are pale and wild, and do import
+lt:    Some misadventure.
+lt:
+lt:ROMEO
+lt:
+lt:    Tush, thou art deceived:
+lt:    Leave me, and do the thing I bid thee do.
+lt:    Hast thou no letters to me from the friar?
+lt:
+lt:BALTHASAR
+lt:
+lt:    No, my good lord.
+lt:
+lt:ROMEO
+lt:
+lt:    No matter: get thee gone,
+lt:    And hire those horses; I'll be with thee straight.
+lt:
+lt:    Exit BALTHASAR
+lt:    Well, Juliet, I will lie with thee to-night.
+lt:    Let's see for means: O mischief, thou art swift
+lt:    To enter in the thoughts of desperate men!
+lt:    I do remember an apothecary,--
+lt:    And hereabouts he dwells,--which late I noted
+lt:    In tatter'd weeds, with overwhelming brows,
+lt:    Culling of simples; meagre were his looks,
+lt:    Sharp misery had worn him to the bones:
+lt:    And in his needy shop a tortoise hung,
+lt:    An alligator stuff'd, and other skins
+lt:    Of ill-shaped fishes; and about his shelves
+lt:    A beggarly account of empty boxes,
+lt:    Green earthen pots, bladders and musty seeds,
+lt:    Remnants of packthread and old cakes of roses,
+lt:    Were thinly scatter'd, to make up a show.
+lt:    Noting this penury, to myself I said
+lt:    'An if a man did need a poison now,
+lt:    Whose sale is present death in Mantua,
+lt:    Here lives a caitiff wretch would sell it him.'
+lt:    O, this same thought did but forerun my need;
+lt:    And this same needy man must sell it me.
+lt:    As I remember, this should be the house.
+lt:    Being holiday, the beggar's shop is shut.
+lt:    What, ho! apothecary!
+lt:
+lt:    Enter Apothecary
+lt:
+lt:Apothecary
+lt:
+lt:    Who calls so loud?
+lt:
+lt:ROMEO
+lt:
+lt:    Come hither, man. I see that thou art poor:
+lt:    Hold, there is forty ducats: let me have
+lt:    A dram of poison, such soon-speeding gear
+lt:    As will disperse itself through all the veins
+lt:    That the life-weary taker may fall dead
+lt:    And that the trunk may be discharged of breath
+lt:    As violently as hasty powder fired
+lt:    Doth hurry from the fatal cannon's womb.
+lt:
+lt:Apothecary
+lt:
+lt:    Such mortal drugs I have; but Mantua's law
+lt:    Is death to any he that utters them.
+lt:
+lt:ROMEO
+lt:
+lt:    Art thou so bare and full of wretchedness,
+lt:    And fear'st to die? famine is in thy cheeks,
+lt:    Need and oppression starveth in thine eyes,
+lt:    Contempt and beggary hangs upon thy back;
+lt:    The world is not thy friend nor the world's law;
+lt:    The world affords no law to make thee rich;
+lt:    Then be not poor, but break it, and take this.
+lt:
+lt:Apothecary
+lt:
+lt:    My poverty, but not my will, consents.
+lt:
+lt:ROMEO
+lt:
+lt:    I pay thy poverty, and not thy will.
+lt:
+lt:Apothecary
+lt:
+lt:    Put this in any liquid thing you will,
+lt:    And drink it off; and, if you had the strength
+lt:    Of twenty men, it would dispatch you straight.
+lt:
+lt:ROMEO
+lt:
+lt:    There is thy gold, worse poison to men's souls,
+lt:    Doing more murders in this loathsome world,
+lt:    Than these poor compounds that thou mayst not sell.
+lt:    I sell thee poison; thou hast sold me none.
+lt:    Farewell: buy food, and get thyself in flesh.
+lt:    Come, cordial and not poison, go with me
+lt:    To Juliet's grave; for there must I use thee.
+lt:
+lt:    Exeunt
+lt:
+lt:SCENE II. Friar Laurence's cell.
+lt:
+lt:    Enter FRIAR JOHN 
+lt:
+lt:FRIAR JOHN
+lt:
+lt:    Holy Franciscan friar! brother, ho!
+lt:
+lt:    Enter FRIAR LAURENCE
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    This same should be the voice of Friar John.
+lt:    Welcome from Mantua: what says Romeo?
+lt:    Or, if his mind be writ, give me his letter.
+lt:
+lt:FRIAR JOHN
+lt:
+lt:    Going to find a bare-foot brother out
+lt:    One of our order, to associate me,
+lt:    Here in this city visiting the sick,
+lt:    And finding him, the searchers of the town,
+lt:    Suspecting that we both were in a house
+lt:    Where the infectious pestilence did reign,
+lt:    Seal'd up the doors, and would not let us forth;
+lt:    So that my speed to Mantua there was stay'd.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Who bare my letter, then, to Romeo?
+lt:
+lt:FRIAR JOHN
+lt:
+lt:    I could not send it,--here it is again,--
+lt:    Nor get a messenger to bring it thee,
+lt:    So fearful were they of infection.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Unhappy fortune! by my brotherhood,
+lt:    The letter was not nice but full of charge
+lt:    Of dear import, and the neglecting it
+lt:    May do much danger. Friar John, go hence;
+lt:    Get me an iron crow, and bring it straight
+lt:    Unto my cell.
+lt:
+lt:FRIAR JOHN
+lt:
+lt:    Brother, I'll go and bring it thee.
+lt:
+lt:    Exit
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Now must I to the monument alone;
+lt:    Within three hours will fair Juliet wake:
+lt:    She will beshrew me much that Romeo
+lt:    Hath had no notice of these accidents;
+lt:    But I will write again to Mantua,
+lt:    And keep her at my cell till Romeo come;
+lt:    Poor living corse, closed in a dead man's tomb!
+lt:
+lt:    Exit
+lt:
+lt:SCENE III. A churchyard; in it a tomb belonging to the Capulets.
+lt:
+lt:    Enter PARIS, and his Page bearing flowers and a torch 
+lt:
+lt:PARIS
+lt:
+lt:    Give me thy torch, boy: hence, and stand aloof:
+lt:    Yet put it out, for I would not be seen.
+lt:    Under yond yew-trees lay thee all along,
+lt:    Holding thine ear close to the hollow ground;
+lt:    So shall no foot upon the churchyard tread,
+lt:    Being loose, unfirm, with digging up of graves,
+lt:    But thou shalt hear it: whistle then to me,
+lt:    As signal that thou hear'st something approach.
+lt:    Give me those flowers. Do as I bid thee, go.
+lt:
+lt:PAGE
+lt:
+lt:    [Aside] I am almost afraid to stand alone
+lt:    Here in the churchyard; yet I will adventure.
+lt:
+lt:    Retires
+lt:
+lt:PARIS
+lt:
+lt:    Sweet flower, with flowers thy bridal bed I strew,--
+lt:    O woe! thy canopy is dust and stones;--
+lt:    Which with sweet water nightly I will dew,
+lt:    Or, wanting that, with tears distill'd by moans:
+lt:    The obsequies that I for thee will keep
+lt:    Nightly shall be to strew thy grave and weep.
+lt:
+lt:    The Page whistles
+lt:    The boy gives warning something doth approach.
+lt:    What cursed foot wanders this way to-night,
+lt:    To cross my obsequies and true love's rite?
+lt:    What with a torch! muffle me, night, awhile.
+lt:
+lt:    Retires
+lt:
+lt:    Enter ROMEO and BALTHASAR, with a torch, mattock, & c
+lt:
+lt:ROMEO
+lt:
+lt:    Give me that mattock and the wrenching iron.
+lt:    Hold, take this letter; early in the morning
+lt:    See thou deliver it to my lord and father.
+lt:    Give me the light: upon thy life, I charge thee,
+lt:    Whate'er thou hear'st or seest, stand all aloof,
+lt:    And do not interrupt me in my course.
+lt:    Why I descend into this bed of death,
+lt:    Is partly to behold my lady's face;
+lt:    But chiefly to take thence from her dead finger
+lt:    A precious ring, a ring that I must use
+lt:    In dear employment: therefore hence, be gone:
+lt:    But if thou, jealous, dost return to pry
+lt:    In what I further shall intend to do,
+lt:    By heaven, I will tear thee joint by joint
+lt:    And strew this hungry churchyard with thy limbs:
+lt:    The time and my intents are savage-wild,
+lt:    More fierce and more inexorable far
+lt:    Than empty tigers or the roaring sea.
+lt:
+lt:BALTHASAR
+lt:
+lt:    I will be gone, sir, and not trouble you.
+lt:
+lt:ROMEO
+lt:
+lt:    So shalt thou show me friendship. Take thou that:
+lt:    Live, and be prosperous: and farewell, good fellow.
+lt:
+lt:BALTHASAR
+lt:
+lt:    [Aside] For all this same, I'll hide me hereabout:
+lt:    His looks I fear, and his intents I doubt.
+lt:
+lt:    Retires
+lt:
+lt:ROMEO
+lt:
+lt:    Thou detestable maw, thou womb of death,
+lt:    Gorged with the dearest morsel of the earth,
+lt:    Thus I enforce thy rotten jaws to open,
+lt:    And, in despite, I'll cram thee with more food!
+lt:
+lt:    Opens the tomb
+lt:
+lt:PARIS
+lt:
+lt:    This is that banish'd haughty Montague,
+lt:    That murder'd my love's cousin, with which grief,
+lt:    It is supposed, the fair creature died;
+lt:    And here is come to do some villanous shame
+lt:    To the dead bodies: I will apprehend him.
+lt:
+lt:    Comes forward
+lt:    Stop thy unhallow'd toil, vile Montague!
+lt:    Can vengeance be pursued further than death?
+lt:    Condemned villain, I do apprehend thee:
+lt:    Obey, and go with me; for thou must die.
+lt:
+lt:ROMEO
+lt:
+lt:    I must indeed; and therefore came I hither.
+lt:    Good gentle youth, tempt not a desperate man;
+lt:    Fly hence, and leave me: think upon these gone;
+lt:    Let them affright thee. I beseech thee, youth,
+lt:    Put not another sin upon my head,
+lt:    By urging me to fury: O, be gone!
+lt:    By heaven, I love thee better than myself;
+lt:    For I come hither arm'd against myself:
+lt:    Stay not, be gone; live, and hereafter say,
+lt:    A madman's mercy bade thee run away.
+lt:
+lt:PARIS
+lt:
+lt:    I do defy thy conjurations,
+lt:    And apprehend thee for a felon here.
+lt:
+lt:ROMEO
+lt:
+lt:    Wilt thou provoke me? then have at thee, boy!
+lt:
+lt:    They fight
+lt:
+lt:PAGE
+lt:
+lt:    O Lord, they fight! I will go call the watch.
+lt:
+lt:    Exit
+lt:
+lt:PARIS
+lt:
+lt:    O, I am slain!
+lt:
+lt:    Falls
+lt:    If thou be merciful,
+lt:    Open the tomb, lay me with Juliet.
+lt:
+lt:    Dies
+lt:
+lt:ROMEO
+lt:
+lt:    In faith, I will. Let me peruse this face.
+lt:    Mercutio's kinsman, noble County Paris!
+lt:    What said my man, when my betossed soul
+lt:    Did not attend him as we rode? I think
+lt:    He told me Paris should have married Juliet:
+lt:    Said he not so? or did I dream it so?
+lt:    Or am I mad, hearing him talk of Juliet,
+lt:    To think it was so? O, give me thy hand,
+lt:    One writ with me in sour misfortune's book!
+lt:    I'll bury thee in a triumphant grave;
+lt:    A grave? O no! a lantern, slaughter'd youth,
+lt:    For here lies Juliet, and her beauty makes
+lt:    This vault a feasting presence full of light.
+lt:    Death, lie thou there, by a dead man interr'd.
+lt:
+lt:    Laying PARIS in the tomb
+lt:    How oft when men are at the point of death
+lt:    Have they been merry! which their keepers call
+lt:    A lightning before death: O, how may I
+lt:    Call this a lightning? O my love! my wife!
+lt:    Death, that hath suck'd the honey of thy breath,
+lt:    Hath had no power yet upon thy beauty:
+lt:    Thou art not conquer'd; beauty's ensign yet
+lt:    Is crimson in thy lips and in thy cheeks,
+lt:    And death's pale flag is not advanced there.
+lt:    Tybalt, liest thou there in thy bloody sheet?
+lt:    O, what more favour can I do to thee,
+lt:    Than with that hand that cut thy youth in twain
+lt:    To sunder his that was thine enemy?
+lt:    Forgive me, cousin! Ah, dear Juliet,
+lt:    Why art thou yet so fair? shall I believe
+lt:    That unsubstantial death is amorous,
+lt:    And that the lean abhorred monster keeps
+lt:    Thee here in dark to be his paramour?
+lt:    For fear of that, I still will stay with thee;
+lt:    And never from this palace of dim night
+lt:    Depart again: here, here will I remain
+lt:    With worms that are thy chamber-maids; O, here
+lt:    Will I set up my everlasting rest,
+lt:    And shake the yoke of inauspicious stars
+lt:    From this world-wearied flesh. Eyes, look your last!
+lt:    Arms, take your last embrace! and, lips, O you
+lt:    The doors of breath, seal with a righteous kiss
+lt:    A dateless bargain to engrossing death!
+lt:    Come, bitter conduct, come, unsavoury guide!
+lt:    Thou desperate pilot, now at once run on
+lt:    The dashing rocks thy sea-sick weary bark!
+lt:    Here's to my love!
+lt:
+lt:    Drinks
+lt:    O true apothecary!
+lt:    Thy drugs are quick. Thus with a kiss I die.
+lt:
+lt:    Dies
+lt:
+lt:    Enter, at the other end of the churchyard, FRIAR LAURENCE, with a lantern, crow, and spade
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Saint Francis be my speed! how oft to-night
+lt:    Have my old feet stumbled at graves! Who's there?
+lt:
+lt:BALTHASAR
+lt:
+lt:    Here's one, a friend, and one that knows you well.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Bliss be upon you! Tell me, good my friend,
+lt:    What torch is yond, that vainly lends his light
+lt:    To grubs and eyeless skulls? as I discern,
+lt:    It burneth in the Capel's monument.
+lt:
+lt:BALTHASAR
+lt:
+lt:    It doth so, holy sir; and there's my master,
+lt:    One that you love.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Who is it?
+lt:
+lt:BALTHASAR
+lt:
+lt:    Romeo.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    How long hath he been there?
+lt:
+lt:BALTHASAR
+lt:
+lt:    Full half an hour.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Go with me to the vault.
+lt:
+lt:BALTHASAR
+lt:
+lt:    I dare not, sir
+lt:    My master knows not but I am gone hence;
+lt:    And fearfully did menace me with death,
+lt:    If I did stay to look on his intents.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Stay, then; I'll go alone. Fear comes upon me:
+lt:    O, much I fear some ill unlucky thing.
+lt:
+lt:BALTHASAR
+lt:
+lt:    As I did sleep under this yew-tree here,
+lt:    I dreamt my master and another fought,
+lt:    And that my master slew him.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    Romeo!
+lt:
+lt:    Advances
+lt:    Alack, alack, what blood is this, which stains
+lt:    The stony entrance of this sepulchre?
+lt:    What mean these masterless and gory swords
+lt:    To lie discolour'd by this place of peace?
+lt:
+lt:    Enters the tomb
+lt:    Romeo! O, pale! Who else? what, Paris too?
+lt:    And steep'd in blood? Ah, what an unkind hour
+lt:    Is guilty of this lamentable chance!
+lt:    The lady stirs.
+lt:
+lt:    JULIET wakes
+lt:
+lt:JULIET
+lt:
+lt:    O comfortable friar! where is my lord?
+lt:    I do remember well where I should be,
+lt:    And there I am. Where is my Romeo?
+lt:
+lt:    Noise within
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    I hear some noise. Lady, come from that nest
+lt:    Of death, contagion, and unnatural sleep:
+lt:    A greater power than we can contradict
+lt:    Hath thwarted our intents. Come, come away.
+lt:    Thy husband in thy bosom there lies dead;
+lt:    And Paris too. Come, I'll dispose of thee
+lt:    Among a sisterhood of holy nuns:
+lt:    Stay not to question, for the watch is coming;
+lt:    Come, go, good Juliet,
+lt:
+lt:    Noise again
+lt:    I dare no longer stay.
+lt:
+lt:JULIET
+lt:
+lt:    Go, get thee hence, for I will not away.
+lt:
+lt:    Exit FRIAR LAURENCE
+lt:    What's here? a cup, closed in my true love's hand?
+lt:    Poison, I see, hath been his timeless end:
+lt:    O churl! drunk all, and left no friendly drop
+lt:    To help me after? I will kiss thy lips;
+lt:    Haply some poison yet doth hang on them,
+lt:    To make die with a restorative.
+lt:
+lt:    Kisses him
+lt:    Thy lips are warm.
+lt:
+lt:First Watchman
+lt:
+lt:    [Within] Lead, boy: which way?
+lt:
+lt:JULIET
+lt:
+lt:    Yea, noise? then I'll be brief. O happy dagger!
+lt:
+lt:    Snatching ROMEO's dagger
+lt:    This is thy sheath;
+lt:
+lt:    Stabs herself
+lt:    there rust, and let me die.
+lt:
+lt:    Falls on ROMEO's body, and dies
+lt:
+lt:    Enter Watch, with the Page of PARIS
+lt:
+lt:PAGE
+lt:
+lt:    This is the place; there, where the torch doth burn.
+lt:
+lt:First Watchman
+lt:
+lt:    The ground is bloody; search about the churchyard:
+lt:    Go, some of you, whoe'er you find attach.
+lt:    Pitiful sight! here lies the county slain,
+lt:    And Juliet bleeding, warm, and newly dead,
+lt:    Who here hath lain these two days buried.
+lt:    Go, tell the prince: run to the Capulets:
+lt:    Raise up the Montagues: some others search:
+lt:    We see the ground whereon these woes do lie;
+lt:    But the true ground of all these piteous woes
+lt:    We cannot without circumstance descry.
+lt:
+lt:    Re-enter some of the Watch, with BALTHASAR
+lt:
+lt:Second Watchman
+lt:
+lt:    Here's Romeo's man; we found him in the churchyard.
+lt:
+lt:First Watchman
+lt:
+lt:    Hold him in safety, till the prince come hither.
+lt:
+lt:    Re-enter others of the Watch, with FRIAR LAURENCE
+lt:
+lt:Third Watchman
+lt:
+lt:    Here is a friar, that trembles, sighs and weeps:
+lt:    We took this mattock and this spade from him,
+lt:    As he was coming from this churchyard side.
+lt:
+lt:First Watchman
+lt:
+lt:    A great suspicion: stay the friar too.
+lt:
+lt:    Enter the PRINCE and Attendants
+lt:
+lt:PRINCE
+lt:
+lt:    What misadventure is so early up,
+lt:    That calls our person from our morning's rest?
+lt:
+lt:    Enter CAPULET, LADY CAPULET, and others
+lt:
+lt:CAPULET
+lt:
+lt:    What should it be, that they so shriek abroad?
+lt:
+lt:LADY CAPULET
+lt:
+lt:    The people in the street cry Romeo,
+lt:    Some Juliet, and some Paris; and all run,
+lt:    With open outcry toward our monument.
+lt:
+lt:PRINCE
+lt:
+lt:    What fear is this which startles in our ears?
+lt:
+lt:First Watchman
+lt:
+lt:    Sovereign, here lies the County Paris slain;
+lt:    And Romeo dead; and Juliet, dead before,
+lt:    Warm and new kill'd.
+lt:
+lt:PRINCE
+lt:
+lt:    Search, seek, and know how this foul murder comes.
+lt:
+lt:First Watchman
+lt:
+lt:    Here is a friar, and slaughter'd Romeo's man;
+lt:    With instruments upon them, fit to open
+lt:    These dead men's tombs.
+lt:
+lt:CAPULET
+lt:
+lt:    O heavens! O wife, look how our daughter bleeds!
+lt:    This dagger hath mista'en--for, lo, his house
+lt:    Is empty on the back of Montague,--
+lt:    And it mis-sheathed in my daughter's bosom!
+lt:
+lt:LADY CAPULET
+lt:
+lt:    O me! this sight of death is as a bell,
+lt:    That warns my old age to a sepulchre.
+lt:
+lt:    Enter MONTAGUE and others
+lt:
+lt:PRINCE
+lt:
+lt:    Come, Montague; for thou art early up,
+lt:    To see thy son and heir more early down.
+lt:
+lt:MONTAGUE
+lt:
+lt:    Alas, my liege, my wife is dead to-night;
+lt:    Grief of my son's exile hath stopp'd her breath:
+lt:    What further woe conspires against mine age?
+lt:
+lt:PRINCE
+lt:
+lt:    Look, and thou shalt see.
+lt:
+lt:MONTAGUE
+lt:
+lt:    O thou untaught! what manners is in this?
+lt:    To press before thy father to a grave?
+lt:
+lt:PRINCE
+lt:
+lt:    Seal up the mouth of outrage for a while,
+lt:    Till we can clear these ambiguities,
+lt:    And know their spring, their head, their
+lt:    true descent;
+lt:    And then will I be general of your woes,
+lt:    And lead you even to death: meantime forbear,
+lt:    And let mischance be slave to patience.
+lt:    Bring forth the parties of suspicion.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    I am the greatest, able to do least,
+lt:    Yet most suspected, as the time and place
+lt:    Doth make against me of this direful murder;
+lt:    And here I stand, both to impeach and purge
+lt:    Myself condemned and myself excused.
+lt:
+lt:PRINCE
+lt:
+lt:    Then say at once what thou dost know in this.
+lt:
+lt:FRIAR LAURENCE
+lt:
+lt:    I will be brief, for my short date of breath
+lt:    Is not so long as is a tedious tale.
+lt:    Romeo, there dead, was husband to that Juliet;
+lt:    And she, there dead, that Romeo's faithful wife:
+lt:    I married them; and their stol'n marriage-day
+lt:    Was Tybalt's dooms-day, whose untimely death
+lt:    Banish'd the new-made bridegroom from the city,
+lt:    For whom, and not for Tybalt, Juliet pined.
+lt:    You, to remove that siege of grief from her,
+lt:    Betroth'd and would have married her perforce
+lt:    To County Paris: then comes she to me,
+lt:    And, with wild looks, bid me devise some mean
+lt:    To rid her from this second marriage,
+lt:    Or in my cell there would she kill herself.
+lt:    Then gave I her, so tutor'd by my art,
+lt:    A sleeping potion; which so took effect
+lt:    As I intended, for it wrought on her
+lt:    The form of death: meantime I writ to Romeo,
+lt:    That he should hither come as this dire night,
+lt:    To help to take her from her borrow'd grave,
+lt:    Being the time the potion's force should cease.
+lt:    But he which bore my letter, Friar John,
+lt:    Was stay'd by accident, and yesternight
+lt:    Return'd my letter back. Then all alone
+lt:    At the prefixed hour of her waking,
+lt:    Came I to take her from her kindred's vault;
+lt:    Meaning to keep her closely at my cell,
+lt:    Till I conveniently could send to Romeo:
+lt:    But when I came, some minute ere the time
+lt:    Of her awaking, here untimely lay
+lt:    The noble Paris and true Romeo dead.
+lt:    She wakes; and I entreated her come forth,
+lt:    And bear this work of heaven with patience:
+lt:    But then a noise did scare me from the tomb;
+lt:    And she, too desperate, would not go with me,
+lt:    But, as it seems, did violence on herself.
+lt:    All this I know; and to the marriage
+lt:    Her nurse is privy: and, if aught in this
+lt:    Miscarried by my fault, let my old life
+lt:    Be sacrificed, some hour before his time,
+lt:    Unto the rigour of severest law.
+lt:
+lt:PRINCE
+lt:
+lt:    We still have known thee for a holy man.
+lt:    Where's Romeo's man? what can he say in this?
+lt:
+lt:BALTHASAR
+lt:
+lt:    I brought my master news of Juliet's death;
+lt:    And then in post he came from Mantua
+lt:    To this same place, to this same monument.
+lt:    This letter he early bid me give his father,
+lt:    And threatened me with death, going in the vault,
+lt:    I departed not and left him there.
+lt:
+lt:PRINCE
+lt:
+lt:    Give me the letter; I will look on it.
+lt:    Where is the county's page, that raised the watch?
+lt:    Sirrah, what made your master in this place?
+lt:
+lt:PAGE
+lt:
+lt:    He came with flowers to strew his lady's grave;
+lt:    And bid me stand aloof, and so I did:
+lt:    Anon comes one with light to ope the tomb;
+lt:    And by and by my master drew on him;
+lt:    And then I ran away to call the watch.
+lt:
+lt:PRINCE
+lt:
+lt:    This letter doth make good the friar's words,
+lt:    Their course of love, the tidings of her death:
+lt:    And here he writes that he did buy a poison
+lt:    Of a poor 'pothecary, and therewithal
+lt:    Came to this vault to die, and lie with Juliet.
+lt:    Where be these enemies? Capulet! Montague!
+lt:    See, what a scourge is laid upon your hate,
+lt:    That heaven finds means to kill your joys with love.
+lt:    And I for winking at your discords too
+lt:    Have lost a brace of kinsmen: all are punish'd.
+lt:
+lt:CAPULET
+lt:
+lt:    O brother Montague, give me thy hand:
+lt:    This is my daughter's jointure, for no more
+lt:    Can I demand.
+lt:
+lt:MONTAGUE
+lt:
+lt:    But I can give thee more:
+lt:    For I will raise her statue in pure gold;
+lt:    That while Verona by that name is known,
+lt:    There shall no figure at such rate be set
+lt:    As that of true and faithful Juliet.
+lt:
+lt:CAPULET
+lt:
+lt:    As rich shall Romeo's by his lady's lie;
+lt:    Poor sacrifices of our enmity!
+lt:
+lt:PRINCE
+lt:
+lt:    A glooming peace this morning with it brings;
+lt:    The sun, for sorrow, will not show his head:
+lt:    Go hence, to have more talk of these sad things;
+lt:    Some shall be pardon'd, and some punished:
+lt:    For never was a story of more woe
+lt:    Than this of Juliet and her Romeo.
+lt:
+lt:    Exeunt
