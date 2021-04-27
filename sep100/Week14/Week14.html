@@ -1,56 +1,116 @@
-<h1>Week 14 - Final Exam</h1>
+<h1>Week 14 - Final Exam and Review</h1>
 
 <h3>Introduction</h3>
-<p>.</p>
+<p>This week is the final exam. We will also look at one detailed review problem.</p>
 
 <h3>Videos</h3>
-<table><tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-</table>
+None<br>
 
 <h3>Quiz</h3>
-<p>.</p>
+None<br>
 
 <h3>Lecture Material</h3>
-<ul>
-  <li><a href="" target="_blank"></a></li>
-  <li><a href="" target="_blank"></a></li>
-  <li><a href="" target="_blank"></a></li>
-</ul>
+None<br>
 
 <h3>Lab(s)</h3>
-<ul>
-  <li>.</li>
-</ul>
+None<br>
 
 <h3>Assignment(s)</h3>
-<p><a href="../Assignments/Assignment2/Assignment2.html" target="_blank">Assignment 2</a>.</p>
+None<br>
 
 <h3>Sample Code</h3>
-<p><em></em></p>
+<p><em>Baseball Team</em></p>
+<p>The file <a href="BaseballTeam/BaseballTeamDB.txt" target="_blank">BaseballTeamDB.txt</a> contains a database for a baseball team. The fields are separated by a semi-colon <b>;</b> and consist of 
+the team name, the wins, losses, and winning percentage (wins/(wins+losses)). The team also has data for each baseball player, of which there are five in total. Each baseball player has a name, number of at-bats, 
+number of hits, the batting percentage (hits/at-bats), the batting rank, and the name rank.</p>
+<p>The main program is going to load data for a baseball team from the file <a href="BaseballTeam/BaseballTeamDB.txt" target="_blank">BaseballTeamDB.txt</a>. It will display the stats for the 
+team and all its players. That is, the team's name, wins, losses, winning percentage, and for each player the player's name, number of at-bats, number of hits, the batting percentage, the batting rank, 
+and the name rank.</p>
+<p>The main program will then display stats by batting percentage, then alphabetically by name. It will then prompt the user to enter stats for a game that has been played, requesting whether the team won or loss, 
+  updating the winning percentage, and getting the number of at-bats and hits for each player. Each player's batting percentage is updated.</p>
+<p>The main program will order the players by batting percentage and by name, display the stats for all players, display the stats for all players based on batting percentage, display the 
+  stats for all players based on the players' name.</p>
+<p>The main program will then save the updated data to the same file <a href="BaseballTeam/BaseballTeamDB.txt" target="_blank">BaseballTeamDB.txt</a>.</p>
+<p>The main program will then save the updated data in order of batting percentage to the same file <a href="BaseballTeam/BaseballTeamDB.txt" target="_blank">BaseballTeamDB.txt</a>.</p>
+<p>The main program will then save the updated data based on a player's name to the same file <a href="BaseballTeam/BaseballTeamDB.txt" target="_blank">BaseballTeamDB.txt</a>.</p>
+<p>Since the file will be overwritten each time, you should put breaks in your program after each file write so you can observe how the program stores the data in the file.</p>
 <ul>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-</ul>
-
-<p><em></em></p>
-<ul>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-</ul>
-
-<p><em></em></p>
-<ul>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
+  <li>The baseball team class has a name, the number of wins, the number of losses, a winning percentage, a list of players, and the name of the database file. Each of these should be 
+    represented by a variable.</li>
+  <li>There are actions being performed on the variables of the baseball team class. We need functions to set the filename, to order players, to load stats from a file, to update the 
+    stats from the keyboard, to display the stats, to display the stats by batting percentage, to display the stats by player name, to save the stats to a file, to save the stats to 
+    a file by batting percentage, to save the stats to a file by player name, etc...</li>
+  <li>A sample solution can be implemented as follows:<br>
+    <a href="BaseballTeam/BaseballTeam.h" target="_blank">BaseballTeam.h</a>,
+    <a href="BaseballTeam/BaseballTeam.cpp" target="_blank">BaseballTeam.cpp</a>, and
+    <a href="BaseballTeam/BaseballMain.cpp" target="_blank">BaseballMain.cpp</a>.
+  </li>
+  <li>A sample run is as follows:<br>
+<pre>
+  Toronto Red Carnations wins:27 losses:17 winning percencage:0.614
+  ROSTER
+  Cristiano Ronaldo    atBats:198 hits:60 batting percentage:0.303
+  Dwayne Johnson       atBats:189 hits:58 batting percentage:0.307
+  Lionel Messi         atBats:191 hits:61 batting percentage:0.319
+  Selena Gomez         atBats:161 hits:43 batting percentage:0.267
+  Taylor Swift         atBats:183 hits:59 batting percentage:0.322
+  
+  Toronto Red Carnations wins:27 losses:17 winning percencage:0.614
+  ROSTER (by batting percentage)
+  Taylor Swift         atBats:183 hits:59 batting percentage:0.322
+  Lionel Messi         atBats:191 hits:61 batting percentage:0.319
+  Dwayne Johnson       atBats:189 hits:58 batting percentage:0.307
+  Cristiano Ronaldo    atBats:198 hits:60 batting percentage:0.303
+  Selena Gomez         atBats:161 hits:43 batting percentage:0.267
+  
+  Toronto Red Carnations wins:27 losses:17 winning percencage:0.614
+  ROSTER (by name)
+  Cristiano Ronaldo    atBats:198 hits:60 batting percentage:0.303
+  Dwayne Johnson       atBats:189 hits:58 batting percentage:0.307
+  Lionel Messi         atBats:191 hits:61 batting percentage:0.319
+  Selena Gomez         atBats:161 hits:43 batting percentage:0.267
+  Taylor Swift         atBats:183 hits:59 batting percentage:0.322
+  
+  Did Toronto Red Carnations win? [Y,N] y
+  Cristiano Ronaldo    At bats: 5
+                      Hits: 1
+  Stats for Cristiano Ronaldo updated.
+  Dwayne Johnson       At bats: 4
+                      Hits: 1
+  Stats for Dwayne Johnson updated.
+  Lionel Messi         At bats: 4
+                      Hits: 1
+  Stats for Lionel Messi updated.
+  Selena Gomez         At bats: 5
+                      Hits: 2
+  Stats for Selena Gomez updated.
+  Taylor Swift         At bats: 5
+                      Hits: 3
+  Stats for Taylor Swift updated.
+  
+  Toronto Red Carnations wins:28 losses:17 winning percencage:0.622
+  ROSTER
+  Cristiano Ronaldo    atBats:203 hits:61 batting percentage:0.300
+  Dwayne Johnson       atBats:193 hits:59 batting percentage:0.306
+  Lionel Messi         atBats:195 hits:62 batting percentage:0.318
+  Selena Gomez         atBats:166 hits:45 batting percentage:0.271
+  Taylor Swift         atBats:188 hits:62 batting percentage:0.330
+  
+  Toronto Red Carnations wins:28 losses:17 winning percencage:0.622
+  ROSTER (by batting percentage)
+  Taylor Swift         atBats:188 hits:62 batting percentage:0.330
+  Lionel Messi         atBats:195 hits:62 batting percentage:0.318
+  Dwayne Johnson       atBats:193 hits:59 batting percentage:0.306
+  Cristiano Ronaldo    atBats:203 hits:61 batting percentage:0.300
+  Selena Gomez         atBats:166 hits:45 batting percentage:0.271
+  
+  Toronto Red Carnations wins:28 losses:17 winning percencage:0.622
+  ROSTER (by name)
+  Cristiano Ronaldo    atBats:203 hits:61 batting percentage:0.300
+  Dwayne Johnson       atBats:193 hits:59 batting percentage:0.306
+  Lionel Messi         atBats:195 hits:62 batting percentage:0.318
+  Selena Gomez         atBats:166 hits:45 batting percentage:0.271
+  Taylor Swift         atBats:188 hits:62 batting percentage:0.330
+</pre>
+  </li>
 </ul>
