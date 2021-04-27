@@ -1,12 +1,12 @@
-<h1>Week 13 - Secondary Storage</h1>
+<h1>Week 13 - Design, Language Standards</h1>
 
 <h3>Introduction</h3>
-<p>.</p>
+<p>This week we will look at C/C++ language standards. We will also attempt to tie everything together in the design of a student list.</p>
 
 <h3>Videos</h3>
-<table><tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+<table><tr><td></td><td><a href="https://www.youtube.com/watch?v=CAWbcgR2xgQ" target="_blank">The History of C Programming Language</a></td></tr>
+  <tr><td>C++ Language Standards</td><td><a href="https://www.youtube.com/watch?v=w7gIClKZ85s" target="_blank">Bjarne Stroustrup: C++ Standards - C++03, C++11, C++14, C++17, C++20</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=UazKAmEqSCQ" target="_blank">What is the C++ Standard Library?</a></td></tr>
 </table>
 
 <h3>Quiz</h3>
@@ -14,43 +14,40 @@
 
 <h3>Lecture Material</h3>
 <ul>
-  <li><a href="" target="_blank"></a></li>
-  <li><a href="" target="_blank"></a></li>
-  <li><a href="" target="_blank"></a></li>
+  <li>The Preface and New Features of C++11 in <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+  <li><a href="LanguageStandards.docx" target="_blank">LanguageStandards.docx</a></li>
 </ul>
 
 <h3>Lab(s)</h3>
 <ul>
-  <li>.</li>
+  <li><a href="../Labs/Lab10/Lab10.html" target="_blank">Lab 10</a>.</li>
 </ul>
 
 <h3>Assignment(s)</h3>
 <p><a href="../Assignments/Assignment2/Assignment2.html" target="_blank">Assignment 2</a>.</p>
 
 <h3>Sample Code</h3>
-<p><em></em></p>
+<p><em>Student List</em></p>
+<p>Let us create a program that reads student data from a CSV file. The file contains the name of a student, the number of subjects, and the mark for each subject. It is not known to the 
+  program how many students there are in this file and how many subjects each student is taking.</p>
+<p>Each student will have a name, the number of subjects, and an array of marks for each subject. The student will also have an average mark as well as a rank among other students.</p>
+<p>The main program will have to open the CSV file and determine how many students are recorded in this file. It will then have to allocate memory for these number of students. It will 
+  have to get the name, number of subjects, and the mark for each subject for each student. It will have to calculate the average for each student. After having gone through each student, 
+  the main program will print out the information for each student. The program then has to determine the rank for each student. For instance, which student has the highest average, which
+  has the next highest average, etc... Then the program prints the students out again sorted by rank, to the screen and also to a sorted file. The outout should be formatted such than 
+  the averages are printed to 2 decimal places, the ranks are printed inside a field of 2 characters, the names are printed inside a field of 20 characters, and the averages are printed 
+  inside a field of 8 characters.</p>
 <ul>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-</ul>
-
-<p><em></em></p>
-<ul>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-</ul>
-
-<p><em></em></p>
-<ul>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
-  <li>.</li>
+  <li>First we identify our class as being of type Student. The student has a name, the number of subjects, the list of marks, the average, and a rank. These should all be represented 
+    as variables inside the Student class.</li>
+  <li>There are certain actions required on these variables. We need to calculate the average, get the average, set the student's name, set the marks, get the marks, get the 
+    number of marks, get the rank, determine the rank, etc...</li>
+  <li>For a sample implementation, see
+    <a href="StudentList/Student.h" target="_blank">Student.h</a>,
+    <a href="StudentList/Student.cpp" target="_blank">Student.cpp</a>, and
+    <a href="StudentList/StudentList.cpp" target="_blank">StudentList.cpp</a>.<br>
+    This implementation reads the CSV file 
+    <a href="StudentList/Students.csv" target="_blank">Students.csv</a> and the resulting sorted file is
+    <a href="StudentList/StudentSorted.txt" target="_blank">StudentSorted.txt</a>.
+  </li>
 </ul>
