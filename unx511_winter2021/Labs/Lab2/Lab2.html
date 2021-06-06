@@ -1,0 +1,56 @@
+<h2>UNX511/DSP912 – Lab 2: Using a Static Library</h2>
+
+<h3>Due: Friday, February 5, 2021</h3>
+
+<p>In this lab you will link a static library into your build and use the available functions inside it. The static library is
+    <a href="libPidUtil.a" target="_blank">libPidUtil.a</a> and its header file is <a href="pidUtil.h" target="_blank">pidUtil.h</a>.
+    Take a look at the functions in <b>pidUtil.h</b> because your code will be calling these functions. You can also look inside
+    the contents of <b>libPidUtil.a</b> using nm as follows:</p>
+<p><i>$ nm libPidUtil.a | grep ' T '</i></p>
+
+<h4>PART A</h4>
+<p>Your job is to create a <b>Makefile</b> and <b>Lab2.cpp</b> which links this static library in the build process and uses some of the functions inside. <b>Lab2.cpp</b> must:</p>
+
+<ol>
+    <li>Call <b>GetAllPids()</b> and <b>GetNameByPid()</b> to print out all pids and their names.</li>
+    <li>Set pid to 1. Call <b>GetNameByPid()</b> and print out the name of pid 1.</li>
+    <li>Set name to "Lab2". Call <b>GetPidByName()</b> to get the pid of Lab2. Print "Lab2" and the pid of Lab2.</li>
+    <li>Set name to "Lab22". Call <b>GetPidByName()</b> to get the pid of Lab22. There should not be a process called Lab22,
+        therefore this should test your error message generation system.</li>
+    <li>If any errors are generated in the calls to these functions, the error must be printed out by a call to the
+        function <b>GetErrorMsg()</b> with the error number as an argument.</li>
+</ol>
+
+<h4>PART B</h4>
+<p>The Makefile for libPidUtil.a is as follows:</p>
+<i>
+CC=g++<br>
+CFLAGS=-I<br>
+CFLAGS+=-Wall<br>
+CFLAGS+=-c<br>
+AR=ar<br>
+
+pidUtil: pidUtil.cpp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$(CC) $(CFLAGS) pidUtil.cpp -o pidUtil.o<br>
+<br>
+lib: pidUtil.o<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$(AR) rcs libPidUtil.a pidUtil.o<br>
+        <br>
+clean:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rm -f *.o *.a<br>
+        <br>
+install:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cp libPidUtil.a ../.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cp pidUtil.h ../.<br>
+        <br>
+all: pidUtil lib<br>
+</i>
+
+<p>In a Word document, please explain every line of this Makefile.</p>
+
+<h3>Lab Submission:</h3>
+
+<p>Email me your <b>Makefile</b> and your <b>Lab2.cpp</b> file for PART A as well as your document for PART B to:
+    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+    
+<p><b>NB: My last name is Watler, not Walter.</b></p>

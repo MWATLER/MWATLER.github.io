@@ -1,0 +1,41 @@
+<h1>Week 5 - February 8-12</h1>
+
+<h3>Introduction</h3>
+<p>This week will be about Device Drivers.</p>
+<h3>Videos</h3>
+<table>
+  <tr><td>Linux Device Drivers</td><td><a href="https://www.youtube.com/watch?v=b58CnY7qxpk" target="_blank">Linux Devices and Drivers</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=juGNPLdjLH4" target="_blank">How Do Linux Kernel Drivers Work?</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=CWihl19mJig" target="_blank">How to build a Linux loadable kernel module that Rickrolls people</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<ul>
+  <li><b>Quiz 4</b> (February 8).</li>
+</ul>
+
+<h3>Lecture Material</h3>
+<ul>
+  <li>Chapters 1, 2 and 3 of <a href="https://lwn.net/Kernel/LDD3/" target="_blank">Linux Device Drivers</a>.</li>
+</ul>
+
+<h3>Labs</h3>
+<ul>
+  <li><a href="../Labs/Lab3/Lab3.html" target="_blank">Lab 3</a> (due February 12) - I/O control.</li>
+  <li><a href="../Labs/Lab4/Lab4.html" target="_blank">Lab 4</a> (due February 19) - device drivers.</li>
+</ul>
+
+<h3>Assignment</h3>
+<p>None.</p>
+
+<h3>Sample Code</h3>
+<p>A peripheral writer. A device driver has been written to simulate the control of a peripheral writer. A user level application has been written
+  to open, close, write to, read from, and send IOCTL's to this driver. Reference material to parts of the code are embedded within the code.</p>
+<p>The Makefile for the kernel level driver can be found at <a href="peripheralWriter/kernel/Makefile" target="_blank">Makefile</a>.<br>
+  The source code for the kernel level driver can be found at <a href="peripheralWriter/kernel/peripheralWriter.h" target="_blank">peripheralWriter.h</a>
+  and <a href="peripheralWriter/kernel/peripheralWriter.c" target="_blank">peripheralWriter.c</a>.<br> A macro for inserting the module into the kernel
+can be found at <a href="peripheralWriter/kernel/load.sh" target="_blank">load.sh</a> and a macro for removing the module from the kernel can be found
+at <a href="peripheralWriter/kernel/unload.sh" target="_blank">unload.sh</a>.</p>
+<p>The Makefile for the user level application can be found at <a href="peripheralWriter/user/Makefile" target="_blank">Makefile</a>.<br>
+  The source code for the user level application can be found at <a href="peripheralWriter/user/userWriter.cpp" target="_blank">userWriter.cpp</a>.</p>
+  

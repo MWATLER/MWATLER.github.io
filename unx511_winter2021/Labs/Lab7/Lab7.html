@@ -1,0 +1,62 @@
+<h2>UNX511/DSP912 – Lab 7: Pipes Between Processes</h2>
+
+<h3>Due: Friday, March 26, 2021</h3>
+
+<p>In this lab you will create a program that will take two arguments, with the intention that the output of the first argument will be piped to the second argument.
+    This is done to simulate shell behaviour. Your program will be invoked as follows:<br>
+    $ <b>./Lab7 &lt;argument1&gt; &lt;argument2&gt;</b></p>
+    
+<p><b>&lt;argument1&gt;</b> and <b>&lt;argument2&gt;</b> could be one, two or three strings in length.<br>
+    If an argument is more than one string in length, it has to be put in quotes.</p>
+    
+<p>For instance, say you want to see if any syslog processes are running on your machine, you would type the following from the command line:<br>
+    $ <b>ps -aux | grep -i syslog</b></p>
+    
+<p>Your program should do the exact same thing if invoked as follows:<br>
+    $ <b>./Lab7 “ps -aux” “grep -i syslog”</b></p>
+    
+<p>where <b>&lt;argument1&gt;=”ps -aux”</b> and <b>&lt;argument2&gt;=”grep -i syslog”</b>.</p>
+    
+<p>The idea basically is to use <b>pipe()</b> in your code to pipe the output of one process (<b>&lt;argument1&gt;</b>) into the
+    input of the second process (<b>&lt;argument2&gt;</b>) and display the results on the screen.</p>
+    
+<p>You may have problems breaking up argument1 and/or argument2 into separate strings. Here is one way to do so:<br>
+<b>     const int LEN=32;<br><br>
+    
+        char argument1[LEN];<br>
+        char argument2[LEN];<br>
+        strcpy(argument1, argv[1]);<br>
+        strcpy(argument2, argv[2]);<br>
+        char arg1[3][LEN];//max 3 strings<br>
+        char arg2[3][LEN];//max 3 strings<br>
+        int len1=0, len2=0;<br><br>
+    
+        char *token=strtok(argument1, " ");<br>
+        while(token!=NULL) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;            strcpy(arg1[len1], token);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;            token=strtok(NULL, " ");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;            ++len1;<br>
+        }<br>
+        token=strtok(argument2, " ");<br>
+        while(token!=NULL) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;            strcpy(arg2[len2], token);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;            token=strtok(NULL, " ");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;            ++len2;<br>
+        }</b></p>
+
+<p>For assistance on this, please see the video:<br>
+    <a href="https://www.youtube.com/watch?v=pO1wuN3hJZ4" target="_blank">Pipe, fork, dup exec explained</a></p>
+
+<p>In your submission of Lab7.cpp, please answer the following questions in your own words:
+<ol>
+<li>How does dup() work?</li>
+<li>How does dup2() work?</li>
+<li>How does execlp() work?</li>
+</ol></p>
+
+<h3>Lab Submission:</h3>
+
+<p>Please embed your answers to the above questions in your <b>Lab7.cpp</b> and mail your <b>Lab7.cpp</b> and <b>Makefile</b> to:
+   <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+        
+<p><b>NB: My last name is Watler, not Walter.</b></p>

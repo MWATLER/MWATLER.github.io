@@ -1,0 +1,103 @@
+<h1>Week 2 - January 18-22</h1>
+
+<h3>Introduction</h3>
+<p>This week will be about Makefiles, static and shared libraries.</p>
+<h3>Videos</h3>
+<table>
+  <tr><td>Static and Shared Libraries</td><td><a href="https://www.youtube.com/watch?v=-vp9cFQCQCo" target="_blank">Linux static and shared libraries</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<ul>
+  <li><b>Quiz 1</b> (January 18).</li>
+</ul>
+
+<h3>Lecture Material</h3>
+<ul>
+  <li>Chapter 41 of <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>,
+    A Linux and UNIX System Programming Handbook, by Michael Kerrisk.</li>
+  <li>Program Library HOWTO: <a href="https://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html" target="_blank">Shared Libraries</a></li>  
+  <li><a href="MakefileCreation.docx" target="_blank">Makefile Creation</a></li>
+</ul>
+
+<h3>Lab</h3>
+<ul>
+  <li><a href="../Labs/Lab1/Lab1.html" target="_blank">Lab 1</a> (due January 29) - monitoring process memory usage.</li>
+</ul>
+
+<h3>Assignment</h3>
+<p>None.</p>
+
+<h3>Sample Code</h3>
+
+<p><em>Static Libraries</em></p>
+<ul>
+  <li>We looked at a <a href="static/MathLib/Makefile" target="_blank">Makefile</a> for building a static library libMath.a from the files
+    <a href="static/MathLib/General.cpp" target="_blank">General.cpp</a>,
+    <a href="static/MathLib/Geometry.cpp" target="_blank">Geometry.cpp</a>, and
+    <a href="static/MathLib/Conversions.cpp" target="_blank">Conversions.cpp</a>.
+    This Makefile also had an "install" rule to copy the static library along with the header files to a general place.
+    </li>
+    <li>We looked at a <a href="static/MathApp/Makefile" target="_blank">Makefile</a> for that links in the static library libMath.a
+    with its header files to build MathTest with the following CPP file:
+    <a href="static/MathApp/MathTest.cpp" target="_blank">MathTest.cpp</a>.
+    </li>
+  <li>To look at symbols in a static library we can use the <a href="https://linux.die.net/man/1/nm" target="_blank">nm</a> command:<br>
+  <b>$ nm libMath.a</b></li>
+  <li>To display the table of contents of an archive, we can use <b>ar tv</b>, where <b>t</b> represents the table of contents and <b>v</b> indicates verbose:<br>
+  <b>$ ar tv libMath.a</b></li>
+</ul>
+
+<p><em>Shared Libraries</em></p>
+<ul>
+  <li>This <a href="shared/MathLib/Makefile" target="_blank">Makefile</a>
+    creates a shared library from the following files:
+    <a href="shared/MathLib/General.cpp" target="_blank">General.cpp</a>,
+    <a href="shared/MathLib/Geometry.cpp" target="_blank">Geometry.cpp</a>, and
+    <a href="shared/MathLib/Conversions.cpp" target="_blank">Conversions.cpp</a>.
+    This Makefile also had an "install" rule to copy the shared library to /usr/local/lib and the header files to a common place.
+    <b>ldconfig</b> has to be executed on the command line to tell the system that the shared library is ready for use by everyone.
+    </li>
+    <li>And this <a href="shared/MathApp/Makefile" target="_blank">Makefile</a> links in a shared library libMath.so
+    with its header files to build the MathTest executable with the following CPP file:
+    <a href="shared/MathApp/MathTest.cpp" target="_blank">MathTest.cpp</a>.
+    </li>
+    <li>To look at the dynamic dependencies within a shared library we can use the <a href="https://man7.org/linux/man-pages/man1/ldd.1.html" target="_blank">ldd</a> command:<br>
+    <b>$ ldd libMath.so</b></li>
+    <li>Shared libraries are often collections of other shared libraries, but if there are any functions defined within a shared library, they can also be seen with
+      the <a href="https://linux.die.net/man/1/nm" target="_blank">nm</a> command.</li>
+    <li>After a shared library is created, it must be made available to the entire system. This can be achieved with
+      the <a href="https://man7.org/linux/man-pages/man8/ldconfig.8.html" target="_blank">ldconfig</a> command.</li>
+  </ul>
+
+<p><em>Static Libraries vs Shared Libraries</em></p>
+<p>Because  they  provide  several  advantages  over  static  libraries,  shared  libraries are  the  predominant  type  of  library  in  use
+  on  contemporary  UNIX  systems.  The advantages of shared libraries spring primarily from the fact that when a program is linked against the
+  library, copies of the object modules required by the program are  not  included  in  the  resulting  executable.  Instead,  the  (static)
+  linker  merely includes  information  in  the  executable  file  about  the  shared  libraries  that  are required at run time. When the file
+  is executed, the dynamic linker uses this information  to  load  the  required  shared  libraries.  At  run  time,  all  programs  using
+  the same  shared  library  share  a  single  copy  of  that  library  in  memory.  Since  shared libraries are not copied into executable
+  files, and a single memory-resident copy of the  shared  library  is  employed  by  all  programs  at  run  time,  shared  libraries
+  reduce the amount of disk space and memory required by the system</p>
+<p>Although it is almost always preferable to use shared libraries, there are occasional
+  situations  where  static  libraries  may  be  appropriate.  In  particular,  the  fact  that  a
+  statically linked application contains all of the code that it requires at run time can
+  be advantageous. For example, static linking is  useful  if  the  user  can’t,  or  doesn’t
+  wish to, install a shared library on the system where the program is to be used, or if
+  the  program  is  to  be  run  in  an  environment  (perhaps  a  chroot  jail,  for  example)
+  where  shared  libraries  are  unavailable.  In  addition,  even  a  compatible  shared
+  library upgrade may unintentionally introduce a bug that breaks an application. By
+  linking an application statically, we can ensure that it is immune to changes in the
+  shared libraries on a system and that it has all of the code it requires to run (at the
+  expense  of  a  larger  program  size,  and  consequent  increased  disk  and  memory
+  requirements).</p>
+
+<p><em>SDL Graphics Library</em></p>
+<ul>
+  <li>If you would like to have some fun, take a look at some code that uses the SDL graphics library. Before running this code, you have to
+    install SDL on your Linux machine. See instructions in <a href="graphics/SDL.txt" target="_blank">SDL.txt</a>.<br>
+    The Makefile for the graphics application can be found at <a href="graphics/Makefile" target="_blank">Makefile</a>
+    and the source code can be found at <a href="graphics/drawRect.cpp" target="_blank">drawRect.cpp</a>.<br>
+    The code uses many concepts not yet covered in this class such as signals, threads and mutexes.
+  </li>
+</ul>

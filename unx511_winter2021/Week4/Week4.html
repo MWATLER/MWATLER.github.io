@@ -1,0 +1,71 @@
+<h1>Week 4 - February 1-5</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look at advanced file I/O with dup() and dup2(). We will also look at some more debugging methods.
+</p>
+
+<h3>Videos</h3>
+<table><tr><td></td><td>dup(), dup2()</td><td><a href="https://www.youtube.com/watch?v=EqndHT606Tw" target="_blank">Linux file dup(), dup2()</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=GB01KM1JH7k" target="_blank">Linux file dup(), dup2() cont'd</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<ul>
+  <li><b>Quiz 3</b> (February 1) will be on dup() as well as reading and writing with an offset. Study Chapter 5 of
+    <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+</ul>
+
+<h3>Lecture Material</h3>
+<ul>
+    <li>File I/O further details, duplicating file descriptors - Chapter 5 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a></li>
+</ul>
+
+<h3>Labs</h3>
+<ul>
+  <li><a href="../Labs/Lab2/Lab2.html" target="_blank">Lab 2</a> (due February 5) - using a static library.</li>
+  <li><a href="../Labs/Lab3/Lab3.html" target="_blank">Lab 3</a> (due February 12) - I/O control.</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p>None.</p>
+
+<h3>Sample Code</h3>
+
+<p><em>Advanced File I/O</em></p>
+<ul>
+    <li>Advanced file i/o features are covered, such as dup(), dup2(), fcntl(), more flags, reading and writing with an offset, reading and writing an entire structure,...</li>
+    <li>The source code for a file which redirects the standard error channel via <a href="http://man7.org/linux/man-pages/man2/dup.2.html" target="_blank">dup() and dup2()</a> can be found in <a href="dup/fileDup.cpp" target="_blank">fileDup.cpp</a></li>
+    <li>Files that exercise the various file flags via <a href="http://man7.org/linux/man-pages/man2/fcntl.2.html" target="_blank">fcntl()</a> and demonstrates race conditions can be seen in the files <a href="race/race1.cpp" target="_blank">race1.cpp</a>, <a href="race/race2.cpp" target="_blank">race2.cpp</a> and <a href="race/fcntl.cpp" target="_blank">fcntl.cpp</a>. A script to run all three appears in the file <a href="race/runRace.sh" target="_blank">runRace.sh</a>. Here is the <a href="race/Makefile" target="_blank">Makefile</a> for all three.</li>
+    <li>To see how to set and unset flags with C/C++, see
+    <a href="SetUnsetBit.docx" target="_blank">SetUnsetBit.docx</a></li>
+    <li>A file that exercises reading and writing with an offset via <a href="http://man7.org/linux/man-pages/man2/pwrite.2.html" target="_blank">pread() and pwrite()</a> can be found in <a href="offset/offset.cpp" target="_blank">offset.cpp</a> along with its <a href="offset/Makefile" target="_blank">Makefile</a>.</li>
+    <li>An example of reading and writing an entire structure to a file via <a href="http://man7.org/linux/man-pages/man2/readv.2.html" target="_blank">readv() and writev()</a> can be found in the file <a href="car/car.cpp" target="_blank">car.cpp</a> along with its <a href="car/Makefile" target="_blank">Makefile</a>.</li>
+    <li>Sockets are introduced. For a good tutorial, see <a href="http://www.linuxhowtos.org/C_C++/socket.htm" target="_blank">Sockets Tutorial</a>. Here the client server model is introduced.</li>
+    <li>Source code for the client, server and for the makefile can be found at <a href="clientServer/client1.cpp" target="_blank">client1.cpp</a>, <a href="clientServer/server.cpp" target="_blank">server.cpp</a>, and <a href="clientServer/Makefile" target="_blank">Makefile</a>.</li>
+    <li>We continue our study of IOCTL's through a look at the <a href="http://man7.org/linux/man-pages/man7/netdevice.7.html" target="_blank">netdevice</a> low-level access to Linux network devices.
+    A description of how to get the MAC address of an ethernet interface can be found at
+    <a href="http://www.microhowto.info/howto/get_the_mac_address_of_an_ethernet_interface_in_c_using_siocgifhwaddr.html" target="_blank">MicroHOWTO</a>.</li>
+    <li>We look at an application <a href="ethernet/etherCtrl2.cpp" target="_blank">etherCtrl2.cpp</a> which retrieves the Hardware address, the Maximum Transfer Unit (MTU) and the Interface flags of a network interface. This will assist with Lab3 where you have to also get the IP address, netmask, and broadcast address of a network interface.</li>
+</ul>
+
+<p><em>Real-time Debugging with cerr</em></p>
+<ul>
+<li>For real time operations, it is not possible to halt your program and look at the values of your variables. Rather, you print debug data to a file while
+your program is running, and you watch that file. One method of monitoring that debug file is with the system command <b>tail - f</b>. Therefore,
+you redirect all data to <b>cerr</b> to a debug file (ie <b>ErrorLog.txt</b>) and you watch that file in a separate window.
+Be sure to enable a debug flag in your <b>Makefile</b> (ie <b>DEBUG</b>) and use it in your code. Your code can
+therefore run in debug mode (<b>DEBUG</b> is enabled in the <b>Makefile</b>) or normal mode (<b>DEBUG</b> is disabled in the <b>Makefile</b>).<br><br>
+    Source code that was used to demonstrate real-time debugging with cerr can be found at
+    <a href="debug/Makefile" target="_blank">Makefile</a>,
+    <a href="debug/Math.cpp" target="_blank">Math.cpp</a>,
+    <a href="debug/Math.h" target="_blank">Math.h</a>,
+    <a href="debug/Conversions.cpp" target="_blank">Conversions.cpp</a>,
+    <a href="debug/Conversions.h" target="_blank">Conversions.h</a>,
+    <a href="debug/General.cpp" target="_blank">General.cpp</a>,
+    <a href="debug/General.h" target="_blank">General.h</a>,
+    <a href="debug/Geometry.cpp" target="_blank">Geometry.cpp</a>,
+    <a href="debug/Geometry.h" target="_blank">Geometry.h</a>.<br>
+    In this source code the function <b>CelsiusToFahrenheit</b> was made to crash when the flag <b>CRASH</b> was enabled in the <b>Makefile</b>.<br>
+    The real time debug mode was set when the flag <b>DEBUG</b> was enabled  in the <b>Makefile</b>. Debug exists in <b>Math.cpp</b> and <b>Conversions.cpp</b> only.
+</li>
