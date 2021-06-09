@@ -51,18 +51,30 @@ function SetContent(content) {
         elem=document.querySelector('#Assignment1');
     } else if(content=='Assignment2') {
         elem=document.querySelector('#Assignment2');
-    } else if(content=='Week1') {
-        elem=document.querySelector('#Week1');
-    } else if(content=='Week2') {
-        elem=document.querySelector('#Week2');
-    } else if(content=='Week3') {
-        elem=document.querySelector('#Week3');
-    } else if(content=='Week4') {
-        elem=document.querySelector('#Week4');
-    } else if(content=='Week5') {
-        elem=document.querySelector('#Week5');
-    } else if(content=='Week6') {
-        elem=document.querySelector('#Week6');
+    } else if(content=='Week1a') {
+        elem=document.querySelector('#Week1a');
+    } else if(content=='Week1b') {
+        elem=document.querySelector('#Week1b');
+    } else if(content=='Week2a') {
+        elem=document.querySelector('#Week2a');
+    } else if(content=='Week2b') {
+        elem=document.querySelector('#Week2b');
+    } else if(content=='Week3a') {
+        elem=document.querySelector('#Week3a');
+    } else if(content=='Week3b') {
+        elem=document.querySelector('#Week3b');
+    } else if(content=='Week4a') {
+        elem=document.querySelector('#Week4a');
+    } else if(content=='Week4b') {
+        elem=document.querySelector('#Week4b');
+    } else if(content=='Week5a') {
+        elem=document.querySelector('#Week5a');
+    } else if(content=='Week5b') {
+        elem=document.querySelector('#Week5b');
+    } else if(content=='Week6a') {
+        elem=document.querySelector('#Week6a');
+    } else if(content=='Week6b') {
+        elem=document.querySelector('#Week6b');
     }
     if(elem!=undefined) {
         SetActive(elem);
