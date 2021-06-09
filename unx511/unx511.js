@@ -63,22 +63,6 @@ function SetContent(content) {
         elem=document.querySelector('#Week5');
     } else if(content=='Week6') {
         elem=document.querySelector('#Week6');
-    } else if(content=='Week7') {
-        elem=document.querySelector('#Week7');
-    } else if(content=='Week8') {
-        elem=document.querySelector('#Week8');
-    } else if(content=='Week9') {
-        elem=document.querySelector('#Week9');
-    } else if(content=='Week10') {
-        elem=document.querySelector('#Week10');
-    } else if(content=='Week11') {
-        elem=document.querySelector('#Week11');
-    } else if(content=='Week12') {
-        elem=document.querySelector('#Week12');
-    } else if(content=='Week13') {
-        elem=document.querySelector('#Week13');
-    } else if(content=='Week14') {
-        elem=document.querySelector('#Week14');
     }
     if(elem!=undefined) {
         SetActive(elem);
