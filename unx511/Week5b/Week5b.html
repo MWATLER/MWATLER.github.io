@@ -1,8 +1,9 @@
 <h1>Week 5 - August 2-6</h1>
 
 <h3>Introduction</h3>
-<p>This week we are going to study message queues.
-    We are then going to do a comparison between all four IPC methods studied so far (sockets, pipes, fifos and message queues).
+<p>This week we are going to study message queues and semaphores.
+   Semaphores provide us with a synchronization mechanism to protect shared resources used by multiple processes.
+    We are also going to look at a comparison between all four IPC methods studied so far (sockets, pipes, fifos and message queues).
 </p>
 
 <h3>Videos</h3>
@@ -10,11 +11,13 @@
     <tr><td></td><td>Message Queues</td><td><a href="https://www.youtube.com/watch?v=pAWrgEObYjk" target="_blank">Message Queues</a></td></tr>
     <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=JbmOegG9-J0" target="_blank">Message Queue - IPC Mechanism</a></td></tr>
     <tr><td></td><td>Sockets vs Queues</td><td><a href="https://www.youtube.com/watch?v=uadd_qxqd5Y" target="_blank">Research Socket overhead in Linux vs Message Queues and benchmarking</a></td></tr>   
+    <tr><td></td><td>Semaphores</td><td><a href="https://www.youtube.com/watch?v=6heMm23ofFo" target="_blank">Intro To Computer Systems: Semaphores Explained</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=TYnNKdf7cZM" target="_blank">C Programming in Linux Tutorial #046 - Semaphore pthread</a></td></tr>
 </table>
 
 <h3>Quiz</h3>
 <ul>
-    <li><b>Quiz 8</b> (August 5) will be on message queues. Study chapter 46 of
+    <li><b>Quiz 9</b> (August 5) will be on message queues. Study chapter 46 of
         <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
 </ul>
 
@@ -25,6 +28,8 @@
     <li>Interprocess Communication Overview - Chapter 43 of
         <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
     <li><a href="comparison/ComparingIPC.pdf" target="_blank">Comparing and Evaluating the Performance of Inter Process Communication Models in Linux Environment</a>.</li>
+    <li>Semaphores - Chapter 53 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
 </ul>
 
 <h3>Labs</h3>
@@ -73,39 +78,28 @@
 
 <p><em>Inter-process communication, a comparison</em></p>
 <ul>
-    <li>So far we have studied inter-process communication with pipes, fifos, sockets and messages.
-        A comparison of their relative performance has been carried out.
-        The performance parameter tested is the time to send 5 million messages of 26 characters each (the alphabet) from client to server or from one client to another.
-        The test will show that there is very little difference in performance from one IPC to another.<br>
-        Code for testing the performance of fifos can be found at
-        <a href="comparison/fifo/fifo1.cpp" target="_blank">fifo1.cpp</a>,
-        <a href="comparison/fifo/fifo2.cpp" target="_blank">fifo2.cpp</a> with its
-        <a href="comparison/fifo/Makefile" target="_blank">Makefile</a>.<br>
-        Code for testing the performance of pipes can be found at
-        <a href="comparison/pipe/pipe.cpp" target="_blank">pipe.cpp</a> with its
-        <a href="comparison/pipe/Makefile" target="_blank">Makefile</a>.<br>
-        Code for testing the performance of message queues can be found at
-        <a href="comparison/message/client1.cpp" target="_blank">client1.cpp</a>,
-        <a href="comparison/message/client2.cpp" target="_blank">client2.cpp</a> with its
-        <a href="comparison/message/Makefile" target="_blank">Makefile</a>.<br>
-        Code for testing the performance of unix stream sockets can be found at
-        <a href="comparison/socket/stream/server.cpp" target="_blank">server.cpp</a>,
-        <a href="comparison/socket/stream/client.cpp" target="_blank">client.cpp</a> with its
-        <a href="comparison/socket/stream/Makefile" target="_blank">Makefile</a>.<br>
-        Code for testing the performance of inet datagram sockets can be found at
-        <a href="comparison/socket/datagram/msgServer.cpp" target="_blank">msgServer.cpp</a>,
-        <a href="comparison/socket/datagram/msgClient.cpp" target="_blank">msgClient.cpp</a> with its
-        <a href="comparison/socket/datagram/Makefile" target="_blank">Makefile</a>.<br>
-        If we increase the buffer sizes, both stream and datagram sockets are much faster.
-        Code for testing the performance of unix stream sockets with large buffer sizes can be found at
-        <a href="comparison/socket/stream2/server.cpp" target="_blank">server.cpp</a>,
-        <a href="comparison/socket/stream2/client.cpp" target="_blank">client.cpp</a> with its
-              
-        <a href="comparison/socket/stream2/Makefile" target="_blank">Makefile</a>.<br>
-        Code for testing the performance of inet datagram sockets with large buffer sizes can be found at
-        <a href="comparison/socket/datagram2/msgServer.cpp" target="_blank">msgServer.cpp</a>,
-        <a href="comparison/socket/datagram2/msgClient.cpp" target="_blank">msgClient.cpp</a> with its
-        <a href="comparison/socket/datagram2/Makefile" target="_blank">Makefile</a>.<br>
+        <li>See the publication <a href="comparison/ComparingIPC.pdf" target="_blank">Comparing and Evaluating the Performance of Inter Process Communication Models in Linux Environment</a>.</li>    
+</ul>
+
+<p><em>Semaphores</em></p>
+<ul>
+    <li>Code that demonstrates non-named semaphores can be found in
+        <a href="sem_init/client1.cpp" target="_blank">client1.cpp</a> and
+        <a href="sem_init/client2.cpp" target="_blank">client2.cpp</a> with their
+        <a href="sem_init/Makefile" target="_blank">Makefile</a>.
         </li>
-        <li>See also the publication <a href="comparison/ComparingIPC.pdf" target="_blank">Comparing and Evaluating the Performance of Inter Process Communication Models in Linux Environment</a>.</li>    
+        <li>Code that demonstrates named semaphores that can be used across two processes can be found in
+        <a href="sem_open/client.h" target="_blank">client.h</a>,
+        <a href="sem_open/client1.cpp" target="_blank">client1.cpp</a> and
+        <a href="sem_open/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="sem_open/Makefile" target="_blank">Makefile</a>.
+    </li>
+    <li>Code that restricts access to a data base using named semaphores between three processes can be found in
+        <a href="dataBase/client.h" target="_blank">client.h</a>,
+        <a href="dataBase/dataBase.cpp" target="_blank">dataBase.cpp</a>,
+        <a href="dataBase/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="dataBase/client2.cpp" target="_blank">client2.cpp</a> and
+        <a href="dataBase/client3.cpp" target="_blank">client3.cpp</a> with its
+        <a href="dataBase/Makefile" target="_blank">Makefile</a>.
+    </li>
 </ul>

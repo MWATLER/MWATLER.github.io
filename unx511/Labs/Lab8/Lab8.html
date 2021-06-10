@@ -1,87 +1,62 @@
-<h2>UNX511/DSP912 – Lab 8: Client/Server with Messaging</h2>
+<h2>UNX511/DSP912 – Lab 8: Pipes Between Processes</h2>
 
-<h3>Due: Friday, April 2, 2021</h3>
+<h3>Due: Friday, August 6, 2021</h3>
 
-<p>In this lab you will create a server (<b>server.cpp</b>) that communicates with three clients (<b>client1.cpp</b>, <b>client2.cpp</b> and <b>client3.cpp</b>) using one
-    message queue. The client code for all three clients has been given to you along with the Makefile, a start-up script, and a stop script in
-    case you have to manually stop the server and all the clients. You can retrieve all of these from the following links:<br>
-    <a href="https://scs.senecac.on.ca/~miguel.watler/courses/unx511/Labs/Lab7/client1.cpp" target="_blank">client1.cpp</a>,<br>
-    <a href="https://scs.senecac.on.ca/~miguel.watler/courses/unx511/Labs/Lab7/client2.cpp" target="_blank">client2.cpp</a>,<br>
-    <a href="https://scs.senecac.on.ca/~miguel.watler/courses/unx511/Labs/Lab7/client3.cpp" target="_blank">client3.cpp</a>,<br>
-    <a href="https://scs.senecac.on.ca/~miguel.watler/courses/unx511/Labs/Lab7/client.h" target="_blank">client.h</a>,<br>
-    <a href="https://scs.senecac.on.ca/~miguel.watler/courses/unx511/Labs/Lab7/Makefile" target="_blank">Makefile</a>,<br>
-    <a href="https://scs.senecac.on.ca/~miguel.watler/courses/unx511/Labs/Lab7/startClient.sh" target="_blank">startClient.sh</a>,<br>
-    <a href="https://scs.senecac.on.ca/~miguel.watler/courses/unx511/Labs/Lab7/stop.sh" target="_blank">stop.sh</a>.</p>
+<p>In this lab you will create a program that will take two arguments, with the intention that the output of the first argument will be piped to the second argument.
+    This is done to simulate shell behaviour. Your program will be invoked as follows:<br>
+    $ <b>./Lab7 &lt;argument1&gt; &lt;argument2&gt;</b></p>
     
-<p>Your server and clients will be passing messages as defined in the structure <b>Message</b> as seen in <b>client.h</b>:<br>
-    <b>const int BUF_LEN=64;</b></p>
+<p><b>&lt;argument1&gt;</b> and <b>&lt;argument2&gt;</b> could be one, two or three strings in length.<br>
+    If an argument is more than one string in length, it has to be put in quotes.</p>
     
-<p><b> // structure for message queue<br>
-    typedef struct mesg_buffer {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;        long source;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;        long dest;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;        char buf[BUF_LEN];<br>
-    } MesgBuffer;<br><br>
+<p>For instance, say you want to see if any syslog processes are running on your machine, you would type the following from the command line:<br>
+    $ <b>ps -aux | grep -i syslog</b></p>
     
-    typedef struct mymsg {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;        long mtype; /* Message type */<br>
-&nbsp;&nbsp;&nbsp;&nbsp;        MesgBuffer msgBuf;<br>
-    } Message;</b></p>
+<p>Your program should do the exact same thing if invoked as follows:<br>
+    $ <b>./Lab7 “ps -aux” “grep -i syslog”</b></p>
     
-<p>Your server will receive on message type (<b>mtype</b>) 4 but will transmit on one of three message types depending on the destination of the message.
-    If the message is for client 1, then the server sets the message type to 1. If the message is for client 2, then the message type is set to 2.
-    If the message is for client 3, then the message type is set to 3. This means client 1 filters all messages of message type 1, client 2 of
-    message type 2, and client 3 of message type 3.</p>
+<p>where <b>&lt;argument1&gt;=”ps -aux”</b> and <b>&lt;argument2&gt;=”grep -i syslog”</b>.</p>
     
-<p>Your message buffer (<b>msgBuf</b>) will consist of a client source (<b>source</b>), client destination (<b>dest</b>), and a message (<b>buf[]</b>).
-    The client source is the client that is sending the message. The client destination is the client which is receiving the message.</p>
+<p>The idea basically is to use <b>pipe()</b> in your code to pipe the output of one process (<b>&lt;argument1&gt;</b>) into the
+    input of the second process (<b>&lt;argument2&gt;</b>) and display the results on the screen.</p>
     
-<p>The server will act as a dispatcher of the messages. That is, all clients will send their messages to the server for distribution. When a
-    server receives a message, it must eventually extract the destination of the message and send it to the destination client.</p>
+<p>You may have problems breaking up argument1 and/or argument2 into separate strings. Here is one way to do so:<br>
+<b>     const int LEN=32;<br><br>
     
-<p>The key for communication between server and clients is as follows:<br>
-    <b>Server/Client1, Client2, Client3: key=ftok(“serverclient”, 65);</b></p>
+        char argument1[LEN];<br>
+        char argument2[LEN];<br>
+        strcpy(argument1, argv[1]);<br>
+        strcpy(argument2, argv[2]);<br>
+        char arg1[3][LEN];//max 3 strings<br>
+        char arg2[3][LEN];//max 3 strings<br>
+        int len1=0, len2=0;<br><br>
     
-<p>Study the client code to see how message reads and writes are performed. Reads are performed in a read thread (<b>recv_func</b>) and writes
-    are performed from <b>main()</b>. Both reads and writes are performed within an infinite <b>while-loop</b> with <b>is_running</b> as the condition flag
-    in both cases. Note that the messages are queued and mutex protected. Note also that your clients perform a controlled shutdown on ctrl-C.</p>
-    
-<p>For your server, the requirements are as follows:
-<ul>
-<li>Your server must perform a controlled shutdown on ctrl-C.</li>
-<li>Your server must store the key for communication with all clients as specified above and as follows:
-    <ul><li><b>Server/Client1, Client2, Client3: key=ftok(“serverclient”, 65);</b></li></ul></li>
-<li>The server should have one message queue for all clients:
-    <ul><li><b>queue&lt;Message&gt; message;</b></li></li></ul></li>
-<li>The server should protect the message queue with a mutex:
-    <ul><li><b>pthread_mutex_t lock_x;</b></li></ul></li>
-<li>The server should have one receive thread where it receives messages from all clients:
-    <ul><li><b>void *recv_func(void *arg);</b></li></ul></li>
-<li>The server can perform writes in <b>main()</b> or in a separate write thread if you wish.</li>
-<li>The server’s receive thread will simply push the message into a message queue. Be sure to protect the message queue with mutexes since it will be used in both the read and the write.</li>
-<li>The server’s message write will pop a message from the message queue, extract the destination client from the message and forward the message to that destination client. Be sure to mutex
-    the message queue when popping.</li>
-<li>On ctrl-C, the server’s condition flag <b>is_running</b> will be set to false, and both the reading and writing will quit. When the write loop exits,
-    be sure to send a “Quit” message to each client and then destroy the queue. Be sure also to join the read thread with <b>main()</b> before exiting <b>main()</b>.</li>
-</ul>
-</p>
-    
-<p>In testing your work, it might help to isolate each client. For instance, if you want to see messages received by client3, use the following from the command line to start the clients:<br>
-    
-    <b>$ ./startClient.sh | grep 'client 3:'</b></p>
-    
-    <p><u>Questions</u>:<br>
-    Compare and contrast the mechanisms of inter-process communication that you have studied so far.
-    <ol>
-    <li>Between sockets, pipes, fifos, and messages, which is your favorite and why?</li>
-    <li>Which is your least favorite and why?</li>
-    <li>For the scenario presented in this lab, is there a need for a server? Why?</li>
-    </ol>
-    </p>
+        char *token=strtok(argument1, " ");<br>
+        while(token!=NULL) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;            strcpy(arg1[len1], token);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;            token=strtok(NULL, " ");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;            ++len1;<br>
+        }<br>
+        token=strtok(argument2, " ");<br>
+        while(token!=NULL) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;            strcpy(arg2[len2], token);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;            token=strtok(NULL, " ");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;            ++len2;<br>
+        }</b></p>
 
-    <h3>Lab Submission:</h3>
+<p>For assistance on this, please see the video:<br>
+    <a href="https://www.youtube.com/watch?v=pO1wuN3hJZ4" target="_blank">Pipe, fork, dup exec explained</a></p>
 
-    <p>Please embed your answers to the questions in <b>server.cpp</b> and mail your <b>server.cpp</b> to:
-       <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
-            
-    <p><b>NB: My last name is Watler, not Walter.</b></p>
+<p>In your submission of Lab7.cpp, please answer the following questions in your own words:
+<ol>
+<li>How does dup() work?</li>
+<li>How does dup2() work?</li>
+<li>How does execlp() work?</li>
+</ol></p>
+
+<h3>Lab Submission:</h3>
+
+<p>Please embed your answers to the above questions in your <b>Lab7.cpp</b> and mail your <b>Lab7.cpp</b> and <b>Makefile</b> to:
+   <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+        
+<p><b>NB: My last name is Watler, not Walter.</b></p>

@@ -1,62 +1,89 @@
-<h2>UNX511/DSP912 – Lab 7: Pipes Between Processes</h2>
+<h2>DPS912 – Lab 7: Server with Multiple Clients and a Receive Thread with Mutexing</h2>
 
-<h3>Due: Friday, March 26, 2021</h3>
+<h3>Due: Wednesday, August 4. 2021</h3>
 
-<p>In this lab you will create a program that will take two arguments, with the intention that the output of the first argument will be piped to the second argument.
-    This is done to simulate shell behaviour. Your program will be invoked as follows:<br>
-    $ <b>./Lab7 &lt;argument1&gt; &lt;argument2&gt;</b></p>
-    
-<p><b>&lt;argument1&gt;</b> and <b>&lt;argument2&gt;</b> could be one, two or three strings in length.<br>
-    If an argument is more than one string in length, it has to be put in quotes.</p>
-    
-<p>For instance, say you want to see if any syslog processes are running on your machine, you would type the following from the command line:<br>
-    $ <b>ps -aux | grep -i syslog</b></p>
-    
-<p>Your program should do the exact same thing if invoked as follows:<br>
-    $ <b>./Lab7 “ps -aux” “grep -i syslog”</b></p>
-    
-<p>where <b>&lt;argument1&gt;=”ps -aux”</b> and <b>&lt;argument2&gt;=”grep -i syslog”</b>.</p>
-    
-<p>The idea basically is to use <b>pipe()</b> in your code to pipe the output of one process (<b>&lt;argument1&gt;</b>) into the
-    input of the second process (<b>&lt;argument2&gt;</b>) and display the results on the screen.</p>
-    
-<p>You may have problems breaking up argument1 and/or argument2 into separate strings. Here is one way to do so:<br>
-<b>     const int LEN=32;<br><br>
-    
-        char argument1[LEN];<br>
-        char argument2[LEN];<br>
-        strcpy(argument1, argv[1]);<br>
-        strcpy(argument2, argv[2]);<br>
-        char arg1[3][LEN];//max 3 strings<br>
-        char arg2[3][LEN];//max 3 strings<br>
-        int len1=0, len2=0;<br><br>
-    
-        char *token=strtok(argument1, " ");<br>
-        while(token!=NULL) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;            strcpy(arg1[len1], token);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;            token=strtok(NULL, " ");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;            ++len1;<br>
-        }<br>
-        token=strtok(argument2, " ");<br>
-        while(token!=NULL) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;            strcpy(arg2[len2], token);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;            token=strtok(NULL, " ");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;            ++len2;<br>
-        }</b></p>
+<p><b>NB:</b> Due to the length and complexity of this lab, this lab will be considered as two labs. Meaning, this lab is worth <b>2&percnt;</b> of your final mark.</p>
 
-<p>For assistance on this, please see the video:<br>
-    <a href="https://www.youtube.com/watch?v=pO1wuN3hJZ4" target="_blank">Pipe, fork, dup exec explained</a></p>
+<p>In this lab you will create a server (<b>server.cpp</b>) that communicates with three clients using a receive thread for each. The client code has been
+    given to you along with the Makefile, a start-up script, and a stop script in case you have to manually stop all the clients. You can retrieve
+    these from the following links:<br>
+<a href="https://scs.senecac.on.ca/~miguel.watler/courses/unx511/Labs/Lab8/client.cpp" target="_blank">client.cpp</a>,<br>
+<a href="https://scs.senecac.on.ca/~miguel.watler/courses/unx511/Labs/Lab8/Makefile" target="_blank">Makefile</a>,<br>
+<a href="https://scs.senecac.on.ca/~miguel.watler/courses/unx511/Labs/Lab8/startClient.sh" target="_blank">startClient.sh</a>,<br>
+<a href="https://scs.senecac.on.ca/~miguel.watler/courses/unx511/Labs/Lab8/stopClient.sh" target="_blank">stopClient.sh</a>.</p>
 
-<p>In your submission of Lab7.cpp, please answer the following questions in your own words:
+<p>Your server will use non-blocking stream sockets in the internet domain. Your socket will bind to the <b>localhost</b> (<b>127.0.0.1</b>)
+and the port number will be specified from the command line. For instance, if you want to use port 1153, you would start your server and clients with:<br>
+<b>$ ./server 1153<br>
+$ ./startClient.sh 1153</b><br>
+Be sure to start your server first. You will probably want to start your clients in another window.<br>
+<b>startClient.sh</b> will start three clients with a 1 second delay between each.</p>
+
+<p>Once your socket is bound, you will listen for connections. Be sure to distinguish between the master file descriptor and the connection file descriptors
+for each of the clients. You will have one master file descriptor for listening and accepting, but three connection file descriptors for each of the three clients.</p>
+
+<p>Once a client connects, you will start off a <b>receive thread</b> to service all socket reads from this client. In this way you avoid using the <b>select()</b>function.
+Be sure to pass through the connection file descriptor for that client to the thread as a parameter. This means your socket reads and writes are no longer
+synchronized as before. They are asynchronous. You will perform socket writes from your <b>main()</b> function and socket reads from your <b>receive
+threads</b>.
+
+<p>The <b>receive thread</b> will change the options of its connection socket to set a read timeout of 5 seconds. Documentation on how to do this can be found at:<br>
+    <a href="https://linux.die.net/man/2/setsockopt" target="_blank">setsockopt - Linux man page</a>,<br>Chapter 61 page 624 of the text
+    <a href="https://ict.senecacollege.ca/~miguel.watler/courses/unx511/Advanced%20Programming%20in%20the%20UNIX%20Environment%203rd%20Edition.pdf" target="_blank">Advanced Programming in the UNIX Environment</a>, and<br>
+    the article <a href="https://stackoverflow.com/questions/2876024/linux-is-there-a-read-or-recv-from-socket-with-timeout" target="_blank">Linux: is there a read or recv from socket with timeout?</a>.</p>
+
+<p>Since communications are now asynchronous, the server does not have to instruct the client to send data. As
+soon as the client connects to the server, the client will start sending data (see client.cpp).</p>
+
+<p>When a client sends text to the server, the server will read the data in its <b>receive thread</b> and push
+it into a message queue. The message queue could be of type:<br>
+<b>queue&lt;string&gt; message;</b></p>
+
+<p>The <b>main()</b> function, in its infinite while-loop, will test for new connections with a non-blocking call to <b>accept()</b>, and write the contents
+of the message queue to the screen if there is anything in the message queue. If the queue is empty, <b>main()</b> will sleep for 1 second and check the
+queue size again. Be sure to pop the message off the message queue once you have written it to the screen.</p>
+
+<p>The infinite while loop (conditioned on <b>is_running</b>) in <b>main()</b> should look something like this:<br>
+<ul>
+    <li>Have we accepted all clients?</li>
+    <ul>
+        <li>If not, call <b>accept()</b>. Since the master socket file is non-blocking, <b>accept()</b> will not halt the code if no client wishes to connect.</li>
+        <li>If a client wishes to connect, create a thread for that client, passing through the connection file descriptor and increment the number of clients.</li>
+    </ul>
+    <li>Print out to the screen anything in the message queue. Be sure to mutex this message queue since it is used in the receive thread as well.</li>
+    <li>Sleep for one second.</li>
+</ul>
+
+</p>
+
+<p>The receive thread should look like this (the same code can be used for all three clients):<br>
+<ul>
+    <li>Extract the connection file descriptor from the argument passed to the receive thread.</li>
+    <li>Use <b>setsockopt()</b> to set the read timeout to 5 seconds.</li>
+    <li>Enter infinite while loop conditioned on the variable <b>is_running</b>.</li>
+    <ul>
+        <li>If there is something on the read, add it to the message queue. Be sure to mutex this message queue since it is used in <b>main()</b> as well.</li>
+        <li>Note that read should block for a maximum of five seconds.</li>
+    </ul>
+</ul>
+</p>
+
+<p>The communications stop when a ctrl-C is issued to the server. The signal handler for the server will set <b>is_running</b>
+to <b>false</b> causing the infinite while-loops in the <b>receive thread</b> and in <b>main()</b> to end. The server in its <b>main()</b>
+function will then send <b>“Quit”</b> to each client, close all connections, and exit. The clients will interpret <b>“Quit”</b> to mean
+it is time to finish and they will shutdown as well. Be sure to join the <b>receive threads</b> to <b>main()</b> before <b>main()</b> exits
+and be sure to close all connection file descriptors, as well as the master file descriptor.</p>
+
+<p><u>Questions</u>
 <ol>
-<li>How does dup() work?</li>
-<li>How does dup2() work?</li>
-<li>How does execlp() work?</li>
-</ol></p>
+    <li>What is the difference between synchronous and asynchronous communication?</li>
+    <li>Do you prefer socket reads in a receive thread or do you prefer both socket read and write to be in the main() function? Why?</li>
+</ol>
+</p>
 
 <h3>Lab Submission:</h3>
 
-<p>Please embed your answers to the above questions in your <b>Lab7.cpp</b> and mail your <b>Lab7.cpp</b> and <b>Makefile</b> to:
+<p>Please embed your answers to the questions in <b>server.cpp</b> and mail your <b>server.cpp</b> to:
    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
         
 <p><b>NB: My last name is Watler, not Walter.</b></p>
