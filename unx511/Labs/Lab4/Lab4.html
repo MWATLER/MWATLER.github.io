@@ -1,40 +1,45 @@
-<h2>DSP912 – Lab 4: Device Drivers</h2>
+<h2>DPS912 – Lab 4: I/O Control - Network Interface</h2>
 
 <h3>Due: Monday, July 19, 2021</h3>
 
-<p>In this lab you will complete the missing sections of a hardware device driver. Most of the code is given to you. You have to implement the read and ioctl functions of the device driver.
-   See the <b>TODO</b> sections inside the driver.
+<p>In this lab you will make use of I/O control (ioctl) and sockets to get information from a network interface.
+You will use ioctl’s to retrieve an interface’s MAC address, IP address, netmask, and broadcast address.</p>
+
+<p>Your program will ask you for the name of a network interface. To see the network interfaces on your machine type:<br>
+<b>$ ifconfig</b>
 </p>
 
-<p>The source code for the hardware device driver can be found at 
-   <a href="kernel/Makefile" target="_blank">Makefile</a>,
-   <a href="kernel/hardwareDevice.h" target="_blank">hardwareDevice.h</a>, and
-   <a href="kernel/hardwareDevice.c" target="_blank">hardwareDevice.c</a>.<br>
-   Scripts to load the module into the kernal and unload the module from the kernel can be found at
-   <a href="kernel/load.sh" target="_blank">load.sh</a> and
-   <a href="kernel/unload.sh" target="_blank">unload.sh</a>.<br>
-   A script that unloads, builds and loads the kernel module all in one can be found at
-   <a href="kernel/build.sh" target="_blank">build.sh</a>.
+<p>A user interface will give the user the following selections:<br><br>
+<b>Choose from the following:<br>
+1. Hardware address<br>
+2. IP address<br>
+3. Network mask<br>
+4. Broadcast address<br>
+0. Exit<br>
+</b>
 </p>
 
-<p>The hardware device driver is simply a buffer running in a thread that is updated once per second. You have to implement the read function so a
-   program from user-space can read the contents of the buffer. You also have to implement the ioctl function with two ioctl commands: <b>HARDWARE_DEVICE_HALT</b> and <b>HARDWARE_DEVICE_RESUME</b>.
-   The command <b>HARDWARE_DEVICE_HALT</b> will halt the buffer from updating, and the command <b>HARDWARE_DEVICE_RESUME</b> will resume the updating of the buffer once per second.
-   Details for <b>HARDWARE_DEVICE_HALT</b> and <b>HARDWARE_DEVICE_RESUME</b> can be found in the header file <b>hardwareDevice.h</b>.
+<p>A program has already been created that prompts the user for the network interface name, that displays the above user interface,
+and that already retrieves a network interface’s MAC address – <a href="etherCtrl.cpp" target="_blank">etherCtrl.cpp</a>.
+You need to complete this program to retrieve:<br>
+1.	The IP address (case 2),<br>
+2.	The Network mask (case 3),<br>
+3.	The Broadcast address (case 4).<br>
 </p>
 
-<p>A user-space program has been provided to test your work. This code can be found at
-   <a href="user/Makefile" target="_blank">Makefile</a> and
-   <a href="user/userHardware.cpp" target="_blank">userHardware.cpp</a>.<br>
-   This program simply reads the buffer from kernel space three times once every three seconds, issues an ioctl command to halt, reads the buffer three times once every three seconds again,
-   then issues an ioctl command to resume, then reads the buffer three times once every three seconds then finishes.<br>
-   Please note the directory structure. The Makefile for <b>userHardware.cpp</b> has to include the kernel header file <b>hardwareDevice.h</b>. It expects <b>hardwareDevice.h</b> to reside
-   in a directory whose relative path is <b>../kernel</b>.
-</p>
+<p>Please provide a Makefile for this program.</p>
+
+<p>For documentation on low-level access to Linux network devices, see <a href="http://man7.org/linux/man-pages/man7/netdevice.7.html" target="_blank">netdevice</a>.</p>
+
+<p>For documentation on how to get the IP address of a network interface, see
+<a href="https://www.includehelp.com/c-programs/get-ip-address-in-linux.aspx" target="_blank">Get IP Address in Linux using C program</a>, from includehelp.com.</p>
+
+<p>Test your program with existing network interfaces on your machine and also with the loopback interface <b>lo</b>.
+Compare the results of your program with those given by <b>ifconfig</b>. They should be the same.</p>
 
 <h3>Lab Submission:</h3>
 
-<p>Email me your completed <b>hardwareDevice.c</b> to:
+<p>Email me your Makefile, and your etherCtrl.cpp to:
    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
         
 <p><b>NB: My last name is Watler, not Walter.</b></p>
