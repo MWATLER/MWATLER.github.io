@@ -1,0 +1,4 @@
+Classes and Scoped Enumerations (CLASS MEMBERS, STRUCTS AND UNIONS, ENUMERATIONS) - https://ict.senecacollege.ca/~btp305/pages/content/class.html
+- static functions, variables
+Inheritance and Inclusion Polymorphism - https://ict.senecacollege.ca/~btp305/pages/content/inher.html
+Compositions, Aggregations and Associations - https://ict.senecacollege.ca/~btp305/pages/content/compo.html

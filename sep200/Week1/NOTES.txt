@@ -1,0 +1,6 @@
+Object Terminology - https://ict.senecacollege.ca/~btp200/pages/content/objec.html
+Overview (COMPILERS) - https://ict.senecacollege.ca/~btp305/pages/content/scope.html
+C++ Building Blocks (LINKAGE, TYPE) - https://ict.senecacollege.ca/~btp305/pages/content/start.html
+Compilation and Execution (COMPILATION PROCESS, COMPILE-TIME EVALUATIONS) - https://ict.senecacollege.ca/~btp305/pages/content/stage.html
+Fundamental Types (wchar_t, char16_t, char32_t, VOID TYPE) - https://ict.senecacollege.ca/~btp305/pages/content/funda.html
+Pointers, References and Arrays (Generic Pointer Type, ARRAY TYPES) - https://ict.senecacollege.ca/~btp305/pages/content/compt.html

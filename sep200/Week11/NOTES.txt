@@ -1,0 +1,2 @@
+Algorithms - https://ict.senecacollege.ca/~btp305/pages/content/algor.html
+Other Topics (STL) - https://ict.senecacollege.ca/~btp305/pages/content/other.html

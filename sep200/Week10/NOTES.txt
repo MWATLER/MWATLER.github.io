@@ -1,0 +1,2 @@
+Standard Library (Emphasis on the STANDARD TEMPLATE LIBRARY) - https://ict.senecacollege.ca/~btp305/pages/content/stlco.html
+Containers and Iterators - https://ict.senecacollege.ca/~btp305/pages/content/seque.html

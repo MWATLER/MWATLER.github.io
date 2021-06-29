@@ -1,0 +1,2 @@
+Virtual Functions - https://ict.senecacollege.ca/~btp200/pages/content/inclu.html
+Abstract Base Classes - https://ict.senecacollege.ca/~btp200/pages/content/abstr.html

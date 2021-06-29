@@ -1,0 +1,3 @@
+Member Operators - https://ict.senecacollege.ca/~btp200/pages/content/overl.html
+Helper Functions - https://ict.senecacollege.ca/~btp200/pages/content/nonme.html
+Input and Output Operators (STANDARD I/O OPERATORS only) - https://ict.senecacollege.ca/~btp200/pages/content/custo.html
