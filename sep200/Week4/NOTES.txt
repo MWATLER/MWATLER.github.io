@@ -1,2 +1,3 @@
-Derived Classes - https://ict.senecacollege.ca/~btp200/pages/content/inher.html
-Functions in a Hierarchy - https://ict.senecacollege.ca/~btp200/pages/content/dfunc.html
+Polymorphism.docx       Polymorphism - https://ict.senecacollege.ca/~btp200/pages/content/adhoc.html
+DerivedClasses.docx     Derived Classes - https://ict.senecacollege.ca/~btp200/pages/content/inher.html
+FunctionsHierarchy.docx Functions in a Hierarchy - https://ict.senecacollege.ca/~btp200/pages/content/dfunc.html
