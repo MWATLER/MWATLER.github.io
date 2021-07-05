@@ -1,3 +1,2 @@
-Functions (FUNCTION POINTER, OBJECTS, LAMBDA EXPRESSIONS) - https://ict.senecacollege.ca/~btp305/pages/content/funct.html
-Error Handling - https://ict.senecacollege.ca/~btp305/pages/content/error.html
-Arrays and Pointers to Arrays - https://ict.senecacollege.ca/~btp305/pages/content/array.html
+Standard Library (Emphasis on the STANDARD TEMPLATE LIBRARY) - https://ict.senecacollege.ca/~btp305/pages/content/stlco.html
+Containers and Iterators - https://ict.senecacollege.ca/~btp305/pages/content/seque.html
