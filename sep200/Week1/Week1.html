@@ -14,18 +14,11 @@
 
 <h3>Lecture Material</h3>
 <ul>
-  <li>The Introduction of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/goqo0g/alma997139811803226" target="_blank">The C Programming Language</a> by Kernighan and Ritchie</li>
-  <li><a href="Computers.docx" target="_blank">Computers</a></li>
-  <li><a href="Information.docx" target="_blank">Information</a></li>
-  <li><a href="Compilers.docx" target="_blank">Compilers</a></li>
-</ul>
-<h4>Supplemental Lecture Material</h4>
-<ul>
-  <li><a href="SystembusDatabusAddressbusControlbus.jpg" target="_blank">The Data Bus, Address Bus, and Control Bus</a></li>
-  <li><a href="MemoryHierarchy.jpg" target="_blank">The Memory Hierarchy</a></li>
-  <li><a href="hexadecimal.docx" target="_blank">Binary, Decimal and Hexadecimal Conversion Chart</a></li>
-  <li><a href="CJavaAssembler.jpg" target="_blank">C/Java to Assembly Language and to Machine Code</a></li>
-  <li><a href="HighToLowLevelLanguages.png" target="_blank">Scripting Languages, High/Middle Level Languages, Assembly Language and Machine Code</a></li>
+  <li>Chapter 1 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997139820703226" target="_blank">C++ Primer</a></li>
+  <li>Chapter 3 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li><a href="Terminology.docx" target="_blank"></a>Object Terminology</li>
+  <li><a href="Compilation.docx" target="_blank"></a>Overview of Compilers</li>
+  <li><a href="Types.docx" target="_blank">Fundamental Types</a></li>
 </ul>
 
 <h3>Lab(s)</h3>
@@ -47,7 +40,58 @@
 <p>None.</p>
 
 <h3>Sample Code</h3>
-<p><em>Hello World</em></p>
+
+<p><em>The Community Library</em></p>
+<p>This example shows most of the principles of object oriented programming that we will learn in the first half of the course. The software to implement the community library
+  represents a real-world situation that is implemented using object-oriented programming.</p>
+  <ul>
+    <li>A community library is described in <a href="CommunityLibrary/CommunityLibraryDescription.docx" target="_blank">CommunityLibraryDescription.docx</a>. This is based on the lending policy of the 
+      <a href="https://www.torontopubliclibrary.ca/using-the-library/borrowing-materials/" target="_blank">Toronto Public Library</a>, with exceptions. This library has patrons (customers) 
+    who borrow its resources, which could be books, DVDs, musical instruments etc...</li>
+    <li>A document which breaks down the components of the community library can be seen in the UML diagram <a href="CommunityLibrary/CommunityLibraryUML.docx" target="_blank">CommunityLibraryUML.docx</a>.
+    This document shows the relationships between the library resource and its component parts (eBook, standard book, DVD, musical instruments) as well as the patron which 
+    can borrow up to 5 library resources at a time.</li>
+    <li>The source code for the library resource can be found at <a href="CommunityLibrary/LibraryResource.h" target="_blank">LibraryResource.h</a> and <a href="CommunityLibrary/LibraryResource.cpp" target="_blank">LibraryResource.cpp</a>.</li>
+    <li>The source code for the book can be found at <a href="CommunityLibrary/Book.h" target="_blank">Book.h</a> and <a href="CommunityLibrary/Book.cpp" target="_blank">Book.cpp</a>.
+      The source code for the eBook and the standard paper book can be found at <a href="CommunityLibrary/ElectronicBook.h" target="_blank">ElectronicBook.h</a> and <a href="CommunityLibrary/ElectronicBook.cpp" target="_blank">ElectronicBook.cpp</a>,
+      <a href="CommunityLibrary/StandardPaperBook.h" target="_blank">StandardPaperBook.h</a> and <a href="CommunityLibrary/StandardPaperBook.cpp" target="_blank">StandardPaperBook.cpp</a>.</li>
+    <li>The source code for the DVD can be found at <a href="CommunityLibrary/DVD.h" target="_blank">DVD.h</a> and <a href="CommunityLibrary/DVD.cpp" target="_blank">DVD.cpp</a>.</li>
+    <li>The source code for the musical instrument can be found at <a href="CommunityLibrary/MusicalInstrument.h" target="_blank">MusicalInstrument.h</a> and <a href="CommunityLibrary/MusicalInstrument.cpp" target="_blank">MusicalInstrumentDVD.cpp</a>.</li>
+    <li>The source code for the patron (customer) can be found at <a href="CommunityLibrary/Patron.h" target="_blank">Patron.h</a> and <a href="CommunityLibrary/Patron.cpp" target="_blank">Patron.cpp</a>.</li>
+    <li>The main function for the community library can be found at <a href="CommunityLibrary/CommunityLibrary.cpp" target="_blank">CommunityLibrary.cpp</a> where two patrons are created, borrow library resources,
+      then return them three days later. A report for each patron is generated and printed to the screen.</li>
+  </ul>
+
+<p><em>Personal Statistics</em></p>
+<p>These two example shows the use of <b>extern</b> and <b>static</b> in C++ programming.</p>
 <ul>
-  <li>A sample C program can be seen at <a href="HelloWorld.c" target="_blank">HelloWorld.c</a>.</li>
+  <li>Code that uses <b>extern</b> can be seen with the following code:<br>
+    <a href="PersonalStats/PersonalMain.cpp" target="_blank">PersonalMain.cpp</a>,
+    <a href="PersonalStats/Insurance.cpp" target="_blank">Insurance.cpp</a>,
+    <a href="PersonalStats/Insurance.h" target="_blank">Insurance.h</a>,
+    <a href="PersonalStats/Pension.cpp" target="_blank">Pension.cpp</a>, and
+    <a href="PersonalStats/Pension.h" target="_blank">Pension.h</a>.
+  </li>
+  <li>Code that uses <b>static</b> can be seen with the following code:<br>
+    <a href="PersonalStats2/PersonalMain.cpp" target="_blank">PersonalMain.cpp</a>,
+    <a href="PersonalStats2/Insurance.cpp" target="_blank">Insurance.cpp</a>,
+    <a href="PersonalStats2/Insurance.h" target="_blank">Insurance.h</a>,
+    <a href="PersonalStats2/Pension.cpp" target="_blank">Pension.cpp</a>, and
+    <a href="PersonalStats2/Pension.h" target="_blank">Pension.h</a>.
+  </li>
 </ul>
+
+<p><em>Data Stream</em></p>
+<p>Often streams of data come with a fixed width - 8 bits, 16 bits, 32 bits,... C++ has types with specific bit sizes which are used for parsing data streams.
+  The code <a href="DataStream16/dataMain.cpp" target="_blank">dataMain.cpp</a> demonstrates the parsing of a 16 bit stream.</p>
+
+<p><em>Generic Parameter</em></p>
+<p>The data type (void *) represents no data type. Parameters can be passed to a function as (void *) and cast in that function to whatever type we wish. This is often used
+  with threads where a thread is represented by a function that runs on its own and accepts one paramater of type (void *). A parameter of any type can be passed through to
+  the thread. If multiple parameters need to be passed through to the thread, they can be packages into one structure and the structure passed through.
+  The code <a href="GenericParameter/GenericMain.cpp" target="_blank">GenericMain.cpp</a> demonstrates the passing of a parameter by value or address, as well as the 
+  passing of a structure by value or address.</p>
+
+<p><em>Pointers, References and Arrays</em></p>
+<p>There are many ways to initialize a pointer and use them in a for-next loop. The code
+  <a href="TypeInference/TypeInference.cpp" target="_blank">TypeInerence.cpp</a> uses a for-loop with type inference.</p>
