@@ -7,7 +7,7 @@ FILES+=General.cpp#source code
 FILES+=Geometry.cpp#source code
 
 #Math: clean: and all: are "rules"
-Math: $(FILES)
+Math: $(FILES)#dependencies
 	$(CC) $(CFLAGS) $(FILES) -o Math
 
 clean:
