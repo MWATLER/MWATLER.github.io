@@ -1,4 +1,0 @@
-Classes and Resources - https://ict.senecacollege.ca/~btp200/pages/content/deepc.html
-Derived Class with a Resource - https://ict.senecacollege.ca/~btp200/pages/content/dclas.html
-Pointers, References and Arrays (REFERENCES) - https://ict.senecacollege.ca/~btp305/pages/content/compt.html
-Classes and Scoped Enumerations (MOVE OPERATORS) - https://ict.senecacollege.ca/~btp305/pages/content/class.html
