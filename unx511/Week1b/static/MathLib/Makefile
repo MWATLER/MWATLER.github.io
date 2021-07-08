@@ -15,9 +15,11 @@ ARFLAGS=rcs#c-create archive,
 
 Math: $(FILES)
 	$(CC) $(CFLAGS) $(FILES)
+#g++ -I -Wall -c Conversions.cpp General.cpp Geometry.cpp
 
 lib: $(OBJFILES)
 	$(AR) $(ARFLAGS) libMath.a $(OBJFILES)
+#ar rcs libMath.a Conversions.o General.o Geometry.o
 
 install:
 	cp libMath.a ../MathRepository

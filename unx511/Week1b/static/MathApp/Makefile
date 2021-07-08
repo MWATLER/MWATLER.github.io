@@ -7,6 +7,8 @@ LIBS = -L../MathRepository -lMath#path to the library and the library itself
 
 MathTest: $(FILES)
 	$(CC) $(CFLAGS) $(FILES) -o MathTest $(LIBS)
+#g++ -I../MathRepository -Wall MathTest.cpp -o MathTest -L../MathRepository -lMath
+#                                                                             libMath.a
 
 clean:
 	rm -f *.o MathTest
