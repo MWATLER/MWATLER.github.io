@@ -18,9 +18,11 @@ LIBDIR=/usr/local/lib
 
 Math: $(FILES)
 	$(CC) $(CFLAGS) $(FILES)
+#g++ -I -fPIC -Wall -c Conversions.cpp General.cpp Geometry.cpp
 
 lib: $(OBJFILES)
 	$(CC) $(LIBFLAGS) libMath.so $(OBJFILES)
+#g++ -shared -o libMath.so Conversions.o General.o Geometry.o
 
 install:
 	cp -n libMath.so $(LIBDIR)
