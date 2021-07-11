@@ -47,6 +47,7 @@ Inductor& Inductor::operator=(const Inductor& inductor) {//Copy assignment
 
 Inductor::Inductor(Inductor&& inductor) noexcept {//Move constructor
 	this->inductance = inductor.inductance;
+	delete[] this->current;
 	this->current = inductor.current;
 	inductor.inductance = 0.0;
 	inductor.current = nullptr;
@@ -55,6 +56,7 @@ Inductor::Inductor(Inductor&& inductor) noexcept {//Move constructor
 Inductor& Inductor::operator=(Inductor&& inductor) noexcept {//Move assignment
 	if (this != &inductor) {
 		this->inductance = inductor.inductance;
+		delete[] this->current;
 		this->current = inductor.current;
 		inductor.inductance = 0.0;
 		inductor.current = nullptr;
