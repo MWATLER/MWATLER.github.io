@@ -18,7 +18,6 @@ int main(void)
     const char file[]="race.txt";
 
     fd = open(file, O_RDWR | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
-//  fd = open(file, O_RDWR | O_CREAT | O_EXCL, S_IRUSR | S_IWUSR);
     if(fd<0) {
 	cout << strerror(errno);
 	return -1;
@@ -34,18 +33,27 @@ int main(void)
 	sleep(1);
     }
     
-#if 1
+    //Disable the append flag
     flags = fcntl(fd, F_GETFL);
-    printf("1.flags:%08X O_RDWR:%08X O_CREAT:%08X O_APPEND:%08X O_EXCL:%08X\n", flags, O_RDWR, O_CREAT, O_APPEND, O_EXCL);
-    flags = flags & ~O_APPEND;
-//  flags &= ~O_EXCL;
-    printf("2.flags:%08X O_RDWR:%08X O_CREAT:%08X O_APPEND:%08X O_EXCL:%08X\n", flags, O_RDWR, O_CREAT, O_APPEND, O_EXCL);
-    flags = flags | O_EXCL;
-//  flags |= O_APPEND;
-    printf("3.flags:%08X O_RDWR:%08X O_CREAT:%08X O_APPEND:%08X O_EXCL:%08X\n", flags, O_RDWR, O_CREAT, O_APPEND, O_EXCL);
+    printf("1.flags:%08X O_RDWR:%08X O_CREAT:%08X O_APPEND:%08X O_TRUNC:%08X\n", flags, O_RDWR, O_CREAT, O_APPEND, O_TRUNC);
+    flags &= ~O_APPEND;
+    printf("2.flags:%08X O_RDWR:%08X O_CREAT:%08X O_APPEND:%08X O_TRUNC:%08X\n", flags, O_RDWR, O_CREAT, O_APPEND, O_TRUNC);
     fcntl(fd, F_SETFL, flags);
-#endif
     for(int i=10; i<20; ++i) {
+        string data = "fcntl: i: " + to_string(i) + "\n";
+        int err=write(fd, data.c_str(), data.size());
+	if(err<0) {
+	    cout << "Error in fcntl" << endl;
+	    cout << strerror(errno);
+        }
+	sleep(1);
+    }
+
+    //Enable the append flag
+    flags |= O_APPEND;
+    printf("3.flags:%08X O_RDWR:%08X O_CREAT:%08X O_APPEND:%08X O_TRUNC:%08X\n", flags, O_RDWR, O_CREAT, O_APPEND, O_TRUNC);
+    fcntl(fd, F_SETFL, flags);
+    for(int i=20; i<30; ++i) {
         string data = "fcntl: i: " + to_string(i) + "\n";
         int err=write(fd, data.c_str(), data.size());
 	if(err<0) {
