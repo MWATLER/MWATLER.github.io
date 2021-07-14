@@ -3,5 +3,5 @@
 ./race1&
 sleep 1
 ./race2&
-sleep 4
+sleep 1
 ./fcntl&

@@ -16,15 +16,13 @@ int main(void)
     int fd1;
     const char file[]="race.txt";
 
-    fd1 = open(file, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-//  fd1 = open(file, O_RDWR | O_CREAT | O_EXCL, S_IRUSR | S_IWUSR);
-//  fd1 = open(file, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+    fd1 = open(file, O_RDWR | O_CREAT | O_TRUNC | O_APPEND, S_IRUSR | S_IWUSR);
     if(fd1<0) {
         cout << "race1: " << strerror(errno);
 	return -1;
     }
 
-    for(int i=0; i<20; ++i) {
+    for(int i=0; i<30; ++i) {
         string data = "race1: i: " + to_string(i) + "\n";
         int err=write(fd1, data.c_str(), data.size());
 	if(err<0) {
