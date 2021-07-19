@@ -1,58 +1,105 @@
 <h1>Week 5a - August 2-6</h1>
 
 <h3>Introduction</h3>
-<p>This week we are going to study two more methods of inter-process communication - pipes and fifos.
+<p>This week we are going to study message queues and semaphores.
+   Semaphores provide us with a synchronization mechanism to protect shared resources used by multiple processes.
+    We are also going to look at a comparison between all four IPC methods studied so far (sockets, pipes, fifos and message queues).
 </p>
 
 <h3>Videos</h3>
 <table>
-    <tr><td></td><td>Pipes</td><td><a href="https://www.youtube.com/watch?v=7bNMkvcOKlc" target="_blank">C Programming in Linux - pipe() function</a></td></tr>
-    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=pO1wuN3hJZ4" target="_blank">Pipe, fork, dup exec explained</a></td></tr>
-    <tr><td></td><td>Fifos</td><td><a href="https://www.youtube.com/watch?v=sP50GHDmfhY" target="_blank">Using a named pipe (FIFO) on Linux in C</a></td></tr> 
+    <tr><td></td><td>Message Queues</td><td><a href="https://www.youtube.com/watch?v=pAWrgEObYjk" target="_blank">Message Queues</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=JbmOegG9-J0" target="_blank">Message Queue - IPC Mechanism</a></td></tr>
+    <tr><td></td><td>Sockets vs Queues</td><td><a href="https://www.youtube.com/watch?v=uadd_qxqd5Y" target="_blank">Research Socket overhead in Linux vs Message Queues and benchmarking</a></td></tr>   
+    <tr><td></td><td>Semaphores</td><td><a href="https://www.youtube.com/watch?v=6heMm23ofFo" target="_blank">Intro To Computer Systems: Semaphores Explained</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=TYnNKdf7cZM" target="_blank">C Programming in Linux Tutorial #046 - Semaphore pthread</a></td></tr>
 </table>
 
 <h3>Quiz</h3>
 <ul>
-    <li><b>Quiz 8</b> (August 3) will be on pipes and fifos. Study chapter 44 of
+    <li><b>Quiz 9</b> (August 3) will be on message queues. Study chapter 46 of
         <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
 </ul>
 
 <h3>Lecture Material</h3>
 <ul>
-    <li>Pipes and FIFOs - Chapter 44 of
+    <li>Message Queues - Chapter 46 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+    <li>Interprocess Communication Overview - Chapter 43 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+    <li><a href="comparison/ComparingIPC.pdf" target="_blank">Comparing and Evaluating the Performance of Inter Process Communication Models in Linux Environment</a>.</li>
+    <li>Semaphores - Chapter 53 of
         <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
 </ul>
 
 <h3>Labs</h3>
 <ul>
-    <li><a href="../Labs/Lab7/Lab7.html" target="_blank">Lab 7</a> (due August 4) - Server with Multiple Clients and a Receive Thread with Mutexing.</li>
-    <li><a href="../Labs/Lab8/Lab8.html" target="_blank">Lab 8</a> (due August 6) - pipes between processes.<br>
+    <li><a href="../Labs/Lab8/Lab8.html" target="_blank">Lab 8</a> (due August 4) - pipes between processes.<br>
+    <li><a href="../Labs/Lab9/Lab9.html" target="_blank">Lab 9</a> (due August 6) - client/server with messaging.</li>
 </ul>
 
 <h3>Assignment(s)</h3>
-<p>Introduction to <a href="../Assignments/Assignment2/Assignment2.html">Assignment 2</a>. (due August 13).</p>
+<p><a href="../Assignments/Assignment2/Assignment2.html" target="_blank">Assignment 2</a> (due August 13).</p>
 
 <h3>Sample Code</h3>
 
-<p><em>Pipes</em></p>
+<p><em>Message Queues</em></p>
 <ul>
-    <li>A simple pipe can be found in <a href="pipe/pipe.cpp" target="_blank">pipe.cpp</a>.
-	    Synchronization with pipes can be seen in <a href="pipe/pipe2.cpp" target="_blank">pipe2.cpp</a>.
-		Using an ioctl to see how much unread data remains in a pipe can be seen in <a href="pipe/pipe3.cpp" target="_blank">pipe3.cpp</a>.<br>
-        A C/C++ implementation of piping the output of one command to another can be seen in <a href="pipe/pipeline.c" target="_blank">pipeline.c</a>
-        and <a href="pipe/pipeline2.c" target="_blank">pipeline2.c</a>.
-        The Linux function <a href="http://man7.org/linux/man-pages/man2/dup.2.html" target="_blank">dup2</a> is used in this example.
-        Consider <b>dup2(a,b)</b> to mean make <b>b</b> also connect to what <b>a</b> is connected to.<br>
-        Images illustrating pipes from the command line and pipes from C/C++ source code can be found at
-        <a href="pipe/Pipes1.JPG" target="_blank">Pipes1.JPG</a> (for pipeline.c) and
-        <a href="pipe/Pipes2.JPG" target="_blank">Pipes2.JPG</a> (for pipeline2.c).<br>
-        Executing a system command from within a C++ program can be seen in <a href="pipe/pipeout.cpp" target="_blank">pipeout.cpp</a>.<br>
-        The Makefile for all of these can be found <a href="pipe/Makefile" target="_blank">here</a>.</li>
+    <li>This week we study message queues. Code that demonstrates send/receive with message queues can be found at
+        <a href="send/client.h" target="_blank">client.h</a>,
+        <a href="send/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="send/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="send/Makefile" target="_blank">Makefile</a>.
+        </li>
+        <li>Code that demonstrates non-blocking message receive with message queues can be found at
+        <a href="wait/client.h" target="_blank">client.h</a>,
+        <a href="wait/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="wait/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="wait/Makefile" target="_blank">Makefile</a>.
+        </li>
+        <li>Code that demonstrates message send/receive with differing message types can be found at
+        <a href="type/client.h" target="_blank">client.h</a>,
+        <a href="type/client3.cpp" target="_blank">client3.cpp</a>,
+        <a href="type/client4.cpp" target="_blank">client4.cpp</a> with its
+        <a href="type/Makefile" target="_blank">Makefile</a>.
+        </li>
+        <li>Code that demonstrates a complex structure for the message queue can be found at
+        <a href="msgctl/client.h" target="_blank">client.h</a>,
+        <a href="msgctl/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="msgctl/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="msgctl/Makefile" target="_blank">Makefile</a>.
+        <li>Finally, code that demonstrates the use of msgctl to retrieve message queue information can be found at
+        <a href="msgctl/info/client.h" target="_blank">client.h</a>,
+        <a href="msgctl/info/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="msgctl/info/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="msgctl/info/Makefile" target="_blank">Makefile</a>.
+    </li>
 </ul>
 
-<p><em>Fifos</em></p>
+<p><em>Inter-process communication, a comparison</em></p>
 <ul>
-    <li>Code demonstrating fifo's can be found in <a href="fifo/fifo1.cpp" target="_blank">fifo1.cpp</a> and <a href="fifo/fifo2.cpp" target="_blank">fifo2.cpp</a>. fifo1 prompts the user for keyboard input and sends the buffer to fifo2. fifo2 converts everything to upper case and sends it back to fifo1.<br>
-        The Makefile can be found <a href="fifo/Makefile" target="_blank">here</a>.</li>
+        <li>See the publication <a href="comparison/ComparingIPC.pdf" target="_blank">Comparing and Evaluating the Performance of Inter Process Communication Models in Linux Environment</a>.</li>    
 </ul>
 
+<p><em>Semaphores</em></p>
+<ul>
+    <li>Code that demonstrates non-named semaphores can be found in
+        <a href="sem_init/client1.cpp" target="_blank">client1.cpp</a> and
+        <a href="sem_init/client2.cpp" target="_blank">client2.cpp</a> with their
+        <a href="sem_init/Makefile" target="_blank">Makefile</a>.
+        </li>
+        <li>Code that demonstrates named semaphores that can be used across two processes can be found in
+        <a href="sem_open/client.h" target="_blank">client.h</a>,
+        <a href="sem_open/client1.cpp" target="_blank">client1.cpp</a> and
+        <a href="sem_open/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="sem_open/Makefile" target="_blank">Makefile</a>.
+    </li>
+    <li>Code that restricts access to a data base using named semaphores between three processes can be found in
+        <a href="dataBase/client.h" target="_blank">client.h</a>,
+        <a href="dataBase/dataBase.cpp" target="_blank">dataBase.cpp</a>,
+        <a href="dataBase/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="dataBase/client2.cpp" target="_blank">client2.cpp</a> and
+        <a href="dataBase/client3.cpp" target="_blank">client3.cpp</a> with its
+        <a href="dataBase/Makefile" target="_blank">Makefile</a>.
+    </li>
+</ul>

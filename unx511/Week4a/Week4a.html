@@ -1,0 +1,87 @@
+<h1>Week 4a - July 26-30</h1>
+
+<h3>Introduction</h3>
+<p>This week we study threads and mutexes. Threads allow us to perform parallel programming within a process.
+    Mutexes provide us with a synchronization mechanism to protect shared resources used by multiple threads.
+    We will also look at server design.
+</p>
+
+<h3>Videos</h3>
+<table>
+    <tr><td></td><td>Threads</td><td><a href="https://www.youtube.com/watch?v=h_HwkHobfs0" target="_blank">Processes and threads - Gary explains</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=ZXW-iVivWF4" target="_blank">An introduction to Linux Threads</a></td></tr>
+    <tr><td></td><td>Mutexes</td><td><a href="https://www.youtube.com/watch?v=nlHIuG3RQ0g" target="_blank">Thread synchronization with mutexes in C</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=xDwcm8bQ-Mg" target="_blank">Deadlock and conditions for deadlock in OS</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<ul>
+    <li><b>Quiz 7</b> (July 27) will be on threads. Study chapter 29 and 30 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+</ul>
+
+<h3>Lecture Material</h3>
+<ul>
+    <li>Threads - Chapter 29 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+    <li>Thread synchronization - Chapter 30 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+    <li><a href="msgPump/Sockets%20and%20the%20Implementation%20of%20a%20World%20Wide%20Messaging%20System.ppt" target="_blank">Sockets and the Implementation of a World Wide Messaging System</a>.</li>
+    <li><a href="https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/" target="_blank">What’s the Diff: Programs, Processes, and Threads</a>.</li>
+</ul>
+
+<h3>Labs</h3>
+<ul>
+    <li><a href="../Labs/Lab6/Lab6.html" target="_blank">Lab 6</a> (due July 26) - server/client communications.</li>
+    <li><a href="../Labs/Lab7/Lab7.html" target="_blank">Lab 7</a> (due August 2) - Server with Multiple Clients and a Receive Thread with Mutexing.</li>
+</ul>
+
+<h3>Assignment</h3>
+<p><a href="../Assignments/Assignment1/Assignment1.html" target="_blank">Assignment 1</a> (due July 30).</p>
+<h3>Sample Code</h3>
+
+<p><em>Threads and Mutexes</em></p>
+<ul>
+    <li>A simple introduction to threads can be found in <a href="thread/counter.cpp" target="_blank">counter.cpp</a>. This program simply starts off 5 threads with a 1 second delay between each. Each thread counts 10 seconds.<br>
+        Note that in the <a href="thread/Makefile" target="_blank">Makefile</a> a link to the pthread library is made (LIBS=-lpthread). This is required wherever threads are used in the code.</li>
+    <li>For a good discussion of processes vs threads, see the article
+        <a href="https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/" target="_blank">What’s the Diff: Programs, Processes, and Threads</a>.</li>
+        <li>This week we study threads and mutexes. Mutexing is to ensure our threads are synchronized and operations are atomic.
+        <a href="https://www.techopedia.com/definition/3466/atomic-operation" target="_blank">Atomic</a> operations are the foundation on which other synchronization methods are built,
+        they provide instructions that execute atomically, without interruption.  Atomic operators are indivisible instructions.</li>
+        <li>Code that demonstrates the need for mutexes can be found in
+        <a href="mutex/counterNoMutex.cpp" target="_blank">counterNoMutex.cpp</a>,
+        <a href="mutex/counterMutex.cpp" target="_blank">counterMutex.cpp</a>, and
+        <a href="mutex/Makefile" target="_blank">Makefile</a>.</li>
+        <li>In synchronizing threads with mutexes, one has to avoid thread deadlock.
+        <a href="https://www.geeksforgeeks.org/operating-system-process-management-deadlock-introduction/" target="_blank">Deadlock</a> is a situation where a set of
+        processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process.</li>
+        <li>Code that demonstrates deadlock can be found in
+        <a href="deadlock/deadlock.cpp" target="_blank">deadlock.cpp</a> and
+        <a href="deadlock/Makefile" target="_blank">Makefile</a>.</li>
+        <li>Code that demonstrates stream sockets with a separate receive thread for socket reads can be found in
+        <a href="clientServer/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="clientServer/server.cpp" target="_blank">server.cpp</a>, and
+        <a href="clientServer/Makefile" target="_blank">Makefile</a>.
+        Note that common resources are mutexed.
+        </li>
+        <li>Code that demonstrates INET sockets with a separate receive thread for socket reads can be found in
+        <a href="msgServer/msgClient.cpp" target="_blank">msgClient.cpp</a>,
+        <a href="msgServer/msgServer.cpp" target="_blank">msgServer.cpp</a>, and
+        <a href="msgServer/Makefile" target="_blank">Makefile</a>.
+        Note that common resources are mutexed.
+        </li>
+        <li>A server can act as a message pump or dispatcher if it accepts messages from a number of clients and redirects these messages to a number of clients.
+        A client creates a message with the source client information and destination client information embedded in the messsage. The client sends this message
+        to a server which redirects it to the destination client.
+        Code that demonstrates this message pump or dispatcher using INET sockets with a separate receive thread for socket reads can be found in
+        <a href="msgPump/msgClient.cpp" target="_blank">msgClient.cpp</a>,
+        <a href="msgPump/msgPump.cpp" target="_blank">msgPump.cpp</a>,
+        <a href="msgPump/startClient.sh" target="_blank">startClient.sh</a>,
+        <a href="msgPump/stopClient.sh" target="_blank">stopClient.sh</a>, and
+        <a href="msgPump/Makefile" target="_blank">Makefile</a>.
+        Note that common resources are mutexed.<br>
+        For the rationale behind such a central server, see the first six slides of
+        <a href="msgPump/Sockets%20and%20the%20Implementation%20of%20a%20World%20Wide%20Messaging%20System.ppt" target="_blank">Sockets and the Implementation of a World Wide Messaging System</a>.
+    </li>
+</ul>
