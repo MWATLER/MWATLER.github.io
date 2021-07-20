@@ -1,0 +1,105 @@
+<h2>SEP200 – Lab 3: Amazon Purchases</h2>
+
+<h3>Due: end of week 5</h3>
+
+<p>This lab will test your ability to create and use base classes and derived classes.</p>
+
+<p>This program records purchases from Amazon and calculates the cost. There are three types of items that a user can purchase - a book, a DVD, or a digital music 
+    download. For each item there is a title, a list of authors, and a price. For each item you need to get information and you need to calculate the costs. You 
+    will create four classes as follows:<br>
+
+<h3>The Generic Item</h3>
+<p>This contains everything that is common to all types of purchases.</p>
+<ul>
+    <li>By default generic item will create an object with the title set to an empty string, the list of authors to a nullptr, the number of authors to 0, and the price to $0.00.</li>
+    <li>The generic item can also be created with the following data - the 
+        title, the number of authors, and the price. The constructor will prompt the user for the authors. Since the number of authors is not known before runtime, 
+        dynamic memory allocation will have to be used to get the list of authors.</li>
+    <li>When asked to calculate the cost, generic item will simply return the price.</li>
+    <li>When asked to get information, generic item will print out the title, a list of authors, and the price to 2 decimal places.</li>
+    <li>Be sure to cleanup on object destruction.</li>
+</ul>
+
+<h3>Book.</h3>
+<p>This contains information specific to a book purchase.</p>
+<ul>
+    <li>When asked to calculate the cost, the book will add a 10% penalty to the price for using paper and 13% of the price for the harmonized sales tax.</li>
+    <li>When asked to get information, book will print out information from the generic item that it is derived from. It will also print out one line specifying: 
+        "There is a 10% penalty for using paper."</li>
+</ul>
+
+<h3>DVD.</h3>
+<p>This contains information specific to a DVD purchase.</p>
+<ul>
+    <li>When asked to calculate the cost, the DVD will add a 10% penalty to the price for using plastic and 13% of the price for the harmonized sales tax.</li>
+    <li>When asked to get information, the DVD will print out information from the generic item that it is derived from. It will also print out one line specifying: 
+        "There is a 5% penalty for using plastic."</li>
+</ul>
+
+<h3>Digital Music Download.</h3>
+<p>This contains information specific to the purchase of digital music download.</p>
+<ul>
+    <li>When asked to calculate the cost, the digital music download will add 13% of the price for the harmonized sales tax.</li>
+    <li>When asked to get information, the DVD will print out information from the generic item that it is derived from.</li>
+</ul>
+
+
+<p>You have been given the main test program:
+    <a href="AmazonMain.cpp" target="_blank">AmazonMain.cpp</a>. You have to create the header and CPP files for all the classes.</p>
+
+<p>A sample run is as follows:<br><br>
+<pre>
+    For testing purchases, please order one book, one DVD, and one digital download.
+
+    FOR THE BOOK
+    Enter the title: The Book
+    Enter the price: 11.66
+    Enter the number of authors: 3
+    Enter the name of author 1 : Book Author1
+    Enter the name of author 2 : Book Author2
+    Enter the name of author 3 : Book Author3
+    
+    FOR THE DVD
+    Enter the title: The DVD
+    Enter the price: 34.99
+    Enter the number of authors: 2
+    Enter the name of author 1 : DVD Author1
+    Enter the name of author 2 : DVD Author2
+    
+    FOR THE DIGITAL MUSIC DOWNLOAD
+    Enter the title: Best Hits of Smoopey
+    Enter the price: 21.49
+    Enter the number of authors: 2
+    Enter the name of author 1 : Smoopey1
+    Enter the name of author 2 : Smoopey2
+    
+    Title:   The Book
+    Authors: Book Author1, Book Author2, Book Author3.
+    Price:   11.66
+    There is a 10% penalty for using paper.
+    
+    Title:   The DVD
+    Authors: DVD Author1, DVD Author2.
+    Price:   34.99
+    There is a 5% penalty for using plastic.
+    
+    Title:   Best Hits of Smoopey
+    Authors: Smoopey1, Smoopey2.
+    Price:   21.49
+    
+    The total cost is $79.91    
+</pre>
+</p>
+
+<p>Be sure to document your code with the file name, your name and student number. Add comments throughout the code where necessary.</p>
+
+<h3>Questions</h3>
+<ol>
+    <li>If all three purchases were of type DVD, could AmazonMain.cpp use a for-next loop to get all information?</li>
+    <li>Since we have a Book purchase, a DVD purchase, and a digital music download purchase, could AmazonMain.cpp use a for-next loop to get all information? Why?</li>
+</ol>
+
+<h3>Lab Submission:</h3>
+
+<p>Please email all your code and the answers to the questions to:
+    <a href="mailto: ">@senecacollege.ca</a></p>
