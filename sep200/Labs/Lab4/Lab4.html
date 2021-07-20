@@ -1,27 +1,71 @@
-<h2>SEP200 – Lab 4: </h2>
+<h2>SEP200 – Lab 4: A Packet Parser</h2>
 
 <h3>Due: end of week 6</h3>
 
-<p>This lab will test your ability to .</p>
+<p>This lab will test your ability to use polymorphism with virtual functions.</p>
 
-<p>This program 
+<p>This program parses a network packet. This packet could be of type UDP or type TCP. Generally speaking, UDP is for unreliable but fast communications, and TCP is 
+    for reliable but slower communications. Each packet has its own format. This has been described in detail in <a href="PacketParserMain.cpp" target="_blank">PacketParserMain.cpp</a>.
+Both parsers will accept a packet of type char* and parse and store relevant information from that packet. Both parsers will also provide a report. The function prototypes can be 
+found in the base class <a href="PacketParser.h" target="_blank">PacketParser.h</a>.</p>
+
+<h3>UDP Packet Parser</h3>
+<p>The UDP packet parser will extract the following information from the packet and store in class variables:</p>
 <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>source_port. This is contained within the first two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to the lower byte.</li>
+    <li>dest_port. This is contained within the next two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to the lower byte.</li>
+    <li>length. This is the length of the data portion of the packet. This is contained within the next two bytes of the packet. The higher byte has to be
+        multiplied by 0x100 then added to the lower byte.</li>
+    <li>checksum. This is the sum of the source port, the destination port, and the length. You have to calculate the checksum of the packet and compare to the 
+        checksum found in the packet. If these numbers do not agree, then the data has been corrupted. The checksum in the packet is contained within the next
+        two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to the lower byte.</li>
+    <li>data. The data is found within the next "length" bytes of the packet. You have to perform a <b>memcpy</b> from the data within the packet to 
+    the data variable of your class.</li>
 </ul>
-</p>
+<p>After the packet has been parsed, the UDP packet parser will report the following in a separate function: the source port, the destination port, the data
+     length, and the data itself.</p>
+<p>Be sure to zero all members of the UDP packet parser on destruction.</p>
 
-<p>You have been given :
-    <a href="" target="_blank"></a> and
-    <a href="" target="_blank"></a> and
-.</p>
+<h3>TCP Packet Parser</h3>
+<p>The TCP packet parser will extract the following information from the packet and store in class variables:</p>
+<ul>
+    <li>source_port. This is contained within the first two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to the lower byte.</li>
+    <li>dest_port. This is contained within the next two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to the lower byte.</li>
+    <li>sequence_number. This is contained within the next four bytes of the packet. Add the bytes together as follows: the highest byte is multiplied by 0x1000000, 
+        the next highest by 0x10000, the next highest by 0x100, then add all these to the lowest byte.</li>
+    <li>ack_number. This is contained within the next four bytes of the packet. Add the bytes together as follows: the highest byte is multiplied by 0x1000000, 
+        the next highest by 0x10000, the next highest by 0x100, then add all these to the lowest byte.</li>
+    <li>ignore. The next four bytes are ignored.</li>
+    <li>checksum. This is the sum of the source port, the destination port, the sequence number, the acknowledge number, ignore and ignore2 and the length. 
+        You have to calculate the checksum of the packet and compare to the checksum found in the packet. If these numbers do not agree, then the data has been
+        corrupted. The checksum in the packet is contained within the next two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to
+        the lower byte.</li>
+    <li>ignore2. The next two bytes are ignored.</li>
+    <li>length. This is the length of the data portion of the packet. This is contained within the next two bytes of the packet. The higher byte has to be
+        multiplied by 0x100 then added to the lower byte.</li>
+    <li>data. The data is found within the next "length" bytes of the packet. You have to perform a <b>memcpy</b> from the data within the packet to 
+        the data variable of your class.</li>
+</ul>
+<p>After the packet has been parsed, the TCP packet parser will report the following in a separate function: the source port, the destination port, 
+    the sequence number, the acknowledgement number, the data length, and the data itself.</p>
+<p>Be sure to zero all members of the TCP packet parser on destruction.</p>
 
 <p>A sample run is as follows:<br><br>
 <pre>
+    Report for UDP Packet Parser
+    source port: 9
+    dest port:   19
+    data length: 36
+    data:        The Toronto Maple Leafs lose again!!
+    
+    
+    Report for TCP Packet Parser
+    source port: 5
+    dest port:   6
+    seq number:  5
+    ack number:  4
+    data length: 41
+    data:        The rain in Spain is mainly on the plane.
 </pre>
 </p>
 
@@ -29,12 +73,13 @@
 
 <h3>Questions</h3>
 <ol>
-    <li>.</li>
-    <li>.</li>
+    <li>Why are you able to use a for-next loop in this example for two different types of parsers?</li>
+    <li>The tester for this program hardcodes a UDP packet parser and a TCP packet parser. Describe in general how would you use an
+        interface (abstract class) that prompts the user for two types of packet parsers?</li>
     <li>.</li>
 </ol>
 
 <h3>Lab Submission:</h3>
 
-<p>Please email your <b></b> and the answers to the questions to:
+<p>Please email all your code and the answers to the questions to:
     <a href="mailto: ">@senecacollege.ca</a></p>
