@@ -1,3 +1,0 @@
-Function Templates - https://ict.senecacollege.ca/~btp200/pages/content/param.html
-Class Templates - https://ict.senecacollege.ca/~btp305/pages/content/templ.html
-DESIGN

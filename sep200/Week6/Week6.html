@@ -1,0 +1,73 @@
+<h1>Week 6 - Templates</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look at function templates and class templates.</p>
+
+<h3>Videos</h3>
+<table>
+  <tr><td>Function Templates</td><td><a href="https://www.youtube.com/watch?v=W0aoAm6eYSk" target="_blank">	Buckys C++ Programming Tutorials - function Templates</a></td></tr>
+  <tr><td>Class Templates</td><td><a href="https://www.youtube.com/watch?v=U2QvTsMvWmM" target="_blank">Buckys C++ Programming Tutorials - class Templates</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<p>.</p>
+
+<h3>Lecture Material</h3>
+<ul>
+  <li>Chapter 23 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapter 16 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+  <li><a href="FunctionTemplates.docx" target="_blank">Function Templates</a></li>
+  <li><a href="ClassTemplates.docx" target="_blank">Class Templates</a></li>
+</ul>
+
+<h3>Lab(s)</h3>
+<ul>
+  <li><a href="../Labs/Lab4/Lab4.html" target="_blank">Lab 4</a>.</li>
+  <li><a href="../Labs/Lab5/Lab5.html" target="_blank">Lab 5</a>.</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p>None.</p>
+
+<h3>Sample Code</h3>
+
+<p><em>Math Test</em></p>
+<p>The program MathTest shows how to perform a square on a number and a square on a fraction. It does not matter what type the numbers are. They could be int, float, double, etc... 
+  The code demonstrates the use of function templates:<br>
+<a href="MathTest/Math.h" target="_blank">Math.h</a> and <a href="MathTest/MathTest.cpp" target="_blank">MathTest.cpp</a>.</p>
+
+<p><em>A Database</em></p>
+<p>A generic database has been created to perform functions on many data schematics. The database can find a data element by name, 
+  get the number of data elements, get a data element by index, get the last data element, and get the first data element. The data element 
+can be any kind of structure but must have a variable <b>name</b> which acts as the key into the database.<br>
+An example is created with two types of data schematics (Database2, Database2).<br>The code for the database can be found in
+<a href="Database/Database.h" target="_blank">Database.h</a> and the test code for the data base can be found at
+<a href="Database/DatabaseMain.cpp" target="_blank">DatabaseMain.cpp</a>.</p>
+
+<p><em>A Card Game (21) move Assignment 1 and provide a simpler example here??</em></p>
+<p>A card player program simulates the card game 21. The object of this game is to draw cards in order that
+  their sum is as close to 21 as possible without going over. In this game, a twist has been added. The user can draw "attack"
+  cards which have positive values, but the user can also draw "dependent" cards, which have negative values. The players can
+  play in regular mode, where all attack cards have integer values, or high-definition mode where all attack cards have double
+  floating point values. All dependent cards have integer values. Since the values of the attack cards could be one of two types
+  (int or double), templates are introduced. There are two types of players - youth and adult. When youth draw cards, the maximum
+  value of a card is 10. When adults draw cards, the maximum value of a card is 15. Both youth and adults can draw as many
+  "dependent" and "attack" cards as they want initially. They can choose to add an "attack" card or a "dependent" card only once
+  afterwards. They are each given $1000 to begin with. Each round they can bet between $10 and $300.<br>
+  The UML diagram can be found at: <a href="Player21/Player21.png" target="_blank">Player21.png</a>.<br>
+  The code is as follows:
+    <a href="Player21/PlayerBase.h" target="_blank">PlayerBase.h</a>,
+    <a href="Player21/PlayerYouth.h" target="_blank">PlayerYouth.h</a>,
+    <a href="Player21/PlayerAdult.h" target="_blank">PlayerAdult.h</a> and
+    <a href="Player21/PlayerMain.cpp" target="_blank">PlayerMain.cpp</a>.</p>
+
+<h3>Software Design with Object Oriented Programming based on the Use-Case Scenario</h3>>
+<p>We had an introduction to software design in SEP101 - Programming Fundamentals. We now want to extend the concepts taught there 
+  towards object oriented programming.</p>
+<ul>
+<li>This requires breaking a problem down into classes, and breaking classes down into a collection of variables (nouns/adjectives) 
+  and functions (verbs) which act on those variables.</li>
+<li>Furthermore, it requires collecting common items into a base class, and specialized items into derived classes.</li>
+<li>If variables and functions require a variety of data types, they need to be templated, regardless of whether they
+   belong in a class or not.</li>
+</ul>
