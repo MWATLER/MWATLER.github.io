@@ -1,6 +1,0 @@
-Implement a MathTest2 library.
-* Base class takes an int, then an unlimited amount of numbers for calculating a product.
-* Derived class takes an int, then an unlimited amount of numbers for calculating a product.
-* Another derived class takes an int, then an unlimited amount of numbers for calculating a dividend.
-
-Move all Player21 code to assignment 1.
