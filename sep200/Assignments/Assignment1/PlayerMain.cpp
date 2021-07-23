@@ -66,9 +66,11 @@ int main(void) {
 
         // If player 1 has more points than player 2, then print the name of player 1 and that (s)he has won.
 		// Move the amount that was bet away from player 2 and towards player 1 using the << and >> operators.
+		// In doing this comparison, use the > operator
 
 		// If player 2 has more points than player 1, then print the name of player 2 and that (s)he has won.
 		// Move the amount that was bet away from player 1 and towards player 2 using the << and >> operators.
+		// In doing this comparison, use the < operator
 
 		cout << endl;
 
