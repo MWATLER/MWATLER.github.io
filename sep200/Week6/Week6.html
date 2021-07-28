@@ -55,6 +55,19 @@ An example is created with two types of data schematics (Database2, Database2).<
     <a href="MathTest2/MathTest2.h" target="_blank">MathTest2.h</a> and
     <a href="MathTest2/MathTest2.cpp" target="_blank">MathTest2.cpp</a>.</p>
 
+<p><em>Math Test with Parametric Polymorphism</em></p>
+<p>A third MathTest program has been created to show how to implement parametric polymorphism with templates. This math library also performs calculation 
+  on a series of numbers. As with MathTest2, the calculations are to add the series (a MathAdd object), or to multiply the series (a MathMultiply object). 
+  The numbers to be added or multiplied could be of any numerical type. The common header file exposes the function Calculate() which takes as its first 
+  argument a math library object which could be of any type (in this case either MathAdd or MathMultiply), an array of numbers as its second argument,
+  and the array length as its third argument. Calculate determines which math object to access based on the type of its first argument. This requires 
+  both the MathAdd and MathMultiply objects to expose the same function, in this case Calculate().<br>
+  The code is as follows:
+    <a href="MathTest3/MathCommon.h" target="_blank">MathCommon.h</a>,
+    <a href="MathTest3/MathAdd.h" target="_blank">MathAdd.h</a>,
+    <a href="MathTest3/MathMultiply.h" target="_blank">MathMultiply.h</a>, and
+    <a href="MathTest3/MathTest3.cpp" target="_blank">MathTest3.cpp</a>.</p>
+    
 <h3>Software Design with Object Oriented Programming based on the Use-Case Scenario</h3>
 <p>We had an introduction to software design in SEP101 - Programming Fundamentals. We now want to extend the concepts taught there 
   towards object oriented programming.</p>
