@@ -85,7 +85,6 @@ int main()
     }
     cout<<"client2: quitting..."<<endl;
     pthread_join(tid2, NULL);
-    msgctl(msgid2, IPC_RMID, NULL); 
 
     return 0; 
 } 
