@@ -97,20 +97,20 @@ int main()
 
     int messageNo=1;
     while(is_running) {
+	pthread_mutex_lock(&lock_x1);
         while(message1.size()>0) {
-	    pthread_mutex_lock(&lock_x1);
             Message recvMsg=message1.front();
 	    message1.pop();
-	    pthread_mutex_unlock(&lock_x1);
 	    cout<<"client4: received from message type 1: "<<recvMsg.buf<<endl;
 	}
+	pthread_mutex_unlock(&lock_x1);
+	pthread_mutex_lock(&lock_x2);
         while(message2.size()>0) {
-	    pthread_mutex_lock(&lock_x2);
             Message recvMsg=message2.front();
 	    message2.pop();
-	    pthread_mutex_unlock(&lock_x2);
 	    cout<<"client4: received from message type 2: "<<recvMsg.buf<<endl;
 	}
+	pthread_mutex_unlock(&lock_x2);
 	sleep(1);
     }
 
