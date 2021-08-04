@@ -1,6 +1,6 @@
 // client1.cpp - An exercise with named semaphores and shared memory
 //
-// 23-Jul-20  M. Watler         Created.
+// 04-Aug-21  M. Watler         Created.
 //
 #include <errno.h>
 #include <iostream>
@@ -46,7 +46,7 @@ int main(void) {
     //The ftok() function uses the identity of the file named by the given pathname
     //and the least significant 8 bits of proj_id (which must be nonzero) to
     //generate a key_t type suitable for use with msgget(2), semget(2), or shmget(2).
-    ShmKey=ftok(MEMNAME, 65);
+    //TODO: Generate the key here
 
     //int shmget(key_t key, size_t size, int shmflg);
     //
@@ -58,13 +58,7 @@ int main(void) {
     //    unsigned char destIP[4];
     //    char          message[BUF_LEN];
     //};
-
-    ShmID=shmget(ShmKey, sizeof(struct Memory), IPC_CREAT | 0666);
-    if (ShmID < 0) {
-        cout<<"client1: shmget() error"<<endl;
-        cout<<strerror(errno)<<endl;
-        return -1;
-    }
+    //TODO: Create or get the shared memory id
 
     //void *shmat(int shmid, const void *shmaddr, int shmflg);
     //
@@ -72,16 +66,12 @@ int main(void) {
     //address space of the calling process. The attaching address is specified
     //by shmaddr. If shmaddr is NULL, the system chooses a suitable (unused)
     //page-aligned address to attach the segment.
-    ShmPTR = (struct Memory *) shmat(ShmID, NULL, 0);
-    if (ShmPTR == (void *)-1) {
-        cout<<"client1: shmat() error"<<endl;
-        cout<<strerror(errno)<<endl;
-        return -1;
-    }
+    //TODO: Attach a pointer to the shared memory
 
-    // initialize named semaphore, can be used between processes
+    //TODO:initialize named semaphore, can be used between processes
 
     for(int i=0; i<NUM_MESSAGES && is_running; ++i) {
+        //TODO: Synchronize processes with semaphores
 	if(ShmPTR->destClientNo==CLIENT_NO) {
             cout<<"Client "<<CLIENT_NO<<" has received a message from client "<<ShmPTR->srcClientNo<<":"<<endl;
 	    cout<<ShmPTR->message<<endl;

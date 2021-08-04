@@ -33,8 +33,8 @@ the client's number, it will print out the message and then send a message to an
     <a href="Makefile" target="_blank">Makefile</a>.<br>
 </p>
 
-<p>This code contains everything except synchronization. It is your task to implement a synchronization mechanism for these three clients,
-    such that only one accesses shared memory at a time. Clients 1 and 2 should wait for client 3 to start up.
+<p>This code contains everything except the creation of shared memory and synchronization. It is your task to implement shared memory and 
+    a synchronization mechanism for these three clients, such that only one accesses shared memory at a time. Clients 1 and 2 should wait for client 3 to start up.
 	You will need to modify client.h, client1.cpp, client2.cpp and client3.cpp.</p>
 
 <p><b>NB:</b> Please insert a sleep of 1 second in the for-next loop for each client, so we can see communication between them.</p>

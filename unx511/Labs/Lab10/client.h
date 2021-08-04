@@ -1,11 +1,11 @@
 // client.h - Header file for shared memory
 //
-// 23-Jul-20  M. Watler         Created.
+// 04-Aug-21  M. Watler         Created.
 //
 #ifndef CLIENT_H
 #define CLIENT_H
 
-const char MEMNAME[]="MemDispatch";
+//TODO: A memory name and a semaphore name along with semaphore permissions
 const int BUF_LEN=1024;
 const int NUM_MESSAGES=30;
 
