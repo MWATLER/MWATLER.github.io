@@ -18,7 +18,7 @@ key_t key;
 int msgid;
 
 bool is_running;
-queue<Message> message;
+queue<Message> message;//Message is a struct with long int m_type and a char array for the message itself
 
 void *recv_func(void *arg);
 
@@ -68,13 +68,13 @@ int main()
 
     int messageNo=1;
     while(is_running) {
+	pthread_mutex_lock(&lock_x);
         while(message.size()>0) {
-	    pthread_mutex_lock(&lock_x);
             Message recvMsg=message.front();
 	    message.pop();
-	    pthread_mutex_unlock(&lock_x);
 	    cout<<"client1: received "<<recvMsg.buf<<endl;
 	}
+	pthread_mutex_unlock(&lock_x);
 	Message sendMsg;
         sendMsg.mtype=1;// the first message from the queue is removed
 	if(messageNo<=10) {

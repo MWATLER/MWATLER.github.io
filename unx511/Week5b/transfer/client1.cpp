@@ -82,8 +82,6 @@ int main(void) {
     }
     ShmPTR->status=READ;
     
-    //Now wait for client2 to read the memory
-    while(ShmPTR->status!=READ) sleep(1);
     shmdt((void *)ShmPTR);
     shmctl(ShmID, IPC_RMID, NULL);
 
