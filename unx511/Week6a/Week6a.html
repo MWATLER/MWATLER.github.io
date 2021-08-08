@@ -26,4 +26,36 @@ None.
 <p><a href="../Assignments/Assignment2/Assignment2.html" target="_blank">Assignment 2</a>. (due August 13).</p>
 
 <h3>Sample Code</h3>
-None.
+<p><em>A Data Acquisition System</em></p>
+<p>I have expanded on the radio channels code of week 5b to turn it into a data acquisition system. Sixteen clients try to communicate with a radio through four radio channels 
+    via shared memory. Another 16 clients attempt to communicate with the radio via IP. The radio collates all this information and transmits it to a central data acquisition 
+    system which dumps everything to a file.</p>
+<ul>
+    <li>The radio application and the first 16 clients can be found at:
+        <a href="client.h" target="_blank">client.h</a>,
+        <a href="client.cpp" target="_blank">client.cpp</a>,
+        <a href="radioApplication.cpp" target="_blank">radioApplication.cpp</a> and
+        <a href="Makefile" target="_blank">Makefile</a>.<br>
+	The memory map can be seen at:
+        <a href="radioChannels/RadioChannelsMemoryMap.docx" target="_blank">RadioChannelsMemoryMap.docx</a>.<br>
+        Scripts for starting and stopping the simulation can be found at:
+        <a href="start.sh" target="_blank">start.sh</a> and
+        <a href="stop.sh" target="_blank">stop.sh</a>.<br>
+        Each radio channel uses a part of shared memory. The clients write to one of the channels by writing into the channel's shared memory.
+        The use of semaphores ensures that the number of clients writing to the radio's channels is limited to four.
+    </li>    
+    <li>The code for the IP clients can be found at:
+        <a href="clientIP/clientIP.cpp" target="_blank">clientIP.cpp</a>,
+        <a href="clientIP/clientRogue.cpp" target="_blank">clientRogue.cpp</a> and
+        <a href="clientIP/Makefile" target="_blank">Makefile</a>.<br>
+        Scripts for starting and stopping the simulation can be found at:
+        <a href="clientIP/start.sh" target="_blank">start.sh</a> and
+        <a href="clientIP/stop.sh" target="_blank">stop.sh</a>.<br>
+    </li>
+    <li>
+        Code for the data acquisition system can be found at:
+        <a href="dataAcquisition/dataAcquisition.cpp" target="_blank">dataAcquisition.cpp</a> and
+        <a href="dataAcquisition/Makefile" target="_blank">Makefile</a>.<br>
+        A sample data file looks like <a href="dataAcquisition/dataFile.txt" target="_blank">dataFile.txt</a>.
+    </li>
+</ul>
