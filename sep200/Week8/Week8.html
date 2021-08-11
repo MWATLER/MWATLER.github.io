@@ -31,14 +31,68 @@
 
 <h3>Sample Code</h3>
 
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a> and <a href="" target="_blank"></a>.</p>
+<p><em>Employee Information</em></p>
+<p>The example employee information shows the use of static class variables to keep track of how many objects have been created as well as a running total. The employee information 
+  class contains variables for an employee's name, position and age. The static variable <b>numEmployees</b> keeps track of the number of objects created of type <b>EmployeeInfo</b>. 
+  One of the functions of <b>EmployeeInfo</b> returns the average age. This function makes use of the static variable <b>runningTotal</b> where the average age is the running total 
+  of ages divided by the number of employees. It is very common to employ a static variable to keep track of the number of objects created from a given class.<br> 
+  The example shown also demonstrates the use of enumerations. A common application for enumerations is the error status returned by functions. See:<br>
+  <a href="EmployeeInfo/EmployeeInfo.h" target="_blank">EmployeeInfo.h</a>,
+  <a href="EmployeeInfo/EmployeeInfo.cpp" target="_blank">EmployeeInfo.cpp</a> and
+  <a href="EmployeeInfo/EmployeeInfoMain.cpp" target="_blank">EmployeeInfoMain.cpp</a>.</p>
 
-<p><em>Inclusion Polymorphism</em></p>
-<p>Use the example in the course notes:<br>
-<a href="" target="_blank"></a> and <a href="" target="_blank"></a>.</p>
+<p><em>Gemoetric Shape</em></p>
+<p>The first example with geometric shapes demonstrates the use of a clone() function, which causes an object to create and return a clone of itself. The code is as follows:<br>
+  <a href="GeometricShape/Shape.h" target="_blank">Shape.h</a>,
+  <a href="GeometricShape/Cube.h" target="_blank">Cube.h</a>,
+  <a href="GeometricShape/Cube.cpp" target="_blank">Cube.cpp</a>,
+  <a href="GeometricShape/Sphere.h" target="_blank">Sphere.h</a>
+  <a href="GeometricShape/Sphere.cpp" target="_blank">Sphere.cpp</a>
+and <a href="GeometricShape/CloningMain.cpp" target="_blank">CloningMain.cpp</a>.<br> 
+The second example of geometric shapes demonstrates the overriding of an operator (in this case operator==) in derived classes:<br>
+<a href="GeometricShape2/Shape.h" target="_blank">Shape.h</a>,
+<a href="GeometricShape2/Cube.h" target="_blank">Cube.h</a>,
+<a href="GeometricShape2/Cube.cpp" target="_blank">Cube.cpp</a>,
+<a href="GeometricShape2/Sphere.h" target="_blank">Sphere.h</a>
+<a href="GeometricShape2/Sphere.cpp" target="_blank">Sphere.cpp</a>
+and <a href="GeometricShape2/CloningMain.cpp" target="_blank">CloningMain.cpp</a>.
+</p>
 
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a> and <a href="" target="_blank"></a>.</p>
+<p><em>Dynamic Types</em></p>
+<p>Code that relies on dynamic type identification using the operator typeid() can be seen at:<br>
+<a href="DynamicType/DynamicType.cpp" target="_blank">DynamicType.cpp</a>.</p>
+
+<p><em>Composition</em></p>
+<p>It is possible for a class to contain an instance of another class (composition), a collection of instances of another class (aggregation), or an instance of another class which in turn 
+  contains an instance of the class itself (association). We will look at three examples, one of each type.</p>>
+<ul>
+<li>
+  In the first example, the class Person contains an instance of the class Name. This is implemented with a pointer:<br>
+  <a href="Composition/Name.h" target="_blank"></a> and <a href="" target="_blank">Name.h</a>,
+  <a href="Composition/Name.cpp" target="_blank"></a> and <a href="" target="_blank">Name.cpp</a>,
+  <a href="Composition/Person.h" target="_blank"></a> and <a href="" target="_blank">Person.h</a>,
+  <a href="Composition/Person.cpp" target="_blank"></a> and <a href="" target="_blank">Person.cpp</a> and
+  <a href="Composition/CompositionMain.cpp" target="_blank"></a> and <a href="" target="_blank">CompositionMain.cpp</a>. 
+</li>
+
+<li>
+  In the second example, the class Club contains an aggregation of Names:<br>
+  <a href="Aggregation/Name.h" target="_blank"></a> and <a href="" target="_blank">Name.h</a>,
+  <a href="Aggregation/Name.cpp" target="_blank"></a> and <a href="" target="_blank">Name.cpp</a>,
+  <a href="Aggregation/Club.h" target="_blank"></a> and <a href="" target="_blank">Club.h</a>,
+  <a href="Aggregation/Club.cpp" target="_blank"></a> and <a href="" target="_blank">Club.cpp</a> and
+  <a href="Aggregation/AggregationMain.cpp" target="_blank"></a> and <a href="" target="_blank">AggregationMain.cpp</a>.
+</li>
+
+<li>
+  In the third example, a Course contains a Room, and a Room contains a Course. The room and course are associated with each other. THe course and room 
+  each contain a name as well:<br>
+  <a href="Association/Name.h" target="_blank"></a> and <a href="" target="_blank">Name.h</a>,
+  <a href="Association/Name.cpp" target="_blank"></a> and <a href="" target="_blank">Name.cpp</a>,
+  <a href="Association/Course.h" target="_blank"></a> and <a href="" target="_blank">Course.h</a>,
+  <a href="Association/Course.cpp" target="_blank"></a> and <a href="" target="_blank">Course.cpp</a>,
+  <a href="Association/Room.h" target="_blank"></a> and <a href="" target="_blank">Room.h</a>,
+  <a href="Association/Room.cpp" target="_blank"></a> and <a href="" target="_blank">Room.cpp</a> and
+  <a href="Association/AssociationMain.cpp" target="_blank"></a> and <a href="" target="_blank">AssociationMain.cpp</a>.
+</li>
+</ul>
