@@ -2,26 +2,71 @@
 
 <h3>Due: end of week 9</h3>
 
-<p>This lab will test your ability to .</p>
+<p>This lab will test your ability to use aggregation, enumerations, and overriding of operators.</p>
 
-<p>.</p>
+<p>A sports association is going to contain an aggregate of sports teams. In our lab, there are two types of 
+    sports teams - a hockey team and a baseball team. A hockey team will keep track of a team's wins, losses, 
+    ties and will calculate points based on these. A baseball team will keep track of a team's wins and losses 
+    and will calculate a winning percentage based on these.</p>
+<p>The main sports association program will create one sports association and add teams to it based 
+   on user input.</p>
+<p>For this lab, the main sports association program is given to you: <a href="SportsMain.cpp" target="_blank">SportsMain.cpp</a>. 
+    The Team abstract base class is also given to you as well as source code for creating a team: <a href="Team.h" target="_blank">Team.h</a> 
+    and <a href="Team.cpp" target="_blank">Team.cpp</a>.</p>
+<p>More details are given below:</p>
     
-<h3></h3>
-<p>.</p>
+<h3>The Team Abstract Class</h3>
+<p>The <b>Team</b> abstract class contains three functions which will be completed in the derived classes:</p>
 <ul>
-    <li><b>()</b>. This function will take as arguments .</li>
+    <li><b>GetName()</b>. This function returns the name of the team.</li>
+    <li><b>display()</b>. This function displays information about the team.</li>
+    <li><b>operator==()</b>. This function determines if one team is equal to another team. They have to be the same 
+        type of team.</li>
+</ul>
+<p>Team.cpp contains a function to create a team based on user input:</p>
+<ul>
+    <li><b>CreateTeam</b>. This function creates and returns a pointer to a team based on user input.</li>
 </ul>
     
-<h3></h3>
-<p>.</p>
+    
+<h3>The Baseball Team</h3>
+<p>The baseball team completes the abstract class and adds a constructor. The baseball team has a name, the number of wins, the 
+    number of losses, and the winning percentage:</p>
 <ul>
-    <li><b>()</b>. This function will take as arguments .</li>
+    <li><b>BaseballTeam()</b>. This function will take as arguments the name of the team, the wins, and the losses. The winning 
+    percentage can be calculated here from the number of wins and losses. The winning percentage is actually a decimal, not a
+    percent, and is calculated as follows: wins/(wins+losses).</li>
+    <li><b>GetName()</b>. This function returns the name of the team.</li>
+    <li><b>display()</b>. This function displays information about the team. It returns an error status according to the 
+    enumeration in the base class. If all data is valid, it will display the team's name, wins, losses and winning percentage.</li>
+    <li><b>operator==()</b>. This function determines if one team is equal to another team. If both teams are 
+    baseball teams and they both have the same winning percentage, the function returns true. False otherwise.</li>
 </ul>
 
-<h3></h3>
-<p>.</p>
+<h3>The Hockey Team</h3>
+<p>The hockey team completes the abstract class and adds a constructor. The hockey team has a name, the number of wins, the 
+    number of ties, the number of losses, and the total points:</p>
 <ul>
-    <li><b>()</b>. This function will take as arguments .</li>
+    <li><b>HockeyTeam()</b>. This function will take as arguments the name of the team, the wins, the ties, and the losses. The 
+    points can be calculated here as follows: points=2*wins+ties.</li>
+    <li><b>GetName()</b>. This function returns the name of the team.</li>
+    <li><b>display()</b>. This function displays information about the team. It returns an error status according to the 
+    enumeration in the base class. If all data is valid, it will display the team's name, wins, ties losses and points.</li>
+    <li><b>operator==()</b>. This function determines if one team is equal to another team. If both teams are 
+    hockey teams and they both have the same number of points, the function returns true. False otherwise.</li>
+</ul>
+
+<h3>The Sports Association</h3>
+<p>The sports association has a name and contains an aggregate of teams. These teams could be hockey teams, baseball teams or 
+    both. We will limit the number of teams to 4. It has the following functions:</p>
+<ul>
+    <li><b>SportsAssociation()</b>. This function will take as an argument the name of the sports association.</li>
+    <li><b>operator+=()</b>. This function overrides the <b>+=</b> operator to add a team to the sports association. If the team 
+    added is "equal" to one of the existing teams, this function will print out the names of the two teams. To determine 
+    equality, use the <b>operator==</b> overload in the hockey team and baseball team classes. This function will also 
+    print out an error message if the number of teams has exceeded the limit (which in this example is 4 teams).</li>
+    <li><b>display()</b>. This function performs no validation of data. It displays the name of the sports association 
+    along with calling the <b>display()</b> function for each team in its aggregation.</li>
 </ul>
 
 <h3>Sample Run</h3>
@@ -29,6 +74,43 @@
 in the files <a href="" target="_blank"></a> and <a href="" target="_blank"></a>.</p>
 <p>A sample run is as follows:<br><br>
 <pre>
+
+    Enter 1 for a baseball team, or
+    enter 2 for a hockey team.
+    1
+    What's the team's name? Rexdale Jays
+    Enter the number of wins: 32
+    Enter the number of losses: 16
+    
+    Enter 1 for a baseball team, or
+    enter 2 for a hockey team.
+    2
+    What's the team's name? Rexdale Warriors
+    Enter the number of wins: 23
+    Enter the number of ties: 5
+    Enter the number of losses: 18
+    
+    Enter 1 for a baseball team, or
+    enter 2 for a hockey team.
+    2
+    What's the team's name? Rexdale Warriors 2
+    Enter the number of wins: 15
+    Enter the number of ties: 4
+    Enter the number of losses: 16
+    
+    Enter 1 for a baseball team, or
+    enter 2 for a hockey team.
+    1
+    What's the team's name? Rexdale Leafs
+    Enter the number of wins: 32
+    Enter the number of losses: 16
+    Rexdale Jays is similar to Rexdale Leafs.
+
+    The Rexdale Sports Association has the following teams:
+    Rexdale Jays has 32 wins and 16 losses for a winning percentage of 0.666667.
+    Rexdale Warriors has 23 wins, 18 ties, and 5 losses for 64 points.
+    Rexdale Warriors 2 has 15 wins, 16 ties, and 4 losses for 46 points.
+    Rexdale Leafs has 32 wins and 16 losses for a winning percentage of 0.666667.
 </pre>
 </p>
 
@@ -36,8 +118,9 @@ in the files <a href="" target="_blank"></a> and <a href="" target="_blank"></a>
 
 <h3>Questions</h3>
 <ol>
-    <li>.</li>
-    <li>.</li>
+    <li>What variable would you add to the hockey team class and to the baseball team class to associate each with the sports association?</li>
+    <li>If you have a choice, which is better - inheritance or composition?</li>
+    <li>Why is inheritance, if taken to an extreme, considered unreliable?</li>
 </ol>
 
 <h3>Lab Submission:</h3>
