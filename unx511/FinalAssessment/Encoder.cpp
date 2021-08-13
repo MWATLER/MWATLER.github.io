@@ -1,6 +1,6 @@
 // Encoder.cpp - encodes and dispatches the audio
 //
-// 29-Jul-20  M. Watler         Created.
+// 29-Jul-21  M. Watler         Created.
 //
 
 #include <arpa/inet.h>
@@ -88,6 +88,7 @@ int main(void) {
     sigaction(SIGINT, &action, NULL);
 
     //Question: Will this be a reliable socket connection?
+    //Question: Will this process be able to communicate with a process on another machine?
     fd=socket(AF_INET, SOCK_DGRAM, 0);
     if(fd<0) {
         cout<<"Encoder: Cannot create the socket"<<endl;
@@ -187,7 +188,7 @@ int main(void) {
         if(packet.status!=WRITTEN) {
             sleep(0.3);
         } else {
-            //Question: Would the following work?    memcpy(&packet, ShmPTR->packet, sizeof(ShmPTR->packet);
+            //Question: Would the following work?    memcpy(&packet, ShmPTR->packet, sizeof(ShmPTR->packet));
             packet.packetNumber = ShmPTR->packet[packetIndex].packetNumber;
             packet.len = ShmPTR->packet[packetIndex].len;
             packet.timeStamp = ShmPTR->packet[packetIndex].timeStamp;
@@ -230,7 +231,7 @@ int main(void) {
 
     int pid=fork();
     if(pid==0) {
-        //Question: Will execlp be able to do anything if the Decoder is on another machine?
+	//Question: If the decoder is on another machine, how might we request it to shutdown?
         execlp("pkill", "pkill", "-2", "Decoder", NULL);
     }
     cout<<"Encoder shutting down"<<endl;

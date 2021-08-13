@@ -1,6 +1,6 @@
 //Decoder.cpp - Receives and decodes audio packets
 //
-// 29-Jul-20  M. Watler         Created.
+// 29-Jul-21  M. Watler         Created.
 
 #include <arpa/inet.h>
 #include <fcntl.h>
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
     sprintf(decoder.ip_addr, "127.0.0.1");
 //  sprintf(decoder.ip_addr, "192.168.239.128");
     decoder.ip_port=MYPORT_BASE+decoderNo;
-    //Question: What is the IP address and port number for decoder 2?
+    //Question: What is the IP address and port number for decoder 3?
 
     fd=socket(AF_INET, SOCK_DGRAM, 0);
     if(fd<0) {
@@ -179,7 +179,6 @@ void *recv_func(void *arg)
 	if(len>0) {
             struct Packet packet;
             memcpy(&packet, buf, len);
-            //Question: Will this decrypt all audio channels or only packet.left?
             DecryptPacketBuffer(packet.left, packet.len);
 //          DecryptPacketBuffer(packet.right, packet.len);
 //          DecryptPacketBuffer(packet.center, packet.len);

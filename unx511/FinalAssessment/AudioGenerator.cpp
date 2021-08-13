@@ -1,6 +1,6 @@
 // AudioGenerator.cpp - Generates audio from text
 //
-// 29-Jul-20  M. Watler         Created.
+// 29-Jul-21  M. Watler         Created.
 //
 
 #include <errno.h>
@@ -50,7 +50,6 @@ int main(void) {
     sigaction(SIGINT, &action, NULL);
 
     //Start the send thread
-    //Question: What is the purpose of the isRunning variable?
     isRunning=true;
     ret = pthread_create(&sendId, NULL, sendThread, &samplingFrequency);
 
@@ -101,8 +100,8 @@ int main(void) {
     //Question: What happens if we do not use pthread_join()
     pthread_join(sendId, NULL);
     int pid=fork();
-    //Question: How many AudioGenerator processes are running at this point?
     if(pid==0) {
+        //Question: How many AudioGenerator processes are running at this point?
         //Question: What is execlp attempting to do?
         execlp("pkill", "pkill", "-2", "Encoder", NULL);
     }
@@ -132,6 +131,7 @@ void *sendThread(void *arg)
     const long nanosecsPerSecond=1000000000;
 
     //Question: What process uses this semaphore with the audio generator?
+    //Question: What is the initial value of this semaphore?
     sem_id=sem_open(SEMNAME, O_CREAT, SEM_PERMS, 0);
     if(sem_id==SEM_FAILED) {
         cout<<"AudioGenerator: sem_open() error"<<endl;

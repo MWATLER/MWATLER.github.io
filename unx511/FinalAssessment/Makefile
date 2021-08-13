@@ -8,6 +8,7 @@ FILES3=Decoder.cpp
 LIBS=-lpthread
 
 AudioGenerator: $(FILES1)
+#Question: What does the following line expand to?
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS)
 
 Encoder: $(FILES2)
