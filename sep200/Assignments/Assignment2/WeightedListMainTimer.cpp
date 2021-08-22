@@ -1,5 +1,6 @@
 //WeightedListMain.cpp - main program for testing the weighted list
 
+#include <fstream>
 #include "WeightedList.h"
 
 using namespace std;
@@ -88,6 +89,12 @@ int main() {
 	cout << endl;
 
 	//erase the entire list
+//	for (auto e = wList.begin(); e != wList.end(); ++e) {//MW: why does this not work?
+//		wList.erase(e);
+//	}
+//	for (auto e = wList.begin(); e != wList.end(); ) {//MW: why does this work?
+//		e = wList.erase(e);
+//	}
 	wList.erase(wList.begin(), wList.end());
 	cout << "erase the entire list:" << endl;
 	for (auto e = wList.begin(); e != wList.end(); ++e) {
@@ -182,6 +189,45 @@ int main() {
 	}
 	cout << endl;
 
+	//EXPERIMENT: Create a list of 10,000 data elements.
+	WeightedList<int> expList;
+	const int LIST_SIZE = 10000;
+	const int DATA = 6;
+	cout << "creating a list of " << LIST_SIZE << " elements:" << endl;
+	for (int i = 0; i < LIST_SIZE; ++i) {
+		if(i!=DATA) expList.push_back(i);
+	}
+	//Now insert 6 at the end of this list
+	expList.push_back(DATA);
+
+	//Perform searches for 6 and measure the time for each search.
+	//We will search for two random numbers, then for 6 in order
+	//to simulate a realistic situation where 6 is often searched for.
+	const long nanosecsPerSecond=1000000000;
+	timespec startTime, endTime;
+	double totalTime;
+	const int NUM_SEARCHES = 2*LIST_SIZE;
+	//store the results to a file
+	ofstream outfile;
+	outfile.open("searchTime.dat");
+	cout << "performing " << NUM_SEARCHES << " searches:" << endl;
+	for (int i = 0; i < NUM_SEARCHES; ++i) {
+		//search for two random numbers that are not equal to DATA (6)
+		int randomNumber;
+		for (int j = 0; j < 2; ++j) {
+			do {
+				randomNumber = rand() % LIST_SIZE;
+			} while (randomNumber == DATA);
+			expList.search(randomNumber);
+		}
+		//Now search for DATA and record the search time in milliseconds
+		clock_gettime(CLOCK_REALTIME, &startTime);
+		expList.search(DATA);
+		clock_gettime(CLOCK_REALTIME, &endTime);
+		totalTime = (double)(endTime.tv_sec-startTime.tv_sec)*nanosecsPerSecond + (endTime.tv_nsec-startTime.tv_nsec);
+		outfile << i << ", " << totalTime << endl;
+	}
+	outfile.close();
 
 	return 0;
 }

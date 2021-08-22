@@ -111,7 +111,7 @@ iterator to <b>end</b>.</li>
 
 <h4><b><u>Testing and Rework</u></b> (Junior and Senior Engineers, Product Support)</h4>
 <ul>
-<li>A partially implemented weighted list class has been provided for you. <a href="WeightedListMain.cpp" target="_blank">WeightedListMain.cpp</a>.</li>
+<li>A partially implemented weighted list class has been provided for you. <a href="WeightedList.h" target="_blank">WeightedList.h</a>.</li>
 <li>The test program <a href="WeightedListMain.cpp" target="_blank">WeightedListMain.cpp</a> with a correctly operating 
     weighted list should produce an output as follows:<br>
 <pre>
@@ -219,24 +219,38 @@ iterator to <b>end</b>.</li>
 
 <h4><b><u>Questions</u></b></h4>
 <ol>
-    <li>In the main() function, the number of players is hardcoded to 2. How could we modify the main() function to let the players decide 
-        how many players there are? (0.5 mark)</li>
-    <li>In the main() function, the players are hardcoded to play either the regular mode or the high definition mode. How could we modify the 
-        main() function to let the players decide at runtime what modes they want to play in? (1 mark)</li>
-    <li>How would you go about creating the players through an interface class? (0.5 mark)</li>
+    <li>Would the following work? Why or why not? (0.5 mark)<br>
+<b>for (auto e = wList.begin(); e != wList.end(); ++e) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;wList.erase(e);<br>
+}</b></li>
+    <li>Would the following work? Why or why not? (0.5 mark)<br>
+<b>for (auto e = wList.begin(); e != wList.end(); ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;e = wList.erase(e);<br>
+}</b></li>
+    <li>Compare the weighted list with STL's list. What pointers and functionality appear in 
+        STL's list that are missing in our weighted list? (0.5 mark)</li>
+    <li>The program <a href="WeightedListMainTimer.cpp" target="_blank">WeightedListMainTimer.cpp</a> was created to run in 
+        Linux (where there are higher resolution timers) to see if the search algorithm actually improves itself over time.
+        A weighted list was created with 10,000 elements and an element with data=6 was inserted at the end. The program performed 
+        a number of searches, with a search for data=6 every third search, to simulate a situation where data=6 starts in the worst 
+        case (at the back) but is searched for frequently. 
+        The time elapsed for each search for data=6 is recorded. Take a look at the data in the file 
+        <a href="searchTime.dat" target="_blank">searchTime.dat</a>. What will you report to the company executives - did this search 
+        algorithm "learn"? Did it learn well enough to pursue applying this algorithm to other data types? If not, how would you 
+        improve this algorithm? (0.5 mark)</li>
 </ol>
 
 <h4><b><u>Timeline</u></b></h4>
 
-<p><b>Days 1-7:</b> The players classes.</p>
+<p><b>Days 1-7:</b> The iterator class.</p>
 
-<p><b>Days 8-14:</b> The main() function.</p>
+<p><b>Days 8-14:</b> The functions of the weighted list.</p>
 
 <p><b>Days 15-21:</b>Putting it all together. Test and Rework. Questions.</p>
 
 <h4><b><u>Marking Rubric</u></b></h4>
 
-<p>Assignment 1 is worth 15% of your final grade and as such is marked out of 15 as follows:</p>
+<p>Assignment 2 is worth 15% of your final grade and as such is marked out of 15 as follows:</p>
 
 <style>
 table, th, td {
@@ -248,10 +262,8 @@ table {
 </style>
 <table>
     <tr><th></th><th>Does not meet expectations</th><th>Satisfactory</th><th>Good</th><th>Exceeds Expectations</th></tr>
-    <tr><td><b>The Player<br>(3 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
-    <tr><td><b>The Youth Player<br>(3 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
-    <tr><td><b>The Adult Player<br>(3 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
-    <tr><td><b>The main() function<br>(3 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>The Iterator Class<br>(4 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>The Weighted List Class<br>(8 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
     <tr><td><b>Documentation<br>(1 mark)</b></td><td>Does not contain documentation</td><td>Contains header documentation for either all files or for all functions within each file</td>
         <td>Contains header documentation for all files and for most functions within each file</td><td>Contains header documentation for all files and for all functions within each file.
             Documents unclear code.</td></tr>
