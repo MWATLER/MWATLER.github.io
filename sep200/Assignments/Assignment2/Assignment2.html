@@ -231,11 +231,12 @@ iterator to <b>end</b>.</li>
         STL's list that are missing in our weighted list? (0.5 mark)</li>
     <li>The program <a href="WeightedListMainTimer.cpp" target="_blank">WeightedListMainTimer.cpp</a> was created to run in 
         Linux (where there are higher resolution timers) to see if the search algorithm actually improves itself over time.
-        A weighted list was created with 10,000 elements and an element with data=6 was inserted at the end. The program performed 
-        a number of searches, with a search for data=6 every third search, to simulate a situation where data=6 starts in the worst 
-        case (at the back) but is searched for frequently. 
+        See the bottom 1/4 of the file for the test code. A weighted list was created with 10,000 elements and an element with 
+        data=6 was inserted at the end. The program performed a number of searches, with a search for data=6 every third search, 
+        to simulate a situation where data=6 starts in the worst case (at the back) but is searched for frequently. 
         The time elapsed for each search for data=6 is recorded. Take a look at the data in the file 
-        <a href="searchTime.dat" target="_blank">searchTime.dat</a>. What will you report to the company executives - did this search 
+        <a href="searchTime.dat" target="_blank">searchTime.dat</a>. On the left is the number of the search attempt and on the 
+        right is the time elapsed in nanoseconds. What will you report to the company executives - did this search 
         algorithm "learn"? Did it learn well enough to pursue applying this algorithm to other data types? If not, how would you 
         improve this algorithm? (0.5 mark)</li>
 </ol>
