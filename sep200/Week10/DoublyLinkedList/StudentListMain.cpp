@@ -49,5 +49,10 @@ int main() {
 	studentList.PrintList();
 	cout << endl;
 
+	StudentList::iterator it = studentList.GetBack();
+	cout << (*it) << endl;
+	--it;
+	cout << (*it) << endl;
+
 	return 0;
 }

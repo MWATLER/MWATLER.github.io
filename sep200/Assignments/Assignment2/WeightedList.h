@@ -20,20 +20,8 @@ class WeightedList {
 	Node* front;
 	int num;
 public:
-	class iterator {
-	protected:
-		friend class WeightedList<T>;
-		Node* curr;
-		iterator(Node* _curr) {
-			curr = _curr;
-		}
-	public:
-		iterator() {
-			curr = nullptr;
-		}
-		//TODO: Complete the iterator functionality
+    //TODO: Complete the iterator class
 
-	};
 	//TODO: Complete the weighted list functionality.
 	//      You can put your function declarations or prototypes here
 	//      and function definitions or implementations below
