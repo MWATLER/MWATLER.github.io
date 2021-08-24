@@ -58,7 +58,8 @@ iterator to <b>end</b>.</li>
     <li>A constructor that passes the data through to the data element.</li>
     </ul>
 </li>
-<li><b>The iterator class</b>. The iterator class will be public within the weighted list container class. It will 
+<li><b>The iterator class</b>. The iterator class will be public within the weighted list container class. <b>Do not implement 
+    a const_iterator class as well</b>. The iterator class will 
     declare the weighted list container class as a friend so it will have access to all the data elements within the 
     weighted list class. The iterator class will have a pointer to the current data element in the list of data 
     elements within the container weighted list class. The iterator class will perform the following:

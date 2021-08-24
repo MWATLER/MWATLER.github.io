@@ -1,3 +1,4 @@
-Introduction to Linked Lists - https://ict.senecacollege.ca/~btp305/pages/content/linkl.html
-Other Topics (Linked Lists, Stack, Queues) - https://ict.senecacollege.ca/~btp305/pages/content/other.html
+Introduction to Linked Lists (DONE) - https://ict.senecacollege.ca/~btp305/pages/content/linkl.html
+Other Topics (Linked Lists, Stack, Queues, DONE) - https://ict.senecacollege.ca/~btp305/pages/content/other.html
+Maybe introduce threads and mutexes here.
 Language Standards - https://ict.senecacollege.ca/~btp200/pages/content/ansis.html
