@@ -38,33 +38,58 @@
 
 <h3>Sample Code</h3>
 
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a>.
+<p><em>Class Enumerator</em></p>
+<p>It is good to associate certain enumerations with a certain class, therefore we have class enumerations. A simple example with
+   a class enumerator can be seen at:<br>
+<a href="enumClass/enumClass.cpp" target="_blank">enumClass.cpp</a>.
 </p>
 
-
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a>.
+<p><em>Recursion</em></p>
+<p>Recursion occurs when a function calls itself. This may seem a little silly, but is in fact very useful when implementing binary trees. 
+  A recursive functio has two parts - the recursive part, and the base case. As a function calls itself repeatedly, it eventually finds itself
+  at the base case, in which case the recursion unwinds. An example of using recursion to calculate the factorial of a number can be found at:<br>
+<a href="Factorial/Factorial.cpp" target="_blank">Factorial.cpp</a>.
 </p>
 
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a>.
+<p><em>A Function Pointer</em></p>
+<p>A function pointer is very useful in what we call state-machines. Depending on the state of an object, a particular function is called.
+  Functions do exist in memory as binaries, and we can use a pointer to point to the beginning of a function in the same way we can 
+  use a pointer to point to an object or variable in memory. An example of using a function pointer can be seen at:<br>
+<a href="FunctionPointer/ReportMarks.cpp" target="_blank">ReportMarks.cpp</a>.<br>
+Function pointers can also appear as an array of functions. The function pointer pointes to one of the functions in its array depending
+on the array index. An example of using an array of function pointers can be seen at<br>
+<a href="FunctionPointer2/ReportMarks2.cpp" target="_blank">ReportMarks2.cpp</a>.
 </p>
 
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a>.
+<p><em>Functor</em></p>
+<p>A functor is basically a class that presents a function-like interface to the calling program. Functors have certain advantages over 
+  functions. Unlike functions, functors can have state. They fit into the object-oriented paradigm as compared to functions because functors 
+  are actually based on classes. Functors are often inlined by the compiler, unlike function pointers. The functor does not require runtime 
+  dispatching, therefore it is more efficient in most cases. The following functor provides two types of multiplication:<br>
+<a href="MultiplierFunctor/MultiplierFunctor.cpp" target="_blank">MultiplierFunctor.cpp</a>.
 </p>
 
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a>.
+<p><em>Lambda Functions</em></p>
+<p>Lambda functions are functions without a name, but provide a function-like interface similar to functors. Lambda functions are not 
+  based on a class. Lambda functions are used extensively with the Standard Template Library as inline functions. The following example 
+  demonstrates a lambda function used with remove_if() to determine which elements of an array should be removed:<br>
+<a href="LambdaSelect/LambdaSelect.cpp" target="_blank">LambdaSelect.cpp</a>.
 </p>
 
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a>.
+<p><em>Exceptions</em></p>
+<p>An exception is a form of software interrupt. They occur when something unusual happens, such as a divide-by-zero, trying to access 
+  an array outside of the array bounds, trying to allocate memory when there is no longer any available RAM, etc... What you may 
+  not know is that you can intercept this software interrupt in your code using exceptions. You can generate interrupts as well 
+  when you detect an unusual situation in your code. The following code generates exceptions for an array out of bounds error 
+  as well as a divide-by-zero error:<br>
+<a href="Exception/Exception.cpp" target="_blank">Exception.cpp</a>.
+</p>
+
+<p><em>Two-Dimensional Arrays</em></p>
+<p>A tictactoe game has been created from a grid class. The grid class keeps track of the entries on a tictactoe grid. The 
+  grid class allows users to make a play, test to see if someone has won, and also to announce a tie game. This example 
+  also makes use of class enumerations:<br>
+  <a href="TicTacToe/Grid.h" target="_blank">Grid.h</a>,
+  <a href="TicTacToe/Grid.cpp" target="_blank">Grid.cpp</a> and
+  <a href="TicTacToe/TicTacToeMain.cpp" target="_blank">TicTacToeMain.cpp</a>.
 </p>
