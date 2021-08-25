@@ -1,0 +1,68 @@
+<h2>SEP200 – Lab 9: The inverse of a matrix</h2>
+
+<h3>Due: end of week 12</h3>
+
+<p>This lab will test your ability to use a functor with a two-dimensional array to calculate the inverse of a 3x3 matrix.</p>
+
+<p>Functors have certain advantages over functions. Unlike functions, functors can have state. They fit into the object-oriented 
+    paradigm as compared to functions. Functors are often inlined by the compiler, unlike function pointers. The functor does 
+    not require runtime dispatching, therefore it is more efficient in most cases.</p>
+
+<p>Your functor is going to look like a function to the calling program, but it is actually an object of a class called <b>inverse</b>.</p>
+
+<h3>The <b>inverse</b> class.</h3>
+<p>The <b>inverse</b> class has to perform the following:
+<ul>
+<li>The matrix that is passed to the <b>inverse</b> class may have floating point values or may have double floating 
+    point values. The <b>inverse</b> class has to be generic enough to accommodate for both (or more) types.</li>
+<li>The <b>inverse</b> class will present a function like interface to the calling program by overriding the operator <b>operator()</b>.</li>
+<li>In determining the inverse of a matrix, one has to first determine the <b>determinant</b> of a matrix. 
+    See <a href="https://www.mathsisfun.com/algebra/matrix-determinant.html" target="_blank">Determinant of a Matrix</a> as a guide 
+    on how to calculate the <b>determinant</b> of a 3x3 matrix.</li>
+<li>Once the <b>determinant</b> has been calculated, see 
+    <a href="https://byjus.com/maths/inverse-of-3-by-3-matrix/" target="_blank">Inverse of a 3x3 Matrixc</a> as a guide on how to 
+    calculate the inverse of a 3x3 matrix.</li>
+<li>The <b>inverse</b> class may require a private matrix of dimension 3x3 to act as a temporary matrix to aid in the 
+       matrix calculations. The values of this temporary matrix (if needed) should be initialized to 0.</li>
+<li>You might want to make use of private functions to assist in all this. For instance, each value of the inverse matrix is calculated 
+    from the <b>determinant</b> of a 2x2 submatrix. You may want to have a private function for calculating this <b>determinant</b> 
+    since the code will be reused many times.</li>
+</ul>
+
+<h3>Sample Run</h3>
+<p>When you are finished, you can compare your answers with that of an online inverse matrix calculator found at 
+    <a href="https://matrix.reshish.com/inverse.php" target="_blank">Inverse Matrix Calculator</a>. The test function 
+    for this lab can be found at <a href="InverseMain.cpp" target="_blank">InverseMain.cpp</a>. An empty <b>inverse</b> class can be found at 
+    <a href="Inverse.h" target="_blank">Inverse.h</a>. A sample run is as follows:<br>
+<pre>
+    The inverse of mat3x3 is:
+    row 1: 0.0330946, 0.0753272, 0.0133366
+    row 2: 0.0138306, -0.0879229, 0.0204989
+    row 3: 0.0274142, 0.0400099, -0.048654
+    
+    The inverse of mat3x3 as a float is:
+    row 1: 0.0330946, 0.0753272, 0.0133366
+    row 2: 0.0138306, -0.0879229, 0.0204989
+    row 3: 0.0274142, 0.0400099, -0.048654
+    
+    
+    From the online inverse matrix calculator:
+    134/4049  305/4049   54/4049
+     56/4049 -356/4049   83/4049
+    111/4049  162/4049 -197/4049
+</pre>
+</p>
+
+<p>Be sure to document your code with the file name, your name and student number. Add comments throughout the code where necessary.</p>
+
+<h3>Questions</h3>
+<ol>
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+
+<h3>Lab Submission:</h3>
+
+<p>Please email all your code and the answers to the questions to:
+    <a href="mailto: ">@senecacollege.ca</a></p>
