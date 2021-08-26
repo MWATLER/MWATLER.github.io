@@ -2,3 +2,12 @@ Smart Pointers - https://ict.senecacollege.ca/~btp305/pages/content/smart.html
 Pre-Processor Directives - https://ict.senecacollege.ca/~btp305/pages/content/prepr.html
 Multiple Inheritance - https://ict.senecacollege.ca/~btp305/pages/content/mult_.html
 Bit-Wise Expressions - https://ict.senecacollege.ca/~btp305/pages/content/bitws.html
+
+SmartPtr
+SmartPtr2
+Debugging
+VirtualInheritance
+SetUnsetBit
+
+
+
