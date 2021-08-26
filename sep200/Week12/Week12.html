@@ -1,14 +1,19 @@
 <h1>Week 12 - Smart Pointers, The Preprocessor, Multiple Inheritance and Bitwise Expressions</h1>
 
 <h3>Introduction</h3>
-<p>.</p>
+<p>This week we will look at four unrelated topics. The smart pointer ensures that programs are free of memory and resource leaks. 
+  The preprocessor performs preliminary operations on C and C++ files before they are passed to the compiler. Multiple inheritance 
+  is a feature of C++ that allows a class to inherit from more than one base class. Bitwise expressions allow operations in C++
+  to be performed at the bit level.</p>
 
 <h3>Videos</h3>
 <table>
-  <tr><td>Smart Pointers</td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td>The Preprocessor</td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td>Multiple Inheritance</td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td>Bitwise Expressions</td><td><a href="" target="_blank"></a></td></tr>
+  <tr><td>Smart Pointers</td><td><a href="https://www.youtube.com/watch?v=UOB7-B2MfwA" target="_blank">SMART POINTERS in C++ (std::unique_ptr, std::shared_ptr, std::weak_ptr)</a></td></tr>
+  <tr><td>The Preprocessor</td><td><a href="https://www.youtube.com/watch?v=voGGB5TGsV4" target="_blank">Preprocessor Directives - C++ Tutorial For Beginners #21</a></td></tr>
+  <tr><td>Multiple Inheritance</td><td><a href="https://www.youtube.com/watch?v=JZwBW0nYzsk" target="_blank">C++ Multiple Inheritance Explained</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=3XUXSiC-hPE" target="_blank">Multiple Inheritance in C++ with Ambiguity & Resolution</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=ejTzn_sxv-0" target="_blank">Virtual Base Class In C++ || Multipath Inheritance In C++</a></td></tr>
+  <tr><td>Bitwise Expressions</td><td><a href="https://www.youtube.com/watch?v=qTFUnp_KwHg" target="_blank">C++ Bitwise AND and OR</a></td></tr>
 </table>
 
 <h3>Quiz</h3>
@@ -16,8 +21,8 @@
 
 <h3>Lecture Material</h3>
 <ul>
-  <li>Chapters  of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
-  <li>Chapters  of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+  <li>Chapters 11, 12, 21 and 34 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapters 2, 4, 12 and 18 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
   <li><a href="SmartPointers.docx" target="_blank">Smart Pointers</a></li>
   <li><a href="PreProcessor.docx" target="_blank">The Preprocessor</a></li>
   <li><a href="MultipleInheritance.docx" target="_blank">Multiple Inheritance</a></li>
@@ -37,32 +42,47 @@
 
 <h3>Sample Code</h3>
 
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a>.
+<p><em>Smart Pointers</em></p>
+<p>A custom smart pointer has been built to demonstrate the internal workings of a smart pointer. The code for a custom smart 
+  pointer can be found at:<br>
+  <a href="SmartPtr/Title.h" target="_blank">Title.h</a>,
+  <a href="SmartPtr/SmartPtr.h" target="_blank">SmartPtr.h</a> and
+  <a href="SmartPtr/SmartPtr.cpp" target="_blank">SmartPtr.cpp</a>.<br>
+  Code that makes use of C++'s smart pointer can be seen at:<br>
+  <a href="SmartPtr2/Title.h" target="_blank">Title.h</a> and
+  <a href="SmartPtr2/UniquePtr.cpp" target="_blank">UniquePtr.cpp</a>.<br>
 </p>
 
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a>.
+<p><em>Macros</em></p>
+<p>Macros in C++ have a wide variety of application. One such application is in debugging. Embedded debug can be enabled and disabled via 
+  a simple <b>define</b>. Code with embedded debugging can also apply levels or severity of the debug. Debug logs can be filtered according 
+  to their severity. Code with embedded debug can be seen at:<br>
+  <a href="Debugging/Automobile.h" target="_blank">Automobile.h</a>,
+  <a href="Debugging/Automobile.cpp" target="_blank">Automobile.cpp</a> and
+  <a href="Debugging/TravelSimulator.cpp" target="_blank">TravelSimulator.cpp</a>.
 </p>
 
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a>.
+<p><em>Multiple Inheritance</em></p>
+<p>When a class inherits from two or more base classes, ambiguities can result. One way of resolving ambiguities is in the class itself, where 
+  it specifies which base class should perform which function. Another way is by making a common base class virtual. Code that demonstrates 
+  the resolution of ambiguities can be seen at:<br>
+  <a href="VirtualInheritance/Name.h" target="_blank">Name.h</a>,
+  <a href="VirtualInheritance/Name.cpp" target="_blank">Name.cpp</a>,
+  <a href="VirtualInheritance/NCube.h" target="_blank">NCube.h</a>,
+  <a href="VirtualInheritance/NCube.cpp" target="_blank">NCube.cpp</a>,
+  <a href="VirtualInheritance/NLitCube.h" target="_blank">NLitCube.h</a>,
+  <a href="VirtualInheritance/NLitCube.cpp" target="_blank">NLitCube.cpp</a>,
+  <a href="VirtualInheritance/NLitObj.h" target="_blank">NLitObj.h</a>,
+  <a href="VirtualInheritance/NLitObj.cpp" target="_blank">NLitObj.cpp</a> and
+  <a href="VirtualInheritance/VirtualInheritance.cpp" target="_blank">VirtualInheritance.cpp</a>.
 </p>
 
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a>.
-</p>
-
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a>.
-</p>
-
-<p><em></em></p>
-<p>:<br>
-<a href="" target="_blank"></a>.
+<p><em>Bitwise Expressions</em></p>
+<p>Flags are often used to qualify a certain operations. Files, for instance, have flags to indicate whether the file is read-only, write-only, read-write, to 
+  indicate permissions etc... It is a waste of space to store each piece of information inside of a standard data type such as int. Rather, since these 
+  flags represent binary states, they could be stored inside specific bits of one flag. For instance, the following document shows how to set and unset 
+  flags for a file: <a href="SetUnsetBit/SetUnsetBit.docx" target="_blank">SetUnsetBit.docx</a>.<br>
+  The following code follows the document in the setting and unsetting of bits for a files operation class:<br>
+  <a href="SetUnsetBit/FileOperations.h" target="_blank">FileOperations.h</a> and 
+  <a href="SetUnsetBit/SetUnsetBit.cpp" target="_blank">SetUnsetBit.cpp</a>.
 </p>
