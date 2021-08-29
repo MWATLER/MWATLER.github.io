@@ -1,4 +1,4 @@
-<h2>SEP200 – Lab 10: Multiple Inheritance/h2>
+<h2>SEP200 – Lab 10: Multiple Inheritance</h2>
 
 <h3>Due: end of week 13</h3>
 
@@ -6,87 +6,143 @@
     class will inherit from both an automobile class and a boat class. The lab will also test your ability to 
     use enumerations, class variables, and the smart pointer.</p>
 
-<p>.</p>
+<p>The base class for this lab is called <b>Vehicle</b>. The classes <b>Automobile</b> and <b>Boat</b>
+both inherit from this class. It should be possible to create an object of type <b>Automobile</b> to represent an 
+automobile, and it should be possible to create an object of type <b>Boat</b> to represent a boat. Since an
+amphibious vehicle is both a boat and an automobile, the class <b>AmphibiousVehicle</b> inherits from both
+<b>Boat</b> and <b>Automobile</b>.</p>
 
-<p>.</p>
-
-
-<h3>The <b></b> class.</h3>
-<p>:
+<h3>The <b>Vehicle</b> class.</h3>
+<p>The <b>Vehicle</b> class is an abstract class that declares an error status structure as well as function interfaces
+required by all derived classes. The class has been started for you and can be found at <a href="Vehicle.h" target="_blank">Vehicle.h</a>. 
+It contains the following:
 <ul>
-<li>.</li>
-<li>.</li>
-<li>.</li>
-<li>.</li>
+<li>The <b>Err_Status</b> enumeration is used for all derived classes and should the error status 
+    for success, out of fuel, fuel overflow, and incorrect mode.</li>
+<li>The <b>Travel</b> function takes distance as an argument and returns an error status.</li>
+<li>The <b>AddFuel</b> function takes amount as an argument and returns an error status.</li>
+<li>The <b>GetFuel</b> function simply returns the amount of fuel left in the tank.</li>
+<li>The <b>GetCost</b> function simply returns the accumulated cost of all fuel purchases.</li>
 </ul>
+</p>
 
-<h3>The <b></b> class.</h3>
-<p>:
+<h3>The <b>Boat</b> class.</h3>
+<p>The fuel efficiency for a boat is given in litres per hour. This assumes a constant travelling speed. The <b>Boat</b> class 
+    has been started for you at <a href="Boat.h" target="_blank">Boat.h</a>. It completes the abstract <b>Vehicle</b> class as follows:
 <ul>
-<li>.</li>
-<li>.</li>
-<li>.</li>
-<li>.</li>
+<li>Add variables for name, litres consumed per hour, fuel in the tank and accumulated cost. Assume the boat travels at a 
+    constant speed of 20.0 km/hour. Assume the cost per litre of boat fuel is $1.60. Assume the tank capacity is 150.0L.</li>
+<li>The <b>constructor</b> passes through the boat's name, the litres consumed per hour, and the initial fuel in the tank. 
+    Be sure to initialize the cost based on this fuel. Print out a message indicating how much fuel has been added and its cost.</li>
+<li>The <b>Travel</b> function should accept distance as an argument and return an error status. Based on the distance travelled 
+    and the constant travelling speed, the time of travel can be calculated. Knowing the litres consumed per hour, one can calculate 
+    the amount of fuel consumed. If the fuel consumed is greater than the fuel in the tank, then you have to set the return status 
+    to out of fuel, recalculate the actual distance travelled, the actual cost of the travel, set the fuel in the tank to zero, and 
+    print out an error message that includes the actual distance and and actual cost. If there is enough fuel, decrease the fuel in 
+    the tank by the fuel consumed, and calculate the cost of the travel. Print out a message showing how much fuel is left in the 
+    tank, how far the boat travelled, and the cost of the travel.</li>
+<li>The <b>AddFuel</b> function should accept an amount as an argument and return an error status. If the amount added will cause 
+    the tank to overflow, set the return status to fuel overflow. Readjust the amount to result in a full tank. Print out an error 
+    message that includes the actual amount added and the actual cost. if the amount added does not result in an overflow, 
+    calculate the cost and add the amount to the fuel in the tank. Print out a message showing the amount added and the cost.
+	Be sure to always add the actual cost to the accumulated cost in either case.</li>
+<li>The <b>GetFuel</b> function simply returns the amount of fuel in the tank.</li>
+<li>The <b>GetCost</b> function simply returns the accumulated cost of all the fuel purchased.</li>
 </ul>
+</p>
 
-<h3>The <b></b> class.</h3>
-<p>:
+<h3>The <b>Automobile</b> class.</h3>
+<p>The fuel efficiency for an automobile is given as L per 100km. The <b>Automobile</b> class has been started for you at 
+    <a href="Automobile.h" target="_blank">Automobile.h</a>. It completes the abstract <b>Vehicle</b> class as follows:
 <ul>
-<li>.</li>
-<li>.</li>
-<li>.</li>
-<li>.</li>
+<li>Add variables for name, fuel efficiency (L per 100km), fuel in the tank and accumulated cost. Assume the cost per 
+    litre of fuel is $1.30. Assume the tank capacity is 50.0L.</li>
+<li>The <b>constructor</b> passes through the automobiles's name, the fuel efficiency, and the initial fuel in the 
+    tank. Be sure to initialize the cost based on this fuel. Print out a message indicating how much fuel has been 
+    added and its cost.</li>
+<li>The <b>Travel </b> function should accept distance as an argument and return an error status. Based on the distance travelled 
+    and the fuel efficiency, one can calculate the amount of fuel consumed. If the fuel consumed is greater than the fuel in the 
+    tank, then you have to set the return status to out of fuel, recalculate the actual distance travelled, the actual cost of 
+    the travel, set the fuel in the tank to zero, and print out an error message that includes the actual distance and and actual cost.
+	If there is enough fuel, decrease the fuel in the tank by the fuel consumed, and calculate the cost of the travel. Print out 
+	a message showing how much fuel is left in the tank, how far the automobile travelled, and the cost of the travel.</li>
+<li>The <b>AddFuel</b> function should accept an amount as an argument and return an error status. If the amount added will cause 
+    the tank to overflow, set the return status to fuel overflow. Readjust the amount to result in a full tank. Print out an error 
+    message that includes the actual amount added and the actual cost. if the amount added does not result in an overflow, 
+    calculate the cost and add the amount to the fuel in the tank. Print out a message showing the amount added and the cost.
+    Be sure to always add the actual cost to the accumulated cost in either case.</li>
+<li>The <b>GetFuel</b> function simply returns the amount of fuel in the tank.</li>
+<li>The <b>GetCost</b> function simply returns the accumulated cost of all the fuel purchased.</li>
 </ul>
+</p>
 
-<h3>The <b></b> class.</h3>
-<p>:
+<h3>The <b>AmphibousVehicle</b> class.</h3>
+<p>This class runs in two modes: automobile or boat. If it runs in the automobile mode, it will travel and add fuel to the 
+automobile portion of the amphibious vehicle. Likewise, if run in the boat mode, it will travel and add fuel to the 
+boat portion of the amphibious vehicle. The <b>AmphibiousVehicle</b> class therefore inherits from both the 
+<b>Boat</b> class and the <b>Automobile</b> class. It has been started for you at 
+<a href="AmphibiousVehicle.h" target="_blank">AmphibiousVehicle.h</a>. Please complete it as follows:
 <ul>
-<li>.</li>
-<li>.</li>
-<li>.</li>
-<li>.</li>
+<li>Add a variable for the name of the amphibious vehicle and add a variable for the operating mode.</li>
+<li>Add three constant public class variables indicating these modes: none, automobile, boat.</li>
+<li>The <b>constructor</b> passes through the name of the amphibious vehicle. This name should
+	also be passed through to the boat and automobile classes.</li>
+<li>The <b>Travel</b> function takes as an argument the distance and returns error status.
+	Depending on the mode, the travel function will call either the travel function of the
+	automobile class or the travel function of the boat class.</li>
+<li>The <b>AddFuel</b> function takes as an argument the amount of fuel and returns error status.
+	Depending on the mode, the add fuel function will call either the add fuel function of the
+	automobile class or the add fuel function of the boat class.</li>
+<li>Add <b>getter</b> functions for name, fuel and cost. When getting the fuel, be sure to return
+	the total fuel used by both the boat and the automobile portions of the amphibious vehicle.
+	Likewise, when getting the cost, be sure to return the costs of both the boat and automobile.</li>
+<li>The <b>UnsetMode</b>functions unsets a mode, and a <b>SetMode</b> function sets a mode. 
+    For instance, if we are changing from  the automobile mode to the boat mode, we have to unset the 
+    automobile mode then set the boat mode. Do this using bitwise expressions.</li>
 </ul>
+</p>
 
 <h3><b>AmphibiousVehicleMain</b></h3>
-<p>:
+<p>The file is used to test the amphibious vehicle class. It can be found at 
+    <a href="AmphibiousVehicleMain.cpp" target="_blank">AmphibiousVehicleMain.cpp</a>. There is only one task:
 <ul>
-<li>.</li>
-<li>.</li>
-<li>.</li>
-<li>.</li>
+<li>Add a smart pointer of type <b>AmphibiousVehicle</b>. Call the amphibious vehicle object <b>ampVehicle</b> 
+    and name this amphibious vehicle as "<b>Hydra Spyder</b>".</li>
 </ul>
+</p>
 
 <h3>Sample Run</h3>
 <p>
-    <a href="" target="_blank"></a>.
-    <a href="" target="_blank"></a>.
-    <a href="" target="_blank"></a>.
-    <a href="" target="_blank"></a>.
-    <a href="" target="_blank"></a>.
-    
     A sample run is as follows:<br>
 <pre>
+    Hydra Spyder boat has added 150L at a cost of $240.
+
+    Hydra Spyder automobile has added 50L at a cost of $65.
+    
     The automobile will travel 200km
     Hydra Spyder automobile has 30.00L of fuel left. It has travelled 200.00km at a cost of $26.00.
     
     The boat will travel 20km
     Hydra Spyder boat has 130.00L of fuel left. It has travelled 20.00km at a cost of $32.00.
     
-    Hydra Spyder in total has spent $58.00 on fuel.
+    Hydra Spyder in total has spent $305.00 on fuel.
     
     Adding 30L of fuel to the boat
     Hydra Spyder boat has encountered a fuel overflow. The amount added is actually 20.00L at a cost of $32.00.
+    The Hydra Spyder boat cannot add 30L of fuel.
     
     The boat will travel 200km
     Hydra Spyder boat is out of fuel. It actually travelled 150.00km at a cost of $240.00.
+    The Hydra Spyder boat cannot travel 200km.
     
     Adding 30L of fuel to the automobile
     Hydra Spyder automobile has encountered a fuel overflow. The amount added is actually 20.00L at a cost of $26.00.
+    The Hydra Spyder automobile cannot add 30L of fuel.
     
     The automobile will travel 300km
     Hydra Spyder automobile has 20.00L of fuel left. It has travelled 300.00km at a cost of $39.00.
     
-    Hydra Spyder in total has spent $395.00 on fuel.    
+    Hydra Spyder in total has spent $363.00 on fuel.
 </pre>
 </p>
 
@@ -94,10 +150,8 @@
 
 <h3>Questions</h3>
 <ol>
-    <li>?</li>
-    <li>?</li>
-    <li>?</li>
-    <li>?</li>
+    <li>Why has multiple inheritance been a controversial issue for many years?</li>
+    <li>What solves the "Diamond Problem"?</li>
 </ol>
 
 <h3>Lab Submission:</h3>
