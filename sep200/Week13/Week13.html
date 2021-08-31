@@ -36,7 +36,11 @@
 <h3>Sample Code</h3>
 
 <p><em>A Network Node</em></p>
-<p>:<br>
+<p>Threads are often used in servers or networking software. One thread receives incoming messages, another thread processes these messages and sends them 
+  on to their destination. One such example of a network node is given. Mutexes are emulated with mutex initialize, lock and unlock functions in order to 
+  protect a shared resource. The messages received in the receive thread are put in a queue. These messages are popped in the send thread and forwarded 
+  on to their destination. The input data is simulated via text files (Input1.dat...Input10.dat) and the destination for these messages are simulated 
+  by writing the data to an output file (Output.dat). All files are as follows:<br>
   <a href="NetworkNode/NetworkNode.h" target="_blank">NetworkNode.h</a>,
   <a href="NetworkNode/NetworkNode.cpp" target="_blank">NetworkNode.cpp</a> and
   <a href="NetworkNode/NetworkNodeMain.cpp" target="_blank">NetworkNodeMain.cpp</a>.<br>
@@ -55,19 +59,19 @@
   <a href="NetworkNode/Output.dat" target="_blank">Output.dat</a>.
 </p>
 
-<p><em></em></p>
-<p>:<br>
-  <a href="" target="_blank"></a>,
+<p><em>Thread Functions</em></p>
+<p>Two more programs have been written to demonstrate the format functions may take when creating threads. The first program 
+  demonstrates threads with a function object and the second with a lambda function:<br>
+  <a href="ThreadFunctionObject/ThreadFunctionObject.cpp" target="_blank">ThreadFunctionObject.cpp</a> and
+  <a href="ThreadLambda/ThreadLambda.cpp" target="_blank">ThreadLambda.cpp</a>.
 </p>
 
-<p><em></em></p>
-<p>:<br>
-  <a href="" target="_blank"></a>,
-</p>
-
-<p><em></em></p>
-<p>:<br>
-  <a href="" target="_blank"></a>,
+<p><em>Thread Race Conditions</em></p>
+<p>Sometimes a function has to wait for a thread to run before processing data. It does take a little time for a thread to start. Synchronization 
+  can be obtained with the <b>future</b>, <b>packaged task</b> or <b>async</b>. Programs that demonstrate these are:<br>
+  <a href="ThreadFuture/ThreadFuture.cpp" target="_blank">ThreadFuture.cpp</a>,
+  <a href="ThreadPackagedTask/ThreadPackagedTask.cpp" target="_blank">ThreadPackagedTask.cpp</a> and
+  <a href="ThreadAsync/ThreadAsync.cpp" target="_blank">ThreadAsync.cpp</a>.
 </p>
 
 <p><em>C++ Language Standards</em></p>

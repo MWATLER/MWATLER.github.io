@@ -1,4 +1,0 @@
-Threads - https://ict.senecacollege.ca/~btp305/pages/content/threa.html
-Multithreading - https://ict.senecacollege.ca/~btp305/pages/content/multi.html
-Language Standards (See BTP200 Week13) - https://ict.senecacollege.ca/~btp200/pages/content/ansis.html
-Design
