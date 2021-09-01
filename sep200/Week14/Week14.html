@@ -20,11 +20,38 @@ None<br>
 
 <h3>Sample Code</h3>
 
-<p><em></em></p>
-<p>:<br>
-  <a href="" target="_blank"></a>,
-  <a href="" target="_blank"></a>,
-  <a href="" target="_blank"></a>,
-  <a href="" target="_blank"></a>,
-  <a href="" target="_blank"></a>,
+<p><em>Personnel</em></p>
+<p><b>Design Problem</b>: A personnel system is to be built up for students and faculty of Seneca College. All students and 
+  faculty have a name, role (Student/Faculty), address and a seneca number. They may both also have an unknown number of 
+  cars. Each car has a make, year and age which is calculated from the current year and year of the car. The students have 
+  an unknown number of marks from which an average can be calculated. The faculty have salary.<br>
+
+  <p>The main program should have the ability to create an unknown number of faculty and an unknown number of students. 
+    Information for each faculty and student has to be passed through the constructor and/or the constructor prompt the 
+    user for this information. After creating all faculty and student objects, the main program will print information 
+    for each.</p>
+
+  <p>In designing this personnel system, keep in mind the following:
+<ul>
+  <li>The use of enumerations in determining the role of the personnel (faculty/student).</li>
+  <li>The use of the STL for arrays of unknown size.</li>
+  <li>The use of polymorphism in designing a common class for faculty and student, as well as specialized classes for each.</li>
+  <li>Passing information from a derived class to a base class. The derived class calling functions in the base class.</li>
+  <li>The use of composition (aggregation) in assigning cars to the students and faculty.</li>
+  <li>The use of exceptions for validating input data.</li>
+  <li>The use of string concatenation in building up an information string.</li>
+  <li>The use of smart pointers in the main function to create student and faculty objects.</li>
+</ul>
+  </p>
+
+  <p>A solution to this problem is as follows:<br>
+  <a href="Personnel/Vehicle.h" target="_blank">Vehicle.h</a>,
+  <a href="Personnel/Vehicle.cpp" target="_blank">Vehicle.cpp</a>,
+  <a href="Personnel/Personnel.h" target="_blank">Personnel.h</a>,
+  <a href="Personnel/Personnel.cpp" target="_blank">Personnel.cpp</a>,
+  <a href="Personnel/Student.h" target="_blank">Student.h</a>,
+  <a href="Personnel/Student.cpp" target="_blank">Student.cpp</a>,
+  <a href="Personnel/Faculty.h" target="_blank">Faculty.h</a>,
+  <a href="Personnel/Faculty.cpp" target="_blank">Faculty.cpp</a> and
+  <a href="Personnel/PersonnelMain.cpp" target="_blank">PersonnelMain.cpp</a>.
 </p>
