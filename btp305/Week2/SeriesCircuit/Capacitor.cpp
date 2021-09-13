@@ -58,7 +58,10 @@ Capacitor::Capacitor(Capacitor&& capacitor) {//Move constructor
 	capacitor.current = 0;
 	capacitor.voltage = nullptr;
 }
-
+/*class Capacitor {
+	double capacitance;
+	double current;
+	double* voltage;*/
 Capacitor& Capacitor::operator=(Capacitor&& capacitor) {//Move assignment
 	if (this != &capacitor) {
 		this->capacitance = capacitor.capacitance;
