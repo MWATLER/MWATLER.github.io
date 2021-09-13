@@ -12,8 +12,8 @@ public:
 	Capacitor(double _capacitance);
 	Capacitor(const Capacitor& capacitor);//copy constructor
 	Capacitor& operator=(const Capacitor& capacitor);//copy assignment
-	Capacitor(Capacitor&& capacitor) noexcept;//move constructor
-	Capacitor& operator=(Capacitor&& capacitor) noexcept;//move assignment
+	Capacitor(Capacitor&& capacitor);//move constructor
+	Capacitor& operator=(Capacitor&& capacitor);//move assignment
 	void SetCurrent(double _current);
 	double GetVoltage(void);
 	~Capacitor();

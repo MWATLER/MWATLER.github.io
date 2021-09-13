@@ -26,14 +26,14 @@ Resistor& Resistor::operator=(const Resistor& resistor) {//Copy assignment
 	return *this;
 }
 
-Resistor::Resistor(Resistor&& resistor) noexcept {//Move constructor
+Resistor::Resistor(Resistor&& resistor) {//Move constructor
 	this->resistance = resistor.resistance;
 	this->current = resistor.current;
 	resistor.resistance = 0.0;
 	resistor.current = 0.0;
 }
 
-Resistor& Resistor::operator=(Resistor&& resistor) noexcept {//Move assignment
+Resistor& Resistor::operator=(Resistor&& resistor) {//Move assignment
 	if (this != &resistor) {
 		this->resistance = resistor.resistance;
 		this->current = resistor.current;

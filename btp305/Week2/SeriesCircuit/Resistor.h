@@ -10,8 +10,8 @@ public:
 	Resistor(double _resistance);
 	Resistor(const Resistor& resistor);//Copy constructor
 	Resistor& operator=(const Resistor& resistor);//Copy assignment
-	Resistor(Resistor&& resistor) noexcept;//Move constructor
-	Resistor& operator=(Resistor&& resistor) noexcept;//Move assignment
+	Resistor(Resistor&& resistor);//Move constructor
+	Resistor& operator=(Resistor&& resistor);//Move assignment
 	void SetCurrent(double _current);
 	double GetVoltage(void);
 	~Resistor();

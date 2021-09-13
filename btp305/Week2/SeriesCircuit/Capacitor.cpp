@@ -49,7 +49,7 @@ Capacitor& Capacitor::operator=(const Capacitor& capacitor) {//Copy assignment
 	return *this;
 }
 
-Capacitor::Capacitor(Capacitor&& capacitor) noexcept {//Move constructor
+Capacitor::Capacitor(Capacitor&& capacitor) {//Move constructor
 	this->capacitance = capacitor.capacitance;
 	this->current = capacitor.current;
 	delete[] this->voltage;
@@ -59,7 +59,7 @@ Capacitor::Capacitor(Capacitor&& capacitor) noexcept {//Move constructor
 	capacitor.voltage = nullptr;
 }
 
-Capacitor& Capacitor::operator=(Capacitor&& capacitor) noexcept {//Move assignment
+Capacitor& Capacitor::operator=(Capacitor&& capacitor) {//Move assignment
 	if (this != &capacitor) {
 		this->capacitance = capacitor.capacitance;
 		this->current = capacitor.current;
