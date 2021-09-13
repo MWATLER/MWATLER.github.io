@@ -24,12 +24,12 @@ int main() {
 	return 0;
 }
 
-void PrintInfo(void* s) {
-	Student st = *(Student*)s;
+void PrintInfo(void* s) {//pass by address
+	Student st = *(Student*)s;//effectively pass by value
 	cout << st.name << " " << st.age << endl;
 }
 
-void SetInfo(void* s) {
-	Student* st = (Student*)s;
+void SetInfo(void* s) {//pass by address
+	Student* st = (Student*)s;//effectively pass by address
 	st->age += 2;
 }

@@ -15,8 +15,8 @@ class EmployeeInfo {
 	std::string position;
 	int age;
 public:
-	static double runningTotal;
-	static int numEmployees;
+	static double runningTotal;//a running total of the ages of the employees
+	static int numEmployees;//number of objects of type EmployeeInfo
 	EmployeeInfo();
 	EmployeeInfo(std::string _name, std::string _position, int _age);
 	std::string GetName();
