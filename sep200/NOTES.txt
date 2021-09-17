@@ -1,2 +1,3 @@
 Week8: Add Database and SingletonDatabase from week2 of btp305.
 Week3: Add exercise on lvalues and rvalues from week2 of btp305.
+Week??: Add the creation design pattern and stooge template from week3 of btp305.
