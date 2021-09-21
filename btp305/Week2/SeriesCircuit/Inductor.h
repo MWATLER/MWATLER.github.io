@@ -11,8 +11,8 @@ public:
 	Inductor(double _inductance);
 	Inductor(const Inductor& inductor);//Copy constructor
 	Inductor& operator=(const Inductor& inductor);//Copy assignment
-	Inductor(Inductor&& inductor);//Move constructor
-	Inductor& operator=(Inductor&& inductor);//Move assignment
+	Inductor(Inductor&& inductor) noexcept;//Move constructor
+	Inductor& operator=(Inductor&& inductor) noexcept;//Move assignment
 	void SetCurrent(double _current);
 	double GetVoltage(void);
 	~Inductor();
