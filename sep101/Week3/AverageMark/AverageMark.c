@@ -4,7 +4,6 @@
 //miguel.watler@senecacollege.ca
 //01234567890
 
-#define _CRT_SECURE_NO_WARNINGS//Ignore warnings due to scanf()
 #include <stdio.h>
 
 int main()
@@ -18,7 +17,7 @@ int main()
 	count = 0;
 	do {//NOTE: do-while loops run at least once
 		printf("Enter your mark: ");
-		scanf("%f", &mark);
+		scanf_s("%f", &mark);
 		runningTotal += mark;
 		++count;
 	} while (count < 3);//Test at the end
@@ -31,9 +30,9 @@ int main()
 	count = 0;
 	while (count < 3) {//Test at the beginning
 		printf("Enter your mark: ");
-		scanf("%f", &mark);
+		scanf_s("%f", &mark);
 		//Curve all marks upwards by 10%
-		mark = mark + mark * 0.10f;//Or mark += mark * .10
+		mark = mark + mark * 0.10f;//Or mark += mark * 0.10f
 		if (mark > 100) {//mark cannot exceed 100%
 			printf("Capping your mark at 100%%\n");
 			mark = 100;
@@ -47,7 +46,7 @@ int main()
 	runningTotal = 0;
 	for (count = 0; count < 3; ++count) {//Test at the beginning
 		printf("Enter your mark: ");
-		scanf("%f", &mark);
+		scanf_s("%f", &mark);
 		//Curve all marks upwards by 10%
 		mark = mark + mark * 0.10f;//Or mark += mark * .10
 		if (mark > 100) {//mark cannot exceed 100%
@@ -55,6 +54,7 @@ int main()
 			mark = 100;
 		}
 		runningTotal += mark;
+		//++count;
 	}
 	printf("for-next: Your average is %.1f%%\n\n",
 		runningTotal / count);
@@ -64,8 +64,10 @@ int main()
 	for (count = 0; count < 3; ++count) {//Test at the beginning
 		do {//Validate the marks here
 			printf("Enter your mark: ");
-			scanf("%f", &mark);
-			if (mark < 0 || mark>100) printf("Error: mark out of range.\n");
+			scanf_s("%f", &mark);
+			if (mark < 0 || mark>100) {
+				printf("Error: mark out of range.\n");
+			}
 		} while (mark < 0 || mark>100);
 		//Curve all marks upwards by 10%
 		mark = mark + mark * 0.10f;//Or mark += mark * .10
@@ -74,6 +76,7 @@ int main()
 			mark = 100;
 		}
 		runningTotal += mark;
+		//++count;
 	}
 	printf("for-next: Your average is %.1f%%\n\n",
 		runningTotal / count);
