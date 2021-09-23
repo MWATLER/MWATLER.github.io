@@ -8,7 +8,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-#define NUM_MARKS 6
+#define NUM_MARKS 6//const int NUM_MARKS=6;
 
 int main()
 {
@@ -21,12 +21,12 @@ int main()
 	float average;
 
 	printf("Enter your name: ");
-	scanf("%s", name);
+	scanf_s("%s", name, 20);
 	for (int i = 0; i < NUM_MARKS; ++i)
 	{
 		do {
 			printf("Enter the mark for course %d: ", i + 1);
-			scanf("%d", &mark[i]);//if i=0, scan to mark[0]
+			scanf_s("%d", &mark[i]);//if i=0, scan to mark[0]
 			if (mark[i] < 0 || mark[i]>100) {
 				invalidEntry = 1;
 				printf("Invalid entry. Try again...\n");
@@ -37,8 +37,8 @@ int main()
 		} while (invalidEntry == 1);
 		runningTotal = runningTotal + mark[i];
 		if (mark[i] > highestMark) {
-			highestMark = mark[i];
-			indexHighestMark = i;
+			highestMark = mark[i];//mark[2] is 99
+			indexHighestMark = i;//i=2, mark[2] has the highest mark
 		}
 	}
 	average = (float)runningTotal / NUM_MARKS;

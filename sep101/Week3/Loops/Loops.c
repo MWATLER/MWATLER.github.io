@@ -5,8 +5,11 @@
 int main(void)
 {
 	int i;
-	for (i = 10; i > 0; --i) {//The preference
+	int foundFlag = 0;
+	for (i = 10; i > 0 && foundFlag==0; --i) {//The preference
 		printf("i is %d\n", i);
+		if (i == 5) foundFlag = 1;
+		//--i occurs at the end of the for-loop
 	}
 	printf("\n");
 
