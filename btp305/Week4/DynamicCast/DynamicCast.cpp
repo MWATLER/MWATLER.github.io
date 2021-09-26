@@ -17,7 +17,7 @@ class Player : public Employee {
 public:
 	void PrintInfo() {
 		Employee::PrintInfo();
-		cout << " " << points;
+		cout << " Player: " << points;
 	}
 };
 

@@ -20,7 +20,7 @@ int main() {
 
 		retVal = file.Read(msg);
 		if (!retVal) cout << "Error reading from the file" << endl;
-		else cout << msg;
+		else cout << msg << endl;
 
 		file.UnsetFlags(file.WRITE);
 		
