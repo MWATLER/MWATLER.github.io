@@ -5,7 +5,6 @@
 //1234567890
 //Section XXY
 
-#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 
 int main(void)
@@ -24,7 +23,7 @@ int main(void)
 	count = 0;
 	do {
 		printf("Enter a value (0 to stop) ");
-		scanf("%d", &value);
+		scanf_s("%d", &value);
 		if (value < 0) {//Convert negative values to positive ones
 			value = value * (-1);
 			runningTotal += value;

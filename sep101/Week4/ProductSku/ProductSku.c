@@ -5,7 +5,6 @@
 //1234567890
 //Section XXY
 
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "product.h"
 
@@ -32,9 +31,9 @@ int main(void)
 	printf("\n");
 	printf("Let's change product 2:\n");//2nd product, index 1
 	printf("Enter the new sku: ");
-	scanf("%d", &product[1].sku);
+	scanf_s("%d", &product[1].sku);
 	printf("Enter the new price: $");
-	scanf("%lf", &product[1].price);
+	scanf_s("%lf", &product[1].price);
 
 	printf("\n");
 	printf("New SKU Price\n");
@@ -43,6 +42,9 @@ int main(void)
 			product[i].sku, product[i].price);
 		runningTotal += product[i].price;
 	}
+
+	average = runningTotal / n;
+	printf("The average price is %.2lf\n", average);
 
 	for (i = 0; i < n; ++i) {
 		printf("RAM address of product[%d]:%p\n",
