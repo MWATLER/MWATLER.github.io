@@ -6,7 +6,8 @@
 class Name {
     char* name{ nullptr };
 public:
-    Name(const char*);
+//	char* GetName() { return name; }
+	Name(const char*);
     Name(const Name&);
     Name& operator=(const Name&);
     ~Name();

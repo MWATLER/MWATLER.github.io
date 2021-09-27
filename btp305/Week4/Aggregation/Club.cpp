@@ -13,11 +13,13 @@ Club& Club::operator+=(const Name& n) {
 Club& Club::operator-=(const Name& t) {
     bool found = false;
     int i;
-    for (i = 0; i < m && !found; i++)
-        if (!std::strcmp(name[i]->get(), t.get())) found = true;
+	for (i = 0; i < m && !found; i++) {
+		if (!std::strcmp(name[i]->get(), t.get())) found = true;
+	}
     if (found) {
-        for (; i < m; i++)
-            name[i - 1] = name[i];
+		for (; i < m; i++) {
+			name[i - 1] = name[i];
+		}
         if (m) {
             name[m - 1] = nullptr;
             m--;
