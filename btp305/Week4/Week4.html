@@ -6,8 +6,8 @@
 
 <h3>Videos</h3>
 <table>
-  <!--<tr><td>Lecture Recording</td><td><a href="" target="_blank">Monday, September 27 (mp4)</a></td></tr>
-  <tr><td>Lab Recording</td><td><a href="" target="_blank">Tuesday, September 28 (mp4)</a></td></tr>-->
+  <tr><td>Lecture Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lecture_20210927_Recording.mp4" target="_blank">Monday, September 27 (mp4)</a></td></tr>
+  <!--<tr><td>Lab Recording</td><td><a href="" target="_blank">Tuesday, September 28 (mp4)</a></td></tr>-->
   <tr><td>Composition, Aggregations and Associations</td><td><a href="https://www.youtube.com/watch?v=URE9MCTF8Ls" target="_blank">Association Aggregation and Composition</a></td></tr>
   <tr><td>Casts</td><td><a href="https://www.youtube.com/watch?v=lglGKxNrLgM" target="_blank">Advanced C++: All Castings Considered - Part I</a></td></tr>
   <tr><td></td><td><a href="https://www.youtube.com/watch?v=UfrR1nNfoeY" target="_blank">Advanced C++: All Castings Considered - Part II</a></td></tr>
@@ -91,11 +91,11 @@ Code that demonstrates each can be found at:
 <a href="Exception/Exception.cpp" target="_blank">Exception.cpp</a>.
 </p>
 
-
 <p><em>Masks</em></p>
 <p>C++ masks are used for enabling or disabling features for an object such as a file. Since enable/disable is a binary operation, each feature 
   can be stored in one bit. All features together in one variable is called a <b>mask</b>. Generally speaking, a bit mask allows us to store 
-  multiple related values in one variable. For an example on the use of bit-masks, see:
+  multiple related values in one variable. A document that shows how to set and unset a bit in a bit mask can be seen at
+  <a href="SetUnsetBit/SetUnsetBit.docx" target="_blank">SetUnsetBit.docx</a>. For an example on the use of bit-masks, see:
 <ul>
   <li>
     <a href="SetUnsetBit/Sample.txt" target="_blank">Sample.txt</a> and
@@ -103,4 +103,22 @@ Code that demonstrates each can be found at:
     <a href="SetUnsetBit/SetUnsetBit.cpp" target="_blank">SetUnsetBit.cpp</a>.
   </li>
 </ul>
+</p>
+
+<p><em>Templated Database (sample code for workshop 3)</em></p>
+<p>Sample code for workshop 3 templates a database which contains up to 20 key-value entries. The entries are initially read from a file. 
+  Before database destruction, whatever entries are contained within the database are written back to the file. The example demonstates a 
+  <b>GetValue()</b> function for retrieving a value given a key, and also a <b>SetValue()</b> function which creates and stores a key-value pair. 
+  The database also overloads <b>operator+=</b>, where a second class is introduced, called <b>KeyValue</b>. This class only contains a
+  key-value pair with getter functions to get the key and get the value. Three objects of type <b>KeyValue</b> are created in the main 
+  function and added to the database via <b>operator+=</b>. The sample code is as follows:
+  <ul>
+    <li>
+      <a href="DatabaseT/Data.txt" target="_blank">Data.txt</a>,
+      <a href="DatabaseT/Data2.txt" target="_blank">Data2.txt</a>,
+      <a href="DatabaseT/Database.h" target="_blank">Database.h</a>,
+      <a href="DatabaseT/KeyValue.h" target="_blank">KeyValue.h</a> and
+      <a href="DatabaseT/DatabaseMain.cpp" target="_blank">DatabaseMain.cpp</a>.
+    </li>
+  </ul>
 </p>
