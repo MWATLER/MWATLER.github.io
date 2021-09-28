@@ -121,4 +121,18 @@ Code that demonstrates each can be found at:
       <a href="DatabaseT/DatabaseMain.cpp" target="_blank">DatabaseMain.cpp</a>.
     </li>
   </ul>
+  A second example has been created where the database relies entirely on the <b>KeyValue</b> object for all its key-value pairs. Some 
+  objects of type <b>KeyValue</b> are created within the database, for instance when reading the initial values from a file, and some 
+  objects of type <b>KeyValue</b> are created in the main function and passed through by reference. This is not true aggregation, 
+  in that the destructor now does not know which objects of type <b>KeyValue</b> it should destroy. Normally it would destroy all 
+  objects created by the database. The code is seen as follows:
+  <ul>
+    <li>
+      <a href="DatabaseT2/Data.txt" target="_blank">Data.txt</a>,
+      <a href="DatabaseT2/Data2.txt" target="_blank">Data2.txt</a>,
+      <a href="DatabaseT2/Database.h" target="_blank">Database.h</a>,
+      <a href="DatabaseT2/KeyValue.h" target="_blank">KeyValue.h</a> and
+      <a href="DatabaseT2/DatabaseMain.cpp" target="_blank">DatabaseMain.cpp</a>.
+    </li>
+  </ul>
 </p>
