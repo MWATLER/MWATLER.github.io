@@ -15,7 +15,7 @@ int main(void)
 //		int sku;//barcode
 //		double price;
 //	};
-	struct Product product[] = {
+	struct Product product[] = {//how big is this array? Ans: 4.
 //{product[0].sku, product[0].price}, {product[1].sku, product[1].price},
 	 {2156, 2.34}, {4633, 7.89},
 	 {3122, 6.56}, {5611, 9.32} };
@@ -37,14 +37,14 @@ int main(void)
 
 	printf("\n");
 	printf("New SKU Price\n");
+	runningTotal = 0;
 	for (i = 0; i < n; i++) {
-		printf("%5d $%.2lf\n",
-			product[i].sku, product[i].price);
+		printf("%5d $%.2lf\n", product[i].sku, product[i].price);
 		runningTotal += product[i].price;
 	}
 
 	average = runningTotal / n;
-	printf("The average price is %.2lf\n", average);
+	printf("The average price is $%.2lf\n", average);
 
 	for (i = 0; i < n; ++i) {
 		printf("RAM address of product[%d]:%p\n",

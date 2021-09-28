@@ -27,9 +27,8 @@ int main(void)
 		scanf_s("%s", student[i].lastName, MAX_STR);
 		printf("Enter the student's id: ");
 		scanf_s("%d", &student[i].studentId);
-		int j;//control variable for the inside for-next loop
 		runningTotal = 0;
-		for (j = 0; j < NUM_MARKS; ++j) {//each mark for each student
+		for (int j = 0; j < NUM_MARKS; ++j) {//each mark for each student
 			printf("Enter mark %d for %s: ", j + 1, student[i].lastName);
 			scanf_s("%d", &student[i].marks[j]);
 			runningTotal += student[i].marks[j];
@@ -50,7 +49,7 @@ int main(void)
 	printf("\n");
 	printf("Here is the list of students, their averages and scholarships\n");
 	for (i = 0; i < NUM_STUDENTS; ++i) {
-		printf("%-10s has an average of %.2f and a scholarship of $%.2f\n",
+		printf("%-15s has an average of %.2f and a scholarship of $%.2f\n",
 			student[i].lastName, student[i].average, student[i].scholarship);
 	}
 
@@ -59,7 +58,7 @@ int main(void)
 		runningTotal += student[i].marks[2];//The third mark for each student
 	}
 	float ave = (float)runningTotal / NUM_STUDENTS;
-	printf("\nThe average for class 3 is %.2f\n", ave);
+	printf("\nThe average for class 3 is %.2f%%\n", ave);
 
 	return 0;
 }

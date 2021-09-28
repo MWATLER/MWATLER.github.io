@@ -9,6 +9,7 @@
 #include "EmployeeInfo.h"
 #define CURRENT_YEAR 2021
 #define NUM_EMPLOYEES 3
+
 int main(void)
 {
 	struct EmployeeInformation employee[NUM_EMPLOYEES];
@@ -18,9 +19,8 @@ int main(void)
 	//		float salary;//annual salary
 	//		int yearEmployed;
 	//	};
-	for (int i = 0; i < NUM_EMPLOYEES; ++i) {
+	for (int i = 0; i < NUM_EMPLOYEES; ++i) {//Where is "i" visible? Ans. only in the for-loop
 		printf("\nEnter the employee's first name and last name: ");
-		//		fgets(employee[i].name, 30, stdin);
 		scanf_s("%s %s", employee[i].firstName, MAX_STR, employee[i].lastName, MAX_STR);
 		printf("Enter the employee's age: ");
 		scanf_s("%d", &employee[i].age);
@@ -32,7 +32,7 @@ int main(void)
 	printf("\n");
 
 	printf("We have the following employees:\n");
-	for (int i = 0; i < NUM_EMPLOYEES; ++i) {
+	for (int i = 0; i < NUM_EMPLOYEES; ++i) {//"i" is visible in the for-loop
 		printf("%s %s is %d years old and earns $%.2f per year\n",
 			employee[i].firstName,
 			employee[i].lastName,
