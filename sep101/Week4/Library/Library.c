@@ -5,7 +5,6 @@
 //1234567890
 //Section XXY
 
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "Biblio.h"
 #define NUM_BOOKS 500

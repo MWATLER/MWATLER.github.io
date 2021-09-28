@@ -5,7 +5,6 @@
 //1234567890
 //Section XXY
 
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "StudentInfo.h"
 #define NUM_STUDENTS 3
@@ -25,14 +24,14 @@ int main(void)
 	int i;//control variable for the for-next loop
 	for (i = 0; i < NUM_STUDENTS; ++i) {//for each student
 		printf("Enter the student's last name: ");
-		scanf("%s", student[i].lastName);
+		scanf_s("%s", student[i].lastName, MAX_STR);
 		printf("Enter the student's id: ");
-		scanf("%d", &student[i].studentId);
+		scanf_s("%d", &student[i].studentId);
 		int j;//control variable for the inside for-next loop
 		runningTotal = 0;
 		for (j = 0; j < NUM_MARKS; ++j) {//each mark for each student
 			printf("Enter mark %d for %s: ", j + 1, student[i].lastName);
-			scanf("%d", &student[i].marks[j]);
+			scanf_s("%d", &student[i].marks[j]);
 			runningTotal += student[i].marks[j];
 		}
 		student[i].average = (float)runningTotal / NUM_MARKS;

@@ -5,7 +5,7 @@
 //1234567890
 //Section XXY
 
-#define MAX_STR 32
+#define MAX_STR 66
 
 struct Book {
 	char author[MAX_STR];

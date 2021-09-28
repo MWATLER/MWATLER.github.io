@@ -5,10 +5,9 @@
 //1234567890
 //Section XXY
 
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "EmployeeInfo.h"
-#define CURRENT_YEAR 2020
+#define CURRENT_YEAR 2021
 #define NUM_EMPLOYEES 3
 int main(void)
 {
@@ -22,13 +21,13 @@ int main(void)
 	for (int i = 0; i < NUM_EMPLOYEES; ++i) {
 		printf("\nEnter the employee's first name and last name: ");
 		//		fgets(employee[i].name, 30, stdin);
-		scanf("%s %s", employee[i].firstName, employee[i].lastName);
+		scanf_s("%s %s", employee[i].firstName, MAX_STR, employee[i].lastName, MAX_STR);
 		printf("Enter the employee's age: ");
-		scanf("%d", &employee[i].age);
+		scanf_s("%d", &employee[i].age);
 		printf("Enter the employee's salary: $");
-		scanf("%f", &employee[i].salary);
+		scanf_s("%f", &employee[i].salary);
 		printf("What year was this employee hired: ");
-		scanf("%d", &employee[i].yearEmployed);
+		scanf_s("%d", &employee[i].yearEmployed);
 	}
 	printf("\n");
 
