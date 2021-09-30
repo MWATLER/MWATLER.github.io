@@ -3,7 +3,7 @@
 // Student Number: 1234567890
 // Email:          miguel.watler@senecacollege.ca
 // Section:        XXY
-// Workshop:       5 (in-lab)
+// Workshop:       3
 //==============================================
 
 #define _CRT_SECURE_NO_WARNINGS
