@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+//n! = n*(n-1)!
+//(n-1)! = (n-1)*(n-2)*(n-3)...*3*2*1
 unsigned factorialRecursion(unsigned x) {
     if (x > 2u) return x * factorialRecursion(x - 1);//the recursive case
     else return x;//the base case
@@ -9,7 +11,7 @@ unsigned factorialRecursion(unsigned x) {
 
 unsigned factorialAlternative(unsigned x) {
     unsigned result = 1u;
-    while (x > 1u) {
+    while (x > 1u) {//5! = 5*4*3*2*1
         result = result * x;
         --x;
     }

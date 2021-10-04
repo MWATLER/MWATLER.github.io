@@ -73,6 +73,17 @@ There is often a functional alternative to a recursive function. See the followi
   <a href="FunctionPointer2/ReportMarks2.cpp" target="_blank">ReportMarks2.cpp</a>.
 </li>
 </ul>
+  There is something in C++ called a virtual table. It will point to the correct function 
+  in a polymorphic arrangement. The C++ compiler uses a function pointer within itself to 
+  resolve which function should be called, ie Base::PrintInfo() or Derived::PrintInfo():
+<pre>
+class Base {
+  virtual void PrintInfo();
+};
+class Derived:public Base {
+  void PrintInfo();
+};
+</pre>
 </p>
 
 <p><em>Multiplier Functor</em></p>

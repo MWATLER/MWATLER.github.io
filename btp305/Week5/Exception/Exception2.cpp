@@ -24,7 +24,7 @@ int main() {
 			cout << "Allocation error" << endl;
 			success = false;
 		}
-		catch (std::exception & e) {
+		catch (std::exception &e) {
 			cout << "Standard Exception " << e.what() << endl;
 			success = false;
 		}
@@ -47,7 +47,6 @@ int main() {
 	catch (std::bad_cast& bc) {
 		cout << "bad_cast caught: " << bc.what() << endl;
 	}
-
 	
-	return 0;
+	return 0;//This means no error in main()
 }
