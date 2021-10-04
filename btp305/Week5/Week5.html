@@ -1,0 +1,137 @@
+<h1>Week 5 - Functions and Error Handling</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look at three new forms of function syntax. The first is a function pointer which is basically a pointer to the start of 
+  a function, function objects (or functors) which basically is a class that operates as a function, and lambda expressions which are commonly 
+  used in the algorithms provided by the Standard Template Library. We will also look at error handling once more.</p>
+
+<h3>Videos</h3>
+<table>
+  <!--<tr><td>Lecture Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lecture_20211004_Recording.mp4" target="_blank">Monday, October 4 (mp4)</a></td></tr>
+  <tr><td>Lab Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lab_20211005_Recording.mp4" target="_blank">Tuesday, October 5 (mp4)</a></td></tr>-->
+  <tr><td>Function Pointers</td><td><a href="" target="_blank"></a></td></tr>
+  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+  <tr><td>Function Objects (Functors)</td><td><a href="" target="_blank"></a></td></tr>
+  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+  <tr><td>Lambda Expressions</td><td><a href="" target="_blank"></a></td></tr>
+  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+  <tr><td>Error Handling</td><td><a href="" target="_blank"></a></td></tr>
+</table>
+
+<h3>Reference Material</h3>
+<ul>
+  <li>Chapters 11-13 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapters 6 and 10 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+</ul>
+
+<h3>Sample Code</h3>
+
+<p><em>Class Enumeration</em></p>
+<p>This simple example demonstrates an enumeration defined within a class. Note the trailing return type declaration for the function 
+  Ticket::get:
+<ul>
+<li>
+  <a href="enumClass/enumClass.cpp" target="_blank">enumClass.cpp</a>.
+</li>
+</ul>
+</p>
+
+<p><em>Factorial</em></p>
+<p>Many mathematical operations lend themselves to recursive programming. For instance, consider the factorial operation. This consists of 
+  a series of multiplications as follows:<br>
+  <b>n! = n*(n-1)*(n-2)*(n-3) ... *2*1</b><br>
+  This could be rewritten as:<br>
+  <b>n! = n*(n-1)!</b><br>
+  In C++, this is written as follows:
+  <pre>
+  int factorial(int n) {
+    if(n>1) return n * factorial(n-1);
+    else    return 1;
+  }
+</pre>
+There is often a functional alternative to a recursive function. See the following example:
+<ul>
+<li>
+  <a href="Factorial/Factorial.cpp" target="_blank">Factorial.cpp</a>.
+</li>
+</ul>
+</p>
+
+<p><em>Function Pointers</em></p>
+<p>Function pointers are extremely useful in software state machines. A function pointer simple points to the start of a function in 
+  memory. The pointer has to have the same prototype as the function it points to. The first example demonstrates a function pointer 
+  to a simple function. The second example demonstrates an array of function pointers.
+<ul>
+<li>
+  <a href="FunctionPointer/ReportMarks.cpp" target="_blank">ReportMarks.cpp</a> and
+  <a href="FunctionPointer2/ReportMarks2.cpp" target="_blank">ReportMarks2.cpp</a>.
+</li>
+</ul>
+</p>
+
+<p><em>Multiplier Functor</em></p>
+<p>A function object is basically a class that is set up to be used as a function. These are also called functors. This is accomplished 
+  by overloading operator(). By using a class representation of a function, you can control state. With a normal function, state is 
+  lost once the function has exited. We use function objects to perform the same operation in several parts of an application with 
+  possibly different states. For an example, see:
+<ul>
+<li>
+  <a href="MultiplierFunctor/MultiplierFunctor.cpp" target="_blank">MultiplierFunctor.cpp</a>.
+</li>
+</ul>
+</p>
+
+<p><em>Lambda Expressions</em></p>
+<p>Lambda expressions are common in scripting languages where a function name is not necessary, just the return type, the parameters, and function 
+  body. Lambda expressions are used with the algorithms of the Standard Template Library (we will study the STL later). A lambda expression is 
+  basically a function object that is only used in a local area of an application (ie within another function). An example of using the 
+  algorithm vector.erase with a lambda function to specify the criteria for erasing members of a vector, see:
+<ul>
+<li>
+  <a href="LambdaSelect/LambdaSelect.cpp" target="_blank">LambdaSelect.cpp</a>.
+</li>
+</ul>
+</p>
+
+<p><em>Exceptions</em></p>
+<p>We have looked at exceptions before. The following code shows how we can catch and handle a bad allocation exception and 
+  a bad cast exception:
+<ul>
+<li>
+  <a href="Exception/Exception2.cpp" target="_blank">Exception2.cpp</a>.
+</li>
+</ul>
+</p>
+
+<p><em></em></p>
+<p>.
+<ul>
+<li>
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a> and
+  <a href="" target="_blank"></a>.
+</li>
+</ul>
+</p>
+
+<p><em></em></p>
+<p>.
+<ul>
+<li>
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a> and
+  <a href="" target="_blank"></a>.
+</li>
+</ul>
+</p>
+
+<p><em></em></p>
+<p>.
+<ul>
+<li>
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a> and
+  <a href="" target="_blank"></a>.
+</li>
+</ul>
+</p>
