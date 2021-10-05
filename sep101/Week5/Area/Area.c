@@ -5,7 +5,7 @@
 //miguel.watler@senecacollege.ca
 //1234567890
 //Section XXY
-#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 
 int AreaCircle(double r, double* a);//belongs in a header file along with structure declarations
@@ -16,8 +16,8 @@ int main()
 	double area = 0.0;
 
 	printf("Enter the radius: ");
-	scanf("%lf", &radius);
-	int err = AreaCircle(radius, &area);
+	scanf_s("%lf", &radius);
+	int err = AreaCircle(radius, &area);//radius is pass by value, area is pass by address
 	if (err == 0) {
 		printf("A circle of radius %.2lf has an area of %.2lf\n", radius, area);
 	}
@@ -36,12 +36,13 @@ int main()
 //         -1 - failure
 int AreaCircle(double r, double* a) {//double *a = &area;
 	int res;
+	const double PI = 3.14159;
 	if (r < 0) {
 		printf("ERROR: Radius less than zero\n");
 		res = -1;//Error
 	}
 	else {
-		*a = 3.14159 * r * r;
+		*a = PI * r * r;
 		res = 0;//Success
 	}
 	return res;

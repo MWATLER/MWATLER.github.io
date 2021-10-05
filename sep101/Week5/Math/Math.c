@@ -5,8 +5,6 @@
 //1234567890
 //Section XXY
 
-
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "Math.h"//function declarations
 
@@ -17,11 +15,11 @@ int main(void)
 	double base;
 
 	printf("Enter base : ");
-	scanf("%lf", &base);
+	scanf_s("%lf", &base);
 	printf("Enter exponent : ");
-	scanf("%d", &exp);
+	scanf_s("%d", &exp);
 
-	answer = power(base, exp);
+	answer = power(base, exp);//power(2.5,3);
 	printf("%lf^%d = %lf\n", base, exp, answer);
 	printf("%lf squared = %lf\n", base, square(base));
 
@@ -35,14 +33,14 @@ int main(void)
 //
 //RETURNS:
 //  base to the power exponent
-double power(double base, int exponent)
+double power(double base, int exponent)//base=2.5, exponent=3
 {
 	int i;
 	double result;
 
 	result = 1;
 	for (i = 0; i < exponent; i++)
-		result = result * base;
+		result = result * base;//exponent=3, base=3: 1*3=3, 3*3=9, 9*3=27
 
 	return result;
 }

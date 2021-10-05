@@ -4,7 +4,6 @@
 //miguel.watler@senecacollege.ca
 //1234567890
 //Section XXY
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 void internal_swap(int a, int b);
@@ -15,9 +14,9 @@ int main()
 	int a, b;
 
 	printf("a is ");
-	scanf("%d", &a);//4
+	scanf_s("%d", &a);//4
 	printf("b is ");
-	scanf("%d", &b);//8
+	scanf_s("%d", &b);//8
 
 	internal_swap(a, b);//pass the values of a and b to internal_swap()
 	//internal_swap(4, 8);

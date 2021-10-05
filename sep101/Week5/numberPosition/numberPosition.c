@@ -4,7 +4,7 @@
 //miguel.watler@senecacollege.ca
 //1234567890
 //Section XXY
-#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 
 #define SIZE 32
@@ -17,13 +17,16 @@
 //
 //Returns: location, or
 //        -1 - not found
-int SearchForInt(int theInt, int* theIntArray) {//88, {11, 22, 33, 44, 55, 66, 77, 88, 99, 100, -1}
-	int found = 0;
+
+int SearchForInt(int theInt, int* theIntArray, int len) {
+	                   //88, {11, 22, 33, 44, 55, 66, 77, 88, 99, 100, -1}
+	int found = -1;
 	int location = -1;
-	for (int i = 0; (i < SIZE) && (found == 0); ++i) {
-		if (theInt == *(theIntArray+i)) {//88
+	for (int i = 0; (i < len) && (found == -1); ++i) {
+//		if (theInt == *(theIntArray+i)) {//88
+		if(theInt==theIntArray[i]){//88
 			location = i;
-			found = 1;
+			found = 0;
 		}
 	}
 	return location;
@@ -36,20 +39,20 @@ int main()
 	int seekIntIndex;
 
 	printf("Enter a number to search for: ");
-	scanf("%d", &seekInt);//88
-	int index = 0;
+	scanf_s("%d", &seekInt);//88
+	int size = 0;
 	int done = 0;
 	do {
-		printf("Enter a number at intArray[%d] (enter negative to quit): ", index);
-		scanf("%d", &intArray[index]);
-		if (intArray[index] < 0) {
+		printf("Enter a number at intArray[%d] (enter negative to quit): ", size);
+		scanf_s("%d", &intArray[size]);
+		if (intArray[size] < 0) {
 			done = 1;
 		}
 		else {
-			++index;
+			++size;
 		}
-	} while (done == 0 || index>=SIZE);
-	seekIntIndex = SearchForInt(seekInt, intArray);
+	} while (done == 0 && size<SIZE);
+	seekIntIndex = SearchForInt(seekInt, intArray, size);
 //	seekIntIndex = SearchForInt(seekInt, &intArray[0]);//same as above
 
 	if (seekIntIndex == -1)
