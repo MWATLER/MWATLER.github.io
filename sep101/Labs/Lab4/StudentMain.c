@@ -5,7 +5,6 @@
 //1234567890
 //Section XXY
 
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "StudentInfo.h"
 
@@ -15,16 +14,16 @@ int main(void) {
 
 	InitializeInfo(&student);
 	printf("Enter the student's last name: ");
-	scanf("%s", student.lastName);
+	scanf_s("%s", student.lastName, MAX_STR);
 	printf("Enter the student's id: ");
-	scanf("%d", &student.studentId);
+	scanf_s("%d", &student.studentId);
 	printf("Enter the number of subjects: ");
-	scanf("%d", &numSubjects);
+	scanf_s("%d", &numSubjects);
 	for (int i = 0; i < numSubjects; ++i) {
 		printf("Enter the name of subject %d: ", i+1);
-		scanf("%s", student.subject[i].name);
+		scanf_s("%s", student.subject[i].name, MAX_STR);
 		printf("Enter the mark for %s: ", student.subject[i].name);
-		scanf("%d", &student.subject[i].mark);
+		scanf_s("%d", &student.subject[i].mark);
 	}
 	float average = AverageMark(student.subject);
 	int maxIndex = MaximumMark(student.subject);
