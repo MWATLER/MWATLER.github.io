@@ -2,30 +2,50 @@
 
 #include <stdio.h>
 #include "Cat.h"
-
+/*
+struct CatToy {
+	char name[MAX_STR];
+	char colour[MAX_STR];
+	double cost;
+};
+struct Cat {
+	char name[MAX_STR];
+	int age;
+	struct CatToy toy[MAX_TOYS];
+	int numToys;
+};*/
 int main() {
-	struct Cat cat;
-	InitializeInfo(&cat);
+	struct Cat theCat;
+	InitializeInfo(&theCat);
 
+	//Enter info for the cat
 	printf("Enter the cat's name: ");
-	scanf_s("%s", cat.name, MAX_STR);
+	scanf_s("%s", theCat.name, MAX_STR);
 	printf("Enter the cat's age: ");
-	scanf_s("%d", &cat.age);
-	printf("How many toys does the cat have? (max 3): ");
-	scanf_s("%d", &cat.numToys);
-	for (int i = 0; i < cat.numToys; ++i) {
+	scanf_s("%d", &theCat.age);
+	printf("How many toys does this cat have? (max 3) ");
+	scanf_s("%d", &theCat.numToys);
+	for (int i = 0; i < theCat.numToys; ++i) {//Enter info for all cat toys
 		printf("Enter the toy's name: ");
-		scanf_s("%s", cat.toy[i].name, MAX_STR);
+		scanf_s("%s", theCat.toy[i].name, MAX_STR);
 		printf("Enter the toy's colour: ");
-		scanf_s("%s", cat.toy[i].colour, MAX_STR);
+		scanf_s("%s", theCat.toy[i].colour, MAX_STR);
 		printf("Enter the toy's cost: $");
-		scanf_s("%lf", &cat.toy[i].cost);
+		scanf_s("%lf", &theCat.toy[i].cost);
 	}
 
-	double averageCost = 0.0;
-	int ret = GetAverageCostPerCat(cat.toy, cat.numToys, &averageCost);
-	PrintInfo(cat);
-	printf("The average cost of the toys is $%.2lf\n", averageCost);
+	double theAverage = 0.0;
+	int ret = GetAverageCostPerCat(theCat.toy, theCat.numToys, &theAverage);
+//  int GetAverageCostPerCat(struct CatToy cattoy[], int len, double* average);
+	PrintInfo(theCat);
+//  void PrintInfo(struct Cat cat);
+
+	if (ret == 0) {
+		printf("The average cost of the toys is $%.2lf\n", theAverage);
+	}
+	else {
+		printf("Unable to calculate the average\n");
+	}
 
 	return 0;
 }

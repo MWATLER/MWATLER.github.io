@@ -1,4 +1,4 @@
-//Cat.h - structure declarations for a cat
+//Cat.h - structure and function declarations for a cat
 
 #define MAX_STR 32
 #define MAX_TOYS 3
@@ -18,3 +18,4 @@ struct Cat {
 
 void InitializeInfo(struct Cat* cat);
 int GetAverageCostPerCat(struct CatToy cattoy[], int len, double* average);
+void PrintInfo(struct Cat cat);
