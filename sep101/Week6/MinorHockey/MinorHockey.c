@@ -1,6 +1,5 @@
 //MinorHockey.c - main code for a minor hockey tournament
 
-#define _CRT_SECURE_NO_WARNINGS
 #define NUM_TEAMS 5
 #include <stdio.h>
 #include "MinorHockey.h"
@@ -12,7 +11,7 @@ int main(void) {
 	printf("\nPlease enter the team names:\n");
 	for(int i = 0; i < NUM_TEAMS; ++i) {
 		printf("Team %d: ", i+1);
-		scanf("%[^\n]s", team[i].name);//scan to the end of the line
+		scanf_s("%[^\n]s", team[i].name, STR_LEN);//scan to the end of the line
 		while (getchar() != '\n');//clear the input buffer ('\n' still remains in the input buffer)
 	}
 
@@ -23,9 +22,9 @@ int main(void) {
 			int goals1, goals2;
 			printf("\n%s vs %s:\n", team[i].name, team[j].name);
 			printf("Enter the goals for %s: ", team[i].name);
-			scanf("%d", &goals1);
+			scanf_s("%d", &goals1);
 			printf("Enter the goals for %s: ", team[j].name);
-			scanf("%d", &goals2);
+			scanf_s("%d", &goals2);
 			//Update team statistics
 			++team[i].gamesPlayed;
 			++team[j].gamesPlayed;

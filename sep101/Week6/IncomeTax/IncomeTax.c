@@ -1,29 +1,28 @@
 //IncomeTax.c - program for income taxes
 
-#define _CRT_SECURE_NO_WARNINGS
 #define NUM_CLIENTS 3
 #include <stdio.h>
 #include "IncomeTax.h"
 
 int main(void) {
-	struct Person person[NUM_CLIENTS];
+	struct Person person[NUM_CLIENTS] = { 0 };
 
     //Prompt for user input
 	for (int i = 0; i < NUM_CLIENTS; ++i) {
 		printf("\n");
 		printf("Enter the name for person %d: ", i + 1);
-		scanf("%[^\n]s", person[i].name);//scan to the end of the line
+		scanf_s("%[^\n]s", person[i].name, MAX_STR);//scan to the end of the line
 		utilClearInputBuffer();
 		printf("Enter %s's social insurance number: ", person[i].name);
-		scanf("%d", &person[i].sin);
+		scanf_s("%d", &person[i].sin);
 		printf("Enter %s's annual income: $", person[i].name);
-		scanf("%f", &person[i].annualIncome);
+		scanf_s("%f", &person[i].annualIncome);
 		printf("Enter %s's charitable donations: $", person[i].name);
-		scanf("%f", &person[i].donations);
+		scanf_s("%f", &person[i].donations);
 		printf("Enter %s's dependencies (children under 18): ", person[i].name);
-		scanf("%d", &person[i].dependencies);
+		scanf_s("%d", &person[i].dependencies);
 		printf("Enter %s's RRSP contributions: $", person[i].name);
-		scanf("%f", &person[i].rrspContribution);
+		scanf_s("%f", &person[i].rrspContribution);
 		CalculateDeductible(&person[i]);
 		CalculateIncomeTax(&person[i]);
 		utilClearInputBuffer();
@@ -32,7 +31,7 @@ int main(void) {
 	//Print a report for all the clients
 	for (int i = 0; i < NUM_CLIENTS; ++i) {
 		printf("\n");
-		printf("%s with social insurance number %9d has an annual income of $%.2f.\n", person[i].name, person[i].sin, person[i].annualIncome);
+		printf("%s with SIN %9d has an annual income of $%.2f.\n", person[i].name, person[i].sin, person[i].annualIncome);
 		printf("%s has deductibles worth $%.2f and will have to pay $%.2f of income tax.\n", person[i].name, person[i].deductibles, person[i].incomeTax);
 	}
 
