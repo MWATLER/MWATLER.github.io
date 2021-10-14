@@ -1,4 +1,4 @@
-//UDPPacket2.c - parses a UDP packet used in network communications with a text message embedded
+//UDPPacket.c - parses a UDP packet used in network communications with a text message embedded
 
 //Miguel Watler
 //miguel.watler@senecacollege.ca
