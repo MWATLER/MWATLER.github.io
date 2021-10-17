@@ -1,0 +1,70 @@
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+    <title>Sample — Midterm Part 3 — Templates.md</title>
+    <style type="text/css">
+            
+/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+
+        </style>
+  </head>
+  <body>
+    <h1 id="description-for-students">Description for Students</h1>
+    <p>This is a sample <strong>Part #3</strong> of the Midterm test. This sample test doesn’t contribute in any way to your mark. This sample test is designed as an example of the <strong>type of question</strong> you will have and the procedure to deliver your answer; it is not an indication of the difficulty of the question or the concepts being tested.</p>
+    <p>In this part you must design and code functions according to instructions.</p>
+    <h1 id="instructions-for-students">Instructions for Students</h1>
+    <p>You are allowed to use any tool and material available to you during the test. The following are considered plagiarism:</p>
+    <ul>
+      <li>exchanging messages in any form with another person during the test.</li>
+      <li>allowing access to your questions/solutions to somebody else before the test due date.</li>
+      <li>acquiring the test questions/solutions that somebody else had before the test due date.</li>
+    </ul>
+    <h1 id="sample-question-1">Sample Question 1</h1>
+    <p>Define a family of functions (a templated function) named <code>insertAtEnd</code> that inserts in a <strong>dynamically-allocated array</strong> of elements of any type another element at the end (resize the array).  The function should receive as parameters:</p>
+    <ul>
+      <li>the dynamically-allocated array</li>
+      <li>the size of the array</li>
+      <li>the element to insert</li>
+    </ul>
+    <p>The function should return the resulted array.</p>
+    <p>Specialize the function for the type <code>char</code>.  In this specialization the array must be null-terminated; the size parameter doesn't count the null-byte.</p>
+    <p>The client code listed below uses your templated function, and should not contain memory leaks. The comments next to each statement shows the content the array should have <strong>after</strong> the statement is executed.</p>
+    <p>A type that uses this template must include in its definition certain functions and/or operators. <strong>Identify each function and/or operator that your template assumes is defined.</strong> You may do so in the form of an exact prototype or an English descriptive phrase.</p>
+    <p>Write your solution in the textbox below.</p>
+    <pre>
+      <code class="language-cpp">// assume all necessary headers have been included
+
+int main()
+{
+    {
+        int* arrI = nullptr;
+        arrI = insertAtEnd(arrI, 0, 1); // 1
+        arrI = insertAtEnd(arrI, 1, 5); // 1, 5
+        arrI = insertAtEnd(arrI, 2, -3);// 1, 5, -3
+        delete[] arrI;
+    }
+    {
+        double* arrD = nullptr;
+        arrD = insertAtEnd(arrD, 0, 1.2);// 1.2
+        arrD = insertAtEnd(arrD, 1, 2.3);// 1.2, 2.3
+        arrD = insertAtEnd(arrD, 2, 3.4);// 1.2, 2.3, 3.4
+        delete[] arrD;
+    }
+    {
+        char* arrC = nullptr;
+        arrC = insertAtEnd(arrC, 0, 'a');// a\0
+        arrC = insertAtEnd(arrC, 1, 'b');// ab\0
+        arrC = insertAtEnd(arrC, 2, 'c');// abc\0
+        cout &lt;&lt; arrC;
+        delete[] arrC;
+    }
+}
+</code>
+    </pre>
+  </body>
+</html>
