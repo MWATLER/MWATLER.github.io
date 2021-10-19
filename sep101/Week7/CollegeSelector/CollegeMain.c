@@ -3,34 +3,25 @@
 #include <stdio.h>
 #include "College.h"
 
-#define NUM_COLLEGES 4
+#define NUM_COLLEGES 5
 
 int main() {
-	int ret = 0;
-	/*
-	struct College {
-		char name[MAX_STR];
-		char address[MAX_STR];
-		double tuition;
-		double employerSatisfaction;
-		double tuitionToRatingRatio;
-		int ranking;
-	};
-	*/
-
 	struct College college[NUM_COLLEGES] = { 0 };
+
+	int ret = 0;
+
 	for (int i = 0; i < NUM_COLLEGES && ret==0; ++i) {
-		printf("\nEnter the name for college %d: ", i+1);
+		printf("\nEnter the name for the college: ");
 		scanf_s("%[^\n]s", college[i].name, MAX_STR);
-		utilClearInputBuffer();
 		printf("Enter the address for %s: ", college[i].name);
+		utilClearInputBuffer();
 		scanf_s("%[^\n]s", college[i].address, MAX_STR);
 		printf("Enter the tuition for %s: ", college[i].name);
 		scanf_s("%lf", &college[i].tuition);
-		printf("Enter the employer satisfaction/10 for %s: ", college[i].name);
+		printf("Enter the employer satisfaction ratio (0-10) for %s: ", college[i].name);
 		scanf_s("%lf", &college[i].employerSatisfaction);
 		ret = CalculateSatisfactionToTuitionRatio(&college[i]);
-		if (ret != 0) printf("There is something wrong with the data for %s. Aborting...\n", college[i].name);
+		if (ret != 0) printf("Invalid data for %s. Aborting...\n", college[i].name);
 		utilClearInputBuffer();
 	}
 
@@ -46,8 +37,6 @@ int main() {
 				}
 			}
 		}
-
-		//print out the information for each college
 		for (int i = 0; i < NUM_COLLEGES; ++i) {
 			PrintReport(college[i]);
 		}

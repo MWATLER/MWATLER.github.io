@@ -5,21 +5,23 @@
 
 int drive(struct Automobile* automobile, double _distance) {
 	int retVal = 0;
-	if (_distance < 0) retVal = -1;
+	if (_distance < 0) {
+		retVal = -1;
+	}
 	else {
 		double fuelConsumed = automobile->fuelEfficiency / 100 * _distance;
 		automobile->fuelInTank -= fuelConsumed;
-		if (automobile->fuelInTank<0) {
+//		automobile->fuelInTank = automobile->fuelInTank - fuelConsumed;
+		if (automobile->fuelInTank <= 0) {
 			retVal = -2;
-			automobile->fuelInTank = 0;
-			printf("WARNING: The %s %d %s %s has no gas left in the tank.\n",
+			automobile->fuelInTank = 0.0;
+			printf("WARNING: The %s %d %s %s has no gas left in the tank!\n",
 				automobile->colour, automobile->year, automobile->make, automobile->model);
 		}
 	}
 	return retVal;
 }
-
 void displayReport(struct Automobile automobile) {
-	printf("The %s %d %s %s has %lf litres left in the tank.\n",
+	printf("The %s %d %s %s has %.3lfL gas left in the tank!\n",
 		automobile.colour, automobile.year, automobile.make, automobile.model, automobile.fuelInTank);
 }

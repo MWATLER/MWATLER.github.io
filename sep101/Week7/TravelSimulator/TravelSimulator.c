@@ -10,7 +10,14 @@ int main()
     struct Automobile car2 = { "Honda", "Civic", "red", 2012 };
     struct Automobile car3 = { "Chevrolet", "Impala", "blue", 2008 };
     struct Automobile car4 = { "Cadillac", "Escalade", "black", 2016 };
-
+/*	struct Automobile {
+		char make[MAX_STR];
+		char model[MAX_STR];
+		char colour[MAX_STR];
+		int year;
+		double fuelEfficiency;
+		double fuelInTank;
+	};*/
     //Add 50 litres of fuel to each car
     car1.fuelInTank = 50;
     car2.fuelInTank = 50;
