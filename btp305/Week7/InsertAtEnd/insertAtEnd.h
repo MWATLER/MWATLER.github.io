@@ -11,8 +11,8 @@ public:
 	T* getArray() const {
 		return m_val;
 	}
-	int getSize() { return size; }
-	T* operator()(T elem) {
+	int getSize() const { return size; }
+	T* operator()(T elem) {//The calling code expects T* InsertAtEnd(T elem);
 		T* newArray = new T[size + 1];
 		for (int i = 0; i < size; ++i) {
 			newArray[i] = m_val[i];

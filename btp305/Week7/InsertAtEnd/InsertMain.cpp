@@ -10,8 +10,9 @@ int main() {
 	insertAtEnd(3.3);
 	insertAtEnd(5.5);
 	insertAtEnd(7.7);
-
+	   	  
 	double* dPtr = insertAtEnd.getArray();
+	cout << "dPtr:";
 	for (int i = 0; i < insertAtEnd.getSize(); ++i) cout << " " << dPtr[i];
 	cout << endl << endl;
 
@@ -22,6 +23,7 @@ int main() {
 	insertAtEnd2(55);
 
 	int* iPtr = insertAtEnd2.getArray();
+	cout << "iPtr:";
 	for (int i = 0; i < insertAtEnd2.getSize(); ++i) cout << " " << iPtr[i];
 	cout << endl << endl;
 
