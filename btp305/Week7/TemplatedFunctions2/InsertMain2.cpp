@@ -44,7 +44,7 @@ void insertAtEnd(S elem1, char elem2) {
 	if (array1 != nullptr) delete[] array1;
 	array1 = newArray1;
 
-	char* newArray2 = new char[size2 + 2];
+	char* newArray2 = new char[size2 + 2];//a,b,c,d,\0 (size2=3)  then add d
 	for (int i = 0; i < size2; ++i) newArray2[i] = array2[i];
 	newArray2[size2] = elem2;
 	newArray2[size2 + 1] = '\0';
