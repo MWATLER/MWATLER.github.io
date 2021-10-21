@@ -154,3 +154,19 @@ byte until it has parsed "Length" bytes of data.</p>
   the number correctly.</p>
 
 <p>Code that does all of this can be seen as follows: <a href="UDPPacket/UDPPacket.h" target="_blank">UDPPacket.h</a> and <a href="UDPPacket/UDPPacket.c" target="_blank">UDPPacket.c</a>.</p>
+
+<h3>Sample Code for Assignment 1</h3>
+<p><em>The Header Guard</em></p>
+<p>Sometimes the including of header files can become quite unwieldy. A header file can be included 
+  in more than one place in your program and lead to redefinition errors. To overcome this, it is common 
+  to include a header guard around your header files. This ensures that the compiler sees the header 
+  file only once during compilation. See the file <b>Common.h</b> in the following example for an example 
+  of using a header file:<br>
+  <a href="HeaderGuard/Common.h" target="_blank">Common.h</a>, 
+  <a href="HeaderGuard/Student.h" target="_blank">Student.h</a>, 
+  <a href="HeaderGuard/Student.c" target="_blank">Student.c</a>, 
+  <a href="HeaderGuard/Teacher.h" target="_blank">Teacher.h</a>, 
+  <a href="HeaderGuard/Teacher.c" target="_blank">Teacher.c</a>, 
+  <a href="HeaderGuard/Error.c" target="_blank">Error.c</a> and
+  <a href="HeaderGuard/InfoMain.c" target="_blank">InfoMain.c</a>.
+</p>
