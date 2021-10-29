@@ -1,0 +1,60 @@
+<h1>Week 8 - STL Algorithms, File Streams</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look some more at the Standard Template Library (STL), particularly its algorithms. We will also look at file streams of the Standard Library.</p>
+
+  <h3>Videos</h3>
+  <table>
+<!--<tr><td>Lecture Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lecture_20211101_Recording.mp4" target="_blank">Monday, November 1 (mp4)</a></td></tr>
+    <tr><td>Lab Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lab_20211102_Recording.mp4" target="_blank">Tuesday, November 2 (mp4)</a></td></tr>-->
+    <tr><td>The Standard Template Library</td><td><a href="https://www.youtube.com/watch?v=ltBdTiRgSaw" target="_blank">Introduction of STL #1: Overview</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=gxZJ5JNuWMY" target="_blank">Introduction of STL #2: Sequence Containers</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=6iyzPed7FrM" target="_blank">Introduction of STL #3: Associative Containers</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=NNLvY9O7ufU" target="_blank">Introduction of STL #4: Unordered Containers</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=vO2AlrBf5rQ" target="_blank">Introduction of STL #5: Iterators and Algorithms</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=shqvSkk8r0M" target="_blank">Introduction of STL #6: Functors</a></td></tr>
+    </table>
+  
+<h3>Reference Material</h3>
+<ul>
+  <li>Chapter 32 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapter 10 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+</ul>
+    
+<h3>Sample Code</h3>
+
+<p><em>Copy and Count Algorithms</em></p>
+
+<p>The STL library contains many types of algorithms, but some of them require you to implement a function to tell the algorithm how to do something. The 
+  following two sample codes show <b>copy_if</b> and <b>count_if</b>. Both of these require the user to implement a lambda function telling the algorithm
+  how to copy or count items. The code is as follows:
+  <a href="CopyIf/CopyIf.cpp" target="_blank">CopyIf.cpp</a> and
+  <a href="CountIf/CountIf.cpp" target="_blank">CountIf.cpp</a>.
+</p>
+
+<p><em>Copy and Count Algorithms</em></p>
+
+<p>The STL library has numerous algorithms for collections of data. One of these is the <b>sort</b> algorithm. The user provides the data to be sorted 
+as well as a function on how to base the sort. Sample code for sorting student data based on average marks is seen as follows:<br>
+<a href="Sorter/Student.h" target="_blank">Student.h</a>,
+<a href="Sorter/Student.cpp" target="_blank">Student.cpp</a> and
+<a href="Sorter/StudentMain.cpp" target="_blank">StudentMain.cpp</a>.
+</p>
+
+<p><em>Reference Wrappers</em></p>
+
+<p>The reference wrapper creates a class that facilitates the copying and assigning of references for functions as well as objects.
+  This template allows utilization of references where the C++ standard forbid normal references (for example, in container classes). 
+  A reference wrapper facilitates the storage of references inside container objects. Sample code with reference wrappers can be seen at:<br>
+  <a href="ReferenceWrapper/ReferenceWrapper.cpp" target="_blank">ReferenceWrapper.cpp</a> and
+  <a href="Wrapper/Wrapper.cpp" target="_blank">Wrapper.cpp</a>.
+</p>
+
+<p><em>File Objects</em></p>
+
+<p>The streaming facilities for transfers to and from memory are defined in the input/output category of the Standard Library.  
+  A stream is defined as a sequence of items of unspecified size, while a byte stream is a sequence of bytes of unspecified size.
+Code that demonstrates the file streaming features of C++ can be seen at:<br>
+<a href="FileObjects/FileObjects.cpp" target="_blank">FileObjects.cpp</a> and
+<a href="BinaryAccess/BinaryAccess.cpp" target="_blank">BinaryAccess.cpp</a>.
+</p>
