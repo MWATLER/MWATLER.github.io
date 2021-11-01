@@ -18,9 +18,12 @@ void Student::DisplayInfo() const {
 }
 
 bool compare(Student& student1, Student& student2) {
+	static int count = 0;
+	++count;
 	bool ret = true;
 	if (student1.GetAverage() < student2.GetAverage()) {
 		ret = false;
 	}
+	cout << "compare: count:" << count << endl;
 	return ret;
 }
