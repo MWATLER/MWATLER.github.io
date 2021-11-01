@@ -20,6 +20,7 @@ int main() {
 	}
 	cout << endl;
 
+    //https://www.cplusplus.com/reference/algorithm/sort/
 	sort(student.begin(), student.end(), compare);//Provide a comparison function for non-standard data types
 
 	cout << "The sorted array of students:" << endl;
