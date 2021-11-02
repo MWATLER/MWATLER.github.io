@@ -27,6 +27,8 @@ public:
 	int GetAge() const { return age; }
 };
 
+//http://www.vishalchovatiya.com/learn-lambda-function-in-cpp-with-example/
+//http://www.vishalchovatiya.com/learn-lambda-function-in-cpp-with-example/#Passing_Lambda_as_Parameter
 template<typename T>
 std::vector<Player*> SelectSeniorPlayers(T level, std::vector<Player*> players) {
 	std::vector<Player*> senior;

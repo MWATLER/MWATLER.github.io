@@ -25,6 +25,8 @@ int main() {
 		return ret;
 	};
 
+	//http://www.vishalchovatiya.com/learn-lambda-function-in-cpp-with-example/
+	//http://www.vishalchovatiya.com/learn-lambda-function-in-cpp-with-example/#Passing_Lambda_as_Parameter
 	vector<Player*> seniorPlayers = SelectSeniorPlayers(selectLevel, players);
 	cout << "List of Senior Players:" << endl;
 	for(int i=0; i<seniorPlayers.size(); ++i) seniorPlayers[i]->DisplayInfo();
