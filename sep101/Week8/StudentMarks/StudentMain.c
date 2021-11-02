@@ -26,20 +26,23 @@ int main(void) {
 	//Calculate the average of the third student
 	double average = CalculateAveragePassByValue(student[2]);
 	//The above function did not update average in the structure Student
-	printf("The average for %s in year %d is %.2lf\n", student[2].name, student[2].year, average);
+	printf("The average for %s in year %d is %.2lf\n", 
+		student[2].name, student[2].year, average);
 
 	//Calculate the average of the second student
 	bool ret = CalculateAveragePassByAddress(&student[1]);
 	if (ret) {
 		//The above function updated average inthe structure Student
-		printf("The average for %s in year %d is %.2lf\n", student[1].name, student[1].year, student[1].average);
+		printf("The average for %s in year %d is %.2lf\n", 
+			student[1].name, student[1].year, student[1].average);
 		printf("\n");
 
 		//Calculate the average for all students
 		ret = CalculateAverages(student, NUM_STUDENTS);
 		if (ret) {
 			for (int i = 0; i < NUM_STUDENTS; ++i) {
-				printf("The average for %s in year %d is %.2lf\n", student[i].name, student[i].year, student[i].average);
+				printf("The average for %s in year %d is %.2lf\n", 
+					student[i].name, student[i].year, student[i].average);
 			}
 		}
 	}

@@ -3,7 +3,7 @@
 #define NUM_EMPLOYEES 12
 #define INVALID_VALUE -1
 
-#include <stdbool.h>
+#include <stdbool.h>//bool has two values: true(1), false(0)
 #include <stdio.h>
 #include "EmployeeInfo.h"
 

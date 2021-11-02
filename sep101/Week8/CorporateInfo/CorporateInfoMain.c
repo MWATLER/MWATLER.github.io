@@ -8,8 +8,9 @@ int main(void) {
 	struct CorporateInfo corporation;
 
 	//fill the corporate information structure from a file
+//	fp = fopen("EmployeeDB.txt", "r");//non-safe version
 	fopen_s(&fp, "EmployeeDB.txt", "r");
-	if (fp == NULL) {
+	if (fp == NULL) {//failed to open the file
 		retVal = -1;
 	}
 	if (retVal == 0) {

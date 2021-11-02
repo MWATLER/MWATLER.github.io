@@ -12,12 +12,12 @@ double CalculateAveragePassByValue(struct Student student) {
 	return (double)runningTotal / num;
 }
 
-bool CalculateAveragePassByAddress(struct Student* student) {
+bool CalculateAveragePassByAddress(struct Student* student) {//&student[2]
 	int runningTotal = 0;
 	int num=0;
 	bool retVal = true;
 	for (int i = 0; i < student->numMarks && retVal; ++i) {
-		if (student->mark[i] < 0) retVal = false;//invalid mark
+		if (student->mark[i] < 0 || student->mark[i]>100) retVal = false;//invalid mark
 		runningTotal += student->mark[i];
 		++num;
 	}

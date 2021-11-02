@@ -42,20 +42,21 @@ int main(void)
 	//Fill this in
 	dataPtr = rawData;
 //	dataPtr = &rawData[0];
-	packet.sourcePort = (*dataPtr) * 0x0100;
+	packet.sourcePort = (*dataPtr) * 0x0100;//0x04 * 0x0100
 	++dataPtr;
 	packet.sourcePort += *dataPtr;
+//	0x04 0x89 = > 0x0489
 
 	++dataPtr;
-	packet.destPort = (*dataPtr) * 0x0100;
+	packet.destPort = (*dataPtr) * 0x0100;//0x00 * 0x0100
 	++dataPtr;
 	packet.destPort += *dataPtr;
 
 	++dataPtr;
-	packet.length = (*dataPtr) * 0x0100;
+	packet.length = (*dataPtr) * 0x0100;//0x00 * 0x0100
 	++dataPtr;
-	packet.length += *dataPtr;
-
+	packet.length += *dataPtr;//0xDB
+//  0x00DB = 13*16 + 11 = 219
 	++dataPtr;
 	packet.checksum = (*dataPtr) * 0x0100;
 	++dataPtr;
@@ -71,7 +72,7 @@ int main(void)
 	//packet length minus header length. We can use this information in our for-next loop to extract all the data
 	unsigned int i;
 	//Fill this in
-	for (i = 0; i < packet.length - HEADER_LEN; ++i) {
+	for (i = 0; i < packet.length - HEADER_LEN; ++i) {//211 bytes of data
 		++dataPtr;
 		packet.data[i] = *dataPtr;
 	}
