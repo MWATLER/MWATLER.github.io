@@ -2,7 +2,6 @@
 
 #define NUM_EMPLOYEES 12
 #define INVALID_VALUE -1
-#define _CRT_SECURE_NO_WARNINGS
 
 #include <stdbool.h>
 #include <stdio.h>
