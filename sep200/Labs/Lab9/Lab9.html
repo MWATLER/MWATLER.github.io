@@ -1,55 +1,31 @@
-<h2>SEP200 – Lab 9: The inverse of a matrix</h2>
+<h2>SEP200 – Lab 9: Reorder an Array</h2>
 
 <h3>Due: end of week 12</h3>
 
-<p>This lab will test your ability to use a functor with a two-dimensional array to calculate the inverse of a 3x3 matrix.</p>
+<p>This lab will test your ability to use a custom stack class and a custom queue class. It will also test your ability 
+    to use a standard algorithm from STL.</p>
 
-<p>Functors have certain advantages over functions. Unlike functions, functors can have state. They fit into the object-oriented 
-    paradigm as compared to functions because functors are actually based on classes. Functors are often inlined by the compiler, 
-    unlike function pointers. The functor does not require runtime dispatching, therefore it is more efficient in most cases.</p>
+<p>Please take a look at the custom stack and queue classes found in <a href="Stack.h" target="_blank">Stack.h</a> and complete 
+    the tasks under TODO in <a href="Reorder.cpp" target="_blank">Reorder.cpp</a>.</p>
 
-<p>Your functor is going to look like a function to the calling program, but it is actually an object of a class called <b>inverse</b>.</p>
 
-<h3>The <b>inverse</b> class.</h3>
-<p>The <b>inverse</b> class has to perform the following:
-<ul>
-<li>The matrix that is passed to the <b>inverse</b> class may have floating point values or may have double floating 
-    point values. The <b>inverse</b> class has to be generic enough to accommodate for both (or more) types.</li>
-<li>The <b>inverse</b> class will present a function like interface to the calling program by overriding the operator <b>operator()</b>.</li>
-<li>In determining the inverse of a matrix, one has to first determine the <b>determinant</b> of a matrix. 
-    See <a href="https://www.mathsisfun.com/algebra/matrix-determinant.html" target="_blank">Determinant of a Matrix</a> as a guide 
-    on how to calculate the <b>determinant</b> of a 3x3 matrix.</li>
-<li>Once the <b>determinant</b> has been calculated, see 
-    <a href="https://byjus.com/maths/inverse-of-3-by-3-matrix/" target="_blank">Inverse of a 3x3 Matrix</a> as a guide on how to 
-    calculate the inverse of a 3x3 matrix.</li>
-<li>The <b>inverse</b> class may require a private matrix of dimension 3x3 to act as a temporary matrix to aid in the 
-       matrix calculations. The values of this temporary matrix (if needed) should be initialized to 0.</li>
-<li>You might want to make use of private functions to assist in all this. For instance, each value of the inverse matrix is calculated 
-    from the <b>determinant</b> of a 2x2 submatrix. You may want to have a private function for calculating this <b>determinant</b> 
-    since the code will be reused many times.</li>
-</ul>
+<h3>ReOrder</h3>
+<p><b>ReOrder()</b> takes three arguments as shown in <a href="Reorder.cpp" target="_blank">Reorder.cpp</a>. Complete this function
+     using stack and queue. The number 0 is used as a delimiter between sets of numbers. The new array should have all negative 
+     numbers on one side and all positive numbers on the other side. The zero should be pushed to the end of the array.
+	 See the sample run below.</p>
+
+<h3>Custom Compare Function</h3>
+<p>The custom compare function is used in conjunction with the standard sort function. The numbers to be sorted are of a standard 
+    data type but create this custom compare function anyway. The function should result in a sorted array from the greatest number
+    to the least number.</p>
 
 <h3>Sample Run</h3>
-<p>When you are finished, you can compare your answers with that of an online inverse matrix calculator found at 
-    <a href="https://matrix.reshish.com/inverse.php" target="_blank">Inverse Matrix Calculator</a>. The test function 
-    for this lab can be found at <a href="InverseMain.cpp" target="_blank">InverseMain.cpp</a>. An empty <b>inverse</b> class can be found at 
-    <a href="Inverse.h" target="_blank">Inverse.h</a>. A sample run is as follows:<br>
+<p>A sample run is as follows:<br><br>
 <pre>
-    The inverse of mat3x3 is:
-    row 1: 0.0330946, 0.0753272, 0.0133366
-    row 2: 0.0138306, -0.0879229, 0.0204989
-    row 3: 0.0274142, 0.0400099, -0.048654
-    
-    The inverse of mat3x3 as a float is:
-    row 1: 0.0330946, 0.0753272, 0.0133366
-    row 2: 0.0138306, -0.0879229, 0.0204989
-    row 3: 0.0274142, 0.0400099, -0.048654
-    
-    
-    From the online inverse matrix calculator:
-    134/4049  305/4049   54/4049
-     56/4049 -356/4049   83/4049
-    111/4049  162/4049 -197/4049
+    array:    -3 2 -1 5 1 -4 0 11 12 13 -11 -12 0 -1 -2 6 8 7
+    newArray: -3 -1 -4 1 5 2 -11 -12 13 12 11 -1 -2 7 8 6 0 0
+    newArray sorted: 13 12 11 8 7 6 5 2 1 0 0 -1 -1 -2 -3 -4 -11 -1
 </pre>
 </p>
 
@@ -57,9 +33,10 @@
 
 <h3>Questions</h3>
 <ol>
-    <li>What are the advantages and disadvantages of using C++ for matrix calculations?</li>
-    <li>Do you think a scripted language such as Python is faster than a compiled language such as C++? Why?</li>
-    <li>Do you prefer functors or functions? Why?</li>
+    <li>Do you see any application for lambda functions in C++?</li>
+    <li>Is <b>int</b> a class or an object? Is <b>a</b> in <b>int a;</b> a class or an object?</li>
+    <li>If you were to create a type or class called complex_number which has all the operations of an int, what operators would 
+        you have to overload to create a complex_number class?</li>
 </ol>
 
 <h3>Lab Submission:</h3>

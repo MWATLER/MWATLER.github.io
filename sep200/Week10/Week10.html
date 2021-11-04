@@ -1,16 +1,16 @@
-<h1>Week 10 - STL Algorithms and Linked Lists</h1>
+<h1>Week 10 - Functions (Advanced), Exceptions and Pointers to Arrays</h1>
 
 <h3>Introduction</h3>
-<p>This week we will look at STL algorithms as well as linked lists. We will look at the source code for a stack class and a queue class.</p>
+<p>This week we will look at function pointers, function objects (functors) and lambda expressions. We will also look at handling exceptions and using pointers to 
+  multi-dimensional arrays.</p>
 
 <h3>Videos</h3>
 <table>
-  <tr><td>The Standard Template Library</td><td><a href="https://www.youtube.com/watch?v=ltBdTiRgSaw" target="_blank">Introduction of STL #1: Overview</a></td></tr>
-  <tr><td></td><td><a href="https://www.youtube.com/watch?v=gxZJ5JNuWMY" target="_blank">Introduction of STL #2: Sequence Containers</a></td></tr>
-  <tr><td></td><td><a href="https://www.youtube.com/watch?v=6iyzPed7FrM" target="_blank">Introduction of STL #3: Associative Containers</a></td></tr>
-  <tr><td></td><td><a href="https://www.youtube.com/watch?v=NNLvY9O7ufU" target="_blank">Introduction of STL #4: Unordered Containers</a></td></tr>
-  <tr><td></td><td><a href="https://www.youtube.com/watch?v=vO2AlrBf5rQ" target="_blank">Introduction of STL #5: Iterators and Algorithms</a></td></tr>
-  <tr><td></td><td><a href="https://www.youtube.com/watch?v=shqvSkk8r0M" target="_blank">Introduction of STL #6: Functors</a></td></tr>
+  <tr><td>Function Pointers</td><td><a href="https://www.youtube.com/watch?v=p4sDgQ-jao4" target="_blank">Function Pointers in C++</a></td></tr>
+  <tr><td>Functors</td><td><a href="https://www.youtube.com/watch?v=alX0OtgLeFM" target="_blank">Functor In C++</a></td></tr>
+  <tr><td>Lambda Expressions</td><td><a href="https://www.youtube.com/watch?v=tSFxYZTh43g" target="_blank">C++ Lambda Expressions and Functions Tutorial</a></td></tr>
+  <tr><td>Exception Handling</td><td><a href="https://www.youtube.com/watch?v=mFAaqmj399I" target="_blank">Buckys C++ Programming Tutorials - 62 - Exceptions</a></td></tr>
+  <tr><td>Pointers to Multi-Dimensional Arrays</td><td><a href="https://www.youtube.com/watch?v=lCDGo7rK3ms" target="_blank">Using Pointers to Print 2D Arrays</a></td></tr>
 </table>
 
 <h3>Quiz</h3>
@@ -18,10 +18,11 @@
 
 <h3>Lecture Material</h3>
 <ul>
-  <li>Chapters 30 to 33  of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
-  <li>Chapters 9 to 11 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
-  <li><a href="Algorithms.docx" target="_blank">STL Algorithms</a></li>
-  <li><a href="LinkedLists.docx" target="_blank">Linked Lists</a></li>
+  <li>Chapters 7, 11 to 13  of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapters 3, 6, 14 and 18 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+  <li><a href="FunctionsAdvanced.docx" target="_blank">Functions (Advanced)</a></li>
+  <li><a href="ErrorHandling.docx" target="_blank">Exceptions</a></li>
+  <li><a href="PointersToArrays.docx" target="_blank">Pointers to Arrays</a></li>
 </ul>
 
 <h3>Lab(s)</h3>
@@ -32,38 +33,63 @@
 
 <h3>Assignment(s)</h3>
 <ul>
-<li><a href="../Assignments/Assignment1/Assignment1.html" target="_blank">Assignment 1</a>.</li>
 <li><a href="../Assignments/Assignment2/Assignment2.html" target="_blank">Assignment 2</a>.</li>
 </ul>
 
 <h3>Sample Code</h3>
 
-<p><em>Reference Wrappers</em></p>
-<p><b>std::reference_wrapper</b> is a class template that wraps a reference in a copyable, assignable object. It is frequently used as
-   a mechanism to store references inside standard containers (like std::vector) which cannot normally hold references. 
-   <b>std::reference_wrapper</b> is useful in combination with templates. It wraps an object by storing a pointer to it, allowing for
-   reassignment and copy while mimicking its usual semantics. It also instructs certain library templates to store references instead 
-   of objects. Code that demonstrates a reference wrapper can be seen at:<br>
-<a href="Wrapper/Wrapper.cpp" target="_blank">Wrapper.cpp</a> and <a href="ReferenceWrapper/ReferenceWrapper.cpp" target="_blank">ReferenceWrapper.cpp</a>.</p>
+<p><em>Class Enumerator</em></p>
+<p>It is good to associate certain enumerations with a certain class, therefore we have class enumerations. A simple example with
+   a class enumerator can be seen at:<br>
+<a href="enumClass/enumClass.cpp" target="_blank">enumClass.cpp</a>.
+</p>
 
-<p><em>Count_if and Copy_if</em></p>
-<p>The <b>count_if</b> function returns the number of elements within a range that satisfies a given criteria. <b>copy_if</b>
-  copies elements within a range that satisfies a given criteria. Both <b>count_if</b> and 
-  <b>copy_if</b> in the following sample code are examples of lambda functions:<br>
-<a href="CountIf/CountIf.cpp" target="_blank">CountIf.cpp</a> and <a href="CopyIf/CopyIf.cpp" target="_blank">CopyIf.cpp</a>.</p>
+<p><em>Recursion</em></p>
+<p>Recursion occurs when a function calls itself. This may seem a little silly, but is in fact very useful when implementing binary trees. 
+  A recursive functio has two parts - the recursive part, and the base case. As a function calls itself repeatedly, it eventually finds itself
+  at the base case, in which case the recursion unwinds. An example of using recursion to calculate the factorial of a number can be found at:<br>
+<a href="Factorial/Factorial.cpp" target="_blank">Factorial.cpp</a>.
+</p>
 
-<p><em>Sorting Student Information</em></p>
-<p>The <b>std::sort()</b> function expects a standard data type. If a non-standard data type is used, the user has to provide a comparison 
-  function as a criteria for the sort. Code for a student list with its comparison function can be seen at:<br>
-  <a href="Sorter/Student.h" target="_blank">Student.h</a>, <a href="Sorter/Student.cpp" target="_blank">Student.cpp</a> and 
-  <a href="Sorter/StudentMain.cpp" target="_blank">StudentMain.cpp</a>.</p>
+<p><em>A Function Pointer</em></p>
+<p>A function pointer is very useful in what we call state-machines. Depending on the state of an object, a particular function is called.
+  Functions do exist in memory as binaries, and we can use a pointer to point to the beginning of a function in the same way we can 
+  use a pointer to point to an object or variable in memory. An example of using a function pointer can be seen at:<br>
+<a href="FunctionPointer/ReportMarks.cpp" target="_blank">ReportMarks.cpp</a>.<br>
+Function pointers can also appear as an array of functions. The function pointer pointes to one of the functions in its array depending
+on the array index. An example of using an array of function pointers can be seen at<br>
+<a href="FunctionPointer2/ReportMarks2.cpp" target="_blank">ReportMarks2.cpp</a>.
+</p>
 
-<p><em>A Doubly Linked List for Student Information</em></p>
-<p>We looked at source code for a stack and for a queue in C++. The following is partially implemented code for a doubly linked list 
-  based on a Student structure. The student list can get the next/previous node, push a student to the back of the list, get the 
-  student from the back of the list pop the student off the back of the list, and print the entire list. A destructor deletes 
-  any students remaining in the list on program exit. An iterator class has been added inside the student list class, to show 
-  how iterators can interact with the nodes of this class. The program can be seen at:<br>
-  <a href="DoublyLinkedList/StudentList.h" target="_blank">StudentList.h</a>, 
-  <a href="DoublyLinkedList/StudentList.cpp" target="_blank">StudentList.cpp</a> and 
-  <a href="DoublyLinkedList/StudentListMain.cpp" target="_blank">StudentListMain.cpp</a>.</p>
+<p><em>Functor</em></p>
+<p>A functor is basically a class that presents a function-like interface to the calling program. Functors have certain advantages over 
+  functions. Unlike functions, functors can have state. They fit into the object-oriented paradigm as compared to functions because functors 
+  are actually based on classes. Functors are often inlined by the compiler, unlike function pointers. The functor does not require runtime 
+  dispatching, therefore it is more efficient in most cases. The following functor provides two types of multiplication:<br>
+<a href="MultiplierFunctor/MultiplierFunctor.cpp" target="_blank">MultiplierFunctor.cpp</a>.
+</p>
+
+<p><em>Lambda Functions</em></p>
+<p>Lambda functions are functions without a name, but provide a function-like interface similar to functors. Lambda functions are not 
+  based on a class. Lambda functions are used extensively with the Standard Template Library as inline functions. The following example 
+  demonstrates a lambda function used with remove_if() to determine which elements of an array should be removed:<br>
+<a href="LambdaSelect/LambdaSelect.cpp" target="_blank">LambdaSelect.cpp</a>.
+</p>
+
+<p><em>Exceptions</em></p>
+<p>An exception is a form of software interrupt. They occur when something unusual happens, such as a divide-by-zero, trying to access 
+  an array outside of the array bounds, trying to allocate memory when there is no longer any available RAM, etc... What you may 
+  not know is that you can intercept this software interrupt in your code using exceptions. You can generate interrupts as well 
+  when you detect an unusual situation in your code. The following code generates exceptions for an array out of bounds error 
+  as well as a divide-by-zero error:<br>
+<a href="Exception/Exception.cpp" target="_blank">Exception.cpp</a>.
+</p>
+
+<p><em>Two-Dimensional Arrays</em></p>
+<p>A tictactoe game has been created from a grid class. The grid class keeps track of the entries on a tictactoe grid. The 
+  grid class allows users to make a play, test to see if someone has won, and also to announce a tie game. This example 
+  also makes use of class enumerations:<br>
+  <a href="TicTacToe/Grid.h" target="_blank">Grid.h</a>,
+  <a href="TicTacToe/Grid.cpp" target="_blank">Grid.cpp</a> and
+  <a href="TicTacToe/TicTacToeMain.cpp" target="_blank">TicTacToeMain.cpp</a>.
+</p>
