@@ -35,7 +35,7 @@ double getDouble(void) {
 		rc = scanf("%lf%c", &val, &nextChar);
 		if (rc == 0 || nextChar != '\n') {
 			clearKeyboard();
-			printf("*** INVALID INTEGER *** <Please enter a double>: ");
+			printf("*** INVALID DOUBLE *** <Please enter a double>: ");
 		}
 	} while (rc == 0 || nextChar != '\n');
 	return val;
