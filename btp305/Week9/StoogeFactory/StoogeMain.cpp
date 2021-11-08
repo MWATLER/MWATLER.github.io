@@ -19,5 +19,7 @@ int main() {
 	for (int i = 0; i < NUM; i++)
 		roles[i]->slap_stick();
 
+    //no cleanup necessary
+
 	return 0;
 }

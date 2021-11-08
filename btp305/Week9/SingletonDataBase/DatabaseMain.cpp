@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-	std::shared_ptr<Database> dB = Database::getInstance();
+	std::shared_ptr<Database> dB = Database::getInstance();//copy assignment, copy constructor??
 	string key;
 	string value;
 	Database::Err_Status status;
@@ -38,6 +38,8 @@ int main() {
 	else {
 		cout << "Unable to retrieve earnings for " << key;
 	}
+
+	//no clean up necessary 
 
 	return 0;
 }
