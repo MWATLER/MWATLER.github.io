@@ -36,7 +36,7 @@ bool LibraryBooks::ConvertPrice(double exchangeRate) {
 	return retVal;
 }
 
-double LibraryBooks::TotalPages() const {
+int LibraryBooks::TotalPages() const {
 	double total = std::accumulate(m_books.begin(), m_books.end(), 0.0, [](const double& sum, const Book& book) {
 		return sum + book.pages;
 		});
@@ -56,6 +56,7 @@ bool LibraryBooks::sort(std::string field) {
 			});
 	}
 	else {
+		std::cout << "Invalid field" << std::endl;
 		retVal = false;
 	}
 	return retVal;
@@ -67,4 +68,3 @@ void LibraryBooks::display(std::ostream& out) const {
 		out << book.name << " " << book.author << " " << book.pages << std::fixed << " pages $" << book.price << std::endl;
 		});
 }
-

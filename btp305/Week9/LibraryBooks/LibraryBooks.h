@@ -4,7 +4,7 @@
 #define _LIBRARYBOOKS_H_
 
 #include <iostream>
-#include <vector>
+#include <vector>//std::vector
 
 struct Book {
 	std::string name;
@@ -18,7 +18,7 @@ class LibraryBooks {
 public:
 	LibraryBooks(Book books[], int size);
 	bool ConvertPrice(double exchangeRate);
-	double TotalPages() const;
+	int TotalPages() const;
 	bool sort(std::string field);
 	void display(std::ostream& out) const;
 };

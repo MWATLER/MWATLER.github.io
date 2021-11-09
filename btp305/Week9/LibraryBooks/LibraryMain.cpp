@@ -6,8 +6,14 @@ using namespace std;
 
 int main() {
 	const int NUM = 5;
+/*	struct Book {
+		std::string name;
+		std::string author;
+		int pages;
+		double price;
+	};*/
 	Book books[NUM] = {
-		{"Marcel Proust", "In Search of Lost Time", 468, 14.29},
+		{"In Search of Lost Time", "Marcel Proust", 468, 14.29},
 		{"Ulysses", "James Joyce", 736, 21.95},
 		{"Don Quixote", "Miguel de Cervantes", 1072, 10.99},
 		{"One Hundred Years of Solitude", "Gabriel Garcia Marquez", 417, 14.49},
