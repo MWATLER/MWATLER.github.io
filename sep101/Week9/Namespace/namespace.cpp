@@ -19,12 +19,12 @@ namespace french {
     string message = "Bonjour";
 }
 
-//using namespace french;
+using namespace english;
 
 int main() {
     cout << "Welcome to Object-Oriented Programming" << endl;
-    cout << english::message << endl;
-    cout << french::message << endl;
-//  cout << message << endl;
+//  cout << english::message << endl;
+//  cout << french::message << endl;
+    cout << message << endl;
     return 0;
 }

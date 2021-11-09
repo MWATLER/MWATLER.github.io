@@ -1,10 +1,10 @@
 //IncomeTax.cpp - function definitions for the person class
 
-#include "IncomeTax.h"
+#include "IncomeTax.h"//declaration of class Person
 
 using namespace std;
 
-bool Person::SetName(std::string _name) {
+bool Person::SetName(string _name) {
 	bool ret = true;
 	if (_name.size() == 0) {//validation
 		ret = false;
@@ -69,13 +69,33 @@ bool Person::SetRrspContributions(float _contrib) {
 	}
 	return ret;
 }
-
+/*
+void CalculateDeductible(struct Person* person) {
+	person->deductibles = person->donations;
+	person->deductibles += (float)1000.0 * person->dependencies;
+	person->deductibles += (float)0.22 * person->rrspContribution;
+}*/
 void Person::CalculateDeductible() {
 	deductibles = donations;
 	deductibles += (float)1000.0 * dependencies;
 	deductibles += (float)0.22 * rrspContribution;
 }
-
+/*
+void CalculateIncomeTax(struct Person* person) {
+	float incomeAfterDeductibles = person->annualIncome - person->deductibles;
+	if (incomeAfterDeductibles > 100000.0) {
+		person->incomeTax = (float)0.45 * incomeAfterDeductibles;
+	}
+	else if (incomeAfterDeductibles > 50000.00) {
+		person->incomeTax = (float)0.35 * incomeAfterDeductibles;
+	}
+	else if (incomeAfterDeductibles > 25000.00) {
+		person->incomeTax = (float)0.25 * incomeAfterDeductibles;
+	}
+	else {
+		person->incomeTax = (float)0.0;
+	}
+}*/
 void Person::CalculateIncomeTax() {
 	float incomeAfterDeductibles = annualIncome - deductibles;
 	if (incomeAfterDeductibles > 100000.0) {

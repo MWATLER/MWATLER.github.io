@@ -2,7 +2,7 @@
 
 #define NUM_CLIENTS 3
 #include <iostream>//std::cout, std::cin
-#include <string>//std::getline()
+#include <string>//std::getline()//scanf("%[^\n]s", var);
 #include "IncomeTax.h"
 
 using namespace std;

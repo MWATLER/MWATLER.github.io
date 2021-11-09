@@ -15,7 +15,7 @@ Automobile::Automobile(string _make, string _model, string _colour, int _year)
 
 void Automobile::setFuelEfficiency(double _efficiency)
 {
-    fuelEfficiency = _efficiency;
+    fuelEfficiency = _efficiency;//should validate _efficiency
 }
 
 void Automobile::addFuel(double _liters)
