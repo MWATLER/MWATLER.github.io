@@ -25,7 +25,7 @@ int main() {
 		for (int i = 0; i < NUM; ++i) {
 //			cout.width(10);//best to put these inside the stream itself
 			cout.setf(ios::right);
-			cout << setw(10) << setfill('*') << pets[i].GetName() << " is a " << pets[i].GetType() << " and is " << pets[i].GetAge() << " years old." << endl;
+			cout << setw(10) << setfill('.') << pets[i].GetName() << " is a " << setw(6) << setfill('*') << pets[i].GetType() << " and is " << setw(2) << pets[i].GetAge() << " years old." << endl;
 		}
 	}
 

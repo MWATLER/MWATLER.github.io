@@ -18,6 +18,7 @@ bool PetInfo::SetName(std::string _name) {
 	bool retVal = true;
 	if (_name.size() == 0) retVal = false;
 	else name = _name;
+	std::cout << "numPets in PetInfo.cpp is " << numPets << std::endl;
 	return retVal;
 }
 
