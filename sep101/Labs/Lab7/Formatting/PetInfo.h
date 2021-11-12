@@ -2,8 +2,8 @@
 
 #include <iostream>
 
-//using namespace std;//never put using namespace anything inside a header file. The header file might be included
-                      //by many other files which may not wish to use the namespace.
+//using namespace std;//never put using namespace inside a header file. The header file might be included
+                      //by many other files which may not wish to use that particular namespace.
 
 class PetInfo {
 	std::string name;
