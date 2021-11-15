@@ -8,7 +8,7 @@
 
 using namespace std;
 
-NetworkNode::NetworkNode(std::string _name) {
+NetworkNode::NetworkNode(std::string _name) {//Blackberry2
 	name = _name;
 }
 
@@ -56,12 +56,12 @@ void NetworkNode::ReceiveData(const int& source) {
 	ifstream fin(fileName);
 	string inputData;
 	while (is_running) {
-		Mutex_Lock();
 		getline(fin, inputData);
 		if (inputData == "QUIT") is_running = false;
 		else if (fin.peek() == EOF) fin.seekg(0, ios::beg);
 		//push the contents on to the shared resource
-		data.push(inputData);
+		Mutex_Lock();
+		data.push(inputData);//push inputData on to our shared resource
 		Mutex_Unlock();
 #ifdef DEBUG
 		Log(inputData);

@@ -1,14 +1,14 @@
 //ThreadFuture.cpp - main program to demonstrate a promise and a future
 
 #include <iostream>
-#include <thread>
-#include <future>
-#include <windows.h>
+#include <thread>//std::thread
+#include <future>//std::promise, std::future
+#include <windows.h>//Sleep()
 
 void task(std::promise<double>& p) {//solves the race condition
     std::cout << "task:" << std::endl;
     Sleep(5000);
-    p.set_value(12.34);
+    p.set_value(12.34);//can be set at any point in the thread
 }
 
 int main() {

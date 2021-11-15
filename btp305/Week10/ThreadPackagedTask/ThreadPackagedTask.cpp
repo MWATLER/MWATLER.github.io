@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <thread>
-#include <future>
+#include <future>//std::packaged_task
 #include <windows.h>
 
 double task(int x) { 

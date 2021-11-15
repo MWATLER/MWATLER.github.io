@@ -14,6 +14,8 @@ double task(double x) {
 int main() {
     std::future<double> f = std::async(task, 10);
     std::cout << "Waiting..." << std::endl;
+	//Can do all sorts of stuff while task is running
+	//When task is finished, f.get() will equal what task has returned.
     double r = f.get();
     std::cout << "Result = " << r << std::endl;
 }

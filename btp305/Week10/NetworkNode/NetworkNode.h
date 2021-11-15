@@ -14,16 +14,16 @@ class NetworkNode {
 		MUTEX_LOCKED,
 		MUTEX_UNLOCKED
 	};
-	MUTEX_STATE mutex;
-	std::string name;
-	bool is_running;
+	MUTEX_STATE mutex;//protects the shared resource
+	std::string name;//Blackberry2
+	bool is_running;//set to true to start up, set to false to stop
 	std::queue<std::string> data;//the shared resource
 
 	void Mutex_Initialize();
-	void Mutex_Lock();
-	void Mutex_Unlock();
-	void ReceiveData(const int& source);
-	void ProcessData(const std::string& fileName);
+	void Mutex_Lock();//lock the shared resource
+	void Mutex_Unlock();//unlock the shared resource
+	void ReceiveData(const int& source);//Runs in a thread
+	void ProcessData(const std::string& fileName);//Runs in a thread
 public:
 	NetworkNode(std::string _name);
 	void Run();

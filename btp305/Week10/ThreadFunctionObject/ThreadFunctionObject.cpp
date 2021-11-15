@@ -3,7 +3,7 @@
 #include <iostream>
 #include <thread>
 #include <vector>
-#include <windows.h>
+#include <windows.h>//Sleep()
 
 using namespace std;
 
@@ -29,7 +29,7 @@ int main() {
     for (int i = 0; i < NT; i++) {
         int j = i;
         threads.push_back(std::thread(Task(), &j));
-        Sleep(1000);//race condition - give the thread a chance to start up.
+        Sleep(10);//race condition - give the thread a chance to start up.
         cout << "The thread changed j from " << i << " to " << j << endl << endl;
     }
 

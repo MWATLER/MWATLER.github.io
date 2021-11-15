@@ -16,13 +16,13 @@ int main() {
 		int j = i;
 		threads.push_back(std::thread([&]() {//pass by reference
 			j = j * 10;
-			for (int k = 0; k < 100; ++k) {
+			for (int k = 0; k < 100; ++k) {//takes 10 seconds to complete
 				std::cout << i << " Thread id = " << std::this_thread::get_id() << std::endl;
 				std::cout.flush();
 				Sleep(100);
 			}
 			}));
-		Sleep(1000);
+		Sleep(1000);//only waiting 1 second to start the next thread
 		std::cout << "The thread has changed j from " << i << " to " << j << std::endl << std::endl;
 	}
 
