@@ -5,7 +5,7 @@
 
   <h3>Videos</h3>
   <table>
-<!--<tr><td>Lecture Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lecture_20211115_Recording.mp4" target="_blank">Monday, November 15 (mp4)</a></td></tr>-->
+    <tr><td>Lecture Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lecture_20211115_Recording.mp4" target="_blank">Monday, November 15 (mp4)</a></td></tr>
 <!--<tr><td>Lab Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lab_20211116_Recording.mp4" target="_blank">Tuesday, November 16 (mp4)</a></td></tr>-->
     <tr><td>C++ Threads</td><td><a href="https://www.youtube.com/watch?v=wXBcwHwIt_I" target="_blank">Threads in C++</a></td></tr>
     <tr><td></td><td><a href="https://www.youtube.com/watch?v=XDZkyQVsbDY" target="_blank">std::promise And std::future In C++ Threading</a></td></tr>
@@ -68,3 +68,13 @@
   <a href="NetworkNode/Output.dat" target="_blank">Output.dat</a>.<br>
 </p>
 
+<p><em>Warehouse (sample code for workshop 8)</em></p>
+
+<p>A warehouse of hammers, screwdrivers and wrenches is created as well as a list of barcodes and prices. Each warehouse item has a name and a barcode. Each barcode has a barcode and 
+  a price. The warehouse code merges the list of items with the barcodes to create a list of warehouse items, where for each item its name, barcode and price is known. The purpose 
+  of all this is to demonstrate how we can use unique pointers in the merge. Since unique pointersc cannot be copied, the std::move() function is used to add a resource 
+  of a unique pointer over to a list. Debug printf's have been added to demonstrate that these resources are automatically deleted when the program ends. The code can be seen at:<br>
+  <a href="Warehouse/Warehouse.h" target="_blank">Warehouse.h</a>, 
+  <a href="Warehouse/Warehouse.cpp" target="_blank">Warehouse.cpp</a> and
+  <a href="Warehouse/WarehouseMain.cpp" target="_blank">WarehouseMain.cpp</a>.
+</p>
