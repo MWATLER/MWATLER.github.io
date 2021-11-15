@@ -47,7 +47,9 @@
 
 <p>Servers, network nodes, dispatchers, routers, etc... commonly apply threads and synchronization mechanisms to deal with any shared resources among threads. A network node 
   typically has one or more receive threads where it receives packets from several clients, and one or more send threads where it extracts header information from each 
-  client and forwards the packets on to its recipients:
+  client and forwards the packets on to its recipients. The rationale for a network node can be seen in the presentation
+  <a href="NetworkNode/Sockets and the Implementation of a World Wide Messaging System.ppt" target="_blank">Sockets and the Implementation of a World Wide Messaging System</a>.<br>
+  Sample code for a network node can be seen at:
   <a href="NetworkNode/NetworkNode.h" target="_blank">NetworkNode.h</a>,
   <a href="NetworkNode/NetworkNode.cpp" target="_blank">NetworkNode.cpp</a> and
   <a href="NetworkNode/NetworkNodeMain.cpp" target="_blank">NetworkNodeMain.cpp</a>.<br>
