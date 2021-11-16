@@ -1,79 +1,67 @@
-//Warehouse.h - class declaration for a warehouse
+//Warehouse.h - structure and class declarations for a warehouse
 
-//QUESTION 1: Why do we need this header guard?
 #ifndef _WAREHOUSE_H_
 #define _WAREHOUSE_H_
 
 #include <iostream>
+#include <vector>
 
-struct WarehouseItem {
+struct WarehouseItem {//dynamically allocated resource under a unique_ptr
 	std::string name;
-	std::string type;
 	int barcode;
 	double price;
+	WarehouseItem(std::string _name, int _barcode, double _price) {
+		name = _name;
+		barcode = _barcode;
+		price = _price;
+	}
+	~WarehouseItem() {
+		std::cout << "~WarehouseItem: " << name << std::endl;
+	}
 };
 
 struct Hammer {
-	std::string name;
+	std::string name;//Hammer1
 	int barcode;
-	double price;
 };
 
 struct Screwdriver {
 	std::string name;
 	int barcode;
-	double price;
 };
 
 struct Wrench {
 	std::string name;
 	int barcode;
-	double price;
 };
 
-struct AnonymousItem {
-	std::string name;
-	std::string type;
+struct Barcode {
 	int barcode;
 	double price;
 };
 
 class Warehouse {
-	//QUESTION 2: I could have used arrays here. Why do I have pointers for WarehouseItem, Hammer, Screwdriver, Wrench, AnonymousItem?
-	WarehouseItem* item;
-	Hammer* hammer;
-	Screwdriver* screwdriver;
-	Wrench* wrench;
-	AnonymousItem* anonymousItem;
-	const int MAX_ITEMS = 15;
-	//QUESTION 3: Why do I have to keep track of the number of items, hammers, screwdrivers, wrenches and anonymous items?
-	int numItems;
-	int numHammers;
-	int numScrewdrivers;
-	int numWrenches;
-	int numAnonymousItems;
-	//QUESTION 4: Can these functions be called from WarehouseMain.cpp?
-	bool GenerateListOfHammers();
-	bool GenerateListOfScrewdrivers();
-	bool GenerateListOfWrenches();
-	bool GenerateListOfAnonymousItems();
+	std::string name;
+	//The merged list
+	std::vector<WarehouseItem> itemList;
+
+	//A list of products
+	std::vector<Hammer> hammerList;
+	std::vector<Screwdriver> screwdriverList;
+	std::vector<Wrench> wrenchList;
+	
+	//A list of barcodes
+	std::vector<Barcode> barcodeList;
 public:
-	//QUESTION 5: Can these functions be called from WarehouseMain.cpp?
-	Warehouse(WarehouseItem _item[], int num);
-	bool AddWarehouseItem(WarehouseItem& _item);
-	bool RemoveWarehouseItem(std::string name);
-	WarehouseItem* GetListOfItems(int& num) const;
-	Hammer* GetListOfHammers(int& num);
-	Screwdriver* GetListOfScrewdrivers(int& num);
-	Wrench* GetListOfWrenches(int& num);
-	AnonymousItem* GetListOfAnonymousItems(int& num);
-	//QUESTION 6: Why do we need a destructor?
+	Warehouse(std::string);
+	bool StockHammers(Hammer* hammer, int len);
+	bool StockScrewdrivers(Screwdriver* screwdriver, int len);
+	bool StockWrenches(Wrench* wrench, int len);
+	bool SetBarcodes(Barcode* barcode, int len);
+	void MergeProducts();
+	void PrintWarehouseItems() const;
 	~Warehouse();
 };
 
-void DisplayItems(WarehouseItem* item, int num);
-void DisplayHammers(Hammer* item, int num);
-void DisplayWrenches(Wrench* item, int num);
-void DisplayScrewdrivers(Screwdriver* item, int num);
-void DisplayAnonymousItems(AnonymousItem* item, int num);
+
 #endif _WAREHOUSE_H_
