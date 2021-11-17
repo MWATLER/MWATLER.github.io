@@ -31,6 +31,10 @@ function SetContent(content) {
         elem=document.querySelector('#Assignment1');
     } else if(content=='Assignment2') {
         elem=document.querySelector('#Assignment2');
+    } else if(content=='Assignment3') {
+        elem=document.querySelector('#Assignment3');
+    } else if(content=='Assignment4') {
+        elem=document.querySelector('#Assignment4');
     } else if(content=='Week1') {
         elem=document.querySelector('#Week1');
     } else if(content=='Week2') {
