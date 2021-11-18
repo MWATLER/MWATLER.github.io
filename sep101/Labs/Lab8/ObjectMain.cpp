@@ -28,7 +28,7 @@ int main(void) {
 
 	//TODO: Prompt the user to enter new parameters for the moon object and the earth object.
 	//      For the moon, the parameters are: initial height, initial vertical speed, and the horizontal speed.
-	//      For the earth, the parameters are: intitial height and the horizontal speed.
+	//      For the earth, the parameters are: initial height and the horizontal speed.
 	//Be sure to perform validation on the entered values.
 	
 
