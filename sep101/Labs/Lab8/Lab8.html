@@ -1,8 +1,10 @@
 <h2>SEP101 – Lab 8: Gravity</h2>
 
-<h3>Due: end of week 11</h3>
+<h3>Due: Friday, November 26, 2021</h3>
 
 <p>This lab will test your ability to create classes, use objects, and use constructors.</p>
+
+<!--<a href="" target="_blank">Lab Recording (mp4)</a>-->
 
 <h3>Gravity</h3>
 
@@ -13,7 +15,7 @@
 <p>The earth object and moon object are similar, with two differences. The earth object will have a gravitational acceleration constant of 9.81 m/s<sup>2</sup> and
 the moon a gravitational acceleration constant of 1.625 m/s<sup>2</sup>. The earth object will have no initial vertical speed, but the moon object will.</p>
 
-<p>The earth object will have a gravitational acceleration constant, an initial height, a horizontal speed, an x position and a y position. It can be created 
+<p>The earth object will have a gravitational acceleration constant, an initial height, a horizontal speed, an <b>x</b> position and a <b>y</b> position. It can be created 
     through two constructors: one a default constructor and one a constructor which takes as arguments the initial height and the horizontal speed. 
     The earth object will have setter functions to set the initial height and to set the horizontal speed. The setter functions perform validation on the 
     entered values. They will return false if the entered value is less than or equal to 0, true otherwise. The earth 
@@ -22,8 +24,8 @@ the moon a gravitational acceleration constant of 1.625 m/s<sup>2</sup>. The ear
     y-position = initial height - 0.5 x gravitational constant x time<sup>2</sup>
 </p>
 
-<p>The moon object will have a gravitational acceleration constant, an initial height, an initial vertical speed, a horizontal speed, an x position 
-    and a y position. It can be created through two constructors: one a default constructor and one a constructor which takes as arguments the initial 
+<p>The moon object will have a gravitational acceleration constant, an initial height, an initial vertical speed, a horizontal speed, an <b>x</b> position 
+    and a <b>y</b> position. It can be created through two constructors: one a default constructor and one a constructor which takes as arguments the initial 
     height, the initial vertical speed, and the horizontal speed. The moon object will have setter functions to set the initial height, the initial 
     vertical speed, and to set the horizontal speed. The setter functions perform validation on the entered values. They will return false if the
     entered value is less than or equal to 0, true otherwise. The moon object will have getter functions to get the <b>x</b> position (horizontal position)
@@ -35,6 +37,10 @@ the moon a gravitational acceleration constant of 1.625 m/s<sup>2</sup>. The ear
 <p>Part of the <b>main()</b> function has been provided for you in the file <a href="ObjectMain.cpp" target="_blank">ObjectMain.cpp</a>.
     You have to complete the <b>TODO</b> section, where you are to prompt the user to enter new parameters for the moon object and the earth object.
     Be sure to perform validation on the entered values.</p>
+
+<p>For the <b>main()</b> function to work, be sure to put the class declaration for moon inside a file called <b>MoonObject.h</b> and the class 
+    declaration for earth inside a file called <b>EarthObject.h</b>. You can put the function definitions for the earth and moon objects 
+inside the files <b>MoonObject.cpp</b> and <b>EarthObject.cpp</b>.</p>
 
 <h3>Sample Run</h3>
 <pre>
