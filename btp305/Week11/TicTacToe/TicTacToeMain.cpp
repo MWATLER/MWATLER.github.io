@@ -29,7 +29,7 @@ int main() {
 		if (count < MaxPlays && winningPlayer == Grid::Winner::NoOne) {
 			ourGrid.DisplayGrid();
 			do {
-				cout << "Player 2 enter the location of your Y (ypos xpos): ";
+				cout << "Player 2 enter the location of your O (ypos xpos): ";
 				cin >> ypos;
 				cin >> xpos;
 				validPlay = ourGrid.SetGrid(ypos, xpos, 2);

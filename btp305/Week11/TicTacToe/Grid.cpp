@@ -75,7 +75,7 @@ bool Grid::SetGrid(int ypos, int xpos, int playerNo) {
 	bool ret = true;
 	char play;
 
-	if (grid[ypos][xpos] != ' ') {
+	if (grid[ypos][xpos] != ' ') {//ypos is the row, xpos is the column. Is this slot available?
 		ret = false;
 	}
 	else {
@@ -83,14 +83,14 @@ bool Grid::SetGrid(int ypos, int xpos, int playerNo) {
 			play = 'X';
 		}
 		else if (playerNo == 2) {
-			play = 'Y';
+			play = 'O';
 		}
 		else {
 			ret = false;
 		}
 	}
 	if (ret) {
-		grid[ypos][xpos] = play;
+		grid[ypos][xpos] = play;//ypos is the row, xpos is the column
 	}
 	return ret;
 }

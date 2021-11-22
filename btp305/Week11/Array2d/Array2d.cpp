@@ -22,16 +22,18 @@ int main() {
 	cout << "Enter the number of students: ";
 	cin >> numStudents;
 	numMarks = new int[numStudents];//would be nice to use a smart pointer instead to handle this resource
+//	numMarks[0] represents the number of marks for the first student
+//	numMarks[1] represents the number of marks for the second student, etc...
 	studentMarks = new float* [numStudents];//Allocate the number of rows, which represents the number of students
-
 	cout << endl;
 	for (int i = 0; i < numStudents; ++i) {
 		cout << "Enter the number of marks for student " << (i + 1) << ": ";
 		cin >> numMarks[i];//I can syntactically treat numMarks the same as an ordinary array
-		studentMarks[i] = new float[numMarks[i]];//Allocate the number of columns, which represents the number of marks for this student
+		studentMarks[i] = new float[numMarks[i]];//Allocate the number of columns, 
+		                                         //which represents the number of marks for this student
 		for (int j = 0; j < numMarks[i]; ++j) {
 			cout << "Enter mark " << (j + 1) << ": ";
-			cin >> studentMarks[i][j];
+			cin >> studentMarks[i][j];//studentMarks[0][0]=66, studentMarks[0][1]=67, studentMarks[0][2]=88, studentMarks[0][3]=87
 		}
 		cout << endl;
 	}
