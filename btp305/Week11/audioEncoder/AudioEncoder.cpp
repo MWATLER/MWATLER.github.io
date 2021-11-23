@@ -6,7 +6,12 @@
 #include "AudioEncoder.h"
 
 using namespace std;
-
+/*class Encoder {
+public:
+	char operator()(char in, int key) const {
+		return in + key;
+	}
+};*/
 void EncodeThread(char* dataPtr, char* encodedDataPtr, int key, int len, const Encoder& encoder) {
 	for (int i = 0; i < len; ++i) {
 		encodedDataPtr[i] = encoder(dataPtr[i], key);
@@ -38,11 +43,12 @@ AudioEncoder::AudioEncoder(std::string filename) {
 
 void AudioEncoder::Encode(int _key) {
 	//Divide the data into four parts and call the encode thread
-	//TEST: if size=18
+	//TEST: if size=19
 	int begin1 = 0;//0
-	int begin2 = size / 4;//18/4 = 4
-	int begin3 = size / 2;//18/2 = 9
-	int begin4 = 3 * size / 4;//18*3/4 = 54/4 = 13
+	int begin2 = size / 4;//19/4 = 4.75 -> 4
+	int begin3 = size / 2;//19/2 = 9.5 -> 9
+	int begin4 = 3 * size / 4;//19*3/4 = 57/4 = 14.25 -> 14
+	//void EncodeThread(char* dataPtr, char* encodedDataPtr, int key, int len, const Encoder& encoder) {
 	std::thread t1(bind(EncodeThread, &data[begin1], &encodedData[begin1], _key, begin2 - begin1, Encoder()));
 	std::thread t2(bind(EncodeThread, &data[begin2], &encodedData[begin2], _key, begin3 - begin2, Encoder()));
 	std::thread t3(bind(EncodeThread, &data[begin3], &encodedData[begin3], _key, begin4 - begin3, Encoder()));
