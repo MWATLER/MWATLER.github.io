@@ -28,3 +28,15 @@ double Student::average() {
 void Student::displayInformation() {
     cout << name << ", student number " << no << ", has an average of " << fixed << setprecision(2) << aveMark << endl << endl;
 }
+
+Student::Student() {
+	//For object1, *this refers to object1
+	//For object2, *this refers to object2
+	//For object3, *this refers to object3
+	aveMark = 0.0;
+	cout << "Student::Student: the constructor" << endl;
+}
+
+Student::~Student() {
+	cout << "Student::~Student: the destructor" << endl;
+}

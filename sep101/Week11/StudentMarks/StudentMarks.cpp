@@ -17,7 +17,7 @@ int main(void) {
 		pStudent[i]->enterInformation();
 		pStudent[i]->average();
 		pStudent[i]->displayInformation();
-	}
+	}//int i is destroyed
 
 	return 0;
-}
+}//int NO_STUDENTS is destroyed, student1/student2/student3 and *pStudent[] are destroyed

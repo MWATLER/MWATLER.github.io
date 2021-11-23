@@ -10,7 +10,9 @@ class Student {
     double aveMark;
 
 public:
+	Student();
     void enterInformation();
     double average();
     void displayInformation();
+	~Student();
 };

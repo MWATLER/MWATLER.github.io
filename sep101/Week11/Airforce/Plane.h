@@ -3,8 +3,8 @@
 #include<iostream>
 
 class Plane {
-	std::string* name;
-	int numPilots;
+	std::string* name;//names of the pilots
+	int numPilots;//the number of pilots
 	double fuel;
 	const double fuelCapacity = 3000;//300L
 	const double fuelEfficiency = 2.0;//2km / L
