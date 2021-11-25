@@ -53,7 +53,7 @@
         <li>The fuel level in kg of matter/anti-matter,</li>
         <li>The fuel tank capacity, fixed at 1000.0kg of matter/anti-matter,</li>
         <li>The speed of light, fixed at 299,792,458 m/s,</li>
-        <li>The light to fuel conversion ratio, fixed at 0.000001 (1mg of matter/anti-matter generated every second for a light level of 1.0),</li>
+        <li>The light to fuel conversion, equals the light level times the time travelled,</li>
         <li>The light level, where a level of 1.0 is the light level on the surface of the sun.</li>
     </ul>
     The propulsion system can perform the following:
@@ -63,8 +63,8 @@
         <li>Consume fuel (passing through the energy required, return true if there is enough fuel to provide the energy required and false otherwise).
             Fuel is consumed according to Einstein's equation E=mc<sup>2</sup>, m=E/c<sup>2</sup>.</li>
         <li>Add fuel (in kg of matter/anti-matter),</li>
-        <li>Generate fuel (passing through the time elapsed in seconds). The amount of fuel generated for a given number of seconds is the light to fuel
-             conversion ratio times the time in seconds.</li>
+        <li>Generate fuel (passing through the time elapsed in seconds). The amount of fuel generated for a given number of seconds is the light level
+             times the time in seconds.</li>
         <li>Set the light level (passing through the light level),</li>
         <li>Generate a report printing the fuel level in kg and light level.</li>
     </ul>
