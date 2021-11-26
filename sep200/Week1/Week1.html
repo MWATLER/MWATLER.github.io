@@ -1,12 +1,17 @@
 <h1>Week 1 - Introduction</h1>
 
 <h3>Introduction</h3>
-<p>This week will be an introduction to object oriented programming. We will also look at compilers and linkage, as well as some fundamental types.</p>
+<p>This week will be an introduction to object oriented programming. We will also look at compilers and linkage, as well as some fundamental types. 
+  During our lab period, we will look at the preprocessor which performs preliminary operations on C and C++ files before they are passed to the compiler. 
+  The preprocessor can assist us with debugging our code.
+</p>
 
 <h3>Videos</h3>
-<table><tr><td></td><td><a href="https://www.youtube.com/watch?v=LBvRj5xq9Z0" target="_blank">Intro to Object Oriented Programming</a></td></tr>
+<table>
+  <tr><td>Object Oriented Programming</td><td><a href="https://www.youtube.com/watch?v=LBvRj5xq9Z0" target="_blank">Intro to Object Oriented Programming</a></td></tr>
   <tr><td></td><td><a href="https://www.youtube.com/watch?v=pTB0EiLXUC8" target="_blank">Object-oriented Programming in 7 minutes</a></td></tr>
-  <tr><td></td><td><a href="https://www.youtube.com/watch?v=ij2jrsUmwCI" target="_blank">Understanding the Void Pointers</a></td></tr>
+  <tr><td>The Void Pointer</td><td><a href="https://www.youtube.com/watch?v=ij2jrsUmwCI" target="_blank">Understanding the Void Pointers</a></td></tr>
+  <tr><td>The Preprocessor</td><td><a href="https://www.youtube.com/watch?v=voGGB5TGsV4" target="_blank">Preprocessor Directives - C++ Tutorial For Beginners #21</a></td></tr>
 </table>
 
 <h3>Quiz</h3>
@@ -14,11 +19,12 @@
 
 <h3>Lecture Material</h3>
 <ul>
-  <li>Chapter 3 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapter 3 and 12 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
   <li>Chapter 1 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997139820703226" target="_blank">C++ Primer</a></li>
   <li><a href="Terminology.docx" target="_blank">Object Terminology</a></li>
   <li><a href="Compilation.docx" target="_blank">Overview of Compilers</a></li>
   <li><a href="Types.docx" target="_blank">Fundamental Types</a></li>
+  <li><a href="PreProcessor.docx" target="_blank">The Preprocessor</a></li>
 </ul>
 
 <h3>Lab(s)</h3>
@@ -95,3 +101,13 @@
 <p><em>Pointers, References and Arrays</em></p>
 <p>There are many ways to initialize a pointer and use them in a for-next loop. The code
   <a href="TypeInference/TypeInference.cpp" target="_blank">TypeInference.cpp</a> uses a for-loop with type inference.</p>
+
+  
+<p><em>Macros</em></p>
+<p>Macros in C++ have a wide variety of application. One such application is in debugging. Embedded debug can be enabled and disabled via 
+  a simple <b>define</b>. Code with embedded debugging can also apply levels or severity of the debug. Debug logs can be filtered according 
+  to their severity. Code with embedded debug can be seen at:<br>
+  <a href="Debugging/Automobile.h" target="_blank">Automobile.h</a>,
+  <a href="Debugging/Automobile.cpp" target="_blank">Automobile.cpp</a> and
+  <a href="Debugging/TravelSimulator.cpp" target="_blank">TravelSimulator.cpp</a>.
+</p>
