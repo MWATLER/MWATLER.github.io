@@ -1,0 +1,65 @@
+<h1>Week 12 - Multiple Inheritance and Bitwise Expressions</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look at two unrelated topics. Multiple inheritance is a feature of C++ that allows a class to 
+  inherit from more than one base class. Bitwise expressions allow operations in C++ to be performed at the bit level.</p>
+
+  <h3>Videos</h3>
+  <table>
+<!--<tr><td>Lecture Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lecture_20211129_Recording.mp4" target="_blank">Monday, November 29 (mp4)</a></td></tr>
+    <tr><td>Lab Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lab_20211130_Recording.mp4" target="_blank">Tuesday, November 30 (mp4)</a></td></tr>-->
+    <tr><td>Multiple Inheritance</td><td><a href="https://www.youtube.com/watch?v=JZwBW0nYzsk" target="_blank">C++ Multiple Inheritance Explained</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=3XUXSiC-hPE" target="_blank">Multiple Inheritance in C++ with Ambiguity & Resolution</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=ejTzn_sxv-0" target="_blank">Virtual Base Class In C++ || Multipath Inheritance In C++</a></td></tr>
+    <tr><td>Bitwise Expressions</td><td><a href="https://www.youtube.com/watch?v=qTFUnp_KwHg" target="_blank">C++ Bitwise AND and OR</a></td></tr>
+  </table>
+  
+<h3>Reference Material</h3>
+<ul>
+  <li>Chapter 21 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapters 2, 4 and 18 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+</ul>
+    
+<h3>Sample Code</h3>
+
+<p><em>Multiple Inheritance</em></p>
+<p>When a class inherits from two or more base classes, ambiguities can result. One way of resolving ambiguities is in the class itself, where 
+  it specifies which base class should perform which function. Another way is by making a common base class virtual. Code that demonstrates 
+  the resolution of ambiguities can be seen at:<br>
+  <a href="VirtualInheritance/Name.h" target="_blank">Name.h</a>,
+  <a href="VirtualInheritance/Name.cpp" target="_blank">Name.cpp</a>,
+  <a href="VirtualInheritance/NCube.h" target="_blank">NCube.h</a>,
+  <a href="VirtualInheritance/NCube.cpp" target="_blank">NCube.cpp</a>,
+  <a href="VirtualInheritance/NLitCube.h" target="_blank">NLitCube.h</a>,
+  <a href="VirtualInheritance/NLitCube.cpp" target="_blank">NLitCube.cpp</a>,
+  <a href="VirtualInheritance/NLitObj.h" target="_blank">NLitObj.h</a>,
+  <a href="VirtualInheritance/NLitObj.cpp" target="_blank">NLitObj.cpp</a> and
+  <a href="VirtualInheritance/VirtualInheritance.cpp" target="_blank">VirtualInheritance.cpp</a>.<br><br>
+  The following code demonstrates the inheritance structure for an amphibious vehicle, an automobile, a boat, and a vehicle. Both an automobile and boat are vehicles, and 
+  inherit from the class Vehicle. An amphibious vehicle is both a boat and an automobile, and inherit from the classes Boat and Automobile. The code can be seen at:<br>
+  <a href="AmphibiousVehicle/Vehicle.h" target="_blank">Vehicle.h</a>,
+  <a href="AmphibiousVehicle/Automobile.h" target="_blank">Automobile.h</a>,
+  <a href="AmphibiousVehicle/Automobile.cpp" target="_blank">Automobile.cpp</a>,
+  <a href="AmphibiousVehicle/Boat.h" target="_blank">Boat.h</a>,
+  <a href="AmphibiousVehicle/Boat.cpp" target="_blank">Boat.cpp</a>,
+  <a href="AmphibiousVehicle/AmphibiousVehicle.h" target="_blank">AmphibiousVehicle.h</a>,
+  <a href="AmphibiousVehicle/AmphibiousVehicle.cpp" target="_blank">AmphibiousVehicle.cpp</a> and
+  <a href="AmphibiousVehicle/AmphibiousVehicleMain.cpp" target="_blank">AmphibiousVehicleMain.cpp</a>.
+</p>
+
+<p><em>Bitwise Expressions</em></p>
+<p>Flags are often used to qualify a certain operations. Files, for instance, have flags to indicate whether the file is read-only, write-only, read-write, to 
+  indicate permissions etc... It is a waste of space to store each piece of information inside of a standard data type such as int. Rather, since these 
+  flags represent binary states, they could be stored inside specific bits of one flag. For instance, the following document shows how to set and unset 
+  flags for a file: <a href="SetUnsetBit/SetUnsetBit.docx" target="_blank">SetUnsetBit.docx</a>.<br>
+  The following code follows the document in the setting and unsetting of bits for a files operation class:<br>
+  <a href="SetUnsetBit/FileOperations.h" target="_blank">FileOperations.h</a> and 
+  <a href="SetUnsetBit/SetUnsetBit.cpp" target="_blank">SetUnsetBit.cpp</a>.<br><br>
+  Error detection can be performed by a parity bit, which basically is set to 0 if there are an even number of 1 bits in the data, and 1 if there are an odd 
+  number of 1 bits in the data. The parity bit is attached on to the data as the data is being transmitted. The receiving side can compare the parity bit 
+  to the number of 1 bits in the received data. If there are an even number of bits in the data and the parity is 0, or there are an odd number of bit 
+  and the parity is 1, an error has occurred, and the data has to be retransmitted. The parity bit can be determined by taking an exclusive-OR of all the bits 
+  as seen in the image:<br<br>
+  <img src="ErrorDetection/ParityBit.PNG" alt="Generating a Parity Bit"><br><br>
+  The code can be seen at <a href="ErrorDetection/ErrorDetection.cpp" target="_blank">ErrorDetection.cpp</a>.
+</p>
