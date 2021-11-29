@@ -53,5 +53,6 @@ int main() {
 	cout << ampVehicle->GetName() << " in total has spent $" << ampVehicle->GetCost() << " on fuel." << endl;
 	cout << endl;
 
+	//no need to delete anything, thanks to the unique_ptr
 	return 0;
 }

@@ -28,7 +28,7 @@ int main() {
 //		short int bit0 = (data[i] & BIT0_MASK) / BIT0_MASK;
 		short int bit0 = (data[i] & BIT0_MASK) >> 0;
 		short int bit1 = (data[i] & BIT1_MASK) >> 1;
-		short int bit2 = (data[i] & BIT2_MASK) >> 2;
+		short int bit2 = (data[i] & BIT2_MASK) >> 2;//1100 0110 & 0000 0100 = 0000 0100 >> 2 = 0000 0001
 		short int bit3 = (data[i] & BIT3_MASK) >> 3;
 		short int bit4 = (data[i] & BIT4_MASK) >> 4;
 		short int bit5 = (data[i] & BIT5_MASK) >> 5;

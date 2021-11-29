@@ -11,6 +11,7 @@ class AmphibiousVehicle:public Boat, public Automobile {
 	std::string name;
 	unsigned short mode;
 public:
+	//state variables, which are used to enable certain functionalities and disable others
 	static const int VEHICLE_NONE = 0x00;
 	static const int VEHICLE_AUTOMOBILE = 0x01;
 	static const int VEHICLE_BOAT = 0x02;

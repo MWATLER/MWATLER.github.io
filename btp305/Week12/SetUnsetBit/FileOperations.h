@@ -10,7 +10,7 @@
 class FileOperations {
 	std::ifstream ifile;
 	std::ofstream ofile;
-	unsigned short flags;
+	unsigned short flags;//store enable/disable of many features in one variable
 public:
 	const unsigned short READ = 0x04;//00000100
 	const unsigned short WRITE = 0x02;//00000010

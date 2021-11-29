@@ -6,7 +6,7 @@
 #include <iostream>
 #include "Vehicle.h"
 
-class Boat : public Vehicle {
+class Boat : virtual public Vehicle {
 	std::string name;
 	double litresPerHour;
 	double fuelInTank;

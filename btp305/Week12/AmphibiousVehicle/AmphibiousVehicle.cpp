@@ -6,7 +6,7 @@ using namespace std;
 
 AmphibiousVehicle::AmphibiousVehicle(std::string _name) : Boat(_name, 20.0, 150.0), Automobile(_name, 10.0, 50.0){
 	name = _name;
-	mode = VEHICLE_NONE;
+	mode = VEHICLE_NONE;//neither a boat or automobile at the moment
 }
 
 Vehicle::Err_Status AmphibiousVehicle::Travel(double distance) {
