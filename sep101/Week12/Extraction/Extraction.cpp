@@ -14,12 +14,11 @@ int main() {
         "a string : \n";
     cin >> i >> c >> x >> s;
     cout << "Entered " << endl;
-    cout << i << ' '
-        << c << ' ' << x << ' ' << s << endl;
+    cout << i << ' ' << c << ' ' << x << ' ' << s << endl;
 
     cout << endl;
-    cout << "Press the 'c' key to continue: ";
-    while (getchar()!='c');
+//    cout << "Press the 'c' key to continue: ";
+//    while (getchar()!='c');
     cout << endl;
 
     char d, t[8], u[8], v;
@@ -29,7 +28,7 @@ int main() {
     cin.get(d);             // extracts a single character
     cin.get(t, 8);          // newline delimiter - accepts up to 7 chars 
                             //    and adds a null byte
-    cin.ignore(2000, '\n'); // extracts the 'j' and the newline
+    cin.ignore(2000, '\n'); // extracts the newline or up to 2000 characters
     cin.get(u, 8, '\t');    // tab delimiter - accepts up to 7 chars and
                             //    adds a null byte
     cin.ignore();           // extracts the tab

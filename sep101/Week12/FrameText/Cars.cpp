@@ -5,10 +5,10 @@
 using namespace std;
 
 void CarName::GetNumberOfEntries() {
-	file.open("Cars.csv");
+	file.open("Cars.csv");//a "comma separated value" file
 	numNames = 0;
 	while (file) {
-		if (file.get() == ',') {
+		if (file.get() == ',') {//what is it counting?
 			++numNames;
 		}
 	}

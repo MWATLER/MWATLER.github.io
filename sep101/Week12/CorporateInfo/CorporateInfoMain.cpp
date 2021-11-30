@@ -38,8 +38,8 @@ int main(void) {
 			fout.open("EmployeeData.txt", std::ofstream::out);
 			fout.setf(ios::fixed);
 			fout.precision(2);
-			fout << "The maximum salary is " << corporation.GetMaximumSalary() << endl;
-			fout << "The average salary is " << corporation.GetAverageSalary() << endl;
+			fout << "The maximum salary is $" << corporation.GetMaximumSalary() << endl;
+			fout << "The average salary is $" << corporation.GetAverageSalary() << endl;
 			fout << "The average age is " << corporation.GetAverageAge() << endl;
 			fout.unsetf(ios::fixed);
 			fout.close();
