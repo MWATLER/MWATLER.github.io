@@ -1,6 +1,8 @@
 <h2>SEP101 – Lab 10: Analog Circuit Simulator</h2>
 
-<h3>Due: end of week 13</h3>
+<h3>Due: Friday, December 10, 2021</h3>
+
+<!--<a href="" target="_blank">Lab Recording (mp4)</a>-->
 
 <p>This lab will test your ability to write formatted data to a file.</p>
 
@@ -42,8 +44,8 @@ The voltage is a sinusoidal wave with amplitude 100V. A time step of 0.0001 seco
 time step, then the voltage at this new time is applied again. You are to apply this voltage for each time step to each component then print the results to a file called <b>RLC.dat</b>. 
 The results printed will be the time, the voltage applied, the current through the inductor, the current through the capacitor, the current through the resistor, and the total 
 current. Each column should be formatted to be 10 spaces wide, and the precision of the results should be to 4 decimal places. The first row will consist of header information 
-as follows:<br>
-<b>Time</b> <b>Voltage</b> <b>Inductor</b> <b>Capacitor</b> <b>Resistor</b> <b>Total</b><br>
+as follows:<br><br>
+<b>Time</b> <b>Voltage</b> <b>Inductor</b> <b>Capacitor</b> <b>Resistor</b> <b>Total</b><br><br>
 The simulator will run for 0.1 seconds.</p>
 
 <h3>Graphical Representation of Data - Excel</h3>
@@ -51,9 +53,15 @@ The simulator will run for 0.1 seconds.</p>
     <b>From Text/CSV</b> then load the data. To see the data graphically, click on Excel's <b>Insert</b> tab, then look for 
     the line graph on the <b>Recommended Charts</b> column.</p>
 
+<p>Some sample code for a direct current voltage source applied to an inductor with the resulting data file can be seen at 
+    <a href="DirectCurrentVoltage/L.dat" target="_blank">L.dat</a>, 
+    <a href="DirectCurrentVoltage/Inductor.h" target="_blank">Inductor.h</a>, 
+    <a href="DirectCurrentVoltage/Inductor.cpp" target="_blank">Inductor.cpp</a> and
+    <a href="DirectCurrentVoltage/DirectCurrentVoltage.cpp" target="_blank">DirectCurrentVoltage.cpp</a>.
+</p>
 
 <h3>Sample Run</h3>
-A sample run results in a RLC.dat as follows:
+A sample run results in an <a href="RLC.dat" target="_blank">RLC.dat</a> as follows:
 <pre>
       Time   Voltage  Inductor Capacitor  Resistor     Total
     0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
