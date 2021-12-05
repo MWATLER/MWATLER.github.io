@@ -1,0 +1,52 @@
+Value of Cargo (Chocolates) is less than 10000.000000
+Value of Cargo (Charcoal) is less than 10000.000000
+
+By Cargo Type Car
+
+By Cargo Type Car
+
+By Cargo Type Commodity
+
+By Cargo Type Food
+
+By Cargo Type Car
+
+==========
+Net Worth: 113000
+==========
+
+
+By Cargo Value 29000
+
+By Cargo Value 31000
+
+By Cargo Value 12000
+
+By Cargo Value 11000
+
+By Cargo Value 30000
+
+==========
+Net Worth: 113000
+==========
+
+
+Toyota $29000 Car
+
+Honda $31000 Car
+
+Butane $12000 Commodity
+
+Cherries $11000 Food
+
+Mazda $30000 Car
+
+==========
+Net Worth: 113000
+==========
+
+
+Enter the name of cargo to display: Butane
+The cargo retrieved is:
+
+Butane $12000 Commodity

@@ -1,0 +1,127 @@
+<h1>Week 13 - Linked Lists, Other Topics, Review</h1>
+
+<h3>Introduction</h3>
+<p>.</p>
+
+  <h3>Videos</h3>
+  <table>
+<!--<tr><td>Lecture Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lecture_20211129_Recording.mp4" target="_blank">Monday, December 6 (mp4)</a></td></tr>-->
+    <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+    <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+    <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+    <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+    <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+  </table>
+  
+<h3>Reference Material</h3>
+<ul>
+  <li>Chapters of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapters  of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+</ul>
+    
+<h3>Sample Code</h3>
+
+<!--<p><em></em></p>
+<p>Code that demonstrates        can be seen at:<br>
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+</p>
+
+<p><em></em></p>
+<p>Code that demonstrates        can be seen at:<br>
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+</p>
+
+<p><em></em></p>
+<p>Code that demonstrates        can be seen at:<br>
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+  <a href="" target="_blank"></a>,
+</p>-->
+
+<h2>MidTerm Review Question</h2>
+
+<p>The freighter is a cargo ship that carries a collection of items across the ocean such as cars, food, commodities, etc... 
+  Various companies pay for the transportation of their items to markets across the world. For the freighter, a piece of cargo 
+  should have a certain value ($10000) to make it profitable to carry. Complete the following program by 
+  coding the class named <b>Freighter</b> and a global function named <b>calcTotalWorth</b>.</p>
+  
+  <h3>Freighter Class Requirements</h3>
+  
+  <p>Your <b>Freighter</b> class includes the following members:
+  <ul>
+  <li>STL container that holds <b>Cargo</b> objects</li>
+  <li>Total worth of all the cargo</li>
+  <li>Any other utility variable you feel is required</li>
+  <li>Overloaded += operator that
+      <ul>
+          <li>Adds a Cargo object to the current object and returns a reference to the current object only 
+              if the cargo has a value greater than or equal to $10,000</li>
+          <li>If the value of the cargo is less than $10,000, the operator should not change the current 
+              object and throws an exception</li>
+      </ul>
+  </li>
+  <li>Overloaded [] operator that
+      <ul>
+          <li>Takes as an input the name of a cargo item</li>
+          <li>Returns the address of the cargo object that matches the name</li>
+          <li>If no such cargo exists, the function returns nullptr</li>
+      </ul>
+  </li>
+  <li>A display function that:
+      <ul>
+          <li>Receives the address of one of the global functions that displays the requested information (byCargoType, byValue, byEverything)</li>
+          <li>Displays the total worth of all cargo</li>
+          <li>Calculates the total worth of all cargo in two threads</li>
+      </ul>
+  </li>
+  </ul>
+  </p>
+  
+  <h3>calcTotalWorth Function Requirements</h3>
+  
+  <ul>
+      <li>The global function <b>calcTotalWorth</b> receives iterators to the beginning and end of a range of 
+      <b>Cargo</b> objects.</li>
+      <li>This function totals the value of the individual cargo objects</li>
+  </ul>
+  
+  <h3>Other Requirements</h3>
+  
+  <ul>
+      <li>Upgrade the main function of the program to use a smart pointer</li>
+      <li>Upgrade the main function to catch any exceptions</li>
+  </ul>
+  
+  <h3>Incomplete Code</h3>
+  
+  <p>The following code has been given to you. Please complete:<br>
+      <a href="Freighter_release/Cargo.h" target="_blank">Cargo.h</a>,
+      <a href="Freighter_release/Freighter.h" target="_blank">Freighter.h</a>,
+      <a href="Freighter_release/Freighter.cpp" target="_blank">Freighter.cpp</a> and
+      <a href="Freighter_release/CargoMain.cpp" target="_blank">CargoMain.cpp</a>.<br>
+      The results of a sample run can be seen in <a href="Freighter_release/sample_run.txt" target="_blank">sample_run.txt</a>.
+  </p>
+  
+  <h3>A Solution</h3>
+  
+  <p>The following code is a solution to the above problem:<br>
+    <a href="Freighter/Cargo.h" target="_blank">Cargo.h</a>,
+    <a href="Freighter/Freighter.h" target="_blank">Freighter.h</a>,
+    <a href="Freighter/Freighter.cpp" target="_blank">Freighter.cpp</a> and
+    <a href="Freighter/CargoMain.cpp" target="_blank">CargoMain.cpp</a>.<br>
+    The results of a sample run can be seen in <a href="Freighter/sample_run.txt" target="_blank">sample_run.txt</a>.
+</p>
+  
