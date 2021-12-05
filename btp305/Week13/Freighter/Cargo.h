@@ -7,7 +7,8 @@
 enum class CargoType {
     Car,
     Food,
-    Commodity
+    Commodity,
+    Electronics
 };
 class Cargo {
     std::string name;

@@ -1,9 +1,11 @@
-Value of Cargo (Chocolates) is less than 10000.000000
-Value of Cargo (Charcoal) is less than 10000.000000
+Cargo (Huawei) is banned.
+Cargo (Samsung) is banned.
 
 By Cargo Type Car
 
 By Cargo Type Car
+
+By Cargo Type Food
 
 By Cargo Type Commodity
 
@@ -11,42 +13,75 @@ By Cargo Type Food
 
 By Cargo Type Car
 
-==========
-Net Worth: 113000
-==========
-
-
-By Cargo Value 29000
-
-By Cargo Value 31000
-
-By Cargo Value 12000
-
-By Cargo Value 11000
-
-By Cargo Value 30000
+By Cargo Type Commodity
 
 ==========
-Net Worth: 113000
+Net Worth: $130000.00
 ==========
 
 
-Toyota $29000 Car
+By Cargo Value $29000.00
 
-Honda $31000 Car
+By Cargo Value $31000.00
 
-Butane $12000 Commodity
+By Cargo Value $9000.00
 
-Cherries $11000 Food
+By Cargo Value $12000.00
 
-Mazda $30000 Car
+By Cargo Value $11000.00
+
+By Cargo Value $30000.00
+
+By Cargo Value $8000.00
 
 ==========
-Net Worth: 113000
+Net Worth: $130000.00
 ==========
 
 
-Enter the name of cargo to display: Butane
+Toyota $29000.00 Car
+
+Honda $31000.00 Car
+
+Chocolates $9000.00 Food
+
+Butane $12000.00 Commodity
+
+Cherries $11000.00 Food
+
+Mazda $30000.00 Car
+
+Charcoal $8000.00 Commodity
+
+==========
+Net Worth: $130000.00
+==========
+
+
+Enter a value. The first cargo item greater than this value will be returned: 30000
 The cargo retrieved is:
 
-Butane $12000 Commodity
+Honda $31000.00 Car
+
+Enter an index. The cargo item with this index will be returned: 3
+The cargo retrieved is:
+
+Butane $12000.00 Commodity
+Could not erase cargo named Chips
+
+Toyota $29000.00 Car
+
+Honda $31000.00 Car
+
+Chocolates $9000.00 Food
+
+Butane $12000.00 Commodity
+
+Cherries $11000.00 Food
+
+Charcoal $8000.00 Commodity
+
+==========
+Net Worth: $100000.00
+==========
+

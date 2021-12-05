@@ -52,7 +52,7 @@
 </p>-->
 
 <h2>Final Test Review Question</h2>
-<!--
+
 <p>The freighter is a cargo ship that carries a collection of items across the ocean such as cars, food, commodities, etc... 
   Various companies pay for the transportation of their items to markets across the world. For the freighter, a piece of cargo 
   should have a certain value ($10000) to make it profitable to carry. Complete the following program by 
@@ -63,28 +63,40 @@
   <p>Your <b>Freighter</b> class includes the following members:
   <ul>
   <li>STL container that holds <b>Cargo</b> objects</li>
-  <li>Total worth of all the cargo</li>
-  <li>Any other utility variable you feel is required</li>
+  <li>Any other variable you feel is required</li>
   <li>Overloaded += operator that
       <ul>
           <li>Adds a Cargo object to the current object and returns a reference to the current object only 
-              if the cargo has a value greater than or equal to $10,000</li>
-          <li>If the value of the cargo is less than $10,000, the operator should not change the current 
+              if the cargo is not of type Electronics</li>
+          <li>If the cargo is of type Electronics, the operator should not change the current 
               object and throws an exception</li>
       </ul>
   </li>
-  <li>Overloaded [] operator that
+  <li>Overloaded -= operator that
+    <ul>
+        <li>Takes a name as argument and removes the first cargo with that name</li>
+        <li>If the cargo cannot be found, it prints an error message</li>
+    </ul>
+</li>
+<li>Overloaded [] operator that
       <ul>
-          <li>Takes as an input the name of a cargo item</li>
-          <li>Returns the address of the cargo object that matches the name</li>
+          <li>Takes as an input a value (double)</li>
+          <li>Returns the address of the first cargo object that is greater than this value</li>
           <li>If no such cargo exists, the function returns nullptr</li>
       </ul>
   </li>
-  <li>A display function that:
+  <li>Overloaded [] operator that
+    <ul>
+        <li>Takes as an input an index (int)</li>
+        <li>Returns the address of the cargo object at this index of the Cargo container</li>
+        <li>If no such cargo exists, the function returns nullptr</li>
+    </ul>
+</li>
+<li>A display function that:
       <ul>
           <li>Receives the address of one of the global functions that displays the requested information (byCargoType, byValue, byEverything)</li>
           <li>Displays the total worth of all cargo</li>
-          <li>Calculates the total worth of all cargo in two threads</li>
+          <li>Calculates the total worth of all cargo in three threads. The thread function is <b>calcTotalWorth</b></li>
       </ul>
   </li>
   </ul>
@@ -124,4 +136,3 @@
     <a href="Freighter/CargoMain.cpp" target="_blank">CargoMain.cpp</a>.<br>
     The results of a sample run can be seen in <a href="Freighter/sample_run.txt" target="_blank">sample_run.txt</a>.
 </p>
--->

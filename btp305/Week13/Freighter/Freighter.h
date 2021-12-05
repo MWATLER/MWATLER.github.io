@@ -8,11 +8,11 @@
 
 class Freighter {
 	std::vector<Cargo> cargo;
-	const double limit = 10000.00;
-	double worth;
 public:
 	Freighter& operator+=(const Cargo& investment);
-	Cargo* operator[](const std::string& name_);
+	Freighter& operator-=(const std::string& _name);
+	Cargo* operator[](const double& value);
+	Cargo* operator[](const int& index);
 	void display(void (*disp)(std::ostream&, const Cargo& cargo));
 };
 
