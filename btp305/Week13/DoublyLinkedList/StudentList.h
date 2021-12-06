@@ -51,6 +51,12 @@ public:
 			}
 			return *this;
 		}
+		iterator operator++() {
+			if (this->curr->next) {
+				this->curr = this->curr->next;
+			}
+			return *this;
+		}
 		std::string operator*() {
 			return curr->name;
 		}
@@ -62,6 +68,7 @@ public:
 	Student* GetBack() const;
 	bool PopBack();
 	void PrintList();
+	int size() { return num; }
 	~StudentList();
 };
 

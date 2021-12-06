@@ -9,13 +9,13 @@ public:
     int out() const { return data; }
 };
 
-struct Node {
+struct Node {//wraps around the data. Node takes data and adds linked list functionality to it
     Data data;
     Node* next;
     Node(const Data& d, Node* n) : data(d), next(n) {}
 };
 
-class Stack {
+class Stack {//like a stack of dishes, you remove the last thing you put on the stack
     Node* head;
 public:
     Stack() : head(nullptr) {}
@@ -25,7 +25,7 @@ public:
             delete p;
         }
     }
-    void push(int d) { head = new Node(d, head); }
+    void push(int d) { head = new Node(d, head); }//head is always pointing to the most recent thing added
     Data pop() {
         Data data;
         if (head) {

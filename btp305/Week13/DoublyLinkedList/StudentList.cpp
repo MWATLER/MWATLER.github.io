@@ -35,7 +35,7 @@ Student* StudentList::GetPrev() {
 // tail is pointing at C
 // tail is advanced to student
 void StudentList::PushBack(Student& student) {
-	if (curr == nullptr) {
+	if (curr == nullptr) {//adding the first student
 		curr = head = tail = &student;
 		student.next = nullptr;
 		student.prev = nullptr;
@@ -46,6 +46,7 @@ void StudentList::PushBack(Student& student) {
 		student.next = nullptr;
 		tail = tail->next;
 	}
+	++num;
 }
 
 Student* StudentList::GetBack() const {
@@ -78,7 +79,7 @@ bool StudentList::PopBack() {
 		delete tail->next;
 		tail->next = nullptr;
 	}
-
+	if (ret == true)--num;
 	return ret;
 }
 
