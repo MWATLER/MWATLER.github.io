@@ -53,6 +53,9 @@ int main() {
 	cout << (*it) << endl;
 	--it;
 	cout << (*it) << endl;
+	++it;
+	cout << (*it) << endl;
+	cout << endl << "The size of our list now is " << studentList.size() << endl;
 
 	return 0;
 }

@@ -9,15 +9,15 @@ public:
     int out() const { return data; }
 };
 
-struct Node {
+struct Node {//A wrapper for data with linked list functionality
     Data data;
     Node* next;
     Node(const Data& d, Node* n) : data(d), next(n) {}
 };
 
 class Queue {
-    Node* head;
-    Node* tail;
+    Node* head;//remove from the head
+    Node* tail;//add to the tail
 public:
     Queue() : head(nullptr), tail(nullptr) {}
     ~Queue() {
@@ -28,16 +28,16 @@ public:
         }
     }
     void push(int d) {
-        Node* p = new Node(d, 0);
+        Node* p = new Node(d, 0);//adding to the tail, next will always be a nullptr
         if (head)
-            tail->next = p;
+            tail->next = p;//the old tail points to the new piece of data
         else
-            head = p;
-        tail = p;
+            head = p;//if p is the first node, have head point to p
+        tail = p;//update tail to point to the new piece of data
     }
     Data pop() {
         Data data;
-        if (head) {
+        if (head) {//remove from the head
             Node* p = head;
             data = head->data;
             head = head->next;
@@ -60,9 +60,10 @@ int main() {
 
     // Remove First Node
     q.pop();//data=3,head->5,delete 3
+	//head->5->9->8->nullptr, tail->8->nullptr
 
     // Pop Data Off the Queue
     while (!q.empty())
-        std::cout << q.pop().out() << ' ';
+        std::cout << q.pop().out() << ' ';//data.out()
     std::cout << std::endl;
 }

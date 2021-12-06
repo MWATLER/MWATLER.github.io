@@ -2,9 +2,9 @@
 
 #include <iostream>
 
-struct Element {
+struct Element {//structures are public by default
     int data;
-    Element* next;
+    Element* next;//points to the next element in the list
     Element(int d, Element* n) {
         data = d;
         next = n;
@@ -19,7 +19,7 @@ int main() {
     head = new Element(5, head);//next points to 3, head points to 5
     head = new Element(9, head);//next points to 5, head points to 9
     head = new Element(8, head);//next points to 9, head points to 8
-    //head->8->9->5->3->nullptr
+    //head->8->9->5->3->nullptr, this is kind-of like a stack (LIFO)
 
     // Display elements from head to tail
     for (Element* p = head; p; p = p->next)
@@ -28,10 +28,11 @@ int main() {
 
     // Remove first two elements
     Element* remove = head;//remove->8
-    head = head->next;//head->9
+    if(head->next!=nullptr) head = head->next;//head->9
     delete remove;//removes 8
+	//head->9->5->3->nullptr
     remove = head;//remove->9
-    head = head->next;//head->5
+	if (head->next != nullptr) head = head->next;//head->5
     delete remove;//removes 9
     //head->5->3->nullptr
 
