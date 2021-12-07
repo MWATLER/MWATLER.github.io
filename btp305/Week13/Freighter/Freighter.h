@@ -9,6 +9,11 @@
 class Freighter {
 	std::vector<Cargo> cargo;
 public:
+	Freighter();
+	Freighter(const Freighter& freighter);//Copy constructor
+	Freighter& operator=(const Freighter& freighter);//Copy assignment
+	Freighter(Freighter&& freighter) noexcept;//Move constructor
+	Freighter& operator=(Freighter&& freighter) noexcept;//Move assignment
 	Freighter& operator+=(const Cargo& investment);
 	Freighter& operator-=(const std::string& _name);
 	Cargo* operator[](const double& value);

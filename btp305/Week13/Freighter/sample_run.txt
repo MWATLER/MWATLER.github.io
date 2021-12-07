@@ -85,3 +85,122 @@ Charcoal $8000.00 Commodity
 Net Worth: $100000.00
 ==========
 
+
+BUILD FREIGHTER 2:
+Cargo (Huawei) is banned.
+Cargo (Samsung) is banned.
+
+TEST THE COPY CONSTRUCTOR AND COPY ASSIGNMENT:
+The original freighter
+
+Toyota $29000.00 Car
+
+Honda $31000.00 Car
+
+Chocolates $9000.00 Food
+
+Butane $12000.00 Commodity
+
+Cherries $11000.00 Food
+
+Mazda $30000.00 Car
+
+Charcoal $8000.00 Commodity
+
+==========
+Net Worth: $130000.00
+==========
+
+The copied freighter (copy constructor)
+
+Toyota $29000.00 Car
+
+Honda $31000.00 Car
+
+Chocolates $9000.00 Food
+
+Butane $12000.00 Commodity
+
+Cherries $11000.00 Food
+
+Mazda $30000.00 Car
+
+Charcoal $8000.00 Commodity
+
+==========
+Net Worth: $130000.00
+==========
+
+The copied freighter (copy assignment)
+
+Toyota $29000.00 Car
+
+Honda $31000.00 Car
+
+Chocolates $9000.00 Food
+
+Butane $12000.00 Commodity
+
+Cherries $11000.00 Food
+
+Mazda $30000.00 Car
+
+Charcoal $8000.00 Commodity
+
+==========
+Net Worth: $130000.00
+==========
+
+
+TEST THE MOVE CONSTRUCTOR AND MOVE ASSIGNMENT:
+The new freighter (move constructor)
+
+Toyota $29000.00 Car
+
+Honda $31000.00 Car
+
+Chocolates $9000.00 Food
+
+Butane $12000.00 Commodity
+
+Cherries $11000.00 Food
+
+Mazda $30000.00 Car
+
+Charcoal $8000.00 Commodity
+
+==========
+Net Worth: $130000.00
+==========
+
+Another new freighter (move assignment)
+
+Toyota $29000.00 Car
+
+Honda $31000.00 Car
+
+Chocolates $9000.00 Food
+
+Butane $12000.00 Commodity
+
+Cherries $11000.00 Food
+
+Mazda $30000.00 Car
+
+Charcoal $8000.00 Commodity
+
+==========
+Net Worth: $130000.00
+==========
+
+The moved freighters
+
+==========
+Net Worth: $0.00
+==========
+
+
+==========
+Net Worth: $0.00
+==========
+

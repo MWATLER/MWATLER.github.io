@@ -5,6 +5,37 @@
 #include <thread>
 #include "Freighter.h"
 
+Freighter::Freighter() {}
+
+Freighter::Freighter(const Freighter& freighter) {
+	*this = freighter;//invokes copy assignment
+}
+
+Freighter& Freighter::operator=(const Freighter& freighter) {
+	if (this != &freighter) {
+		this->cargo.erase(this->cargo.begin(), this->cargo.end());
+		for (int i = 0; i < freighter.cargo.size(); ++i) {
+			this->cargo.push_back(freighter.cargo[i]);
+		}
+	}
+	return *this;
+}
+
+Freighter::Freighter(Freighter&& freighter) noexcept {
+	*this = std::move(freighter);//invokes move assignment
+}
+
+Freighter& Freighter::operator=(Freighter&& freighter) noexcept {
+	if (this != &freighter) {
+		this->cargo.erase(this->cargo.begin(), this->cargo.end());
+		for (int i = 0; i < freighter.cargo.size(); ++i) {
+			this->cargo.push_back(freighter.cargo[i]);
+		}
+		freighter.cargo.erase(freighter.cargo.begin(), freighter.cargo.end());
+	}
+	return *this;
+}
+
 Freighter& Freighter::operator+=(const Cargo& cargo) {
 	if (cargo.GetType() != CargoType::Electronics) {
 		this->cargo.push_back(cargo);

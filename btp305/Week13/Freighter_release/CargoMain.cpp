@@ -19,9 +19,15 @@ int main() {
 		{Cargo("Mazda", 30000.00, CargoType::Car)},
 		{Cargo("Charcoal", 8000.00, CargoType::Commodity)}
 	};
-	Freighter* freighter = new Freighter();
+	//Freighter* freighter = new Freighter();
+	std::unique_ptr<Freighter> freighter(new Freighter());
 	for (const auto& i : cargo) {
-		*freighter += i;
+		try {
+			*freighter += i;
+		}
+		catch (const std::string& error) {
+			std::cerr << error << "\n";
+		}
 	}
 	freighter->display(byCargoType);
 	freighter->display(byValue);
@@ -53,7 +59,41 @@ int main() {
 	*freighter -= "Chips";
 	freighter->display(byEverything);
 
-	delete freighter;
+	std::cout << std::endl << "BUILD FREIGHTER 2:" << std::endl;
+	Freighter freighter2;
+	for (const auto& i : cargo) {
+		try {
+			freighter2 += i;
+		}
+		catch (const std::string& error) {
+			std::cerr << error << "\n";
+		}
+	}
+
+	std::cout << std::endl << "TEST THE COPY CONSTRUCTOR AND COPY ASSIGNMENT:" << std::endl;
+	Freighter freighter3(freighter2);//test the copy constructor
+	Freighter freighter4 = freighter2;//test the copy assignment
+	std::cout << "The original freighter" << std::endl;
+	freighter2.display(byEverything);
+	std::cout << "The copied freighter (copy constructor)" << std::endl;
+	freighter3.display(byEverything);
+	std::cout << "The copied freighter (copy assignment)" << std::endl;
+	freighter4.display(byEverything);
+
+	std::cout << std::endl << "TEST THE MOVE CONSTRUCTOR AND MOVE ASSIGNMENT:" << std::endl;
+	Freighter freighter5 = std::move(freighter3);
+	Freighter freighter6(std::move(freighter4));
+	std::cout << "The new freighter (move constructor)" << std::endl;
+	freighter5.display(byEverything);
+	std::cout << "Another new freighter (move assignment)" << std::endl;
+	freighter6.display(byEverything);
+	std::cout << "The moved freighters" << std::endl;
+	freighter3.display(byEverything);
+	freighter4.display(byEverything);
+
+
+
+	//  delete freighter;
 }
 
 
