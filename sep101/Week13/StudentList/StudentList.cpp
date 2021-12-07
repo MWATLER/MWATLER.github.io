@@ -52,6 +52,7 @@ int main(void) {
 
 		//deallocate memory for the marks
 		delete[] marks;
+		marks = nullptr;
 	}
 	file.close();
 

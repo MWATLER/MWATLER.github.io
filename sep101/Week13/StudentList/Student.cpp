@@ -15,6 +15,7 @@ Student::Student() {
 bool Student::CalculateAverage() {
 	bool ret = true;
 	double runningTotal = 0.0;
+	if (numMarks <= 0) ret = false;
 	for (int i = 0; i < numMarks && ret; ++i) {
 		if (marks[i] < 0) {
 			ret = false;
@@ -43,6 +44,7 @@ void Student::SetMarks(double* marks, int num) {
 	numMarks = num;
 	if (this->marks != nullptr) {
 		delete[] this->marks;
+		this->marks = nullptr;
 	}
 	this->marks = new double[numMarks];
 	for (int i = 0; i < numMarks; ++i) {
