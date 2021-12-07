@@ -27,7 +27,7 @@ bool Student::CalculateAverage() {
 	if (ret) average = runningTotal / numMarks;
 	return ret;
 }
-
+/* These can be done inline in the header file, they are so simple
 double Student::GetAverage() const {
 	return average;
 }
@@ -38,10 +38,12 @@ void Student::SetName(std::string name) {
 
 std::string Student::GetName() const {
 	return name;
-}
+}*/
 
 void Student::SetMarks(double* marks, int num) {
 	numMarks = num;
+	//reallocation: delete any allocated memory, then
+	//              allocate new memory for the new data
 	if (this->marks != nullptr) {
 		delete[] this->marks;
 		this->marks = nullptr;
@@ -69,7 +71,7 @@ int Student::GetRank() const {
 }
 
 Student::~Student() {
-	if (this->marks != nullptr) {
+	if (this->marks != nullptr) {//deallocate any memory that had been allocated
 		delete[] this->marks;
 		this->marks = nullptr;
 	}

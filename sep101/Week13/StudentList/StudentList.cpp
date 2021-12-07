@@ -35,11 +35,11 @@ int main(void) {
 
 		//get the number of marks and allocate memory for the marks
 		getline(file, data, ',');
-		int numMarks = stoi(data);
-		double *marks = new double[numMarks];
+		int numMarks = stoi(data);//string-to-integer
+		double *marks = new double[numMarks];//create an array for marks by dynamic memory allocation
 		for (int j = 0; j < numMarks-1; ++j) {
 			getline(file, data, ',');
-			marks[j] = stod(data);
+			marks[j] = stod(data);//string-to-double
 		}
 		getline(file, data, '\n');
 		marks[numMarks - 1] = stod(data);

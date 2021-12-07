@@ -14,9 +14,15 @@ class Student {
 public:
 	Student();
 	bool CalculateAverage();
-	double GetAverage() const;
-	void SetName(std::string);
-	std::string GetName() const;
+	double GetAverage() const {
+		return average;
+	}
+	void SetName(std::string name) {
+		this->name = name;
+	}
+	std::string GetName() const {
+		return name;
+	}
 	void SetMarks(double*, int);
 	double* GetMarks() const;
 	int GetNumMarks() const;
