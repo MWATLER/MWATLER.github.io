@@ -2,6 +2,7 @@
 
 <h3>Introduction</h3>
 <p>This week will be an introduction to object oriented programming. We will also look at compilers and linkage, as well as some fundamental types. 
+  We will look at static variables and functions, as well as external variables.
   During our lab period, we will look at the preprocessor which performs preliminary operations on C and C++ files before they are passed to the compiler. 
   The preprocessor can assist us with debugging our code.
 </p>
@@ -24,6 +25,7 @@
   <li><a href="Terminology.docx" target="_blank">Object Terminology</a></li>
   <li><a href="Compilation.docx" target="_blank">Overview of Compilers</a></li>
   <li><a href="Types.docx" target="_blank">Fundamental Types</a></li>
+  <li><a href="ClassEnumerations.docx" target="_blank">Class Variables</a></li>
   <li><a href="PreProcessor.docx" target="_blank">The Preprocessor</a></li>
 </ul>
 
@@ -86,6 +88,16 @@
     <a href="PersonalStats2/Pension.h" target="_blank">Pension.h</a>.
   </li>
 </ul>
+
+<p><em>Employee Information</em></p>
+<p>The example employee information shows the use of static class variables to keep track of how many objects have been created as well as a running total. The employee information 
+  class contains variables for an employee's name, position and age. The static variable <b>numEmployees</b> keeps track of the number of objects created of type <b>EmployeeInfo</b>. 
+  One of the functions of <b>EmployeeInfo</b> returns the average age. This function makes use of the static variable <b>runningTotal</b> where the average age is the running total 
+  of ages divided by the number of employees. It is very common to employ a static variable to keep track of the number of objects created from a given class.<br> 
+  The example shown also demonstrates the use of enumerations. A common application for enumerations is the error status returned by functions. See:<br>
+  <a href="EmployeeInfo/EmployeeInfo.h" target="_blank">EmployeeInfo.h</a>,
+  <a href="EmployeeInfo/EmployeeInfo.cpp" target="_blank">EmployeeInfo.cpp</a> and
+  <a href="EmployeeInfo/EmployeeInfoMain.cpp" target="_blank">EmployeeInfoMain.cpp</a>.</p>
 
 <p><em>Data Stream</em></p>
 <p>Often streams of data come with a fixed width - 8 bits, 16 bits, 32 bits,... C++ has types with specific bit sizes which are used for parsing data streams.
