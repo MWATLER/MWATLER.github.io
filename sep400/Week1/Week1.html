@@ -1,0 +1,98 @@
+<h1>Week 1 - January 9-13</h1>
+
+<h3>Introduction</h3>
+<p>This week will be an introduction to the course, including the schedule, the outline and grading.
+The Linux Operating System will be introduced. We will learn how to create a simple Makefile.</p>
+<h3>Videos</h3>
+<table><tr><td>Introduction</td><td><a href="https://www.youtube.com/watch?v=sheqhcrE1gs" target="_blank">The history of Linux</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=zA3vmx0GaO8" target="_blank">What is Linux</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=UFIoRLqhFpo" target="_blank">The Linux filesystem</a></td></tr>
+  <tr><td>Makefiles</td><td><a href="https://www.youtube.com/watch?v=_r7i5X0rXJk" target="_blank">Linux Makefile</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<p>None.</p>
+
+<h3>Lecture Material</h3>
+<ul>
+<li><a href="IntroToLinux.docx" target="_blank">Introduction to Linux</a></li>
+<li><a href="LinuxFilesystem.docx" target="_blank">The Linux File System</a></li>
+<li>Linux History/Concepts - Chapters 1 and 2 of
+  <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a></li>
+<li>System Programming Concepts - Chapter 3 of
+  <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a></li>
+<li><a href="MakefileCreation.docx" target="_blank">Makefile Creation</a></li>
+</ul>
+
+<h3>Lab</h3>
+<ul>
+  <li>Before you attempt any labs, make sure you have your virtual machine set up
+    (<a href="../VMWare/LinuxVirtualMachineInstallation.docx" >VMWare, Ubuntu Linux Installation</a>) and that you have MobaXterm installed
+    (<a href="../VMWare/MobaXTermInstallation.docx" >MobaXTerm Installation and preparation</a>).</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p>None.</p>
+
+<h3>Sample Code</h3>
+<p><em>Linux File-System</em></p>
+<ul>
+    <li>Today we looked at Linux in general. One of the features of Linux is that it is open-source. On our Linux machine, the linux header files are contained in
+    /usr/src/linux-headers-4.15.0-43 and linux modules in /lib/modules/4.15.0-43-generic. The source code is not available on our linux machine since we already have the object
+    modules and the header files. If you want to look at the source code, you can get it from <a href="https://launchpad.net/ubuntu/+source/linux/4.15.0-43.46" target="_blank">launchpad</a>
+    and untar it to the /usr/src/linux directory:<br>
+    miguelwatler@ubuntu:/usr/src/linux$ <b>tar -xvzf linux_4.15.0.orig.tar.gz</b></li>
+    <li>We looked at libraries under /usr/lib/x86_64-linux-gnu. There we can see the familiar libc.a which contains our C library. We looked briefly at static libraries
+    (such as libcrypt.a) and shared libraries (such as libcrypt.so). To look at symbols in a static library we can use the <a href="https://linux.die.net/man/1/nm" target="_blank">nm</a>
+    function, and to look at dependencies within a shared library we can use the <a href="http://man7.org/linux/man-pages/man1/ldd.1.html" target="_blank">ldd</a> function:<br>
+    miguelwatler@ubuntu:/usr/lib/x86_64-linux-gnu$ <b>nm libcrypt.a</b><br>
+    miguelwatler@ubuntu:/usr/lib/x86_64-linux-gnu$ <b>ldd libcrypt.so</b></li>
+    <li>We looked at the /proc filesystem. Do you want to know which version of the kernel you are using? Simply execute:<br>
+    miguelwatler@ubuntu:/proc$ <b>uname -r</b><br>
+    If you want detailed information about the kernel, such as the version, location of the boot image (the first thing that's executed at boot-up), etc..., see /proc/cmdline:<br>
+    miguelwatler@ubuntu:/proc$ <b>cat /proc/cmdline</b><br>
+    /proc has a lot of useful system information and it is the focus of the first lab. For detailed information on what is under /proc, see 
+    <a href="http://man7.org/linux/man-pages/man5/proc.5.html" target="_blank">proc - process information pseudo-filesystem</a>.
+    <li>We also looked at the /dev directory which contains the interface files to hardware devices.</li>
+    <li>We also looked at the /bin directory which contains binary files for common linux commands such as ls.</li>
+    <li>We also looked at the /var/log directory which contains logging files.</li>
+    <li>The /etc directory has configuration files for common system utilities such as syslog.</li>
+    <li>The /home directory shows all users on the system. You should create a super user (root) on your machine and specify a password for it:<br>
+    miguelwatler@ubuntu:<b>sudo passwd root</b><br>
+    <li>We looked at useful diagnostic commands such as <a href="https://linux.die.net/man/1/top" target="_blank">top</a> which repeatedly displays linux tasks according to cpu usage, and
+    <a href="https://linux.die.net/man/8/netstat" target="_blank">netstat -ic</a> which displays the kernel interface table.</li>
+</ul>
+
+<p><em>Makefiles</em></p>
+<ul>
+    <li>We studied a <a href="Makefile/Makefile" target="_blank">Makefile</a> for building an executable from the files
+    <a href="Makefile/General.h" target="_blank">General.h</a>,
+    <a href="Makefile/Geometry.h" target="_blank">Geometry.h</a>,
+    <a href="Makefile/Conversions.h" target="_blank">Conversions.h</a>,
+    <a href="Makefile/Math.h" target="_blank">Math.h</a>,
+    <a href="Makefile/General.cpp" target="_blank">General.cpp</a>,
+    <a href="Makefile/Geometry.cpp" target="_blank">Geometry.cpp</a>,
+    <a href="Makefile/Conversions.cpp" target="_blank">Conversions.cpp</a> and
+    <a href="Makefile/Math.cpp" target="_blank">Math.cpp</a>,
+    </li>
+    <li>We looked at error messages from Linux system functions. For a list of functions, see
+    <a href="http://man7.org/linux/man-pages/dir_all_alphabetic.html" target="_blank">Linux Systems Functions (alphabetically)</a>.
+    Note that the functions are number coded. For instance, the command chmod is number coded as follows: chmod(1), chmod(1p),
+    chmod(2), and chmod(3p). The numbers represent the following:<pre>
+    1      User Commands
+    2      System Calls
+    3      C Library Functions
+    4      Devices and Special Files
+    5      File Formats and Conventions
+    6      Games et. al.
+    7      Miscellanea
+    8      System Administration tools and Daemons</pre>
+    If we wish to use Linux system functions in our code, we'd look at functions number coded as 2 or 3.</li>
+    <li>Sample code that demonstrates error messages from linux system functions can be seen in <a href="ErrorMsg/ErrorMsg.cpp" target="_blank">ErrorMsg.cpp</a>. This code demonstrates both
+    <a href="http://man7.org/linux/man-pages/man3/perror.3.html" target="_blank">perror()</a> and <a href="http://man7.org/linux/man-pages/man3/strerror.3.html" target="_blank">strerror()</a></li>
+    <li>Sample code that demonstrates custom error messages can be seen in the file <a href="ErrorMsg/MiniMath.cpp" target="_blank">MiniMath.cpp</a>.</li>
+    <li>The <a href="ErrorMsg/Makefile" target="_blank">Makefile</a> for MiniMath.cpp and ErrorMsg.cpp also demonstrates conditional compilation. Conditional compilation is not considered good programming practice.
+	Conditional compilation is useful in debugging. You can define a debug variable in your Makefile and run your code and look at the debug printf's that occur. When you are satisfied with your code, you can then
+	undefine debug in your Makefile and your code will run without debug. Conditional compilation is also useful for code with a rich feature set, where you can enable certain features and disable certain
+	features through defines in your Makefile.</li>
+</ul>
