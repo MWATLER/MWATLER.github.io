@@ -15,14 +15,14 @@ int main() {
 	cout << "The average age so far is " << empl2.GetAverageAge() << endl;
 	cout << "The average age so far is " << empl3.GetAverageAge() << endl << endl;
 
-	Err_Status ret = empl1.PrintInfo();
-	if (ret == Err_Failure) cout << "Failed to get information for " << empl1.GetName() << endl << endl;
+	EmployeeInfo::Err_Status ret = empl1.PrintInfo();
+	if (ret == EmployeeInfo::Err_Status::Err_Failure) cout << "Failed to get information for " << empl1.GetName() << endl << endl;
 
 	ret = empl2.PrintInfo();
-	if (ret == Err_Failure) cout << "Failed to get information for " << empl2.GetName() << endl << endl;
+	if (ret == EmployeeInfo::Err_Status::Err_Failure) cout << "Failed to get information for " << empl2.GetName() << endl << endl;
 
 	ret = empl3.PrintInfo();
-	if (ret == Err_Failure) cout << "Failed to get information for " << empl3.GetName() << endl << endl;
+	if (ret == EmployeeInfo::Err_Status::Err_Failure) cout << "Failed to get information for " << empl3.GetName() << endl << endl;
 
 	cout << "The running total is " << EmployeeInfo::runningTotal << endl;
 	cout << "The number of employees is " << EmployeeInfo::numEmployees << endl;

@@ -5,16 +5,22 @@
 
 #include <iostream>
 
+/*
 enum Err_Status {
 	Err_Success,
 	Err_Failure
 };
+*/
 
 class EmployeeInfo {
 	std::string name;
 	std::string position;
 	int age;
 public:
+	enum class Err_Status {
+		Err_Success,
+		Err_Failure
+	};
 	static double runningTotal;
 	static int numEmployees;
 	EmployeeInfo();

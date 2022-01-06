@@ -30,9 +30,9 @@ double EmployeeInfo::GetAverageAge() {
 	return (double)runningTotal / numEmployees;
 }
 
-Err_Status EmployeeInfo::PrintInfo() {
-	Err_Status retVal = Err_Success;
-	if (name == "" || position == "" || age <= 0 || numEmployees == 0) retVal = Err_Failure;
+EmployeeInfo::Err_Status EmployeeInfo::PrintInfo() {
+	Err_Status retVal = Err_Status::Err_Success;
+	if (name == "" || position == "" || age <= 0 || numEmployees == 0) retVal = Err_Status::Err_Failure;
 	else {
 		std::cout << name << " is " << age << " years old and has position " << position << "." << std::endl;
 		std::cout << "The average age in this company is " << GetAverageAge() << std::endl << std::endl;
