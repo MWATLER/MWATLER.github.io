@@ -18,16 +18,16 @@ class EmployeeInfo {
 	int age;
 public:
 	enum class Err_Status {
-		Err_Success,
-		Err_Failure
+		Err_Success,//0
+		Err_Failure//1
 	};
 	static double runningTotal;
 	static int numEmployees;
 	EmployeeInfo();
 	EmployeeInfo(std::string _name, std::string _position, int _age);
-	std::string GetName();
-	double GetAverageAge();
-	Err_Status PrintInfo();
+	std::string GetName() const;
+	double GetAverageAge() const;
+	Err_Status PrintInfo() const;
 };
 
 #endif// _EMPLOYEEINFO_H_
