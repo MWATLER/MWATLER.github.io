@@ -61,7 +61,8 @@ int SquareNumber(void* param) {
 
 int AverageMark(void* param) {
 	int ret = 0;
-	MarksData student = *static_cast<MarksData*>(param);//pass by value
+//	MarksData student = *static_cast<MarksData*>(param);//pass by value
+	MarksData student = *(MarksData*)(param);//pass by value
 	double runningSum = 0.0;
 	double average;
 

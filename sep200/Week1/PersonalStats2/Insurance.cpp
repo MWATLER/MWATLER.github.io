@@ -2,7 +2,7 @@
 
 #include "Insurance.h"
 
-static int age=44;
+static int age=55;
 
 double CalculateInsurance() {
 	double amount = (age-21.0) * 12.11;

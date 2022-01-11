@@ -22,15 +22,15 @@ EmployeeInfo::EmployeeInfo(std::string _name, std::string _position, int _age) {
 	++numEmployees;
 }
 
-std::string EmployeeInfo::GetName() {
+std::string EmployeeInfo::GetName() const {
 	return name;
 }
 
-double EmployeeInfo::GetAverageAge() {
+double EmployeeInfo::GetAverageAge() const {
 	return (double)runningTotal / numEmployees;
 }
 
-EmployeeInfo::Err_Status EmployeeInfo::PrintInfo() {
+EmployeeInfo::Err_Status EmployeeInfo::PrintInfo() const {
 	Err_Status retVal = Err_Status::Err_Success;
 	if (name == "" || position == "" || age <= 0 || numEmployees == 0) retVal = Err_Status::Err_Failure;
 	else {
