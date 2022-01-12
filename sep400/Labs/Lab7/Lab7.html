@@ -1,0 +1,48 @@
+<h2>SEP400 - Lab 7: Semaphores with Shared Memory</h2>
+
+<h3>Due: Friday, March 24, 2023</h3>
+
+<p>Three processes are going to communicate with each other through shared memory. The memory is allocated as follows:<br>
+<b>    struct Memory {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;        int            packet_no;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;        unsigned short srcClientNo;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;        unsigned short destClientNo;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;        char           message[BUF_LEN];<br>
+    };</b></p>
+
+<p>Each client is numbered 1, 2, and 3. Each client will read from the shared memory looking for a message for itself. If the destClientNo matches
+the client's number, it will print out the message and then send a message to another client.</p>
+
+<p>For example, if client 2 receives a message from client 1, the message could read as:<br>
+<b>Client 2 has received a message from client 1:<br>
+    This is message 29 from client 1
+    </b></p>
+<p>Client 2 will then send a message to either client 1 or 3. For example, if client 2 sends a message to client3, the message could read as:<br>
+<b>Client 3 has received a message from client 2:<br>
+    This is message 28 from client 2
+    </b></p>
+
+<p>Since three clients will be accessing shared memory, some sort of synchronization mechanism is required.</p>
+
+<p>Code has been given for clients 1, 2 and 3, plus its Makefile. A start.sh has also been provided to start all processes. They can be found at:<br>
+    <a href="start.sh" target="_blank">start.sh</a>,<br>
+    <a href="client.h" target="_blank">client.h</a>,<br>
+    <a href="client1.cpp" target="_blank">client1.cpp</a>,<br>
+    <a href="client2.cpp" target="_blank">client2.cpp</a>,<br>
+    <a href="client3.cpp" target="_blank">client3.cpp</a>,<br>
+    <a href="Makefile" target="_blank">Makefile</a>.<br>
+</p>
+
+<p>This code contains everything except the creation of shared memory and synchronization. It is your task to implement shared memory and 
+    a synchronization mechanism for these three clients, such that only one accesses shared memory at a time. Clients 1 and 2 should wait for client 3 to start up.
+	You will need to modify client.h, client1.cpp, client2.cpp and client3.cpp.</p>
+
+<p><b>NB:</b> Please insert a sleep of 1 second in the for-next loop for each client, so we can see communication between them.</p>
+
+<h3>Lab Submission:</h3>
+
+<p>Please mail your <b>client.h</b>, <b>client1.cpp</b>, <b>client2.cpp</b> and <b>client3.cpp</b> to:
+   <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+        
+<p><b>NB: My last name is Watler, not Walter.</b></p>
+    
