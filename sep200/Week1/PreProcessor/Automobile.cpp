@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Log_Lvl LVL = Log_Lvl::LOG_WARNING;
+Log_Lvl LVL = Log_Lvl::LOG_ERROR;//global variable, visible to all classes, to all the code
 
 Automobile::Automobile(string _make, string _model, string _colour, int _year)
 {

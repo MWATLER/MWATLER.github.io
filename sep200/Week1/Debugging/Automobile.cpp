@@ -30,10 +30,10 @@ void Automobile::addFuel(double _liters)
 	fuelInTank += _liters;
 	if (fuelInTank > 50) {
 		fuelInTank = 50;//Cap at 50 liters
+#ifdef DEBUG
 		const int BUFSIZE = 256;
 		char message[BUFSIZE];
 		sprintf_s(message, BUFSIZE, "The %s %d %s %s is full of gas. Discarding the rest...\n", colour.c_str(), year, make.c_str(), model.c_str());
-#ifdef DEBUG
 		Log(1, message);
 #endif
 	}

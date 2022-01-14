@@ -11,13 +11,13 @@
 #define DEBUG
 
 enum class Log_Lvl {
-	LOG_INFO=0,
-	LOG_WARNING,
-	LOG_ERROR,
-	LOG_CRITICAL
+	LOG_INFO=0,//0 by default
+	LOG_WARNING,//1
+	LOG_ERROR,//2
+	LOG_CRITICAL//3
 };
 
-extern Log_Lvl LVL;
+extern Log_Lvl LVL;//visible to all code that includes Automobile.h
 #define Log(lvl, msg) if(lvl>=LVL) if(lvl==Log_Lvl::LOG_INFO) std::cout <<"LOG_INFO: "<< __FILE__ << ":" << __func__ << ":" << __LINE__ << ":" << msg << std::endl;\
                                    else if (lvl == Log_Lvl::LOG_WARNING) std::cout << "LOG_WARNING: " << __FILE__ << ":" << __func__ << ":" << __LINE__ << ":" << msg << std::endl;\
                                    else if (lvl == Log_Lvl::LOG_ERROR) std::cout << "LOG_ERROR: " << __FILE__ << ":" << __func__ << ":" << __LINE__ << ":" << msg << std::endl;\
