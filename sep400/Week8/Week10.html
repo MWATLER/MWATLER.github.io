@@ -1,0 +1,112 @@
+<h1>Week 10 - March 22-26</h1>
+
+<h3>Introduction</h3>
+<p>This week we are going to study message queues.
+    We are then going to do a comparison between all four IPC methods studied so far (sockets, pipes, fifos and message queues).
+</p>
+
+<h3>Videos</h3>
+<table>
+    <tr><td></td><td>Message Queues</td><td><a href="https://www.youtube.com/watch?v=pAWrgEObYjk" target="_blank">Message Queues</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=JbmOegG9-J0" target="_blank">Message Queue - IPC Mechanism</a></td></tr>
+    <tr><td></td><td>Sockets vs Queues</td><td><a href="https://www.youtube.com/watch?v=uadd_qxqd5Y" target="_blank">Research Socket overhead in Linux vs Message Queues and benchmarking</a></td></tr>   
+</table>
+
+<h3>Quiz</h3>
+<ul>
+    <li><b>Quiz 8</b> (March 22) will be on message queues. Study chapter 46 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+</ul>
+
+<h3>Lecture Material</h3>
+<ul>
+    <li>Message Queues - Chapter 46 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+    <li>Interprocess Communication Overview - Chapter 43 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+    <li><a href="comparison/ComparingIPC.pdf" target="_blank">Comparing and Evaluating the Performance of Inter Process Communication Models in Linux Environment</a>.</li>
+</ul>
+
+<h3>Labs</h3>
+<ul>
+    <li><a href="../Labs/Lab7/Lab7.html" target="_blank">Lab 7</a> (due March 26) - pipes between processes.<br>
+    <li><a href="../Labs/Lab8/Lab8.html" target="_blank">Lab 8</a> (due April 2) - client/server with messaging.</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p><a href="../Assignments/Assignment1/Assignment1.html" target="_blank">Assignment 1</a> (due March 26).</p>
+<p><a href="../Assignments/Assignment2/Assignment2.html" target="_blank">Assignment 2</a> (due April 16).</p>
+
+<h3>Sample Code</h3>
+
+<p><em>Message Queues</em></p>
+<ul>
+    <li>This week we study message queues. Code that demonstrates send/receive with message queues can be found at
+        <a href="send/client.h" target="_blank">client.h</a>,
+        <a href="send/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="send/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="send/Makefile" target="_blank">Makefile</a>.
+        </li>
+        <li>Code that demonstrates non-blocking message receive with message queues can be found at
+        <a href="wait/client.h" target="_blank">client.h</a>,
+        <a href="wait/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="wait/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="wait/Makefile" target="_blank">Makefile</a>.
+        </li>
+        <li>Code that demonstrates message send/receive with differing message types can be found at
+        <a href="type/client.h" target="_blank">client.h</a>,
+        <a href="type/client3.cpp" target="_blank">client3.cpp</a>,
+        <a href="type/client4.cpp" target="_blank">client4.cpp</a> with its
+        <a href="type/Makefile" target="_blank">Makefile</a>.
+        </li>
+        <li>Code that demonstrates a complex structure for the message queue can be found at
+        <a href="msgctl/client.h" target="_blank">client.h</a>,
+        <a href="msgctl/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="msgctl/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="msgctl/Makefile" target="_blank">Makefile</a>.
+        <li>Finally, code that demonstrates the use of msgctl to retrieve message queue information can be found at
+        <a href="msgctl/info/client.h" target="_blank">client.h</a>,
+        <a href="msgctl/info/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="msgctl/info/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="msgctl/info/Makefile" target="_blank">Makefile</a>.
+    </li>
+</ul>
+
+<p><em>Inter-process communication, a comparison</em></p>
+<ul>
+    <li>So far we have studied inter-process communication with pipes, fifos, sockets and messages.
+        A comparison of their relative performance has been carried out.
+        The performance parameter tested is the time to send 5 million messages of 26 characters each (the alphabet) from client to server or from one client to another.
+        The test will show that there is very little difference in performance from one IPC to another.<br>
+        Code for testing the performance of fifos can be found at
+        <a href="comparison/fifo/fifo1.cpp" target="_blank">fifo1.cpp</a>,
+        <a href="comparison/fifo/fifo2.cpp" target="_blank">fifo2.cpp</a> with its
+        <a href="comparison/fifo/Makefile" target="_blank">Makefile</a>.<br>
+        Code for testing the performance of pipes can be found at
+        <a href="comparison/pipe/pipe.cpp" target="_blank">pipe.cpp</a> with its
+        <a href="comparison/pipe/Makefile" target="_blank">Makefile</a>.<br>
+        Code for testing the performance of message queues can be found at
+        <a href="comparison/message/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="comparison/message/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="comparison/message/Makefile" target="_blank">Makefile</a>.<br>
+        Code for testing the performance of unix stream sockets can be found at
+        <a href="comparison/socket/stream/server.cpp" target="_blank">server.cpp</a>,
+        <a href="comparison/socket/stream/client.cpp" target="_blank">client.cpp</a> with its
+        <a href="comparison/socket/stream/Makefile" target="_blank">Makefile</a>.<br>
+        Code for testing the performance of inet datagram sockets can be found at
+        <a href="comparison/socket/datagram/msgServer.cpp" target="_blank">msgServer.cpp</a>,
+        <a href="comparison/socket/datagram/msgClient.cpp" target="_blank">msgClient.cpp</a> with its
+        <a href="comparison/socket/datagram/Makefile" target="_blank">Makefile</a>.<br>
+        If we increase the buffer sizes, both stream and datagram sockets are much faster.
+        Code for testing the performance of unix stream sockets with large buffer sizes can be found at
+        <a href="comparison/socket/stream2/server.cpp" target="_blank">server.cpp</a>,
+        <a href="comparison/socket/stream2/client.cpp" target="_blank">client.cpp</a> with its
+              
+        <a href="comparison/socket/stream2/Makefile" target="_blank">Makefile</a>.<br>
+        Code for testing the performance of inet datagram sockets with large buffer sizes can be found at
+        <a href="comparison/socket/datagram2/msgServer.cpp" target="_blank">msgServer.cpp</a>,
+        <a href="comparison/socket/datagram2/msgClient.cpp" target="_blank">msgClient.cpp</a> with its
+        <a href="comparison/socket/datagram2/Makefile" target="_blank">Makefile</a>.<br>
+        </li>
+        <li>See also the publication <a href="comparison/ComparingIPC.pdf" target="_blank">Comparing and Evaluating the Performance of Inter Process Communication Models in Linux Environment</a>.</li>    
+</ul>
