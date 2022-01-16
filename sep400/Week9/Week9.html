@@ -1,0 +1,97 @@
+<h1>Week 8 - March 13-17</h1>
+
+<h3>Introduction</h3>
+<p>This week we are going to study semaphores and shared memory.
+    Semaphores provide us with a synchronization mechanism to protect shared resources used by multiple processes.
+    Shared memory is different from the other forms of inter-process communication because it is primarily hardware-based. 
+    It is faster than the other methods studied, but it is also the most primitive form of interprocess communication.
+</p>
+
+<h3>Videos</h3>
+<table>
+    <tr><td></td><td>Semaphores</td><td><a href="https://www.youtube.com/watch?v=6heMm23ofFo" target="_blank">Intro To Computer Systems: Semaphores Explained</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=TYnNKdf7cZM" target="_blank">C Programming in Linux Tutorial #046 - Semaphore pthread</a></td></tr>
+    <tr><td>Shared Memory</td><td><a href="https://www.youtube.com/watch?v=SMeDw2GDMsE" target="_blank">C Programming in Linux Tutorial #036 - Shared Memory</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<ul>
+    <li><b>Quiz 7</b> (...) will be on semaphores and shared memory. Study chapters 53 and 48 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li></ul>
+
+<h3>Lecture Material</h3>
+<ul>
+    <li>Semaphores - Chapter 6.5 of 
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997143391103226" target="_blank">Operating System Concepts</a></li>
+    <li>Shared Memory - Chapter 3.4.1 and 3.5.1 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997143391103226" target="_blank">Operating System Concepts</a></li>
+    <li>Semaphores - Chapter 53 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+    <li>Shared Memory - Chapter 48 of
+        <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
+</ul>
+
+<h3>Labs</h3>
+<ul>
+    <li><a href="../Labs/Lab6/Lab6.html" target="_blank">Lab 6</a> (March 17) - Client/Server with Messaging.</li>
+    <li><a href="../Labs/Lab7/Lab7.html" target="_blank">Lab 7</a> (March 24) - Semaphores with Shared Memory.</li>
+</ul>
+
+<h3>Assignment</h3>
+<p><a href="../Assignments/Assignment1/Assignment1.html" target="_blank">Assignment 1</a> (due March 24).</p>
+
+<h3>Sample Code</h3>
+
+<p><em>Semaphores</em></p>
+<ul>
+    <li>Code that demonstrates non-named semaphores can be found in
+        <a href="sem_init/client1.cpp" target="_blank">client1.cpp</a> and
+        <a href="sem_init/client2.cpp" target="_blank">client2.cpp</a> with their
+        <a href="sem_init/Makefile" target="_blank">Makefile</a>.
+        </li>
+        <li>Code that demonstrates named semaphores that can be used across two processes can be found in
+        <a href="sem_open/client.h" target="_blank">client.h</a>,
+        <a href="sem_open/client1.cpp" target="_blank">client1.cpp</a> and
+        <a href="sem_open/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="sem_open/Makefile" target="_blank">Makefile</a>.
+    </li>
+    <li>Code that restricts access to a data base using named semaphores between three processes can be found in
+        <a href="dataBase/client.h" target="_blank">client.h</a>,
+        <a href="dataBase/dataBase.cpp" target="_blank">dataBase.cpp</a>,
+        <a href="dataBase/client1.cpp" target="_blank">client1.cpp</a>,
+        <a href="dataBase/client2.cpp" target="_blank">client2.cpp</a> and
+        <a href="dataBase/client3.cpp" target="_blank">client3.cpp</a> with its
+        <a href="dataBase/Makefile" target="_blank">Makefile</a>.
+    </li>
+</ul>
+
+<p><em>Shared Memory</em></p>
+<ul>
+    <li>Code that demonstrates shared memory via Linux utilities can be found in
+        <a href="transfer/client.h" target="_blank">client.h</a>,
+        <a href="transfer/client1.cpp" target="_blank">client1.cpp</a> and
+        <a href="transfer/client2.cpp" target="_blank">client2.cpp</a> with its
+        <a href="transfer/Makefile" target="_blank">Makefile</a>.
+    </li>
+    <li>Code for two processes which send messages to each other via shared memory can be found at:
+        <a href="dispatch/client.h" target="_blank">client.h</a>,
+        <a href="dispatch/client1.cpp" target="_blank">client1.cpp</a> and
+        <a href="dispatch/client2.cpp" target="_blank">client2.cpp</a> with its
+	<a href="transfer/Makefile" target="_blank">Makefile</a>.<br>
+	The messages passed back and forth between the clients have been taken from the Monty Python
+	skit: <a href="https://www.youtube.com/watch?v=prDoDPIpX4E" target="_blank">The Funniest Joke</a>.
+    </li>
+    <li>Code that simulates 16 clients trying to write to a radio with four channels can be found at:
+        <a href="radioChannels/client.h" target="_blank">client.h</a>,
+        <a href="radioChannels/client.cpp" target="_blank">client.cpp</a>,
+        <a href="radioChannels/memoryManager.cpp" target="_blank">memoryManager.cpp</a> and
+        <a href="radioChannels/Makefile" target="_blank">Makefile</a>.<br>
+	The memory map can be seen at:
+        <a href="radioChannels/RadioChannelsMemoryMap.docx" target="_blank">RadioChannelsMemoryMap.docx</a>.<br>
+        Scripts for starting and stopping the simulation can be found at:
+        <a href="radioChannels/start.sh" target="_blank">start.sh</a> and
+        <a href="radioChannels/stop.sh" target="_blank">stop.sh</a>.<br>
+        Each channel uses a part of shared memory. The clients write to one of the channels by writing into the channel's shared memory.
+        The use of semaphores ensures that the number of clients writing to the radio's channels is limited to four.
+    </li>    
+</ul>
