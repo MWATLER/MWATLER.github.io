@@ -89,7 +89,7 @@ std::ostream& DietClient::PrintReport() {
 		cout << name << " has suffered a weight gain of " << weightGain << "kg over the last " << numDays << " days." << endl;
 	}
 	else if (weightGain < 0) {
-		cout << name << " has enjoyed a weight loss of " << weightGain << "kg over the last " << numDays << " days." << endl;
+		cout << name << " has enjoyed a weight loss of " << -weightGain << "kg over the last " << numDays << " days." << endl;
 	}
 	else {
 		cout << name << " has not changed weight." << endl;

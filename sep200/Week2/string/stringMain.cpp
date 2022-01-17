@@ -11,10 +11,11 @@ int main() {
 
 	string2 = string1;
 	std::cout << *string1 << " " << *string2 << std::endl;
-	string string3 = "Goodbye World";
+	string string3 = "Goodbye World";//converts "Goodbye World" into a string
 	std::cout << *string3 << std::endl;
 	string3 += string2;
 	std::cout << *string3 << std::endl;
+	string3 += "Hello";//converts "Hello" into a string
 
 	return 0;
 }

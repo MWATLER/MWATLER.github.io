@@ -91,14 +91,19 @@ std::ostream& HockeyTeam::PrintReport() const {
 
 bool operator==(const HockeyTeam& team1, const HockeyTeam& team2) {
 //	return (team1.points == team2.points);
-	return (team1.GetPoints() == team2.GetPoints());
+	return (team1.GetPoints() == team2.GetPoints());//use accessor functions
 }
 
 bool operator!=(const HockeyTeam& team1, const HockeyTeam& team2) {
-	return (team1.points != team2.points);
+	return (team1.points != team2.points);//direct access to private members
 //	return (team1.GetPoints() != team2.GetPoints());
 }
-
+/*
+bool HockeyTeam::operator!=(const HockeyTeam& team2) {
+	return (this->points != team2.points);//direct access to private members
+//	return (team1.GetPoints() != team2.GetPoints());
+}
+*/
 HockeyTeam operator+(HockeyTeam& team, int points) {
 	team += points;
 	return team;

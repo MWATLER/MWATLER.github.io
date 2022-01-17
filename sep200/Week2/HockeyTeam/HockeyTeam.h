@@ -20,7 +20,8 @@ public:
 	void AddGame(HockeyTeam& opponent, int goalsFor, int goalsAgainst);
 	const HockeyTeam& operator+=(int);
 	const HockeyTeam& operator-=(int);
-	friend bool operator!=(const HockeyTeam&, const HockeyTeam&);
+	friend bool operator!=(const HockeyTeam&, const HockeyTeam&);//allows access to private members
+//	bool operator!=(const HockeyTeam&);
 	double GetWinningPercentage() const;
 	double GetGoalsForAverage() const;
 	double GetGoalsAgainstAverage() const;
