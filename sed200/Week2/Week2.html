@@ -113,16 +113,23 @@ exceeds the inflation rate.</p>
 
 <h4>Payback Period</h4>
 <p>The  payback  period  is  defined  as  the  time  it  takes  for  the  project  to  generate 
-  sufficient  net  benefits  to  cover  its  initial  cost  of  construction  and  implementation. </p>
+  sufficient  net  benefits  to  cover  its  initial  cost  of  construction  and  implementation.</p>
+
+<p>Although the payback period is often quoted in the press, there are various problems
+  with the method. Firstly, the criterion does not deal with the time value of benefits
+  and costs. Secondly, and equally importantly, the method may ignore significant
+  benefits or costs that occur after the payback period. On the other hand, the
+  advantage of the method is that it is an intuitively appealing concept and can make a
+  compelling argument for implementing a project.</p>
 
 <h4>Net Present Value</h4>
 <p>The  net  present  value  (<i>NPV</i>)  of  a  project  is  defined  as  the  present  value  of  all 
   benefits minus the present value of all costs. It can be written as: <br>
-  NVP=PVB-PVC<br><br>
+  NPV=PVB-PVC<br><br>
 
   where <i>PVB</i> is the Present Value of Benefits and <i>PVC</i> is the Present Value of Costs. 
   By using the formulae for PVB and PVC we can write:<br>
-  <img src="NPV.PNG" alt"Net Present Value"><br><br>
+  <img src="NPV.PNG" alt="Net Present Value"><br><br>
   where <i>B<sub>t</sub></i>  is the benefit in year <i>t</i>, <i>C<sub>t</sub></i>  is the cost in year <i>t</i>, 
   <i>i</i> is the discount (or interest) rate  and  <i>n</i>  is  the  life  of  the  project  (years).  The  
   calculation  of  <i>NPV</i>  therefore involves discounting all costs and benefits back to the present time 
@@ -136,6 +143,24 @@ exceeds the inflation rate.</p>
   However,  in  choosing  a  single  project  from  a  list  of  mutually  exclusive  projects, 
   NPV appears to favour large projects.  </p>
 
+<h4>Equivalent Annual Worth</h4>
+<p>The NPV brings all benefits and costs to the present time and gives the answer as a
+  single present day sum of money. There may be an argument for representing the
+  project in terms of its net annual earnings over the period of the project. In this case
+  the Equivalent Annual Worth (EAW) may be more appropriate. The EAW is found
+  by converting all project benefits into a series of constant annual benefits for n
+  years, where n is the life of the project. Similarly all project costs are converted into
+  a series of constant annual costs for n years. The equivalent annual worth is then
+  equal to the equivalent annual benefit minus the equivalent annual cost. A reliable
+  method for calculating EAW is to determine it from the NPV:<br>
+<img src="EAW.png" alt="Equivalent Annual Worth"><br><br>
+To determine the EAW of a general time series of benefits and costs, it is necessary
+first to compute the NPV of the series and convert the NPV into a uniform annual
+payment throughout the life of the project. Considering that EAW gives the same
+ranking as NPV for projects with equal lives, a strong case can be made for using
+NPV directly.
+</p>
+
 <h4>Benefit to Cost Ratio</h4>
 <p>The  benefit-cost  ratio  (<i>B/C</i>)  is  widely  used  for  evaluating  projects  in  the  public 
   sector.  As  normally  defined,  it  is  the  present  value  of  all  benefits  divided  by  the 
@@ -143,6 +168,14 @@ exceeds the inflation rate.</p>
   B/C = PVB &divide; PVC<br><br>
    
   where <i>PVB</i> is the Present Value of Benefits and <i>PVC</i> is the Present Value of Costs. </p>
+<p>The benefit-cost ratio has been used extensively in a number of countries for
+  comparison of projects of various sizes. It has some degree of appeal when used in
+  the context of allocating scarce capital funds, i.e., capital budgeting. However, there
+  is some ambiguity in its definition for projects with high recurrent costs (e.g.,
+  operating, maintenance, and repair costs). The basic issue here is whether the
+  present value of recurrent costs should be treated as negative benefits and deducted
+  from the numerator of the B/C ratio, or treated as costs and added to the
+  denominator. A different value of B/C ratio will result in each case.</p>
 
 <p>The  benefit-cost  ratio  has  been  used  extensively  in  a  number  of  countries  for 
   comparison of projects of  various sizes. It  has some  degree of appeal when used in 
@@ -153,6 +186,19 @@ exceeds the inflation rate.</p>
   from the numerator of the B/C ratio, or treated as costs and added to the 
   denominator.  A  different  value  of  B/C  ratio  will  result in  each  case.</p>
 
+<h4>Internal Rate of Return</h4>
+<p>The economic criteria discussed so far (with the exception of the payback period)
+  involve the use of a discount rate to convert all future benefits and costs to present
+  value. The internal rate of return (also called "yield") is a different concept in that it
+  is the implied interest rate of the investment. The internal rate of return is the
+  discount rate at which the present value of benefits just equals the present value of
+  costs over the life of the project. The internal rate of return (IRR) of a project, <b>r</b>, can
+  be determined by finding the discount rate at which the present value of the benefits
+  equals the present value of the costs:<br>
+  PVB=PVC<br><br>
+  This can also be written as:<br>
+  <img src="IRR.png" alt="The Internal Rate of Return"><br><br>
+</p>
 
 <h2>A Comparison of the Evaluation Criteria</h2>
 <p>There are three basic types of decisions requiring economic evaluation. They are: 
@@ -170,7 +216,7 @@ exceeds the inflation rate.</p>
 <h4>Go or no-go decisions (type 1 decisions)</h4>
 <p>In  deciding  whether  or  not  an  individual  project  is  justified on  economic  grounds, 
   any one of the following criteria may be applied:<br>
-NVP&gt; 0 or B/C &gt; 1<br><br>
+NPV&gt; 0 or B/C &gt; 1<br><br>
 Only one of these needs to be looked at since they will all lead to the same decision.
 </p>
 
