@@ -19,8 +19,8 @@ public:
 	bool SellStocks(double amount);//stocks-=amount;cash+=amount
 	std::string GetName() const;
 	double GetValue() const;//cash+stocks;
-	double GetStocks() const;
-	double GetCash() const;
+	double GetStocks() const;//stocks
+	double GetCash() const;//cash
 };
 
 #endif//_INVESTMENT_ACCOUNT_H

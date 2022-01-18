@@ -23,11 +23,11 @@ void BankManager::OverrideName(InvestmentAccount& account, std::string name) {
 }
 
 void BankManager::AddCash(InvestmentAccount& account, double cash) {
-	account += cash;//taking advantage of the overloaded operator += for InvestmentAccount
+	account += cash;//take advantage of the overloaded operator += for InvestmentAccount
 }
 
 void BankManager::RemoveCash(InvestmentAccount& account, double cash) {
-	account -= cash;
+	account -= cash;//take advantage of the overloaded operator -= for InvestmentAccount
 }
 
 std::ostream& BankManager::PrintReport(InvestmentAccount& account) const {

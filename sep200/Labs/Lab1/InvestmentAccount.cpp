@@ -64,6 +64,7 @@ double InvestmentAccount::GetCash() const {
 
 //Implement the overload of the -= operator
 //This should withdraw cash from the investment account
+//If the amount to be withdrawn is negative, print out the error message "Invalid transaction"
 //If there isn't enough cash in the account, print out the error message "Not enough funds"
 //Do not forget the function prototype in the header file InvestmentAccount.h
 
