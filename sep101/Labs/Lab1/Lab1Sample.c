@@ -16,9 +16,11 @@ int main() {
 	float price2 = 1.00;
 	float price3 = 2.99;
 	float total_cost = price1 + price2 + price3;//4.99
+	//On my visual studio, total_cost is actually 4.98999977
 	//float's and double's introduce a slight error
 	//This has to be compensated for when converting to an int
-	int remainder = total_cost * 100 + 0.0001;//499
+//	int remainder = total_cost * 100;//498.999977 -> 498, wrong!
+	int remainder = total_cost * 100 + 0.0001;//499.000077 -> 499, correct!
 	int numQuarters;
 
 	printf("The total cost as a float is $%.2f\n", total_cost);
