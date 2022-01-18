@@ -29,6 +29,7 @@ HockeyTeam::HockeyTeam(std::string _name, int _games, int _wins, int _losses, in
 }
 
 void HockeyTeam::AddGame(HockeyTeam& opponent, int goalsFor, int goalsAgainst) {
+//	team[0]->AddGame(*team[1], 3, 4);
 	++this->games;
 	++opponent.games;
 	this->goalsFor += goalsFor;
@@ -89,12 +90,14 @@ std::ostream& HockeyTeam::PrintReport() const {
 	return cout;
 }
 
-bool operator==(const HockeyTeam& team1, const HockeyTeam& team2) {
+bool operator==(const HockeyTeam& team1, const HockeyTeam& team2) {//not a friend of HockeyTeam
+//	if (*team[0] == *team[1])
 //	return (team1.points == team2.points);
 	return (team1.GetPoints() == team2.GetPoints());//use accessor functions
 }
 
-bool operator!=(const HockeyTeam& team1, const HockeyTeam& team2) {
+bool operator!=(const HockeyTeam& team1, const HockeyTeam& team2) {//a friend of HockeyTeam
+//	if (*team[2] != *team[3])
 	return (team1.points != team2.points);//direct access to private members
 //	return (team1.GetPoints() != team2.GetPoints());
 }
@@ -105,11 +108,13 @@ bool HockeyTeam::operator!=(const HockeyTeam& team2) {
 }
 */
 HockeyTeam operator+(HockeyTeam& team, int points) {
-	team += points;
+//	*team[0] = *team[0] + 2;
+	team += points;// += has also been overloaded
 	return team;
 }
 
 HockeyTeam operator-(HockeyTeam& team, int points) {
-	team -= points;
+//	*team[1] = *team[1] - 2;
+	team -= points;// -= has also been overloaded
 	return team;
 }

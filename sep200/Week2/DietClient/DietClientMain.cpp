@@ -10,7 +10,7 @@ int main(void) {
 	DietClient client2("Stan Marsh", 1.78, 90);
 	DietClient client3("Kyle Broslovski", 1.75, 80);
 
-	if (client1) {
+	if (client1) {//if(boolean expression), such as if(a==b)
 		cout << "client1 exists" << endl;
 	}
 	client1 += 4000;
@@ -19,8 +19,8 @@ int main(void) {
 	client1 += "Apple";
 	client2 += "Yoghurt";
 	client3 += "Banana";
-	++client1;
-	client2++;
+	++client1;//prefix increment
+	client2++;//postfix increment
 	++client3;
 
 	client1.PrintReport() << endl << endl;

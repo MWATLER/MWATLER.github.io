@@ -29,13 +29,13 @@ DietClient::operator bool() const {//The return type of bool is implied to be bo
 
 
 //Add calories to the client
-DietClient& DietClient::operator+=(int _calories) {
+DietClient& DietClient::operator+=(int _calories) {//client1 += 4000;
 	calories += _calories;
 	return *this;
 }
 
 //Add a food item
-DietClient& DietClient::operator+=(string foodItem) {
+DietClient& DietClient::operator+=(string foodItem) {//client1 += "Apple";
 	if(foodItem=="Apple") {
 		calories += 81;
 	}
