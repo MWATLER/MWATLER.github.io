@@ -18,8 +18,8 @@ public:
 	HockeyTeam(std::string _name, int _games, int _wins, int _losses, int _ties, int goalsFor, int goalsAgainst);
 
 	void AddGame(HockeyTeam& opponent, int goalsFor, int goalsAgainst);
-	const HockeyTeam& operator+=(int);
-	const HockeyTeam& operator-=(int);
+	const HockeyTeam& operator+=(int);//could make this private, since it is used only inside the class
+	const HockeyTeam& operator-=(int);//could make this private, since it is used only inside the class
 	friend bool operator!=(const HockeyTeam&, const HockeyTeam&);//allows access to private members
 //	bool operator!=(const HockeyTeam&);
 	double GetWinningPercentage() const;
@@ -32,5 +32,5 @@ public:
 
 bool operator==(const HockeyTeam&, const HockeyTeam&);
 bool operator!=(const HockeyTeam&, const HockeyTeam&);
-HockeyTeam operator+(HockeyTeam&, int);
+HockeyTeam operator+(HockeyTeam&, int);//*team[0] = *team[0] + 2;
 HockeyTeam operator-(HockeyTeam&, int);

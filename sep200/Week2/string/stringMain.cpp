@@ -6,16 +6,16 @@
 using namespace bsa;
 
 int main() {
-	string string1("Hello World");
+	string string1("Hello World");//bsa::string
 	string string2;
 
-	string2 = string1;
+	string2 = string1;//overloaded '=' operator
 	std::cout << *string1 << " " << *string2 << std::endl;
-	string string3 = "Goodbye World";//converts "Goodbye World" into a string
+	string string3 = "Goodbye World";//promotes "Goodbye World" to a string
 	std::cout << *string3 << std::endl;
-	string3 += string2;
+	string3 += string2;//"Hello World" += "Goodbye World" -> "Hello WorldGoodbye World"
 	std::cout << *string3 << std::endl;
-	string3 += "Hello";//converts "Hello" into a string
+	string3 += "Hello";//promotes "Hello" to a string, string3 becomes "Hello WorldGoodbye WorldHello"
 
 	return 0;
 }
