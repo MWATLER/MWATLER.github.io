@@ -1,4 +1,4 @@
-<h2>SEP200 – Lab 1: The Bank Manager</h2>
+<h2>SEP200 - Lab 1: The Bank Manager</h2>
 
 <h3>Due: January 28, 2022</h3>
 
@@ -19,7 +19,9 @@ Do not forget the function prototype in the header file BankManager.h</li>
 <li>For <b>InvestmentAccount.cpp</b>, implement the overload of the <b>+=</b> operator. This should add cash to the investment account.
 If the amount to be added is negative, print out the error message "Invalid transaction". Do not forget the function prototype in the header file InvestmentAccount.h.</li>
 <li>For <b>InvestmentAccount.cpp</b>, implement the overload of the <b>-=</b> operator. This should subtract cash from the investment account.
-If there isn't enough cash in the account, print out the error message "Not enough funds". Do not forget the function prototype in the header file InvestmentAccount.h</li>
+    If the amount to be subtracted is negative, print out the error message "Invalid transaction". 
+    If there isn't enough cash in the account, print out the error message "Not enough funds in the account for &lt;name&gt;". Be sure to insert the name in the error message. 
+    See the sample run below as an example. Do not forget the function prototype in the header file InvestmentAccount.h</li>
 <li>Implement the constructors for InvestmentAccount. The variables <b>name</b> and <b>cash</b> should default to <b>""</b> and <b>0.0</b> respectively.</li>
 <li>Implement all getter functions for InvestmentAccount - GetName(), GetValue(), GetStocks() and GetCash().</li>
 <li>Implement the destructor for InvestmentAccount. Be sure to wipe out all information.</li>
@@ -31,7 +33,7 @@ If there isn't enough cash in the account, print out the error message "Not enou
     Kamla Patel has $27880 in stocks and $2120 in cash.
     Wing Chung has $44678 in stocks and $5322 in cash.
     
-    Not enough funds
+    Not enough funds in the account for Kamla Patel.
     David Sands has $18900 in stocks and $6100 in cash.
     Kamla Patel has $27880 in stocks and $2120 in cash.
     Wing Chung has $44678 in stocks and $15322 in cash.
