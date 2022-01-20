@@ -14,7 +14,7 @@ int main(void)
 	double averageMark;
 	int numMarks = 3;
 	FILE* fp;
-	errno_t err = fopen_s(&fp, "StudentMarks.txt", "r");
+	fopen_s(&fp, "StudentMarks.txt", "r");
 	fscanf_s(fp, "%s", lastName, 30);
 	fscanf_s(fp, "%d", &student_id);
 	fscanf_s(fp, "%f", &mark1);
@@ -27,7 +27,7 @@ int main(void)
 
 	averageMark = runningTotal / numMarks;
 
-	err = fopen_s(&fp, "StudentAverageMarks.txt", "w");
+	fopen_s(&fp, "StudentAverageMark.txt", "w");
 	fprintf(fp, "The student %s with id %d has marks of %f, %f, and %f\n", lastName, student_id, mark1, mark2, mark3);
 	fprintf(fp, "%s has an average mark of %lf\n", lastName, averageMark);
 	fclose(fp);

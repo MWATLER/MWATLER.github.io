@@ -2,7 +2,6 @@
 //                        convert each mark into a letter grade, and express the average mark as a letter grade.
 //                        The program will also determine whether the student receives a scholarship, and if so, how much.
 //
-#define _CRT_SECURE_NO_WARNINGS//get rid of compiler warning regarding scanf()
 #include <stdio.h>
 
 int main(void)
@@ -22,17 +21,17 @@ int main(void)
 	float scholarship;
 
 	printf("Enter the student's last name: ");
-	scanf("%s", lastName);
+	scanf_s("%s", lastName, 30);
 	printf("Enter the student's id number: ");
-	scanf("%d", &student_id);
+	scanf_s("%d", &student_id);
 	printf("Enter the student's first mark: ");
-	scanf("%f", &mark1);
+	scanf_s("%f", &mark1);
 	runningTotal += mark1;
 	printf("Enter the student's second mark: ");
-	scanf("%f", &mark2);
+	scanf_s("%f", &mark2);
 	runningTotal += mark2;
 	printf("Enter the student's third mark: ");
-	scanf("%f", &mark3);
+	scanf_s("%f", &mark3);
 	runningTotal += mark3;
 	averageMark = runningTotal / numMarks;
 
