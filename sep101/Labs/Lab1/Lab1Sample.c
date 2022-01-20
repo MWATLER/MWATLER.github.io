@@ -9,12 +9,12 @@ This is a multi-line comment
 
 //This is a single line comment
 
-#include <stdio.h>
+#include <stdio.h>//include the standard C input/output library
 
 int main() {
 	float price1 = 1.00;
 	float price2 = 1.00;
-	float price3 = 2.99;
+	float price3 = 2.99;//2.99000001
 	float total_cost = price1 + price2 + price3;//4.99
 	//On my visual studio, total_cost is actually 4.98999977
 	//float's and double's introduce a slight error
@@ -29,6 +29,8 @@ int main() {
 	numQuarters = remainder / 25;//25 pennies in one quarter
 	                             //499/25=19.96 -> 19 quarters
 	remainder = remainder % 25;//499%25=19 rem 24 -> remainder becomes 24
+
+	// 499 / 25 = 19 rem 24, 19*25 + 24 = 475 + 24 = 499
 
 	printf("You used %d quarters with a remainder of %d\n", 
 		numQuarters, remainder);
