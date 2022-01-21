@@ -127,12 +127,9 @@ A more advanced tutorial can be found at <a href="https://www.bogotobogo.com/cpl
     <li>A simple client server application demonstrating INET type sockets can be found in
     <a href="ipaddr/client.c" target="_blank">client.c</a>,
     <a href="ipaddr/server.c" target="_blank">server.c</a>, and
-    <a href="ipaddr/Makefile" target="_blank">Makefile</a>. This code also demonstrates
+    <a href="ipaddr/Makefile" target="_blank">Makefile</a>. The address INADDR_ANY could have be used instead of the localhost (127.0.0.1):
     <a href="https://man7.org/linux/man-pages/man7/ip.7.html" target="_blank">INADDR_ANY</a>.
     When INADDR_ANY is specified in the bind() call, the socket will be bound to all local interfaces.<br><br>
-    The same code for Windows can be found at: <a href="Windows/ipaddr/server.c" target="_blank">server.c</a> and <a href="Windows/ipaddr/client.c" target="_blank">client.c</a>. 
-    See Chapter 12 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997144390103226" target="_blank">Windows System Programming</a>
-    for more details on how to program with sockets in Windows.
     </li>
 
     <li>A simple client server application demonstrating inter-process communication between processes on two different machines can be found in
@@ -153,3 +150,11 @@ A more advanced tutorial can be found at <a href="https://www.bogotobogo.com/cpl
     <a href="select5/Makefile" target="_blank">Makefile</a>.
     </li>
   </ul>
+
+  <p><em>Windows Sockets</em></p>
+
+  <li>A simple client server application in the Windows operating system demonstrating INET type sockets can be found at: 
+  <a href="Windows/ipaddr/server.c" target="_blank">server.c</a> and <a href="Windows/ipaddr/client.c" target="_blank">client.c</a>. 
+  This code demonstrates the use of sockets in Windown. See Chapter 12 of 
+  <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997144390103226" target="_blank">Windows System Programming</a>
+  for more details on how to program with sockets in Windows.</li>

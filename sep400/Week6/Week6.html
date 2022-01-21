@@ -29,7 +29,7 @@
     <li>Thread synchronization - Chapter 30 of
         <a href="../The%20Linux%20Programming%20Interface%20-%20A%20Linux%20and%20UNIX%20System%20Programming%20Handbook.pdf" target="_blank">The Linux Programming Interface</a>.</li>
     <li><a href="msgPump/Sockets%20and%20the%20Implementation%20of%20a%20World%20Wide%20Messaging%20System.ppt" target="_blank">Sockets and the Implementation of a World Wide Messaging System</a>.</li>
-    <li><a href="https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/" target="_blank">What’s the Diff: Programs, Processes, and Threads</a>.</li>
+    <li><a href="https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/" target="_blank">What's the Diff: Programs, Processes, and Threads</a>.</li>
 </ul>
 
 <h3>Labs</h3>
@@ -93,3 +93,17 @@
         <a href="msgPump/Sockets%20and%20the%20Implementation%20of%20a%20World%20Wide%20Messaging%20System.ppt" target="_blank">Sockets and the Implementation of a World Wide Messaging System</a>.
     </li>
 </ul>
+
+<p><em>Windows Threads and Mutexes</em></p>
+
+<li>Code that demonstrates this message pump or dispatcher in the Windows operating system using INET sockets with a separate receive thread for socket reads can be found at:<br>
+    <a href="msgPumpWindows/msgClient.cpp" target="_blank">msgClient.cpp</a>,
+    <a href="msgPumpWindows/msgPump.cpp" target="_blank">msgPump.cpp</a>,
+    <a href="msgPumpWindows/startClient.bat" target="_blank">startClient.bat</a> and
+    <a href="msgPumpWindows/stopClient.bat" target="_blank">stopClient.bat</a>.<br>
+    The batch files (startClient.bat and stopClient.bat) assume the executable for msgClient.cpp is Client.exe and is located in the relative directory <b>./Debug</b>.<br><br>
+This code not only demonstrates the use of sockets in Windows but also signals, threads, and mutexes. 
+See Chapters 4 (console control handler), 7 (threads), 8 (mutexes) and 12 (sockets) of 
+<a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997144390103226" target="_blank">Windows System Programming</a>
+for more information.
+</li>
