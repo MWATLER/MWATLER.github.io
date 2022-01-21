@@ -62,7 +62,8 @@ int main(void)
 	else if (averageMark >= 50) letterAverage = 'D';
 	else                  letterAverage = 'F';
 
-	printf("The student %s with id %d has marks of %c, %c, and %c.\n", lastName, student_id, letterGrade1, letterGrade2, letterGrade3);
+	printf("The student %s with id %d has marks of %c, %c, and %c.\n", 
+		lastName, student_id, letterGrade1, letterGrade2, letterGrade3);
 	if (letterAverage == 'A') {
 		printf("%s is an A student.\n\n", lastName);
 	}

@@ -10,7 +10,11 @@ int main(void)
 	float mark1;
 	float mark2;
 	float mark3;
-	char letterGrade1;
+	char letterGrade1;//80 and above is an 'A'
+					  //70 - 80 is a 'B'
+	                  //60 - 70 is a 'C'
+	                  //50 - 60 is a 'D'
+	                  //below 50 is a 'F'
 	char letterGrade2;
 	char letterGrade3;
 	double runningTotal = 0;
