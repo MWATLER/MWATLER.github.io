@@ -28,7 +28,8 @@ int main(void)
 	averageMark = runningTotal / numMarks;
 
 	fopen_s(&fp, "StudentAverageMark.txt", "w");
-	fprintf(fp, "The student %s with id %d has marks of %f, %f, and %f\n", lastName, student_id, mark1, mark2, mark3);
+	fprintf(fp, "The student %s with id %d has marks of %f, %f, and %f\n", 
+		lastName, student_id, mark1, mark2, mark3);
 	fprintf(fp, "%s has an average mark of %lf\n", lastName, averageMark);
 	fclose(fp);
 

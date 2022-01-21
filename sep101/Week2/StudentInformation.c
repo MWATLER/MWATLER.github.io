@@ -6,13 +6,14 @@
 int main(void)
 {
 	int student_id;
-	char lastName[30];
+	char lastName[30];//an array of 30 characters to store the last name.
 	float mark1;
 	float mark2;
 	float mark3;
 
 	printf("Enter the student's last name: ");
-	scanf("%s", lastName);
+	scanf("%s", lastName);//no apersand necessary, because the name of the array is the address
+	                      //lastName by itself is actually an address
 	printf("Enter the student's id number: ");
 	scanf("%d", &student_id);
 	printf("Enter the student's first mark: ");
@@ -34,7 +35,8 @@ int main(void)
 	printf("Enter the student's third mark: ");
 	scanf_s("%f", &mark3);
 */
-	printf("The student %s with id %d has marks of %f, %f, and %f\n", lastName, student_id, mark1, mark2, mark3);
+	printf("The student %s with id %d has marks of %f, %f, and %f\n", 
+		lastName, student_id, mark1, mark2, mark3);
 
 	return 0;
 }
