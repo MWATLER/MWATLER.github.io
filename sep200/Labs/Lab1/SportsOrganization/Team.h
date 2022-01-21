@@ -21,7 +21,7 @@ public:
 	std::string GetSport() const { return sport; }
 	std::string GetAddress() const { return address; }
 	double GetNetWorth() const { return netWorth; }
-	void display(std::ostream& os) const {
+	void display(std::ostream& os) const {//os could be cout, cerr, ...
 		if (name != "") {
 			os << "The " << name << " is a " << sport << " team located at " << std::endl << address << "." << std::endl;
 			os.setf(std::ios::fixed);
@@ -33,14 +33,14 @@ public:
 		}
 		os << std::endl;
 	}
-	bool operator==(const Team& team2) const {
+	bool operator==(const Team& team2) const {//*team[i] == *team[j]   //Why '*'
 		bool retVal = false;
 		if (this->address == team2.address) retVal = true;
 		return retVal;
 	}
 };
 
-std::ostream& operator<<(std::ostream& os, const Team& team) {
+std::ostream& operator<<(std::ostream& os, const Team& team) {//cout << *team[i];//Why '*'
 	team.display(os);
 	return os;
 }
