@@ -22,12 +22,14 @@
 
 <h2>Problem Definition</h2>
 <p>Product development begins by determining what the needs are that a product must meet. Problem definition is the most 
-  important of the steps in the PDP (Fig. 1). Understanding any problem thoroughly is crucial to reaching an outstanding 
+  important of the steps in the PDS (Fig. 1). Understanding any problem thoroughly is crucial to reaching an outstanding 
   solution. This axiom holds for all kinds of problem solving, whether it be math problems, production problems, or 
-  design problems. In product design the ultimate test of a solution is meeting management’s goal in the marketplace, 
+  design problems. In product design the ultimate test of a solution is meeting management's goal in the marketplace, 
   so it is vital to work hard to understand and provide what it is that the customer wants.<br><br>
 <img src="EngineeringDesignProcess.png" alt="The Engineering Design Process">
 </p>
+<p><b>The 407 toll highway was built to allow trucks an alternate route through Toronto. But trucks 
+  continue to travel on the 401 instead. Why?</b></p>
 
 <h2>PDS Criteria</h2>
 <p>The main headings and criteria listed here and illustrated in the figure below are intended to assist
@@ -39,6 +41,9 @@
   <img src="PDSCriteria.png" alt="The Engineering Design Process">
 </p>
 
+<p><b>What are the performance requirements for a purely software project?</b></p>
+<p><b>What are the performance requirements for a software/hardware project such as a portable scanner?</b></p>
+
 <h3>Performance requirements</h3>
 <p>
   <b>Function(s)</b> There may only be a single main function which is to be provided by the
@@ -48,6 +53,8 @@
   name but a few. The primary function of an engine in a vehicle is to drive the wheels.
   Secondary functions, such as providing heating inside the vehicle and supporting
   alternators must also be listed.</p>
+<p><b>How closely does the above relate to "functions" in software?</b></p>
+
 <p><b>Loading</b> Loading can be divided into primary and consequential loading. Primary loads
   are due directly to the required function being provided. Shocks and vibration are generally
   consequent on the situation in which the product is used. Consequential loading is often
@@ -62,7 +69,9 @@
   analogy to qualities found in existing products or natural objects. It is possible to use
   techniques like golden section, which indicates that for aesthetic beauty any shape should
   be divided into two thirds and one third.</p>
-<p><b>Reliabitity</b> The required design life, taking due account of routine maintenance, must be
+<p><b>Well written code requires very little commenting, true or false?</b></p>
+
+<p><b>Reliability</b> The required design life, taking due account of routine maintenance, must be
   specified. This is usually done by specifying the number of operating cycles rather than in
   units of time. Within this number of cycles an acceptable level (%) of random failures or
   breakdowns is also specified. Where high levels of life expectancy of components exist and
@@ -71,6 +80,10 @@
   and the MTBF (Mean Time Between Failures). Where reliability is critical, redundancy,
   either active or stand-by, should be specified. Reliability is inextricably linked with
   maintenance, even if a maintenance free product is envisaged.</p>
+<p><b>Can you think of three things you can do to improve the reliability of your code?</b>
+<!--<br>Ans: A code review, embedded debug, software that tests the software-->
+</p>
+
 <p><b>Environmental conditions</b> These include the temperature range, humidity range,
   pressure range, magnetic and chemical environmental conditions to which the product will
   be exposed. It is important to consider manufacture, store and transport environmental
@@ -79,7 +92,8 @@
   when working but is often determined by considering transport and erection. The simplest
   form of expression for this constraint can be a diagram which forms an integral part of the
   PDS.</p>
-<p><b>Ex-Works</b> cost Companies sell products for the maximum price the market will stand
+<p><b>Ex-Works cost</b> (when a seller makes a product available at a designated location and the 
+  buyer must cover transport costs) Companies sell products for the maximum price the market will stand
   which often bears little relation to the cost of producing that product. Hence, the maximum
   cost specified in the PDS and which the design team must work to, should be the
   production (ex-works) cost and not the selling price.</p>
@@ -96,10 +110,15 @@
   measurements and it is normal to specify a user population who fall between the 5th and
   95th percentile sizes in any particular respect. Any controls must operate in a logical or
   expected manner. Controls should be placed in easy reach of the operator.</p>
+<p><b>Computers see numbers in binary format. Is it a great ergonomics decision to display 
+  numbers in binary format to a user?</b></p>
+
 <p><b>Quality</b> The quality of the product should meet market requirements and the quality
   of all components should be consistent. All workmanship must be in accordance with the
   best commercial practices. Robust design practices should be used where possible. All
   materials and components shall be new and free from defects.</p>
+<p><b>Is it a good idea to spend a little bit more for something of good quality?</b></p>
+
 <p><b>Weight</b> In some industries, such as aerospace, this is the most critical constraint.
   However, this is not always the case and weight is not always required to be a minimum.
   Generally in any product involving motion reduced weight is an advantage whereas a product
@@ -111,6 +130,7 @@
   countries targeted for export must be specified. These standards represent the maximum
   level of noise which is acceptable but lower levels could be specified, for example, to gain
   competitive advantage.</p>
+<p><b>How would "noise" apply to something like a radio transmitter?</b></p>
 
 <h3>Manufacture requirements</h3>
 <p><b>Processes</b> The in-house manufacturing and forming facilities and the criteria under
@@ -127,6 +147,8 @@
   line. The rate of feed of components for assembly and time allowed are also important
   parameters. The specification should also contain statements with regard to the ease of
   disassembly.</p>
+<p><b>How does one "assemble" software?</b></p>
+
 <p><b>Packing and shipment</b> The maximum size and weight for convenient transportation
   must be specified. Shape can also be important since stacking products together can reduce
   transport costs substantially. Provision of suitable packing, lifting points and locking or
@@ -134,6 +156,8 @@
   may also be important to ensure large products can be disassembled and reassembled easily
   for transport. The cost of packing and shipment must be added to the ex-works cost to
   ensure that the product remains competitive wherever it is used.</p>
+<p><b>How do you decide which features your software should have enabled within it?</b></p>
+  
 <p><b>Quantity</b> The projected quantity of a product which will be sold can have a profound
   effect on the manufacturing methods and materials used. This must be specified as
   carefully as possible at the outset. This particularly influences the appropriate levels of
@@ -146,12 +170,16 @@
   produced to an agreed contract will state dates by which the design, manufacture,
   erection, testing, commissioning and hand over of the fully working installation are to be
   completed.</p>
+<p><b>What happens if you fall behind on your development schedule assigned to you by your project manager?</b></p>
+<p><b>What happens if you fall behind on the delivery date of your software to your customer?</b></p>
 
   <h3>Acceptance standards</h3>
 <p><b>Inspection</b> The degree of conformance to standards must be specified in accordance
   with relevant legislation and the objectives set in the PDS. The degree of conformance
   required to tolerances as stated within the rest of the specification must also be
   specified.</p>
+<p><b>Is inspection a reasonable form of code review?</b></p>
+
 <p><b>Testing</b> The methods of verification for the product should be specified along with the
   timescales for carrying out the necessary tests. It is usual on completion that acceptance
   tests are carried out in the presence of the customer. Tests often include safety interlocks,
@@ -159,8 +187,17 @@
   and forms of testing should comply with standards where they exist. The PDS should
   contain a policy statement on the level of testing, such as every product to be tested or an
   agreed level of sample testing.</p>
+<p><b>How many levels of testing is there with software?</b>
+<!--<br>Developer level testing, test performed by the test department, beta tests at a customer site.-->
+</p>
+
 <p><b>Standards</b> These may include national, international and company standards. There
   may also be many other rules, regulations and codes of practice which must be followed.</p>
+<p><b>Are you aware of the ISO certification for software development? See 
+  <a href="https://www.iso.org/obp/ui/#iso:std:iso-iec-ieee:12207:ed-1:v1:en" target="_blank">
+    ISO/IEC/IEEE 12207:2017(en): Systems and software engineering - Software life cycle processes</a>.
+</b></p>
+
 <p><b>Patents</b> Following a patent search it is important to state, and subsequently to ensure,
   that the design must not infringe any patents identified as being relevant. Patents are useful
   sources of information, particularly when you are beginning a new project with no
@@ -185,6 +222,8 @@
   There are many ways of specifying this and only one is to specify increased life.</p>
 <p><b>Hazards</b> Any potential hazards that may cause difficulties at the end of a product's life
   should be identified and specified.</p>
+<p><b>We do not dispose of software, however we do try to reuse it. Is object-oriented programming 
+  geared towards software reuse?</b></p>
 
 <h3>Operation requirements</h3>
   
@@ -192,6 +231,8 @@
   particularly important when small numbers of large devices are designed. The constraints
   should include construction, assembly, the time taken, provision of instructions and the
   skill levels required for installation.</p>
+<p><b>How might one assist a customer in installing software?</b></p>
+
   <p><b>Use</b> The cost of ownership of a product, which should be minimized, is, in some cases,
   more important than the cost of initial purchase. Factors which influence this, such as the
   number of operators required, the skill level required from these operators, the cost of spares
@@ -202,6 +243,9 @@
   gravitational, environmental, electrical, gas, water and internal combustion engines. Each
   should be specified exactly. For example, electrical power may be three-phase and
   380-420 volts.</p>
+<p><b>Your software is designed and implemented with a specific use-case in mind. Should we 
+  write our software with the assumption that it will be used for this specific use-case only?</b></p>
+
   <p><b>Maintenance</b> A policy to minimize down time, simplify maintenance, ensure correct
   reassembly, provide easy access and provide interchangeable parts must be developed at
   the outset and specified. If there is to be any routine maintenance, service or overhauls
@@ -211,6 +255,9 @@
   also be specified. Guards should be easily removed. Levels of lubrication should be
   specified. An operation and maintenance manual must be supplied. Automatic lubrication
   should be considered.</p>
+<p><b>Once your software has been deployed at a customer site, is it safe to assume there will 
+  no longer be any bugs reported?</b></p>
+
   <p><b>Safety</b> There are many standards, a great deal of legislation and codes of practice which
   refer to all safety aspects of products. These should be listed in the PDS. As an example
   consider Fig. 2.7, which is extracted from British Standard 3042 and shows test finger IV.
@@ -220,6 +267,8 @@
   door, for example. Where headroom over walkways is less than 2 m suitable warning
   notices and head shock absorbers should be provided. Guards should be specified to
   eliminate danger to individuals or equipment.</p>
+<p><b>Compare software written for streaming video/audio with software written to control 
+  an airplane. Consider safety, speed of operation, etc...</b></p>
 
 <h2>Content of a PDS</h2>
 <p>The content of each PDS will differ from any other but the way in which the information is
@@ -240,4 +289,7 @@ standards, disposal and operation requirements</li>
 <li><i>Index:</i> Cross references</li>
 <li><i>References:</i> To national, international, or internal specifications.</li>
 </ol>
+<p><b>What are the three most important sections mentioned above?
+  <!--<br>Scope, definitions, and body.-->
+</b></p>
 </p>
