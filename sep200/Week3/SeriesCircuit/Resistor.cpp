@@ -1,6 +1,7 @@
 //Resistor.cpp - function definitions for the resistor
 //
 // 09-Jul-21  M. Watler         Created.
+#include <iostream>
 #include "Resistor.h"
 
 Resistor::Resistor() {
@@ -14,8 +15,9 @@ Resistor::Resistor(double _resistance) {
 }
 
 Resistor::Resistor(const Resistor& resistor) {//Copy constructor
-	this->resistance = resistor.resistance;
-	this->current = resistor.current;
+	*this = resistor;
+/*	this->resistance = resistor.resistance;
+	this->current = resistor.current;*/
 }
 
 Resistor& Resistor::operator=(const Resistor& resistor) {//Copy assignment
@@ -27,10 +29,11 @@ Resistor& Resistor::operator=(const Resistor& resistor) {//Copy assignment
 }
 
 Resistor::Resistor(Resistor&& resistor) noexcept {//Move constructor
-	this->resistance = resistor.resistance;
+	*this = std::move(resistor);
+/*	this->resistance = resistor.resistance;
 	this->current = resistor.current;
 	resistor.resistance = 0.0;
-	resistor.current = 0.0;
+	resistor.current = 0.0;*/
 }
 
 Resistor& Resistor::operator=(Resistor&& resistor) noexcept {//Move assignment

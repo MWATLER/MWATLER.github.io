@@ -18,7 +18,7 @@ class Database {
 	static Database* instance;
 	Database();//Private constructors to prevent instancing
 public:
-	enum Err_Status {
+	enum class Err_Status {
 		Err_Success,
 		Err_NotFound,
 		Err_OutOfMemory

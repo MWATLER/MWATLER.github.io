@@ -1,6 +1,7 @@
 //Capacitor.cpp - function definitions for the capacitor
 //
 // 09-Jul-21  M. Watler         Created.
+#include <iostream>
 #include "Capacitor.h"
 
 Capacitor::Capacitor() {
@@ -20,7 +21,8 @@ Capacitor::Capacitor(double _capacitance) {
 }
 
 Capacitor::Capacitor(const Capacitor& capacitor) {//Copy constructor
-	this->capacitance = capacitor.capacitance;
+	*this = capacitor;
+/*	this->capacitance = capacitor.capacitance;
 	this->current = capacitor.current;
 	this->voltage = new double[2];
 	if (capacitor.voltage != nullptr) {
@@ -30,13 +32,15 @@ Capacitor::Capacitor(const Capacitor& capacitor) {//Copy constructor
 	else {
 		this->voltage[0] = 0.0;
 		this->voltage[1] = 0.0;
-	}
+	}*/
 }
 
 Capacitor& Capacitor::operator=(const Capacitor& capacitor) {//Copy assignment
 	if (this != &capacitor) {
 		this->capacitance = capacitor.capacitance;
 		this->current = capacitor.current;
+		delete[] this->voltage;
+		this->voltage = new double[2];
 		if (capacitor.voltage != nullptr) {
 			this->voltage[0] = capacitor.voltage[0];
 			this->voltage[1] = capacitor.voltage[1];
@@ -50,13 +54,14 @@ Capacitor& Capacitor::operator=(const Capacitor& capacitor) {//Copy assignment
 }
 
 Capacitor::Capacitor(Capacitor&& capacitor) noexcept {//Move constructor
-	this->capacitance = capacitor.capacitance;
+	*this = std::move(capacitor);
+/*	this->capacitance = capacitor.capacitance;
 	this->current = capacitor.current;
 	delete[] this->voltage;
 	this->voltage = capacitor.voltage;
 	capacitor.capacitance = 0;
 	capacitor.current = 0;
-	capacitor.voltage = nullptr;
+	capacitor.voltage = nullptr;*/
 }
 
 Capacitor& Capacitor::operator=(Capacitor&& capacitor) noexcept {//Move assignment

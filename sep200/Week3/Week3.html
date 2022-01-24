@@ -28,7 +28,6 @@
   <tr><td></td><td><a href="https://en.cppreference.com/w/cpp/language/operator_other" target="_blank">C++ Reference: Other operators</a></td></tr>
   <tr><td></td><td><a href="https://www.learncpp.com/cpp-tutorial/overloading-typecasts/" target="_blank">LearnC++.com: Overloading typecasts</a></td></tr>
   <tr><td>Lecture Notes:</td><td><a href="ClassesResources.docx" target="_blank">Classes and Resources</a></td></tr>
-  <tr><td></td><td><a href="DerivedClassResource.docx" target="_blank">Derived Class with a Resource</a></td></tr>
   <tr><td></td><td><a href="References.docx" target="_blank">References</a></td></tr>
   <tr><td></td><td><a href="MoveOperators.docx" target="_blank">Move Operators</a></td></tr>
 </table>
@@ -52,9 +51,9 @@
   </ul>
 </p>
 
-<p><em>Operator Overloading</em></p>
+<p><em>Copy/Move Constructor/Assignment</em></p>
 <ul>
-  <li>The first program demonstrates the copy constructor, copy assignment move constructor and move assignment via a circuit simulator which simulates a series electrical circuit
+  <li>The following program demonstrates the copy constructor, copy assignment move constructor and move assignment via a circuit simulator which simulates a series electrical circuit
     with an inductor, resistor and capacitor. Each electrical component is characterized in a class. For instance, the class <b>Inductor</b> records
     the component's inductance and can calculate the voltage across the inductor for a given current. The code is:<br>
     <a href="SeriesCircuit/Inductor.h" target="_blank">Inductor.h</a>,
@@ -65,7 +64,9 @@
     <a href="SeriesCircuit/Capacitor.cpp" target="_blank">Capacitor.cpp</a>, and
     <a href="SeriesCircuit/SeriesCircuit.cpp" target="_blank">SeriesCircuit.cpp</a>.
   </li>
-  <li>The second program shows the overloading of the <b>>></b> and <b><<</b> operators by a card game played by some of the characters in the TV show
+
+<p><em>Operator Overloading, continued</em></p>
+  <li>The following program shows the overloading of the <b>>></b> and <b><<</b> operators by a card game played by some of the characters in the TV show
   "The Sopranos". The code can be found at:<br>
   <a href="CardGame/Player.h" target="_blank">Player.h</a>,
   <a href="CardGame/Player.cpp" target="_blank">Player.cpp</a>, and

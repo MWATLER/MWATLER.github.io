@@ -45,20 +45,20 @@ bool Database::isInstance() {
 
 
 Database::Err_Status Database::GetValue(std::string key, std::string& value) {
-	Err_Status status = Err_NotFound;
-	for (int i = 0; i < numEntries && status == Err_NotFound; ++i) {
+	Err_Status status = Err_Status::Err_NotFound;
+	for (int i = 0; i < numEntries && status == Err_Status::Err_NotFound; ++i) {
 		if (key == this->key[i]) {
 			value = this->value[i];
-			status = Err_Success;
+			status = Err_Status::Err_Success;
 		}
 	}
 	return status;
 }
 
 Database::Err_Status Database::SetValue(std::string key, std::string value) {
-	Err_Status status = Err_OutOfMemory;
+	Err_Status status = Err_Status::Err_OutOfMemory;
 	if (numEntries < MAX_ENTRIES) {
-		status = Err_Success;
+		status = Err_Status::Err_Success;
 		this->key[numEntries] = key;
 		this->value[numEntries] = value;
 		++numEntries;
