@@ -18,15 +18,7 @@
 <table>
   <tr><td>Text Reference:</td><td>Chapters 18 and 19 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></td></tr>
   <tr><td></td><td>Chapters 7, 8 and 14 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></td></tr>
-  <tr><td>Operator Overloading:</td><td><a href="https://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B" target="_blank">Wikipedia: Operators in C and C++</a></td></tr>
-  <tr><td></td><td><a href="https://en.cppreference.com/w/cpp/language/operator_assignment" target="_blank">C++ Reference: Assignment Operators</a></td></tr>
-  <tr><td></td><td><a href="https://en.cppreference.com/w/cpp/language/operator_incdec" target="_blank">C++ Reference: Increment/decrement operators</a></td></tr>
-  <tr><td></td><td><a href="https://en.cppreference.com/w/cpp/language/operator_arithmetic" target="_blank">C++ Reference: Arithmetic operators</a></td></tr>
-  <tr><td></td><td><a href="https://en.cppreference.com/w/cpp/language/operator_logical" target="_blank">C++ Reference: Logical operators</a></td></tr>
-  <tr><td></td><td><a href="https://en.cppreference.com/w/cpp/language/operator_comparison" target="_blank">C++ Reference: Comparison operators</a></td></tr>
-  <tr><td></td><td><a href="https://en.cppreference.com/w/cpp/language/operator_member_access" target="_blank">C++ Reference: Member access operators</a></td></tr>
-  <tr><td></td><td><a href="https://en.cppreference.com/w/cpp/language/operator_other" target="_blank">C++ Reference: Other operators</a></td></tr>
-  <tr><td></td><td><a href="https://www.learncpp.com/cpp-tutorial/overloading-typecasts/" target="_blank">LearnC++.com: Overloading typecasts</a></td></tr>
+  <tr><td>Rvalue References:</td><td><a href="https://www.cprogramming.com/c++11/rvalue-references-and-move-semantics-in-c++11.html" target="_blank">Move semantics and rvalue references in C++11</a></td></tr>
   <tr><td>Lecture Notes:</td><td><a href="ClassesResources.docx" target="_blank">Classes and Resources</a></td></tr>
   <tr><td></td><td><a href="References.docx" target="_blank">References</a></td></tr>
   <tr><td></td><td><a href="MoveOperators.docx" target="_blank">Move Operators</a></td></tr>
@@ -44,10 +36,11 @@
 <h3>Sample Code</h3>
 
 <p><em>LValues and RValues</em></p>
-<p>The following code is a great exercise on lvalues and rvalues. It demonstrates that lvalues are variables with some kind of storage, and rvalues are 
+<p>Modern C++ (C++0x and greater) has introduced rvalue references: a new type that can bind to temporary objects, giving you the ability to modify them. 
+  The following code is a great exercise on lvalues and rvalues. It demonstrates that lvalues are variables with some kind of storage, and rvalues are 
   temporary values. The concepts gained here are used in the move constructor and move assignment operator:
   <ul>
-    <li><a href="LvalueRvalue/LValueRValue.cpp"" target="_blank">LValueRValue.cpp</a>.</li>
+    <li><a href="LvalueRvalue/LValueRValue.cpp" target="_blank">LValueRValue.cpp</a>.</li>
   </ul>
 </p>
 
