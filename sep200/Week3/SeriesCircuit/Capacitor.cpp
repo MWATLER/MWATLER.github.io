@@ -21,27 +21,18 @@ Capacitor::Capacitor(double _capacitance) {
 }
 
 Capacitor::Capacitor(const Capacitor& capacitor) {//Copy constructor
-	*this = capacitor;
-/*	this->capacitance = capacitor.capacitance;
-	this->current = capacitor.current;
-	this->voltage = new double[2];
-	if (capacitor.voltage != nullptr) {
-		this->voltage[0] = capacitor.voltage[0];
-		this->voltage[1] = capacitor.voltage[1];
-	}
-	else {
-		this->voltage[0] = 0.0;
-		this->voltage[1] = 0.0;
-	}*/
+	*this = capacitor;//invokes the copy assignment
 }
 
 Capacitor& Capacitor::operator=(const Capacitor& capacitor) {//Copy assignment
 	if (this != &capacitor) {
+		//shallow copy of variables
 		this->capacitance = capacitor.capacitance;
 		this->current = capacitor.current;
-		delete[] this->voltage;
-		this->voltage = new double[2];
-		if (capacitor.voltage != nullptr) {
+		//deep copy of resources
+		delete[] this->voltage;//delete the resource of the current object
+		this->voltage = new double[2];//reallocate memory for the resource
+		if (capacitor.voltage != nullptr) {//copy values over
 			this->voltage[0] = capacitor.voltage[0];
 			this->voltage[1] = capacitor.voltage[1];
 		}
@@ -54,22 +45,19 @@ Capacitor& Capacitor::operator=(const Capacitor& capacitor) {//Copy assignment
 }
 
 Capacitor::Capacitor(Capacitor&& capacitor) noexcept {//Move constructor
-	*this = std::move(capacitor);
-/*	this->capacitance = capacitor.capacitance;
-	this->current = capacitor.current;
-	delete[] this->voltage;
-	this->voltage = capacitor.voltage;
-	capacitor.capacitance = 0;
-	capacitor.current = 0;
-	capacitor.voltage = nullptr;*/
+	*this = std::move(capacitor);//invoke the move assignment
 }
 
 Capacitor& Capacitor::operator=(Capacitor&& capacitor) noexcept {//Move assignment
-	if (this != &capacitor) {
+	if (this != &capacitor) {//don't move to ourself
+		//shallow copy
 		this->capacitance = capacitor.capacitance;
 		this->current = capacitor.current;
+		//delete our resource
 		delete[] this->voltage;
+		//take over the resource of the rhs
 		this->voltage = capacitor.voltage;
+		//set the rhs to an empty state
 		capacitor.capacitance = 0;
 		capacitor.current = 0;
 		capacitor.voltage = nullptr;

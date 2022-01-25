@@ -6,9 +6,8 @@
 
 using namespace std;
 
-int GetValue() {//this is an rvalue
-	int x = 10;
-	return x;
+int GetValue() {
+	return 10;
 }
 
 int& GetValue2() {//returns a reference, must return an lvalue

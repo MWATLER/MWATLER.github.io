@@ -5,7 +5,7 @@
 class Capacitor {
 	double capacitance;
 	double current;
-	double* voltage;
+	double* voltage;//resource
 	double const timestep = 0.001;
 public:
 	Capacitor();

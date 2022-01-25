@@ -31,7 +31,7 @@ int main() {
 
 	Database* dB2 = Database::getInstance();
 	key = "Leylah Fernandez";
-	status = dB->GetValue(key, value);
+	status = dB2->GetValue(key, value);
 	if (status == Database::Err_Status::Err_Success) {
 		cout << key << " earned " << value << endl;
 	}
