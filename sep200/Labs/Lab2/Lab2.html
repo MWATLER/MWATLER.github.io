@@ -24,8 +24,9 @@ There are also two functions that operate on this data from outside the class. T
     <li>bool operator==(const House& house1, const House& house2);//Do the two houses have the same owner?</li>
     <li>void operator>>(House& house1, House& house2);//Move contents from the house1 object to the house2 object</li>   
 </ul>
-Note that operator==(...) might require access to private members of the House object, so you may have to modify <b>House.h</b>.
-</p>
+Note that <b>operator==</b> might require access to private members of the House object, so you may have to modify <b>House.h</b>.<br>
+Also, you might decide that <b>operator==</b> and <b>operator>></b> can be implemented within the class. You are free to move them to 
+within the class if you wish.</p>
 
 <p>You have been given a header file for <b>House</b> and a main file for testing:
     <a href="House.h" target="_blank">House.h</a> and
