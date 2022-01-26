@@ -42,7 +42,7 @@ int main() {
 		}
 	}
 
-	//	float averageMark = runningTotal / NUM;//Both are integers, the compiler will throw away everything after the decimal place
+//	float averageMark = runningTotal / NUM;//Both are integers, the compiler will throw away everything after the decimal place
 	float averageMark = (float)runningTotal / NUM;//cast to a float to preserve everything after the decimal place
 
 	printf("\n");
