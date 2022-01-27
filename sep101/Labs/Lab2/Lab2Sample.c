@@ -13,13 +13,13 @@ int main() {
 	int lowestMark = 100;
 	int indexHighestMark = 0;//should be 3
 	int indexLowestMark = 0;//should be 1
-	int validEntry = 0;
+	int validEntry = 0;//a flag variable, which makes the code more readable
 
 	for (int i = 0; i < NUM; ++i) {//i=0,1,2,3,4
 		do {//validate the mark
-			printf("Enter mark %d: ", i+1);
+			printf("Enter mark %d: ", i + 1);
 			//if i is 0, the user will see:
-			//Enter mark 1: 
+			//Enter mark 1:
 			scanf_s("%d", &marks[i]);//if i=0, &marks[0]
 			if (marks[i]<LowestPossibleMark ||
 				marks[i]>HighestPossibleMark) {
@@ -29,7 +29,7 @@ int main() {
 			else {
 				validEntry = 1;
 			}
-		} while (validEntry==0);
+		} while (validEntry == 0);
 
 		runningTotal += marks[i];//to calculate the average
 		if (marks[i] > highestMark) {//the highest mark
@@ -47,10 +47,10 @@ int main() {
 
 	printf("\n");
 	printf("The average mark is %.2f.\n", averageMark);
-	printf("The highest mark was %d and this was mark %d.\n", 
-		highestMark, indexHighestMark+1);
+	printf("The highest mark was %d and this was mark %d.\n",
+		highestMark, indexHighestMark + 1);
 	printf("The lowest mark was %d and this was mark %d.\n",
-		lowestMark, indexLowestMark+1);
+		lowestMark, indexLowestMark + 1);
 
 	return 0;
 }
