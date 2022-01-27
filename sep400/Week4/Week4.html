@@ -97,3 +97,13 @@
     The Makefile can be found at <a href="sigaction/Makefile" target="_blank">Makefile</a>.</li>
     <li>A program that cannot be interrupted by ctrl-C or ctrl-Z is shown in <a href="uninterrupt/uninterrupt.cpp">uninterrupt.cpp</a>.</li>
 </ul>
+
+<p><em>Windows Signals and Process Creation</em></p>
+<ul>
+  <li>The following code demonstrates signals and process creation with Windows. The parent process creates four child processes. If the parent receives a 
+      ctrl-Break, it and sends a ctrl-C to all child processes which handle the ctrl-C to shutdown gracefully:<br>
+  <a href="Windows/Child.cpp" target="_blank">Child.cpp</a> and <a href="Windows/Parent.cpp" target="_blank">Parent.cpp</a>. 
+  See Chapters 4 and 6 of 
+  <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997144390103226" target="_blank">Windows System Programming</a>
+  for more details.</li>
+</ul>
