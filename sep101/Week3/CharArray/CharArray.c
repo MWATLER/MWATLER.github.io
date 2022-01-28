@@ -6,24 +6,23 @@
 //Section XXY
 
 #define NCHAR 17
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>//strlen()
 
 int main()
 {
-	char name[NCHAR + 1] = "My name is Arnold";
+	char name[NCHAR + 1] = "My name is Arnold";//We need an extra character for the null terminator
 	int len = strlen(name);//Gets the string length
 	printf("The string has %d characters\n", len);
 	printf("%s\n\n", name);
 	for (int i = 0; i < NCHAR + 1; ++i) {
-		printf("name[%2d]:%c %3d %3x\n", i, name[i], name[i], name[i]);
+		printf("name[%2d]:%c %3d %3X\n", i, name[i], name[i], name[i]);
 	}
 
 	//	for (int i = 0; i < NCHAR + 1; ++i) name[i] = 0;//Clear out the memory
 
 	printf("\nEnter your name: ");
-	scanf("%s", name);
+	scanf_s("%s", name, NCHAR+1);
 	len = strlen(name);
 	printf("The string has %d characters\n", len);
 	for (int i = 0; i < NCHAR + 1; ++i) {
