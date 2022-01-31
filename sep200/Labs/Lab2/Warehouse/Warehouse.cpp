@@ -24,11 +24,11 @@ Warehouse::Warehouse(std::string name, std::string address, WarehouseItem item[]
 }
 
 Warehouse::Warehouse(const Warehouse& warehouse) {//copy constructor
-	*this = warehouse;
+	*this = warehouse;//will invoke the copy assignment
 }
 
 Warehouse::Warehouse(Warehouse&& warehouse) noexcept {//move constructor
-	*this = std::move(warehouse);
+	*this = std::move(warehouse);//will invoke the move assignment
 }
 
 Warehouse& Warehouse::operator=(const Warehouse& warehouse) {//copy assignment
@@ -37,7 +37,7 @@ Warehouse& Warehouse::operator=(const Warehouse& warehouse) {//copy assignment
 		name = warehouse.name;
 		address = warehouse.address;
 		numItems = warehouse.numItems;
-		//deep copy
+		//deep copy any resources
 		//remove existing resourse
 		delete[] item;
 		if (numItems > 0) {
@@ -110,13 +110,13 @@ Warehouse& Warehouse::operator-=(std::string name) {
 		if (item[i].name == name) {
 			found = true;
 			WarehouseItem* newItem = new WarehouseItem[numItems - 1];
-			for (int j = 0; j < i; ++j) {
+			for (int j = 0; j < i; ++j) {//'i' is 3
 				newItem[j].name = item[j].name;
 				newItem[j].type = item[j].type;
 				newItem[j].barcode = item[j].barcode;
 				newItem[j].price = item[j].price;
 			}
-			for (int j = i; j < numItems - 1; ++j) {
+			for (int j = i; j < numItems - 1; ++j) {//skips over item 3
 				newItem[j].name = item[j + 1].name;
 				newItem[j].type = item[j + 1].type;
 				newItem[j].barcode = item[j + 1].barcode;

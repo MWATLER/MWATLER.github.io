@@ -8,20 +8,21 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-#define NUM_MARKS 6//const int NUM_MARKS=6;
+#define NUM_MARKS 6
+#define BUF_LEN 20
 
 int main()
 {
-	int mark[NUM_MARKS] = { 0 };
-	char name[20];//A string of characters
-	int runningTotal = 0;
-	int invalidEntry;
-	int highestMark = 0;
-	int indexHighestMark = 0;
+	int mark[NUM_MARKS] = { 0 };//initializing my array to 0
+	char name[BUF_LEN];//A string of characters
+	int runningTotal = 0;//for calculating averages
+	int invalidEntry;//invalid entry flag
+	int highestMark = 0;//the highest mark
+	int indexHighestMark = 0;//index into the array for the highest mark
 	float average;
 
 	printf("Enter your name: ");
-	scanf_s("%s", name, 20);
+	scanf_s("%s", name, BUF_LEN);
 	for (int i = 0; i < NUM_MARKS; ++i)
 	{
 		do {
@@ -37,10 +38,10 @@ int main()
 		} while (invalidEntry == 1);
 		runningTotal = runningTotal + mark[i];
 		if (mark[i] > highestMark) {
-			highestMark = mark[i];//mark[2] is 99
-			indexHighestMark = i;//i=2, mark[2] has the highest mark
+			highestMark = mark[i];
+			indexHighestMark = i;
 		}
-	}
+	}//i only increments here
 	average = (float)runningTotal / NUM_MARKS;
 	printf("%s your marks are:\n", name);
 	for (int i = 0; i < NUM_MARKS; ++i) {

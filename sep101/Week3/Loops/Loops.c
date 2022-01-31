@@ -5,12 +5,9 @@
 int main(void)
 {
 	int i;
-	int foundFlag = 0;
-	for (i = 10; i > 0 && foundFlag==0; --i) {//The preference
+	for (i = 10; i > 0; --i) {//The preference
 		printf("i is %d\n", i);
-		if (i == 5) foundFlag = 1;
-		//--i occurs at the end of the for-loop
-	}
+	}//--i is executed at the very end of the loop
 	printf("\n");
 
 	i = 10;//initialization
