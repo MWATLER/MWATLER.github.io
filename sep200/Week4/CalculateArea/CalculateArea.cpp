@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-class Shape {
-    double width;
-protected:
-    double radius;
-    double length;
+class Shape {//the parent class
+    double width;//invisible to the outside world
+protected://visible within the class, invisible to the outside world
+    double radius;//should be moved to class Circle
+    double length;//should probably be moved to class Square?
 public:
     Shape() { length = width = radius = 0.0; };
     Shape(double l, double w, double r) {
@@ -22,7 +22,7 @@ public:
     }
 };
 
-class Square : public Shape {
+class Square : public Shape {//a child class
 public:
     Square(double l, double w, double r) : Shape(l, w, r) { 
         cout << "Square::Square" << endl;
@@ -35,7 +35,7 @@ public:
     }
 };
 
-class Circle : public Shape {
+class Circle : public Shape {//a child class
 public:
     Circle(double l, double w, double r) : Shape(l, w, r) { 
         cout << "Circle::Circle" << endl;
@@ -50,7 +50,7 @@ public:
 
 };
 
-class Rectangle : public Shape {
+class Rectangle : public Shape {//a child class
 public:
     Rectangle(double l, double w, double r) : Shape(l, w, r) {
         cout << "Rectangle::Rectangle" << endl;

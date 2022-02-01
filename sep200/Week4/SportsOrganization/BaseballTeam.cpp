@@ -16,7 +16,7 @@ BaseballTeam::BaseballTeam(const BaseballTeam& team) {
 	*this = team;//invoke the copy assignment
 }
 
-BaseballTeam::BaseballTeam(BaseballTeam&& team) noexcept {
+BaseballTeam::BaseballTeam(BaseballTeam&& team) noexcept {//move constructor
 	*this = std::move(team);//invoke the move assignment
 }
 
@@ -45,7 +45,7 @@ BaseballTeam& BaseballTeam::operator=(const BaseballTeam& team) {
 	return *this;
 }
 
-BaseballTeam& BaseballTeam::operator=(BaseballTeam&& team) noexcept {
+BaseballTeam& BaseballTeam::operator=(BaseballTeam&& team) noexcept {//move assignment
 	if (this != &team) {//do not move to yourself
 		//call the base class move assignment operator
 		(SportsOrganization&)*this = std::move(team);

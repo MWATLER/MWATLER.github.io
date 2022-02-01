@@ -22,6 +22,6 @@ public:
     void displayReport() const;
     ~Car();
 };
-
+//better to have these inside the class, because they only operate on Car objects
 void operator>>(Car& v1, Car& v2);
 void operator+=(Car& v, double fuel);

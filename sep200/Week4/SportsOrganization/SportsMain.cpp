@@ -53,8 +53,8 @@ int main() {
 	baseball2.SetAddress("4549 Av Pierre-de Coubert, Montreal, QC, H1V 3N7");
 
 	cout << "MOVE CONSTRUCTOR:" << endl;
-	cout << baseball;
-	cout << baseball2;
+	cout << baseball;//baseball is now in an empty state
+	cout << baseball2;//baseball2 has all the information from baseball1, with a changed name and address
 
 
 	return 0;

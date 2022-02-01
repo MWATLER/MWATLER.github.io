@@ -23,6 +23,6 @@ public:
     using Vehicle::displayReport;
     ~Train();
 };
-
+//better to have these inside the class, because they only operate on Train objects
 void operator>>(Train& v1, Train& v2);
 void operator+=(Train& v, double fuel);

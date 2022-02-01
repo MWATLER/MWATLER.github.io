@@ -13,7 +13,7 @@ HockeyTeam::HockeyTeam(std::string name, std::string address, int wins, int loss
 	numPlayers = 0;
 }
 
-HockeyTeam::HockeyTeam(const HockeyTeam& team) {
+HockeyTeam::HockeyTeam(const HockeyTeam& team) {//copy constructor
 	*this = team;//invoke the copy assignment
 }
 
@@ -21,7 +21,7 @@ HockeyTeam::HockeyTeam(HockeyTeam&& team) noexcept {
 	*this = std::move(team);//invoke the move assignment
 }
 
-HockeyTeam& HockeyTeam::operator=(const HockeyTeam& team) {
+HockeyTeam& HockeyTeam::operator=(const HockeyTeam& team) {//copy assignment
 	if (this != &team) {//do not copy to yourself
 		//call the base class copy assignment operator
 		(SportsOrganization&)*this = team;

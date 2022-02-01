@@ -8,7 +8,8 @@ using namespace std;
 
 //NOTE: Should have a default constructor
 
-Car::Car(string _make, string _model, string _colour, int _year) : Vehicle(_make, _model, _colour, _year)
+Car::Car(string _make, string _model, string _colour, int _year) : 
+	Vehicle(_make, _model, _colour, _year)
 {
     cout << "Car::Car" << endl;
     fuelInTank = 0;

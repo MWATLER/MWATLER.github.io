@@ -12,7 +12,7 @@ struct Sponsor {
 
 class SportsOrganization {
 	std::string address = "";
-	Sponsor* sponsor = nullptr;
+	Sponsor* sponsor = nullptr;//a resource
 	int numSponsors = 0;
 protected:
 	std::string name = "";//not good programming practice, better to use GetName()

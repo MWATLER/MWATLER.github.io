@@ -15,7 +15,7 @@ class HockeyTeam : public SportsOrganization {
 	int wins;
 	int losses;
 	int ties;
-	HockeyPlayer* player;
+	HockeyPlayer* player;//a resource
 	int numPlayers;
 public:
 	HockeyTeam(std::string name, std::string address, int wins, int losses, int ties);
