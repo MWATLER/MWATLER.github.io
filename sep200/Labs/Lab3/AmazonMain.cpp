@@ -42,9 +42,9 @@ int main() {
 	cin >> numAuthors;
 	DigitalMusic digitalMusic(title, numAuthors, price);
 
-	book.GetInformation();
-	dvd.GetInformation();
-	digitalMusic.GetInformation();
+	cout << book;
+	cout << dvd;
+	cout << digitalMusic;
 
 	double totalCost = book.CalculateCost();
 	totalCost += dvd.CalculateCost();
