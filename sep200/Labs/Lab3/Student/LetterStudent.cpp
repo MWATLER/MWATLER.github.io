@@ -4,7 +4,7 @@
 
 using namespace std;
 
-LetterStudent::LetterStudent(std::string _name, int _number, int* _marks, int _numMarks) :
+LetterStudent::LetterStudent(std::string _name, int _number, const int* _marks, int _numMarks) :
 Student(_name, _number, _marks, _numMarks){
 
 }

@@ -5,12 +5,12 @@
 
 int main() {
 	struct Automobile automobile = { 0 };
-/*	struct Automobile {
-		char model[MAX_STR];
-		char make[MAX_STR];
-		int year;
-		float price;
-	};*/
+	/*	struct Automobile {
+			char model[MAX_STR];
+			char make[MAX_STR];
+			int year;
+			float price;
+		};*/
 
 	printf("What is the model: ");
 	scanf_s("%s", automobile.model, MAX_STR);

@@ -15,7 +15,7 @@ protected:
 	int* GetMarks() const;
 	int GetNumMarks() const;
 public:
-	Student(std::string _name, int _number, int* _marks, int _numMarks);
+	Student(std::string _name, int _number, const int* _marks, int _numMarks);
 	double GetAverage() const;
 	void display(std::ostream& os) const;
 	~Student();

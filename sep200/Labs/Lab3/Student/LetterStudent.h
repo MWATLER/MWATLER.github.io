@@ -9,7 +9,7 @@
 class LetterStudent : public Student {
 	char GetLetterGrade(double mark) const;
 public:
-	LetterStudent(std::string _name, int _number, int* _marks, int _numMarks);
+	LetterStudent(std::string _name, int _number, const int* _marks, int _numMarks);
 	char GetAverage() const;
 	void display(std::ostream& os) const;
 	~LetterStudent();

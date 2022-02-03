@@ -4,10 +4,9 @@
 //miguel.watler@senecacollege.ca
 //1234567890
 //Section XXY
-#define MAX_STR 30
 
 struct EmployeeInformation {
-	char firstName[MAX_STR], lastName[MAX_STR];
+	char firstName[30], lastName[30];
 	int age;
 	float salary;//annual salary
 	int yearEmployed;
