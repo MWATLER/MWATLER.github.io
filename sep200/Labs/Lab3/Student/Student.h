@@ -6,11 +6,12 @@
 #include <iostream>
 
 class Student {
+	//these are common to this class and all derived classes
 	std::string name;
 	int number;
 	int* marks;
 	int numMarks;
-protected:
+protected://for derived classes only
 	std::string GetName() const;
 	int* GetMarks() const;
 	int GetNumMarks() const;
