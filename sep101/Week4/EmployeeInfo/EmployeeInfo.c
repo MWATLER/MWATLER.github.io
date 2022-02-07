@@ -21,7 +21,6 @@ int main(void)
 	//	};
 	for (int i = 0; i < NUM_EMPLOYEES; ++i) {
 		printf("\nEnter the employee's first name and last name: ");
-		//		fgets(employee[i].name, 30, stdin);
 		scanf("%s %s", employee[i].firstName, employee[i].lastName);
 		printf("Enter the employee's age: ");
 		scanf("%d", &employee[i].age);
@@ -44,7 +43,7 @@ int main(void)
 			employee[i].lastName,
 			employee[i].yearEmployed);
 		int yearsAgo = CURRENT_YEAR - employee[i].yearEmployed;
-		printf("This was %d years ago.\n\n", yearsAgo);
+		printf("This was %d year(s) ago.\n\n", yearsAgo);
 	}
 	return 0;
 }

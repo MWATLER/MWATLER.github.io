@@ -31,8 +31,8 @@ int main(void)
 		runningTotal = 0;
 		for (j = 0; j < NUM_MARKS; ++j) {//each mark for each student
 			printf("Enter mark %d for %s: ", j + 1, student[i].lastName);
-			scanf_s("%d", &student[i].marks[j]);
-			runningTotal += student[i].marks[j];
+			scanf_s("%d", &student[i].marks[j]);//i - index into the student array,
+			runningTotal += student[i].marks[j];//j - index into the marks array.
 		}
 		student[i].average = (float)runningTotal / NUM_MARKS;
 		if (student[i].average > 80) {
@@ -50,7 +50,7 @@ int main(void)
 	printf("\n");
 	printf("Here is the list of students, their averages and scholarships\n");
 	for (i = 0; i < NUM_STUDENTS; ++i) {
-		printf("%-10s has an average of %.2f and a scholarship of $%.2f\n",
+		printf("%-10s has an average of %.2f and a scholarship of $%.2f\n",//%-10s means left-justify the printout
 			student[i].lastName, student[i].average, student[i].scholarship);
 	}
 

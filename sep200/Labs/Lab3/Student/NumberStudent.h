@@ -7,7 +7,7 @@
 #include "Student.h"
 
 class NumberStudent : public Student {
-	int GetNumberGrade(double mark) const;
+	int GetNumberGrade(double mark) const;//private utility function
 public:
 	NumberStudent(std::string _name, int _number, const int* _marks, int _numMarks);
 	double GetAverage() const;

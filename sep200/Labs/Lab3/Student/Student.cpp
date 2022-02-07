@@ -52,7 +52,7 @@ void Student::display(std::ostream& os) const {
 }
 
 Student::~Student() {
-	delete[] marks;
+	delete[] marks;//no need to test if(marks!=nullptr)
 	marks = nullptr;
 }
 

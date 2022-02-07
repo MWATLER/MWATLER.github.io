@@ -9,7 +9,7 @@ Student(_name, _number, _marks, _numMarks){
 
 }
 
-char LetterStudent::GetLetterGrade(const double mark) const {
+char LetterStudent::GetLetterGrade(const double mark) const {//private utility function
 	char letterGrade;
 	if (mark >= 80.0) letterGrade = 'A';
 	else if (mark >= 70.0) letterGrade = 'B';
@@ -21,7 +21,7 @@ char LetterStudent::GetLetterGrade(const double mark) const {
 }
 
 char LetterStudent::GetAverage() const {
-	double average = Student::GetAverage();
+	double average = Student::GetAverage();//get the average as a percentage
 	char letterAverage = GetLetterGrade(average);
 
 	return letterAverage;
