@@ -43,7 +43,7 @@ iComponent* CreateComponent() {
 				comp = new Inductor(inductance);
 			}
 		}
-	} while (sel<1 || sel>3);
+	} while (sel<1 || sel>3);//validates the selection
 
 	return comp;
 }

@@ -8,9 +8,9 @@
 #include <iostream>
 #include "iComponent.h"
 
-class Component : public iComponent{
-	double voltage;
-	double current;
+class Component : public iComponent{//is-a relationship
+	double voltage;//has-a relationship
+	double current;//has-a relationship
 public:
 	Component() {
 		voltage = 0.0;

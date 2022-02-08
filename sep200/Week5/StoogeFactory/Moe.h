@@ -12,6 +12,9 @@ public:
     {
         std::cout << "Moe: slap head\n";
     }
+	~Moe() {
+		std::cout << "~Moe:" << std::endl;
+	}
 };
 
 #endif _MOE_H_

@@ -6,9 +6,10 @@
 #define _ICOMPONENT_H_
 
 class iComponent {
+	//no variables
 public:
-	virtual void SetCurrent(double) = 0;
-	virtual void PrintReport() = 0;
+	virtual void SetCurrent(double) = 0;//a pure virtual function
+	virtual void PrintReport() = 0;//a pure virtual function
 };
 
 iComponent* CreateComponent();

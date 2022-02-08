@@ -12,6 +12,9 @@ public:
     {
         std::cout << "Larry: poke eyes\n";
     }
+	~Larry() {
+		std::cout << "~Larry:" << std::endl;
+	}
 };
 
 #endif _LARRY_H_

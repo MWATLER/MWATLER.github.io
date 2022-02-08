@@ -12,6 +12,9 @@ public:
     {
         std::cout << "Curly: suffer abuse\n";
     }
+	~Curly() {
+		std::cout << "~Curly:" << std::endl;
+	}
 };
 
 #endif _CURLY_H_
