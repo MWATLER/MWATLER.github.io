@@ -66,7 +66,7 @@ int main() {
 			cout << "Problems parsing packet " << (i + 1) << endl;
 		}
 		else {
-			parser[i]->Report();
+			cout << *parser[i];
 		}
 	}
 

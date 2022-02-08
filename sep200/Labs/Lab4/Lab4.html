@@ -6,8 +6,8 @@
 
 <p>This program parses a network packet. This packet could be of type UDP or type TCP. Generally speaking, UDP is for unreliable but fast communications, and TCP is 
     for reliable but slower communications. Each packet has its own format. This has been described in detail in <a href="PacketParserMain.cpp" target="_blank">PacketParserMain.cpp</a>.
-Both parsers will accept a packet of type char* and parse and store relevant information from that packet. Both parsers will also provide a report. The function prototypes can be 
-found in the base class <a href="PacketParser.h" target="_blank">PacketParser.h</a>.</p>
+Both parsers will accept a packet of type char* and parse and store relevant information from that packet. Both parsers will also provide a report to an output stream. 
+The function prototypes can be found in the base class <a href="PacketParser.h" target="_blank">PacketParser.h</a>.</p>
 
 <h3>UDP Packet Parser</h3>
 <p>The UDP packet parser will extract the following information from the packet and store in class variables:</p>
@@ -19,10 +19,10 @@ found in the base class <a href="PacketParser.h" target="_blank">PacketParser.h<
     <li>checksum. This is the sum of the source port, the destination port, and the length. You have to calculate the checksum of the packet and compare to the 
         checksum found in the packet. If these numbers do not agree, then the data has been corrupted. The checksum in the packet is contained within the next
         two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to the lower byte.</li>
-    <li>data. The data is found within the next "length" bytes of the packet. You have to perform a <b>memcpy</b> from the data within the packet to 
+    <li>data. The data is found within the next "length" bytes of the packet. You have to perform a <a href="" target="_blank">memcpy</a> from the data within the packet to 
     the data variable of your class.</li>
 </ul>
-<p>After the packet has been parsed, the UDP packet parser will report the following in a separate function: the source port, the destination port, the data
+<p>After the packet has been parsed, the UDP packet parser will report to an output stream the following in a separate function: the source port, the destination port, the data
      length, and the data itself.</p>
 <p>Be sure to zero all members of the UDP packet parser on destruction.</p>
 
@@ -46,7 +46,7 @@ found in the base class <a href="PacketParser.h" target="_blank">PacketParser.h<
     <li>data. The data is found within the next "length" bytes of the packet. You have to perform a <b>memcpy</b> from the data within the packet to 
         the data variable of your class.</li>
 </ul>
-<p>After the packet has been parsed, the TCP packet parser will report the following in a separate function: the source port, the destination port, 
+<p>After the packet has been parsed, the TCP packet parser will report to an output stream the following in a separate function: the source port, the destination port, 
     the sequence number, the acknowledgement number, the data length, and the data itself.</p>
 <p>Be sure to zero all members of the TCP packet parser on destruction.</p>
 
