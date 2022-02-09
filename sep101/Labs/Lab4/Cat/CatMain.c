@@ -16,7 +16,7 @@ struct Cat {
 };*/
 int main() {
 	struct Cat theCat;
-	InitializeInfo(&theCat);
+	InitializeInfo(&theCat);//the address of theCat is passed through
 
 	//Enter info for the cat
 	printf("Enter the cat's name: ");
@@ -37,7 +37,7 @@ int main() {
 	double theAverage = 0.0;
 	int ret = GetAverageCostPerCat(theCat.toy, theCat.numToys, &theAverage);
 //  int GetAverageCostPerCat(struct CatToy cattoy[], int len, double* average);
-	PrintInfo(theCat);
+	PrintInfo(theCat);//is the address of theCat passed through, or just its values?
 //  void PrintInfo(struct Cat cat);
 
 	if (ret == 0) {
