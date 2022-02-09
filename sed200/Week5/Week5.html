@@ -469,8 +469,10 @@ Answer: The data acquisition system, the communications network, the data center
 <p style="color:blue"><b>What about the communications network? Will we piggy back off the internet? Have our own 
   network infrastructure? What type of communication will exist between the data acquisition systems and our data center?
 </b><br>
- Answer: We can piggy back off the internet unless we are at a remote part of the earth. Security is not a concern, but 
- error control coding is. TCP packets are secure and reliable, and since data rate is not high, there is no need for UDP.
+ Answer: We could piggy back off the internet. If the terrain is unstable, it is better to have our own networking
+ equipment. Security is not a concern, but 
+ error control coding is. If security is a concern, say someone wants to insert false data, then we need to encrypt the 
+ packets. TCP packets are secure and reliable, and since data rate is not high, there is no need for UDP.
  <b>What language are you going to write your networking software?</b> C or C++ on the data acquisition side.
 </p>
 
