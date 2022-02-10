@@ -1,4 +1,4 @@
-<h1>Week 8 - March 13-17</h1>
+<h1>Week 9 - March 13-17</h1>
 
 <h3>Introduction</h3>
 <p>This week we are going to study semaphores and shared memory.
@@ -94,4 +94,24 @@
         Each channel uses a part of shared memory. The clients write to one of the channels by writing into the channel's shared memory.
         The use of semaphores ensures that the number of clients writing to the radio's channels is limited to four.
     </li>    
+</ul>
+
+<p><em>Windows Shared Memory and Semaphores</em></p>
+<ul>
+    <li>The following code shows synchronization between three threads with an un-named semaphore:
+        <a href="Windows/Semaphore1/Client.cpp" target="_blank">Client.cpp</a>.<br>
+        See Chapter 6.5 of 
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997143391103226" target="_blank">Operating System Concepts</a>
+        for more information.<br>
+        There are many ways to synchronize between processes in Windows. See
+        <a href="https://docs.microsoft.com/en-us/archive/msdn-magazine/2012/november/windows-with-c-the-evolution-of-synchronization-in-windows-and-c" target="_blank">
+            Windows with C++ - The Evolution of Synchronization in Windows and C++</a> for more details.
+    </li>
+    <li>Code that shows two processes communicating through shared memory can be seen at:
+        <a href="Windows/SharedMemory/Client1.cpp" target="_blank">Client1.cpp</a> and
+        <a href="Windows/SharedMemory/Client2.cpp" target="_blank">Client2.cpp</a>.<br>
+        See Chapter 3.4 of 
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997143391103226" target="_blank">Operating System Concepts</a>
+        for more information.
+    </li>
 </ul>
