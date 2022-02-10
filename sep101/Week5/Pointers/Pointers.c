@@ -4,20 +4,19 @@
 //miguel.watler@senecacollege.ca
 //1234567890
 //Section XXY
-
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main()
 {
 	int x;
 //	int* p = NULL;
-//	p = &x;//p points to the address of x
-	int* p = &x; //initialization syntax: p points to the address of x
+	int* p = &x; //p points to the address of x
 	//value at p:  *p
 	//address of p: p
 	printf("Enter x : ");
-	scanf_s("%d", &x);//Note we pass the address of x to scanf()
-	                //so scanf() can change the value there
+	scanf_s("%d", &x);//Note we pass the address of x to scanf_s()
+	                  //so scanf_s() can change the value there
 	printf("Value stored in x : %d\n", x);
 	printf("Value stored in *p : %d\n", *p);
 	printf("Address of x      : %p\n", &x);

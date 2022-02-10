@@ -4,7 +4,7 @@
 //miguel.watler@senecacollege.ca
 //1234567890
 //Section XXY
-
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 #define SIZE 32
@@ -63,15 +63,14 @@ int TestForAlphaNumeric(char c) {
 //
 //Returns: 0 - found
 //        -1 - not found
-int SearchForChar(char theChar, char* theString, int len, int* location) {
-	                     //'c',      "abcd1234",       8, &seekCharIndex
-	int result = -1;//initialize to assume there is an error
-	*location = -1;//initialize to an invalid value
+int SearchForChar(char theChar, char* theString, int len, int* location) {//'c', "abcd1234", 8
+	int result = -1;
+	*location = -1;
 	for (int i = 0; (i < len) && (*location == -1); ++i) {
 		if (TestForAlphaNumeric(theString[i]) == 0) {
 			if (theChar == theString[i]) {//'c'
-				*location = i;//the location is now valid
-				result = 0;//return success
+				*location = i;
+				result = 0;
 			}
 		}
 	}
