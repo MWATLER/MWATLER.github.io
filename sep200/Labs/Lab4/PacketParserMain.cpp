@@ -28,6 +28,7 @@ using namespace std;
 //    Checksum of header, 16 bits
 //    Urgent pointer, 16 bits, unused - IGNORE2
 //    Options, variable length(usually 0) - IGNORE2
+//    Length, 16 bits
 //    Data, variable length(usually 0 - 1500)
 //Data (up to 1500 bytes)
 
