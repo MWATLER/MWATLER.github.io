@@ -7,8 +7,8 @@
 
 #include <stdio.h>
 
-void internal_swap(int a, int b);
-void internal_swap_ptr(int* a, int* b);
+void internal_swap(int a, int b);//pass by value
+void internal_swap_ptr(int* a, int* b);//pass by address
 
 int main()
 {

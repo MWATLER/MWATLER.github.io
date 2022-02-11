@@ -29,15 +29,15 @@ void InitializeInfo(struct Cat* cat) {//InitializeInfo(&theCat);
 
 //struct Cat theCat;
 //double theAverage;
-//int ret=GetAverageCostPerCat(theCat.toy, theCat.numToys, &theAverage);
-int GetAverageCostPerCat(struct CatToy cattoy[], int len, double* average) {
+//int ret=GetAverageCostPerToy(theCat.toy, theCat.numToys, &theAverage);
+int GetAverageCostPerToy(const struct CatToy cattoy[], int len, double* average) {
 	int retVal = 0;//error status variable
 	double runningTotal = 0.0;//used in calculating the average
 	for (int i = 0; i < len && retVal==0; ++i) {
-		if (cattoy[i].cost < 0) retVal = -1;
+		if (cattoy[i].cost < 0) retVal = -1;//validate the cost
 		else runningTotal += cattoy[i].cost;
 	}
-	if (retVal == 0) *average = runningTotal / len;//whatever I do to *average in GetAverageCostPerCat
+	if (retVal == 0) *average = runningTotal / len;//whatever I do to *average in GetAverageCostPerToy
 	                                               //I also do to theAverage in main.
 	                                               //This is because *average points to the same address
 	                                               //as theAverage
@@ -53,3 +53,15 @@ void PrintInfo(struct Cat cat) {//any changes to cat in PrintInfo will not affec
 			cat.toy[i].name, cat.toy[i].colour, cat.toy[i].cost);
 	}
 }
+/*struct CatToy {
+	char name[MAX_STR];
+	char colour[MAX_STR];
+	double cost;
+};
+
+struct Cat {
+	char name[MAX_STR];
+	int age;
+	struct CatToy toy[MAX_TOYS];
+	int numToys;
+};*/

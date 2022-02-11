@@ -5,8 +5,6 @@
 //1234567890
 //Section XXY
 
-
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "Math.h"//function declarations
 
@@ -35,7 +33,7 @@ int main(void)
 //
 //RETURNS:
 //  base to the power exponent
-double power(double base, int exponent)
+double power(double base, int exponent)//answer = power(base, exp);
 {
 	int i;
 	double result;

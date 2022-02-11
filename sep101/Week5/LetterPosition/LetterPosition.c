@@ -4,32 +4,33 @@
 //miguel.watler@senecacollege.ca
 //1234567890
 //Section XXY
-#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 
 #define SIZE 32
 
 int TestForAlphaNumeric(char c);
-int SearchForChar(char theChar, char* theString, int len, int* location);
+int SearchForChar(char theChar, const char theString[], int len, int* location);
 
 int main()
 {
-	char streamStr[SIZE];
+	char streamStr[SIZE];//streamStr is actually a pointer to the first value in the char array
+	                     //streamStr and &streamStr[0] are actually the same thing
 	char seekChar;
-	int seekCharIndex;
+	int seekCharIndex = 0;
 
 	printf("Enter a character to search for: ");
 	scanf_s("%c", &seekChar);//'c'
 	printf("Enter a string: ");
 	scanf_s("%s", streamStr, SIZE);//"abcd1234"
 						   // 'c'    "abcd1234"
-	int length = strlen(streamStr);
-	int err = SearchForChar(seekChar, streamStr, length, &seekCharIndex);
+	int length = strlen(streamStr);//strlen() is from the stdio.h library
+	int err = SearchForChar(seekChar, streamStr, length, &seekCharIndex);//int *location = &seekCharIndex;
 
 	if (err == -1)
 		printf("The character %c does not appear in %s", seekChar, streamStr);
 	else
-		printf("The character %c appears at position %d in %s", seekChar, seekCharIndex, streamStr);
+		printf("The character %c appears at index %d in %s", seekChar, seekCharIndex, streamStr);
 
 	return 0;
 }
@@ -63,13 +64,13 @@ int TestForAlphaNumeric(char c) {
 //
 //Returns: 0 - found
 //        -1 - not found
-int SearchForChar(char theChar, char* theString, int len, int* location) {//'c', "abcd1234", 8
+int SearchForChar(char theChar, const char theString[], int len, int* location) {//'c', "abcd1234", 8,
 	int result = -1;
-	*location = -1;
+	*location = -1;//seekCharIndex is also equal to -1 here
 	for (int i = 0; (i < len) && (*location == -1); ++i) {
 		if (TestForAlphaNumeric(theString[i]) == 0) {
 			if (theChar == theString[i]) {//'c'
-				*location = i;
+				*location = i;//seekCharIndex is also equal to i here
 				result = 0;
 			}
 		}

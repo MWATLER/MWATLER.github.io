@@ -35,8 +35,8 @@ int main() {
 	}
 
 	double theAverage = 0.0;
-	int ret = GetAverageCostPerCat(theCat.toy, theCat.numToys, &theAverage);
-//  int GetAverageCostPerCat(struct CatToy cattoy[], int len, double* average);
+	int ret = GetAverageCostPerToy(theCat.toy, theCat.numToys, &theAverage);
+//  int GetAverageCostPerToy(struct CatToy cattoy[], int len, double* average);
 	PrintInfo(theCat);//is the address of theCat passed through, or just its values?
 //  void PrintInfo(struct Cat cat);
 

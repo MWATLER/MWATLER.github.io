@@ -16,6 +16,6 @@ struct Cat {
 	int numToys;
 };
 
-void InitializeInfo(struct Cat* cat);
-int GetAverageCostPerCat(struct CatToy cattoy[], int len, double* average);
-void PrintInfo(struct Cat cat);
+void InitializeInfo(struct Cat* cat);//pass by address
+int GetAverageCostPerToy(const struct CatToy cattoy[], int len, double* average);
+void PrintInfo(struct Cat cat);//pass by value
