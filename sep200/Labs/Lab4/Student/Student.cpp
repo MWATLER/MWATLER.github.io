@@ -52,8 +52,7 @@ void Student::display(std::ostream& os) const {
 }
 
 Student::~Student() {
-	cout << "~Student:" << endl;
-	delete[] marks;
+	delete[] marks;//no need to test if(marks!=nullptr)
 	marks = nullptr;
 }
 

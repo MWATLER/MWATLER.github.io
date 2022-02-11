@@ -49,7 +49,7 @@ void NumberStudent::display(std::ostream& os) const {
 }
 
 NumberStudent::~NumberStudent() {
-	cout << "~NumberStudent:" << endl;
+
 }
 
 std::ostream& operator<<(std::ostream& os, NumberStudent& student) {
