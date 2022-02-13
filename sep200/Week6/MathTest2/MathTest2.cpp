@@ -14,11 +14,10 @@ int main() {
 
 	cout << endl;
 	double arr[4] = { 4.4, 5.5, 6.6, 2.2 };
-	double retVal = math[0]->AddSeries(arr);
-	cout << "AddSeries returns " << retVal << endl;
-
-	retVal = math[1]->MultiplySeries(arr);
-	cout << "MultiplySeries returns " << retVal << endl;
+	for (int i = 0; i < NUM_MATH; ++i) {
+		double retVal = math[i]->Calculate(arr);
+		cout << "Calculate returns " << retVal << endl;
+	}
 
 	for(int i=0; i<NUM_MATH; ++i) delete math[i];
 
