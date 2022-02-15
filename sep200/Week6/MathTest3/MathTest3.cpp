@@ -1,7 +1,7 @@
 //MathTest3.cpp - main function for math test 3
 
 #include <iostream>
-#include "MathBase.h"
+#include "MathCommon.h"
 #include "MathAdd.h"
 #include "MathMultiply.h"
 

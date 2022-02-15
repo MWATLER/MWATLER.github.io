@@ -1,6 +1,6 @@
 //MathTest2.h - class declarations for math base, math add, math subtract, math multiply, and math divide
 
-template<class T, int N>
+template<class T>
 class MathBase {
 public:
 	virtual T Calculate(T args[]) {
@@ -10,7 +10,7 @@ public:
 };
 
 template<class T, int N>
-class MathAdd : public MathBase<T, N> {
+class MathAdd : public MathBase<T> {
 public:
 	T Calculate (T args[]) {
 		T retVal = args[0];
@@ -22,7 +22,7 @@ public:
 };
 
 template<class T, int N>
-class MathMultiply : public MathBase<T, N> {
+class MathMultiply : public MathBase<T> {
 public:
 	T Calculate(T args[]) {
 		T retVal = args[0];

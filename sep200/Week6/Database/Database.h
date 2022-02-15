@@ -3,13 +3,13 @@
 #include <iostream>
 
 struct Database1 {
-	std::string name;
+	std::string name;//used as the key in the database
 	int age;
 	double salary;
 };
 
 struct Database2 {
-	std::string name;
+	std::string name;//used as the key in the database
 	std::string position;
 	int yearsWithCompany;
 };
@@ -18,11 +18,11 @@ template<class T, int N>
 class Database {
 public:
 	T data[N];
-	bool FindDataElement(std::string _name, T& element) {
+	bool FindDataElement(std::string key, T& element) {
 		bool found = false;
 		int index;
 		for (index = 0; index < N && !found; ++index) {
-			if (data[index].name == _name) {
+			if (data[index].name == key) {
 				element = data[index];
 				found = true;
 			}

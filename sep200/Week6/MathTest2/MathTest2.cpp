@@ -8,9 +8,9 @@ using namespace std;
 int main() {
 	const int NUM_MATH = 2;
 	const int NUM = 4;
-	MathBase<double, NUM>* math[NUM_MATH];
-	math[0] = new MathAdd<double, NUM>();
-	math[1] = new MathMultiply<double, NUM>();
+	MathBase<double>* math[NUM_MATH];//array of pointers of static type MathBase
+	math[0] = new MathAdd<double, NUM>();//the first pointer points to a MathAdd object
+	math[1] = new MathMultiply<double, NUM>();//the second pointer points to a MathMultiply object
 
 	cout << endl;
 	double arr[4] = { 4.4, 5.5, 6.6, 2.2 };
