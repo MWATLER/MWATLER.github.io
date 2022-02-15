@@ -6,6 +6,7 @@
 
 <h3>Videos</h3>
 <table>
+<!--<tr><td>Lecture Recording</td><td><a href="" target="_blank">Wednesday, February 16 (mp4)</a></td></tr>-->
   <tr><td>Engineering Design</td><td><a href="https://www.youtube.com/watch?v=ZHj7okiZZLk" target="_blank">The Engineering Design Process I</a></td></tr>
   <tr><td></td><td><a href="https://www.youtube.com/watch?v=uyuiMbQZBaU" target="_blank">The Engineering Design Process II</a></td></tr>
   <tr><td>Agile Software Development</td><td><a href="https://www.youtube.com/watch?v=GzzkpAOxHXs" target="_blank">Software Development Methodology: What is Agile?</a></td></tr>
@@ -26,10 +27,10 @@
 <p>An  ill-defined  problem  is  one  that  is  vaguely  or  ambiguously  formulated. 
   There are good reasons why engineering problems are initially poorly defined. 
   Even  when an engineering  problem has  been clearly  formulated and stated, it 
-  will  be  open-ended,  in  the  sense  that  there  will  not  be  a  single  “correct”  solution. 
+  will  be  open-ended,  in  the  sense  that  there  will  not  be  a  single  "correct"  solution. 
   Indeed,  a  characteristic  of engineering problems  is  that  there  are  alternative, 
-  potentially  acceptable  solutions.  The  problem  is  not  to  find  “the”  solution  but 
-  rather to find the “best” solution.</p>
+  potentially  acceptable  solutions.  The  problem  is  not  to  find  "the"  solution  but 
+  rather to find the "best" solution.</p>
 
 <p>At  the  commencement  of  an  engineering  project,  the  initial  state  will  not  be 
   known precisely and the target state is still undefined. In some situations it may be 
@@ -55,13 +56,17 @@ To find answers to such questions we need to look at problem-solving strategies.
   between  past  and  present  engineering  problems,  and  great  care  must  be  exercised 
   to  ensure  that  these  differences  are  allowed  for.</p>
 
+<p><b>Is it a good idea to keep a repository of reusable code?</b><br>
+Answer: Yes, absolutely!
+</p>
+            
 <h3>Problem-solving strategy</h3>
 
 <p>When faced with a problem that is both ill-defined and open-ended, common sense 
   suggests  that  the  first  step  should  be  to  clarify  the  problem  and  re-state  it  in  clear 
   and  unambiguous  terms,  in  so  far  as  this  is  possible.  If  a  range  of  alternative 
   approaches  can  be  found,  after  the  problem  has  been  clearly  formulated,  then  the 
-  initial instinct may well be to choose the most “obvious” one and develop this into 
+  initial instinct may well be to choose the most "obvious" one and develop this into 
   a solution.</p>
 
 <p>On  reflection,  however,  it  becomes  clear  that  intuition  alone  will  not  lead 
@@ -70,6 +75,13 @@ To find answers to such questions we need to look at problem-solving strategies.
   look for as many different solutions as possible, that are feasible and promising. To 
   be able to do this, we need to formulate the problem in general (not over-specific) 
   terms so that unusual but promising solutions are not excluded.</p>
+
+<p><b>In software engineering terms, what do you call an approach where you assume an answer, then 
+  work backwards to see if the answer is correct?</b><br>
+Answer: A heuristic algorithm. Also referred to as an NP problem. See
+<a href="https://optimization.mccormick.northwestern.edu/index.php/Heuristic_algorithms" target="_blank">Heuristic algorithms</a>
+</p>
+ 
 
 <p>Our  search  for  unusual  but  promising  ideas  will  not  be  successful  if  we  use 
   convergent  thinking  and  rely  on  an  analytic  approach.  We  need  to  use  divergent, 
@@ -83,6 +95,10 @@ To find answers to such questions we need to look at problem-solving strategies.
   steps are listed below.</p>
 
 <img src="SolvingProblems.PNG" alt="Strategy for Solving Problems">
+
+<p><b>With such an approach, would it be useful to assign numbers to each criteria and a weighting factor for each criteria?</b><br>
+Answer: Yes, that is often what's done.
+</p>
 
 <h3>Methodology for complex engineering problems</h3>
 
@@ -144,6 +160,10 @@ To find answers to such questions we need to look at problem-solving strategies.
   from  this  step  is  of  course  a  short  list  of  acceptable  approaches,  which  will 
   demonstrate  feasibility.  </p>
 
+<p><b>What greatly helps a feasibility study?</b><br>
+Answer: A working prototype.
+</p>
+
 <p>In  the  third  phase  of  the  process, <i>preliminary  planning</i>,  further  rounds  of 
   comparisons  and  evaluations  are  carried  out,  in  order  to  identify  the  best  option. 
   The comparisons now require more detailed analysis and evaluation than 
@@ -167,6 +187,28 @@ To find answers to such questions we need to look at problem-solving strategies.
   undertaken when the planning and design work has been completed. This is not so. 
   Whatever form the implementation takes, it is almost always necessary to return to 
   and revise some of the earlier planning work.</p>
+<p><b>Which is more costly, to fix a mistake in the problem formulation, or a mistake in implementation?</b><br>
+Answer: problem formulation, because you have to make modifications to all the steps below it.
+</p>
+
+<p><b>What percentage of the schedule is spent on Design? Implementation? Testing and Rework?</b><br>
+Answer: 20% design, 40% implementation, 40% testing and rework.
+</p>
+
+<p><b>How true are these ratios with the assignments you have done so far?</b><br>
+Answer: 40-20-40, 30-30-40, etc...
+</p>
+
+<p><b>When you look at the approach to design so far, which project management methodology is more suitable, 
+  the <a href="https://www.tutorialspoint.com/sdlc/sdlc_waterfall_model.htm" target="_blank"> waterfall</a> model or the 
+  <a href="https://www.tutorialspoint.com/sdlc/sdlc_agile_model.htm" target="_blank">agile</a> model?</b><br>
+Answer: For small projects, waterfall is more suitable. For large projects, agile is more suitable, but 
+  the waterfall model can be used in sub-components of the project.
+</p>
+
+<p><b>Within your own company, which departments do you think you have to consult with, while working out the 
+  design and implementation of the project?</b><br>
+  Answer: Marketing, manufacturing...</p>
 
 <h2>The Design Process</h2>
 
@@ -179,13 +221,7 @@ To find answers to such questions we need to look at problem-solving strategies.
 
   <img src="DesignProcess.PNG" alt="The Design Process">
 
-  <p>The most general, far-reaching and financially most important design 
-    decisions  are  made  in  the  initial  stages  of  the  concept  design,  when  new,  original 
-    and  unusual  approaches  are  sought.  As  the  design  proceeds  towards  the  detailed 
-    phase,  the  design  decisions  become  more  and  more  specific,  and  they  have  less 
-    impact on overall costs.</p>
-
-<p>The The most general, far-reaching and financially most important design 
+<p>The most general, far-reaching and financially most important design 
 decisions  are  made  in  the  initial  stages  of  the  concept  design,  when  new,  original 
 and  unusual  approaches  are  sought.  As  the  design  proceeds  towards  the  detailed 
 phase,  the  design  decisions  become  more  and  more  specific,  and  they  have  less 
@@ -201,16 +237,16 @@ impact on overall costs.</p>
 
 <p>In  the  detailed  design  phase,  the  aim  is  to  take  the  best  approach,  now 
   identified, and generate all the information needed to allow full implementation.  If 
-  one  concept  has  been  clearly  identified  at  an  early  stage  as  the  best,  then  a  fair 
+  one  concept  has  been  clearly  identified  at  an  early  stage  as  the    best,  then  a  fair 
   amount  of  additional,  detailed  work  will  be  required  in  this  phase.  On  the  other 
   hand, the effort needed in the detailed design is correspondingly reduced when the 
   chosen concept has already been investigated in some detail.</p>
 
 <p><i>Something  which  is  often  forgotten  or  misunderstood  is  that  the  vast  majority 
-  of  the  work  involved  in  design  is  finding  out  what  the  problem  really  is–  and 
-  it’s  rarely  what  you  think  it  is.  More  often  than  not  the  client  is  asking  the 
-  wrong question. Once you’ve found out what the problem really is, then things 
-  virtually design themselves because you’ve so comprehensively understood the 
+  of  the  work  involved  in  design  is  finding  out  what  the  problem  really  is -  and 
+  it's  rarely  what  you  think  it  is.  More  often  than  not  the  client  is  asking  the 
+  wrong question. Once you've found out what the problem really is, then things 
+  virtually design themselves because you've so comprehensively understood the 
   problem that the solution is self-evident.</i></p>
 
 <h2>Problem Formulation Phase in Planning and Design</h2>
@@ -227,11 +263,27 @@ impact on overall costs.</p>
 <p>An  engineering  project  can  begin  as  a  response  to 
   perceived  needs  in  the  community,  and  the  objectives  may  be  initially  poorly 
   defined.  The  problem  as  stated  may  be  too  vague;  alternatively,  the  problem  may 
-  be  stated  in  over-precise  terms  which  imply  an  “obvious”  solution.  In  the  latter 
+  be  stated  in  over-precise  terms  which  imply  an  "obvious"  solution.  In  the  latter 
   case, the implied  solution will rarely  be the  only  possible one, and may not be the 
   best one. It is therefore important to begin the problem formulation phase by trying 
   to identify the problem as part of a wider or larger problem.</p>
 
+<p><b>A remote village in South America was identified as one requiring a well. The villagers had to walk for 
+  at least half an hour to a nearby river and bring water back to the village. A social worker therefore 
+  initiated the construction of a well for the villagers. The villagers did not use the well. Why?</b><br>
+Answer: It turns out these villagers met members of other villages at the river. The trip to the 
+river was not just for water. It provided a social function.
+</p>
+<p><b>A remote village in South America was having a mild problem with famine. A social worker received funds 
+  to aid to assist in the resolution of this problem. Instead of buying more seed and better farm equipment, 
+  the social worker decided to let the villagers decide how to overcome this problem. They took the funds and 
+  cleared out a field, put two goal posts at either side, and had soccer games instead. Do you think this 
+  worked in alleviating the food problem?</b><br>
+Answer: Actually it did. The leaders of the village noted the low morale of the villagers and figured 
+weekly soccer games would go far to improving their social cohesion. As a natural result, they worked more 
+effectively in the fields during the week and food production improved.
+</p>
+  
 <h3>Identifying each engineering system as a component of a wider system</h3>
 
 <p>To assist in identifying the  problem  as  part of a wider problem, it can be useful to 
@@ -385,6 +437,55 @@ impact on overall costs.</p>
   recognised after some background information has been gathered. It will also be
   necessary to return to the problem formulation phase as we proceed through the
   later phases of planning and design.</p>
+
+
+  <h2 style="color:blue">A Design Problem - Earthquake Early Warning System</h2>
+
+  <p style="color:blue">You have to design an earthquake early warning system. You wish to 
+  base it on the following piece of hardware which acts as a 
+  <a href="https://whatis.techtarget.com/definition/transducer" target="_blank">transducer</a> that 
+  converts seismic activity into an electronic voltage:<br>
+<img src="EarthQuakeWarningSystem/DataAcquisitionSystem.png" alt="Data Acquisition System"><br><br>
+Many of these devices will be deployed over a wide area, and will communicate with a data center as 
+well as any relevant institutions:<br>
+<img src="EarthQuakeWarningSystem/EarthQuakeEarlyWarning.jpg" alt="Earthquake Early Warning System"><br><br><br>
+There already exists a product that somewhat performs this function. You can look at it for ideas for 
+your own system:<br><br>
+<img src="EarthQuakeWarningSystem/EarthQuakeWarningSystemWinPAC.gif" alt="WinPAC Earthquake Early Warning System"><br><br>
+</p>
+
+<p style="color:blue"><b>You have to flesh out this problem into relevant component parts. What parts are there?</b><br>
+Answer: The data acquisition system, the communications network, the data center
+</p>
+
+<p style="color:blue"><b>For the data acquision system, data is being dumped into RAM starting from a known address. 
+  The data rate is not that high. How will we collect and transmit this data? Is there any other information we wish to append to this data?</b><br>
+ Answer: Shared memory. Put the data into a queue with one thread. In the other thread, filter out relevant data only, 
+ then append any additional information such as GPS location, time stamp, error control coding,...<br>
+ <b>What language are you going to write this code in?</b> C or C++. This is low level programming.
+</p>
+  
+
+<p style="color:blue"><b>What about the communications network? Will we piggy back off the internet? Have our own 
+  network infrastructure? What type of communication will exist between the data acquisition systems and our data center?
+</b><br>
+ Answer: We could piggy back off the internet. If the terrain is unstable, it is better to have our own networking
+ equipment. Security is not a concern, but 
+ error control coding is. If security is a concern, say someone wants to insert false data, then we need to encrypt the 
+ packets. TCP packets are secure and reliable, and since data rate is not high, there is no need for UDP.
+ <b>What language are you going to write your networking software?</b> C or C++ on the data acquisition side.
+</p>
+
+
+<p style="color:blue"><b>Your data center is going to require an extensive graphical user interface as well as 
+  the implementation of algorithms for analyzing and presenting the data. What language(s) would the web based
+  graphical user interface be written in?
+</b><br>
+ Answer: Most likely HTML and JavaScript. Could be in C#. Could be in Java.<br>
+ <b>What about your algorithms? What language?</b> Most likely Python. Python is a great "glue-like" language 
+ that can implement algorithms, interact with the web-interface, and extract packets off our communications network.
+ C# and Java are good general purpose languages that could perform all these functions, but not as well.
+</p>
 
   <h2>FEASIBILITY STUDY AND CONCEPT DESIGN</h2>
 
@@ -580,9 +681,9 @@ impact on overall costs.</p>
   undertaken there is a risk of failure that, although small, is real and unavoidable.
   However, the levels of risk are controllable to some extent, and can be reduced to
   very small values that are acceptable to the community.</p>
-<p>It is important to note that the term “failure” can mean different things to
+<p>It is important to note that the term "failure" can mean different things to
   different people, and within the context of engineering work, it can be used with
-  different meanings in different contexts. From the designer’s point of view, a 
+  different meanings in different contexts. From the designer's point of view, a 
   practical and useful engineering approach is to say that failure occurs if the 
   performance of the system does not meet the performance levels that were set for 
   it. These performance levels are carefully chosen during the design process when 
@@ -595,7 +696,7 @@ impact on overall costs.</p>
   made in the initial investigation stages of the project and from an incomplete and
   inadequate understanding of the problem.</p>
 <p>Irrespective of the way we choose to define failure, there can be many
-  different possible forms, or “modes”, of failure to consider. Furthermore, the
+  different possible forms, or "modes", of failure to consider. Furthermore, the
   consequences of the different failure modes can vary enormously.</p>
 <p>In any project, the designer must identify the possible modes of failure,
   evaluate the likely consequences of each mode, and design the system so that there
@@ -636,15 +737,15 @@ impact on overall costs.</p>
   views and opinions in the community. According to Rittel and Weber (1993),
   wicked problems cannot be adequately formulated because additional relevant
   aspects are continually brought up for consideration. They suggest that a solution
-  only occurs when a decision is made that the current trial solution is “good
-  enough”. It follows that there is no correct or best solution to a wicked problem,
+  only occurs when a decision is made that the current trial solution is "good
+  enough". It follows that there is no correct or best solution to a wicked problem,
   only that alternative solutions can be identified, compared and ranked. They also
   consider that each wicked problem will be unique, and that each wicked problem
   will lead to another problem.</p>
 <p>Perhaps inevitably, sub-classifications of wicked problems have been
   proposed: super-wicked problems have been defined as wicked problems which
   have serious time constraints imposed on them, and which are partly caused by the
-  same people that are dealing with the problem. The term “mess” was introduced by
+  same people that are dealing with the problem. The term "mess" was introduced by
   Ackhoff (1974) to describe a set of inter-related problems, or a system of
   problems. Further information on wicked problems and social messes can be found
   in the book by Ritchey (2011).</p>
@@ -747,7 +848,7 @@ impact on overall costs.</p>
   work of a software development team. The aim is quick delivery of software, with
   an ability to respond rapidly to changes in requirements, to emerging technologies,
   and to changing user requirements (Schwaber and Beedle, 2002). The word
-  “scrum” comes from the game of rugby football. In the scrum approach, a small
+  "scrum" comes from the game of rugby football. In the scrum approach, a small
   team works closely together to produce new software components on a continuing,
   regular basis. Various roles are allocated to the team members. There is a product
   owner, who represents the interests of the customer or end user, but is also
@@ -784,7 +885,7 @@ impact on overall costs.</p>
   mode of operation to another. Even when significant advantages are to be found in
   employing an agile approach, a too-rapid change in the management approach
   would cause disruption in any organisation. Careful planning for the changeover
-  would be essential. A useful approach might be a step-by-step “hybrid” alternative,
+  would be essential. A useful approach might be a step-by-step "hybrid" alternative,
   in which some suitable parts of the project are chosen and managed using agile
   principles. Components of both approaches could in fact be cherry-picked to obtain
   advantages from both approaches</p>
