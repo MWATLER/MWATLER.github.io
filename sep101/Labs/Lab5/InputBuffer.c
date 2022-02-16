@@ -23,9 +23,6 @@ int main() {
 
 		printf("%s lives at %s and is %d years old.\n", name, address, age);
 	}
-
-
-
 	return 0;
 }
 
