@@ -1,28 +1,29 @@
 //IncomeTax.c - program for income taxes
 
+#define _CRT_SECURE_NO_WARNINGS
 #define NUM_CLIENTS 3
 #include <stdio.h>
 #include "IncomeTax.h"
 
 int main(void) {
-	struct Person person[NUM_CLIENTS] = { 0 };
+	struct Person person[NUM_CLIENTS];
 
     //Prompt for user input
 	for (int i = 0; i < NUM_CLIENTS; ++i) {
 		printf("\n");
 		printf("Enter the name for person %d: ", i + 1);
-		scanf_s("%[^\n]s", person[i].name, MAX_STR);//scan to the end of the line
+		scanf("%[^\n]s", person[i].name);//scan to the end of the line
 		utilClearInputBuffer();
 		printf("Enter %s's social insurance number: ", person[i].name);
-		scanf_s("%d", &person[i].sin);
+		scanf("%d", &person[i].sin);
 		printf("Enter %s's annual income: $", person[i].name);
-		scanf_s("%f", &person[i].annualIncome);
+		scanf("%f", &person[i].annualIncome);
 		printf("Enter %s's charitable donations: $", person[i].name);
-		scanf_s("%f", &person[i].donations);
+		scanf("%f", &person[i].donations);
 		printf("Enter %s's dependencies (children under 18): ", person[i].name);
-		scanf_s("%d", &person[i].dependencies);
+		scanf("%d", &person[i].dependencies);
 		printf("Enter %s's RRSP contributions: $", person[i].name);
-		scanf_s("%f", &person[i].rrspContribution);
+		scanf("%f", &person[i].rrspContribution);
 		CalculateDeductible(&person[i]);
 		CalculateIncomeTax(&person[i]);
 		utilClearInputBuffer();
@@ -31,8 +32,10 @@ int main(void) {
 	//Print a report for all the clients
 	for (int i = 0; i < NUM_CLIENTS; ++i) {
 		printf("\n");
-		printf("%s with SIN %9d has an annual income of $%.2f.\n", person[i].name, person[i].sin, person[i].annualIncome);
-		printf("%s has deductibles worth $%.2f and will have to pay $%.2f of income tax.\n", person[i].name, person[i].deductibles, person[i].incomeTax);
+		printf("%s with social insurance number %9d has an annual income of $%.2f.\n", 
+			person[i].name, person[i].sin, person[i].annualIncome);
+		printf("%s has deductibles worth $%.2f and will have to pay $%.2f of income tax.\n", 
+			person[i].name, person[i].deductibles, person[i].incomeTax);
 	}
 
 	return 0;
@@ -48,7 +51,7 @@ void CalculateDeductible(struct Person* person) {
 	person->deductibles += (float)0.22 * person->rrspContribution;
 }
 
-void CalculateIncomeTax(struct Person* person) {
+void CalculateIncomeTax(struct Person* person) {//assumes deductibles have already been calculated
 	float incomeAfterDeductibles = person->annualIncome - person->deductibles;
 	if (incomeAfterDeductibles > 100000.0) {
 		person->incomeTax = (float)0.45 * incomeAfterDeductibles;
@@ -63,3 +66,12 @@ void CalculateIncomeTax(struct Person* person) {
 		person->incomeTax = (float)0.0;
 	}
 }
+/*Deductible expenses are calculated as follows:
+deductible = charitable donations + $1000 x number of children under 18 + 0.22xRRSP contributions.
+Income after deductible is calculated as follows:
+income after deductible = income - deductible
+You are taxed on your income after deductible (IAD) as follows:
+If the IAD is greater than $100,000, taxes = IAD*0.45
+If the IAD is greater than $50,000, taxes = IAD*0.35
+If the IAD is greater than $25,000, taxes = IAD*0.25
+If the IAD is $25,000 or less, taxes = 0*/

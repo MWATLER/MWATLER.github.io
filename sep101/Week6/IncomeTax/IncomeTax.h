@@ -16,3 +16,9 @@ struct Person {
 void utilClearInputBuffer();
 void CalculateDeductible(struct Person* person);
 void CalculateIncomeTax(struct Person* person);
+/*We want to write software that will calculate your income tax based on your income 
+and deductible expenses. We want to do this for three people.
+
+Each person should enter his/her last name, social insurance number, annual income, 
+and zero or more of the deductible expenses (charitable donations, number of children 
+under 18, and RRSP contributions). From this data the income tax is calculated.*/
