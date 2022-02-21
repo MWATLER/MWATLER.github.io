@@ -16,7 +16,7 @@ public:
 	Person() {
 		name = nullptr;
 	}
-	Person(const char *_name){
+	Person(const char* _name) {
 		int len = strlen(_name) + 1;
 		name = new char[len];
 		strcpy(name, _name);
@@ -40,9 +40,9 @@ public:
 		//SetMarks(rhs.marks, rhs.numMarks)
 		marks = nullptr;
 		*this = st;
-/*		marks = new double[st.numMarks];
-		numMarks = st.numMarks;
-		for (int i = 0; i < numMarks; ++i) marks[i] = st.marks[i];*/
+		/*		marks = new double[st.numMarks];
+				numMarks = st.numMarks;
+				for (int i = 0; i < numMarks; ++i) marks[i] = st.marks[i];*/
 	}
 	Student& operator=(const Student& rhs) {
 		if (this != &rhs) {
@@ -53,6 +53,25 @@ public:
 			marks = new double[rhs.numMarks];
 			numMarks = rhs.numMarks;
 			for (int i = 0; i < numMarks; ++i) marks[i] = rhs.marks[i];
+		}
+		return *this;
+	}
+	Student(Student&& st) noexcept {
+		*this = std::move(st);
+	}
+	Student& operator=(Student&& rhs) {
+		if (this != &rhs) {
+			//shallow copies
+			Person::SetName(rhs.GetName());
+			numMarks = rhs.numMarks;
+			//remove the resource on the current object
+			delete[] marks;
+			//take control of the resource on the rhs
+			marks = rhs.marks;
+			//put the rhs into an empty state
+			rhs.SetName("");
+			rhs.numMarks = 0;
+			rhs.marks = nullptr;
 		}
 		return *this;
 	}
@@ -91,5 +110,8 @@ int main(void) {
 	std::cout << student3.GetName() << " has an average of " << student3.GetAverage() << "%" << std::endl;
 	std::cout << student4.GetName() << " has an average of " << student4.GetAverage() << "%" << std::endl;
 
+	Student student5(std::move(student4));
+	std::cout << student4.GetName() << " has an average of " << student4.GetAverage() << "%" << std::endl;
+	std::cout << student5.GetName() << " has an average of " << student5.GetAverage() << "%" << std::endl;
 	return 0;
 }
