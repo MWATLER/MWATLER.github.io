@@ -34,7 +34,7 @@
   The first is the capital cost and the second is the cost of operating, administering,
   maintaining and replacing the product or system. The second outlay, the running cost, can
   often exceed the capital cost and is a function of reliability. Indeed, because of the
-  disastrous financial consequences of equipment failure most customers specify tightly
+  disastrous financial consequences of equipment failure most customers specify tight
   reliability conditions.</p>
 <p>One hundred per cent reliability testing is unthinkable since this implies that there would
   be no products for sale. The time required for reliability testing depends on the failure rate
@@ -158,6 +158,14 @@
   can break and the wheel will still function. This is called partial redundancy.</li>
 </ul></p>
 
+<p><b>Can you apply the above reasoning to inheritance vs composition in object-oriented programming?</b><br>
+<!--Answer: Composition is considered more reliable. Stacking classes in an inheritance hierarchy can introduce 
+errors. See 
+<a href="https://www.thoughtworks.com/en-ca/insights/blog/composition-vs-inheritance-how-choose" target="_blank">Composition vs. Inheritance: How to Choose?</a>,
+<a href="http://www.differencebetween.net/technology/difference-between-composition-and-inheritance/" target="_blank">Difference Between Composition and Inheritance</a>, and the video
+<a href="https://www.youtube.com/watch?v=wfMtDGfHWpA" target="_blank">Composition over Inheritance</a> (the first 3min 45sec, JavaScript).-->
+</p>
+
 <h2>FMEA</h2>
 
 <p>Failure Modes and Effects Analysis (FMEA) was first used in the 1960s by the
@@ -220,6 +228,23 @@
 
 <img src="Detectability.PNG" alt="Detectability"><br><br>
 
+<p><b>Perform a failure mode and effects analysis on a passenger airplane. Estimate the severity, 
+  the failure rate, the risk priority number and mitigation plan for each component on the plane:<br>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}  
+</style>
+  <table>
+    <tr><td>Component</td><td>Severity</td><td>Failure Rate</td><td>Risk Priority Number</td><td>Mitigation Plan</td></tr>
+    <tr><td>Altimeter</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Auto-Pilot</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Throttle</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Air Pressure</td><td></td><td></td><td></td><td></td></tr>
+  </table>
+</b></p>
+
 <h2>Design for Quality</h2>
 
 <p>In the increasingly global competitive world in which companies must operate, persistent
@@ -230,9 +255,9 @@
   The difference between the two is the time element, reliability being concerned with how
   long quality exists.</p>
 <p>A simple example which illustrates the difference between quality and reliability is a car
-  tyre. The performance in cornering and braking deteriorates as the tyre wears. In other
-  words, the quality deteriorates until it reaches an unacceptably low level and the tyre is
-  replaced. By contrast, reliability is more a measure of the frequency with which tyre bursts
+  tire. The performance in cornering and braking deteriorates as the tire wears. In other
+  words, the quality deteriorates until it reaches an unacceptably low level and the tire is
+  replaced. By contrast, reliability is more a measure of the frequency with which tire bursts
   occur.</p>
 
 <p>The old concepts of improving product quality by controlling manufacturing processes
@@ -261,28 +286,6 @@
   of a transmitted signal with the level of interference. There are three signal to noise ratios
   in general use: nominal, as in the case of colour density of a television; minimization, as for
   weight and noise; and maximization of such as strength or power.</p>
-<p>The approach is to identify those control factors which are insensitive to noise factors
-  and particularly those which exhibit non-linearity. The aim is to reduce the sensitivity of
-  products to the source of variation. As an example consider the design of an electrical
-  power supply circuit, the characteristics of which are illustrated in Fig. 7.10. Following
-  conceptual (system) design the components making up the circuit are selected. There are
-  many combinations of resistance, capacitance and transistor characteristics which will
-  provide a functioning circuit.</p>
-
-<img src="Transistor.PNG" alt="Transistor characteristics">
-  
-<p>If the desired output is 240volts then parameter design seeks to reduce the variability
-  about this mean for all circuits produced, without significant increase in associated costs.
-  The output voltage can be determined by the gain on the transistor, which is non-linear. In
-  order to obtain an output voltage of 240 V the designer selects gain A*. If the actual gain
-  deviation is as represented by the area under the normal curve then the voltage will also
-  deviate about the target of 240 V. An alternative course of action is to use the effect of the
-  non-linearity of the gain curve. If the flatter part of the curve were used, the target voltage
-  would increase to around 270 V but the deviation about this value would be reduced.</p>
-<p>Such adjustment of target value, and the introduction of an extra component, in this case
-  a resistor to reduce 270 V to 240 V, must be considered carefully. It can often be a simpler
-  and more cost effective way of controlling variance. Obviously the variance of the resistor
-  must also be taken into account.</p>
 <p>It is common practice to specify constraints in the PDS in terms of the limits of
   tolerance. If parameter design is to make its full impact then this must change and the
   constraints in the PDS must be specified in terms of target or ideal values with
@@ -304,3 +307,43 @@
   Techniques used later, during manufacturing or process design can reduce variance
   introduced due to, for example, manufacturing tolerances and material imperfections.
   However, even these can be most effectively tackled during design.</p>
+
+<h3>Electronic Components - Achieving Linearity</h3>
+
+<p>The transistor is a non-linear electronic component. This means it is difficult to 
+  mathematically predict its behaviour. It can be put into a linear state with support components however. 
+  The below image shows the <b>Beta</b> of a transistor, meaning the current through the emitter is 
+  equal to the current through the base times <b>Beta</b>.</p>
+<img src="TransistorGain.jpg" alt="The Gain of a Transistor"><br><br>
+  
+<p>Without support components, the gain of 
+  this transistor would be <b>Beta</b>. But <b>Beta</b> varies widely from one transistor to another, 
+  even between transistors of the same type. So impedance is introduced on its emitter and collector.
+  The gain now becomes a function of these impedances, rather than a function of the transistor's <b>Beta</b>.
+</p>
+<img src="TransistorGainFeedback.jpg" alt="The Gain of a Transistor with Feedback" style="width:25%; height:25%"><br><br>
+
+<p>The operational amplifier has a very large <b>Beta</b>. When a voltage is applied between its plus 
+and minus terminals, the output voltage is <b>Beta</b> times this difference. Practically, it can only 
+be used as a comparator in this configuration.</p>
+<img src="OpAmpOpenLoopGain.jpg" alt="The Open Look Gain of an Op Amp" style="width:35%; height:35%"><br><br>
+
+<p>When impedances are introduced, the now becomes a function of these impedances rather than a 
+  function of the op amp's <b>Beta</b>.
+</p>
+<img src="OpAmpClosedLoopGain.png" alt="The Gain of an Op Amp with Feedback" style="width:25%; height:25%"><br><br>
+
+<p>The diode's behaviour is non-linear. It behaves a certain way when a negative voltage is applied 
+  across it (reverse biased), and another wey when a positive voltage is applied across it (forward biased). 
+  Even though it's behaviour is well known mathematically, it is impossible to solve for the current in a 
+  circuit with a diode unless we apply a heuristic algorithm.
+</p>
+
+<img src="Diode.png" alt="The Diode" style="width:35%; height:35%"><br><br>
+
+<p>In electronic circuits, for simplicity, diodes are often modelled as a closed circuit with a 
+  constant voltage drop (0.3 for Germanium diods, 0.7 for Silicon diodes) when forward biased, 
+  or as an open switch when reverse biased.
+</p>
+
+<img src="DiodeModel.png" alt="Modelling a Diode" style="width:25%; height:25%"><br><br>
