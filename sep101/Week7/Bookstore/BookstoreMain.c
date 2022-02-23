@@ -12,12 +12,12 @@ int main() {
 	printf("Enter the filename for the bookstore database: ");
 	scanf("%s", fileName);
 
-	retVal = GetInformationFromFile(&bookstore, fileName);
+	retVal = GetInformationFromFile(&bookstore, fileName);//bookstore is passed by address
 	if (retVal == 0) {
-		double worth = CalculateNetWorth(bookstore);
-		double profit = CalculateProfits(bookstore);
-		double profitBooks = CalculateProfitsByBooks(bookstore.book);
-		double profitDVDs = CalculateProfitsByDVDs(bookstore.dvd);
+		double worth = CalculateNetWorth(bookstore);//bookstore is passed by value
+		double profit = CalculateProfits(bookstore);//bookstore is passed by value
+		double profitBooks = CalculateProfitsByBooks(bookstore.book);//bookstore is passed by value
+		double profitDVDs = CalculateProfitsByDVDs(bookstore.dvd);//bookstore is passed by value
 
 		printf("\n");
 		printf("The %s book store at %s has the following items:\n", bookstore.name, bookstore.address);
@@ -41,7 +41,7 @@ int main() {
 		utilClearInputBuffer();
 		scanf("%[^\n]s", itemName);
 
-		int ret = ChangePriceOfItem(&bookstore, itemName);
+		int ret = ChangePriceOfItem(&bookstore, itemName);//bookstore is passed by address
 		if (ret == 0) {
 			printf("\n");
 			printf("The %s book store now has the following items:\n", bookstore.name);

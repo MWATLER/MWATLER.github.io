@@ -121,16 +121,18 @@ int ChangePriceOfItem(struct Bookstore* bookstore, char itemName[]) {
 	int retVal = 0;
 	int found = 0;
 	for (int i = 0; i < NUM_BOOKS && found == 0; ++i) {
-		if (strcmp(itemName, bookstore->book[i].name) == 0) {
+		if (strcmp(itemName, bookstore->book[i].name) == 0) {//strcmp returns 0 when there is a match
 			found = 1;
-			printf("%s is a book. Enter the new price for %s: $", bookstore->book[i].name, bookstore->book[i].name);
+			printf("%s is a book. Enter the new price for %s: $", 
+				bookstore->book[i].name, bookstore->book[i].name);
 			scanf("%lf", &bookstore->book[i].salePrice);
 		}
 	}
 	for (int i = 0; i < NUM_DVDS && found == 0; ++i) {
 		if (strcmp(itemName, bookstore->dvd[i].name) == 0) {
 			found = 1;
-			printf("%s is a DVD. Enter the new price for %s: $", bookstore->dvd[i].name, bookstore->dvd[i].name);
+			printf("%s is a DVD. Enter the new price for %s: $", 
+				bookstore->dvd[i].name, bookstore->dvd[i].name);
 			scanf("%lf", &bookstore->dvd[i].salePrice);
 		}
 	}
