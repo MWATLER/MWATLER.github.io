@@ -1,0 +1,40 @@
+MusicSequencer.cpp: //QUESTION 1: What is the static type of item[0] and what is its dynamic type?
+MusicSequencer.cpp: //QUESTION 2: For item[0], which GenerateData() function(s) is/are called?
+MusicSequencer.cpp: //QUESTION 3: For item[0], which GetData() function is being called?
+MusicSequencer.cpp: //QUESTION 4: For item[0], which Transform function(s) is/are called?
+MusicSequencer.cpp: //QUESTION 5: What is the length of the sequenced data?
+MusicSequencer.cpp: //QUESTION 6: Why am I adding an endl here?
+MusicSequencer.cpp: //QUESTION 7: Why don't I simply use delete[] item?
+MusicalItem.h: //QUESTION 8: Why is SetData() protected?
+MusicalItem.h: //QUESTION 9: What happens if the data array overflows?
+MusicalItem.h: //QUESTION 10: What is memcpy() doing here?
+MusicalItem.h: //QUESTION 11: Why is GenerateData() declared as virtual?
+MusicalItem.h: //QUESTION 12: What changes are required if display() was private?
+MusicalItem.h: //QUESTION 13: Which display function is called if the << operator is uses as follows in main(): cout << *item[0];
+Percussion.h: //QUESTION 14: Should the functions for the class Percussion be implemented in a header file?
+Percussion.h: //QUESTION 15: Does there have to be an object of type Percussion for the variable DATA_CHUNK_LEN to exist?
+Percussion.h: //QUESTION 16: Does GenerateData() have to be declared as virtual?
+CenterBackSpeaker.h: //QUESTION 17: What type is T in this computer program?
+CenterBackSpeaker.h: //QUESTION 18: Does there have to be an object of type CenterBackSpeaker for the variable filter to exist?
+CenterBackSpeaker.h: //QUESTION 19: What type is Transform returning in this computer program?
+CenterBackSpeaker.h: //QUESTION 20: Who calls Transform()?
+CenterBackSpeaker.h: //QUESTION 21: Is it possible for data[] to overflow?
+CenterBackSpeaker.h: //QUESTION 22: What is the below line doing to the data?
+LeftSpeaker.h: //QUESTION 23: Should the functions for the class LeftSpeaker be implemented in a header file?
+LeftSpeaker.h: //QUESTION 24: Why isn't filter declared here as a const?
+LeftSpeaker.h: //QUESTION 25: What is the sizeof a char?
+LeftSpeaker.h: //QUESTION 26: What is this statement trying to do?
+LeftSpeaker.h: //QUESTION 27: Why embedded debug?
+LeftSpeaker.h: //QUESTION 28: Will this code execute in this computer program?
+LeftSpeaker.h: //QUESTION 29: If T is a short int (16 bits wide), what is the value of filter?
+MusicSequencerCommon.h: //QUESTION 30: How would we disable debug in this computer program?
+MusicSequencerCommon.h: //QUESTION 31: What are __FILE__, __func__, and __LINE__?
+MusicSequencerCommon.h: //QUESTION 32: What type of polymorphism is this?
+MusicSequencerCommon.h: //QUESTION 33: What are the possible types for S in this computer program?
+MusicSequencerCommon.h: //QUESTION 34: What are the possible types for T in this computer program?
+MusicSequencerCommon.h: //QUESTION 35: Which Transform() function is called from the following line in main(): dataPtr = Transform(centerBackSpeaker, dataPtr, LOOP_COUNT * BassGuitar::DATA_CHUNK_LEN);
+SequencedData.h: //QUESTION 36: Why is MusicSequencerCommon.h being included?
+SequencedData.h: //QUESTION 37: Will this computer program work for all types of T?
+SequencedData.h: //QUESTION 38: Why are we multiplying MAX_SEQUENCER_DATA_SIZE by 4?
+SequencedData.h: //QUESTION 39: What does sequencedData[] contain?
+SequencedData.h: //QUESTION 40: Explain this operator overload when the following line is executed in main(): printf(" 0x%02x", sequencedData[i]);
