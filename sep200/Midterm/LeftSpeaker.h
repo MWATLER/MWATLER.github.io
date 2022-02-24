@@ -10,7 +10,7 @@ template<class T>
 class LeftSpeaker {
 	T data[MAX_SEQUENCER_DATA_SIZE];
 	//QUESTION 24: Why isn't filter declared here as a const?
-	T filter;//0x1111 .... .... ....
+	T filter;
 public:
 	T* Transform(const T* dataPtr, int len) {
 		//QUESTION 25: What is the sizeof a char?

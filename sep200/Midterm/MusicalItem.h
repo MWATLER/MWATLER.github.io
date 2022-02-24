@@ -44,14 +44,14 @@ public:
 		return data;
 	}
 	//QUESTION 12: What changes are required if display() was private?
-	void display(std::ostream& os) const {
+	virtual void display(std::ostream& os) const {
 		os.setf(std::ios::fixed);
 		os.precision(2);
 		os << "This musical item is called " << name << " and costs $" << cost << "." << std::endl;
 	}
 };
 
-//QUESTION 13: Which display function is called if the << operator is uses as follows in main(): cout << *item[0];
+//QUESTION 13: Which display function is called if the << operator is used as follows in main(): cout << *item[0];
 std::ostream& operator<<(std::ostream& os, MusicalItem& item) {
 	item.display(os);
 	return os;
