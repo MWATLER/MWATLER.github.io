@@ -9,6 +9,9 @@ using namespace std;
 int main(void) {
 	const int MAX = 21;
 	const int NUM = 2;
+	//TODO: Change this to create these objects at run time, not at compile time.
+	//      This means, prompt the use for the mode (regular or high definition),
+	//      then create the objects.
 //	PlayerBase<int>* player[NUM];
 //	player[0] = new PlayerYouth<int>("Noah");
 //	player[1] = new PlayerAdult<int>("Kenneth");

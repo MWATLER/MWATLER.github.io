@@ -17,6 +17,7 @@
     <li>The card draws must be random within a certain range. These can be called "attack cards".</li>
     <li>Introduce "dependent cards" which subtract from the card total to add complexity to the game. These cards are drawn 
         at random within a certain range.</li>
+    <li>"Dependent cards" always have integral (integer) values.</li>
     <li>Allow two players at a time.</li>
     <li>For each game, the players can make a bet within a certain range.</li>
 </ol>
@@ -61,6 +62,7 @@
     <li>The youth player provides a function to add attack cards, deleting any existing list of attack cards first.</li>
     <li>The youth player provides a function to add one attack card to an existing list of attack cards.</li>
     <li>The youth player provides a function to sum the attack cards.</li>
+    <li>The youth player provides a function to sum all cards (sum the attack cards minus sum the dependent cards).</li>
     <li>The youth player cleans itself up before destruction.</li>
     </ul>
 
@@ -76,6 +78,7 @@
     <li>The adult player provides a function to add attack cards, deleting any existing list of attack cards first.</li>
     <li>The adult player provides a function to add one attack card to an existing list of attack cards.</li>
     <li>The adult player provides a function to sum the attack cards.</li>
+    <li>The adult player provides a function to sum all cards (sum the attack cards minus sum the dependent cards).</li>
     <li>The adult player cleans itself up before destruction.</li>
 </ul>
 
@@ -90,7 +93,8 @@
     <li>Implement the classes for the players.</li>
     <li>A card game has been created for you, written partially in C++ but written mostly in pseudo-code. Once you have
         implemented your classes, implement the pseudo-code according to the instructions found in the main function of
-        <a href="PlayerMain.cpp" target="_blank">PlayerMain.cpp</a>.</li>
+        <a href="PlayerMain.cpp" target="_blank">PlayerMain.cpp</a>. You might have to implement a version of the 
+        factory design pattern to create objects at run-time instead of compile time.</li>
 </ol>
 
 <h4><b><u>Testing and Rework</u></b> (Junior and Senior Engineers, Product Support)</h4>
@@ -395,7 +399,7 @@ table {
 <p>Please email all source code, diagram(s) and answers to questions to:
     <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
 
-<p>Your questions can be submitted in a separate document or embedded within your source code.</p>
+<p>Your answers to the questions can be submitted in a separate document or embedded within your source code.</p>
 
 <h4><b><u>Late Policy</u></b></h4>
 
