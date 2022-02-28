@@ -1,13 +1,13 @@
 <h1>Week 8 - Inclusion Polymorphism and Composition</h1>
 
 <h3>Introduction</h3>
-<p>This week we will look at compositions, aggregations and associations. We will also look at enumerations and inclusion polymorphism.</p>
+<p>This week we will look at compositions, aggregations and associations. We will also look at casting.</p>
 
 <h3>Videos</h3>
 <table>
-  <tr><td>Class Variables</td><td><a href="https://www.youtube.com/watch?v=-WRllQLW8RE" target="_blank">C++ Static Variables and Members in Class</a></td></tr>
-  <tr><td>Liskov's Substitution Principle</td><td><a href="https://www.youtube.com/watch?v=bVwZquRH1Vk" target="_blank">Liskov Substitution Principle (SOLID), The Robustness Principle</a></td></tr>
   <tr><td>Composition, Aggregations and Associations</td><td><a href="https://www.youtube.com/watch?v=URE9MCTF8Ls" target="_blank">Association Aggregation and Composition</a></td></tr>
+  <tr><td>Casts</td><td><a href="https://www.youtube.com/watch?v=lglGKxNrLgM" target="_blank">Advanced C++: All Castings Considered - Part I</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=UfrR1nNfoeY" target="_blank">Advanced C++: All Castings Considered - Part II</a></td></tr>
 </table>
 
 <h3>Quiz</h3>
@@ -16,9 +16,8 @@
 <h3>Lecture Material</h3>
 <ul>
   <li>Chapter 7 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
-  <li><a href="ClassEnumerations.docx" target="_blank">Class Variables</a></li>
-  <li><a href="Inheritance.docx" target="_blank">Inheritance and Inclusion Polymorphism</a></li>
   <li><a href="Composition.docx" target="_blank">Compositions, Aggregations and Associations</a></li>
+  <li>Cplusplus.com <a href="https://www.cplusplus.com/doc/tutorial/typecasting/" target="_blank">Type conversions</a></li>
 </ul>
 
 <h3>Lab(s)</h3>
@@ -30,27 +29,6 @@
 <p><a href="../Assignments/Assignment1/Assignment1.html" target="_blank">Assignment 1</a>.</p>
 
 <h3>Sample Code</h3>
-
-<p><em>Gemoetric Shape</em></p>
-<p>The first example with geometric shapes demonstrates the use of a clone() function, which causes an object to create and return a clone of itself. The code is as follows:<br>
-  <a href="GeometricShape/Shape.h" target="_blank">Shape.h</a>,
-  <a href="GeometricShape/Cube.h" target="_blank">Cube.h</a>,
-  <a href="GeometricShape/Cube.cpp" target="_blank">Cube.cpp</a>,
-  <a href="GeometricShape/Sphere.h" target="_blank">Sphere.h</a>
-  <a href="GeometricShape/Sphere.cpp" target="_blank">Sphere.cpp</a>
-and <a href="GeometricShape/CloningMain.cpp" target="_blank">CloningMain.cpp</a>.<br> 
-The second example of geometric shapes demonstrates the overriding of an operator (in this case operator==) in derived classes:<br>
-<a href="GeometricShape2/Shape.h" target="_blank">Shape.h</a>,
-<a href="GeometricShape2/Cube.h" target="_blank">Cube.h</a>,
-<a href="GeometricShape2/Cube.cpp" target="_blank">Cube.cpp</a>,
-<a href="GeometricShape2/Sphere.h" target="_blank">Sphere.h</a>
-<a href="GeometricShape2/Sphere.cpp" target="_blank">Sphere.cpp</a>
-and <a href="GeometricShape2/CloningMain.cpp" target="_blank">CloningMain.cpp</a>.
-</p>
-
-<p><em>Dynamic Types</em></p>
-<p>Code that relies on dynamic type identification using the operator typeid() can be seen at:<br>
-<a href="DynamicType/DynamicType.cpp" target="_blank">DynamicType.cpp</a>.</p>
 
 <p><em>Composition</em></p>
 <p>It is possible for a class to contain an instance of another class (composition), a collection of instances of another class (aggregation), or an instance of another class which in turn 
@@ -86,3 +64,30 @@ and <a href="GeometricShape2/CloningMain.cpp" target="_blank">CloningMain.cpp</a
   <a href="Association/AssociationMain.cpp" target="_blank">AssociationMain.cpp</a>.
 </li>
 </ul>
+
+<p><em>Casts</em></p>
+<p>C++ introduces four types of casts.
+  <ul>
+    <li><b>const_cast</b> can be used to remove or add const to a variable. This can be useful if it is necessary to add/remove constness from a variable.</li>
+    <li><b>static_cast</b> is used for the normal/ordinary type conversion. This is also the cast responsible for implicit type coersion
+      and can also be called explicitly. You should use it in cases like converting float to int, char to int, etc.</li>
+    <li><b>dynamic_cast</b> is used for handling polymorphism. You only need to use it when you're casting to a derived class. This is exclusively to 
+      be used in inheritence when you cast from base class to derived class.</li>
+    <li><b>reinterpret_cast</b> is the trickiest to use. It is used for reinterpreting bit patterns and is extremely low level. It's used primarily for
+      things like turning a raw data bit stream into actual data or storing data in the low bits of an aligned pointer.</li>
+</ul>
+Code that demonstrates each can be found at:
+<ul>
+  <li>
+    <a href="Cast/Cast.cpp" target="_blank">Cast.cpp</a>,
+    <a href="ConstCast/ConstCast.cpp" target="_blank">ConstCast.cpp</a>,
+    <a href="StaticCast/StaticCast.cpp" target="_blank">StaticCast.cpp</a>,
+    <a href="DynamicCast/DynamicCast.cpp" target="_blank">DynamicCast.cpp</a> and
+    <a href="ReinterpretCast/ReinterpretCast.cpp" target="_blank">ReinterpretCast.cpp</a>.
+  </li>
+</ul>
+</p>
+
+<p><em>Dynamic Types</em></p>
+<p>Code that relies on dynamic type identification using the operator typeid() can be seen at:<br>
+<a href="DynamicType/DynamicType.cpp" target="_blank">DynamicType.cpp</a>.</p>
