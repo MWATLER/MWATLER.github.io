@@ -35,7 +35,7 @@
   contains an instance of the class itself (association). We will look at three examples, one of each type.</p>
 <ul>
 <li>
-  In the first example, the class Person contains an instance of the class Name. This is implemented with a pointer:<br>
+  In the first example, the class Person contains an instance of the class Name. This is <b>composition</b>:<br>
   <a href="Composition/Name.h" target="_blank">Name.h</a>,
   <a href="Composition/Name.cpp" target="_blank">Name.cpp</a>,
   <a href="Composition/Person.h" target="_blank">Person.h</a>,
@@ -44,17 +44,8 @@
 </li>
 
 <li>
-  In the second example, the class Club contains an aggregation of Names:<br>
-  <a href="Aggregation/Name.h" target="_blank">Name.h</a>,
-  <a href="Aggregation/Name.cpp" target="_blank">Name.cpp</a>,
-  <a href="Aggregation/Club.h" target="_blank">Club.h</a>,
-  <a href="Aggregation/Club.cpp" target="_blank">Club.cpp</a> and
-  <a href="Aggregation/AggregationMain.cpp" target="_blank">AggregationMain.cpp</a>.
-</li>
-
-<li>
-  In the third example, a Course contains a Room, and a Room contains a Course. The room and course are associated with each other. The course and room 
-  each contain a name as well:<br>
+  In the second example, a Course contains a Room, and a Room contains a Course. The room and course are associated with each other. 
+  This is <b>association</b>. The course and room each contain a name as well:<br>
   <a href="Association/Name.h" target="_blank">Name.h</a>,
   <a href="Association/Name.cpp" target="_blank">Name.cpp</a>,
   <a href="Association/Course.h" target="_blank">Course.h</a>,
@@ -63,6 +54,25 @@
   <a href="Association/Room.cpp" target="_blank">Room.cpp</a> and
   <a href="Association/AssociationMain.cpp" target="_blank">AssociationMain.cpp</a>.
 </li>
+
+<li>
+  In the third example, the class Club contains an array of pointers to Names which have been created outside of the class. 
+  This is <b>aggregation</b>:<br>
+  <a href="Aggregation/Name.h" target="_blank">Name.h</a>,
+  <a href="Aggregation/Name.cpp" target="_blank">Name.cpp</a>,
+  <a href="Aggregation/Club.h" target="_blank">Club.h</a>,
+  <a href="Aggregation/Club.cpp" target="_blank">Club.cpp</a> and
+  <a href="Aggregation/AggregationMain.cpp" target="_blank">AggregationMain.cpp</a>.
+</li>
+<li>The third example above used an array of pointers where the size of the array is known. What if the size of the array is not known? We 
+  will have to use a <b>double pointer</b>! See the following code that allocates and de-allocates the array of pointers in batches of five:<br>
+  <a href="Aggregation2/Name.h" target="_blank">Name.h</a>,
+  <a href="Aggregation2/Name.cpp" target="_blank">Name.cpp</a>,
+  <a href="Aggregation2/Club.h" target="_blank">Club.h</a>,
+  <a href="Aggregation2/Club.cpp" target="_blank">Club.cpp</a> and
+  <a href="Aggregation2/AggregationMain.cpp" target="_blank">AggregationMain.cpp</a>.
+</li>
+
 </ul>
 
 <p><em>Dynamic Types</em></p>
