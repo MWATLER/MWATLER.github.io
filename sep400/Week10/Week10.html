@@ -1,0 +1,130 @@
+<h1>Week 10 - March 20-24</h1>
+<h3>Introduction</h3>
+<p>This week we are going to look at CPU scheduling. Specifically, we will look at the "nice" value of a process, 
+    different types of scheduling, and CPU affinity.
+</p>
+
+<h3>Videos</h3>
+<table>
+    <tr><td>Scheduling</td><td><a href="https://www.youtube.com/watch?v=II2M3rqgCQA" target="_blank">Linux Nice and Priority values</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=Z2KsfhEJOFA" target="_blank">Priority Scheduling (Solved Problem 1)</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=VSMAjMfJ6KQ" target="_blank">First Come First Served Scheduling (Solved Problem 1)</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=9VJRsBmmY-4" target="_blank">How To Set The CPU Affinity Of A Running Process In Linux</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<ul>
+    <li><b>Quiz 8</b> will be on CPU scheduling. Study chapter 35 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
+
+<h3>Lecture Material</h3>
+<ul>
+    <li>Chapter 5 of 
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997143391103226" target="_blank">Operating System Concepts</a></li>
+    <li>Chapter 35 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
+</ul>
+
+<h3>Labs</h3>
+<ul>
+    <li><a href="../Labs/Lab7/Lab7.html" target="_blank">Lab 7</a> (March 24) - Semaphores with Shared Memory.</li>
+    <li><a href="../Labs/Lab8/Lab8.html" target="_blank">Lab 8</a> (March 31) - .</li>
+</ul>
+
+<h3>Assignment</h3>
+<p><a href="../Assignments/Assignment1/Assignment1.html" target="_blank">Assignment 1</a> (due March 24).<br>
+<a href="../Assignments/Assignment2/Assignment2.html" target="_blank">Assignment 2</a> (due April 14).</p>
+
+<h3>Sample Code</h3>
+
+<p><em>Scheduling Priority - The "Nice" Value</em></p>
+<ul>
+    <li>Code that demonstrates the use of get/setpriority() to get and set the process "nice" value in Linux can be found at:<br>
+        <a href="nestedLoop/nestedLoop.cpp" target="_blank">nestedLoop.cpp</a>,
+        <a href="nestedLoop/nestedLoop2.cpp" target="_blank">nestedLoop2.cpp</a> and 
+        <a href="nestedLoop/Makefile" target="_blank">Makefile</a>.<br>
+        The batch files <a href="nestedLoop/start.bat" target="_blank">start.bat</a> and 
+        <a href="nestedLoop/stop.bat" target="_blank">stop.bat</a> starts off and stops
+        20 processes of nestedLoop2 (three nested for-loops) to compete for the processor with nestedLoop 
+        (also 3 nested for-loops).
+        <a href="nestedLoop/stop.bat" target="_blank">stop.bat</a>.<br>
+        The data files show that nestedLoop runs faster with lower "nice" values. Note that for "nice" values below 0,
+        the process has to be run as super user.
+        <a href="nestedLoop/searchTime19.dat" target="_blank">searchTime19.dat</a> (nice value of 19),
+        <a href="nestedLoop/searchTime0.dat" target="_blank">searchTime0.dat</a> (nice value of 0) and
+        <a href="nestedLoop/searchTimeMinus20.dat" target="_blank">searchTimeMinus20.dat</a> (nice value of -20).
+     </li>
+</ul>
+
+<p><em>Scheduling Policy - First In/First Out</em></p>
+<ul>
+    <li>In SEP200 assigment 2 had you implement a weighted list. The graph of search time versus number of searches showed spikes due to 
+        the CPU scheduling. We are going to run the weighted list test program for differing schedule policies in parallel with 20 competing 
+        processes (nestedLoop2). The first test is with no changes to the scheduling policy. The second test is with scheduling set to 
+        SCHED_FIFO but with priority set to the default "nice" value of 0. The third test is with scheduling set to SCHED_FIFO but 
+        with the priority set to the lowest "nice" value of -19. All tests were run as super-user. The test file is:<br>
+        <a href="WeightedList/WeightedListMainTimer.cpp" target="_blank">WeightedListMainTimer.cpp</a>. Note that WeightedList.h (the 
+        solution to assigment 2 of SEP200) is not given.<br> Source code for the competing processes, the Makefile, and the start and 
+        stop batch files are as follows:<br>
+        <a href="WeightedList/nestedLoop2.cpp" target="_blank">nestedLoop2.cpp</a>,
+        <a href="WeightedList/Makefile" target="_blank">Makefile</a>,
+        <a href="WeightedList/start.bat" target="_blank">start.bat</a> and
+        <a href="WeightedList/stop.bat" target="_blank">stop.bat</a>.<br>
+        The resulting data files are given below:<br>
+        <a href="WeightedList/searchTimeBase.csv" target="_blank">searchTimeBase.csv</a> (the default case),
+        <a href="WeightedList/searchTimeFIFO99nice0.csv" target="_blank">searchTimeFIFO99nice0.csv</a> (SCHED_FIFO, nice=0) and
+        <a href="WeightedList/searchTimeFIFO99niceMinus20.csv" target="_blank">searchTimeFIFO99niceMinus20.csv</a>.<br>
+        The following graphs show how poorly the default case performs. With FIFO scheduling and with the default nice value of 0 
+        there is improvement, in that the process has full access to the CPU when competing with other processes of the same nice value, 
+        but must wait for processes that are less nice. With FIFO scheduling and a nice value of -20, the process only competes for 
+        the CPU with other processes of nice value -20.<br><br><br>
+        <b>Default Scheduling</b><br>
+        <img src="WeightedList/searchTimeBase.png" alt="Default Scheduling" style="height:50%;width:50%"><br><br>
+        <b>SCHED_FIFO with nice=0</b><br>
+        <img src="WeightedList/searchTimeFIFO99nice0.png" alt="SCHED_FIFO nice=0" style="height:50%;width:50%"><br><br>
+        <b>SCHED_FIFO with nice=-20</b><br>
+        <img src="WeightedList/searchTimeFIFO99niceMinus20.png" alt="SCHED_FIFO nice=-20" style="height:50%;width:50%"><br><br>
+    </li>
+</ul>
+
+<p><em>Scheduling Policy - Round Robin</em></p>
+<ul>
+    <li>One might be curious about that CPU slice time. Code that gets the CPU slice time for Round Robin Scheduling for 
+        competing processes can be found at:
+        <a href="SchedRR/nestedLoop.cpp" target="_blank">nestedLoop.cpp</a>,
+        <a href="SchedRR/nestedLoop2.cpp" target="_blank">nestedLoop2.cpp</a>,
+        <a href="SchedRR/Makefile" target="_blank">Makefile</a>,
+        <a href="SchedRR/start.bat" target="_blank">start.bat</a> and
+        <a href="SchedRR/stop.bat" target="_blank">stop.bat</a>.<br>
+        The CPU slice time is found to be in the order of 0.1 seconds.
+     </li>
+</ul>
+
+<p><em>Scheduling Policy - Yielding the CPU with Round Robin</em></p>
+<ul>
+    <li>Linux allows a process to yield the CPU to other processes. The following code contains a nestedLoop process in 
+        competition with 20 nestedLoop2 processes. These 20 nestedLoop2 processes will yield the CPU after one of its 
+        internal nested loops has completed. The result is that nestedLoop can run much faster sinces these competing 
+        processes have yielded the CPU to it. Test code can be found at:<br>
+        <a href="SchedRRYield/nestedLoop.cpp" target="_blank">nestedLoop.cpp</a>,
+        <a href="SchedRRYield/nestedLoop2.cpp" target="_blank">nestedLoop2.cpp</a>,
+        <a href="SchedRRYield/Makefile" target="_blank">Makefile</a>,
+        <a href="SchedRRYield/start.bat" target="_blank">start.bat</a> and
+        <a href="SchedRRYield/stop.bat" target="_blank">stop.bat</a>.<br>
+        The resulting data file for nestedLoop can be found at
+        <a href="SchedRRYield/searchTime.dat" target="_blank">searchTime.dat</a>.
+     </li>
+</ul>
+
+<p><em>CPU Affinity</em></p>
+<ul>
+    <li>With multiple CPU cores, a process can be attached to a particular processor or particular processors. There are 
+        advantages for a process to stick with one processor. To find out how many CPU cores you have on your system, 
+        execute one of the two commands from the command line:<br>
+        $ <b><a href="https://man7.org/linux/man-pages/man1/lscpu.1.html" target="_blank">lscpu</a></b><br>
+        $ <b>cat proc/cpuinfo</b><br>
+        Code that test the cpu affinity features can be seen at:
+        <a href="Affinity/nestedLoop.cpp" target="_blank">nestedLoop.cpp</a> and
+        <a href="Affinity/Makefile" target="_blank">Makefile</a>.
+     </li>
+</ul>
