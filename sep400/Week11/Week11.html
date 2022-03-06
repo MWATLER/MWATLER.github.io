@@ -1,0 +1,106 @@
+<h1>Week 11 - March 27-31</h1>
+<h3>Introduction</h3>
+<p>This week we are going to look at memory mapping. We will look at process memory some more, and we will look at virtual memory. 
+    We will look at the various memory mapping schemes across processes.
+</p>
+
+<h3>Videos</h3>
+<table>
+    <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+    <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+    <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+    <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<ul>
+    <li><b>Quiz 9</b> will be on memory mapping. Study chapter 49 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
+
+<h3>Lecture Material</h3>
+<ul>
+    <li>Chapters 8 and 9 of 
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997143391103226" target="_blank">Operating System Concepts</a></li>
+    <li>Chapters 6, 49 and 50 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
+</ul>
+
+<h3>Labs</h3>
+<ul>
+    <li><a href="../Labs/Lab8/Lab8.html" target="_blank">Lab 8</a> (March 31) - .</li>
+    <li><a href="../Labs/Lab9/Lab9.html" target="_blank">Lab 9</a> (April 7) - .</li>
+</ul>
+
+<h3>Assignment</h3>
+<p><a href="../Assignments/Assignment2/Assignment2.html" target="_blank">Assignment 2</a> (due April 14).</p>
+
+
+<h3>Additional Lecture Material</h3>
+<p>An overview of virtual memory can be seen at:<br>
+    <img src="VirtualMemoryOverview.jpg" alt="Virtual Memory">
+</p>
+
+<p>Locations of shared memory, memory mappings, and shared libraries can be seen below:<br>
+<img src="MemoryMappings.jpg" alt="Shared Memory, Memory Mappings, Shared Libraries">
+</p>
+
+<p>Two processes with a shared mapping of the same region of a file can be seen at:<br>
+    <img src="SharedMapping.jpg" alt="Shared Mapping">
+</p>
+
+<h3>Sample Code</h3>
+
+<p><em>Banking Application</em></p>
+<ul>
+    <li>A banking application, several of which can be run in parallel, for updating a bank account can be found at:<br>
+        <a href="BankingApplication/BankApplication.h" target="_blank">BankApplication.h</a>,
+        <a href="BankingApplication/BankApplication.cpp" target="_blank">BankApplication.cpp</a> and
+        <a href="BankingApplication/Makefile" target="_blank">Makefile</a>.<br>
+        The common file that is mapped to all banking application processes can be found at 
+        <a href="BankingApplication/BankDatabase.txt" target="_blank">BankDatabase.txt</a>. Note that this is a binary file.
+     </li>
+     <li>Code that demonstrates <a href="https://man7.org/linux/man-pages/man2/mprotect.2.html" target="_blank">mprotect</a> can be found at:<br>
+        <a href="BankingApplication/mprotect/BankDatabase.txt" target="_blank">BankDatabase.txt</a>,
+        <a href="BankingApplication/mprotect/BankApplication.h" target="_blank">BankApplication.h</a>,
+        <a href="BankingApplication/mprotect/BankApplication.cpp" target="_blank">BankApplication.cpp</a> and
+        <a href="BankingApplication/mprotect/Makefile" target="_blank">Makefile</a>.<br>
+    </li>
+    <li>Code that demonstrates
+        <a href="https://man7.org/linux/man-pages/man2/mlockall.2.html" target="_blank">mlockall</a>, 
+        <a href="https://man7.org/linux/man-pages/man2/mincore.2.html" target="_blank">mincore</a> and
+        <a href="https://man7.org/linux/man-pages/man2/madvise.2.html" target="_blank">madvise</a> 
+        can be found at:<br>
+        <a href="BankingApplication/mincore/BankDatabase.txt" target="_blank">BankDatabase.txt</a>,
+        <a href="BankingApplication/mincore/BankApplication.h" target="_blank">BankApplication.h</a>,
+        <a href="BankingApplication/mincore/BankApplication.cpp" target="_blank">BankApplication.cpp</a> and
+        <a href="BankingApplication/mincore/Makefile" target="_blank">Makefile</a>.<br>
+    </li>
+    <li>Code that demonstrates anonymous mapping via <b>/dev/zero</b> can be found at:<br>
+        <a href="BankingApplication2/BankApplication.h" target="_blank">BankApplication.h</a>,
+        <a href="BankingApplication2/BankApplication.cpp" target="_blank">BankApplication.cpp</a> and
+        <a href="BankingApplication2/Makefile" target="_blank">Makefile</a>.
+        Note that there is no database file.
+    </li>
+    <li>Code that demonstrates anonymous mapping without any files whatsoever can be found at:<br>
+        <a href="BankingApplication3/BankApplication.h" target="_blank">BankApplication.h</a>,
+        <a href="BankingApplication3/BankApplication.cpp" target="_blank">BankApplication.cpp</a> and
+        <a href="BankingApplication3/" target="_blank">Makefile</a>.
+        Note that there is no database file.
+    </li>
+</ul>
+
+
+<p><em>Transaction Applications</em></p>
+<ul>
+    <li>Transactions between parent and child using anonymous mapping without any files can be found at:<br>
+        <a href="Transaction/Transaction.h" target="_blank">Transaction.h</a>,
+        <a href="Transaction/Transaction.cpp" target="_blank">Transaction.cpp</a> and
+        <a href="Transaction/Makefile" target="_blank">Makefile</a>.
+     </li>
+     <li>Failed transactions between a parent and an exec'ed process using anonymous mapping without any files can be found at:<br>
+        <a href="Transaction2/Transaction.h" target="_blank">Transaction.h</a>,
+        <a href="Transaction2/Parent.cpp" target="_blank">Parent.cpp</a>,
+        <a href="Transaction2/Child.cpp" target="_blank">Child.cpp</a> and
+        <a href="Transaction2/Makefile" target="_blank">Makefile</a>.
+     </li>
+</ul>
