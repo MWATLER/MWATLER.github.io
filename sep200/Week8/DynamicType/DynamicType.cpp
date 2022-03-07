@@ -38,11 +38,13 @@ public:
 void show(const A* a) {
     C cref;
     if (typeid(*a) != typeid(cref)) {
-        a->display();
+        std::cout << typeid(*a).name() << std::endl;//prints the class name
+            a->display();
     }
-    else
-        std::cout << typeid(cref).name() <<
-        " objects are private" << std::endl;
+    else {
+        std::cout << typeid(cref).name() <<//prints the class name
+            " objects are private" << std::endl;
+    }
 }
 
 int main() {

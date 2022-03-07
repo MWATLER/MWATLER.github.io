@@ -8,8 +8,8 @@
 constexpr int M{ 50 };
 
 class Club {
-    const Name* name[M]{};
-    int m{ 0 };
+    const Name* name[M]{};//an array of pointers
+    int num{ 0 };
 public:
     Club& operator+=(const Name&);
     Club& operator-=(const Name&);

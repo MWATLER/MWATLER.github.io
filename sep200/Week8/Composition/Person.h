@@ -5,7 +5,7 @@
 
 #include "Name.h"
 class Person {
-    Name* name{ nullptr }; // pointer
+    Name* name = nullptr; // pointer
     int age;
 public:
     Person(const char*, int);
