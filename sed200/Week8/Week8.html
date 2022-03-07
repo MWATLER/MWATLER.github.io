@@ -20,7 +20,8 @@
 <h3>Assignment(s)</h3>
 <p><a href="../Assignments/Assignment3/Assignment3.html" target="_blank">Assignment 3 - Extensions of Three Dimensional Printing and Imaging</a></p>
 
-<h2>Abstract</h2>
+<h2>Software Engineering Beyond the Project - Sustaining Software Ecosystems</h2>
+<h3>Abstract</h3>
 <p>The main part of software engineering methods, tools and technologies has developed around
   projects as the central organisational form of software development. A project organisation depends
   on clear bounds regarding scope, participants, development effort and lead-time. What happens when
@@ -29,14 +30,26 @@
   configurable products, software engineering as a discipline needs to take on the challenge to support software
   ecosystems.</p>
 
+  <p><b>Question: What is an ecosystem?</b><br>
+<!--Answer: An ecosystem is a geographic area where plants, animals, and other organisms, as well as weather and landscape, work together to form a bubble 
+  of life. Ecosystems contain biotic or living, parts, as well as abiotic factors, or nonliving parts. Biotic factors include plants, animals, and other organisms.-->
+</p>
+
+<p><b>Question: What is an ecosystem with regard to software products?</b><br>
+<!--Answer: A software ecosystem is the community of stakeholders that companies create to support platforms. Software ecosystems can be made up of developers, 
+resellers, customers, software, services, and more.-->
+</p>
+
 <p>The analysis results in a set of common features of product development and evolution despite
   differences in size, kind of software and business models. Design is distributed and needs to be coordinated
   across heterogeneous design constituencies that, together with the software, build a product specific
   socio-technical ecosystem. The technical design has to support the deference of part of the
   development not only to 3rd-party developers but also to local designers tailoring the software in the
   use organisation. The technical interfaces that separate the work of different design constituencies are
-  contested and need to be maintained permanently. Development takes place as cycles within cycles –
+  contested and need to be maintained permanently. Development takes place as cycles within cycles -
   overlaying development cycles with different rhythms to accommodate different evolution drivers.</p>
+
+<h3>Introduction</h3>
 
 <p>Successful software products
   are developed and evolved over several decades. The mere
@@ -44,12 +57,15 @@
   successful in keeping the development in synch with the developments
   of the use context supporting not only 3rd party developers
   but also End User Developers.</p>
+<p><b>Question: Give me an example of a successful software product that has been developed and evolved over several decades.</b><br>
+<!--Answer: Windows.-->
+</p>
 
 <p>According to the SWEBOK (Software Engineering Book of Knowledge) chapter on Software 
   Engineering Management, a project provides a closure for the software
   development, defining borders regarding scope, and then based
   on the scope: effort and time. Control over scope, effort (translated
-  into expenses) and lead time – at first glance – seem to be in the
+  into expenses) and lead time - at first glance - seem to be in the
   interest of both the development organisation and the organisation
   in and for which the software is to be used.</p>
 
@@ -57,7 +73,7 @@
   behind the project organisation for software development
   seem to hold. However, already in 1980, the experience with the
   evolution of the IBM 360 operating system let Lehman to formulate
-  the laws of software evolution [42]. Based on the understanding
+  the laws of software evolution. Based on the understanding
   that the application of software is changing the application domain
   and with it the problem that the design is based on, Lehman declared
   that all software that is used experiences pressure for
@@ -68,11 +84,11 @@
   and end-user configurable software products challenge the
   assumptions proposed by the project organisation of software
   development further: The delivered product is rather a half product
-  that has to be configured and customised to a specific context.1
+  that has to be configured and customised to a specific context.
   Development takes place through interlacing heterogeneous design
   and use activities distributed across different design constituencies,
   assemblies of individual and organisational actors mandating a specific
-  set of design and development decisions [64]. There is no
+  set of design and development decisions. There is no
   decided beginning of the evolution, and the goal is to keep the product
   useful and attractive to its users over a long time, rather than
   delivering it once. Continuous contact with users and customers is
@@ -84,12 +100,12 @@
   service packs and long-term efforts that address the improvement
   of the overall design.</p>
 
-<h3>UIQ – developing a user interface framework for high-end mobile
+<h3>UIQ - developing a user interface framework for high-end mobile
   phones</h3>
 
 <p>UIQ develops a user interface framework plus an application
   suite for high-end mobile devices that include a phone. The interface
-  platform and the application suite are based on the Symbian
+  platform and the application suite are based on the <a href="https://betanews.com/2021/07/06/symbian-os-reimagined/" target="_blank">Symbian</a>
   operating system. UIQ also develops specific applications for their
   customers, the producers of mobile phones. These producers, e.g.,
   Motorola and Sony Ericsson, which owned UIQ, develop their
@@ -98,25 +114,36 @@
   independent software using the UIQ platform based on a licensing
   scheme. The telephone companies develop several series of
   mobile phones based on the same version of the UIQ platform. Mobile
-  phones are seldom updated, once they are sold. If so – e.g., by
-  downloading a new version from Sony Ericsson’s home page – the
+  phones are seldom updated, once they are sold. If so - e.g., by
+  downloading a new version from Sony Ericsson's home page - the
   whole technology stack is exchanged.</p>
 <p>UIQ is not directly selling to users of mobile phones, and few
-  phone users are aware that they are using UIQ’s software. Nonetheless,
+  phone users are aware that they are using UIQ's software. Nonetheless,
   usability is an important quality. The interaction design
   team members therefore have built up a network of pilot users
   whom they consult for usability tests and long term usability studies.
-  Fig. 1 presents UIQ’s ecosystem.</p>
+  Fig. 1 presents UIQ's ecosystem.</p>
 
 <img src="UIQEcosystem.PNG" alt="UIQ's Ecosystem">
 
-<h3>Microsoft Dynamics – evolving an ERP system for small and
+<p><b>Question: Look at the article <a href="https://en.wikipedia.org/wiki/UIQ_Technology" target="_blank">UIQ Technology</a>. 
+UIQ failed. Why?</b><br>
+<!--Answer: Consolidated, replaced by the S60 platform.-->
+</p>
+
+<p><b>Question: Watch the video <a href="https://www.youtube.com/watch?v=ZS5vcyf9LU4" target="_blank">SymbianOS Re-Imagined - Concept</a>. 
+Do you think SymbianOS has a chance of coming back?</b><br>
+<!--Answer: It says it is inspired by so many operating systems. Does not seem innovative or new to me.-->
+</p>
+
+<h3>Microsoft Dynamics - evolving an ERP system for small and
   medium sized companies</h3>
 
 <p>The Microsoft Dynamics development organisation is part of
   the Microsoft concern developing business solutions that use
   Enterprise Resource Planning (ERP) systems for different market
-  segments. Dynamics Nav is one of these ERP systems. There are
+  segments. <a href="https://dynamics.microsoft.com/en-us/nav-erp/#sort=relevancy&f:@product=[Microsoft%20Dynamics%20NAV]" target="_blank">Dynamics Nav</a> 
+  is one of these ERP systems. There are
   about 200 people involved in the development. At the time of
   the interview, a proprietary base technology was being replaced
   with a Microsoft compatible base.</p>
@@ -125,16 +152,32 @@
   by partners, that is consultancies specialising in implementation
   and adaptation of Microsoft ERP systems. To do so, the partners
   have access to a development environment where they can adjust
-  any part of the application. The term framework is used to describe
+  any part of the application. The term <a href="https://hackr.io/blog/what-is-frameworks" target="_blank">framework</a> is used to describe
   the programming language and modelling base. Both are used to
   implement the application, the runtime system and the development
-  environment. Fig. 2 shows Dynamics Nav’s ecosystem. It differs
-  from a similar one published [20], as it here focuses on the
+  environment. Fig. 2 shows Dynamics Nav's ecosystem. It differs
+  from a similar one published, as it here focuses on the
   aspects of the ecosystem that became apparent in the interviews.</p>
 
 <img src="NAVEcosystem.PNG" alt="Microsoft Dynamics NAV's Ecosystem">
 
-<h3>SIM – Water and Environment Simulation</h3>
+<p><b>Question: What concept in object oriented programming with C++ lends itself very well to software frameworks?</b><br>
+<!--Answer: Templates.-->
+</p>
+
+<p><b>Question: What is the Active Template Library? (See 
+  <a href="https://www.infoworld.com/article/3516151/10-top-notch-libraries-for-c-programming.html" target="_blank">10 top-notch libraries for C++ programming</a>).</b><br>
+<!--Answer: Active Template Library (ATL) is a set of C++ classes for building COM (Common Object Model) objects, 
+with support for COM features such as dual interfaces, standard COM enumerator interfaces, connection points, and ActiveX controls.-->
+</p>
+
+<p><b>Question: What is the Asio C++ Library? (Also see 
+  <a href="https://www.infoworld.com/article/3516151/10-top-notch-libraries-for-c-programming.html" target="_blank">10 top-notch libraries for C++ programming</a>).</b><br>
+<!--Answer: The Asio C++ library is used for network and low-level I/O programming, offering a consistent asynchronous model. Providing basic building blocks for concurrency, 
+  C++ networking, and other types of I/O, Asio has been used in applications ranging from smartphone apps and games to highly interactive websites and real-time transaction systems.-->
+</p>
+
+<h3>SIM - Water and Environment Simulation</h3>
 
 <p>Water and Environment Simulation2 (SIM) is a Danish not
   for-profit organisation whose headquarters is situated in a university
@@ -152,25 +195,25 @@
   of the water in specific points. The system definition, along with
   temporally varying data about inflow into the system, is used as input
   data to the so-called simulation engines. The simulation engines
-  are solvers of differential equations describing the physics
-  of the system. The results of the system are typically time series
+  are solvers of <a href="https://courses.lumenlearning.com/boundless-calculus/chapter/differential-equations/" target="_blank">differential equations</a> 
+  describing the physics of the system. The results of the system are typically time series
   of water level and discharge at various locations in the system.
-  Originally, SIM’s business was centred around consultancy and
+  Originally, SIM's business was centred around consultancy and
   system development based on the software products. Hydraulic
   engineers and water management experts use the software to produce
   studies evaluating the result of changes to a water system.
   This can be the river dams for energy production, the effect of
-  changes to a city’s water supply or sewer system, or the stratification
+  changes to a city's water supply or sewer system, or the stratification
   of rivers. One of the more high profile projects was the evaluation
   of the effect of the Øresund bridge and tunnel between
   Denmark and Sweden on the water exchange between the Baltic
   and the North Sea.</p>
 <p>Over time, the software has been used more and more to support
   control systems for e.g., water supply and sewage systems,
-  so called ‘on-line’ systems. Here the simulation runs continuously,
+  so called 'on-line' systems. Here the simulation runs continuously,
   partly based on real time measurements from the water system.
   Results of the simulation are not only used to monitor the water
-  system but also directly or indirectly – via an operator – to control
+  system but also directly or indirectly - via an operator - to control
   the water system. Here the software and a number of tools are
   used as a set of frameworks to develop a custom monitor and
   control system. This change in usage leads to a different set of
@@ -186,7 +229,16 @@
 
 <img src="SIMEcosystem.PNG" alt="SIM's Ecosystem">
 
-<h3>UIB – software distribution for local area networks</h3>
+<p><b>Question: Can you think of another application for water simulation?</b><br>
+<!--Answer: electronic circuits. The differential equations for water flow and electron 
+flow are quite similar.-->
+</p>
+
+<p><b>Question: Would the Software Defined Network approach be useful for the control and routing of water?</b><br>
+<!--Answer: Depends on the complexity, but probably not.-->
+</p>
+
+<h3>UIB - software distribution for local area networks</h3>
 
 <p>In addition to developing customer specific GIS based application,
   the Umwelt Informatik Büro (Environmental Informatics Office,
@@ -197,8 +249,8 @@
   the German regional capitals. The first version of the software
   was developed for a regional environmental agency between 
   1995 and 1998. As the software was built upon other open source
-products, the decision to run it as an open source product ‘was
-nearly legally necessary.’ The company lives today from offering
+products, the decision to run it as an open source product 'was
+nearly legally necessary.' The company lives today from offering
 courses and support contracts for the product and customer specific
 contract development that feed into the open source line; it
 also uses the product itself doing system administration for governmental
@@ -219,7 +271,7 @@ maintenance and evolution of the software; two developers and
 the head of development and managing director of the company
 are the ones mainly responsible for major developments and support.
 About four to five persons work with customer specific system
-administration, often sitting directly at the customer’s site.
+administration, often sitting directly at the customer's site.
 Three persons work with customer specific GIS applications, and
 two mainly work with administration and accountancy. As the
 company has an active policy to support flexible working times,
@@ -231,7 +283,17 @@ to time.</p>
 
 <img src="OPSIEcosystem.PNG" alt="OPSI's Ecosystem">
 
-<h2>Conclusions</h2>
+<p><b>Question: What are some advantages of 
+  <a href="https://opensource.com/resources/what-open-source" target="_blank">open-source software</a> development?</b><br>
+<!--Answer: bug fixes - many eyes on the code. See <a href="https://enterprisersproject.com/article/2015/1/top-advantages-open-source-offers-over-proprietary-solutions" target="_blank">
+  8 advantages of using open source in the enterprise</a>.-->
+</p>
+
+<p><b>Question: What are some advantages of <a href="" target="_blank">proprietary software</a>?</b><br>
+<!--Answer: Security. See <a href="https://y-sbm.com/blog/why-do-you-need-proprietary-software" target="_blank">Why do you need to build proprietary software?</a>.-->
+</p>
+
+<h3>Conclusions</h3>
 
 <p>The main contribution of this article is the presentation of common
   features of product development and evolution in four companies.
@@ -239,8 +301,8 @@ to time.</p>
   differ, the commonalities are striking:
 <ul>
   <li>The software products are developed in interaction with a product
-  related ecosystem where part of the design is deferred to
-  other actors closer to the concrete use context. However, real
+  related ecosystem where part of the design is <b>deferred to
+  other actors closer to the concrete use context</b>. However, real
   world ecosystems do not only consist of the product developer
   providing a platform for 3rd party developers together with the
 product but includes several layers of actors customising and
@@ -248,16 +310,16 @@ configuring the software product. Often the product can be
 regarded as part of one or several ecosystems itself.</li>
 <li>Innovation takes place across the whole ecosystem. Contact
 with users and other actors is therefore important to keep the
-innovative edge of the software product.</li>
+<b>innovative edge</b> of the software product.</li>
 <li>The technical design and architecture exists as practice of architects
 and core developers rather than as explicit documentation.</li>
-<li>The interfaces for configuration and customisation both separate
-and bridge the different design constituencies. They are
+<li>The interfaces for configuration and customisation both <b>separate
+and bridge the different design constituencies</b>. They are
 contested and need to be maintained continuously.</li>
 <li>To juggle different and sometimes conflicting development
-drivers – bug fixes, new features, technical re-engineering –
-the development processes consist of an overlay of different
-development cycles.</li>
+drivers - bug fixes, new features, technical re-engineering -
+the development processes consist of an <b>overlay of different
+development cycles</b>.</li>
 <li>As the companies have to balance different qualities of their
 products, they struggle with finding the right organisation of
 the development team. The organisation might change depending
@@ -270,16 +332,16 @@ depends on the dynamics of the ecosystem.</li>
   practices highlighting their specific advantages and disadvantages.
   Much of what is reported is not supported by the software engineering
   textbooks, but makes perfect sense, considering that the
-  frame of reference for product development is not a project – defined
-  by a fixed scope, time and design constituency – but continuous
-  innovation across the respective ecosystem. As software is
+  frame of reference for product development is not a project - defined
+  by a fixed scope, time and design constituency - but <b>continuous
+  innovation</b> across the respective ecosystem. As software is
   increasingly developed, adopted and deployed in the form of customisable
   and configurable products, software engineering as a
   discipline needs to take on the challenge to support this way of
   organising software development with methods, tools and techniques.
-  Our result indicates that software ecosystems challenge
+  Our result indicates that <b>software ecosystems challenge
   some of the very core assumptions of traditional software
-  engineering.</p>
+  engineering</b>.</p>
 <p>The discussion highlights some of these challenges: keeping
   contact with other actors in the ecosystem, techniques to support
   multilevel development and evolution, managing an overlay of
