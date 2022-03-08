@@ -15,6 +15,7 @@ int main() {
     Course btp105("Intro to Programming", 105);
     Course btp205("Intro to O-O Prg", 205);
     Course btp305("O-O Programming", 305);
+	//We've created three rooms and three courses
     btp105.display();
     btp205.display();
     btp305.display();
@@ -23,6 +24,10 @@ int main() {
     t2110.display();
     book(btp205, t2110);
     book(btp305, t2108);
+/*	void book(Course & c, Room & r) {
+		c.book(r);
+		r.book(c);
+	}*/
     btp105.display();
     btp205.display();
     btp305.display();

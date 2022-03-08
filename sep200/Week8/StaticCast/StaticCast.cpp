@@ -31,7 +31,7 @@ public:
 int main()
 {
 	Employee employee;
-	Player player;
+	Player player;//Player is derived from Employee
 
 	// #1: valid upcast
 	Employee* pEmployee = static_cast<Employee*>(&player);//Employee acts like a player

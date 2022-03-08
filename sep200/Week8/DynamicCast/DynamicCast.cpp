@@ -31,7 +31,7 @@ int main()
 	cout << endl << endl;
 
 	Employee* pEmployee = &employee;
-	Player* pPlayer = &player;
+	Player* pPlayer = &player;//Player is derived from Employee
 	pEmployee->PrintInfo();      // Employee::PrintInfo()
 	cout << endl;
 	pPlayer->PrintInfo();      // Player::PrintInfo()

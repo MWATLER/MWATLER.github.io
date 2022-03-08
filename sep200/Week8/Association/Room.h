@@ -7,8 +7,8 @@
 class Course;
 
 class Room {
-    Name name;
-    Course* course{ nullptr };
+    Name name;//composition
+    Course* course{ nullptr };//a room is associated with a certain course
 public:
     Room(const char*);
     void book(Course&);

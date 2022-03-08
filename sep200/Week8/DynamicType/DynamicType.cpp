@@ -35,7 +35,7 @@ public:
 
 // show calls display() on all types except C
 //
-void show(const A* a) {
+void show(const A* a) {//A, B, C
     C cref;
     if (typeid(*a) != typeid(cref)) {
         std::cout << typeid(*a).name() << std::endl;//prints the class name

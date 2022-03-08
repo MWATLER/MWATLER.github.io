@@ -7,7 +7,7 @@
 
 Club& Club::operator+=(const Name& n) {
     //allocate the array of pointers in batches of five
-    if (num % BATCH_NUM == 0) {
+    if (num % BATCH_NUM == 0) {//num=5
         const Name** tmp = new const Name * [num + BATCH_NUM];//the newly allocated array of pointers
         for (int i = 0; i < num; ++i) {//copy values to the newly allocated array of pointers
             tmp[i] = const_cast<Name*>(name[i]);//remove the constness so we can point to the names in the name array
@@ -27,15 +27,17 @@ Club& Club::operator-=(const Name& t) {
             found = true;
         }
     }
-    if (found) {
+    if (found) {//num=6, but we have an array of 10 pointers to name
         for (; i < num; i++)
             name[i - 1] = name[i];
         if (num) {
             name[num - 1] = nullptr;//this does not deallocate memory
             num--;
-        }
+        }//We now have five names in our club, but our array is of size 10.
         if (num % BATCH_NUM == 0) {//reduce the allocated array of pointers in batches of five
             //get rid of the empty slots
+			//name[0] =... name[1]=... name[2]=... name[3]=... name[4]=...
+			//name[5]=nullptr name[6]=nullptr name[7]=nullptr name[8]=nullptr name[9]=nullptr
             const Name** tmp = nullptr;//the new array of pointers
             if (num > 0) {
                 tmp = new const Name * [num];//the newly allocated array of pointers

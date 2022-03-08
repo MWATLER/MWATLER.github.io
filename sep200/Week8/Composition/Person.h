@@ -5,8 +5,8 @@
 
 #include "Name.h"
 class Person {
-    Name* name = nullptr; // pointer
-    int age;
+    Name* name = nullptr; //Composition. class Person is responsible for creating and destroying name
+    int age;//this is also composition
 public:
     Person(const char*, int);
     Person(const Person&);
