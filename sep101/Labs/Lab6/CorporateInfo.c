@@ -106,7 +106,7 @@ double getDouble(void) {
 }
 
 // Implement each of the following functions.
-// Be sure to follow each scanf() with clearKeyboard()
+// Be sure to follow each scanf() with clearKeyboard() where necessary
 // Be sure to make use of getInt() and getDouble() where appropriate
 
 bool FindEmployeeByName(struct CorporateInfo corp, int* index) {
