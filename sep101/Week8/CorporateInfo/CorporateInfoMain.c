@@ -4,24 +4,23 @@
 
 int main(void) {
 	int retVal = 0;
-	FILE* fp=NULL;
+	FILE* fp;
 	struct CorporateInfo corporation;
 
 	//fill the corporate information structure from a file
-//	fp = fopen("EmployeeDB.txt", "r");//non-safe version
-	fopen_s(&fp, "EmployeeDB.txt", "r");
-	if (fp == NULL) {//failed to open the file
+	fp = fopen("EmployeeDB.txt", "r");
+	if (fp == NULL) {
 		retVal = -1;
 	}
 	if (retVal == 0) {
 		for (int i = 0; i < NUM_EMPLOYEES && retVal == 0; ++i) {
-			fscanf_s(fp, "%[^\n]s", corporation.employee[i].name, BUFSIZE);
+			fscanf(fp, "%[^\n]s", corporation.employee[i].name);
 			while (fgetc(fp) != '\n');//clear the file buffer before the next fscanf()
-			fscanf_s(fp, "%[^\n]s", corporation.employee[i].position, BUFSIZE);
-			fscanf_s(fp, "%lf", &corporation.employee[i].salary);
-			fscanf_s(fp, "%lf", &corporation.employee[i].age);
+			fscanf(fp, "%[^\n]s", corporation.employee[i].position);
+			fscanf(fp, "%lf", &corporation.employee[i].salary);
+			fscanf(fp, "%lf", &corporation.employee[i].age);
 			while (fgetc(fp) != '\n');//clear the file buffer before the next fscanf()
-		}
+		}//feof(fp)==EOF, tests for the end of file
 		fclose(fp);
 		corporation.averageSalary = INVALID_VALUE;
 		corporation.averageAge = INVALID_VALUE;
