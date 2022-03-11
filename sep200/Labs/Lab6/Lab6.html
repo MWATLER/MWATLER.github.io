@@ -7,7 +7,8 @@
 <p>A sports association is going to contain an aggregate of sports teams. In our lab, there are two types of 
     sports teams - a hockey team and a baseball team. A hockey team will keep track of a team's wins, losses, 
     ties and will calculate points based on these. A baseball team will keep track of a team's wins and losses 
-    and will calculate a winning percentage based on these.</p>
+    and will calculate a winning percentage based on these (percentage in the context of baseball is a number 
+    between 0.000 and 1.000).</p>
 <p>The main sports association program will create one sports association and add teams to it based 
    on user input.</p>
 <p>For this lab, the main sports association program is given to you: <a href="SportsMain.cpp" target="_blank">SportsMain.cpp</a>. 
@@ -20,8 +21,9 @@
 <ul>
     <li><b>GetName()</b>. This function returns the name of the team.</li>
     <li><b>display()</b>. This function displays information about the team.</li>
-    <li><b>operator==()</b>. This function determines if one team is equal to another team. They have to be the same 
-        type of team.</li>
+    <li><b>operator==()</b>. This function determines if one team is equal to another team. That is, if they are both 
+        hockey teams and they have the same number of points. Or if they are both baseball teams and they have the same 
+        winning percentage.</li>
 </ul>
 <p>Team.cpp contains a function to create a team based on user input:</p>
 <ul>
