@@ -21,6 +21,8 @@ None<br>
 
 <h3>Sample Code</h3>
 
+<h2>Final Test Review - Design</h2>
+
 <p><em>Personnel</em></p>
 <p><b>Design Problem</b>: A personnel system is to be built up for students and faculty of Seneca College. All students and 
   faculty have a name, role (Student/Faculty), address and a seneca number. They may both also have an unknown number of 
@@ -56,3 +58,96 @@ None<br>
   <a href="Personnel/Faculty.cpp" target="_blank">Faculty.cpp</a> and
   <a href="Personnel/PersonnelMain.cpp" target="_blank">PersonnelMain.cpp</a>.
 </p>
+
+<h2>Final Test Review - Coding Question</h2>
+
+<p>The freighter is a cargo ship that carries a collection of items across the ocean such as cars, food, commodities, etc... 
+  Various companies pay for the transportation of their items to markets across the world. For the freighter, a piece of cargo 
+  should have a certain value ($10000) to make it profitable to carry. Complete the following program by 
+  coding the class named <b>Freighter</b> and a global function named <b>calcTotalWorth</b>.</p>
+  
+  <h3>Freighter Class Requirements</h3>
+  
+  <p>Your <b>Freighter</b> class includes the following members:
+  <ul>
+  <li>STL container that holds <b>Cargo</b> objects</li>
+  <li>Any other variable you feel is required</li>
+  <li>Overloaded += operator that
+      <ul>
+          <li>Adds a Cargo object to the current object and returns a reference to the current object only 
+              if the cargo is not of type Electronics</li>
+          <li>If the cargo is of type Electronics, the operator should not change the current 
+              object and throws an exception</li>
+      </ul>
+  </li>
+  <li>Overloaded -= operator that
+    <ul>
+        <li>Takes a name as argument and removes the first cargo with that name</li>
+        <li>If the cargo cannot be found, it prints an error message</li>
+    </ul>
+</li>
+<li>Overloaded [] operator that
+      <ul>
+          <li>Takes as an input a value (double)</li>
+          <li>Returns the address of the first cargo object that is greater than this value</li>
+          <li>If no such cargo exists, the function returns nullptr</li>
+      </ul>
+  </li>
+  <li>Overloaded [] operator that
+    <ul>
+        <li>Takes as an input an index (int)</li>
+        <li>Returns the address of the cargo object at this index of the Cargo container</li>
+        <li>If no such cargo exists, the function returns nullptr</li>
+    </ul>
+</li>
+<li>A display function that:
+      <ul>
+          <li>Receives the address of one of the global functions that displays the requested information (byCargoType, byValue, byEverything)</li>
+          <li>Displays the total worth of all cargo</li>
+          <li>Calculates the total worth of all cargo in three threads. The thread function is <b>calcTotalWorth</b></li>
+      </ul>
+  </li>
+  </ul>
+  </p>
+  
+  <h3>calcTotalWorth Function Requirements</h3>
+  
+  <ul>
+      <li>The global function <b>calcTotalWorth</b> receives iterators to the beginning and end of a range of 
+      <b>Cargo</b> objects.</li>
+      <li>This function totals the value of the individual cargo objects</li>
+  </ul>
+  
+  <h3>Other Requirements</h3>
+  
+  <ul>
+      <li>Upgrade the main function of the program to use a smart pointer</li>
+      <li>Upgrade the main function to catch any exceptions</li>
+  </ul>
+  
+  <h3>Incomplete Code</h3>
+  
+  <p>The following code has been given to you. Please complete:<br>
+      <a href="Freighter_release/Cargo.h" target="_blank">Cargo.h</a>,
+      <a href="Freighter_release/Freighter.h" target="_blank">Freighter.h</a>,
+      <a href="Freighter_release/Freighter.cpp" target="_blank">Freighter.cpp</a> and
+      <a href="Freighter_release/CargoMain.cpp" target="_blank">CargoMain.cpp</a>.<br>
+      The results of a sample run can be seen in <a href="Freighter_release/sample_run.txt" target="_blank">sample_run.txt</a>.
+  </p>
+  
+  <h3>A Solution</h3>
+  
+  <p>The following code is a solution to the above problem:<br>
+    <a href="Freighter/Cargo.h" target="_blank">Cargo.h</a>,
+    <a href="Freighter/Freighter.h" target="_blank">Freighter.h</a>,
+    <a href="Freighter/Freighter.cpp" target="_blank">Freighter.cpp</a> and
+    <a href="Freighter/CargoMain.cpp" target="_blank">CargoMain.cpp</a>.<br>
+    The results of a sample run can be seen in <a href="Freighter/sample_run.txt" target="_blank">sample_run.txt</a>.
+</p>
+
+
+<h2>Final Test Review - Algorithms</h2>
+
+<p><em>Algorithms</em></p>
+<p>An exercise with STL algorithms can be seen at <a href="Algorithms/Sprinter.cpp" target="_blank">Sprinter.cpp</a> which makes use of a list 
+  of sprinters whom had set world records in both the 100m and 200m in the same year.</p>
