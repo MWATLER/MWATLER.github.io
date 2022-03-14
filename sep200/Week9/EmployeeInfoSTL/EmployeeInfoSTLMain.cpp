@@ -15,9 +15,9 @@ int main() {
 	empl.push_back(empl2);
 	empl.push_back(empl3);
 
-	for (int i = 0; i < empl.size(); ++i) {
-		Err_Status ret = empl[i].PrintInfo();//array format
-		if (ret == Err_Failure) cout << "Failed to get information for " << empl.at(i).GetName() << endl << endl;//at() format
+	for (size_t i = 0; i < empl.size(); ++i) {
+		EmployeeInfoSTL::Err_Status ret = empl[i].PrintInfo();//array format
+		if (ret == EmployeeInfoSTL::Err_Status::Err_Failure) cout << "Failed to get information for " << empl.at(i).GetName() << endl << endl;//at() format
 	}
 	cout << endl;
 
@@ -29,16 +29,16 @@ int main() {
 	cout << "print information using an iterator" << endl;
 	vector<EmployeeInfoSTL>::iterator i;
 	for (i = empl.begin(); i != empl.end(); ++i) {
-		Err_Status ret = i->PrintInfo();//array format
-		if (ret == Err_Failure) cout << "Failed to get information for " << i->GetName() << endl << endl;//at() format
+		EmployeeInfoSTL::Err_Status ret = i->PrintInfo();//array format
+		if (ret == EmployeeInfoSTL::Err_Status::Err_Failure) cout << "Failed to get information for " << i->GetName() << endl << endl;//at() format
 	}
 	cout << endl;
 
 	//Do the same using iterators II
 	cout << "print information using an auto iterator" << endl;
 	for (auto j = empl.begin(); j != empl.end(); ++j) {
-		Err_Status ret = j->PrintInfo();//array format
-		if (ret == Err_Failure) cout << "Failed to get information for " << j->GetName() << endl << endl;//at() format
+		EmployeeInfoSTL::Err_Status ret = j->PrintInfo();//array format
+		if (ret == EmployeeInfoSTL::Err_Status::Err_Failure) cout << "Failed to get information for " << j->GetName() << endl << endl;//at() format
 	}
 	cout << endl;
 
@@ -47,9 +47,9 @@ int main() {
 	empl.front() = empl4;
 	empl.pop_back();
 
-	for (int i = 0; i < empl.size(); ++i) {
-		Err_Status ret = empl[i].PrintInfo();//array format
-		if (ret == Err_Failure) cout << "Failed to get information for " << empl.at(i).GetName() << endl << endl;//at() format
+	for (size_t i = 0; i < empl.size(); ++i) {
+		EmployeeInfoSTL::Err_Status ret = empl[i].PrintInfo();//array format
+		if (ret == EmployeeInfoSTL::Err_Status::Err_Failure) cout << "Failed to get information for " << empl.at(i).GetName() << endl << endl;//at() format
 	}
 	cout << endl;
 

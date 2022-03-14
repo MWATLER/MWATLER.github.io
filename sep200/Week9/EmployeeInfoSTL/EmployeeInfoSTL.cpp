@@ -32,9 +32,9 @@ double EmployeeInfoSTL::GetAverageSalary() {
 	return retVal;
 }
 
-Err_Status EmployeeInfoSTL::PrintInfo() {
-	Err_Status retVal = Err_Success;
-	if (name == "" || position == "" || salary <= 0.0 || numEmployees == 0) retVal = Err_Failure;
+EmployeeInfoSTL::Err_Status EmployeeInfoSTL::PrintInfo() {
+	Err_Status retVal = Err_Status::Err_Success;
+	if (name == "" || position == "" || salary <= 0.0 || numEmployees == 0) retVal = Err_Status::Err_Failure;
 	else {
 		std::cout << name << " earns " << salary << " per year and has position " << position << "." << std::endl;
 		std::cout << "The average salary in this company is " << GetAverageSalary() << std::endl << std::endl;

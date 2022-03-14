@@ -22,6 +22,7 @@ int main()
         std::cout << it->first << " :: " << it->second << std::endl;
         it++;
     }
+    std::cout << std::endl;
 
     // Erasing By iterator
     it = mapOfWords.find("moon");
@@ -33,6 +34,7 @@ int main()
         std::cout << it->first << " :: " << it->second << std::endl;
         it++;
     }
+    std::cout << std::endl;
 
     // Erasing By Key
     mapOfWords.erase("earth");

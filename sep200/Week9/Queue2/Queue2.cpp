@@ -7,12 +7,11 @@ using namespace std;
 
 void showdata(queue<char>& buf)
 {
-    cout << endl << endl << "Data entered: ";
+    cout << endl << endl << "Data entered: " << endl;
     while (buf.size() > 0) {
         cout << buf.front() << endl;
         buf.pop();
     }
-    cout << endl << "Continue entering data to the screen. Hit '*' to finish." << endl;
 }
 
 int main()

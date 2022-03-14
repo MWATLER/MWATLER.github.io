@@ -5,16 +5,15 @@
 
 #include <iostream>
 
-enum Err_Status {
-	Err_Success,
-	Err_Failure
-};
-
 class EmployeeInfoSTL {
 	std::string name;
 	std::string position;
 	double salary;
 public:
+	enum class Err_Status {
+		Err_Success,
+		Err_Failure
+	};
 	static int numEmployees;
 	static double runningTotal;
 	EmployeeInfoSTL();

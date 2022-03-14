@@ -8,13 +8,14 @@
 std::map<std::string, int>::iterator searchByValue(std::map<std::string, int>& mapOfWords, int val)
 {
     // Iterate through all elements in std::map and search for the passed element
+    bool found = false;
     std::map<std::string, int>::iterator it = mapOfWords.begin();
-    while (it != mapOfWords.end())
+    while (it != mapOfWords.end() && !found)
     {
-        if (it->second == val)
-            return it;
-        it++;
+        if (it->second == val) found = true;
+        else it++;
     }
+    return it;
 }
 int main()
 {
