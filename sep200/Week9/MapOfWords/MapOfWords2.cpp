@@ -12,7 +12,7 @@ std::map<std::string, int>::iterator searchByValue(std::map<std::string, int>& m
     std::map<std::string, int>::iterator it = mapOfWords.begin();
     while (it != mapOfWords.end() && !found)
     {
-        if (it->second == val) found = true;
+        if (it->second == val) found = true;//look for the element that has a value of val (in this case 3)
         else it++;
     }
     return it;
@@ -24,8 +24,10 @@ int main()
     mapOfWords.insert(std::make_pair("earth", 1));
     mapOfWords.insert(std::make_pair("moon", 2));
     mapOfWords["sun"] = 3;
-    std::map<std::string, int>::iterator it = searchByValue(mapOfWords, 3);
-    if (it != mapOfWords.end())
-        std::cout << it->first << " :: " << it->second << std::endl;
+    std::map<std::string, int>::iterator it = searchByValue(mapOfWords, 4);
+	if (it != mapOfWords.end())
+		std::cout << it->first << " :: " << it->second << std::endl;
+	else
+		std::cout << "no such element in our map." << std::endl;
     return 0;
 }

@@ -14,11 +14,11 @@ public:
 		Err_Success,
 		Err_Failure
 	};
-	static int numEmployees;
-	static double runningTotal;
+	static int numEmployees;//the number of objects of type EmployeeInfoSTL
+	static double runningTotal;//a running total of the salaries
 	EmployeeInfoSTL();
 	EmployeeInfoSTL(std::string _name, std::string _position, double _salary);
-	std::string GetName();
+	std::string GetName() const;
 	double GetAverageSalary();
 	Err_Status PrintInfo();
 };

@@ -9,8 +9,8 @@ void showdata(queue<char>& buf)
 {
     cout << endl << endl << "Data entered: " << endl;
     while (buf.size() > 0) {
-        cout << buf.front() << endl;
-        buf.pop();
+        cout << buf.front() << endl;//get the front value
+        buf.pop();//remove it from the queue
     }
 }
 

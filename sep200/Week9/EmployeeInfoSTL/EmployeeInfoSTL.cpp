@@ -7,22 +7,22 @@ double EmployeeInfoSTL::runningTotal = 0.0;
 
 using namespace std;
 
-EmployeeInfoSTL::EmployeeInfoSTL() {
+EmployeeInfoSTL::EmployeeInfoSTL() {//default constructor
 	name = "";
 	position = "";
 	salary = 0.0;
-	++numEmployees;
+	++numEmployees;//keeps track of the number of objects of type EmployeeInfoSTL
 }
 
 EmployeeInfoSTL::EmployeeInfoSTL(std::string _name, std::string _position, double _salary) {
 	name = _name;
 	position = _position;
 	salary = _salary;
-	++numEmployees;
-	runningTotal += salary;
+	++numEmployees;//keeps track of the number of objects of type EmployeeInfoSTL
+	runningTotal += salary;//a running total of the salaries
 }
 
-std::string EmployeeInfoSTL::GetName() {
+std::string EmployeeInfoSTL::GetName() const {
 	return name;
 }
 

@@ -24,10 +24,10 @@ void showdata2(deque<int> deque1)
 int main()
 {
     deque<int> myqueue;
-    myqueue.push_front(230); // pushing data to the front
-    myqueue.push_front(240); // pushing data to the front
-    myqueue.push_back(250);  // pushing data to the back
-    myqueue.push_back(260);  // pushing data to the back
+    myqueue.push_front(230); // pushing data to the front   230
+    myqueue.push_front(240); // pushing data to the front   240 230
+    myqueue.push_back(250);  // pushing data to the back    240 230 250
+    myqueue.push_back(260);  // pushing data to the back    240 230 250 260
     cout << "Deque elements are: " << endl;
     showdata(myqueue);
     cout << endl << "Once again, Deque elements are: " << endl;

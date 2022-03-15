@@ -1,6 +1,6 @@
 //EmployeeInfoMain.cpp - main program for employee information
 
-#include <queue>
+#include <vector>
 #include "EmployeeInfoSTL.h"
 
 using namespace std;
@@ -11,9 +11,12 @@ int main() {
 	EmployeeInfoSTL empl3("Jessica Lee", "Design Engineer", 92000.00);
 	vector<EmployeeInfoSTL> empl;
 
+//	vector<double>* vPointer = new vector<double>;//you can allocate memory for vectors!!!!
+
 	empl.push_back(empl1);
 	empl.push_back(empl2);
 	empl.push_back(empl3);
+//	cout << "The capacity of our vector is " << empl.capacity() << ", but the size is " << empl.size() << endl << endl;
 
 	for (size_t i = 0; i < empl.size(); ++i) {
 		EmployeeInfoSTL::Err_Status ret = empl[i].PrintInfo();//array format
@@ -44,8 +47,8 @@ int main() {
 
     //Add an employee to the front and delete the last employee
 	EmployeeInfoSTL empl4("Bill Durnham", "Product Support Specialist", 84000.00);
-	empl.front() = empl4;
-	empl.pop_back();
+	empl.front() = empl4;//replaces Sarah Smith
+	empl.pop_back();//removes Jessica Lee
 
 	for (size_t i = 0; i < empl.size(); ++i) {
 		EmployeeInfoSTL::Err_Status ret = empl[i].PrintInfo();//array format
