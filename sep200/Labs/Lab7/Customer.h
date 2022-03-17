@@ -27,8 +27,6 @@ public:
 
 	//TODO: A function to zero all data
 
-	//GIVEN: An operator that expresses how to order data
-	bool operator<(const Customer& rhs) const noexcept;
 };
 
 #endif// _CUSTOMER_H_
