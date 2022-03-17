@@ -14,10 +14,12 @@ int PetInfo::GetAge() const {
 	return age;
 }
 
+//The validation functions
 bool PetInfo::SetName(std::string _name) {
 	bool retVal = true;
 	if (_name.size() == 0) retVal = false;
-	else name = _name;
+	else name = _name;//note, that for char arrays, you had to use strcpy(..)
+	                  //for string's, you can simply assign one to another
 	return retVal;
 }
 
