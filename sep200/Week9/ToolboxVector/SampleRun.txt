@@ -1,0 +1,17 @@
+
+Enter 1 for a hammer, or
+Enter 2 for a screwdriver.
+Selection: 1
+What is the hammer's name? Mallet
+How much does this hammer cost? $8.30
+
+Enter 1 for a hammer, or
+Enter 2 for a screwdriver.
+Selection: 2
+What is the screwdriver's name? Phillips
+How much does this screwdriver cost? $11.70
+
+Data Processing Support is a toolbox with the following items:
+Mallet is a hammer and costs $8.30.
+Phillips is a screwdriver and costs $11.70.
+The total cost of these items is $20.00

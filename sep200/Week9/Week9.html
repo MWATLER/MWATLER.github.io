@@ -91,3 +91,37 @@
   4 million elements is built. The search is very quick because STL's map is based on the binary tree:<br>
   <a href="BigMap/BigMap.cpp" target="_blank">BigMap.cpp</a>
 </p>
+
+<p><em>Toolbox Revisited</em></p>
+<p>In week 8 we looked at sample code that demonstrated aggregation of different types which are related through a base class. We used an array 
+  of pointers to the base class. This week we are going to do the same, but in one example we will use a 
+  <a href="http://cplusplus.com/reference/vector/vector/" target="_blank">vector</a> of pointers to the base class, and in another 
+  example we are going to use a <a href="http://cplusplus.com/reference/list/list/" target="_blank">list</a> 
+  of pointers to the base class. In all three examples the types are <b>Hammer</b> and <b>Screwdriver</b>. They are both tools derived from a 
+  <b>ToolIf</b> interface class.</p>
+  <ul>
+  <li>In example one, we use a vector of pointers to <b>ToolIf</b>:<br>
+  <a href="ToolboxVector/ToolIf.h" target="_blank">ToolIf.h</a>,
+  <a href="ToolboxVector/ToolIf.cpp" target="_blank">ToolIf.cpp</a>,
+  <a href="ToolboxVector/Hammer.h" target="_blank">Hammer.h</a>,
+  <a href="ToolboxVector/Screwdriver.h" target="_blank">Screwdriver.h</a>,
+  <a href="ToolboxVector/Toolbox.h" target="_blank">Toolbox.h</a> and
+  <a href="ToolboxVector/ToolMain.cpp" target="_blank">ToolMain.cpp</a>.<br>
+  A sample run is shown in <a href="ToolboxVector/SampleRun.txt" target="_blank">SampleRun.txt</a>. Notice that when using a vector, the only difference between 
+  this code and that of week 8, is that we push_back onto the vector. Other than that, the vector in this example can be treated the same as an array.
+</li>
+<li>In example two, we use a list of pointers to <b>ToolIf</b>:<br>
+  <a href="ToolboxList/ToolIf.h" target="_blank">ToolIf.h</a>,
+  <a href="ToolboxList/ToolIf.cpp" target="_blank">ToolIf.cpp</a>,
+  <a href="ToolboxList/Hammer.h" target="_blank">Hammer.h</a>,
+  <a href="ToolboxList/Screwdriver.h" target="_blank">Screwdriver.h</a>,
+  <a href="ToolboxList/Toolbox.h" target="_blank">Toolbox.h</a> and
+  <a href="ToolboxList/ToolMain.cpp" target="_blank">ToolMain.cpp</a>.<br>
+  A sample run is shown in <a href="ToolboxList/SampleRun.txt" target="_blank">SampleRun.txt</a>. Notice that when using a list, we could push to or pop from 
+  the front of the list or push to or pop from the back of the list, because std::list in C++ uses a doubly linked list. 
+  <a href="http://cplusplus.com/reference/forward_list/forward_list/" target="_blank">forward_list</a> uses a singly linked 
+  list and only allows pushing to and popping from the front of the list.<br>
+  This example includes the ability to remove an item from the list. With lists it is easy to insert or remove items from any position in the list. The 
+  RemoveTool() function found in the sample code removes a tool using the tool's name as the key. It iterates through the list until the names match.
+  The iterator is then used to remove the item from the list.
+</ul>
