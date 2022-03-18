@@ -15,7 +15,7 @@ public:
 //Setter functions, values can be validated before setting
 bool Student::SetName(std::string _name) {
 	bool ret = true;
-	if (_name.size() == 0) {
+	if (_name.size() == 0) {//validation
 		ret = false;
 	}
 	else {
@@ -24,7 +24,7 @@ bool Student::SetName(std::string _name) {
 	return ret;
 }
 
-bool Student::SetYear(int _year) {
+bool Student::SetYear(int _year) {//validation
 	bool ret = true;
 	if (_year < 1) {
 		ret = false;
@@ -39,14 +39,14 @@ bool Student::SetYear(int _year) {
 bool Student::SetMarks(int* _mark, int num) {
 	bool ret = true;
 	//validate the number of marks first
-	if (num<0 || num>MAX_MARKS) {
+	if (num<0 || num>MAX_MARKS) {//validation
 		ret = false;
 	}
 	else {
 		numMarks = num;
 	}
 	for (int i = 0; i < numMarks && ret; ++i) {
-		if (_mark[i] < 0 || _mark[i]>100) {
+		if (_mark[i] < 0 || _mark[i]>100) {//validation
 			ret = false;
 		}
 		else {
@@ -57,8 +57,7 @@ bool Student::SetMarks(int* _mark, int num) {
 	return ret;
 }
 
-//Getter functions, a value is returned without being changed. 
-//To enforce this, we declare these functions as const.
+//Getter functions, a value is returned without being changed. To enforce this, we declare these functions as const.
 string Student::GetName() const {
 	return name;
 }
@@ -77,7 +76,7 @@ void Student::CalculateAverage() {
 }
 
 void Student::PrintReport() {
-	cout.setf(ios::fixed);
-	cout.precision(2);
+	cout.setf(ios::fixed);//DDD.DDD
+	cout.precision(2);//to two decimal places
 	cout << "The average for " << name << " in year " << year << " is " << average << endl;
 }

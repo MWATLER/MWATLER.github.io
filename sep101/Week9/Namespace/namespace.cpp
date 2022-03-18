@@ -16,15 +16,15 @@ namespace english {
 }
 
 namespace french {
-    string message = "Bonjour";
+	string message = "Bonjour";
 }
 
-using namespace english;
+//using namespace french;
 
 int main() {
     cout << "Welcome to Object-Oriented Programming" << endl;
-//  cout << english::message << endl;
-//  cout << french::message << endl;
-    cout << message << endl;
+    cout << english::message << endl;
+    cout << french::message << endl;//what will be printed here? Welcome or Bonjour?
+//  cout << message << endl;
     return 0;
 }

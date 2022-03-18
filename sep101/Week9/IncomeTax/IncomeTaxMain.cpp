@@ -2,13 +2,14 @@
 
 #define NUM_CLIENTS 3
 #include <iostream>//std::cout, std::cin
-#include <string>//std::getline()//scanf("%[^\n]s", var);
+#include <string>//std::getline()
 #include "IncomeTax.h"
 
 using namespace std;
 
 int main(void) {
-	Person person[NUM_CLIENTS];
+	Person person[NUM_CLIENTS];//three objects of type Person.
+	//Person is the blueprint; person[0], person[1], person[2] are the objects of type Person
 
     //Prompt for user input
 	for (int i = 0; i < NUM_CLIENTS; ++i) {

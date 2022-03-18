@@ -19,7 +19,7 @@ int main()
     car4.addFuel(50.0);
 
     //Set fuel efficiency for city driving then drive 200km
-    car1.setFuelEfficiency(8.2);//8.2L/100km
+    car1.setFuelEfficiency(8.2);
     car1.drive(200.0);
     car2.setFuelEfficiency(7.8);
     car2.drive(200.0);
@@ -29,7 +29,7 @@ int main()
     car4.drive(200.0);
 
     //Set fuel efficiency for highway driving then drive 300km
-    car1.setFuelEfficiency(6.2);//6.2L/100km
+    car1.setFuelEfficiency(6.2);
     car1.drive(300.0);
     car2.setFuelEfficiency(5.8);
     car2.drive(300.0);

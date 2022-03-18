@@ -25,24 +25,9 @@ void CalculateIncomeTax(struct Person* person);
 
 //#define MAX_STR 32//No longer needed
 #include <iostream>
-#define MAX_STR 32
 
-/*struct Person {
-	char name[MAX_STR];
-	int  sin;
-	float annualIncome;
-	float donations;
-	int   dependencies;
-	float rrspContribution;
-	float deductibles;
-	float incomeTax;
-};
-
-void utilClearInputBuffer();
-void CalculateDeductible(struct Person* person);
-void CalculateIncomeTax(struct Person* person);*/
-class Person {//These variables look exactly like those in struct Person
-private:
+class Person {
+	//private: by default
 	std::string name;
 	int  sin;
 	float annualIncome;

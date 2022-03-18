@@ -7,10 +7,12 @@
 using namespace std;
 
 class Automobile {
-private:
+private://not necessary
     string make;
     string model;
-    string colour;
+    string colour;//strings are based on the char array. If we wish to access the char array
+	              //directly, we can call c_str(). For example colour.c_str() will access
+	              //the char array inside of colour
     int year;
     double fuelEfficiency;
     double fuelInTank;

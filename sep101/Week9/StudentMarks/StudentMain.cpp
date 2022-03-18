@@ -3,7 +3,7 @@
 #define NUM_STUDENTS 3
 #include <iostream>//std::cout, std::cin
 #include <string>//std::getline()
-#include "Student.h"
+#include "Student.h"//class Student{...}
 
 using namespace std;
 
@@ -36,7 +36,7 @@ int main(void) {
 				cout << "Enter the mark for course " << j + 1 << ": ";
 				cin >> iValueArray[j];
 			}
-			ret = student[i].SetMarks(iValueArray, iValue);
+			ret = student[i].SetMarks(iValueArray, iValue);//array of marks and the number of courses
 		} while (!ret);
 		student[i].CalculateAverage();
 		cout << student[i].GetName() << " has an average of " << student[i].GetAverage() << endl << endl;
