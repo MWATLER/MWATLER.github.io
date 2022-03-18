@@ -5,11 +5,13 @@
 
 using namespace std;
 
-ToolIf* CreateTool() {
+ToolIf* CreateTool() {//factory pattern, no tool objects are created until the program runs
 	ToolIf* tool = nullptr;
 	int select = 0;
 	string name;
 	double cost;
+//	tool = new ToolIf("Miguel", 10.0);//I never create an object of type ToolIf in this example, 
+	                                  //because it is simply not possible and I don't want to.
 	do {
 		cout << endl;
 		cout << "Enter 1 for a hammer, or" << endl;

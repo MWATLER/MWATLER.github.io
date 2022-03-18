@@ -11,7 +11,7 @@ const int MAX_TOOLS = 4;
 class Toolbox {
 	std::string name;
 	double totalCost;
-	ToolIf* item[MAX_TOOLS];
+	ToolIf* item[MAX_TOOLS];//an aggregate of tools through a pointer to their base class
 	int numItems;
 public:
 	Toolbox(std::string name) {
