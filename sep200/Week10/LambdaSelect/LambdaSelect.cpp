@@ -23,9 +23,9 @@ int main() {
 
 	//Erase items higher than 50
 	const int max = 50;
-	vec.erase
+	vec.erase//std::vector has an erase function which you have to implement
 	(
-		remove_if
+		remove_if//std::vector's erase function can be based on a condition, which you have to implement
 		(
 			vec.begin(), vec.end(),
 			[max](int number)->bool//could use [=] pass by value, or [&] pass by reference

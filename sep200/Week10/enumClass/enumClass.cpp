@@ -8,8 +8,12 @@ public:
         Adult, 
         Child
     };
-    void set(TicketType tt);
-    TicketType get() const;
+    void set(TicketType tt) {
+        ticketType = tt;
+    }
+    TicketType get() const {
+        return ticketType;
+    }
 private:
     TicketType ticketType;
 };
@@ -29,10 +33,6 @@ std::ostream& operator<<(std::ostream& os, const Ticket::TicketType& tt) {
     os << label;
     return os;
 }
-
-void Ticket::set(TicketType tt) { ticketType = tt; }
-
-auto Ticket::get() const -> TicketType { return ticketType; }
 
 int main() {
     Ticket a, b;

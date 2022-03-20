@@ -48,19 +48,48 @@ assignment 2.</p>
 
 <p><em>Recursion</em></p>
 <p>Recursion occurs when a function calls itself. This may seem a little silly, but is in fact very useful when implementing binary trees. 
-  A recursive functio has two parts - the recursive part, and the base case. As a function calls itself repeatedly, it eventually finds itself
-  at the base case, in which case the recursion unwinds. An example of using recursion to calculate the factorial of a number can be found at:<br>
+  A recursive function has two parts - the recursive part, and the base case. As a function calls itself repeatedly, it eventually finds itself
+  at the base case, in which case the recursion unwinds.</p>
+<p>Many mathematical operations lend themselves to recursive programming. For instance, consider the factorial operation. This consists of 
+    a series of multiplications as follows:<br>
+    <b>n! = n*(n-1)*(n-2)*(n-3) ... *2*1</b><br>
+    This could be rewritten as:<br>
+    <b>n! = n*(n-1)!</b><br>
+    In C++, this is written as follows:
+    <pre>
+    int factorial(int n) {
+      if(n>1) return n * factorial(n-1);
+      else    return 1;
+    }
+  </pre>
+  An example of using recursion to calculate the factorial of a number can be found at:<br>
 <a href="Factorial/Factorial.cpp" target="_blank">Factorial.cpp</a>.
 </p>
 
 <p><em>A Function Pointer</em></p>
-<p>A function pointer is very useful in what we call state-machines. Depending on the state of an object, a particular function is called.
-  Functions do exist in memory as binaries, and we can use a pointer to point to the beginning of a function in the same way we can 
+<p>A function pointer is very useful for threads and for interrupt-programming. One of the parameters in thread creation is a pointer 
+  to a function that will run as a thread. For instance, if you want to create a read thread for reading data packets from a network,
+  you could create a function <b>ReadThread</b> and then invoke it on thread creation. Likewise, you might assign a callback function that 
+  needs to be run in case your program receives a signal from the operating system or an interrupt on a hardware pin. Your program will 
+  have a pointer to this callback function, which will be invoked on interrupt. JavaScript has the concept of a callback function which 
+  is invoked if, for instance, a button is clicked on your mouse.</p>
+  <p>Functions do exist in memory as binaries, and we can use a pointer to point to the beginning of a function in the same way we can 
   use a pointer to point to an object or variable in memory. An example of using a function pointer can be seen at:<br>
 <a href="FunctionPointer/ReportMarks.cpp" target="_blank">ReportMarks.cpp</a>.<br>
-Function pointers can also appear as an array of functions. The function pointer pointes to one of the functions in its array depending
+Function pointers can also appear as an array of functions. The function pointer points to one of the functions in its array depending
 on the array index. An example of using an array of function pointers can be seen at<br>
-<a href="FunctionPointer2/ReportMarks2.cpp" target="_blank">ReportMarks2.cpp</a>.
+<a href="FunctionPointer2/ReportMarks2.cpp" target="_blank">ReportMarks2.cpp</a>.<br></br>
+There is something in C++ called a virtual table. It will point to the correct function 
+in a polymorphic arrangement. The C++ compiler uses a function pointer within itself to 
+resolve which function should be called, ie Base::PrintInfo() or Derived::PrintInfo():
+<pre>
+class Base {
+    virtual void PrintInfo();
+};
+class Derived:public Base {
+    void PrintInfo();
+};
+</pre>
 </p>
 
 <p><em>Functor</em></p>
@@ -72,10 +101,13 @@ on the array index. An example of using an array of function pointers can be see
 </p>
 
 <p><em>Lambda Functions</em></p>
-<p>Lambda functions are functions without a name, but provide a function-like interface similar to functors. Lambda functions are not 
+<p>Lambda functions are anonymous functions which provide a function-like interface similar to functors. Lambda functions are not 
   based on a class. Lambda functions are used extensively with the Standard Template Library as inline functions. The following example 
   demonstrates a lambda function used with remove_if() to determine which elements of an array should be removed:<br>
-<a href="LambdaSelect/LambdaSelect.cpp" target="_blank">LambdaSelect.cpp</a>.
+<a href="LambdaSelect/LambdaSelect.cpp" target="_blank">LambdaSelect.cpp</a>.</p>
+<p>Lambda functions can also be standalone within another function. The following example uses a lambda function to calculate the average 
+height of basketball and hockey players:<br>
+<a href="Average/Average.cpp" target="_blank">Average.cpp</a>.</p>
 </p>
 
 <p><em>Exceptions</em></p>

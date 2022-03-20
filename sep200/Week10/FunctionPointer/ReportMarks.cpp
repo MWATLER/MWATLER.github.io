@@ -18,7 +18,8 @@ int main() {
 	const int NUM_STUDENTS = 4;
 	void (*ReportAveragePtr)(const Student&);
 
-	Student student[NUM_STUDENTS] = { {"Henry Ford", 56, 67, 75},
+	Student student[NUM_STUDENTS] = { 
+		{"Henry Ford", 56, 67, 75},
 		{"Bette Midler", 62, 64, 71},
 		{"Priti Patel", 87, 98, 86},
 		{"Olivia Cheng", 81,78, 79} };
