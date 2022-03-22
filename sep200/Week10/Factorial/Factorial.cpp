@@ -3,15 +3,17 @@
 
 #include <iostream>
 
-unsigned factorialRecursion(unsigned x) {
+unsigned factorialRecursion(unsigned x) {//beautifully implements the mathematics,
+	                                     //it reflects the mathematical equation.
+	                                     //To implement factorial recursively is very intuitive
     if (x > 1u) return x * factorialRecursion(x - 1);//the recursive case
-    else return x;//the base case
+    else return x;//the base case. If there is no base case, your program will run out of stack memory and crash
 }
 
 unsigned factorialAlternative(unsigned x) {
     unsigned result = 1u;
-    while (x > 1u) {
-        result = result * x;
+    while (x > 1u) {//will loop until x=1. If the while loop runs indefinitely, the program will hang
+        result = result * x;//result=1*5, result=5*4=20, result=20*3=60, result=60*2=120
         --x;
     }
     return result;

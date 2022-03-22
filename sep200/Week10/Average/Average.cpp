@@ -7,12 +7,12 @@ using namespace std;
 
 int main() {
 	const int NUM = 3;
-	struct Person {
+	struct Person {//the blueprint for a person
 		int age;
 		int height;//cm's
 	};
-	vector<Person> basketballPlayers;
-	vector<Person> hockeyPlayers;
+	vector<Person> basketballPlayers;//a vector of objects of type Person
+	vector<Person> hockeyPlayers;//a vector of objects of type Person
 
 	cout << "Enter data for basketball players." << endl;
 	for (int i = 0; i < NUM; ++i) {
@@ -40,7 +40,7 @@ int main() {
 	auto average = [](const vector<Person>& person) -> double
 	{
 		double runningTotal = 0;
-		for (const auto& p : person) {
+		for (const auto& p : person) {//foreach format 
 			runningTotal += (double)p.height;
 		}
 		return runningTotal / person.size();
