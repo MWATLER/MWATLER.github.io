@@ -17,7 +17,7 @@ int main() {
 	//gradually increase the current to 0.1 amps
 	cout << "RISING CURRENT" << endl;
 	cout << "    CURRENT    VOLTAGE" << endl;
-	for (double time = 0.0; time <= 0.1001; time += timestep) {//a timestep of 1ms
+	for (double time = 0.0; time <= 0.1001; time += timestep) {//a timestep of 1ms, run for 100ms
 		current = 1.0 * time;//a ramp current
 		voltage = R1.GetVoltage(current) + R2.GetVoltage(current) + L1.GetVoltage(current, timestep);
 		cout << setw(10) << current << setw(10) << voltage << endl;
