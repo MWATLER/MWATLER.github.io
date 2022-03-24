@@ -1,70 +1,137 @@
-<h2>SEP200 - Lab 9: The inverse of a matrix</h2>
+<h2>SEP200 - Lab 9: Car Ratings</h2>
 
 <h3>Due: April 8, 2022</h3>
 
-<p>This lab will test your ability to use a functor with a two-dimensional array to calculate the inverse of a 3x3 matrix.</p>
+<a href="" target="_blank">Lab Recording</a> April 1 (mp4)</a>
 
-<p>Functors have certain advantages over functions. Unlike functions, functors can have state. They fit into the object-oriented 
-    paradigm as compared to functions because functors are actually based on classes. Functors are often inlined by the compiler, 
-    unlike function pointers. The functor does not require runtime dispatching, therefore it is more efficient in most cases.</p>
+<p>This lab will test your ability to use STL algorithms as you process data from a selection of cars. The information for 
+    each car is stored in a structure that contains the car's name, country, reliability, fuel efficiency, and horse power.</p>
 
-<p>Your functor is going to look like a function to the calling program, but it is actually an object of a class called <b>inverse</b>.</p>
-
-<h3>The <b>inverse</b> class.</h3>
-<p>The <b>inverse</b> class has to perform the following:
+<p>The Standard Template Library provides a rich set of algorithms that you can perform on your data. For non-standard data type 
+    you can provide your own criteria for handling data in the form of a lambda function. You might find the following links useful:<br> 
 <ul>
-<li>The matrix that is passed to the <b>inverse</b> class may have floating point values or may have double floating 
-    point values. The <b>inverse</b> class has to be generic enough to accommodate for both (or more) types.</li>
-<li>The <b>inverse</b> class will present a function like interface to the calling program by overriding the operator <b>operator()</b>.</li>
-<li>In determining the inverse of a matrix, one has to first determine the <b>determinant</b> of a matrix. 
-    See <a href="https://www.mathsisfun.com/algebra/matrix-determinant.html" target="_blank">Determinant of a Matrix</a> as a guide 
-    on how to calculate the <b>determinant</b> of a 3x3 matrix.</li>
-<li>Once the <b>determinant</b> has been calculated, see 
-    <a href="https://byjus.com/maths/inverse-of-3-by-3-matrix/" target="_blank">Inverse of a 3x3 Matrix</a> as a guide on how to 
-    calculate the inverse of a 3x3 matrix.</li>
-<li>The <b>inverse</b> class may require a private matrix of dimension 3x3 to act as a temporary matrix to aid in the 
-       matrix calculations. The values of this temporary matrix (if needed) should be initialized to 0.</li>
-<li>You might want to make use of private functions to assist in all this. For instance, each value of the inverse matrix is calculated 
-    from the <b>determinant</b> of a 2x2 submatrix. You may want to have a private function for calculating this <b>determinant</b> 
-    since the code will be reused many times.</li>
+    <li><a href="http://www.cplusplus.com/reference/algorithm/" target="_blank">STL Algorithms</a></li>
+    <li><a href="https://www.cplusplus.com/reference/numeric/" target="_blank">STL Numerics</a></li>
+    <li><a href="http://www.cplusplus.com/reference/stl/" target="_blank">STL Containers</a></li>
+    <li><a href="http://www.cplusplus.com/reference/algorithm/sort/" target="_blank">STL Sort Algorithm</a></li>
+    <li><a href="http://www.cplusplus.com/reference/algorithm/for_each/" target="_blank">STL For-Each Algorithm</a></li>
+    <li><a href="https://www.cplusplus.com/reference/numeric/accumulate/" target="_blank">STL Accumulate Numerics</a></li>
+    <li><a href="//http://www.cplusplus.com/reference/algorithm/transform/" target="_blank">STL Transform Algorithm</a></li>
 </ul>
+</p>
+
+<p>The test program <a href="CarRating.cpp" target="_blank">CarRating.cpp</a> provides you with a vector of cars with various ratings. 
+The function <b>processCars()</b> asks that you complete the following tasks:
+<ol>
+    <li>Sort and print out all cars in order of their reliability rating (higher is better).</li>
+    <li>Sort and print out all cars in order of their fuel efficiency (lower is better).</li>
+    <li>Sort and print out all cars in order of their horse power (higher is better).</li>
+    <li>Print out the average horse power of all German cars.</li>
+    <li>Print out all cars with reliability greater than (or equal to) 8.0.</li>
+    <li>Change the country of all American cars from "USA" to "United States".</li>
+    <li>Reorganize the vector of all cars in order of their rating (higher is better) based on the formula:<br>
+        <b>rating = 2.0*(reliability-4.1) + 2.0*(12.1-fuelEfficiency) + (horsePower-130.0)/37.0</b></li>
+</ol>
+Complete <b>processCars</b> according to these instructions.
+</p>
 
 <h3>Sample Run</h3>
-<p>When you are finished, you can compare your answers with that of an online inverse matrix calculator found at 
-    <a href="https://matrix.reshish.com/inverse.php" target="_blank">Inverse Matrix Calculator</a>. The test function 
-    for this lab can be found at <a href="InverseMain.cpp" target="_blank">InverseMain.cpp</a>. An empty <b>inverse</b> class can be found at 
-    <a href="Inverse.h" target="_blank">Inverse.h</a>. A sample run is as follows:<br>
+<p>A sample run looks as follows. Be sure to format your output based on this sample run:
 <pre>
-    The inverse of mat3x3 is:
-    row 1: 0.0330946, 0.0753272, 0.0133366
-    row 2: 0.0138306, -0.0879229, 0.0204989
-    row 3: 0.0274142, 0.0400099, -0.048654
+    LIST OF CARS:
+    Toyota Corolla, Japan.
+    Honda Civic, Japan.
+    Dodge Charger, USA.
+    BMW 330x, Germany.
+    Chevrolet Impala, USA.
+    BMW 240, Germany.
+    Ford Fusion, USA.
+    Subaru Impreza, Japan.
+    BMW M5, Germany.
+    Toyota Camry Hybrid, Japan.
+    Audi A4, Germany.
+    Dodge P.O.S., USA.
     
-    The inverse of mat3x3 as a float is:
-    row 1: 0.0330946, 0.0753272, 0.0133366
-    row 2: 0.0138306, -0.0879229, 0.0204989
-    row 3: 0.0274142, 0.0400099, -0.048654
+    SORTED BY RELIABILITY:
+    Toyota Camry Hybrid, Japan, reliability: 9.3
+    Toyota Corolla, Japan, reliability: 9.1
+    Audi A4, Germany, reliability: 8.9
+    Honda Civic, Japan, reliability: 8.8
+    Chevrolet Impala, USA, reliability: 8.1
+    Subaru Impreza, Japan, reliability: 7.9
+    BMW 240, Germany, reliability: 7.4
+    BMW 330x, Germany, reliability: 7.2
+    BMW M5, Germany, reliability: 6.9
+    Ford Fusion, USA, reliability: 6.8
+    Dodge Charger, USA, reliability: 6.5
+    Dodge P.O.S., USA, reliability: 4.1
+    
+    SORTED BY FUEL EFFICIENCY:
+    Toyota Camry Hybrid, Japan, fuel efficiency: 7
+    Honda Civic, Japan, fuel efficiency: 7.8
+    Toyota Corolla, Japan, fuel efficiency: 8
+    Subaru Impreza, Japan, fuel efficiency: 8.5
+    Audi A4, Germany, fuel efficiency: 8.8
+    BMW 330x, Germany, fuel efficiency: 8.9
+    BMW 240, Germany, fuel efficiency: 9.2
+    Ford Fusion, USA, fuel efficiency: 9.7
+    Chevrolet Impala, USA, fuel efficiency: 9.9
+    Dodge Charger, USA, fuel efficiency: 10.8
+    Dodge P.O.S., USA, fuel efficiency: 11.7
+    BMW M5, Germany, fuel efficiency: 12.1
+    
+    SORTED BY HORSE POWER:
+    BMW M5, Germany, horse power: 500
+    BMW 240, Germany, horse power: 320
+    Dodge Charger, USA, horse power: 300
+    Chevrolet Impala, USA, horse power: 280
+    BMW 330x, Germany, horse power: 260
+    Audi A4, Germany, horse power: 255
+    Dodge P.O.S., USA, horse power: 233
+    Ford Fusion, USA, horse power: 210
+    Toyota Camry Hybrid, Japan, horse power: 205
+    Subaru Impreza, Japan, horse power: 150
+    Honda Civic, Japan, horse power: 138
+    Toyota Corolla, Japan, horse power: 130
+    
+    The average horse power of all German cars is 333.75
+    
+    HIGH RELIABILITY CARS:
+    Chevrolet Impala, USA, reliability: 8.1
+    Audi A4, Germany, reliability: 8.9
+    Toyota Camry Hybrid, Japan, reliability: 9.3
+    Honda Civic, Japan, reliability: 8.8
+    Toyota Corolla, Japan, reliability: 9.1
     
     
-    From the online inverse matrix calculator:
-    134/4049  305/4049   54/4049
-     56/4049 -356/4049   83/4049
-    111/4049  162/4049 -197/4049
+    LIST OF CARS ORDERED BY RATING:
+    Toyota Camry Hybrid, Japan.
+    Audi A4, Germany.
+    Honda Civic, Japan.
+    Toyota Corolla, Japan.
+    BMW 240, Germany.
+    Chevrolet Impala, United States.
+    BMW 330x, Germany.
+    BMW M5, Germany.
+    Subaru Impreza, Japan.
+    Ford Fusion, United States.
+    Dodge Charger, United States.
+    Dodge P.O.S., United States.
 </pre>
 </p>
 
-<p>Be sure to document your code with the file name, your name and student number. Add comments throughout the code where necessary.</p>
+<p>Be sure to document your code with the file name, what the file does, and your name and student number. Add comments throughout the code where necessary.</p>
 
 <h3>Questions</h3>
 <ol>
-    <li>What are the advantages and disadvantages of using C++ for matrix calculations?</li>
-    <li>Do you think a scripted language such as Python is faster than a compiled language such as C++? Why?</li>
-    <li>Do you prefer functors or functions? Why?</li>
+    <li>Do you find lambda functions useful? Why or why not?</li>
+    <li>Where are lambda functions best utilized?</li>
+    <li>What are the three components of the Standard Template Library?</li>
 </ol>
 
 <h3>Lab Submission:</h3>
 
-<p>Please email all your code and the answers to the questions to:
+<p>Please email your completed CarRating.cpp and the answers to the questions to:
     <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
 <b>NOTE:</b> My last name is <b>Watler</b> not Walter.</p>
 

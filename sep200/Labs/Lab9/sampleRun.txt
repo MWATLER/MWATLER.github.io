@@ -1,0 +1,79 @@
+LIST OF CARS:
+Toyota Corolla, Japan.
+Honda Civic, Japan.
+Dodge Charger, USA.
+BMW 330x, Germany.
+Chevrolet Impala, USA.
+BMW 240, Germany.
+Ford Fusion, USA.
+Subaru Impreza, Japan.
+BMW M5, Germany.
+Toyota Camry Hybrid, Japan.
+Audi A4, Germany.
+Dodge P.O.S., USA.
+
+SORTED BY RELIABILITY:
+Toyota Camry Hybrid, Japan, reliability: 9.3
+Toyota Corolla, Japan, reliability: 9.1
+Audi A4, Germany, reliability: 8.9
+Honda Civic, Japan, reliability: 8.8
+Chevrolet Impala, USA, reliability: 8.1
+Subaru Impreza, Japan, reliability: 7.9
+BMW 240, Germany, reliability: 7.4
+BMW 330x, Germany, reliability: 7.2
+BMW M5, Germany, reliability: 6.9
+Ford Fusion, USA, reliability: 6.8
+Dodge Charger, USA, reliability: 6.5
+Dodge P.O.S., USA, reliability: 4.1
+
+SORTED BY FUEL EFFICIENCY:
+Toyota Camry Hybrid, Japan, fuel efficiency: 7
+Honda Civic, Japan, fuel efficiency: 7.8
+Toyota Corolla, Japan, fuel efficiency: 8
+Subaru Impreza, Japan, fuel efficiency: 8.5
+Audi A4, Germany, fuel efficiency: 8.8
+BMW 330x, Germany, fuel efficiency: 8.9
+BMW 240, Germany, fuel efficiency: 9.2
+Ford Fusion, USA, fuel efficiency: 9.7
+Chevrolet Impala, USA, fuel efficiency: 9.9
+Dodge Charger, USA, fuel efficiency: 10.8
+Dodge P.O.S., USA, fuel efficiency: 11.7
+BMW M5, Germany, fuel efficiency: 12.1
+
+SORTED BY HORSE POWER:
+BMW M5, Germany, horse power: 500
+BMW 240, Germany, horse power: 320
+Dodge Charger, USA, horse power: 300
+Chevrolet Impala, USA, horse power: 280
+BMW 330x, Germany, horse power: 260
+Audi A4, Germany, horse power: 255
+Dodge P.O.S., USA, horse power: 233
+Ford Fusion, USA, horse power: 210
+Toyota Camry Hybrid, Japan, horse power: 205
+Subaru Impreza, Japan, horse power: 150
+Honda Civic, Japan, horse power: 138
+Toyota Corolla, Japan, horse power: 130
+
+The average horse power of all German cars is 333.75
+
+HIGH RELIABILITY CARS:
+Chevrolet Impala, USA, reliability: 8.1
+Audi A4, Germany, reliability: 8.9
+Toyota Camry Hybrid, Japan, reliability: 9.3
+Honda Civic, Japan, reliability: 8.8
+Toyota Corolla, Japan, reliability: 9.1
+
+
+LIST OF CARS ORDERED BY RATING:
+Toyota Camry Hybrid, Japan.
+Audi A4, Germany.
+Honda Civic, Japan.
+Toyota Corolla, Japan.
+BMW 240, Germany.
+Chevrolet Impala, United States.
+BMW 330x, Germany.
+BMW M5, Germany.
+Subaru Impreza, Japan.
+Ford Fusion, United States.
+Dodge Charger, United States.
+Dodge P.O.S., United States.
