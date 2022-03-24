@@ -1,7 +1,7 @@
 //CarRating.cpp - a program to sort cars by various criteria
 //Documentation for STL algorithms can be found at: http://www.cplusplus.com/reference/algorithm/
 //and https://www.cplusplus.com/reference/numeric/
-//Documentation for STL containters can be fount at: http://www.cplusplus.com/reference/stl/
+//Documentation for STL containters can be found at: http://www.cplusplus.com/reference/stl/
 
 #include <algorithm>
 #include <iostream>
@@ -23,78 +23,27 @@ void processCars(vector<CarRating>& car) {
 	{
 		//http://www.cplusplus.com/reference/algorithm/sort/ //for sorting
 		//http://www.cplusplus.com/reference/algorithm/for_each/ //for printing
-		sort(car.begin(), car.end(), [](const CarRating& a, const CarRating& b) {
-			return a.reliability > b.reliability;
-			});
-		cout << "SORTED BY RELIABILITY:" << endl;
-		for_each(car.begin(), car.end(), [](const CarRating& c) {
-			cout << c.name << ", " << c.country << ", reliability: " << c.reliability << endl;
-			});
-		cout << endl;
 	}
 	//Task 2 - Sort and print out all cars in order of their fuel efficiency (lower is better).
 	{
-		sort(car.begin(), car.end(), [](const CarRating& a, const CarRating& b) {
-			return a.fuelEfficiency < b.fuelEfficiency;
-			});
-		cout << "SORTED BY FUEL EFFICIENCY:" << endl;
-		for_each(car.begin(), car.end(), [](const CarRating& c) {
-			cout << c.name << ", " << c.country << ", fuel efficiency: " << c.fuelEfficiency << endl;
-			});
-		cout << endl;
 	}
 	//Task 3 - Sort and print out all cars in order of their horse power (higher is better).
 	{
-		sort(car.begin(), car.end(), [](const CarRating& a, const CarRating& b) {
-			return a.horsePower > b.horsePower;
-			});
-		cout << "SORTED BY HORSE POWER:" << endl;
-		for_each(car.begin(), car.end(), [](const CarRating& c) {
-			cout << c.name << ", " << c.country << ", horse power: " << c.horsePower << endl;
-			});
-		cout << endl;
 	}
 	//Task 4 - Print out the average horse power of all German cars.
 	{
-		int count = 0;
 		//https://www.cplusplus.com/reference/numeric/accumulate/ //for summing
-		auto sum = accumulate(car.begin(), car.end(), 0.0, [&](double& sum, const CarRating& c) {
-			if (c.country == "Germany") {
-				++count;
-				sum += c.horsePower;
-			}
-			return sum;
-			});
-		cout << "The average horse power of all German cars is " << sum / count << endl;
-		cout << endl;
 	}
 	//Task 5 - Print out all cars with reliability greater than (or equal to) 8.0.
 	{
-		cout << "HIGH RELIABILITY CARS:" << endl;
-		for_each(car.begin(), car.end(), [](const CarRating& c) {
-			if (c.reliability >= 8.0) {
-				cout << c.name << ", " << c.country << ", reliability: " << c.reliability << endl;
-			}
-			});
-		cout << endl;
 	}
 	//Task 6 - Change the country of all American cars from "USA" to "United States".
 	{
 		//http://www.cplusplus.com/reference/algorithm/transform/
-		transform(car.begin(), car.end(), car.begin(), [](CarRating& c)
-			{
-				if (c.country == "USA") c.country = "United States";
-				return c;
-			});
 	}
 	//Task 7 - Reorganize the vector of all cars in order of their rating (higher is better) based on the formula:
 	//         rating = 2.0*(reliability-4.1) + 2.0*(12.1-fuelEfficiency) + (horsePower-130.0)/37.0
 	{
-		sort(car.begin(), car.end(), [](const CarRating& a, const CarRating& b) {
-			double ratingA = 2.0 * (a.reliability - 4.1) + 2.0 * (12.1 - a.fuelEfficiency) + (a.horsePower - 130.0) / 37.0;
-			double ratingB = 2.0 * (b.reliability - 4.1) + 2.0 * (12.1 - b.fuelEfficiency) + (b.horsePower - 130.0) / 37.0;
-			return ratingA > ratingB;
-			});
 	}
 }
 
