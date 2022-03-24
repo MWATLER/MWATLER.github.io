@@ -2,26 +2,28 @@
 
 #include "Resistor.h"
 
-Resistor::Resistor() {
+Resistor::Resistor() {//default constructor
 	name = "";
 	resistance = 0.0;
 }
 
-Resistor::Resistor(std::string name, double resistance) {
-	this->name = name;
-	this->resistance = resistance;
+//from main: Resistor R1("R1", 100.0);//100 ohms
+//           Resistor R2("R2", 50.0);//50 ohms
+Resistor::Resistor(std::string _name, double _resistance) {//a second constructor, taking two parameters
+	name = _name;
+	resistance = _resistance;
 }
 
-bool Resistor::SetName(std::string name) {
+bool Resistor::SetName(std::string _name) {
 	bool retVal = true;
-	if (name != "") this->name = name;
+	if (name != "") name = _name;
 	else retVal = false;
 	return retVal;
 }
 
-bool Resistor::SetResistance(double resistance) {
+bool Resistor::SetResistance(double _resistance) {
 	bool retVal = true;
-	if (resistance > 0)this->resistance = resistance;
+	if (resistance > 0) resistance = _resistance;
 	else retVal = false;
 	return retVal;
 }

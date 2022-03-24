@@ -8,22 +8,23 @@ Inductor::Inductor() {
 	current = 0.0;
 }
 
-Inductor::Inductor(std::string name, double inductance) {
-	this->name = name;
-	this->inductance = inductance;
-	this->current = 0.0;
+//From main: Inductor L1("L1", 0.01);//0.01 Henries
+Inductor::Inductor(std::string _name, double _inductance) {
+	name = _name;
+	inductance = _inductance;
+	current = 0.0;
 }
 
-bool Inductor::SetName(std::string name) {
+bool Inductor::SetName(std::string _name) {
 	bool retVal = true;
-	if (name != "") this->name = name;
+	if (name != "") name = _name;
 	else retVal = false;
 	return retVal;
 }
 
-bool Inductor::SetInductance(double inductance) {
+bool Inductor::SetInductance(double _inductance) {
 	bool retVal = true;
-	if (inductance > 0)this->inductance = inductance;
+	if (inductance > 0) inductance = _inductance;
 	else retVal = false;
 	return retVal;
 }
