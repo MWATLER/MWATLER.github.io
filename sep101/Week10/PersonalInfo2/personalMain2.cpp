@@ -9,7 +9,12 @@ using namespace std;
 
 int main(void) {
 	const int NUM = 10;
-	PersonalInfo2* personal[NUM];
+	PersonalInfo2* personal[NUM];//array of pointers to objects of type PersonalInfo2
+/*	PersonalInfo2* personal[] = {//could do the same with dynamic memory allocation
+		{new PersonalInfo2("Babych", "34 Cedarwood Crescent", 18)},
+		{new PersonalInfo2("Yakabowich", "17 Tack Drive", 21)},
+	//  etc...
+	};*/
 	PersonalInfo2 personal1("Babych", "34 Cedarwood Crescent", 18);
 	PersonalInfo2 personal2("Yakabowich", "17 Tack Drive", 21);
 	PersonalInfo2 personal3("Park", "22-2617 Windwood Drive", 34);
@@ -37,8 +42,8 @@ int main(void) {
 	if (success) success = personal[9]->setInfo("Mulepe", "100 Escada Road", 70);
 
 	if (success) {
-		for (int i = 0; i < NUM; ++i) {
-			personal[i]->displayInfo();
+		for (int i = 0; i < NUM; ++i) {//with an array of pointers, I can go through
+			personal[i]->displayInfo();//each object easily in a for-loop.
 		}
 		cout << endl;
 

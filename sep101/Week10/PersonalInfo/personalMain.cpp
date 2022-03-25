@@ -10,7 +10,7 @@ using namespace std;
 const int NUM = 10;
 
 int main(void) {
-	PersonalInfo personal1, personal2;
+	PersonalInfo personal1, personal2;//the first constructor is called
 	PersonalInfo personal3("Babych", "34 Cedarwood Crescent", 18);
 	PersonalInfo personal4("Ali", "3467 Sunlight Drive", 54);
 	bool success = true;
@@ -54,5 +54,5 @@ int main(void) {
 		}
 	}
 
-	return (success ? 1 : 0);
+	return (success ? 0 : -1);
 }
