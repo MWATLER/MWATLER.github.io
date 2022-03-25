@@ -3,10 +3,11 @@
 #include "StudentList.h"
 
 using namespace std;
+using namespace bsa;
 
 StudentList::StudentList() {
 	curr = head = tail = nullptr;
-	num = 0;
+//	num = 0;
 }
 
 Student* StudentList::GetNext() {

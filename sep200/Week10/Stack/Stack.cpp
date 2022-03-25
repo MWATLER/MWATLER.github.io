@@ -26,15 +26,17 @@ public:
         }
     }
     void push(int d) { head = new Node(d, head); }
-    Data pop() {
+    Data pop() {//with our stack, pop() will return the Data at the top of our stack
         Data data;
+		//head->8->9->5->3->nullptr
         if (head) {
-            Node* p = head;
+            Node* p = head;//a temporary pointer to assist us
             data = head->data;
             head = head->next;
             delete p;
         }
-        return data;
+		//head->9->5->3->nullptr
+        return data;//returns 8
     }
     bool empty() { return head == nullptr; }
 };
@@ -47,6 +49,11 @@ int main() {
     s.push(5);//next points to 3, head points to 5
     s.push(9);//next points to 5, head points to 9
     s.push(8);//next points to 9, head points to 8
+	//A stack is like a "stack" of dishes:
+	//   8
+	//   9
+	//   5
+	//   3
     //head->8->9->5->3->nullptr
 
     // Remove first Node

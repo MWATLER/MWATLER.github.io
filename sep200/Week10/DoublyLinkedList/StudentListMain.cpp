@@ -3,6 +3,7 @@
 #include "StudentList.h"
 
 using namespace std;
+using namespace bsa;
 
 int main() {
 	const int NUM = 5;

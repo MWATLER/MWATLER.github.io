@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-struct Element {
+struct Element {//a singly linked list
     int data;
     Element* next;
     Element(int d, Element* n) {
@@ -12,10 +12,15 @@ struct Element {
 };
 
 int main() {
-    Element* head = nullptr;
+    Element* head = nullptr;//we keep a pointer to the head of the list
 
     // Add one element at a time to the head of the chain 
+	// 3 -> head -> nullptr, 3 effectively points to nullptr
+	// head now points to 3
+	// head->3->nullptr
     head = new Element(3, head);//next points to nullptr, head points to 3
+	//5->head->3->nullptr
+	//head->5->3->nullptr
     head = new Element(5, head);//next points to 3, head points to 5
     head = new Element(9, head);//next points to 5, head points to 9
     head = new Element(8, head);//next points to 9, head points to 8

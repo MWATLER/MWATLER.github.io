@@ -27,15 +27,20 @@ public:
             delete current;
         }
     }
+//  head->nullptr, tail->nullptr
+//	q.push(3);//head->3->nullptr, tail->3->nullptr
+//	q.push(5);//head->3->5->nullptr, tail->5->nullptr
+//	q.push(9);//head->3->5->9->nullptr, tail->9->nullptr
+//	q.push(8);//head->3->5->9->8->nullptr, tail->8->nullptr
     void push(int d) {
         Node* p = new Node(d, 0);
         if (head)
-            tail->next = p;
+            tail->next = p;//add p to the end of the list
         else
-            head = p;
-        tail = p;
+            head = p;//head will point to the very first node in the list
+        tail = p;//tail will point to the very last node in the list
     }
-    Data pop() {
+    Data pop() {//our pop() returns data
         Data data;
         if (head) {
             Node* p = head;
@@ -50,7 +55,7 @@ public:
 };
 
 int main() {
-    Queue q;
+    Queue q;//removes from the head, adds to the tail - FIFO
 
     // Push Data onto the Queue
     q.push(3);//head->3->nullptr, tail->3->nullptr
