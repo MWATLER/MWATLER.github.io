@@ -1,7 +1,7 @@
-<h1>Week 11 - STL Algorithms and Linked Lists</h1>
+<h1>Week 11 - STL Algorithms, Exceptions and Multi-Dimensional Arrays</h1>
 
 <h3>Introduction</h3>
-<p>This week we will look at STL algorithms and using pointers to multi-dimensional arrays.</p>
+<p>This week we will look at STL algorithms, exceptions and using pointers to multi-dimensional arrays.</p>
 
 <h3>Videos</h3>
 <table>
@@ -11,6 +11,7 @@
   <tr><td></td><td><a href="https://www.youtube.com/watch?v=NNLvY9O7ufU" target="_blank">Introduction of STL #4: Unordered Containers</a></td></tr>
   <tr><td></td><td><a href="https://www.youtube.com/watch?v=vO2AlrBf5rQ" target="_blank">Introduction of STL #5: Iterators and Algorithms</a></td></tr>
   <tr><td></td><td><a href="https://www.youtube.com/watch?v=shqvSkk8r0M" target="_blank">Introduction of STL #6: Functors</a></td></tr>
+  <tr><td>Exception Handling</td><td><a href="https://www.youtube.com/watch?v=mFAaqmj399I" target="_blank">Buckys C++ Programming Tutorials - 62 - Exceptions</a></td></tr>
   <tr><td>Pointers to Multi-Dimensional Arrays</td><td><a href="https://www.youtube.com/watch?v=lCDGo7rK3ms" target="_blank">Using Pointers to Print 2D Arrays</a></td></tr>
 </table>
 
@@ -22,6 +23,7 @@
   <li>Chapters 30 to 33 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
   <li>Chapters 9 to 11 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
   <li><a href="Algorithms.docx" target="_blank">STL Algorithms</a></li>
+  <li><a href="ErrorHandling.docx" target="_blank">Exceptions</a></li>
   <li><a href="PointersToArrays.docx" target="_blank">Pointers to Arrays</a></li>
 </ul>
 
@@ -33,7 +35,6 @@
 
 <h3>Assignment(s)</h3>
 <ul>
-<li><a href="../Assignments/Assignment1/Assignment1.html" target="_blank">Assignment 1</a>.</li>
 <li><a href="../Assignments/Assignment2/Assignment2.html" target="_blank">Assignment 2</a>.</li>
 </ul>
 
@@ -59,6 +60,15 @@
   <a href="Sorter/Student.h" target="_blank">Student.h</a>, <a href="Sorter/Student.cpp" target="_blank">Student.cpp</a> and 
   <a href="Sorter/StudentMain.cpp" target="_blank">StudentMain.cpp</a>.</p>
 
+  <p><em>Exceptions</em></p>
+  <p>An exception is a form of software interrupt. They occur when something unusual happens, such as a divide-by-zero, trying to access 
+    an array outside of the array bounds, trying to allocate memory when there is no longer any available RAM, etc... What you may 
+    not know is that you can intercept this software interrupt in your code using exceptions. You can generate interrupts as well 
+    when you detect an unusual situation in your code. The following code generates exceptions for an array out of bounds error 
+    as well as a divide-by-zero error:<br>
+  <a href="Exception/Exception.cpp" target="_blank">Exception.cpp</a>.
+  </p>
+  
 <p><em>Two-Dimensional Arrays</em></p>
   <p>A tictactoe game has been created from a grid class. The grid class keeps track of the entries on a tictactoe grid. The 
     grid class allows users to make a play, test to see if someone has won, and also to announce a tie game. This example 
