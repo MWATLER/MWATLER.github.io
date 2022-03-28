@@ -9,7 +9,7 @@ class PersonalInfo2 {
 	std::string address;
 	int age;
 public:
-	PersonalInfo2();//The default constructor
+	PersonalInfo2();//The no-argument constructor
 	PersonalInfo2(const std::string _name, const std::string _address, const int _age);
 	~PersonalInfo2();
 	bool setInfo(const std::string _name, const std::string _address, int _age);

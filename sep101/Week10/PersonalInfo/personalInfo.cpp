@@ -8,6 +8,8 @@ using namespace std;
 
 PersonalInfo::PersonalInfo() {
 	cout << "PersonalInfo::PersonalInfo:" << endl;
+	//initializes all variables to an empty state
+	cout << name << " " << address << " " << age << endl;
 	name = "";
 	address = "";
 	age = 0;
@@ -18,7 +20,8 @@ PersonalInfo::PersonalInfo(const std::string _name, const std::string _address, 
 	name = "";
 	address = "";
 	age = 0;
-	setInfo(_name, _address, _age);
+	bool ret = setInfo(_name, _address, _age);
+	if (!ret) cout << "PersonalInfo::PersonalInfo failed to initialize the variables" << endl;
 }
 
 bool PersonalInfo::setInfo(const std::string _name, const std::string _address, const int _age) {
@@ -31,8 +34,6 @@ bool PersonalInfo::setInfo(const std::string _name, const std::string _address, 
 		name = _name;
 		address = _address;
 		age = _age;
-
-		this->age = age;
 	}
 	return retVal;
 }
@@ -59,6 +60,11 @@ void PersonalInfo::displayInfo() {
 
 PersonalInfo::~PersonalInfo() {
 	cout << "PersonalInfo::~PersonalInfo: " << name << endl;
+	//This is done in companies that are concerned about security,
+	//so these values won't remain in RAM after your program terminates.
+	name = "";
+	address = "";
+	age = 0;
 }
 
 /*
