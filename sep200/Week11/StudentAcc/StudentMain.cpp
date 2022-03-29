@@ -15,14 +15,14 @@ int main() {
 	student.push_back(Student("Simone Biles", 80.1));
 	student.push_back(Student("Greg Louganis", 71.0));
 
-	cout << "The unsorted array of students:" << endl;
+	cout << "The vector of students:" << endl;
 	for (auto e = student.begin(); e != student.end(); ++e) {
 		e->DisplayInfo();
 	}
 	cout << endl;
 
 	int count = 0;
-	auto runningTotal = accumulate(student.begin(), student.end(), 0.0, [&](double& sum, const Student& s) {
+	auto runningTotal = accumulate(student.begin(), student.end(), 0.0, [&](double sum, const Student& s) {
 		++count;
 		sum += s.GetAverage();
 		return sum;

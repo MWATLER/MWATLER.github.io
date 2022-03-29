@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-    vector<double> original(3, 10.3);//a vector of 3 10.3's
+    vector<double> original(3, 10.3);//a vector of 3 10.3's: 10.3, 10.3, 10.3
     vector<reference_wrapper<double>> references(original.begin(), original.end());
     for (auto& e : original) {
         e *= 3;

@@ -10,5 +10,3 @@ public:
 	double GetAverage() const;
 	void DisplayInfo()const;
 };
-
-bool compare(Student& student1, Student& student2);

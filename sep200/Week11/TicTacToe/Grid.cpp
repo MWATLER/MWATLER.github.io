@@ -128,7 +128,7 @@ Grid::Winner Grid::WinningPlayer() {
 	else if (grid[0][2] == 'X' &&
 		grid[1][1] == 'X' &&
 		grid[2][0] == 'X') winningPlayer = Winner::PlayerOne;
-	//Test for all Y's
+	//Test for all O's
 	else if (grid[0][0] == 'O' &&
 		grid[1][1] == 'O' &&
 		grid[2][2] == 'O') winningPlayer = Winner::PlayerTwo;
