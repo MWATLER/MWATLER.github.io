@@ -14,7 +14,10 @@ int main() {
 	cout << "Enter the number of marks: ";
 	cin >> numMarks;
 	mark = new int[numMarks];//mark now points to an array of 'numMarks' integers
-
+	                         //this is called dynamic memory allocation
+	                         //we allocate memory for ourselves as the program runs
+	//In C, memory is allocated with the function malloc()
+	//      and deallocated with free()
 	int runningTotal = 0;
 	//I can now use mark as an array
 	for (int i = 0; i < numMarks; ++i) {
@@ -26,6 +29,8 @@ int main() {
 	double average = (double)runningTotal / numMarks;
 	cout << name << ", your average is " << average << "." << endl;
 
-	delete mark;//delete the memory we allocated for ourselves
+	delete[] mark;//delete the memory we allocated for ourselves
+	              //if you do not delete the allocated memory, your program
+	              //has a "memory leak".
 	return 0;
 }
