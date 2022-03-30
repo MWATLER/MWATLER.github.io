@@ -22,13 +22,13 @@ CardGameAdapter* cardGame() {
 
     CardGameAdapter* cardGame;//MW: Note that CardGameAdapter is not templated but CardGame is
     if (ldMode == 'Y' || ldMode == 'y') {
-        cardGame = new CardGame<int>();
+        cardGame = new CardGame&lt;int&gt;();
         cardGame->setMode(1);//MW: You might need to set a mode flag when you come to run the game.
                              //    It is best to use an enumeration for this, not a magic number as I have here
     }
     else {
         std::cout << "You will be playing in high definition mode." << std::endl;
-        cardGame = new CardGame<double>();
+        cardGame = new CardGame&lt;double&gt;();
         cardGame->setMode(2);//MW: You might need to set a mode flag when you come to run the game.
                              //    It is best to use an enumeration for this, not a magic number as I have here
     }
@@ -48,22 +48,22 @@ Your CardGame class might have variables and functions such as:
 
 const int NUM = 2;
 
-template<typename T>
+template&lt;typename T&gt;
 class CardGame :public CardGameAdapter {
     const int MAX = 21;
     int gameMode;//MW: 1 for low definition, 2 for high definition, this might not be needed.
                  //    If you use gameMode, it is best defined as an enumeration rather than an int
-    PlayerBase<T>* player[NUM];
+    PlayerBase&lt;T&gt;* player[NUM];
     void setMode(int mode) {//MW: Again, an enumeration is preferred
         gameMode = mode;
     }
 public:
     CardGame() {
-        player[0] = new PlayerYouth<T>("Noah");
-        player[1] = new PlayerAdult<T>("Kenneth");
+        player[0] = new PlayerYouth&lt;T&gt;("Noah");
+        player[1] = new PlayerAdult&lt;T&gt;("Kenneth");
     }
     ~CardGame() {
-        for (PlayerBase<T>* p : player) {
+        for (PlayerBase&lt;T&gt;* p : player) {
             delete p;
             p = nullptr;
         }
