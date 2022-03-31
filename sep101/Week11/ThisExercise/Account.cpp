@@ -5,8 +5,8 @@
 using namespace std;
 
 Account::Account(std::string name, double age) {
-	this->name = "";//acct1.name
-	this->age = 0.0;//acct1.age, etc...
+	this->name = "";
+	this->age = 0.0;
 	this->username = "";
 	this->password = nullptr;
 	if (name.size() > 0) {
@@ -21,14 +21,15 @@ Account &Account::SetUsername(std::string username) {
 	if (username.size() > 0) {
 		this->username = username;
 	}
-	return *this;//effectively returning a reference to acct1
+	return *this;
 }
 
 void Account::SetPassword(void) {
 	int len = username.size();
-	if (password != nullptr) delete[] password;//If there already is a password, destroy it, then allocate
-	                                           //new memory for the new password
-	password = new char[len+1];//As soon as you allocate, you must deallocate (usually in the destructor)
+	delete[] password;//delete password if it had been previously allocated
+	password = new char[len+1];
+//	strcpy(password, username.c_str());//if we simply wanted to copy username to password. The char array portion
+	                                   //of a string can be accessed through the string's getter function c_str().
 	int i;
 	for (i = 0; i < len; ++i) {
 		password[i] = username.at(i) + 1;
@@ -43,11 +44,7 @@ void Account::showUsernamePassword() const {
 
 
 void Account::destroy() {
-	if (password != nullptr) {
-		delete[] password;
-		password = nullptr;
-	}
-	delete this;
+	delete this;//delete the current object. This will invoke the destructor of the current object
 }
 
 Account::~Account() {
