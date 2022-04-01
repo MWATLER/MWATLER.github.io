@@ -2,15 +2,15 @@
 
 class Student {
     int no;
-    char *name;
-    double *marks;
+    char *name;//we don't know the size of the array for name at compile time
+    double *marks;//we don't know the size of the array for marks at compile time
     double aveMark;
     int numMarks;
 
 public:
     Student();
-    void enterInformation();
+    void enterInformation();//allocates memory for name and marks
     double average();
     void displayInformation();
-    ~Student();
+    ~Student();//deallocates memory used for name and marks
 };

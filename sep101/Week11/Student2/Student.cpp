@@ -18,16 +18,21 @@ Student::Student() {
 void Student::enterInformation() {
     char tmpName[32];
     cout << "Enter the student's last name: ";
-    cin >> tmpName;
-    int len = strlen(tmpName);
+    cin >> tmpName;//If I entered "Mark", tmpName will look as follows:
+	//tmpName[0]='M', tmpName[1]='a', tmpName[2]='r', tmpName[3]='k', tmpName[4]='\0'
+    int len = strlen(tmpName);//strlen returns the number of characters, excluding the null terminator
     delete[] name;//delete name if it already exists
-    name = new char[len + 1];//+1 for the null terminator
-    strcpy(name, tmpName);
+    name = new char[len + 1];//len is the number of characters in tmpName, +1 for the null terminator
+    strcpy(name, tmpName);//strcpy copies from tmpName to name
     cout << "Enter the student number: ";
     cin >> no;
     cout << "Enter the number of marks: ";
     cin >> numMarks;
-    delete[] marks;//delete marks if it already exists
+    delete[] marks;//delete marks if it already exists (C++11)
+//	if (marks != nullptr) {//Before 2011 (C++11) we had to test the pointer to see
+//		                   //if it was pointing to allocated memory
+//		delete[] marks;
+//	}
     marks = new double[numMarks];
     cout << "Enter the student's marks ("<<numMarks<<" in total):" << endl;
     for (int i = 0; i < numMarks; ++i) {

@@ -5,8 +5,8 @@ const int N_MARKS = 3;
 
 class Student {
     int no;
-    char name[N_CHARS];
-    double marks[N_MARKS];
+    char name[N_CHARS];//no need for dynamic memory allocation
+    double marks[N_MARKS];//no need for dynamic memory allocation
     double aveMark;
 
 public:

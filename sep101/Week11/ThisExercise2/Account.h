@@ -13,7 +13,7 @@ public:
 	Account(std::string name, double age);
 	Account& SetUsername(std::string username);
 	~Account();
-	void SetPassword(void);
+	void GeneratePassword(void);
 	void showUsernamePassword() const;
 	void CopyToAccount(Account& acct);
 	void destroy();
