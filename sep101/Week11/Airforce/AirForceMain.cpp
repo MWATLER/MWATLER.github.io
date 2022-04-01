@@ -43,7 +43,7 @@ int main(void) {
 	}
 
 	//Delete the planes
-	if (plane != nullptr) {
+	if (plane != nullptr) {//In modern versions of C++, this test is not necessary
 		delete[] plane;
 		plane = nullptr;
 	}

@@ -16,21 +16,19 @@ Plane::Plane() {
 
 Plane::Plane(std::string* _name, int num, double _fuel) {
 	if (num > 0) {
-		numPilots = num;
 		name = new std::string[num];
 		for (int i = 0; i < num; ++i) {
-			name[i] = _name[i];//this copies one string to another
+			name[i] = _name[i];
 		}
 	}
 	else {
-		numPilots = 0;
 		name = nullptr;
 	}
-	if (_fuel < 0) fuel = 0.0;
-	else fuel = _fuel;
+	numPilots = num;
+	fuel = _fuel;
 }
 
-void Plane::SetName(std::string* name, int num) {
+void Plane::SetName(std::string* name, int num) {//an array of names, the array size is 'num'
 	numPilots = num;
 	if (num > 0) {
 		if (this->name != nullptr) {
@@ -63,7 +61,7 @@ bool Plane::Travel(double km) {
 void Plane::Report() {
 	cout << "The plane has pilot(s) ";
 	for (int i = 0; i < numPilots; ++i) {
-		cout << name[i] << ", ";
+		cout << name[i] << " ";
 	}
 	cout << ". It has " << fuel << "L of fuel left in the tank." << endl << endl;
 }

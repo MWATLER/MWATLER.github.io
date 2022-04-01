@@ -49,14 +49,14 @@
 <ul>
   <li>
     An exercise with the <b>this</b> pointer has been created to demonstrate the many uses of <b>this</b>. The code contains a customer's name, age, a username, and a password that
-    is generated from the username:<br>
+    is generated from the username. The code introduces a <b>destroy</b> function where an object attempts destroy itself. Since the object was not dynamically created, a crash occurs:<br>
     <a href="ThisExercise/Account.h" target="_blank">Account.h</a>,
     <a href="ThisExercise/Account.cpp" target="_blank">Account.cpp</a>,
     <a href="ThisExercise/ThisExercise.cpp" target="_blank">ThisExercise.cpp</a>,
   </li>
   <li>
-    A second exercise with the <b>this</b> pointer is built from the first above. The code introduces a <b>destroy</b> function where an object can destroy itself.
-    It also introduces a <b>copy</b> function where the data from one object can be "deep-copied" to the data of another object:<br>
+    A second exercise with the <b>this</b> pointer is built from the first above. The code uses a <b>destroy</b> function where an object destroys itself. Since this object 
+    was dynamically created, the destroy works. It also introduces a <b>copy</b> function where the data from one object can be "deep-copied" to the data of another object:<br>
     <a href="ThisExercise2/Account.h" target="_blank">Account.h</a>,
     <a href="ThisExercise2/Account.cpp" target="_blank">Account.cpp</a>,
     <a href="ThisExercise2/ThisExercise2.cpp" target="_blank">ThisExercise2.cpp</a>,

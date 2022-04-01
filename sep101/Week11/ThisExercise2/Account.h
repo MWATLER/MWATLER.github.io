@@ -15,6 +15,6 @@ public:
 	~Account();
 	void SetPassword(void);
 	void showUsernamePassword() const;
-	void CopyAccount(Account& acct);
+	void CopyToAccount(Account& acct);
 	void destroy();
 };
