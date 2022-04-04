@@ -19,9 +19,8 @@ public:
 	//
 	//      Travel should accept distance as an argument and return an error status. Based on the 
 	//      distance travelled and the fuel efficiency, one can calculate the amount of fuel consumed.
-	//      If the fuel consumed is greater than the fuel in the tank, then you have to set the return status to out of fuel, 
-	//      recalculate the actual distance travelled, the actual cost of the travel, set the fuel in the tank to zero, and print
-	//      out an error message that includes the actual distance and and actual cost.
+	//      If the fuel consumed is greater than the fuel in the tank, an exception is thrown with the message:
+	//      "Automobile out of fuel".
 	//      If there is enough fuel, decrease the fuel in the tank by the fuel consumed, and calculate the cost of the travel. Print out 
 	//      a message showing how much fuel is left in the tank, how far the automobile travelled, and the cost of the travel.
 	//

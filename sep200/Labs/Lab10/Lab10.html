@@ -1,10 +1,10 @@
-<h2>SEP200 – Lab 10: Multiple Inheritance</h2>
+<h2>SEP200 - Lab 10: Multiple Inheritance</h2>
 
 <h3>Due: April 15, 2022</h3>
 
 <p>This lab will test your ability to use multiple inheritance in the design of an amphibious vehicle class. This 
     class will inherit from both an automobile class and a boat class. The lab will also test your ability to 
-    use enumerations, class variables, and the smart pointer.</p>
+    use enumerations, exceptions, and the smart pointer.</p>
 
 <p>The base class for this lab is called <b>Vehicle</b>. The classes <b>Automobile</b> and <b>Boat</b>
 both inherit from this class. It should be possible to create an object of type <b>Automobile</b> to represent an 
@@ -36,9 +36,8 @@ It contains the following:
     Be sure to initialize the cost based on this fuel. Print out a message indicating how much fuel has been added and its cost.</li>
 <li>The <b>Travel</b> function should accept distance as an argument and return an error status. Based on the distance travelled 
     and the constant travelling speed, the time of travel can be calculated. Knowing the litres consumed per hour, one can calculate 
-    the amount of fuel consumed. If the fuel consumed is greater than the fuel in the tank, then you have to set the return status 
-    to out of fuel, recalculate the actual distance travelled, the actual cost of the travel, set the fuel in the tank to zero, and 
-    print out an error message that includes the actual distance and and actual cost. If there is enough fuel, decrease the fuel in 
+    the amount of fuel consumed. If the fuel consumed is greater than the fuel in the tank, an exception is thrown with the message:
+	"Boat out of fuel". If there is enough fuel, decrease the fuel in 
     the tank by the fuel consumed, and calculate the cost of the travel. Print out a message showing how much fuel is left in the 
     tank, how far the boat travelled, and the cost of the travel.</li>
 <li>The <b>AddFuel</b> function should accept an amount as an argument and return an error status. If the amount added will cause 
@@ -61,9 +60,8 @@ It contains the following:
     tank. Be sure to initialize the cost based on this fuel. Print out a message indicating how much fuel has been 
     added and its cost.</li>
 <li>The <b>Travel </b> function should accept distance as an argument and return an error status. Based on the distance travelled 
-    and the fuel efficiency, one can calculate the amount of fuel consumed. If the fuel consumed is greater than the fuel in the 
-    tank, then you have to set the return status to out of fuel, recalculate the actual distance travelled, the actual cost of 
-    the travel, set the fuel in the tank to zero, and print out an error message that includes the actual distance and and actual cost.
+    and the fuel efficiency, one can calculate the amount of fuel consumed. If the fuel consumed is greater than the fuel in the tank, 
+    an exception is thrown with the message: "Automobile out of fuel".
 	If there is enough fuel, decrease the fuel in the tank by the fuel consumed, and calculate the cost of the travel. Print out 
 	a message showing how much fuel is left in the tank, how far the automobile travelled, and the cost of the travel.</li>
 <li>The <b>AddFuel</b> function should accept an amount as an argument and return an error status. If the amount added will cause 
@@ -89,7 +87,10 @@ boat portion of the amphibious vehicle. The <b>AmphibiousVehicle</b> class there
 	also be passed through to the boat and automobile classes.</li>
 <li>The <b>Travel</b> function takes as an argument the distance and returns error status.
 	Depending on the mode, the travel function will call either the travel function of the
-	automobile class or the travel function of the boat class.</li>
+	automobile class or the travel function of the boat class. The travel function should
+	be run in a try-catch block. If an exception is thrown, it should be caught here.
+	The only exception we are expecting is a message from either the boat or the automobile.
+	Be sure to set the error status to out of fuel.</li>
 <li>The <b>AddFuel</b> function takes as an argument the amount of fuel and returns error status.
 	Depending on the mode, the add fuel function will call either the add fuel function of the
 	automobile class or the add fuel function of the boat class.</li>
@@ -115,34 +116,34 @@ boat portion of the amphibious vehicle. The <b>AmphibiousVehicle</b> class there
 <p>
     A sample run is as follows:<br>
 <pre>
-    Hydra Spyder boat has added 150L at a cost of $240.
+Hydra Spyder boat has added 150L at a cost of $240.
 
-    Hydra Spyder automobile has added 50L at a cost of $65.
-    
-    The automobile will travel 200km
-    Hydra Spyder automobile has 30.00L of fuel left. It has travelled 200.00km at a cost of $26.00.
-    
-    The boat will travel 20km
-    Hydra Spyder boat has 130.00L of fuel left. It has travelled 20.00km at a cost of $32.00.
-    
-    Hydra Spyder in total has spent $305.00 on fuel.
-    
-    Adding 30L of fuel to the boat
-    Hydra Spyder boat has encountered a fuel overflow. The amount added is actually 20.00L at a cost of $32.00.
-    The Hydra Spyder boat cannot add 30L of fuel.
-    
-    The boat will travel 200km
-    Hydra Spyder boat is out of fuel. It actually travelled 150.00km at a cost of $240.00.
-    The Hydra Spyder boat cannot travel 200km.
-    
-    Adding 30L of fuel to the automobile
-    Hydra Spyder automobile has encountered a fuel overflow. The amount added is actually 20.00L at a cost of $26.00.
-    The Hydra Spyder automobile cannot add 30L of fuel.
-    
-    The automobile will travel 300km
-    Hydra Spyder automobile has 20.00L of fuel left. It has travelled 300.00km at a cost of $39.00.
-    
-    Hydra Spyder in total has spent $363.00 on fuel.
+Hydra Spyder automobile has added 50L at a cost of $65.
+
+The automobile will travel 200km
+Hydra Spyder automobile has 30.00L of fuel left. It has travelled 200.00km at a cost of $26.00.
+
+The boat will travel 20km
+Hydra Spyder boat has 130.00L of fuel left. It has travelled 20.00km at a cost of $32.00.
+
+Hydra Spyder in total has spent $305.00 on fuel.
+
+Adding 30L of fuel to the boat
+Hydra Spyder boat has encountered a fuel overflow. The amount added is actually 20.00L at a cost of $32.00.
+The Hydra Spyder boat cannot add 30L of fuel.
+
+The boat will travel 200km
+Boat out of fuel
+The Hydra Spyder boat cannot travel 200km.
+
+Adding 30L of fuel to the automobile
+Hydra Spyder automobile has encountered a fuel overflow. The amount added is actually 20.00L at a cost of $26.00.
+The Hydra Spyder automobile cannot add 30L of fuel.
+
+The automobile will travel 300km
+Hydra Spyder automobile has 20.00L of fuel left. It has travelled 300.00km at a cost of $39.00.
+
+Hydra Spyder in total has spent $363.00 on fuel.
 </pre>
 </p>
 
@@ -152,6 +153,7 @@ boat portion of the amphibious vehicle. The <b>AmphibiousVehicle</b> class there
 <ol>
     <li>Why has multiple inheritance been a controversial issue for many years?</li>
     <li>What solves the "Diamond Problem"?</li>
+    <li>Does the "Diamond Problem" actually exist in this lab? Why or why not?</li>
 </ol>
 
 <h3>Lab Submission:</h3>

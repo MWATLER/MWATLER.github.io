@@ -18,7 +18,10 @@ public:
 
 	//Add a Travel function that takes as an argument the distance and returns error status.
 	//Depending on the mode, the travel function will call either the travel function of the
-	//automobile class or the travel function of the boat class.
+	//automobile class or the travel function of the boat class. The travel function should
+	//be run in a try-catch block. If an exception is thrown, it should be caught here.
+	//The only exception we are expecting is a message from either the boat or the automobile.
+	//Be sure to set the error status to out of fuel.
 
 	//Add an AddFuel function that takes as an argument the amount of fuel and returns error status.
 	//Depending on the mode, the add fuel function will call either the add fuel function of the
