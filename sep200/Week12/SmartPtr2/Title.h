@@ -13,4 +13,7 @@ public:
     void display() const {
         std::cout << validTitle() << std::endl;
     }
+    ~Title() {
+        std::cout << "~Title: destroying title" << std::endl;
+    }
 };

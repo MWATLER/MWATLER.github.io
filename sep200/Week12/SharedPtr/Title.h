@@ -1,4 +1,4 @@
-// Title.h - Smart Pointers
+// Title.h - Shared Pointers
 
 #include <iostream>
 
@@ -9,11 +9,12 @@ class Title {
         return title;
     }
 public:
+    Title() { title = nullptr; }
     Title(const char* s) : title(s) {}
     void display() const {
         std::cout << validTitle() << std::endl;
     }
     ~Title() {
-        std::cout << "~Title: destroying Title" << std::endl;
+        std::cout << "~Title: destroying title" << std::endl;
     }
 };
