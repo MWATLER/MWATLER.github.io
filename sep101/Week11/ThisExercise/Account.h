@@ -6,13 +6,13 @@ class Account {
 	std::string name;
 	double age;
 	std::string username;
-	char* password;
+	char* password;//we don't know the length of password at compile time
 
 public:
 	Account(std::string name, double age);
 	Account &SetUsername(std::string username);
 	~Account();
-	void SetPassword(void);
+	void GeneratePassword(void);//generates a password based on the username
 	void showUsernamePassword() const;
 	void destroy();
 };

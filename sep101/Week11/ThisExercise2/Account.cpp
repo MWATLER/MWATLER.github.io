@@ -33,14 +33,15 @@ Account& Account::SetUsername(std::string username) {
 	return *this;
 }
 
-void Account::SetPassword(void) {
+void Account::GeneratePassword(void) {
 	int len = username.size();
+	delete[] password;//in case this function is called more than once
 	password = new char[len + 1];
 	int i;
 	for (i = 0; i < len; ++i) {
 		password[i] = username.at(i) + 1;
 	}
-	password[i] = '\0';
+	password[i] = '\0';//the null terminator
 }
 
 void Account::showUsernamePassword() const {
@@ -48,13 +49,13 @@ void Account::showUsernamePassword() const {
 	cout << "The password is " << password << endl;
 }
 
-void Account::CopyToAccount(Account& acct) {
+void Account::CopyToAccount(Account& acct) {//the current object is acct1, acct is acct2
 	if (this != &acct) {//do not copy to yourself
-		acct.name = this->name;
-		acct.age = this->age;
-		acct.username = this->username;
+		acct.name = this->name;//acct2.name = acct1.name
+		acct.age = this->age;//acct2.age = acct1.age
+		acct.username = this->username;//acct2.username = acct1.username
 		delete[] acct.password;//delete the password if it was previously allocated
-		acct.password = new char[strlen(this->password) + 1];
+		acct.password = new char[strlen(this->password) + 1];//+1 for the null terminator
 		strcpy(acct.password, this->password);
 	}
 }
@@ -64,10 +65,11 @@ void Account::destroy() {
 		delete password;
 		password = nullptr;
 	}
-	delete this;
+	delete this;//will invoke the destructor
 }
 
-Account::~Account() {
+Account::~Account() {//For acct1, we allocated the memory for it, therefore we
+	                 //can deallocate the memory it occupied
 	if (password != nullptr) {
 		delete password;
 		password = nullptr;
