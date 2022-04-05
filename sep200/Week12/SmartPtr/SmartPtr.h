@@ -21,6 +21,7 @@ public:
     }
     ~SmartPtr() {
         delete p;
+		p = nullptr;//even better
     }
     T& operator*() {
         return *p;

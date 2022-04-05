@@ -30,8 +30,8 @@ Database::Database() {
 }
 
 shared_ptr<Database> Database::getInstance() {
-	if (instance == nullptr) {
-		instance = shared_ptr<Database>(new Database());
+	if (instance == nullptr) {//if an object of type Database does not yet exist, create one.
+		instance = shared_ptr<Database>(new Database());//Database will be managed by a shared pointer
 	}
 	return instance;
 }

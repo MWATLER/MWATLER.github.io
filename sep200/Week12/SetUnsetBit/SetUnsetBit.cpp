@@ -10,10 +10,10 @@ int main() {
 	bool retVal;
 	FileOperations file;
 
-	file.SetFlags(file.ACCESS);
+	file.SetFlags(ACCESS);
 	retVal = file.Open("Sample.txt");
 	if (retVal) {
-		file.SetFlags(file.WRITE | file.READ);
+		file.SetFlags(WRITE | READ);
 
 		retVal = file.Write("Hello World\n");
 		if (!retVal) cout << "Error writing to the file" << endl;
@@ -22,10 +22,10 @@ int main() {
 		if (!retVal) cout << "Error reading from the file" << endl;
 		else cout << msg;
 
-		file.UnsetFlags(file.WRITE);
+		file.UnsetFlags(WRITE);
 		
 		retVal = file.Write("Goodbye World\n");
-		if (!retVal) cout << "Error writing to the file" << endl;
+		if (!retVal) cout << endl << "Error writing to the file" << endl;
 
 		file.Close();
 	}

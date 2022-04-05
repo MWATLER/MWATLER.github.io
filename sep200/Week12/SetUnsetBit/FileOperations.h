@@ -7,15 +7,16 @@
 #include <fstream>
 #include <string>
 
+const unsigned short READ = 0x04;//00000100
+const unsigned short WRITE = 0x02;//00000010
+const unsigned short ACCESS = 0x01;//00000001
+const unsigned short NONE = 0x00; //00000000
+
 class FileOperations {
 	std::ifstream ifile;
 	std::ofstream ofile;
-	unsigned short flags;
+	unsigned short flags;//0000 0111 - read, write and access
 public:
-	const unsigned short READ = 0x04;//00000100
-	const unsigned short WRITE = 0x02;//00000010
-	const unsigned short ACCESS = 0x01;//00000001
-	const unsigned short NONE = 0x00; //00000000
 	FileOperations() {
 		ifile.close();
 		ofile.close();
@@ -66,7 +67,7 @@ public:
 	}
 	void UnsetFlags(unsigned short _flags) {
 		flags = flags & ~_flags;
-	}
+	}//0000 0101 - read, access
 };
 
 
