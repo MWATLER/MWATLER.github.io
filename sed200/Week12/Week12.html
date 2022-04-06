@@ -105,14 +105,17 @@ Answer: RPN = likelihood x severity
   priority to the activities that have an extreme or high risk rating.</p>
 
 <p><b>Question: What would be catastrophic to a software product?</b><br>
-<!--Answer: The software stops working and no one knows why.-->
+Answer: The software stops working and no one knows why. Data leaks of a lot of people from an 
+e-banking website.
 </p>
+
 <p><b>Question: What are ways of mitigating catastrophic risks for software?</b><br>
-<!--Answer: Embedded logging that dumps logs to a file on the system as the software is running, so you could 
+Answer: Embedded logging that dumps logs to a file on the system as the software is running, so you could 
 see what was happening when the software crashed. These logs could also be transmitted via network to a 
 central server which the software is running. A system monitor task on your software product that monitors 
 all processes - if a process shuts down, the system monitor will restart it, and send a message via the 
-network logging the event.-->
+network logging the event.<br>
+For data leaks, adding another layer of encryption, adding additional authentication steps (2-step authentication),... 
 </p>
 
 <h3>Step 1: Identify Hazards</h3>
