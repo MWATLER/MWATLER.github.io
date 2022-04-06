@@ -109,13 +109,14 @@ Answer: The software stops working and no one knows why. Data leaks of a lot of 
 e-banking website.
 </p>
 
-<p><b>Question: What are ways of mitigating catastrophic risks for software?</b><br>
+<p><b>Question: What are some ways of mitigating catastrophic risks for software?</b><br>
 Answer: Embedded logging that dumps logs to a file on the system as the software is running, so you could 
 see what was happening when the software crashed. These logs could also be transmitted via network to a 
 central server which the software is running. A system monitor task on your software product that monitors 
 all processes - if a process shuts down, the system monitor will restart it, and send a message via the 
 network logging the event.<br>
-For data leaks, adding another layer of encryption, adding additional authentication steps (2-step authentication),... 
+For data leaks, add another layer of encryption, add another layer of authentication (2-step authentication),...<br>
+Change a part of the software to "fix" the problem(s) that caused the catastrophe in the first place.
 </p>
 
 <h3>Step 1: Identify Hazards</h3>
@@ -124,7 +125,7 @@ For data leaks, adding another layer of encryption, adding additional authentica
     hazards relating to your scope. The list should be long and comprehensive and may 
     include anything.</p>
 <p><b>Question: Do you consider this the most important step?</b><br>
-<!--Answer: Yes, and to do it properly requires a lot of experience.-->
+Answer: Yes, and to do it properly requires a lot of experience.
 </p>
 
 <h3>Step 2: Calculate Likelihood</h3>
