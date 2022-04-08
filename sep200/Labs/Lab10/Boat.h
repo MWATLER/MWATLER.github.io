@@ -29,7 +29,7 @@ public:
 	//      AddFuel should accept an amount as an argument and return an error status.
 	//      If the amount added will cause the tank to overflow, set the return status to fuel overflow. Readjust the 
 	//      amount to result in a full tank. Print out an error message that includes the actual amount added and the actual cost.
-	//      if the amount added does not result in an overflow, calculate the cost and add the amount to the fuel in the tank.
+	//      If the amount added does not result in an overflow, calculate the cost and add the amount to the fuel in the tank.
 	//      Print out a message showing the amount added and the cost.
 	//      Be sure to always add the actual cost to the accumulated cost in either case.
 	//

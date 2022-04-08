@@ -37,12 +37,12 @@ It contains the following:
 <li>The <b>Travel</b> function should accept distance as an argument and return an error status. Based on the distance travelled 
     and the constant travelling speed, the time of travel can be calculated. Knowing the litres consumed per hour, one can calculate 
     the amount of fuel consumed. If the fuel consumed is greater than the fuel in the tank, an exception is thrown with the message:
-	"Boat out of fuel". If there is enough fuel, decrease the fuel in 
+	"Boat out of fuel". The boat does not travel if there isn't enough fuel in the tank! If there is enough fuel, decrease the fuel in 
     the tank by the fuel consumed, and calculate the cost of the travel. Print out a message showing how much fuel is left in the 
     tank, how far the boat travelled, and the cost of the travel.</li>
 <li>The <b>AddFuel</b> function should accept an amount as an argument and return an error status. If the amount added will cause 
     the tank to overflow, set the return status to fuel overflow. Readjust the amount to result in a full tank. Print out an error 
-    message that includes the actual amount added and the actual cost. if the amount added does not result in an overflow, 
+    message that includes the actual amount added and the actual cost. If the amount added does not result in an overflow, 
     calculate the cost and add the amount to the fuel in the tank. Print out a message showing the amount added and the cost.
 	Be sure to always add the actual cost to the accumulated cost in either case.</li>
 <li>The <b>GetFuel</b> function simply returns the amount of fuel in the tank.</li>
@@ -61,12 +61,12 @@ It contains the following:
     added and its cost.</li>
 <li>The <b>Travel </b> function should accept distance as an argument and return an error status. Based on the distance travelled 
     and the fuel efficiency, one can calculate the amount of fuel consumed. If the fuel consumed is greater than the fuel in the tank, 
-    an exception is thrown with the message: "Automobile out of fuel".
+    an exception is thrown with the message: "Automobile out of fuel". The automobile does not travel if there isn't enough fuel in the tank!
 	If there is enough fuel, decrease the fuel in the tank by the fuel consumed, and calculate the cost of the travel. Print out 
 	a message showing how much fuel is left in the tank, how far the automobile travelled, and the cost of the travel.</li>
 <li>The <b>AddFuel</b> function should accept an amount as an argument and return an error status. If the amount added will cause 
     the tank to overflow, set the return status to fuel overflow. Readjust the amount to result in a full tank. Print out an error 
-    message that includes the actual amount added and the actual cost. if the amount added does not result in an overflow, 
+    message that includes the actual amount added and the actual cost. If the amount added does not result in an overflow, 
     calculate the cost and add the amount to the fuel in the tank. Print out a message showing the amount added and the cost.
     Be sure to always add the actual cost to the accumulated cost in either case.</li>
 <li>The <b>GetFuel</b> function simply returns the amount of fuel in the tank.</li>
