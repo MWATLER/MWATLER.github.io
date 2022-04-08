@@ -7,8 +7,8 @@
 #include<fstream>
 
 class CarName {
-	int numNames;
-	std::string *carName;
+	int numNames;//the size of our list
+	std::string *carName;//a list of car names
 	std::ifstream file;
 public:
 	CarName() {
@@ -18,7 +18,7 @@ public:
 	void GetNumberOfEntries();
 	void GetEntries();
 	void DisplayEntries();
-	~CarName();
+	~CarName();//clean up memory allocation
 };
 
 #endif// _CARS_H_

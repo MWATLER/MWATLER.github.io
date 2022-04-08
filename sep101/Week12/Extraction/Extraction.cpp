@@ -18,7 +18,7 @@ int main() {
 
     cout << endl;
     cout << "Press the 'c' key to continue: ";
-    while (getchar()!='c');
+    while (getchar()!='c');//this while loop keeps "spinning" until 'c' is entered
     cout << endl;
 
     char d, t[8], u[8], v;
@@ -28,7 +28,7 @@ int main() {
     cin.get(d);             // extracts a single character
     cin.get(t, 8);          // newline delimiter - accepts up to 7 chars 
                             //    and adds a null byte
-    cin.ignore(2000, '\n'); // extracts the 'j' and the newline
+    cin.ignore(2000, '\n'); // extracts the newline
     cin.get(u, 8, '\t');    // tab delimiter - accepts up to 7 chars and
                             //    adds a null byte
     cin.ignore();           // extracts the tab

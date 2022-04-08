@@ -9,7 +9,7 @@ using namespace std;
 
 int main(void) {
 	int retVal = 0;
-	ifstream file("EmployeeDB.txt");
+	ifstream file("EmployeeDB.txt");//file is read only
 	CorporateInfo corporation;
 
 	//fill the corporate information structure from a file
@@ -19,7 +19,7 @@ int main(void) {
 	}
 	if (retVal == 0) {
 		for (int i = 0; i < NUM_EMPLOYEES && retVal == 0; ++i) {
-			getline(file, corporation.employee[i].name);
+			getline(file, corporation.employee[i].name);//By default '\n' is the delimiter
 			getline(file, corporation.employee[i].position);
 			file >> corporation.employee[i].salary;
 			file >> corporation.employee[i].age;
@@ -34,7 +34,7 @@ int main(void) {
 			retVal = -2;
 		}
 		else {
-			ofstream fout;
+			ofstream fout;//fout is write only
 			fout.open("EmployeeData.txt", std::ofstream::out);
 			fout.setf(ios::fixed);
 			fout.precision(2);
