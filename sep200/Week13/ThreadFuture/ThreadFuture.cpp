@@ -8,7 +8,9 @@
 void task(std::promise<double>& p) {//solves the race condition
     std::cout << "task:" << std::endl;
     Sleep(5000);
-    p.set_value(12.34);
+    p.set_value(12.34);//The future value can be set at any point in the task
+	Sleep(5000);
+	std::cout << "task: END" << std::endl;
 }
 
 int main() {

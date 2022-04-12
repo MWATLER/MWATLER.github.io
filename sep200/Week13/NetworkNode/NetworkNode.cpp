@@ -14,7 +14,7 @@ NetworkNode::NetworkNode(std::string _name) {
 
 void NetworkNode::Run() {
 	is_running = true;
-	Mutex_Initialize();
+	Mutex_Initialize();//mutexes are used to synchronize the access to shared resources
 
 	const string outputFile = "Output.dat";
 	thread tout(&NetworkNode::ProcessData, this, outputFile);
@@ -26,9 +26,9 @@ void NetworkNode::Run() {
 		Sleep(1000);
 	}
 
-	tout.join();
+	tout.join();//Run() will not exit until NetworkNode::ProcessData has finished
 	for (auto& thread : threads) {
-		thread.join();
+		thread.join();//Run() will not exit until all NetworkNode::ReceiveData threads have finished
 	}
 }
 
@@ -55,11 +55,11 @@ void NetworkNode::ReceiveData(const int& source) {
 	ifstream fin(fileName);
 	string inputData;
 	while (is_running) {
-		Mutex_Lock();
+		Mutex_Lock();//the mutex is shared among all threads
 		getline(fin, inputData);
 		if (inputData == "QUIT") is_running = false;
 		else if (fin.peek() == EOF) fin.seekg(0, ios::beg);
-		data.push(inputData);
+		data.push(inputData);//push data on to our shared resource
 		Mutex_Unlock();
 #ifdef DEBUG
 		Log(inputData);
@@ -77,9 +77,9 @@ void NetworkNode::ProcessData(const string& fileName) {
 	if (fout.is_open()) {
 		string outputData;
 		while (is_running) {
-			Mutex_Lock();
+			Mutex_Lock();//the mutex is shared among all threads
 			while (data.size() > 0) {
-				outputData = data.front();
+				outputData = data.front();//gets data from the queue and processes it
 				data.pop();
 				outputData += '\n';
 				fout << outputData;
