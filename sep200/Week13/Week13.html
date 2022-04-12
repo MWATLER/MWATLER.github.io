@@ -44,7 +44,13 @@
 
 <p><em>Thread Race Conditions</em></p>
 <p>Sometimes a function has to wait for a thread to run before processing data. It does take a little time for a thread to start. Synchronization 
-  can be obtained with the <b>future</b>, <b>packaged task</b> or <b>async</b>. Programs that demonstrate these are:<br>
+  can be obtained with the <b>promise</b>, <b>packaged task</b> or <b>async</b>. A <b>promise</b> can communicate a value to the future at a different 
+  time than at the end of a function call. A <b>packaged task</b> takes a function as an argument and creates a packaged task object, which can be invoked 
+  later. The <b>packaged task</b> communicates a value to the future at the end of the task. An <b>async</b> takes a function as an argument and returns 
+  a future at the end of the task. The <b>async</b> is executed immediately. See 
+  <a href="http://jakascorner.com/blog/2016/03/promise-difference.html" target="_blank">Difference between promise, packaged task and async</a> for more details.</p>
+    
+<p>Programs that demonstrate these are:<br>
   <a href="ThreadFuture/ThreadFuture.cpp" target="_blank">ThreadFuture.cpp</a>,
   <a href="ThreadPackagedTask/ThreadPackagedTask.cpp" target="_blank">ThreadPackagedTask.cpp</a> and
   <a href="ThreadAsync/ThreadAsync.cpp" target="_blank">ThreadAsync.cpp</a>.
