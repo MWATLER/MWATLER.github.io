@@ -1,18 +1,17 @@
 <h1>Week 13 - Lessons Learned</h1>
 
 <h3>Introduction</h3>
-<p>Throughout a project’s life cycle, we learn lessons and discover opportunities for improvement. 
+<p>Throughout a project's life cycle, we learn lessons and discover opportunities for improvement. 
   Documenting lessons learned helps a project team discover both strengths and weaknesses. It provides an 
 opportunity for team members and/or partners to discuss successes during the project, unintended outcomes, 
 and recommendations for others involved in similar future projects.</p>
 
 <h3>Videos</h3>
 <table>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+  <tr><td>Lecture Recording</td><td><a href="">Wednesday, April 13 (mp4)</a></td></tr>
+  <tr><td>Lessons Learned</td><td><a href="https://www.youtube.com/watch?v=aht1Px8FvMs" target="_blank">What are Lessons Learned? Project Management in Under 5</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=DBUqW_ek4hI" target="_blank">How to Capture Lessons Learned at the End of a Project</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=Dmhucg8SxJw" target="_blank">Lessons Learned In Project Management | My 3-Level System</a></td></tr>
 </table>
 
 <h3>Lecture Material</h3>
@@ -35,6 +34,14 @@ and recommendations for others involved in similar future projects.</p>
   learned process.</p>
 
 <img src="BasicLessonsLearned.PNG" alt="Basic Lessons Learned Process">
+<p><b>Question: The design of microchips often rely upon a library of standard cells. These cells are typically fundamental 
+  combinational logic gates such as AND gates, OR gates, etc... and are typically fundamental sequential logic gates such as 
+  D flip-flops, the latch flip-flop, the JK flip-flop etc... The standard cell library might also contain circuits that are 
+  unique but used in many of the company's microchips, such as a digital signal filter. Do you think it is a good idea to 
+  have a standard cell library for software? What do you call such a library?</b><br>
+<!--Answer: It is a very good idea to have such a library for software. We use such libraries all the time from the C/C++ standard 
+libraries. But we should also make our own libraries. The process of collecting libraries for reuse is called <b>software reuse</b>.-->
+</p>
 
 <h2>Basic Lessons Learned Process</h2>
 
@@ -59,6 +66,11 @@ and recommendations for others involved in similar future projects.</p>
 lessons are of little benefit unless they are distributed and used by people who will benefit from 
 them. </li>
 </ol>
+<p><b>Question: Who benefits the most from the lessons learned knowledge base?</b><br>
+<!--Answer: Inexperienced project managers and project leads benefit the most from this. There are many project 
+management tasks that require experience, such as risk analysis. An inexperienced project manager/lead can 
+benefit from the mistakes of others without having to make these same mistakes him/herself.-->
+</p>
 
 <h3>Deciding on a process for collecting lessons learned </h3>
 
@@ -93,6 +105,31 @@ them. </li>
 </li>
 </ol></p>
 
+<h3>Speech Synthesis on a Mobile Device</h3>
+<p><b>You are running a project which integrates speech recognition into barcode scanning. 
+  The context is a warehouse. Normally, the user will scan items in a warehouse, entering text whenever 
+  necessary to navigate through the scanner menus. This process can be sped up if the user gives 
+  verbal commands to the scanner, rather than navigating by keyboard. Therefore a speech recognition 
+  unit is required.<br>
+  The speech recognition unit requires shared memory to communicate with processes. Digitized audio 
+  data is passed to the speech recognition unit through shared memory and letters/words are returned 
+  from the speech recognition through another part of shared memory.<br>
+  Question: What are some things that could go wrong here?</b><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--Answer: Since this is a mobile device, RAM might be limited. The speech recognition unit 
+might not recognize speech correctly, especially if the user has an accent. There might not 
+be enough CPU power on the mobile device for the speech synthesis unit.-->
+<b>In reality, neither memory nor CPU power was a problem. The shared memory allowed fast communication 
+  between the speech recognition device and the processes requiring speech recognition. The problem was 
+  in speech recognition.<br>
+  Question: How to resolve this? What lessons were learned here?</b><br>
+<!--Answer: <u>Resolution</u> - Perhaps it is possible to train the speech recognition device to recognize 
+a certain voice. Each warehouse worker owns a scanner, therefore the speech recognition device 
+on each scanner could "learn" how to understand the worker using that scanner. Noise cancellation 
+hardware may be added to cancel the noise from the warehouse.<br>
+<u>Lessons Learned</u> - USE PROTOTYPING before engaging in a project. Test the speech recognition 
+device with a crude prototype to see if it is as effective as advertised.-->
+</p>
+
 <h3>Process Details</h3>
 
 <p>In identifying the project team, it is important to build initial engagement from all key players 
@@ -120,13 +157,15 @@ You can include other more detailed questions in your survey or interview, such 
 <li>For any problems that went unresolved what preventative measures can you invent 
   now that can help things go more smoothly next time?  </li>
 <li>Are there any new “best practices” you can derive from this project? Note anything 
-  that went so well – and now seems to be so thoroughly “road tested” – that you 
+  that went so well - and now seems to be so thoroughly “road tested” - that you 
   would want to repeat the positive experience next time. </li>
 <li>Can you create an easily accessible repository for lessons learned and best practices 
   you have documented? This could be a database, website, or even a simple 
   document.</li>
 </ul>
 </p>
+
+<p><b>Once again, look at the speech recognition project and answer the above questions.</b></p>
 
 <h3>Suggested Lessons Learned Case Study Format</h3>
 
@@ -142,13 +181,13 @@ You can include other more detailed questions in your survey or interview, such 
 &nbsp;&nbsp;&nbsp;Evaluative description of results/measures (include timeline) <br>
 <b>What worked well?</b> (1-2 paragraphs):<br>
 &nbsp;&nbsp;&nbsp;Could include quotes from partners/staff - reflective description on lessons learned <br>
-<b>What didn’t work so well?</b> (1-2 paragraphs): <br>
+<b>What didn't work so well?</b> (1-2 paragraphs): <br>
 &nbsp;&nbsp;&nbsp;Could include quotes from partners/staff - reflective description on lessons learned <br>
 <b>If you had it all to do over again, what would you do differently?</b> (1-2 paragraphs): <br>
 <b>What recommendations would you make to others doing similar projects?</b> (1-2 paragraphs): <br>
 &nbsp;&nbsp;&nbsp;Would the above two questions providing similar descriptions? <br>
 <b>Suggestions for others</b> (1-2 paragraphs):<br> 
-&nbsp;&nbsp;&nbsp;Could include quotes from partners/staff – prescriptive advice <br>
+&nbsp;&nbsp;&nbsp;Could include quotes from partners/staff - prescriptive advice <br>
 <b>Resources:</b>  Links to other relevant information <br>
 <b>Metadata: -- would the information below appear at the bottom of the case study report?</b><br>  
 &nbsp;&nbsp;&nbsp;Author:  Name/Job Title/OU/Region/email <br>
@@ -166,3 +205,35 @@ Community Based Organization etc.  <br>
 &nbsp;&nbsp;&nbsp;Language:  Language of case submission or translation <br>
 
 &nbsp;&nbsp;&nbsp;Also include a photo of partner/ partnering or place 
+
+<h3>The Concorde Project</h3>
+<p><b>Consider the Concorde project. The origins of the Concorde project date to the early 1950s, 
+  when Arnold Hall, director of the Royal Aircraft Establishment (RAE), asked Morien Morgan to form 
+  a committee to study the supersonic transport (SST) concept. The group met for the first time in 
+  February 1954 and delivered their first report in April 1955.<br><br>
+
+  At the time it was known that the drag at supersonic speeds was strongly related to the span of the wing. 
+  This led to the use of short-span, thin trapezoidal wings such as those seen on the control surfaces of 
+  many missiles. The team outlined a baseline configuration that resembled an enlarged Avro 730 fighter jet.<br><br>
+  
+  This same short span produced very little lift at low speed, which resulted in extremely long take-off runs 
+  and frighteningly high landing speeds. This would have required enormous engine power to lift off from existing 
+  runways.<br><br>
+
+  The original programme cost estimate was £70 million before 1962, (£1.39 billion in 2020). The programme experienced 
+  huge cost overruns and delays, with the programme eventually costing between £1.5 and £2.1 billion in 1976,
+  (£9.44 billion-13.2 billion in 2020). This extreme cost was the main reason the production run was much smaller than 
+  expected. The per-unit cost was impossible to recoup, so the French and British governments absorbed the development costs.<br><br>
+
+  On 10 April 2003, Air France and British Airways simultaneously announced they would retire Concorde later that year. They 
+  cited low passenger numbers following the 25 July 2000 crash, the slump in air travel following the September 11 attacks, 
+  and rising maintenance costs: Airbus, the company that acquired Aerospatiale in 2000, had made a decision in 2003 to no 
+  longer supply replacement parts for the aircraft. Although Concorde was technologically advanced when introduced in the 
+  1970s, 30 years later, its analogue cockpit was outdated. There had been little commercial pressure to upgrade Concorde 
+  due to a lack of competing aircraft, unlike other airliners of the same era such as the Boeing 747. By its retirement, 
+  it was the last aircraft in the British Airways fleet that had a flight engineer; other aircraft, such as the modernised 
+  747-400, had eliminated the role.<br><br>
+  For more details, see <a href="https://en.wikipedia.org/wiki/Concorde#Development" target="_blank">Concorde</a>.<br>
+Question: What are the lessons learned?</b>
+<!--Answer: -->
+</p>
