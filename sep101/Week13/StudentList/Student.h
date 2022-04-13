@@ -7,7 +7,8 @@
 
 class Student {
 	std::string name;
-	double* marks;
+	double* marks;//Dynamic memory allocation. We don't know how many subjects the student
+	              //has taken until we run the program. We allocate memory once we know.
 	int numMarks;
 	double average;
 	int rank;
@@ -20,7 +21,7 @@ public:
 	void SetName(std::string name) {
 		this->name = name;
 	}
-	std::string GetName() const {
+	std::string GetName() const {//this function is not allowed to change anything inside the class
 		return name;
 	}
 	void SetMarks(double*, int);

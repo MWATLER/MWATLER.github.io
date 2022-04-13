@@ -9,7 +9,8 @@
 using namespace std;
 
 int main(void) {
-	Student* student;
+	Student* student;//We don't know how many students we have until we run the program
+	                 //Once we know, we dynamically allocate memory for an array of Students
 	int numStudents = 0;
 	ifstream file;
 
@@ -63,6 +64,7 @@ int main(void) {
 	cout << endl;
 
 	//Now sort the students
+	//Compare each student against each student
 	for (int i = 0; i < numStudents; ++i) {
 		for (int j = i+1; j < numStudents; ++j) {
 			if (student[i].GetAverage() > student[j].GetAverage()) {
@@ -86,7 +88,7 @@ int main(void) {
 		int rank = student[i].GetRank();
 		studentSorted[rank-1].SetName(student[i].GetName());
 		studentSorted[rank-1].SetMarks(student[i].GetMarks(), student[i].GetNumMarks());
-		studentSorted[rank - 1].CalculateAverage();
+		studentSorted[rank-1].CalculateAverage();
 	}
 
 
