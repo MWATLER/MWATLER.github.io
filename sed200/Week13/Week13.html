@@ -108,19 +108,19 @@ benefit from the mistakes of others without having to make these same mistakes h
 <h3>Speech Synthesis on a Mobile Device</h3>
 <p><b>You are running a project which integrates speech recognition into barcode scanning. 
   The context is a warehouse. Normally, the user will scan items in a warehouse, entering text whenever 
-  necessary to navigate through the scanner menus. This process can be sped up if the user gives 
-  verbal commands to the scanner, rather than navigating by keyboard. Therefore a speech recognition 
-  unit is required.<br>
+  necessary to navigate through the scanner menus. This process can be sped up if the user can free 
+  his/her hands by giving verbal commands to the scanner, rather than navigating by keyboard. 
+  Therefore a speech recognition unit is required.<br>
   The speech recognition unit requires shared memory to communicate with processes. Digitized audio 
-  data is passed to the speech recognition unit through shared memory and letters/words are returned 
-  from the speech recognition through another part of shared memory.<br>
-  Question: What are some things that could go wrong here?</b><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<!--Answer: Since this is a mobile device, RAM might be limited. The speech recognition unit 
+  data is passed to the speech recognition unit from a microphone through shared memory and letters/words 
+  are returned from the speech recognition through another part of shared memory.<br>
+  Question: What are some things that could go wrong here?</b><br>
+Answer: Since this is a mobile device, RAM might be limited. The speech recognition unit 
 might not recognize speech correctly, especially if the user has an accent. There might not 
-be enough CPU power on the mobile device for the speech synthesis unit.-->
+be enough CPU power on the mobile device for the speech synthesis unit.<br><br>
 <b>In reality, neither memory nor CPU power was a problem. The shared memory allowed fast communication 
   between the speech recognition device and the processes requiring speech recognition. The problem was 
-  in speech recognition.<br>
+  in speech recognition itself.<br>
   Question: How to resolve this? What lessons were learned here?</b><br>
 <!--Answer: <u>Resolution</u> - Perhaps it is possible to train the speech recognition device to recognize 
 a certain voice. Each warehouse worker owns a scanner, therefore the speech recognition device 
