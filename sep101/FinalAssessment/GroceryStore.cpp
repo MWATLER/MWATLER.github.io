@@ -1,16 +1,16 @@
-//Warehouse.cpp - function definitions for the warehouse
+//GroceryStore.cpp - function definitions for the grocerystore
 
 //QUESTION 7: Has <iostream> been included in this file?
-#include "Warehouse.h"
+#include "GroceryStore.h"
 
 //QUESTION 8: Why wasn't "using namespace std;" put in the header file?
 using namespace std;
 
-Warehouse::Warehouse(WarehouseItem item[], int num) {
+GroceryStore::GroceryStore(GroceryItem item[], int num) {
 	if (num > 0 && num<=MAX_ITEMS) {
 		numItems = num;
 		//QUESTION 9: Why do we need the "this" pointer here?
-		this->item = new WarehouseItem[numItems];
+		this->item = new GroceryItem[numItems];
 		for (int i = 0; i < numItems; ++i) {
 			this->item[i].name = item[i].name;
 			this->item[i].type = item[i].type;
@@ -19,29 +19,29 @@ Warehouse::Warehouse(WarehouseItem item[], int num) {
 		}
 	}
 	else {
-		cout << "Error constructing the warehouse. Aborting..." << endl;
+		cout << "Error constructing the grocerystore. Aborting..." << endl;
 		numItems = 0;
 		this->item = nullptr;
 	}
-	numHammers = 0;
-	numScrewdrivers = 0;
-	numWrenches = 0;
+	numFruits = 0;
+	numVegetables = 0;
+	numDairy = 0;
 	numAnonymousItems = 0;
 
-	hammer = nullptr;
-	screwdriver = nullptr;
-	wrench = nullptr;
+	fruit = nullptr;
+	vegetable = nullptr;
+	dairy = nullptr;
 	anonymousItem = nullptr;
 }
 
-bool Warehouse::AddWarehouseItem(WarehouseItem& item) {
+bool GroceryStore::AddGroceryItem(GroceryItem& item) {
 	bool ret = true;
 	if (numItems < MAX_ITEMS) {
 		//QUESTION 10: What is the purpose of newItem?
-		//QUESTION 11: Why is newItem allocating "numItems+1" WarehouseItem's of memory? Why not, for instance, "numItems+10"?
-		//QUESTION 12: What changes would you have to make if newItem allocated "numItems+10" WarehouseItem's of memory?
-		//QUESTION 13: Does this code work if numItems is 1? If not, what changes are required?
-		WarehouseItem* newItem = new WarehouseItem[numItems + 1];
+		//QUESTION 11: Why is newItem allocating "numItems+1" GroceryItem's of memory? Why not, for instance, "numItems+10"?
+		//QUESTION 12: What changes would you have to make if newItem allocated "numItems+10" GroceryItem's of memory?
+		//QUESTION 13: Does this code work if numItems is 0? If not, what changes are required?
+		GroceryItem* newItem = new GroceryItem[numItems + 1];
 		for (int i = 0; i < numItems; ++i) {
 			newItem[i].name = this->item[i].name;
 			newItem[i].type = this->item[i].type;
@@ -68,16 +68,16 @@ bool Warehouse::AddWarehouseItem(WarehouseItem& item) {
 	return ret;
 }
 
-bool Warehouse::RemoveWarehouseItem(std::string name) {
+bool GroceryStore::RemoveGroceryItem(std::string name) {
 	bool found = false;
 	for (int i = 0; i < numItems && !found; ++i) {
 		//QUESTION 18: What are we searching for here?
 		if (item[i].name == name) {
 			found = true;
 			//QUESTION 19: What is the purpose of newItem?
-			//QUESTION 20: Why is newItem allocating "numItems-1" WarehouseItem's of memory?
+			//QUESTION 20: Why is newItem allocating "numItems-1" GroceryItem's of memory?
 			//QUESTION 21: Does this code work if numItems is 1? If not, what changes are required?
-			WarehouseItem* newItem = new WarehouseItem[numItems - 1];
+			GroceryItem* newItem = new GroceryItem[numItems - 1];
 			for (int j = 0; j < i; ++j) {
 				newItem[j].name = item[j].name;
 				newItem[j].type = item[j].type;
@@ -103,98 +103,98 @@ bool Warehouse::RemoveWarehouseItem(std::string name) {
 	return found;
 }
 
-bool Warehouse::GenerateListOfHammers() {
+bool GroceryStore::GenerateListOfFruits() {
 	bool ret = true;
-	//QUESTION 25: When is hammer equal to nullptr?
-	//QUESTION 26: When is hammer not equal to nullptr?
-	if (hammer != nullptr) delete[] hammer;
+	//QUESTION 25: When is fruit equal to nullptr?
+	//QUESTION 26: When is fruit not equal to nullptr?
+	if (fruit != nullptr) delete[] fruit;
 	//QUESTION 27: What does count represent?
 	int count = 0;
 	for (int i = 0; i < numItems; ++i) {
-		if (item[i].type == "hammer") ++count;
+		if (item[i].type == "fruit") ++count;
 	}
 
 	if (count > 0) {
-		//QUESTION 28: Is it possible to create a list of hammers without allocating more memory? If so, how?
-		hammer = new Hammer[count];
-		//QUESTION 29: Could we use count instead of numHammers here? How?
-		numHammers = 0;
-		//QUESTION 30: If we are creating a list of hammers, why do we use numItems here?
+		//QUESTION 28: Is it possible to create a list of fruits without allocating more memory? If so, how?
+		fruit = new Fruit[count];
+		//QUESTION 29: Could we use count instead of numFruits here? How?
+		numFruits = 0;
+		//QUESTION 30: If we are creating a list of fruits, why do we use numItems here?
 		for (int i = 0; i < numItems; ++i) {
-			if (item[i].type == "hammer") {
-				hammer[numHammers].name = item[i].name;
-				hammer[numHammers].barcode = item[i].barcode;
-				hammer[numHammers].price = item[i].price;
-				++numHammers;
+			if (item[i].type == "fruit") {
+				fruit[numFruits].name = item[i].name;
+				fruit[numFruits].barcode = item[i].barcode;
+				fruit[numFruits].price = item[i].price;
+				++numFruits;
 			}
 		}
 	}
 	else {
 		ret = false;
-		cout << "Error: failed to generate a list of hammers." << endl;
+		cout << "Error: failed to generate a list of fruits." << endl;
 	}
 	return ret;
 }
 
 //QUESTION 31: This function is private. Who calls it?
 //QUESTION 32: Is it a good idea to make this function public? Why?
-bool Warehouse::GenerateListOfScrewdrivers() {
+bool GroceryStore::GenerateListOfVegetables() {
 	bool ret = true;
-	if (screwdriver != nullptr) delete[] screwdriver;
+	if (vegetable != nullptr) delete[] vegetable;
 	int count = 0;
 	for (int i = 0; i < numItems; ++i) {
-		if (item[i].type == "screwdriver") ++count;
+		if (item[i].type == "vegetable") ++count;
 	}
 
 	if (count > 0) {
-		//QUESTION 33: Is it possible to create a list of screwdrivers without allocating more memory? If so, how?
-		screwdriver = new Screwdriver[count];
-		numScrewdrivers = 0;
+		//QUESTION 33: Is it possible to create a list of vegetables without allocating more memory? If so, how?
+		vegetable = new Vegetable[count];
+		numVegetables = 0;
 		for (int i = 0; i < numItems; ++i) {
-			if (item[i].type == "screwdriver") {
-				screwdriver[numScrewdrivers].name = item[i].name;
-				screwdriver[numScrewdrivers].barcode = item[i].barcode;
-				screwdriver[numScrewdrivers].price = item[i].price;
-				++numScrewdrivers;
+			if (item[i].type == "vegetable") {
+				vegetable[numVegetables].name = item[i].name;
+				vegetable[numVegetables].barcode = item[i].barcode;
+				vegetable[numVegetables].price = item[i].price;
+				++numVegetables;
 			}
 		}
 	}
 	else {
 		ret = false;
-		cout << "Error: failed to generate a list of screwdrivers." << endl;
+		cout << "Error: failed to generate a list of vegetables." << endl;
 	}
 	return ret;
 }
 
-bool Warehouse::GenerateListOfWrenches() {
+bool GroceryStore::GenerateListOfDairy() {
 	bool ret = true;
-	if (wrench != nullptr) delete[] wrench;
+	if (dairy != nullptr) delete[] dairy;
 	int count = 0;
 	for (int i = 0; i < numItems; ++i) {
-		if (item[i].type == "wrench") ++count;
+		if (item[i].type == "dairy") ++count;
 	}
 
 	if (count > 0) {
-		//QUESTION 34: Is it possible to create a list of wrenches without allocating more memory? If so, how?
-		wrench = new Wrench[count];
-		numWrenches = 0;
+		//QUESTION 34: Is it possible to create a list of dairyes without allocating more memory? If so, how?
+		dairy = new Dairy[count];
+		numDairy = 0;
 		for (int i = 0; i < numItems; ++i) {
-			if (item[i].type == "wrench") {
-				wrench[numWrenches].name = item[i].name;
-				wrench[numWrenches].barcode = item[i].barcode;
-				wrench[numWrenches].price = item[i].price;
-				++numWrenches;
+			if (item[i].type == "dairy") {
+				dairy[numDairy].name = item[i].name;
+				dairy[numDairy].barcode = item[i].barcode;
+				dairy[numDairy].price = item[i].price;
+				++numDairy;
 			}
 		}
 	}
 	else {
 		ret = false;
-		cout << "Error: failed to generate a list of wrenches." << endl;
+		cout << "Error: failed to generate a list of dairyes." << endl;
 	}
 	return ret;
 }
 
-bool Warehouse::GenerateListOfAnonymousItems() {
+bool GroceryStore::GenerateListOfAnonymousItems() {
 	bool ret = true;
 	if (anonymousItem != nullptr) delete[] anonymousItem;
 	int count = 0;
@@ -224,8 +224,8 @@ bool Warehouse::GenerateListOfAnonymousItems() {
 
 //QUESTION 36: Why is this getter function a const?
 //QUESTION 37: Is num pass-by-address or pass-by-value?
-WarehouseItem* Warehouse::GetListOfItems(int& num) const {
-	WarehouseItem* itemPtr = nullptr;
+GroceryItem* GroceryStore::GetListOfItems(int& num) const {
+	GroceryItem* itemPtr = nullptr;
 	if (item != nullptr) {
 		itemPtr = item;
 		num = numItems;
@@ -237,43 +237,43 @@ WarehouseItem* Warehouse::GetListOfItems(int& num) const {
 }
 
 //QUESTION 38: Why is this getter function not a const?
-Hammer* Warehouse::GetListOfHammers(int& num) {
-	Hammer* hammerPtr = nullptr;
-	if (GenerateListOfHammers()) {
-		hammerPtr = hammer;
-		num = numHammers;
+Fruit* GroceryStore::GetListOfFruits(int& num) {
+	Fruit* fruitPtr = nullptr;
+	if (GenerateListOfFruits()) {
+		fruitPtr = fruit;
+		num = numFruits;
 	}
 	else {
-		cout << "Error: list of hammers does not exist." << endl;
+		cout << "Error: list of fruits does not exist." << endl;
 	}
-	return hammerPtr;
+	return fruitPtr;
 }
 
-Screwdriver* Warehouse::GetListOfScrewdrivers(int& num) {
-	Screwdriver* screwdriverPtr = nullptr;
-	if (GenerateListOfScrewdrivers()) {
-		screwdriverPtr = screwdriver;
-		num = numScrewdrivers;
+Vegetable* GroceryStore::GetListOfVegetables(int& num) {
+	Vegetable* vegetablePtr = nullptr;
+	if (GenerateListOfVegetables()) {
+		vegetablePtr = vegetable;
+		num = numVegetables;
 	}
 	else {
-		cout << "Error: list of screwdrivers does not exist." << endl;
+		cout << "Error: list of vegetables does not exist." << endl;
 	}
-	return screwdriverPtr;
+	return vegetablePtr;
 }
 
-Wrench* Warehouse::GetListOfWrenches(int& num) {
-	Wrench* wrenchPtr = nullptr;
-	if (GenerateListOfWrenches()) {
-		wrenchPtr = wrench;
-		num = numWrenches;
+Dairy* GroceryStore::GetListOfDairy(int& num) {
+	Dairy* dairyPtr = nullptr;
+	if (GenerateListOfDairy()) {
+		dairyPtr = dairy;
+		num = numDairy;
 	}
 	else {
-		cout << "Error: list of wrenches does not exist." << endl;
+		cout << "Error: list of dairyes does not exist." << endl;
 	}
-	return wrenchPtr;
+	return dairyPtr;
 }
 
-AnonymousItem* Warehouse::GetListOfAnonymousItems(int& num) {
+AnonymousItem* GroceryStore::GetListOfAnonymousItems(int& num) {
 	AnonymousItem* anonymousItemPtr = nullptr;
 	if (GenerateListOfAnonymousItems()) {
 		anonymousItemPtr = anonymousItem;
@@ -285,24 +285,24 @@ AnonymousItem* Warehouse::GetListOfAnonymousItems(int& num) {
 	return anonymousItemPtr;
 }
 
-Warehouse::~Warehouse() {
+GroceryStore::~GroceryStore() {
 	//QUESTION 39: Why do I test each of these to nullptr before deleting memory?
 	//QUESTION 40: When is this destructor actually called?
 	if (item != nullptr) {
 		delete[] item;
 		item = nullptr;
 	}
-	if (hammer != nullptr) {
-		delete[] hammer;
-		hammer = nullptr;
+	if (fruit != nullptr) {
+		delete[] fruit;
+		fruit = nullptr;
 	}
-	if (screwdriver != nullptr) {
-		delete[] screwdriver;
-		screwdriver = nullptr;
+	if (vegetable != nullptr) {
+		delete[] vegetable;
+		vegetable = nullptr;
 	}
-	if (wrench != nullptr) {
-		delete[] wrench;
-		wrench = nullptr;
+	if (dairy != nullptr) {
+		delete[] dairy;
+		dairy = nullptr;
 	}
 	if (anonymousItem != nullptr) {
 		delete[] anonymousItem;
@@ -310,10 +310,10 @@ Warehouse::~Warehouse() {
 	}
 }
 
-//QUESTION 41: Can these display functions be called from WarehouseMain.cpp?
-//QUESTION 42: How would you make these functions a part of class Warehouse?
-//QUESTION 43: Is it a good idea to make these functions a part of class Warehouse?
-void DisplayItems(WarehouseItem* item, int num) {
+//QUESTION 41: Can these display functions be called from GroceryStoreMain.cpp?
+//QUESTION 42: How would you make these functions a part of class GroceryStore?
+//QUESTION 43: Is it a good idea to make these functions a part of class GroceryStore?
+void DisplayItems(GroceryItem* item, int num) {
 	//QUESTION 44: What namespace is cout and endl a part of?
 	cout << endl;
 	cout << "LIST OF ITEMS:" << endl;
@@ -327,9 +327,9 @@ void DisplayItems(WarehouseItem* item, int num) {
 	cout << endl;
 }
 
-void DisplayHammers(Hammer* item, int num) {
+void DisplayFruits(Fruit* item, int num) {
 	cout << endl;
-	cout << "LIST OF HAMMERS:" << endl;
+	cout << "LIST OF FRUITS:" << endl;
 	for (int i = 0; i < num; ++i) {
 		cout.setf(ios::fixed);
 		cout.precision(2);
@@ -338,9 +338,9 @@ void DisplayHammers(Hammer* item, int num) {
 	cout << endl;
 }
 
-void DisplayScrewdrivers(Screwdriver* item, int num) {
+void DisplayVegetables(Vegetable* item, int num) {
 	cout << endl;
-	cout << "LIST OF SCREWDRIVERS:" << endl;
+	cout << "LIST OF VEGETABLES:" << endl;
 	for (int i = 0; i < num; ++i) {
 		cout.setf(ios::fixed);
 		cout.precision(2);
@@ -349,9 +349,9 @@ void DisplayScrewdrivers(Screwdriver* item, int num) {
 	cout << endl;
 }
 
-void DisplayWrenches(Wrench* item, int num) {
+void DisplayDairy(Dairy* item, int num) {
 	cout << endl;
-	cout << "LIST OF WRENCHES:" << endl;
+	cout << "LIST OF DAIRY PRODUCTS:" << endl;
 	for (int i = 0; i < num; ++i) {
 		cout.setf(ios::fixed);
 		cout.precision(2);
