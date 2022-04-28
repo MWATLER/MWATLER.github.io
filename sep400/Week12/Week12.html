@@ -1,0 +1,77 @@
+<h1>Week 12 - April 3-7</h1>
+<h3>Introduction</h3>
+<p>This week we are going to look at security issues within an operating system. We will look at the RSA encryption alorithm. 
+    We will also look at authentication and encryption with openssl.
+</p>
+
+<h3>Videos</h3>
+<table>
+    <tr><td>Security</td><td><a href="https://www.youtube.com/watch?v=ZhMw53Ud2tY" target="_blank">5 Steps to Secure Linux (protect from hackers)</a></td></tr>
+    <tr><td>RSA Encryption</td><td><a href="How RSA Encryption Works" target="_blank">https://www.youtube.com/watch?v=ZPXVSJnDA_A</a></td></tr>
+    <tr><td>OpenSSL</td><td><a href="https://www.youtube.com/watch?v=-nEh7X4dtuw" target="_blank">Encryption and decryption with openssl</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<ul>
+    <li><b>Quiz 10</b> will be on OpenSSL. Study from the following:
+        <a href="https://aticleworld.com/ssl-server-client-using-openssl-in-c/" target="_blank">ssl server client programming using openssl in c</a></li>
+</ul>
+
+<h3>Lecture Material</h3>
+<ul>
+    <li>Chapters 15 and 16 of 
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997143391103226" target="_blank">Operating System Concepts</a></li>
+    <li>Chapter 38 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
+    <li>The article:
+        <a href="https://www.geeksforgeeks.org/rsa-algorithm-cryptography/" target="_blank">RSA Algorithm in Cryptography</a></li>
+    <li>The article:
+        <a href="https://aticleworld.com/ssl-server-client-using-openssl-in-c/" target="_blank">ssl server client programming using openssl in c</a></li>
+    </ul>
+
+<h3>Labs</h3>
+<ul>
+    <li><a href="../Labs/Lab9/Lab9.html" target="_blank">Lab 9</a> (April 7) - .</li>
+    <li><a href="../Labs/Lab10/Lab10.html" target="_blank">Lab 10</a> (April 14) - .</li>
+</ul>
+
+<h3>Assignment</h3>
+<p><a href="../Assignments/Assignment2/Assignment2.html" target="_blank">Assignment 2</a> (due April 14).</p>
+
+<h3>Sample Code</h3>
+
+<p><em>RSA Encryption</em></p>
+<ul>
+    <li> The idea of RSA is based on the fact that it is difficult to factorize a large integer. The public key 
+        consists of two numbers where one number is multiplication of two large prime numbers. And private key 
+        is also derived from the same two prime numbers. So if somebody can factorize the large number, the 
+        private key is compromised. Therefore encryption strength totally lies on the key size and if we double 
+        or triple the key size, the strength of encryption increases exponentially. RSA keys can be typically 
+        1024 or 2048 bits long, but experts believe that 1024 bit keys could be broken in the near future. But 
+        till now it seems to be an infeasible task. Sample code that demonstrates RSA for small values can be found at:<br>
+        <a href="rsa/Makefile" target="_blank">Makefile</a> and
+        <a href="rsa/rsa.cpp" target="_blank">rsa.cpp</a>.
+     </li>
+</ul>
+
+<p><em>OpenSSL</em></p>
+<ul>
+    <li>An SSL (Secure Sockets Layer) is the standard security protocol used to establish an encrypted connection 
+        between a server and a client. After establishing the connection SSL/TLS ensures that the data transmitted 
+        between server and client are secured and intact. There are two parts to SSL. The first is the 
+        handshake, or the authentication. For this a certificate is required. The second part is the encryption 
+        of the data. To run SSL on a Linux machine, we have to first install the OpenSSL library:<br>
+<b>$ sudo apt-get install libssl-dev</b><br><br>
+Before compiling the client and server program you will need a Certificate. You can generate your own certificate
+using the below command:<br>
+<b>$ openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem</b><br>
+<b>Note:</b> Here certificate name is <b>mycert.pem</b>.<br>
+<b>Note:</b> 1024 bit RSA might be too small. You might wish to use 2048 instead.<br><br>
+<b>Note:</b> In the following demonstration code, you will have to generate a certificate for both the 
+server and client. it is therefore best to keep the server and client in separate directories:
+        <a href="openssl/client/Makefile" target="_blank">client/Makefile</a>,
+        <a href="openssl/client/client.cpp" target="_blank">client/client.cpp</a>,
+        <a href="openssl/server/Makefile" target="_blank">server/Makefile</a> and
+        <a href="openssl/server/server.cpp" target="_blank">server/server.cpp</a>.
+     </li>
+</ul>
