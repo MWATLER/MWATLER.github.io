@@ -1,33 +1,29 @@
 <h1>Week 12 - April 3-7</h1>
 <h3>Introduction</h3>
-<p>This week we are going to look at security issues within an operating system. We will look at the RSA encryption alorithm. 
-    We will also look at authentication and encryption with openssl.
+<p>This week we are going to look at memory mapping. We will look at process memory some more, and we will look at virtual memory. 
+    We will look at the various memory mapping schemes across processes.
 </p>
 
 <h3>Videos</h3>
 <table>
-    <tr><td>Security</td><td><a href="https://www.youtube.com/watch?v=ZhMw53Ud2tY" target="_blank">5 Steps to Secure Linux (protect from hackers)</a></td></tr>
-    <tr><td>RSA Encryption</td><td><a href="How RSA Encryption Works" target="_blank">https://www.youtube.com/watch?v=ZPXVSJnDA_A</a></td></tr>
-    <tr><td>OpenSSL</td><td><a href="https://www.youtube.com/watch?v=-nEh7X4dtuw" target="_blank">Encryption and decryption with openssl</a></td></tr>
+    <tr><td>Memory Mapping</td><td><a href="https://www.youtube.com/watch?v=m7E9piHcfr4" target="_blank">How to Map Files into Memory in C (mmap, memory mapped file io)</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=nPIhoJ6lKeQ" target="_blank">CS 134 OS-7: Memory-Mapped Files</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=piCsO7t_48o" target="_blank">C++ Programming on Linux - Memory Mapped File (mmap system call)</a></td></tr>
 </table>
 
 <h3>Quiz</h3>
 <ul>
-    <li><b>Quiz 10</b> will be on OpenSSL. Study from the following:
-        <a href="https://aticleworld.com/ssl-server-client-using-openssl-in-c/" target="_blank">ssl server client programming using openssl in c</a></li>
+    <li><b>Quiz 10</b> will be on memory mapping. Study chapter 49 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
 </ul>
 
 <h3>Lecture Material</h3>
 <ul>
-    <li>Chapters 15 and 16 of 
+    <li>Chapters 8 and 9 of 
         <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997143391103226" target="_blank">Operating System Concepts</a></li>
-    <li>Chapter 38 of
+    <li>Chapters 6, 49 and 50 of
         <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
-    <li>The article:
-        <a href="https://www.geeksforgeeks.org/rsa-algorithm-cryptography/" target="_blank">RSA Algorithm in Cryptography</a></li>
-    <li>The article:
-        <a href="https://aticleworld.com/ssl-server-client-using-openssl-in-c/" target="_blank">ssl server client programming using openssl in c</a></li>
-    </ul>
+</ul>
 
 <h3>Labs</h3>
 <ul>
@@ -38,45 +34,72 @@
 <h3>Assignment</h3>
 <p><a href="../Assignments/Assignment2/Assignment2.html" target="_blank">Assignment 2</a> (due April 14).</p>
 
+<h3>Additional Lecture Material</h3>
+<p>An overview of virtual memory can be seen at:<br>
+    <img src="VirtualMemoryOverview.jpg" alt="Virtual Memory">
+</p>
+
+<p>Locations of shared memory, memory mappings, and shared libraries can be seen below:<br>
+<img src="MemoryMappings.jpg" alt="Shared Memory, Memory Mappings, Shared Libraries">
+</p>
+
+<p>Two processes with a shared mapping of the same region of a file can be seen at:<br>
+    <img src="SharedMapping.jpg" alt="Shared Mapping">
+</p>
+
 <h3>Sample Code</h3>
 
-<p><em>RSA Encryption</em></p>
+<p><em>Banking Application</em></p>
 <ul>
-    <li> The idea of RSA is based on the fact that it is difficult to factorize a large integer. The public key 
-        consists of two numbers where one number is multiplication of two large prime numbers. And private key 
-        is also derived from the same two prime numbers. So if somebody can factorize the large number, the 
-        private key is compromised. Therefore encryption strength totally lies on the key size and if we double 
-        or triple the key size, the strength of encryption increases exponentially. RSA keys can be typically 
-        1024 or 2048 bits long, but experts believe that 1024 bit keys could be broken in the near future. But 
-        till now it seems to be an infeasible task. Sample code that demonstrates RSA for small values can be found at:
-        <a href="rsa/rsa.cpp" target="_blank">rsa.cpp</a>.<br>
-        Sample code that demonstrates RSA for larger values can be found at:
-        <a href="rsa/rsa2.cpp" target="_blank">rsa2.cpp</a>.<br>
-        Their Makefile can be found at:
-        <a href="rsa/Makefile" target="_blank">Makefile</a>.<br>
-        With <b>rsa2.cpp</b>, you can experiment to see how easy or difficult it is to factor <b>n</b> if it is 
-        derived from 2 large primes.
+    <li>A banking application, several of which can be run in parallel, for updating a bank account can be found at:<br>
+        <a href="BankingApplication/BankApplication.h" target="_blank">BankApplication.h</a>,
+        <a href="BankingApplication/BankApplication.cpp" target="_blank">BankApplication.cpp</a> and
+        <a href="BankingApplication/Makefile" target="_blank">Makefile</a>.<br>
+        The common file that is mapped to all banking application processes can be found at 
+        <a href="BankingApplication/BankDatabase.txt" target="_blank">BankDatabase.txt</a>. Note that this is a binary file.
      </li>
+     <li>Code that demonstrates <a href="https://man7.org/linux/man-pages/man2/mprotect.2.html" target="_blank">mprotect</a> can be found at:<br>
+        <a href="BankingApplication/mprotect/BankDatabase.txt" target="_blank">BankDatabase.txt</a>,
+        <a href="BankingApplication/mprotect/BankApplication.h" target="_blank">BankApplication.h</a>,
+        <a href="BankingApplication/mprotect/BankApplication.cpp" target="_blank">BankApplication.cpp</a> and
+        <a href="BankingApplication/mprotect/Makefile" target="_blank">Makefile</a>.<br>
+    </li>
+    <li>Code that demonstrates
+        <a href="https://man7.org/linux/man-pages/man2/mlockall.2.html" target="_blank">mlockall</a>, 
+        <a href="https://man7.org/linux/man-pages/man2/mincore.2.html" target="_blank">mincore</a> and
+        <a href="https://man7.org/linux/man-pages/man2/madvise.2.html" target="_blank">madvise</a> 
+        can be found at:<br>
+        <a href="BankingApplication/mincore/BankDatabase.txt" target="_blank">BankDatabase.txt</a>,
+        <a href="BankingApplication/mincore/BankApplication.h" target="_blank">BankApplication.h</a>,
+        <a href="BankingApplication/mincore/BankApplication.cpp" target="_blank">BankApplication.cpp</a> and
+        <a href="BankingApplication/mincore/Makefile" target="_blank">Makefile</a>.<br>
+    </li>
+    <li>Code that demonstrates anonymous mapping via <b>/dev/zero</b> can be found at:<br>
+        <a href="BankingApplication2/BankApplication.h" target="_blank">BankApplication.h</a>,
+        <a href="BankingApplication2/BankApplication.cpp" target="_blank">BankApplication.cpp</a> and
+        <a href="BankingApplication2/Makefile" target="_blank">Makefile</a>.
+        Note that there is no database file.
+    </li>
+    <li>Code that demonstrates anonymous mapping without any files whatsoever can be found at:<br>
+        <a href="BankingApplication3/BankApplication.h" target="_blank">BankApplication.h</a>,
+        <a href="BankingApplication3/BankApplication.cpp" target="_blank">BankApplication.cpp</a> and
+        <a href="BankingApplication3/" target="_blank">Makefile</a>.
+        Note that there is no database file.
+    </li>
 </ul>
 
-<p><em>OpenSSL</em></p>
+
+<p><em>Transaction Applications</em></p>
 <ul>
-    <li>An SSL (Secure Sockets Layer) is the standard security protocol used to establish an encrypted connection 
-        between a server and a client. After establishing the connection SSL/TLS ensures that the data transmitted 
-        between server and client are secured and intact. There are two parts to SSL. The first is the 
-        handshake, or the authentication. For this a certificate is required. The second part is the encryption 
-        of the data. To run SSL on a Linux machine, we have to first install the OpenSSL library:<br>
-<b>$ sudo apt-get install libssl-dev</b><br><br>
-Before compiling the client and server program you will need a Certificate. You can generate your own certificate
-using the below command:<br>
-<b>$ openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem</b><br>
-<b>Note:</b> Here certificate name is <b>mycert.pem</b>.<br>
-<b>Note:</b> 1024 bit RSA might be too small. You might wish to use 2048 instead.<br><br>
-<b>Note:</b> In the following demonstration code, you will have to generate a certificate for both the 
-server and client. it is therefore best to keep the server and client in separate directories:
-        <a href="openssl/client/Makefile" target="_blank">client/Makefile</a>,
-        <a href="openssl/client/client.cpp" target="_blank">client/client.cpp</a>,
-        <a href="openssl/server/Makefile" target="_blank">server/Makefile</a> and
-        <a href="openssl/server/server.cpp" target="_blank">server/server.cpp</a>.
+    <li>Transactions between parent and child using anonymous mapping without any files can be found at:<br>
+        <a href="Transaction/Transaction.h" target="_blank">Transaction.h</a>,
+        <a href="Transaction/Transaction.cpp" target="_blank">Transaction.cpp</a> and
+        <a href="Transaction/Makefile" target="_blank">Makefile</a>.
+     </li>
+     <li>Failed transactions between a parent and an exec'ed process using anonymous mapping without any files can be found at:<br>
+        <a href="Transaction2/Transaction.h" target="_blank">Transaction.h</a>,
+        <a href="Transaction2/Parent.cpp" target="_blank">Parent.cpp</a>,
+        <a href="Transaction2/Child.cpp" target="_blank">Child.cpp</a> and
+        <a href="Transaction2/Makefile" target="_blank">Makefile</a>.
      </li>
 </ul>
