@@ -1,0 +1,53 @@
+<h2>SEP400 - Lab 9: Hacking RSA</h2>
+
+<h3>Due: Friday, March 31, 2023</h3>
+
+<p>As we have studied, the keys for the RSA algorithm are derived from two large prime numbers <b>p</b> and <b>q</b>. The modulus <b>n</b>, 
+    which is publicly known, is a product of these two prime numbers: <b>n=p*q</b>. If <b>n</b> can be broken into its factors, then all keys and 
+    parameters for the RSA scheme can be determined, including the decryption key <b>d</b>. The strength of RSA therefore relies on the 
+    inability to break <b>n</b> down into <b>p</b> and <b>q</b>.</p>
+    
+<p>Normally, for the RSA scheme to be effective, the modulus <b>n</b> should be at least 1024 bits long. Some say it should be at least 
+2048 bits long. You have been given a program with a small <b>n</b> and you are to try and hack this <b>n</b> by finding the prime numbers 
+<b>p</b> and <b>q</b> that <b>n</b> is calculated from. You will perform this hack in an environment with 20 competing processes and by 
+varying the priority of your process with its <b>nice</b> value. You will have to run your process as super-user.</p>
+
+<p>Code for this lab has been given as follows:<br>
+    <a href="hack.cpp" target="_blank">hack.cpp</a> - the hacking process (incomplete),<br>
+    <a href="nestedLoop2.cpp" target="_blank">nestedLoop2.cpp</a> - the competing process,<br>
+    <a href="Makefile" target="_blank">Makefile</a> - the Makefile for <b>hack</b> and <b>nLoop2</b>,<br>
+    <a href="start.bat" target="_blank">start.bat</a> - the start shell for running 20 <b>nLoop2</b> processes and one <b>hack</b> process, and<br>
+    <a href="stop.bat" target="_blank">stop.bat</a> - the stop shell for stopping all <b>nLoop2</b> processes and the <b>hack</b> process (if needed).
+</p>
+
+<p>You will open a file. You will call <b>DeterminePrimes()</b> of <b>hack.cpp</b> 20 times while varying the <b>nice</b> value of the
+    priority from -20 to +19. For each call to <b>DeterminePrimes()</b>, measure the time taken to crack the modulus <b>n</b> of the RSA scheme.
+    Use the high resolution timing function <a href="https://man7.org/linux/man-pages/man2/clock_gettime.2.html" target="_blank">clock_gettime()</a>
+    which produces a time-stamp to the nanosecond. Store the time before the call to <b>DeterminePrimes()</b> and 
+    after the call to <b>DeterminePrimes()</b>. The difference is the time it took to hack the modulus <b>n</b> of the RSA scheme.
+    Store the hack time of each call in a file and make a plot of <b>hack-time</b> vs <b>nice</b> value. You can use the plotting 
+    feature in Microsoft Excel. Be sure to close your file when done.
+    A sample file might look as follows: <a href="hackTime.dat" target="_blank">hackTime.dat</a>, where the first value is the 
+    <b>nice</b> value and the second the <b>hack time</b> in seconds. If your hacking time is too large, 
+    you might want to stop at a <b>nice</b> value of +10.
+</p>
+
+<p>While your processes are running (20 <b>nLoop2</b> processes and 1 <b>hack</b> process), run <b>top</b> from the command line 
+    to see how much cpu time your <b>hack</b> is taking as <b>nice</b> is decreased.</p>
+
+<u>Questions</u>
+<ol>
+    <li>It takes quite a bit of time to hack such a small value of <b>n</b> (0.5 seconds at best). How long do you think it would 
+        take to hack an <b>n</b> which is 1024 bits?</li>
+    <li>When you were at the lowest <b>nice</b> value, how much cpu time was your <b>hack</b> process taking?</li>
+    <li>When you were at the highest <b>nice</b> value, how much cpu time was your <b>hack</b> process taking?</li>
+    <li>When you were at the middle <b>nice</b> value (<b>nice=0</b>), how much cpu time was your <b>hack</b> process taking?</li>
+</ol>
+
+<h3>Lab Submission:</h3>
+
+<p>Please mail your <b>hack.cpp</b> and your plot of <b>hack-time</b> vs <b>nice</b> value to:
+   <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+        
+<p><b>NB: My last name is Watler, not Walter.</b></p>
+    
