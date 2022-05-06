@@ -1,0 +1,162 @@
+<h2>SEP400 - Assignment 2: Seismic Data Acquisition Unit</h2>
+
+<h3>Due: Friday, April 14, 2023</h3>
+
+<h4><b><u>Business Case</u></b> (Marketing, Project Manager, Senior Executives)</h4>
+<p>The release of energy associated with earthquakes generates seismic waves that propagate through the 
+    Earth and along the Earth's surface across large distances. Most earthquakes are the result of plate tectonic processes. 
+    The geological monitoring of the Earth's surface provides guidance for determining the status and trends of geological 
+    activity, and to further the understanding of how geologic processes impact our ecosystem.</p>
+
+<p>A transducer has been purchased by our company, which converts seismic waves into streams of binary data. This data has to reach our 
+    data centers for analysis. We need a data acquisition unit that will collect data from our transducer and transmit these data 
+    over the network to data centers. In doing so, our data acquisition unit must protect against rogue data centers which might 
+    attempt to steal the data or disrupt network communications.</p>
+
+<p>The purpose of this project is therefore to write software for the data acquisition unit given the transducer 
+    and data centers.</p>
+
+<h4><b><u>Requirements</u></b> (Marketing, Project Manager, Project Lead)</h4>
+<ul>
+<li>The data acquisition unit must quickly retrieve the data from the transducer.</li>
+<li>The data acquisition unit must accept subscription requests from data centers through password authentication.</li>
+<li>The data acquisition unit must quickly transmit all data to all subscribed data centers (losing some data is acceptable).</li>
+<li>The data acquisition unit must protect against any rogue process that attempts to guess the subscription password by brute force.</li>
+<li>The data acquisition unit must protect against any rogue process that attempts a denial of service attack by spamming the data acquisition unit with 
+    large amounts of data.</li>
+</ul>
+
+<h4><b><u>Design</u></b> (Project Lead, Senior Engineers)</h4>
+
+<b>The Transducer:</b>
+<ul>
+    <li>The manufacturers of the transducer are aware of the requirement for quick data transfer, therefore have designed the transducer 
+        to write streams of data into shared memory.</li>
+    <li>The transducer therefore allows the software for the data acquistion unit to run on the transducer so they can share memory.</li>
+    <li>The transducer data streams are of fixed length. Metadata (data about the data) is included with each data stream.</li>
+    <li>The transducer data streams are written into a finite area of memory. They therefore overwrite each other after a while.</li>
+</ul>
+
+<b>The Seismic Data Acquisition Unit:</b>
+<ul>
+    <li>The seismic data acquisition unit retrieves data from the transducer through shared memory.</li>
+    <li>The seismic data acquisition unit synchronizes its data retrieval with the transducer's data write.</li>
+    <li>The IP address of the seismic data acquisition unit is known to all data centers.</li>
+    <li>The seismic data acquisition unit uses INET datagram sockets to accept subscriptions from data centers with authentication via password.</li>
+    <li>The seismic data acquisition unit uses INET datagram sockets to transmit streams of seismic data to all subscribed data centers.</li>
+    <li>The seismic data acquisition unit uses mutex'es to synchronize its data retrieval via INET datagram sockets with its data transmit via INET datagram sockets.</li>
+    <li>The seismic data acquisition unit keeps track of the history of data center activity to detect rogue data centers which might try to guess the 
+        password by brute force.</li>
+    <li>The seismic data acquisition unit keeps track of the history of data center activity to detect rogue data centers which might try to overwhelm it with 
+        massive amounts of data.</li>
+    <li>The seismic data acquisition unit uses INET datagram sockets to accept cancellation of a data center's subscription.</li>
+    </ul>
+
+<b>The Data Center:</b>
+<ul>
+    <li>The data center attempts to authenticate with the data acquisition unit using INET datagram sockets by providing a data stream consisting of the username and password.</li>
+    <li>If authentication fails, the data center will try again after 5 seconds.</li>
+    <li>Once authenticated, the data center will retrieve data for 30 seconds from the data acquistion unit using INET datagram sockets, then cancel its subscription.</li>
+</ul>
+
+<h4><b><u>Implementation</u></b> (Junior and Senior Engineers)</h4>
+
+<b>The Transducer:</b>
+<ul>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+</ul>
+
+<b>The Seismic Data Acquisition Unit:</b>
+<ul>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+</ul>
+
+<b>The Data Center:</b>
+<ul>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+</ul>
+
+<h4><b><u>Testing and Rework</u></b> (Junior and Senior Engineers, Product Support)</h4>
+<ul>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+</ul>
+
+<h4><b><u>Questions</u></b></h4>
+<ol>
+<li>?</li>
+<br>
+<li>?</li>
+<br>
+<li>?</li>
+<br>
+<li>?</li>
+<br>
+<li>?</li>
+<br>
+<li>?</li>
+</ol>
+
+<h4><b><u>Timeline</u></b></h4>
+
+<p><b>Days 1-7:</b> .</p>
+
+<p><b>Days 8-14:</b> .</p>
+
+<p><b>Days 15-21:</b> Test and Rework. Answer questions. Submit assignment.</p>
+
+
+<h4><b><u>Marking Rubric</u></b></h4>
+
+<p>Assignment 2 is worth 15% of your final grade and as such is marked out of 15 as follows:</p>
+
+<style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    table {
+        width: 800;
+    }
+</style>
+<table>
+    <tr><th></th><th>Does not meet expectations</th><th>Satisfactory</th><th>Good</th><th>Exceeds Expectations</th></tr>
+    <tr><td><b><br>(5 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b><br>(5 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>Documentation<br>(1 marks)</b></td><td>Does not contain documentation</td><td>Contains header documentation for either all files or for all functions within each file</td>
+        <td>Contains header documentation for all files and for most functions within each file</td><td>Contains header documentation for all files and for all functions within each file.
+            Documents unclear code.</td></tr>
+    <tr><td><b>Questions<br>(2 marks)</b></td><td>Answers no question correctly</td><td>Answers some questions correctly</td>
+        <td>Answers most questions correctly</td><td>Answers all Questions correctly</td></tr>
+</table>
+    
+<h4><b><u>Submission</u></b></h4>
+
+<p>Please email all source code and answers to questions to:
+    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+         
+    <p><b>NB: My last name is Watler, not Walter.</b></p>
+
+<p>Your questions can be submitted in a separate document or embedded within your source code.</p>
+
+<h4><b><u>Late Policy</u></b></h4>
+
+<p>You will be docked 10% if your assignment is submitted 1-2 days late.<br>
+   You will be docked 20% if your assignment is submitted 3-4 days late.<br>
+   You will be docked 30% if your assignment is submitted 5-6 days late.<br>
+   You will be docked 40% if your assignment is submitted 7-8 days late.<br>
+   You will be docked 50% if your assignment is submitted over 8 days late.</p>
