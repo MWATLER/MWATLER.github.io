@@ -13,8 +13,8 @@
     over the network to data centers. In doing so, our data acquisition unit must protect against rogue data centers which might 
     attempt to steal the data or disrupt network communications.</p>
 
-<p>The purpose of this project is therefore to write software for the data acquisition unit given the transducer 
-    and data centers.</p>
+<p><b>The purpose of this project is therefore to write software for the data acquisition unit given the transducer 
+    and data centers.</b></p>
 
 <h4><b><u>Requirements</u></b> (Marketing, Project Manager, Project Lead)</h4>
 <ul>
@@ -63,29 +63,104 @@
 
 <b>The Transducer:</b>
 <ul>
-    <li>.</li>
-    <li>.</li>
-    <li>.</li>
-    <li>.</li>
-    <li>.</li>
+    <li>The transducer writes 1 packet of seismic data into shared memory each second along with a packet number. The shared memory can store upt to 2096 packets of seismic 
+        data before overwriting itself. Each packet of seismic data consists of a status byte (NOT_READY, READ, WRITTEN), a packet length byte and 256 bytes of data.</li>
+    <li>Synchronization between the transducer and the data acquisition unit is by the status byte and by semaphores.</li>
+    <li>When the transducer writes to shared memory, it sets the status byte to WRITTEN. When the data acquisition unit reads the data, the status byte is set to READ.</li>
+    <li>The transducer performs a controlled shutdown on ctrl-C.</li>
+    <li>The source code for the transducer as well as the Makefile for the transducer and the data acquisition unit can be found at:<br>
+        <a href="DataAcquisition/SeismicData.h" target="_blank">SeismicData.h</a>,
+        <a href="DataAcquisition/Transducer.h" target="_blank">Transducer.h</a>,
+        <a href="DataAcquisition/Transducer.cpp" target="_blank">Transducer.cpp</a> and
+        <a href="DataAcquisition/TransducerMain.cpp" target="_blank">TransducerMain.cpp</a>.<br>
+        The Makefile as well as start and stop batch files can be found at:<br>
+        <a href="DataAcquisition/Makefile" target="_blank">Makefile</a>,
+        <a href="DataAcquisition/start.bat" target="_blank">start.bat</a> and
+        <a href="DataAcquisition/stop.bat" target="_blank">stop.bat</a>.</li>
 </ul>
 
 <b>The Seismic Data Acquisition Unit:</b>
+<b>NOTE:</b> The focus of this project is the seismic data acquisition unit. This software you will have to write from scratch. Code and Makefiles
+for the transducer and data centers have been given to you, as well as start and stop batch files.
 <ul>
-    <li>.</li>
-    <li>.</li>
-    <li>.</li>
-    <li>.</li>
-    <li>.</li>
+    <li>The shared memory:
+    <ul>
+        <li>Before the data acquisition unit reads from shared memory, it has to ensure that the status of the packet in shared memory is set to WRITTEN.</li>
+        <li>When the data acquisition unit reads the data, the status byte is set to READ.</li><li>.</li>
+        <li>The synchronization mechanism between the transducer and the data acquisition unit is through the status byte and semaphores.</li>
+        <li>The data acquisition unit will take each packet of data from shared memory and push it on to a queue of a structure that contains the 
+            length of the packet, the packet number, and the seismic data. Call this structure DataPacket.</li>
+        <li>After reading from shared memory, the data acquisition unit should sleep for 1 second.</li>
+    </ul>
+    </li>
+    <li>In addition to communicating with the transducer, the data acquisition unit must communicate with data centers that have subscribed to it.</li>
+    <li>The data acquisition unit will communicate with the data centers via INET DATA_GRAM sockets. You can make these sockets NON-BLOCKING if you wish.</li>
+    <li>Be sure to bind your data acquisition unit to the address 127.0.0.1:1153. You can change this address if you wish.</li>
+    <li>The data acquisition unit will have a read thread for authenticating data centers.</li>
+    <li>The data acquisition unit will have a write thread to write seismic data to all subscribed data centers.</li>
+    <li>The data acquisition unit will use mutexing to synchronize the data received from the transducer (push to a queue) with the data written to the 
+        data centers (front/pop from the queue).</li>
+    <li>The data center expects the following information: first byte: packet number, second byte: length of the data, remaining bytes: the data.</li>
+    <li>The read thread:
+    <ul>
+        <li>For the read thread, for authentication the data center will send a CSV stream of data with the following format: "Subscribe",&lt;username&gt;,"Leaf" 
+        The password is "Leaf".</li>
+        <li>On successful subscription, the data acquisition unit replies "Subscribed"</li>
+        <li>For the read thread, when a data center wishes to unsubscribe, it will send the following CSV stream of data: "Cancel",&lt;username&gt;</li>
+        <li>The data acquisition unit therefore has to keep a list of subscribers. The data structure for a subscriber should have the subscriber's username, 
+            IP address and port.</li>
+        <li>For the read thread, the data acquisition unit has to handle denial of service attacts. This occurs when a rogue data center sends massive amounts 
+        of data to the data acquisition unit hoping to crash the unit.</li>
+        <li>For the read thread, the data acquisition unit has to handle a brute force attack by a rogue data center that wishes to guess the password.</li>
+        <li>Detecting a rogue data center can be made easy by tracking the IP address of the last three data centers to send data to the data acquisition unit. 
+            If the IP addresses are all the same, chances are a rogue data center is trying to guess the password or is trying to overwhelm the data acquisition 
+            unit.</li>
+        <li>The data acquisition unit should therefore keep a list of the IP addresses of all rogue data centers. The data structure for a rogue data center would 
+            be the same as for a valid data center.</li>
+        <li>Whenever data from a rogue center arrives, just throw it away.</li>
+    </ul>
+    </li>
+    <li>The write thread:
+        <ul>
+            <li>The write thread will "front" and "pop" from the queue of DataPacket's.</li>
+            <li>The write thread will send each packet from DataPacket and send to each on the list of data centers.</li>
+            <li>After sending all pending packets to all clients, the write thread will sleep for 1 second.</li>
+        </ul>
+    </li>
+    <li>The data acquisition unit should perform a controlled shutdown on ctrl-C.</li>
 </ul>
 
 <b>The Data Center:</b>
 <ul>
-    <li>.</li>
-    <li>.</li>
-    <li>.</li>
-    <li>.</li>
-    <li>.</li>
+    <li>The data center will be invoked with a client number. This client number is used in determining the IP port for each data center.</li>
+    <li>Normally the data center would be on another network far away from the transducer and data acquisition unit. For the purposes of this 
+        assignment, let's assume they are all on the same machine.</li>
+    <li>The address of the first data center will be 127.0.0.1:1161, the second 127.0.0.1:1162, the third 127.0.0.1:1163, etc...</li>
+    <li>The data center knows the address of the server, which is currently hardcoded to 127.0.0.1:1153. You can change this address if you wish.</li>
+    <li>Each data center attempts to subscribe by sending the following CSV data to the server: Subscribe,DataCenter&lt;dataCenterNumber&gt;,Leaf</li>
+    <li>Once it subscribes, it reads data for 30 seconds, then sends a cancel message to the server: Cancel,DataCenter&lt;dataCenterNumber&gt;</li>
+    <li>The read thread is used to detect authentication, as well as to extract packet data.</li>
+    <li>Source code for the data center can be found at:<br>
+        <a href="DataCenter/DataCenter.h" target="_blank">DataCenter.h</a>,
+        <a href="DataCenter/DataCenter.cpp" target="_blank">DataCenter.cpp</a> and
+        <a href="DataCenter/DataCenterMain.cpp" target="_blank">DataCenterMain.cpp</a>.
+    </li>
+    <li>Two rogue data centers have been created. The first will attempt to guess the password. The source code for data center rogue1 can be found at:<br>
+        <a href="DataCenter/DataCenterRogue1.h" target="_blank">DataCenterRogue1.h</a>,
+        <a href="DataCenter/DataCenterRogue1.cpp" target="_blank">DataCenterRogue1.cpp</a> and
+        <a href="DataCenter/DataCenterRogue1Main.cpp" target="_blank">DataCenterRogue1Main.cpp</a>.
+    </li>
+    <li>The second rogue data center knows the password and attempts to overwhelm the data acquisition unit with a denial of service attack.
+        Source code for data center rogue2 can be found at:<br>
+        <a href="DataCenter/DataCenterRogue2.h" target="_blank">DataCenterRogue2.h</a>,
+        <a href="DataCenter/DataCenterRogue2.cpp" target="_blank">DataCenterRogue2.cpp</a> and
+        <a href="DataCenter/DataCenterRogue2Main.cpp" target="_blank">DataCenterRogue2Main.cpp</a>.
+    </li>
+    <li>The Makefile as well as start and stop batch files for all data centers can be found at:<br>
+        <a href="DataCenter/Makefile" target="_blank">Makefile</a>,
+        <a href="DataCenter/start.bat" target="_blank">start.bat</a> and
+        <a href="DataCenter/stop.bat" target="_blank">stop.bat</a>.
+    </li>
 </ul>
 
 <h4><b><u>Testing and Rework</u></b> (Junior and Senior Engineers, Product Support)</h4>
