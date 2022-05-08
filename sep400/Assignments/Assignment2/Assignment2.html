@@ -79,7 +79,7 @@
         <a href="DataAcquisition/stop.bat" target="_blank">stop.bat</a>.</li>
 </ul>
 
-<b>The Seismic Data Acquisition Unit:</b>
+<b>The Seismic Data Acquisition Unit:</b><br>
 <b>NOTE:</b> The focus of this project is the seismic data acquisition unit. This software you will have to write from scratch. Code and Makefiles
 for the transducer and data centers have been given to you, as well as start and stop batch files.
 <ul>
@@ -103,10 +103,11 @@ for the transducer and data centers have been given to you, as well as start and
     <li>The data center expects the following information: first byte: packet number, second byte: length of the data, remaining bytes: the data.</li>
     <li>The read thread:
     <ul>
-        <li>For the read thread, for authentication the data center will send a CSV stream of data with the following format: "Subscribe",&lt;username&gt;,"Leaf" 
+        <li>For the read thread, for authentication the data center will send a CSV stream of data with the following format: "Subscribe",&lt;username&gt;,"Leaf"<br> 
         The password is "Leaf".</li>
-        <li>On successful subscription, the data acquisition unit replies "Subscribed"</li>
+        <li>On successful subscription, the data acquisition unit replies "Subscribed" and prints out a message that the data center has subscribed.</li>
         <li>For the read thread, when a data center wishes to unsubscribe, it will send the following CSV stream of data: "Cancel",&lt;username&gt;</li>
+        <li>On unsubscribe, the data acquisition unit will remove the data center from the list of data centers and print out a message that the data center has unsubscribed.</li>
         <li>The data acquisition unit therefore has to keep a list of subscribers. The data structure for a subscriber should have the subscriber's username, 
             IP address and port.</li>
         <li>For the read thread, the data acquisition unit has to handle denial of service attacts. This occurs when a rogue data center sends massive amounts 
@@ -165,33 +166,41 @@ for the transducer and data centers have been given to you, as well as start and
 
 <h4><b><u>Testing and Rework</u></b> (Junior and Senior Engineers, Product Support)</h4>
 <ul>
-    <li>.</li>
-    <li>.</li>
-    <li>.</li>
-    <li>.</li>
-    <li>.</li>
-</ul>
+    <li>To test the system, code and binaries for the data acquisition unit and the transducer should be in one directory, and code 
+        and binaries for the data center in another directory.</li>
+    <li>The start batch file for the transducer and data acquisition unit should be run first, and shortly after the start batch file 
+        for the data centers.</li>
+    <li>The start batch file for the data centers will run 4 valid data centers and two rogue data centers.</li>
+    <li>Once communications have been established, you should see data centers 1-4 receiving data from the data center acquisition unit. 
+        Data centers 5 and 6 should be blocked.</li>
+    <li>After 30 seconds all data centers shut down.</li>
+    <li>A sample run at the beginning of the operations should look as follows:<br>
+        <img src="SampleRun1.jpg" alt="Sample Run 1"></li><br>
+    <li>A sample run at the end of the operations should look as follows:<br>
+        <img src="SampleRun2.jpg" alt="Sample Run 2"></li>
+    </ul>
 
 <h4><b><u>Questions</u></b></h4>
 <ol>
-<li>?</li>
+<li>Is it necessary to synchronize the transducer and the data center acquisition unit with both semaphores as well as a status byte?</li>
 <br>
-<li>?</li>
+<li>How big is the shared memory in bytes?</li>
 <br>
-<li>?</li>
+<li>When writing operating systems code, do you prefer to use object oriented programming with classes or do you prefer using C++ as an extended 
+    C with global variables inside the CPP file? Why?</li>
 <br>
-<li>?</li>
+<li>For this prject, what are the advantages and disadvantages of using datagrams for our network communications?</li>
 <br>
-<li>?</li>
+<li>How would you resolve a situation where a valid client ended up on the rogue list?</li>
 <br>
-<li>?</li>
+<li>Should the data passing between the data acquisition unit and the data centers be encrypted? Why?</li>
 </ol>
 
 <h4><b><u>Timeline</u></b></h4>
 
-<p><b>Days 1-7:</b> .</p>
+<p><b>Days 1-7:</b> Establish communications between the data acquisition unit and the transducer.</p>
 
-<p><b>Days 8-14:</b> .</p>
+<p><b>Days 8-14:</b> Establish communications between the data acquisition unit and the data centers.</p>
 
 <p><b>Days 15-21:</b> Test and Rework. Answer questions. Submit assignment.</p>
 
@@ -210,8 +219,9 @@ for the transducer and data centers have been given to you, as well as start and
 </style>
 <table>
     <tr><th></th><th>Does not meet expectations</th><th>Satisfactory</th><th>Good</th><th>Exceeds Expectations</th></tr>
-    <tr><td><b><br>(5 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
-    <tr><td><b><br>(5 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>Data Acquistion Unit/ Transducer: Communications <br>(4 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>Data Acquistion Unit/ Data Center: Communications <br>(4 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>Data Acquistion Unit/ Data Center: Security <br>(4 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
     <tr><td><b>Documentation<br>(1 marks)</b></td><td>Does not contain documentation</td><td>Contains header documentation for either all files or for all functions within each file</td>
         <td>Contains header documentation for all files and for most functions within each file</td><td>Contains header documentation for all files and for all functions within each file.
             Documents unclear code.</td></tr>
