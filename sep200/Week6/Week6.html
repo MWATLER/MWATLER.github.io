@@ -84,8 +84,10 @@ An example is created with two types of data schematics (Database2, Database2).<
 
 <p><em>The Adapter Pattern - Student Grades</em></p>
 <p>Sometimes we are not sure what types we will use until run-time. Based on user-input, our program might run in one 
-  of several modes. We use an adapter pattern to run our program in the desired mode based on user input. The following 
-  example uses an adapter pattern to run a simply student grades program in one of two modes - number mode, or 
+  of several modes. We use an <a href="https://refactoring.guru/design-patterns/adapter" target="_blank">Adapter Pattern</a>
+  to run our program in the desired mode based on user input. The adapter pattern allows objects with incompatible interfaces 
+  to collaborate, and is often used to adapt legacy code to cutting edge code, but we can also use it here. The following 
+  example uses an adapter pattern to run a simple student grades program in one of two modes - number mode, or 
   letter mode. If marks are entered as percentages, the program runs a certain way. If marks are entered as letters, 
   the program runs another way.</p>
 <p>The software starts from a <b>StudentGradeAdapter</b> base class. This will be the static type used in our main function. 
