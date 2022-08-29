@@ -1,0 +1,48 @@
+Michael Rogers
+Software Engineer
+88000
+41
+Anand Manikutty
+Software Developer
+71000
+33
+Carol Smith
+Project Manager
+99000
+39
+Joe Stevens
+Software Test
+54000
+31
+Mary-Anne Foster
+Software Engineering Manager
+105000
+54
+George ODonnell
+Software Engineer
+71000
+29
+Wendell Chu
+Senior Design Engineer
+98000
+48
+David Smith
+Marketing Specialist
+92000
+45
+Zacary Efron
+Software Test
+56000
+37
+Eric Goldsmith
+Software Engineer
+90000
+39
+Elizabeth Doe
+Marketing Specialist
+87000
+47
+Kumar Swamy
+Software Architect
+110000
+44

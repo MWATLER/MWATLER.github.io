@@ -1,0 +1,80 @@
+<h1>Week 10 - Multi-Threading and Thread Classes</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look at threads as well as synchronization mechanisms for multi-threaded programs.</p>
+
+  <h3>Videos</h3>
+  <table>
+    <tr><td>Lecture Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lecture_20211115_Recording.mp4" target="_blank">Monday, November 15 (mp4)</a></td></tr>
+    <tr><td>Lab Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lab_20211116_Recording.mp4" target="_blank">Tuesday, November 16 (mp4)</a></td></tr>
+    <tr><td>C++ Threads</td><td><a href="https://www.youtube.com/watch?v=wXBcwHwIt_I" target="_blank">Threads in C++</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=XDZkyQVsbDY" target="_blank">std::promise And std::future In C++ Threading</a></td></tr>
+    </table>
+  
+<h3>Reference Material</h3>
+<ul>
+  <li>Chapter 42 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li><a href="https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/" target="_blank">What’s the Diff: Programs, Processes, and Threads</a></li>
+  <li><a href="http://jakascorner.com/blog/2016/03/promise-difference.html" target="_blank">Difference between promise, packaged task and async</a></li>
+</ul>
+    
+<h3>Sample Code</h3>
+
+<p><em>Threads with a Function Object and Lambda Functions</em></p>
+
+<p>A thread is basically a function that runs on its own. This function is usally specified by a function pointer which points to the address of the function. 
+  It is also possible to pass a functor to the thread as an argument. Code that demonstrates functors with threads can be seen at:
+  <a href="ThreadFunctionObject/ThreadFunctionObject.cpp" target="_blank">ThreadFunctionObject.cpp</a>.<br>
+  Similarly, a lambda function can be used as the thread's function. Code that demonstrates lambda functions with threads can be seen at:
+  <a href="ThreadLambda/ThreadLambda.cpp" target="_blank">ThreadLambda.cpp</a>.
+</p>
+
+<p><em>Thread futures, packaged tasks and asynchronous packaged tasks</em></p>
+
+<p>It is possible to promise to a variable that its value will be set sometime in the future. A <b>future</b> object retrieves a value that a provider has stored in a shared state. 
+  When the provider has finished its work, the <b>future</b> object then retrieves the value from this provider. There are three ways C++ accomplishes this: a thread <b>future</b>, a 
+<b>packaged task</b>, and an <b>asynchronous packaged task</b>. With a <b>future</b>, the provider can set this value at any point inside the thread function. With a <b>packaged task</b>, 
+  the provider can set this value only at the end of a function, where the function does not run as a thread. With an <b>asynchronous packaged task</b>, the provider can 
+  set this value only at the end of a function but the function actually runs as a thread. For more information, see 
+  <a href="http://jakascorner.com/blog/2016/03/promise-difference.html" target="_blank">Difference between promise, packaged task and async</a>. Code that demonstrates 
+  thread futures, packaged tasks and asynchronous packaged tasks can be seen at:<br>
+  <a href="ThreadFuture/ThreadFuture.cpp" target="_blank">ThreadFuture.cpp</a>,
+  <a href="ThreadPackagedTask/ThreadPackagedTask.cpp" target="_blank">ThreadPackagedTask.cpp</a> and
+  <a href="ThreadAsync/ThreadAsync.cpp" target="_blank">ThreadAsync.cpp</a>.<br>
+</p>
+
+<p><em>A Network Node</em></p>
+
+<p>Servers, network nodes, dispatchers, routers, etc... commonly apply threads and synchronization mechanisms to deal with any shared resources among threads. A network node 
+  typically has one or more receive threads where it receives packets from several clients, and one or more send threads where it extracts header information from each 
+  client and forwards the packets on to its recipients. The rationale for a network node can be seen in the presentation
+  <a href="NetworkNode/Sockets and the Implementation of a World Wide Messaging System.ppt" target="_blank">Sockets and the Implementation of a World Wide Messaging System</a>.<br>
+  Sample code for a network node can be seen at:
+  <a href="NetworkNode/NetworkNode.h" target="_blank">NetworkNode.h</a>,
+  <a href="NetworkNode/NetworkNode.cpp" target="_blank">NetworkNode.cpp</a> and
+  <a href="NetworkNode/NetworkNodeMain.cpp" target="_blank">NetworkNodeMain.cpp</a>.<br>
+  The network node is simulated through 10 receive threads which read data from an input file and puts it into a queue, and a main function which acts 
+  as a send thread which extracts the data from the queue and forwards it on (by writing to an output file). These files can be seen at:<br>
+  <a href="NetworkNode/Input1.dat" target="_blank">Input1.dat</a>,
+  <a href="NetworkNode/Input2.dat" target="_blank">Input2.dat</a>,
+  <a href="NetworkNode/Input3.dat" target="_blank">Input3.dat</a>,
+  <a href="NetworkNode/Input4.dat" target="_blank">Input4.dat</a>,
+  <a href="NetworkNode/Input5.dat" target="_blank">Input5.dat</a>,
+  <a href="NetworkNode/Input6.dat" target="_blank">Input6.dat</a>,
+  <a href="NetworkNode/Input7.dat" target="_blank">Input7.dat</a>,
+  <a href="NetworkNode/Input8.dat" target="_blank">Input8.dat</a>,
+  <a href="NetworkNode/Input9.dat" target="_blank">Input9.dat</a>,
+  <a href="NetworkNode/Input10.dat" target="_blank">Input10.dat</a> and 
+  <a href="NetworkNode/Output.dat" target="_blank">Output.dat</a>.<br>
+</p>
+
+<p><em>Warehouse (sample code for workshop 8)</em></p>
+
+<p>A warehouse of hammers, screwdrivers and wrenches is created as well as a list of barcodes and prices. Each warehouse item has a name and a barcode. Each barcode has a barcode and 
+  a price. The warehouse code merges the list of items with the barcodes to create a list of warehouse items, where for each item its name, barcode and price is known. The purpose 
+  of all this is to demonstrate how we can use unique pointers in the merge. Since unique pointersc cannot be copied, the std::move() function is used to add a resource 
+  of a unique pointer over to a list. Debug printf's have been added to demonstrate that these resources are automatically deleted when the program ends. The code can be seen at:<br>
+  <a href="Warehouse/Warehouse.h" target="_blank">Warehouse.h</a>, 
+  <a href="Warehouse/Warehouse.cpp" target="_blank">Warehouse.cpp</a> and
+  <a href="Warehouse/WarehouseMain.cpp" target="_blank">WarehouseMain.cpp</a>.
+</p>

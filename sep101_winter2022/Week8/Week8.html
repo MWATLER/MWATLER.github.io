@@ -1,0 +1,80 @@
+<h1>Week 8 - Functions, Arrays and Data Structures</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look at functions and data structures. We will look at how we can pass an array of a data structure to a function by value and also by address. 
+  We will also look at structures within a structure, as well as file input/output.</p>
+
+<h3>Videos</h3>
+<table>
+  <tr><td>Lecture Recording</td><td><a href="https://seneca.sharepoint.com/sites/SEP101ProgrammingFundamentals52/Shared%20Documents/General/Recordings/View%20Only/Meeting%20in%20_General_-20220311_114245-Meeting%20Recording.mp4?web=1" target="_blank">March 11 (mp4)</a></td></tr>
+  <tr><td>Functions, Arrays and Structures</td><td><a href="https://www.youtube.com/watch?v=yggto0VVMX0" target="_blank">Passing array of structure into function in c programming</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=tikUAsOVfhY" target="_blank">Array of Structures in C | Passing Structure as a Function Argument in C</a></td></tr>
+  <tr><td>File Input/Output</td><td><a href="https://www.youtube.com/watch?v=e-srF6c3TJ8" target="_blank">C Programming Tutorial for Beginners - C File I/O: Create, Open, Write and Close a File</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=01QsW5_fuek" target="_blank">Intro to C Programming - File I/O Program</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<p>.</p>
+
+<h3>Lecture Material</h3>
+<ul>
+  <li>Chapters 3 and 4 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997356785103226" target="_blank">C Programming</a> by Rajiv Chopra</li>
+  <li>Functions/Arrays/Structures, and Text Files of <a href="https://intro2c.sdds.ca/" target="_blank">Introduction to C</a> by Seneca College</li>
+</ul>
+
+<h3>Lab(s)</h3>
+<ul>
+  <li><a href="../Labs/Lab6/Lab6.html" target="_blank">Lab 6</a>.</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p><a href="../Assignments/Assignment1/Assignment1.html" target="_blank">Assignment 1</a>.</p>
+
+<h3>Sample Code</h3>
+<p><em>Student Marks</em></p>
+<p>We are given a problem where we want to record data for three students at a College. For each student we want to record the name, year of study, marks (up to 6 subjects), number of courses, and average. 
+  We want to calculate the average for each student based on the sum of the marks divided by the number of courses. We want to be able to do this by pass-by-value and pass-by-address. At the end,
+  we want to calculate the averages for all the students at once.</p>
+<p>To resolve the above problem, first we have to find all the nouns/adjectives related to a student and group them in a structure. We see we need the student's name, year of study, an array of marks, 
+  the number of subjects, and the student's average. We have to decide the type for each of these variables.</p>
+<p>Now we have to find the verbs. We need to calculate a student's average by pass-by-value and pass-by-address. It would make sense to implement these in functions. The first could 
+  return the student's average taking in a student structure as argument. The student's average could then be assigned the return value of this function. In the second case where we
+  pass a student structure by address, the student's average could be set in the function itself, and the function could return an error status to indicate if everything went well. 
+  The third verb is calculating the average for all students. This could be done in a for-next loop where calculate average by address could be called for each student.</p>
+<ul>
+  <li>The data structure for the student and related function prototypes can be found in <a href="StudentMarks/Student.h" target="_blank">Student.h</a> and the function
+    definitions for each student can be found in <a href="StudentMarks/Student.c" target="_blank">Student.c</a>. The main program is
+    <a href="StudentMarks/StudentMain.c" target="_blank">StudentMain.c</a>.</li>
+  <li>Since all functions in Student.c operate on the data structure <b>struct Student</b>, we can collect all variables and functions that operate on those variables into 
+  one common class called <b>class Student</b>. There is no need to pass a data structure to these functions since the variables are all visible within the class. Code that 
+implements a crude, object-oriented version of the above can be seen at: <a href="StudentMarksOO/Student.h" target="_blank">Student.h</a>, 
+<a href="StudentMarksOO/Student.cpp" target="_blank">Student.cpp</a> and <a href="StudentMarksOO/StudentMain.cpp" target="_blank">StudentMain.cpp</a>.</li>
+</ul>
+
+<p><em>Corporate Information</em></p>
+<p>A corporation has 12 employees and would like to record data for each one. For each employee it would like to keep track of the employee's name, position, salary and age. In addition to keeping data 
+  on its employees, the corporation also wants to record the average salary, the average age, the maximum salary, and which employee has the maximum salary.</p>
+<p>The corporation actually stores all its employee data inside a database. For our purposes, the database will be represented by a file <b>EmployeeDB.txt</b>.</p>
+<p>First let us find all nouns/adjectives related to an employee. They are the employee's name, position, salary and age. These could be grouped into a structure since they all 
+  relate to one thing - the employee. We need a second structure for the corporation itself. It is said to have 12 employees, so the corporation structure should contain an array of 12 
+  employee structures, in addition to variables for the average salary, the average age, the maximum salary, and the employee with the maximum salary (which could be represented by 
+  an index into the employee array).</p>
+<p>Now let us find the verbs. For the corporation we want to know the average salary, the average age, and the maximum salary and who has the maximum salary. We can have three functions 
+  perform each of these three tasks. Since the corporation structure contains average salary, average age, the maximum salary, and the index into the employee array of the maximum 
+  salary, we can pass our entire corporation structure by address to each of these function so these functions can update these values.</p>
+<p></p>
+<ul>
+  <li>The data structure for the employee can be found in <a href="CorporateInfo/EmployeeInfo.h" target="_blank">EmployeeInfo.h</a>. The employee database can be found in the 
+    file <a href="CorporateInfo/EmployeeDB.txt" target="_blank">EmployeeDB.txt</a>.
+     The data structure for corporate information and related function prototypes can be found in <a href="CorporateInfo/CorporateInfo.h" target="_blank">CorporateInfo.h</a>
+     and the function definitions for the corporation can be found in <a href="CorporateInfo/CorporateInfo.c" target="_blank">CorporateInfo.c</a>. The main program is
+    <a href="CorporateInfo/CorporateInfoMain.c" target="_blank">CorporateInfoMain.c</a>.</li>
+    <li>Since all functions in CorporateInfo.c operate on the data structure <b>struct CorporateInfo</b>, we can collect all variables and functions that operate 
+    on those variables into one common class called <b>class CorporateInfo</b>. There is no need to pass a data structure to these functions since the variables are 
+    all visible within the class. Code that implements a crude, object-oriented version of the above can be seen at: 
+    <a href="CorporateInfoOO/CorporateInfo.h" target="_blank">CorporateInfo.h</a>, <a href="CorporateInfoOO/CorporateInfo.cpp" target="_blank">CorporateInfo.cpp</a> and 
+    <a href="CorporateInfoOO/CorporateInfoMain.cpp" target="_blank">CorporateInfoMain.cpp</a>. The employee database can  be found in the 
+    file <a href="CorporateInfoOO/EmployeeDB.txt" target="_blank">EmployeeDB.txt</a>.
+    </li>
+</ul>
+

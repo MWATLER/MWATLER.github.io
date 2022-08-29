@@ -1,0 +1,147 @@
+<h1>Week 6 - Design</h1>
+
+<h3>Introduction</h3>
+<p>Software design is a process to transform user requirements into some suitable form, which helps the programmer in software coding and implementation.
+  Software design is the first step in SDLC (Software Design Life Cycle), which moves the concentration from problem domain to solution domain.</p>
+
+<h3>Videos</h3>
+<table>
+  <tr><td>Lecture Recording</td><td><a href="https://seneca.sharepoint.com/sites/SEP101ProgrammingFundamentals52/Shared%20Documents/General/Recordings/View%20Only/Meeting%20in%20_General_-20220218_114340-Meeting%20Recording.mp4?web=1" target="_blank">February 18 (mp4)</a></td></tr>
+  <tr><td>The Software Development Life Cycle</td><td><a href="https://www.youtube.com/watch?v=DRDD7UWX2y4" target="_blank">Software Development Life Cycle (SDLC)- simplified</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=i-QyW8D3ei0" target="_blank">Software Development Lifecycle in 9 minutes!</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=G-6qDY8UltU" target="_blank">Software Development Life Cycle (SDLC) - Detailed Explanation</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<p>.</p>
+
+<h3>Lecture Material</h3>
+<ul>
+  <li><a href="ProductDevelopment.pdf" target="_blank">The Full Product Life Cycle</a></li>
+  <li><a href="https://www.tutorialspoint.com/sdlc/sdlc_overview.htm" target="_blank">SDLC - Overview</a></li>
+  <li><a href="https://www.tutorialspoint.com/software_engineering/software_design_basics.htm" target="_blank">Software Design Basics</a></li>
+</ul>
+
+<h3>Lab(s)</h3>
+<ul>
+  <li><a href="../Labs/Lab4/Lab4.html" target="_blank">Lab 4</a>.</li>
+  <li><a href="../Labs/Lab5/Lab5.html" target="_blank">Lab 5</a>.</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p>None.</p>
+
+<h3>The Product Development Life Cycle</h3>
+<p>The software product development life cycle covers a range of activities from the business case to software release.
+  See <a href="ProductDevelopment.pdf" target="_blank">The Full Product Life Cycle</a>.</p>
+<p><b>The Business Case.</b> A Business Case clearly outlines the fundamental reason for why an organization should engage in a particular
+  project or task. They can either be formally or informally presented to top-level management or other relevant stakeholders. The business
+  case can also originate from top-level management. Generally, the team creating the business case for a project or task should aim to argue
+  that whatever resources (e.g., money, time, talent, etc.) need to be expended for a project are being requested in order to fulfill a business
+  necessity. Business Case Development typically includes gather a broad set information about what the project is, what benefits the project
+  will bring to the organization, the advantages and disadvantages of going-forward with the project, how much the project will cost and
+  potential risks associated with the project as well as those associated with not doing the project.</p>
+<p><b>Requirements.</b> A software requirements specification (SRS) is a description of a software system to be developed. It is modeled
+  after the business case and fleshes out the functional and non-functional requirements required to fulfill the business case. It may
+  include a set of use cases that describe user interactions that the software must provide to the user for perfect interaction.</p>
+<p><b>Design.</b> Software design is an iterative process to translate the requirements of the software to a "blueprint" for constructing
+  the software. It involves identifying modules in the system, their function and their relationship with other modules. During the design
+  process, the requirements of the software are translated to a detailed design of data, architecture, components and interfaces.
+  The design process could either be recursive decomposition of modules or recursive grouping of several modules or a combination of both.
+  The output of the design phase is a "software design", which ultimately results in software that would meet functional, behavioral and
+  quality goals.</p>
+<p><b>Implementation.</b> Once the design is complete, most of the major decisions about the system have been made. The goal of the
+  implementation or coding phase is to translate the design of the system into code in a given programming language. For a given
+  design, the aim of this phase is to implement the design in the best possible manner. The coding phase affects both testing and
+  maintenance profoundly. A well written code reduces the testing and maintenance effort. Since the testing and maintenance cost
+  of software are much higher than the coding cost, the goal of coding should be to reduce the testing and maintenance effort.
+  Hence, during coding the focus should be on developing programs that are easy to write. Simplicity and clarity should be
+  strived for, during the coding phase.</p>
+<p><b>Testing and Rework.</b> Software Testing is a method to check whether the actual software product matches expected
+  requirements and to ensure that software product is defect free. It involves execution of software/system components using
+  manual or automated tools to evaluate one or more properties of interest. The purpose of software testing is to identify
+  errors, gaps or missing requirements in contrast to actual requirements. Rework in software development is the additional
+  effort of redoing a process or activity that was incorrectly implemented in the first instance or due to changes in
+  requirements from clients. It usually results from errors, omissions, failures, changes, poor communications and poor coordination.</p>
+<p><b>Software Product Release.</b> A release is the distribution of the final version of an application. A software release may be
+  either public or private and generally constitutes the initial generation of a new or upgraded application.</p>
+
+<h3>Software Design based on the Use-Case Scenario</h3>
+<p>In software engineering, a use case is a list of actions or event steps typically defining the interactions between a role or actor
+  and a system to achieve a goal. The actor can be a human or other external system. The three main parts of a use case scenario are
+  the use case identifiers and initiators; the steps performed; and the conditions, assumptions, and questions.</p>
+<p>We are going to develop a simple method of designing and implementing software based on the use-case scenario.
+  We have enough tools in our software development toolbox to perform simple design and implementation.</p>
+<ul>
+  <li>We want to extract the nouns and adjectives in our scenario. These will probably be our variables. We may want to
+    group related variables into data structures.</li>
+  <li>We want to extract verbs in our scenario. These will probably be our functions.</li>
+  <li>We want to note repetitive action. These will probably be our loops.</li>
+  <li>We want to note any decision making. These will probably be our if-else or switch conditions.</li>
+  <li>We want to note any calculations. These will probably be our computations.</li>
+  <li>We want to note user interaction. These will probably be our input/output.</li>
+</ul>
+
+<h3>Sample Code </h3>
+<p><em>Minor Hockey Standings</em></p>
+<p>We want to write software that generates the standings for a minor hockey tournament. There are five teams
+  and each team will play four games, playing each other once. The team with the most points at the end of
+  the tournament wins. If two teams are tied with the most points, those teams will play each other again.<br>
+  For each team, the team name, games played, the wins, losses, ties, points and winning percentage will be
+  tracked. The points will be generated from the wins (2 points for a win) and ties (1 point for a tie).
+  The winning percentage will be points divided by maximum possible points (2 times games played) times 100%.<br>
+  The user will be prompted to enter the score for each game by entering the name and goals of the
+  first team, then the name and goals of the second team.
+</p>
+<ul>
+  <li>Extract the nouns and adjectives. We see <b>name</b>  (char array), <b>games played</b> (int),
+    <b>wins</b> (int), <b>losses</b> (int), <b>ties</b> (int), <b>points</b> (int) and <b>winning
+    percentage</b> (float). Since these all relate to a team, we can group them under the structure
+    <b>Team</b>.</li>
+  <li>Extract the verbs. We see the points for each team has to be calculated. Modularize this operation
+    with the function <b>CalculatePoints</b>. We see a winning percentage has to be calculated for each
+    team. Modularize this operation with the function <b>CalculateWinningPercentage</b>.</li>
+  <li>Input/Output operations are required with a user. Prompt the user to enter the results of each game.</li>
+  <li>Similar operations have to be performed on each of the five teams. Code this repetitive action with
+    a loop that repeats its operations <b>five</b> times.</li>
+  <li>At the end of the tournament, a winner will be declared.</li>
+</ul>
+<p>A solution to this can be seen in the code <a href="MinorHockey/MinorHockey.h" target="_blank">MinorHockey.h</a>
+and <a href="MinorHockey/MinorHockey.c" target="_blank">MinorHockey.c</a>. This code also demonstrates how to
+scan input with <b>scanf()</b> to the end of a line.</p>
+
+<p><em>Income Tax Software</em></p>
+<p>We want to write software that will calculate your income tax based on your income and deductible expenses.
+  We want to do this for three people.<br>
+  Each person should enter his/her last name, social insurance number, annual income, and zero or more of
+  the deductible expenses (charitable donations, number of children under 18, and RRSP contributions).
+  From this data the income tax is calculated.<br>
+  Deductible expenses are calculated as follows:<br>
+  deductible = charitable donations + $1000 x number of children under 18 + 0.22xRRSP contributions.<br>
+  Income after deductible is calculated as follows:<br>
+  income after deductible = income - deductible<br>
+  You are taxed on your income after deductible (IAD) as follows:<br>
+  If the IAD is greater than $100,000, taxes = IAD*0.45<br>
+  If the IAD is greater than $50,000, taxes = IAD*0.35<br>
+  If the IAD is greater than $25,000, taxes = IAD*0.25<br>
+  If the IAD is $25,000 or less, taxes = 0<br>
+</p>
+<ul>
+  <li>Extract the nouns and adjectives. We see <b>name</b> (char array), <b>social insurance number</b> (int),
+    <b>annual income</b> (float), <b>charitable donations</b> (float), <b>number of children under 18</b> (int),
+    <b>RRSP contributions</b> (float), <b>deductibles</b> (float) and <b>income tax</b> (float). Since these are
+    all related to a person, we can group them under the structure <b>Person</b>.</li>
+  <li>Extract the verbs. We see that the deductible has to be calculated. Modularize this operation with 
+    the function <b>CalculateDeductible</b>. We see that income tax has to be calculated based on the income
+  after deductibles. Modularize this operation with the function <b>CalculateIncomeTax</b>.</li>
+  <li>Input/Output operations are required with a user. Prompt the use for all required data
+    and present the income tax owed by that person at the end.</li>
+  <li>Similar operations have to be performed for each of the three persons. Code this repetitive action
+    with a loop that repeats its operations three times.</li>
+</ul>
+<p>A solution to this can be seen in the code <a href="IncomeTax/IncomeTax.h" target="_blank">IncomeTax.h</a>
+  and <a href="IncomeTax/IncomeTax.c" target="_blank">IncomeTax.c</a>.</p>
+  
+<p><em>Dog Breeding Company</em></p>
+We made some rough notes based on a use-case scenario concerning a dog breeding company. These 
+notes can be seen at <a href="NOTES.rtf" target="_blank">NOTES.rtf</a>.

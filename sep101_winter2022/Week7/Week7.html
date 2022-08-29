@@ -1,0 +1,188 @@
+<h1>Week 7 - MidTerm</h1>
+
+<h3>Introduction</h3>
+<p>This week will be your midterm. You will also have a midterm review.</p>
+
+<h3>Videos</h3>
+<table>
+  <tr><td>Lecture Recording</td><td><a href="https://seneca.sharepoint.com/sites/SEP101ProgrammingFundamentals52/Shared%20Documents/General/Recordings/View%20Only/Meeting%20in%20_General_-20220225_114328-Meeting%20Recording.mp4?web=1" target="_blank">February 25 (mp4)</a></td></tr>
+</table>
+
+<h3>Lab(s)</h3>
+<ul>
+  <li><a href="../Labs/Lab5/Lab5.html" target="_blank">Lab 5</a>.</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p><a href="../Assignments/Assignment1/Assignment1.html" target="_blank">Assignment 1</a>.</p>
+
+<h3>Midterm Review</h3>
+<p><em>College Rankings</em></p>
+<p>One thing high school graduates wonder is whether it is worth paying a lot of tuition to attend a particular higher learning institution. One thing that can be checked 
+  is the employer satisfaction rating for a particular college or university. If one divides the employer satisfaction by the tuition, one can come up with a ratio to 
+  determine where might be the best place to study for the cost.</p>
+
+<p>We are going to write a program that collects information for five colleges, which will request the college name, address, tuition, and employer satisfaction for each. 
+  We need to calculate the satisfaction to tuition ratio for each college and determine that college's ranking among other colleges.</p>
+
+<p>First we collect the nouns and adjective. The college name, address, tuition, and employer satisfaction are all variables that relate to a college, so do the satisfaction to 
+  tuition ratio and the college's ranking, so we could put them into a college structure:<br>
+  <pre>
+    #define MAX_STR 64
+
+    struct College {
+      char name[MAX_STR];
+      char address[MAX_STR];
+      double tuition;
+      double employerSatisfaction;
+      double satisfactionToTuitionRatio;
+      int ranking;
+    };  </pre>
+</p>
+
+<p>Then we collect the verbs. For each college a satisfaction to tuition ratio has to be calculated, and this ratio can be used to determine the rankings 
+  of the colleges. We can create a function that accepts College information as input, and calculates the satisfaction to tuition ratio. We can do this two ways. The function can accept 
+college information as input, and return the ratio as an output. But how to we show if data is invalid? The function could therefore accept college information 
+as pass by address, calculate and set the satisfaction to tuition ratio, and the function could return an int to indicate valid data or not. The function 
+prototype could therefore look as follows:<br>
+<pre>
+int GetRatio(struct CollegeInfo* college);
+</pre>
+Note that since we are changing one of the variables of structure College, it is passed by address.<br>
+You might consider a function to determine rankings. This function would have to take the entire array of 
+Colleges in order to compare the colleges against each other.</p>
+
+<p>We have to consider the user in this example. Since you will be accepting user input, and some of that input might require scanning to the end of a line, you might want to add 
+  a utility function that deletes all garbage characters from the input buffer:<br>
+<pre>
+  void utilClearInputBuffer() {
+    while (getchar() != '\n');
+  }
+</pre>
+Also, we might want to create a PrintReport() function that prints a report for each college. This function would take a College structure by value 
+than by address, since no changes will be made to any object of type struct College.</p>
+
+<p>The full code can be seen at <a href="CollegeSelector/College.h" target="_blank">College.h</a>, 
+  <a href="CollegeSelector/College.c" target="_blank">College.c</a> and 
+  <a href="CollegeSelector/CollegeMain.c" target="_blank">CollegeMain.c</a>.</p>
+
+  <p><em>Travel Simulator</em></p>
+  <p>You have been given information about four cars.<br>
+    The first is a grey 2013 Toyota Corolla which has a fuel efficiency in the city of 8.2L/100km and a fuel efficiency on the highway of 6.2L/100km.<br> 
+    The second is a red 2012 Honda Civic which has a fuel efficiency in the city of 7.8L/100km and a fuel efficiency on the highway of 5.8L/100km.<br> 
+    The third is a blue 2008 Chevrolet Impala which has a fuel efficiency in the city of 10.6L/100km and a fuel efficiency on the highway of 7.5L/100km.<br> 
+    The fourth is a black 2016 Cadillac Escalade which has a fuel efficiency in the city of 17.29L/100km and a fuel efficiency on the highway of 12.5L/100km.</p>
+
+<p>You'd like to take these cars for a drive to see how much fuel they consume. Fuel consumption as a function of distance travelled can be 
+  calculated as follows:<br>
+  <b>fuelConsumed = fuelEfficiency/100 * distance</b><br><br>
+  You and three others have decided to simulate travel with these cars by tanking these cars to 50L of fuel, driving them 200km in the city, then 300km on the highway. If fuel runs out in 
+  any of them, print out a warning message.</p>
+
+<p>At the end, your program should print out a report for each, displaying the colour, year, make and model for each, as well as the 
+  fuel remaining in the tank.</p>
+
+<p>I leave you to work out any required data structures, functions, and user input/output. A solution can be found at
+  <a href="TravelSimulator/Automobile.h" target="_blank">Automobile.h</a>,
+  <a href="TravelSimulator/Automobile.c" target="_blank">Automobile.c</a> and
+  <a href="TravelSimulator/TravelSimulator.c" target="_blank">TravelSimulator.c</a>.
+</p>
+
+<p><em>UDP Packet Parser</em></p>
+<p>This example is for those of you who want a challenge. Surprisingly, you know enough about C to perform a vital practice in industry, 
+  and that is the parsing of a data packet. A data packet consists of control information and user data. To be more precise, a data 
+  packet consists of meta-data (data about the data) and the data itself. We will look at a UDP Packet and parse information from it.</p>
+
+<p>The User Datagram Protocol (UDP protocol) is utilized to send data that doesn't necessarily need to be very 
+  reliable. The UDP packet is encapsulated in an IP packet which can be transmitted across a network.
+  Both UDP and IP have checksums octets which are used to ensure the data has been transmitted without errors.</p>
+  
+<p>UDP messages are generally faster than TCP provided that the communication link functions properly. UDP is widely
+   utilized to send DNS (Domain Name Search) requests, to exchange chat messages, for streaming audio and video data, etc...</p>
+
+<p>The header for the UDP packet contains data about the data (meta-data). After the header comes the data. The data is "Length" packets long, as indicated by OCTETs 5 and 6 below.
+  The format for the UDP packet is as follows:<br>
+<pre>
+  UDP HEADER FORMAT
+  
+  OCTET 1, 2	Source Port
+  OCTET 3, 4	Destination Port
+  OCTET 5, 6	Length
+  OCTET 7, 8 	Checksum
+  OCTET 9, 10...Data
+</pre><br>
+The following is a UDP packet where the header is in red and the data in green:<br>
+<span style="color:red">04 89 00 35 00 2C AB B4</span> <span style="color:green">00 01 01 00 00 01 00 00 00 00 00 00 04 70 6F 70 64 02 69 78 06 6E 65 74 63 6F 6D 03 63 6F 6D 00 00 01 00 01</span><br><br>
+This breaks down as follows:
+<pre>
+  UDP Header  04 89 00 35 00 2C AB B4
+  Data        00 01 01 00 00 01 00 00 00 00 00 00 04 70 6F 70 64 02 69 78 06 6E 65 74 63 6F 6D 03 63 6F 6D 00 00 01 00 01
+  
+  Source Port       04 89 (04*16*16 + 8*16 + 9*1 = 1161)
+  Destination Port  00 35 (3*16 + 5 = 53)
+  Length            00 2C (2*16 + 12 = 44)
+  Checksum          AB B4 (10*16*16*16 + 11*16*16 + 11*16 + 4 = 43956)
+  Data              00 01 01 00 00 01 00 00 00 00 00 00 04 70 6F 70 64 02 69 78 06 6E 65 74 63 6F 6D 03 63 6F 6D 00 00 01 00 01
+</pre>
+</p>
+<p>The overall size of a UDP data packet is limited to 65535 bytes, which means there are 8 bytes set aside for the header, and up to 65535-8 bytes set aside for the data.</p>
+
+<p>To solve the problem of a data parser we need to collect the nouns/adjectives into variables and the verbs into functions. We see that source port, destination port, length,
+  checksum, and data are all related, so we can put them all in one structure. Let us call the structure UDPPacket. Now to collect the verbs. There is only one action here, and
+  that is to parse the data from a data stream and insert into the UDPPacket structure. Since there is only one action here we can put all the code inside the main() function.</p>
+
+<p>Next we have to decide on the types of the variables inside the UDPPacket Structure. The source port, destination port, length, and checksum can all be <b>unsigned integers</b> since 
+  they will all represent positive integral numbers, and the data can be a character array (<b>char[]</b>) of length 65535-8:<br>
+<pre>
+  #define MAX_LEN 65535//The maximum length of a UDP packet is 65535 bytes
+  #define HEADER_LEN 8//The length of the packet header
+  
+  struct UDPPacket {
+    //The meta-data, or header
+    unsigned int sourcePort;
+    unsigned int destPort;
+    unsigned int length;
+    unsigned int checksum;
+    //The data itself
+    unsigned char data[MAX_LEN-HEADER_LEN];
+  };
+</pre><br>
+Now comes the hard part, the parsing! Since each octet in the packet is 8 bits long, we can create a pointer of 8 bits to point to each octet in the UDP Packet stream. This pointer 
+could be of type <b>unsigned char</b> and can be used to parse the information. It will start with the high byte of the source port, then the low byte, then the high byte of the destination
+port, then the low byte, then the high byte of the length, then the low byte, then the high byte of the checksum, then the low byte. It will then have to go through all the data byte by
+byte until it has parsed "Length" bytes of data.</p>
+
+<p>In extracting the source port, destination port, length and checksum, the high byte of each has to be multiplied by 256 (16*16) then added to the low byte in order to extract 
+  the number correctly.</p>
+
+<p>Code that does all of this can be seen as follows: <a href="UDPPacket/UDPPacket.h" target="_blank">UDPPacket.h</a> and <a href="UDPPacket/UDPPacket.c" target="_blank">UDPPacket.c</a>.</p>
+
+<h3>Sample Code for Assignment 1</h3>
+<p><em>The Header Guard</em></p>
+<p>Sometimes the including of header files can become quite unwieldy. A header file can be included 
+  in more than one place in your program and lead to redefinition errors. To overcome this, it is common 
+  to include a header guard around your header files. This ensures that the compiler sees the header 
+  file only once during compilation. See the file <b>Common.h</b> in the following example for an example 
+  of using a header file:<br>
+  <a href="HeaderGuard/Common.h" target="_blank">Common.h</a>, 
+  <a href="HeaderGuard/Student.h" target="_blank">Student.h</a>, 
+  <a href="HeaderGuard/Student.c" target="_blank">Student.c</a>, 
+  <a href="HeaderGuard/Teacher.h" target="_blank">Teacher.h</a>, 
+  <a href="HeaderGuard/Teacher.c" target="_blank">Teacher.c</a>, 
+  <a href="HeaderGuard/Error.c" target="_blank">Error.c</a> and
+  <a href="HeaderGuard/InfoMain.c" target="_blank">InfoMain.c</a>.
+</p>
+
+<p><em>The Bookstore</em></p>
+<p>Some more sample code that might assist you with assignment 1 is the <b>bookstore</b>. The bookstore has a name and an address. It also contains four books and five DVDs.
+Each book has a name, author, purchase price, and sale price. Each DVD has a name, artist, purchase price, and sale price. All information for the bookstore is 
+retrieved from a file. The user is prompted for the name of the file.</p>
+<p>We want to know the net worth of the bookstore, which will be a sum of the sale prices for all items (books and DVDs). We want to know the profits of the bookstore 
+  which is a sum of sale price minus purchase price for all items. We want to know the profits by books only, and by DVDs only. Finally, we want to be able to change 
+  the price of any item. The user inputs the name of the item.</p>
+<p>Code that implements the bookstore can be seen at:<br>
+  <a href="Bookstore/Bookstore.txt" target="_blank">Bookstore.txt</a>, 
+  <a href="Bookstore/Bookstore.h" target="_blank">Bookstore.h</a>, 
+  <a href="Bookstore/Bookstore.c" target="_blank">Bookstore.c</a> and
+  <a href="Bookstore/BookstoreMain.c" target="_blank">BookstoreMain.c</a>.
+</p>

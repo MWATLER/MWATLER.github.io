@@ -1,0 +1,119 @@
+<h1>Week 3 - Inheritance and Inclusion Polymorphism, more Templates</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look at some corner cases with inheritance. We will also look at the Liskov Substitution Principle. 
+  We will look at templates again, particularly parametric polymorphism.</p>
+
+<h3>Videos</h3>
+<table>
+  <tr><td>Lecture Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lecture_20210920_Recording.mp4" target="_blank">Monday, September 20 (mp4)</a></td></tr>
+  <tr><td>Lab Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lab_20210921_Recording.mp4" target="_blank">Tuesday, September 21 (mp4)</a></td></tr>
+  <tr><td>Liskov's Substitution Principle</td><td><a href="https://www.youtube.com/watch?v=bVwZquRH1Vk" target="_blank">Liskov Substitution Principle (SOLID), The Robustness Principle, and DbC</a></td></tr>
+  <tr><td>The clone() function</td><td><a href="https://www.youtube.com/watch?v=UHP-DKrxgBs&list=PLE28375D4AC946CC3&index=15" target="_blank">Advanced C++: Virtual Constructor - Clone() Function</a></td></tr>
+  <tr><td>Parametric Polymorphism</td><td><a href="https://www.youtube.com/watch?v=-WV9vWjhI3g&t=258s" target="_blank">Advanced C++: Static Polymorphism</a></td></tr>
+</table>
+
+<h3>Reference Material</h3>
+<ul>
+  <li>Chapters 17, 20 and 23 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapters 7, 13-16 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+</ul>
+
+<h3>Sample Code</h3>
+
+<p><em>Geometric Shape, Geometric Shape 2</em></p>
+<p>Code that demonstrates the <b>clone()</b> function can be seen in the code below. Note that the second object 
+  is created from the first, but is in fact a separate object:
+<ul>
+  <li>
+    <a href="GeometricShape/Shape.h" target="_blank">Shape.h</a>,
+    <a href="GeometricShape/Cube.h" target="_blank">Cube.h</a>,
+    <a href="GeometricShape/Cube.cpp" target="_blank">Cube.cpp</a>,
+    <a href="GeometricShape/Sphere.h" target="_blank">Sphere.h</a>,
+    <a href="GeometricShape/Sphere.cpp" target="_blank">Sphere.cpp</a> and
+    <a href="GeometricShape/CloningMain.cpp" target="_blank">CloningMain.cpp</a>.
+  </li>
+</ul>
+The second program uses the same classes but demonstrates dynamic binding in a comparison function:
+<ul>
+  <li>
+    <a href="GeometricShape2/Shape.h" target="_blank">Shape.h</a>,
+    <a href="GeometricShape2/Cube.h" target="_blank">Cube.h</a>,
+    <a href="GeometricShape2/Cube.cpp" target="_blank">Cube.cpp</a>,
+    <a href="GeometricShape2/Sphere.h" target="_blank">Sphere.h</a>,
+    <a href="GeometricShape2/Sphere.cpp" target="_blank">Sphere.cpp</a> and
+    <a href="GeometricShape2/CloningMain.cpp" target="_blank">CloningMain.cpp</a>.
+  </li>
+</ul>
+</p>
+
+<p><em>Dynamic Type</em></p>
+<p>This next example uses <b>typeid</b> to identify a dynamic type. The program wishes to exclude an object of a 
+  particular derived type:
+<ul>
+  <li>
+    <a href="DynamicType/DynamicType.cpp" target="_blank">DynamicType.cpp</a>.
+  </li>
+</ul></p>
+
+<p><em>Parameter Adder</em></p>
+<p>This example uses variadic templates to add the values of all its parameters:
+<ul>
+  <li>
+    <a href="ParameterAdder/ParameterAdder.cpp" target="_blank">ParameterAdder.cpp</a>.
+  </li>
+</ul></p>
+
+<p><em>MathTest, MathTest2, MathTest3</em></p>
+<p>The first program is simply a refresher on the use of templates. Here the functions perform a square on any type, 
+  presented as a number, or as a fraction:
+<ul>
+  <li>
+    <a href="MathTest/Math.h" target="_blank">Math.h</a> and
+    <a href="MathTest/MathTest.cpp" target="_blank">MathTest.cpp</a>.
+  </li>
+</ul>
+The second program shows polymorphism with templated parameters. This is still ad-hoc polymorphism which relies on dynamic binding:
+<ul>
+  <li>
+    <a href="MathTest2/MathTest2.h" target="_blank">MathTest2.h</a> and
+    <a href="MathTest2/MathTest2.cpp" target="_blank">MathTest2.cpp</a>.
+  </li>
+</ul>
+The third program is an example of parametric polymorphism which relies on static binding:
+<ul>
+  <li>
+    <a href="MathTest3/MathAdd.h" target="_blank">MathAdd.h</a>,
+    <a href="MathTest3/MathMultiply.h" target="_blank">MathMultiply.h</a>,
+    <a href="MathTest3/MathCommon.h" target="_blank">MathCommon.h</a> and
+    <a href="MathTest3/MathTest3.cpp" target="_blank">MathTest3.cpp</a>.
+  </li>
+</ul>
+</p>
+
+<p><em>Stooge Factory</em></p>
+<p>The Stooge factory is an example of the factory design pattern, which can create a set of related objects through a static <b>make_stooge()</b> function. 
+  The program is based on the popular comedy "The Three Stooges". The factory can create three stooges: Larry, Curly and Moe. They are tied together 
+  through a common base class. StoogeMain.cpp allows you to create whichever stooge you wish, up to three of them, via dynamic binding:
+<ul>
+  <li>
+    <a href="StoogeFactory/Stooge.h" target="_blank">Stooge.h</a>,
+    <a href="StoogeFactory/Stooge.cpp" target="_blank">Stooge.cpp</a>,
+    <a href="StoogeFactory/Curly.h" target="_blank">Curly.h</a>,
+    <a href="StoogeFactory/Larry.h" target="_blank">Larry.h</a>,
+    <a href="StoogeFactory/Moe.h" target="_blank">Moe.h</a> and
+    <a href="StoogeFactory/StoogeMain.cpp" target="_blank">StoogeMain.cpp</a>.
+  </li>
+</ul>
+The second program is an example of implementing polymorphism through templates that circumvents dynamic binding. Since the program uses static 
+binding, the objects are not created during run-time.
+<ul>
+  <li>
+    <a href="StoogeTemplate/Stooge.h" target="_blank">Stooge.h</a>,
+    <a href="StoogeTemplate/Curly.h" target="_blank">Curly.h</a>,
+    <a href="StoogeTemplate/Larry.h" target="_blank">Larry.h</a>,
+    <a href="StoogeTemplate/Moe.h" target="_blank">Moe.h</a> and
+    <a href="StoogeTemplate/StoogeMain.cpp" target="_blank">StoogeMain.cpp</a>.
+  </li>
+</ul>
+</p>

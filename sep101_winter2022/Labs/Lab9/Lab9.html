@@ -1,0 +1,120 @@
+<h2>SEP101 - Lab 9: Card Game</h2>
+
+<h3>Due: April 8, 2022</h3>
+
+<a href="https://seneca.sharepoint.com/sites/SEP101ProgrammingFundamentals52/Shared%20Documents/General/Recordings/View%20Only/Meeting%20in%20_General_-20220330_133251-Meeting%20Recording.mp4?web=1" target="_blank">March 30 (mp4)</a>
+
+<p>This lab will test your ability to use the *this pointer and to use dynamic memory.</p>
+
+<h3> Card Game - Twenty One</h3>
+
+<p>You will write a program that simulates a game of 21 with a few twists. The purpose of 21 is to draw cards that sum as closely to 21 without going over. The player with the highest sum 
+    without going over 21 wins. In this game however, the players will have the option to steal the cards of other players.</p>
+
+<p>The player has a <b>name</b>, an unknown <b>number of cards</b> with values 1-10 each, and <b>cash</b>. The player will have to allocate the cards once the number of cards is known.</p>
+
+<p>The player <b>creates</b> itself given his/her name.<br>The player <b>draws cards</b> by deleting the cards it has and creating a new list of cards based on the number of cards requested. The value of each 
+    card is according to a random number generator that generates a random number from 1 to 10: <b>(rand()%10)+1</b>.<br>The player <b>sums cards</b> by going through the list of cards it has and 
+    returning the total points for all of them.<br>The player can <b>add cash</b> given an amount. This amount could be negative (the player lost). If the player has no cash left then <b>add cash</b>
+    returns a false, otherwise it returns a true.<br>The player can <b>steal cards</b> from another player. In this case the player has to delete its own cards, copy the cards from the other 
+    player, then delete the other player's cards. YOU HAVE TO ADD A TEST SO A PLAYER DOESN'T STEAL CARDS FROM ITSELF.<br>The player can generate a <b>report</b> printing the player's name and
+    cash left over.<br>The player can <b>destroy</b> itself by cleaning up any memory allocated.</p>
+
+<p>The file <a href="PlayerMain.cpp" target="_blank">PlayerMain.cpp</a> has been given to test your code.</p>
+
+<p>Sample code with dynamic memory allocation can be seen at: <a href="MyAverage/MyAverage.cpp" target="_blank">MyAverage.cpp</a></p>
+<p>Sample code on copying, moving and stealing data from one object to another can be seen in an example with a <b>BankAccount</b> class, in the following code:<br>
+    <a href="CopyMoveSteal/BankAccount.h" target="_blank">BankAccount.h</a>,
+    <a href="CopyMoveSteal/BankAccount.cpp" target="_blank">BankAccount.cpp</a> and
+    <a href="CopyMoveSteal/BankAccountMain.cpp" target="_blank">BankAccountMain.cpp</a>.</p>
+
+<h3>Sample Run</h3>
+A sample run is as follows:
+<pre>
+    How much do you want to bet? $300
+    New York State of Mind, how many cards do you want to draw? 4
+    Street Smarts, how many cards do you want to draw? 3
+    
+    New York State of Mind, you have 16 points. Do you wish to steal the cards from Street Smarts? [Y/N]n
+    
+    Street Smarts, you have 24 points. Do you wish to steal the cards from New York State of Mind? [Y/N]y
+    New York State of Mind, your cards have been stolen. How many cards do you want to draw? 4
+    
+    New York State of Mind has drawn 23 points and Street Smarts has drawn 16 points.
+    
+    New York State of Mind has gone over the limit.
+    Street Smarts has won!
+    
+    New York State of Mind has $700 left over.
+    Street Smarts has $1300 left over.
+    
+    How much do you want to bet? $300
+    New York State of Mind, how many cards do you want to draw? 4
+    Street Smarts, how many cards do you want to draw? 4
+    
+    New York State of Mind, you have 18 points. Do you wish to steal the cards from Street Smarts? [Y/N]n
+    
+    Street Smarts, you have 19 points. Do you wish to steal the cards from New York State of Mind? [Y/N]n
+    
+    New York State of Mind has drawn 18 points and Street Smarts has drawn 19 points.
+    
+    Street Smarts has won!
+    
+    New York State of Mind has $400 left over.
+    Street Smarts has $1600 left over.
+    
+    How much do you want to bet? $300
+    New York State of Mind, how many cards do you want to draw? 5
+    Street Smarts, how many cards do you want to draw? 3
+    
+    New York State of Mind, you have 21 points. Do you wish to steal the cards from Street Smarts? [Y/N]n
+    
+    Street Smarts, you have 8 points. Do you wish to steal the cards from New York State of Mind? [Y/N]y
+    New York State of Mind, your cards have been stolen. How many cards do you want to draw? 4
+    
+    New York State of Mind has drawn 30 points and Street Smarts has drawn 21 points.
+    
+    New York State of Mind has gone over the limit.
+    Street Smarts has won!
+    
+    New York State of Mind has $100 left over.
+    Street Smarts has $1900 left over.
+    
+    How much do you want to bet? $200
+    New York State of Mind, how many cards do you want to draw? 3
+    Street Smarts, how many cards do you want to draw? 4
+    
+    New York State of Mind, you have 18 points. Do you wish to steal the cards from Street Smarts? [Y/N]n
+    
+    Street Smarts, you have 31 points. Do you wish to steal the cards from New York State of Mind? [Y/N]y
+    New York State of Mind, your cards have been stolen. How many cards do you want to draw? 4
+    
+    New York State of Mind has drawn 17 points and Street Smarts has drawn 18 points.
+    
+    Street Smarts has won!
+    
+    New York State of Mind has $-100 left over.
+    Street Smarts has $2100 left over.
+</pre>
+
+<h3>Questions</h3>
+<ol>
+    <li>Can you explain the danger when a program allocates memory but forgets to deallocate it?</li>
+    <li>For memory allocation (new memory), where is the best place to deallocate memory?
+        Should the deallocation be close to the allocation or far from it and why?</li>
+    <li>How did you make use of the *this pointer in the lab?</li>
+</ol>
+
+<h3>Lab Submission:</h3>
+
+<p>Please email your files and the answers to the questions to:
+<a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+<b>NOTE:</b> My last name is <b>Watler</b> not Walter.</p>
+
+<h4><b><u>Late Policy</u></b></h4>
+
+<p>You will be docked 10% if your lab is submitted 1-2 days late.<br>
+   You will be docked 20% if your lab is submitted 3-4 days late.<br>
+   You will be docked 30% if your lab is submitted 5-6 days late.<br>
+   You will be docked 40% if your lab is submitted 7 days late.<br>
+   You will be docked 50% if your lab is submitted over 7 days late.</p>

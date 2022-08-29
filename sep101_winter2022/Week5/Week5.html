@@ -1,0 +1,85 @@
+<h1>Week 5 - Functions and Pointers</h1>
+
+<h3>Introduction</h3>
+<p>This week we study functions and pointers. We will study function parameters that are pass-by-value and pass-by-address. We will also look
+  at pointing to the memory location of variables.</p>
+
+<h3>Videos</h3>
+<table>
+  <tr><td>Lecture Recording</td><td><a href="https://seneca.sharepoint.com/sites/SEP101ProgrammingFundamentals52/Shared%20Documents/General/Recordings/View%20Only/SEP101%20Programming%20Fundamentals%20-%20Lecture-20220211_114236-Meeting%20Recording.mp4?web=1" target="_blank">February 11 (mp4)</a></td></tr>
+  <tr><td>Functions</td><td><a href="https://www.youtube.com/watch?v=3lqgdqoY83o" target="_blank">Introduction to Functions in C</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=5wAf9nzX2R8" target="_blank">Function Declaration in C</a></td></tr>
+  <tr><td>Pointers</td><td><a href="https://www.youtube.com/watch?v=mw1qsMieK5c" target="_blank">Pointers in C</a></td></tr>
+  <tr><td>Functions and Pointers</td><td><a href="https://www.youtube.com/watch?v=LW8Rfh6TzGg" target="_blank">Pointers as function arguments - call by reference</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<p>See <b>Quizzes</b> on Black Board.</p>
+
+<h3>Lecture Material</h3>
+<ul>
+  <li>Chapter 3 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997356785103226" target="_blank">C Programming</a> by Rajiv Chopra</li>
+  <li>Functions, and Pointers of <a href="https://intro2c.sdds.ca/" target="_blank">Introduction to C</a> by Seneca College</li>
+</ul>
+
+<h3>Lab(s)</h3>
+<ul>
+  <li><a href="../Labs/Lab3/Lab3.html" target="_blank">Lab 3</a>.</li>
+  <li><a href="../Labs/Lab4/Lab4.html" target="_blank">Lab 4</a>.</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p>None.</p>
+
+<h3>Sample Code</h3>
+<p><em>Functions</em></p>
+<p>A function is a group of statements that together perform a task. Every C program has at least one function, which is <b>main()</b>,
+  and all the most trivial programs can define additional functions.<br>
+
+  You can divide up your code into separate functions. How you divide up your code among different functions is up to you,
+  but logically the division is such that each function performs a specific task.<br>
+  
+  A function declaration or prototype tells the compiler about a function's <b>name</b>, <b>return type</b>, and <b>parameters</b>.
+  A function definition provides the actual body of the function.<br>
+  
+  The C standard library provides numerous built-in functions that your program can call. For example, printf() to perform formatted printing is a function.</p>
+<ul>
+  <li>Code that encapsulates some math features into functions can be found at
+    <a href="Math/Math.h" target="_blank">Math.h</a> and <a href="Math/Math.c" target="_blank">Math.c</a>.</li>
+</ul>
+
+<p><em>Pointers</em></p>
+<p>When a variable is declared, the memory needed to store its value is assigned a specific location in memory (its memory address).
+  Generally, C/C++ programs do not actively decide the exact memory addresses where its variables are stored. Fortunately, that task
+  is left to the operating system that decides the particular memory locations on runtime. However, it may be useful for a program to
+  be able to obtain the address of a variable during runtime in order to access to its data or to data cells that are at a certain
+  position relative to it.<br>
+  A pointer is a variable that stores the address of another variable. Unlike other variables that hold values of a certain type,
+  pointer holds the address of a variable. For example, an integer variable holds (or you can say stores) an integer value, however
+  an integer pointer holds the address of a integer variable.<br>
+  In C/C++ you are not limited to pointing to the address of a variable. You can also point to the starting address of a function.
+  Passing the addresses of variables or functions allows code which would normally be out of scope to have direct access to these
+  variables or functions.
+</p>
+<ul>
+  <li>Code that demonstrates the features and characteristics of pointers can be found at
+    <a href="Pointers/Pointers.c" target="_blank">Pointers.c</a>.</li>
+</ul>
+
+<p><em>Functions and Pointers</em></p>
+<p>Variables can be passed to a function through the function's list of parameters. The variables can be pass-by-value, where the function parameters
+  take on the values of the variables. Or the variables can be pass-by-address, where the function parameters point to the memory addresses of these
+  variables. If you want the function to change the values of any of these variable, those variables are pass-by-address.<br>
+  For instance, <b>printf()</b> takes variables that are pass-by-value, since none of those variables will be changed by <b>printf()</b>.<br>
+  However, <b>scanf()</b> takes variables that are pass-by-address, because <b>scanf()</b> will change the values of any of these variables passed to it.
+</p>
+<ul>
+  <li>Code that calculates the area of a circle by a function call with pass by address can be found at
+    <a href="Area/Area.c" target="_blank">Area.c</a>.</li>
+  <li>Code that swaps the values of two variables by a function call with pass by address can be found at
+    <a href="Swap/Swap.c" target="_blank">Swap.c</a>.</li>
+  <li>Code that finds the position of a letter in an array of characters by a function call with pass by address can be found at
+    <a href="LetterPosition/LetterPosition.c" target="_blank">LetterPosition.c</a>.</li>
+  <li>Code that finds the position of an integer in an array of integers by a function call with pass by address can be found at
+    <a href="numberPosition/numberPosition.c" target="_blank">numberPosition.c</a>.</li>
+</ul>

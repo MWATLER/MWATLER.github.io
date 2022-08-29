@@ -1,0 +1,89 @@
+<h1>Week 2 - Fundamental Types, References and Enumerations</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look at fundamental types, pointers, references, arrays, classes and scoped enumerations..</p>
+
+<h3>Videos</h3>
+<table>
+<!--<tr><td>Lecture Recording</td><td><a href="https://seneca.sharepoint.com/sites/BTP305Object-OrientedSoftwareDevelopmentUsingC/Shared%20Documents/General/Recordings/View%20Only/Meeting%20in%20_General_-20210913_114123-Meeting%20Recording.mp4?web=1" target="_blank">Monday, September 13 (mp4)</a></td></tr>
+  <tr><td>Lab Recording</td><td><a href="https://seneca.sharepoint.com/sites/BTP305Object-OrientedSoftwareDevelopmentUsingC/Shared%20Documents/General/Recordings/View%20Only/Meeting%20in%20_General_-20210914_085704-Meeting%20Recording.mp4?web=1" target="_blank">Tuesday, September 14 (mp4)</a></td></tr>-->  
+  <tr><td>Lecture Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lecture_20210913_Recording.mp4" target="_blank">Monday, September 13 (mp4)</a></td></tr>
+  <tr><td>Lab Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lab_20210914_Recording.mp4" target="_blank">Tuesday, September 14 (mp4)</a></td></tr>  
+  <tr><td>The void pointer</td><td><a href="https://www.youtube.com/watch?v=mOPYyqSkPO0" target="_blank">C++ POINTERS (2020) - What is a void pointer?</a></td></tr>
+  <tr><td>lvalues/rvalues</td><td><a href="https://www.youtube.com/watch?v=fbYknr-HPYE" target="_blank">lvalues and rvalues in C++</a></td></tr>
+  <tr><td>The Singleton</td><td><a href="https://www.youtube.com/watch?v=23xDn3ReH7E" target="_blank">CppCon 2016: Arno Lepisk “On using singletons in C++"</a></td></tr>
+  <tr><td>Move Assignment</td><td><a href="https://www.youtube.com/watch?v=zK8A4Ko53HY&t=103s" target="_blank">C++ 11 Move Semantics: Move Assignment Operator</a></td></tr>
+</table>
+
+<h3>Reference Material</h3>
+<ul>
+  <li>Chapters 7, 8 and 17 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapters 7 and 13 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+  <li>GeeksforGeeks article <a href="https://www.geeksforgeeks.org/structure-member-alignment-padding-and-data-packing/" target="_blank">Structure Member Alignment, Padding and Data Packing</a></li>
+</ul>
+
+<h3>Sample Code</h3>
+
+<p><em>The Void Pointer</em></p>
+<p>The following code demonstrates the use of the void pointer to pass variables of any type by value or by reference to a function:
+<ul>
+  <li>
+    <a href="VoidFunction/VoidFunction.cpp" target="_blank">VoidFunction.cpp</a>.
+  </li>
+</ul></p>
+
+<p><em>LValues and RValues</em></p>
+<p>The following code is a great exercise on lvalues and rvalues. It demonstrates that lvalues are variables with some kind of storage, and rvalues are 
+  temporary values. The concepts gained here are used in the move constructor and move assignment operator:
+  <ul>
+    <li><a href="LvalueRvalue/LValueRValue.cpp" target="_blank">LValueRValue.cpp</a>.</li>
+  </ul>
+</p>
+
+<p><em>The Series Circuit</em></p>
+<p>A series circuit consisting of capacitors, resistors, and inductors is used to demonstrate the move constructor and move assignment, along with the copy constructor and assignment. 
+  The code can be seen at:
+<ul>
+  <li>
+    <a href="SeriesCircuit/Capacitor.h" target="_blank">Capacitor.h</a>,
+    <a href="SeriesCircuit/Capacitor.cpp" target="_blank">Capacitor.cpp</a>,
+    <a href="SeriesCircuit/Inductor.h" target="_blank">Inductor.h</a>,
+    <a href="SeriesCircuit/Inductor.cpp" target="_blank">Inductor.cpp</a>,
+    <a href="SeriesCircuit/Resistor.h" target="_blank">Resistor.h</a>,
+    <a href="SeriesCircuit/Resistor.cpp" target="_blank">Resistor.cpp</a> and
+    <a href="SeriesCircuit/SeriesCircuit.cpp" target="_blank">SeriesCircuit.cpp</a>.
+  </li>
+</ul></p>
+
+<p><em>Employee Information</em></p>
+<p>This sample code makes use of a static class variable to keep track of how many objects of type EmployeeInfo have been created:
+<ul>
+  <li>
+    <a href="EmployeeInfo/EmployeeInfo.h" target="_blank">EmployeeInfo.h</a>,
+    <a href="EmployeeInfo/EmployeeInfo.cpp" target="_blank">EmployeeInfo.cpp</a> and
+    <a href="EmployeeInfo/EmployeeInfoMain.cpp" target="_blank">EmployeeInfoMain.cpp</a>.
+  </li>
+</ul></p>
+
+<p><em>A Database</em></p>
+<p>The following database code demonstrates the use of enumerations in reporting an error status for some function calls. It also employs some 
+  embedded logging for debug:
+<ul>
+  <li>
+    <a href="DataBase/Data.txt" target="_blank">Data.txt</a>,
+    <a href="DataBase/Database.h" target="_blank">Database.h</a>,
+    <a href="DataBase/Database.cpp" target="_blank">Database.cpp</a> and
+    <a href="DataBase/DatabaseMain.cpp" target="_blank">DatabaseMain.cpp</a>.
+  </li>
+</ul>
+The following code makes use of the Singleton design pattern to ensure there is only one instance of the database class. The code demonstrates 
+static class variables, static class functions, class enumerations, and embedded debug logging:
+<ul>
+  <li>
+    <a href="SingletonDataBase/Data.txt" target="_blank">Data.txt</a>,
+    <a href="SingletonDataBase/Database.h" target="_blank">Database.h</a>,
+    <a href="SingletonDataBase/Database.cpp" target="_blank">Database.cpp</a> and
+    <a href="SingletonDataBase/DatabaseMain.cpp" target="_blank">DatabaseMain.cpp</a>.
+  </li>
+</ul>
+</p>

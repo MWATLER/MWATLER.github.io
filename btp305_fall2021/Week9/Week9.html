@@ -1,0 +1,79 @@
+<h1>Week 9 - Raw Pointers and Smart Pointers</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look some more at pointers, and will introduce the smart pointer.</p>
+
+  <h3>Videos</h3>
+  <table>
+    <tr><td>Lecture Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lecture_20211108_Recording.mp4" target="_blank">Monday, November 8 (mp4)</a></td></tr>
+    <tr><td>Lab Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lab_20211109_Recording.mp4" target="_blank">Tuesday, November 9 (mp4)</a></td></tr>
+    <tr><td>Raw Pointers</td><td><a href="https://www.youtube.com/watch?v=DTxHyVn0ODg" target="_blank">POINTERS in C++</a></td></tr>
+    <tr><td>Smart Pointers</td><td><a href="https://www.youtube.com/watch?v=UOB7-B2MfwA&t=145s" target="_blank">SMART POINTERS in C++ (std::unique_ptr, std::shared_ptr, std::weak_ptr)</a></td></tr>
+    <tr><td></td><td><a href="https://www.youtube.com/watch?v=Zt0zUcDHi7I" target="_blank">C++ Smart Pointers - Do I really need them? When?</a></td></tr>
+    </table>
+  
+<h3>Reference Material</h3>
+<ul>
+  <li>Chapter 34 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapter 12 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+</ul>
+    
+<h3>Sample Code</h3>
+
+<p><em>Addressing</em></p>
+
+<p>Code that demonstrates printing the address of a variable using <b>cout</b> can be found at:
+  <a href="Addresses/Addresses.cpp" target="_blank">Addresses.cpp</a>.<br>
+  Code that demonstrates swapping the addresses of pointers can be found at:
+  <a href="AddressCopy/AddressCopy.cpp" target="_blank">AddressCopy.cpp</a>.
+</p>
+
+<p><em>The Smart Pointer</em></p>
+
+<p>A simple demonstration that shows the smart pointer class can be found at:<br>
+  <a href="SmartPtr/Title.h" target="_blank">Title.h</a>,
+  <a href="SmartPtr/SmartPtr.h" target="_blank">SmartPtr.h</a> and
+  <a href="SmartPtr/SmartPtr.cpp" target="_blank">SmartPtr.cpp</a>.<br>
+  Code that demonstrates how <b>unique_ptr</b> can prevent memory leaks can be found at:<br>
+  <a href="SmartPtr2/Title.h" target="_blank">Title.h</a> and
+  <a href="SmartPtr2/UniquePtr.cpp" target="_blank">UniquePtr.cpp</a>.<br>
+  Code that demonstrates the use of the <b>shared_ptr</b> can be found at:<br>
+  <a href="SharedPtr/Title.h" target="_blank">Title.h</a> and
+  <a href="SharedPtr/SharedPtr.cpp" target="_blank">SharedPtr.cpp</a>.
+</p>
+
+<p><em>The Stooge Factory</em></p>
+
+<p>Back in week 3 we looked at the Stooge factory as a demonstration of the factory design pattern. This time we will 
+  implement the Stooge factory using the <b>unique_ptr</b>. The Stooge factory creates a set of 
+  related objects through a static make_stooge() function. The program is based on the popular comedy "The Three Stooges".
+  The factory can create three stooges: Larry, Curly and Moe. They are tied together through a common base class. 
+  StoogeMain.cpp allows you to create whichever stooge you wish, up to three of them:<br>
+  <a href="StoogeFactory/Stooge.h" target="_blank">Stooge.h</a>,
+  <a href="StoogeFactory/Stooge.cpp" target="_blank">Stooge.cpp</a>,
+  <a href="StoogeFactory/Curly.h" target="_blank">Curly.h</a>,
+  <a href="StoogeFactory/Larry.h" target="_blank">Larry.h</a>,
+  <a href="StoogeFactory/Moe.h" target="_blank">Moe.h</a> and
+  <a href="StoogeFactory/StoogeMain.cpp" target="_blank">StoogeMain.cpp</a>.
+</p>
+
+<p><em>A Database</em></p>
+
+<p>Back in week 2 we looked at a Database which was created and used via the Singleton design pattern. This time we will implement 
+  the Singleton with a <b>shared_ptr</b>. The Singleton design pattern to ensure there is only one instance of the database class:<br>
+  <a href="SingletonDataBase/Data.txt" target="_blank">Data.txt</a>,
+  <a href="SingletonDataBase/Database.h" target="_blank">Database.h</a>,
+  <a href="SingletonDataBase/Database.cpp" target="_blank">Database.cpp</a> and
+  <a href="SingletonDataBase/DatabaseMain.cpp" target="_blank">DatabaseMain.cpp</a>.
+</p>
+
+<p><em>Library of Books (sample code for workshop 7)</em></p>
+
+<p>A library of books has been created to demonstrate some of the algorithms available to us with the STL. The algorithms demonstrated in this 
+  code are <b>std::transform</b>, <b>std::accumulate</b>, <b>std::sort</b>, and <b>std::foreach</b>. The library can sort the books according 
+  to the number of pages or according to the price. The library can sum the total number of pages. The library can print its entire contents. 
+  The library can convert prices from one currency to another (in this case, USD to CAD). The code should help with workshop 7. It can be seen at:<br>
+  <a href="LibraryBooks/LibraryBooks.h" target="_blank">LibraryBooks.h</a>, 
+  <a href="LibraryBooks/LibraryBooks.cpp" target="_blank">LibraryBooks.cpp</a> and 
+  <a href="LibraryBooks/LibraryMain.cpp" target="_blank">LibraryMain.cpp</a>.
+</p>
