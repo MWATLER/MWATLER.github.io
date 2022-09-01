@@ -1,0 +1,17 @@
+Here is one way of searching through your array of employees for a particular employee:
+
+int found=0;//the found flag
+int empId;//the employee's id
+int empIndex;//index into the array
+printf("Enter Employee ID: ");
+scanf("%d", &empId);
+int i;
+for (i = 0; (i < SIZE) && (found == 0); ++i) {
+	if (emp[i].id == empId) {
+		found = 1;
+		empIndex = i;
+	}
+}
+if (found == 0) printf("*** ERROR: Employee ID not found! ***\n");
+
+Keep in mind the variables found, empId, empIndex, and i will be used in many parts of the program so they are best declared just below main().

@@ -1,0 +1,27 @@
+struct Employee emp[SIZE];
+
+Enter initial data:
+index     id      age     salary
+emp[0]   222       22   22222.22
+emp[1]   333       33   33333.33
+emp[2]   444       44   44444.44
+emp[3]   555       55   55555.55
+   
+Change the salary of employee id 333:
+emp[0]   222       22   22222.22
+emp[1]   333       33   99999.99
+emp[2]   444       44   44444.44
+emp[3]   555       55   55555.55
+
+Remove employee id 333 (zero the id):
+emp[0]   222       22   22222.22
+emp[1]     0       33   99999.99
+emp[2]   444       44   44444.44
+emp[3]   555       55   55555.55
+
+Add employee id 666:
+emp[0]   222       22   22222.22
+emp[1]   666       66   66666.66
+emp[2]   444       44   44444.44
+emp[3]   555       55   55555.55   
+    

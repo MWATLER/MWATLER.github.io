@@ -1,0 +1,3 @@
+2;Light Jacket;95.89
+3;Long Pants;67.89
+2;Large Duster;45.98
