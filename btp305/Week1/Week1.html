@@ -1,0 +1,93 @@
+<h1>Week 1 - Introduction</h1>
+
+<h3>Introduction</h3>
+<p>This week will be an introduction to the course, including the schedule, the outline and grading.
+We will look at C++ building blocks as well as compilation and execution.</p>
+
+<h3>Videos</h3>
+<table>
+<!--<tr><td>Lecture Recording</td><td><a href="https://seneca.sharepoint.com/sites/BTP305Object-OrientedSoftwareDevelopmentUsingC/Shared%20Documents/General/Recordings/View%20Only/Meeting%20in%20_General_-20210907_085441-Meeting%20Recording.mp4?web=1" target="_blank">Tuesday, September 7 (mp4)</a></td></tr>-->
+  <tr><td>Lecture Recording</td><td><a href="https://ict.senecacollege.ca/~miguel.watler/courses/btp305/Lecture_20210907_Recording.mp4" target="_blank">Tuesday, September 7 (mp4)</a></td></tr>
+  <tr><td>Extern and Static Variables</td><td><a href="https://www.youtube.com/watch?v=hDfDnsvEodQ" target="_blank">C++ : Share variables between two separate files (extern and static)</a></td></tr>
+  <tr><td>Namespaces</td><td><a href="https://www.youtube.com/watch?v=TvMS45AQeC4" target="_blank">Introduction to C++ Namespace</a></td></tr>
+  <tr><td>The Pre-Processor</td><td><a href="https://www.youtube.com/watch?v=CLPzcFaA-Dk" target="_blank">C++ Tutorial 18: Preprocessor Directives</a></td></tr>
+</table>
+
+<h3>Reference Material</h3>
+<ul>
+  <li>Chapters 12, 14, 15 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapter 19 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+</ul>
+
+<h3>Sample Code</h3>
+<p><em>The Pre-Processor</em></p>
+<p>The preprocessor can be used to define constant variables, to define macros and also in conditional compilation. The following example shows all three. It is 
+  common to add debug to code. The following example shows embedded debug that prints debug to the screen based on whether debug has been defined and based on 
+  a debug severity code:
+<ul>
+  <li>
+    <a href="Preprocessor/Automobile.h" target="_blank">Automobile.h</a>,
+    <a href="Preprocessor/Automobile.cpp" target="_blank">Automobile.cpp</a> and
+    <a href="Preprocessor/TravelSimulator.cpp" target="_blank">TravelSimulator.cpp</a>.
+  </li>
+</ul></p>
+
+<h3>Sample Code</h3>
+<p><em>Extern</em></p>
+<p>An external variable is used in a .cpp file but was actually defined in another .cpp. file. The following example shows the variable <b>LVL</b> which is defined in TravelSimulator.cpp but 
+  also used in Automobile.cpp. <b>LVL</b> is obtained from the command line:
+<ul>
+  <a href="Extern/Automobile.h" target="_blank">Automobile.h</a>,
+  <a href="Extern/Automobile.cpp" target="_blank">Automobile.cpp</a> and
+  <a href="Extern/TravelSimulator.cpp" target="_blank">TravelSimulator.cpp</a>.
+</ul></p>
+
+<h3>Sample Code</h3>
+<p><em>Static Variables</em></p>
+<p>A static variable can be used in many ways. It can be used within a class (more later), within a function, or within a file. If used within a function, the static 
+  variable retains its value when the function exits. If used within a file, it ensures the scope of this variable is within this file only. Therefore could 
+  be two .cpp programs with the same variable name. If they are declared as static, the compiler will not complain about a redefinition error. THe following code 
+demonstrates the use of static variables.
+<ul>
+  <li>
+  <a href="Static/Cubed.h" target="_blank">Cubed.h</a>,
+  <a href="Static/Squared.h" target="_blank">Squared.h</a> and
+  <a href="Static/MathMain.cpp" target="_blank">MathMain.cpp</a>.</li>
+  <li>
+    <a href="Static2/Cubed.h" target="_blank">Cubed.h</a>,
+    <a href="Static2/Cubed.cpp" target="_blank">Cubed.cpp</a>,
+    <a href="Static2/Squared.h" target="_blank">Squared.h</a>,
+    <a href="Static2/Square.cpp" target="_blank">Square.cpp</a> and
+    <a href="Static2/MathMain.cpp" target="_blank">MathMain.cpp</a>.</li>
+  </ul></p>
+
+<h3>Sample Code</h3>
+<p><em>Namespace</em></p>
+<p>Instead of using static variables to ensure the scope of a variable name, one can enclose code within namespaces. The following code does so:
+<ul>
+  <li>
+    <a href="Namespace/Cubed.h" target="_blank">Cubed.h</a>,
+    <a href="Namespace/Cubed.cpp" target="_blank">Cubed.cpp</a>,
+    <a href="Namespace/Squared.h" target="_blank">Squared.h</a>,
+    <a href="Namespace/Square.cpp" target="_blank">Square.cpp</a> and
+    <a href="Namespace/MathMain.cpp" target="_blank">MathMain.cpp</a>.
+  </li>
+</ul></p>
+
+<h3>Sample Code</h3>
+<p><em>Review - Polymorphism</em></p>
+<p>For a review on polymorphism, see the following code:
+<ul>
+  <li><a href="PolymorphismReview/Geometry.cpp" target="_blank">Geometry.cpp</a>.</li>
+</ul></p>
+
+<h3>Sample Code</h3>
+<p><em>Review - Operator Overloading</em></p>
+<p>For a review on operator overloading, see the following code:
+<ul>
+  <li>
+    <a href="OperatorOverloadingReview/Player.h" target="_blank">Player.h</a>,
+    <a href="OperatorOverloadingReview/Player.cpp" target="_blank">Player.cpp</a> and
+    <a href="OperatorOverloadingReview/CardGame.cpp" target="_blank">CardGame.cpp</a>.
+  </li>
+</ul></p>
