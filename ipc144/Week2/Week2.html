@@ -1,70 +1,51 @@
-<h1>Week 2 - </h1>
+<h1>Week 2 - Types, Calculations, Expressions</h1>
 
 <h3>Introduction</h3>
-<p>.</p>
+<p>This week we study types, calculations and expressions. We will look at a program to retrieve and report on student information.</p>
 
 <h3>Videos</h3>
 <table>
+  <tr><td>Variables and Expressions</td><td><a href="https://www.youtube.com/watch?v=Rwtsx0BfLxk" target="_blank">C Programming Tutorial - Variables, Expressions, Statements</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=bDqRJq2l-Rw" target="_blank">Variables, Expressions & Comments in C</a></td></tr>
+  <tr><td>Computations</td><td><a href="https://www.youtube.com/watch?v=vvpDbhqPrww" target="_blank">Using Arithmetic Operators</a></td></tr>
 </table>
 
+<h3>Quiz</h3>
+<p>See <b>Quizzes</b> on Black Board.</p>
+
+<h3>Lecture Material</h3>
+<ul>
+  <li>Types, A Simple Calculation, Expressions, and Logic of <a href="https://intro2c.sdds.ca/" target="_blank">Introduction to C</a> by Seneca College</li>
+</ul>
+
 <h3>Sample Code</h3>
-<p><em></em></p>
-<p>:
-<ul>
-  <li>
-    <a href="" target="_blank"></a>,
-    <a href="" target="_blank"></a> and
-    <a href="" target="_blank"></a>.
-  </li>
-</ul></p>
 
-<p><em></em></p>
-<p>:
+<p><em>Computations</em></p>
 <ul>
-  <li>
-    <a href="" target="_blank"></a>,
-    <a href="" target="_blank"></a> and
-    <a href="" target="_blank"></a>.
-  </li>
-</ul></p>
+  <li>Code to store and display student information can be found at <a href="StudentInformation.c" target="_blank">StudentInformation.c</a>.</li>
+  <li>Be sure to add _CRT_SECURE_NO_WARNINGS to your preprocessor definitions. This warning occurs because of our use of scanf() in our standard input/output
+    library. Visual Studio prefers we use the C++ version. The preprocessor definitions can be found by right-clicking on
+    the project name, then on properties, then on C/C++ Preprocessor. Then click edit on Preprocessor Definitions, then add _CRT_SECURE_NO_WARNINGS.<br><br>
+    <image src="SolutionsExplorer.PNG"></image><br><br>
+    <image src="ThePreprocessor.PNG"></image></li>
+  <li>Another way around this problem is to simply add the following line at the top of your code.
+    For instance, the top of cashRegister2.c may look something like:<br>
+    //cashRegister2.c - Code for workshop 2 at-home portion<br><br>
+    //Miguel Watler<br>
+    //miguel.watler@senecacollege.ca<br>
+    //1234567890<br><br>
+    <b>#define _CRT_SECURE_NO_WARNINGS</b><br>
+    #include &#60;stdio.h&#62;<br><br>
+    int main(void)<br>
+    Etc...</li>
+  <li>The best way to deal with this is use the safe versions of these functions, such as <b>scanf_s()</b>.</li>
+  <li>Code to store and display student information including the student's average mark can be found at <a href="StudentAverageMark.c" target="_blank">StudentAverageMark.c</a>.</li>
+  <li>More code for demonstrating calculations: <a href="Calculations.c" target="_blank">Calculations.c</a>.</li>
+</ul>
 
-<p><em></em></p>
-<p>:
-<ul>
-  <li>
-    <a href="" target="_blank"></a>,
-    <a href="" target="_blank"></a> and
-    <a href="" target="_blank"></a>.
-  </li>
-</ul></p>
-
-<p><em></em></p>
-<p>:
-<ul>
-  <li>
-    <a href="" target="_blank"></a>,
-    <a href="" target="_blank"></a> and
-    <a href="" target="_blank"></a>.
-  </li>
-</ul></p>
-
-<p><em></em></p>
-<p>:
-<ul>
-  <li>
-    <a href="" target="_blank"></a>,
-    <a href="" target="_blank"></a> and
-    <a href="" target="_blank"></a>.
-  </li>
-</ul></p>
-
-<p><em></em></p>
-<p>:
-<ul>
-  <li>
-    <a href="" target="_blank"></a>,
-    <a href="" target="_blank"></a> and
-    <a href="" target="_blank"></a>.
-  </li>
-</ul></p>
-
+<p><em>Types</em></p>
+<li>Code that illustrates signed/unsigned variables and demonstrates the limits of integers, floats, and double floats: <a href="Types.c" target="_blank">Types.c</a>.</li>
+<li>The following picture demonstrates the number 1 and -1 in binary: <a href="SignedUnsigned.JPG" target="_blank">SignedUnsigned.JPG</a></li>
+<li>Code that demonstrates logical and relational expressions: <a href="Expressions.c" target="_blank">Expressions.c</a>.</li>
+<li>The following picture demonstrates a relational expression: <a href="RelationalExpressions.JPG" target="_blank">RelationalExpressions.JPG</a>
+</li>
