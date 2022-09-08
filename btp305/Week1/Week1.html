@@ -37,8 +37,8 @@ We will look at C++ building blocks as well as compilation and execution.</p>
 <h3>Sample Code</h3>
 <p><em>Static Variables</em></p>
 <p>A static variable can be used in many ways. It can be used within a class (more later), within a function, or within a file. If used within a function, the static 
-  variable retains its value when the function exits. If used within a file, it ensures the scope of this variable is within this file only. Therefore could 
-  be two .cpp programs with the same variable name. If they are declared as static, the compiler will not complain about a redefinition error. THe following code 
+  variable retains its value when the function exits. If used within a file, it ensures the scope of this variable is within this file only. Therefore there could 
+  be two .cpp programs with the same variable name. If they are declared as static, the compiler will not complain about a redefinition error. The following code 
 demonstrates the use of static variables.
 <ul>
   <li>
@@ -83,3 +83,41 @@ demonstrates the use of static variables.
     <a href="OperatorOverloadingReview/CardGame.cpp" target="_blank">CardGame.cpp</a>.
   </li>
 </ul></p>
+
+
+<h3>Extra Sample Code in Lieu of Workshop 1</h3>
+
+<p><em>Stack</em></p>
+<p>An example of a container adapter is the <b>stack</b>. A practical application of a <b>stack</b> is when a function is called. All parameters are put on the <b>stack</b>, 
+  and popped off once the function has been exited. The following code shows a simple implementation of a <b>stack</b>:<br>
+<a href="Stack/Stack.cpp" target="_blank">Stack.cpp</a>.</p>
+
+<p><em>Queues</em></p>
+<p>A <b>queue</b> is another example of a container adapter. A practical application of a <b>queue</b> is in threaded applications (parallel programming). One thread 
+  receives and pushes data on to the <b>queue</b> while another thread pops the data off the <b>queue</b> for processing. This allows the receive and process functions 
+  to be split into two parts. The following are two simple examples of a <b>queue</b>:<br>
+<a href="Queue/Queue.cpp" target="_blank">Queue.cpp</a> and <a href="Queue2/Queue2.cpp" target="_blank">Queue2.cpp</a>.</p>
+
+<p><em>Employee Info - vectors</em></p>
+<p>Another example of a sequence container is the <b>vector</b>. A <b>vector</b> is very useful in a situation where you have an array of elements, but you 
+  do not know the size of the array at runtime, or the array grows or shrinks as the program is run. A vector is a useful alternative to dynamic memory allocation. 
+  An example with a <b>vector</b> is the following code that stores and uses a <b>vector</b> of employee information:<br>
+<a href="EmployeeInfoSTL/EmployeeInfoSTL.h" target="_blank">EmployeeInfoSTL.h</a>, 
+<a href="EmployeeInfoSTL/EmployeeInfoSTL.cpp" target="_blank">EmployeeInfoSTL.cpp</a> and
+ <a href="EmployeeInfoSTL/EmployeeInfoSTLMain.cpp" target="_blank">EmployeeInfoSTLMain.cpp</a>.</p>
+ 
+<p><em>Employee Info - lists</em></p>
+<p>The above example is repeated using a <b>list</b> instead of a <b>vector</b>:<br>
+<a href="EmployeeInfoSTL2/EmployeeInfoSTL.h" target="_blank">EmployeeInfoSTL.h</a>, 
+<a href="EmployeeInfoSTL2/EmployeeInfoSTL.cpp" target="_blank">EmployeeInfoSTL.cpp</a> and
+<a href="EmployeeInfoSTL2/EmployeeInfoSTLMain.cpp" target="_blank">EmployeeInfoSTLMain.cpp</a>.</p>
+
+<p><em>Smart Pointers</em></p>
+<p>A custom smart pointer has been built to demonstrate the internal workings of a smart pointer. The code for a custom smart 
+  pointer can be found at:<br>
+  <a href="SmartPtr/Title.h" target="_blank">Title.h</a>,
+  <a href="SmartPtr/SmartPtr.h" target="_blank">SmartPtr.h</a> and
+  <a href="SmartPtr/SmartPtr.cpp" target="_blank">SmartPtr.cpp</a>.<br>
+  Code that makes use of C++'s smart pointer <b>unique_ptr</b> to prevent memory leaks can be seen at:<br>
+  <a href="SmartPtr2/Title.h" target="_blank">Title.h</a> and
+  <a href="SmartPtr2/UniquePtr.cpp" target="_blank">UniquePtr.cpp</a>.<br>

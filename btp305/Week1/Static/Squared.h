@@ -5,8 +5,6 @@
 
 #include <iostream>
 
-static int numCalled = 0;
-
 template<typename T>
 T squared(T number) {
 	static int numCalled = 0;
