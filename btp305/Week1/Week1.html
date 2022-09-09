@@ -87,6 +87,15 @@ demonstrates the use of static variables.
 
 <h3>Extra Sample Code in Lieu of Workshop 1</h3>
 
+<p><em>The Standard Template Library</em></p>
+<p>The Standard Template Library (STL) is widely used in industry. The Standard Template Library (STL) is a 
+  set of C++ template classes to provide common programming data structures and functions such as lists, stacks, 
+  arrays, etc. It is a library of container classes, algorithms, and iterators. It is a generalized library 
+  and so, its components are parameterized.<br>
+
+<a href="https://cs.smu.ca/~porter/csc/ref/stl/containers_summary.html" target="_blank">STL Container and Container Adaptor Classes: A Summary</a><br>
+<a href="https://www.cplusplus.com/reference/stl/" target="_blank">Standard Containers</a></p>
+
 <p><em>Stack</em></p>
 <p>An example of a container adapter is the <b>stack</b>. A practical application of a <b>stack</b> is when a function is called. All parameters are put on the <b>stack</b>, 
   and popped off once the function has been exited. The following code shows a simple implementation of a <b>stack</b>:<br>
@@ -95,8 +104,8 @@ demonstrates the use of static variables.
 <p><em>Queues</em></p>
 <p>A <b>queue</b> is another example of a container adapter. A practical application of a <b>queue</b> is in threaded applications (parallel programming). One thread 
   receives and pushes data on to the <b>queue</b> while another thread pops the data off the <b>queue</b> for processing. This allows the receive and process functions 
-  to be split into two parts. The following are two simple examples of a <b>queue</b>:<br>
-<a href="Queue/Queue.cpp" target="_blank">Queue.cpp</a> and <a href="Queue2/Queue2.cpp" target="_blank">Queue2.cpp</a>.</p>
+  to be split into two parts. The following is a simple examples of a <b>queue</b>:<br>
+<a href="Queue/Queue.cpp" target="_blank">Queue.cpp</a>.</p>
 
 <p><em>Employee Info - vectors</em></p>
 <p>Another example of a sequence container is the <b>vector</b>. A <b>vector</b> is very useful in a situation where you have an array of elements, but you 
@@ -113,6 +122,14 @@ demonstrates the use of static variables.
 <a href="EmployeeInfoSTL2/EmployeeInfoSTLMain.cpp" target="_blank">EmployeeInfoSTLMain.cpp</a>.</p>
 
 <p><em>Smart Pointers</em></p>
+
+<p>A smart pointer is an abstract data type that simulates a pointer while providing added features, such as automatic memory 
+  management or bounds checking. Such features are intended to reduce bugs caused by the misuse of pointers, while retaining 
+  efficiency. Smart pointers typically keep track of the memory they point to, and may also be used to manage other resources, 
+  such as network connections and file handles. Smart pointers were first popularized in the programming language C++ during the 
+  first half of the 1990s as rebuttal to criticisms of C++'s lack of automatic garbage collection.<br>
+<a href="https://en.cppreference.com/book/intro/smart_pointers" target="_blank">Smart Pointers</a> (cppreference.com)</p>
+  
 <p>A custom smart pointer has been built to demonstrate the internal workings of a smart pointer. The code for a custom smart 
   pointer can be found at:<br>
   <a href="SmartPtr/Title.h" target="_blank">Title.h</a>,
