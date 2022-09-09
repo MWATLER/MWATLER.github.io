@@ -20,3 +20,167 @@
 <ul>
   <li><a href="Software_Architect's_Handbook_CH3_Understanding_the_Domain.pdf" target="_blank">Software Architect's Handbook Chapter 3</a>, Understanding the Domain</li>
 </ul>
+
+<h2>Developing Business Acumen</h2>
+
+<p>While being a software architect requires in-depth technical knowledge, to be successful in
+  the role also requires a thorough understanding of your organization's business. In order to
+  design an appropriate architecture, you need to have knowledge of the business problems
+  you are trying to solve and the business opportunities your organization is seeking to
+  exploit.</p>
+
+<p>When designing a software architecture, in order to ensure that the solution is an
+  appropriate one, you must consider the goals of the business, the users, and the software
+  system:<br>
+  <image src="BusinessUserSystem.jpg" alt="Business, Users, Software"></image>
+</p>
+
+<h3>Familiarity with Business Topics</h3>
+
+<p>Software architects need to interact with a variety of
+  stakeholders, and understanding the language of business will ensure that you have a
+  common understanding with them.</p>
+
+<p>Business decisions will be made based on things like return on investment (ROI) calculations for the
+  software project and cost-effectiveness analysis of different approaches. Return on investment, or ROI, 
+  is a mathematical formula that investors can use to evaluate their investments and judge how well a 
+  particular investment has performed compared to others. There are multiple methods for calculating ROI. 
+  The most common is net income divided by the total cost of the investment, or<br>
+  <b>ROI = 100% x Net income / Cost of investment</b><br><br>
+  Another possible method to calculate ROI is investment gain divided by investment base, or <br>
+  <b>ROI = 100% x Investment gain / Investment base</b><br><br>
+  For more information, see <a href="https://www.techtarget.com/searchcio/definition/ROI" target="_blank">ROI (return on investment)</a>.<br><br>
+<b>QUESTION: When calculating return on investment, should time be taken into consideration?</b>
+</p>
+
+<h3>Understanding your Organization's Business</h3>
+
+<p>Once you have some general business knowledge, you will want to gain a good
+  understanding of your organization's business. A good starting point is to gain an understanding of your organization's products and
+  services, and the value they provide to their customers. You should learn about the market that your organization operates in and 
+  its trends. It is prudent to become familiar with your organization's competitors. You should seek out
+  answers to questions such as:
+<ul>
+  <li>What do your competitors do differently?</li>
+  <li>What do they do that is similar?</li>
+  <li>What are the strengths and weaknesses of your competitors?</li>
+</ul>
+<b>QUESTION: It is the year 2005. Compare Blackberry's approach to the cellular phone with that of Apple.</b>
+</p>
+
+<h3>Domain-Driven Design</h3>
+<p>Understanding the domain of your software application is part of what is necessary to
+  discover the appropriate architecture for any solutions you need to develop. The domain is
+  the subject and body of knowledge on which the software will be applied. DDD is particularly 
+  useful for large software applications that have complex and sizable models. DDD helps you to 
+  solve complex problems.</p>
+
+<h4>Ubiquitous Language</h4>
+<p>The development team may not have a strong understanding of the domain, and may not
+  be familiar with terms and concepts used by stakeholders, including the domain experts.
+  They may use their own language when discussing the functionality and discuss the
+  domain in terms of their technical design. The stakeholders, including the domain experts,
+  will use their own jargon when discussing their domain, and may not have a good
+  understanding of technical terms. Because different people may use different language to
+  describe the same concepts in a particular domain, it can take longer to communicate ideas,
+  and it can lead to misunderstandings. In order to mitigate these types of risks, ubiquitous
+  language is a common language among all team members and stakeholders based on the
+  domain model:<br>
+<image src="UbiquitousLanguage.jpg" alt="Ubiquitous Language"></image><br><br>
+Although it takes effort, once you have a ubiquitous language, it simplifies communication
+and leads to a greater understanding among everyone involved with the project. The
+ubiquitous language should be used during <b>discussions</b> and in all of the project artifacts
+such as <b>documentation</b>, <b>diagrams</b>, <b>code</b>, and <b>tests</b>.<br>
+<b>QUESTION: You have received a generous birthday gift from a wealthy relative and you are going 
+  to the bank to invest it. Your financial advisor starts using terms such as deposit advance loan,
+  accelerated depreciation, accretion, weighted-average coupon... How does this make you feel?</b>
+</p>
+  
+<h4>Entities, Value Object, and Aggregates</h4>
+<p>Some of the basic building blocks of DDD are entities, value objects, and aggregates. When
+  modeling them, the ubiquitous language should be used.</p>
+  
+<p><b>Entities</b> are objects that are defined by their identity and not their attributes. They are
+  mutable because the values of their attributes can change without changing their identity. If
+  two objects have the same values for their attributes, other than their unique identifier, they
+  are not considered equal.
+  For example, if you had two <b>Person</b> objects with the same first and last name values for
+  those corresponding attributes, they are still two different objects because they have
+  different identities. This also means that a value for an attribute such as last name can be
+  changed on a <b>Person</b> object and it still represents the same person.</p>
+  
+<p>Unlike entities, <b>value objects</b> are objects that describe some characteristic or attribute, but
+  have no concept of identity. They are defined by the values of their attributes and are
+  immutable. If two objects have the same values assigned to their properties, they can be
+  considered equal.
+  For example, if two objects that represent points on a graph using Cartesian coordinates
+  have the same <b>x</b> and <b>y</b> values, they can be considered equal and would be modeled as a
+  value object.</p>
+  
+<p><b>Aggregates</b> are groupings of entities and value objects that are treated as a single unit. A
+  boundary is defined that groups them together. Without aggregates, complicated domain
+  models can become unwieldy to manage, as the many entities and their dependencies grow
+  large in number. Retrieving and saving an entity and all of its dependent objects can
+  become difficult and error-prone.
+  An example of an aggregate is an order object that contains an address object and a
+  collection of line item objects. The address object and the collection of line item objects are
+  all separate objects, but they are treated as a single unit for data retrieval and changes.</p>
+  
+<h4>Subdomains</h4>
+<p>One practice of DDD is to separate the domain model into multiple subdomains. While a
+  domain is the entire problem space that the software solution is being developed for, a
+  subdomain is a partitioned piece of the overall domain. Dividing your
+  domain into subdomains provides more of a divide and conquer approach. For example, in a 
+  student information system, you may have subdomains for contact
+  management, admissions, financial aid, student accounts, and academics, among others.</p>
+  
+<p>One or more of the subdomains may be designated as a core domain, which is typically the
+  part of the domain that is fundamental to the organization. If there is a part of the domain
+  that differentiates the organization from competitors, it is probably one of the core
+  domains. Core domains are the reason that the software is worth writing, rather than
+  buying existing software off the shelf or outsourcing the work.
+  The domain experts on the project can help with identifying the core domains, as well as
+  the division of domains into subdomains.</p>
+
+<h4>Bounded Contexts</h4>
+<p><b>Bounded contexts</b> are a pattern in DDD that represent partitions in the domain model.
+  Similar to subdomains, which are partitions in the domain, bounded contexts are partitions
+  in the domain model. As is the case with subdomains, creating partitions and boundaries
+  reduces the overall complexity.</p>
+ 
+<p>For example, if we were creating a software system for a business that sells clothing online,
+  we might allow customers to sign up for a newsletter that contains deals and discounts.
+  Another part of the application would allow customers to place orders and provide
+  payment information.
+  With these two pieces of functionality, some concepts are shared, while some are not. If
+  different development teams, or different developers on a single team, are working on
+  these two sets of functionality, it is not clear what overlap, if any, exists. 
+  In this example, we could create one bounded context for marketing (<b>Marketing Context</b>),
+  and one for order processing (<b>Order Processing Context</b>). Each bounded context may have
+  entities that are unique to itself. For example, the <b>Order Processing Context</b> has the concept
+  of an order line item, whereas the <b>Contact Management Context</b> does not. However, both
+  bounded contexts have the concept of a <b>Customer</b>.<br>
+<image src="BoundedContext.jpg" alt="Bounded Context"></image></p>
+<p>In the context of marketing, all that may be required for a Customer entity is an identity
+(unique identifier), first name, last name, and email address. However, in the context of
+placing an order, the Customer entity would require additional information, such as a
+shipping address and payment information.</p>
+  
+<p>You could create one Customer entity, but using it for different contexts adds complexity
+  and can lead to inconsistencies. Validation that requires payment information only applies
+  in the Order Processing Context, and not the Marketing Context. The behavior required
+  for a Customer in the Order Processing Context should not prevent a Customer from
+  being created in the Marketing Context, where only the first name, last name, and email
+  address are required.</p>
+
+<p>The <b>single responsibility principle (SRP)</b> states that
+  each class should be responsible for a single aspect of the functionality. The
+  Customer entity is still small now, but you can begin to see how it could grow quickly. If it
+  were to be used in multiple contexts, it would attempt to fulfill too many disparate
+  responsibilities and break the SRP.</p>
+<p>The context for each model should be clearly defined and there should be an explicit
+  boundary between bounded contexts. They are created so that everyone on the team, or
+  across multiple teams, can have the same understanding of what belongs in each context.
+  While the example used is a simplistic one, a large domain model will have many entities
+  and contexts, and it usually isn't immediately clear what is unique or common across
+  different contexts, and how each context should interact with each other.</p>
