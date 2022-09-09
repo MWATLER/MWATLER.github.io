@@ -14,6 +14,8 @@ class EmployeeInfoSTL {
 	std::string name;
 	std::string position;
 	double salary;
+//	EmployeeInfoSTL* next;
+//	EmployeeInfoSTL* prev;
 public:
 	static int numEmployees;
 	static double runningTotal;

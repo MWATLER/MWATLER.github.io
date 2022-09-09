@@ -4,9 +4,9 @@ template <typename T>
 class SmartPtr {
     T* p{ nullptr };
 public:
-    SmartPtr(T* ptr) : p(ptr) { };
+    SmartPtr(T* ptr) : p(ptr) { };//SmartPtr<Title> t(new Title(s));
     ~SmartPtr() {
-        delete p;
+        delete p;//deletes the Title object
 		p = nullptr;//even better
     }
     T& operator*() {
