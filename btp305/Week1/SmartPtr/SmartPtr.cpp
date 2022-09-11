@@ -9,6 +9,7 @@ void display(const char* s) {
     SmartPtr<Title> t(new Title(s));//The SmartPtr is removed once the function is out of scope
 
     t->display();
+//  delete t;
 }
 
 int main() {

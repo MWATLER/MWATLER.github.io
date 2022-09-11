@@ -1,6 +1,6 @@
 //EmployeeInfoMain.cpp - main program for employee information
 
-#include <queue>
+#include <vector>
 #include "EmployeeInfoSTL.h"
 
 using namespace std;
@@ -9,8 +9,8 @@ int main() {
 	EmployeeInfoSTL empl1("Sarah Smith", "Chief Financial Officer", 212000.00);
 	EmployeeInfoSTL empl2("Michal Dabrowski", "Software Developer", 90000.00);
 	EmployeeInfoSTL empl3("Jessica Lee", "Design Engineer", 92000.00);
-	vector<EmployeeInfoSTL> empl;
 
+	vector<EmployeeInfoSTL> empl;
 	empl.push_back(empl1);
 	empl.push_back(empl2);
 	empl.push_back(empl3);
