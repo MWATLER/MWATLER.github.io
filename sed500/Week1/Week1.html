@@ -19,6 +19,8 @@
 <h3>Lecture Material</h3>
 <ul>
   <li><a href="Software_Architect's_Handbook_CH3_Understanding_the_Domain.pdf" target="_blank">Software Architect's Handbook Chapter 3</a>, Understanding the Domain</li>
+  <li><a href="https://builtin.com/expert-contributors/successful-tech-companies" target="_blank">12 Common Traits of the Tech Industry's Most Successful Companies</a></li>
+  <li><a href="https://techaeris.com/2020/03/17/7-things-that-successful-tech-companies-have-in-common/" target="_blank">7 things that successful tech companies have in common</a></li>
 </ul>
 
 <h2>Developing Business Acumen</h2>
@@ -96,56 +98,10 @@ such as <b>documentation</b>, <b>diagrams</b>, <b>code</b>, and <b>tests</b>.<br
   accelerated depreciation, accretion, weighted-average coupon... How does this make you feel?</b>
 </p>
   
-<h4>Entities, Value Object, and Aggregates</h4>
-<p>Some of the basic building blocks of DDD are entities, value objects, and aggregates. When
-  modeling them, the ubiquitous language should be used.</p>
-  
-<p><b>Entities</b> are objects that are defined by their identity and not their attributes. They are
-  mutable because the values of their attributes can change without changing their identity. If
-  two objects have the same values for their attributes, other than their unique identifier, they
-  are not considered equal.
-  For example, if you had two <b>Person</b> objects with the same first and last name values for
-  those corresponding attributes, they are still two different objects because they have
-  different identities. This also means that a value for an attribute such as last name can be
-  changed on a <b>Person</b> object and it still represents the same person.</p>
-  
-<p>Unlike entities, <b>value objects</b> are objects that describe some characteristic or attribute, but
-  have no concept of identity. They are defined by the values of their attributes and are
-  immutable. If two objects have the same values assigned to their properties, they can be
-  considered equal.
-  For example, if two objects that represent points on a graph using Cartesian coordinates
-  have the same <b>x</b> and <b>y</b> values, they can be considered equal and would be modeled as a
-  value object.</p>
-  
-<p><b>Aggregates</b> are groupings of entities and value objects that are treated as a single unit. A
-  boundary is defined that groups them together. Without aggregates, complicated domain
-  models can become unwieldy to manage, as the many entities and their dependencies grow
-  large in number. Retrieving and saving an entity and all of its dependent objects can
-  become difficult and error-prone.
-  An example of an aggregate is an order object that contains an address object and a
-  collection of line item objects. The address object and the collection of line item objects are
-  all separate objects, but they are treated as a single unit for data retrieval and changes.</p>
-  
-<h4>Subdomains</h4>
-<p>One practice of DDD is to separate the domain model into multiple subdomains. While a
-  domain is the entire problem space that the software solution is being developed for, a
-  subdomain is a partitioned piece of the overall domain. Dividing your
-  domain into subdomains provides more of a divide and conquer approach. For example, in a 
-  student information system, you may have subdomains for contact
-  management, admissions, financial aid, student accounts, and academics, among others.</p>
-  
-<p>One or more of the subdomains may be designated as a core domain, which is typically the
-  part of the domain that is fundamental to the organization. If there is a part of the domain
-  that differentiates the organization from competitors, it is probably one of the core
-  domains. Core domains are the reason that the software is worth writing, rather than
-  buying existing software off the shelf or outsourcing the work.
-  The domain experts on the project can help with identifying the core domains, as well as
-  the division of domains into subdomains.</p>
 
 <h4>Bounded Contexts</h4>
 <p><b>Bounded contexts</b> are a pattern in DDD that represent partitions in the domain model.
-  Similar to subdomains, which are partitions in the domain, bounded contexts are partitions
-  in the domain model. As is the case with subdomains, creating partitions and boundaries
+  Bounded contexts are partitions in the domain model. Creating partitions and boundaries
   reduces the overall complexity.</p>
  
 <p>For example, if we were creating a software system for a business that sells clothing online,
@@ -161,26 +117,113 @@ such as <b>documentation</b>, <b>diagrams</b>, <b>code</b>, and <b>tests</b>.<br
   of an order line item, whereas the <b>Contact Management Context</b> does not. However, both
   bounded contexts have the concept of a <b>Customer</b>.<br>
 <image src="BoundedContext.jpg" alt="Bounded Context"></image></p>
+
 <p>In the context of marketing, all that may be required for a Customer entity is an identity
 (unique identifier), first name, last name, and email address. However, in the context of
 placing an order, the Customer entity would require additional information, such as a
-shipping address and payment information.</p>
-  
-<p>You could create one Customer entity, but using it for different contexts adds complexity
-  and can lead to inconsistencies. Validation that requires payment information only applies
-  in the Order Processing Context, and not the Marketing Context. The behavior required
-  for a Customer in the Order Processing Context should not prevent a Customer from
-  being created in the Marketing Context, where only the first name, last name, and email
-  address are required.</p>
+shipping address and payment information.</p><br><br>
 
-<p>The <b>single responsibility principle (SRP)</b> states that
-  each class should be responsible for a single aspect of the functionality. The
-  Customer entity is still small now, but you can begin to see how it could grow quickly. If it
-  were to be used in multiple contexts, it would attempt to fulfill too many disparate
-  responsibilities and break the SRP.</p>
-<p>The context for each model should be clearly defined and there should be an explicit
-  boundary between bounded contexts. They are created so that everyone on the team, or
-  across multiple teams, can have the same understanding of what belongs in each context.
-  While the example used is a simplistic one, a large domain model will have many entities
-  and contexts, and it usually isn't immediately clear what is unique or common across
-  different contexts, and how each context should interact with each other.</p>
+<h3>Common Traits of Successful Software Companies</h3>
+
+<p>The following list is taken from
+  <li><a href="https://builtin.com/expert-contributors/successful-tech-companies" target="_blank">12 Common Traits of the Tech Industry's Most Successful Companies</a></li>
+  <li><a href="https://techaeris.com/2020/03/17/7-things-that-successful-tech-companies-have-in-common/" target="_blank">7 things that successful tech companies have in common</a></li>
+</p>
+
+<h4>1. They Start Small</h4>
+<p>
+  Successful companies start by doing one thing better than everyone else. No one can expect you to do everything, so why 
+  should you? Starting with a singular and specific focus not only helps you develop your business, but it also makes you stand out.
+</p>
+
+<h4>2. They Take Care of Their Employees</h4>
+<p>
+The most successful tech companies take care of their employees. They have organizational systems implemented that help employees stay 
+accountable and also empower them to take ownership of their work. One trend you'll find across many successful businesses is employee 
+stock ownership plans or <b>ESOPs</b>. An <b>ESOP</b> helps companies in several ways, from funding to employee benefits. With an ESOP, employees 
+own shares in their company. This plan encourages hard work and innovation because when the business does well, the employees will do well too.
+</p>
+
+<h4>3. They Gather Customer Feedback</h4>
+<p>
+  Successful tech companies all tend to spend a lot of time gathering feedback from their customers. This process is pivotal to their 
+  success because it helps them learn more about the goals and pain points of their audience. The best tech companies focus on the user above 
+  all else. Instead of finding customers who want a product or service, they make a product or service that customers want. Better yet, they 
+  produce something you didn't know you wanted.
+</p>
+
+<h4>4. They Provide Stellar Customer Service</h4>
+<p>
+  Although tech companies are constantly working to improve their software, it's important that there are real people for customers to give their 
+  feedback to. Customers will remember the service they received, so customer service reputation can make or break your company. 
+</p>
+
+<h4>5. They Have a Customer-Centric Approach</h4>
+<p>
+  Most successful companies adopt a customer-centric approach. For them, business is all about keeping their customers happy, so they do 
+  their best to make that happen. This approach can be in terms of offering quality products and services, providing top-notch customer 
+  support, or anything else that makes their customers happy.  
+</p>
+
+<h4>6. They Make a Platform, Not Just a Product</h4>
+<p>
+  The internet has changed the way many businesses operate. In the online age, the most successful companies are those that make a <b>platform</b>, 
+  not just a product. When you think about tech giants like Amazon, Facebook and Google, you think of their <b>platform</b>, not the goods available 
+  on that <b>platform</b>. What is a <b>platform</b> exactly? It's a business model that connects users — both producers and consumers — in a single 
+  space where they can communicate. By creating a connected community, you allow your users to increase the value of your company.
+</p>
+
+<h4>7. Their Values Resonate With Users</h4>
+<p>
+  An important feature of great tech companies is that they resonate with their users' core values. Think of Apple and its focus on innovation and 
+  being different. The company has a passionate customer base that responds to those values and consequently advocates for it and is ready to 
+  pick up every new product that launches.  
+</p>
+
+<h4>8. Authenticity/ Branding</h4>
+
+<p>Tech giants all have distinct personalities that seep into every aspect of their business. Every company has a different character, but they are 
+  all consistent in that character. Branding is crucial, and perhaps the most critical part of branding is authenticity. The greatest companies are 
+  true to themselves. You can pick them out in a crowd because they're not trying to be like everyone else. They're focused on being themselves.
+  Google is fun and colorful, while Apple is clean-cut and futuristic. These companies have a deep understanding of their essence, and they show 
+  it in every part of their brand. A consistent image promotes authenticity, which makes you stand out and attract customers.
+</p>
+
+<h4>9. They Lead, Not Follow</h4>
+<p>
+  Successful tech companies take the lead in their industry and don't wait for trends to blow up before diving into them. They do their research 
+  so that they stay ahead of their competitors and can take advantage of newfound interests from customers as they arise.  
+  You may think that tech companies gain success by jumping onto trends quickly, but that's not entirely true. Early trend adoption can be helpful, 
+  but the most successful brands are those that start trends instead of following them. They look at their competition not to see how they can mimic 
+  them, but for how they can do something better.
+</p>
+
+<h4>10. They Keep Up With the Latest Tech</h4>
+<p>
+  Although this may sound obvious, it may be more difficult in practice. One can stay on the cutting edge by reading the latest research reports, 
+  such as Thoughtworks Technology Radar. Each team member can be assigned an area of technology to study and share at weekly meetings. 
+</p>
+
+<h4>11. They Are Adaptable</h4>
+<p>
+  Tech companies are usually flexible and know how to adapt because that's what technology is all about. It changes with time, and all these 
+  companies have to do is listen and adapt to the change, making sure that their service or products are all beneficial to their customers no 
+  matter the circumstance. You've probably noticed that Facebook today doesn't look anything like Facebook did 10 years ago. Advancements 
+  happen on an exponential scale. Things change and improve at a faster rate now than they have for all of human history. Companies that don't 
+  adapt to change will fall behind.
+</p>
+
+<h4>12. They Have Good Internal Communication</h4>
+<p>
+  Good internal communication is a difficult thing to accomplish that successful tech companies manage to do well. There is always a healthy 
+  conflict between the marketing team (who is talking to users) and the product team (who is building the technology). Having a liaison who 
+  can go between these departments is critical. Marketing rarely understands developer timelines, and developers rarely understand marketing 
+  priorities. 
+</p>
+
+<h4>13. They Provide Simple Solutions</h4>
+<p>
+  Successful tech companies help customers achieve their goals in the simplest way possible. If you run a tech company, assume that your 
+  audience has minimal skills when it comes to working with a certain tool or technology. Find ways to reduce the steps people take or 
+  create ways to automate their work. People will prefer products that make their lives easier.   
+</p>
