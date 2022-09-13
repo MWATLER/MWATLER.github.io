@@ -21,3 +21,154 @@
   <li><a href="Beginning_Software_Engineering_CH4_REQUIREMENT_GATHERING.pdf" target="_blank">Beginning Software Engineering Chapter 4</a>, Requirements Gathering</li>
   <li><a href="Software_Architect's_Handbook_CH3_Understanding_the_Domain.pdf" target="_blank">Software Architect's Handbook Chapter 3</a>, Understanding the Domain</li>
 </ul>
+
+<h3>Requirements Defined</h3>
+
+<p>Requirements are the features that your application must provide. At the beginning of the project,
+  you gather requirements from the customers to fi gure out what you need to build. Throughout
+  development, you use the requirements to guide development and ensure that you're heading in
+  the right direction. At the end of the project, you use the requirements to verify that the fi nished
+  application actually does what it's supposed to do.</p>
+
+<h4>Clear</h4>
+<p>Good requirements are clear, concise, and easy to understand. That means they can't be pumped
+  full of management-speak, florid prose, and confusing jargon.
+  It is okay to use technical terms and abbreviations if they are defined somewhere or they are common
+  knowledge in the project's domain.</p>
+
+<h4>Unambiguous</h4>
+<p>If the requirement is
+  worded so that you can't tell what it requires, then you can't build a system to satisfy it. Although
+  this may seem like an obvious feature of any good requirement, it's sometimes harder to guarantee
+  than you might think. As you write requirements, do your best to make them unambiguous. Read them carefully to make
+  sure you can't think of any way to interpret them other than the way you intend.</p>
+
+<h4>Consistent</h4>
+<p>A project's requirements must be consistent with each other. That means not only that they cannot
+  contradict each other, but that they also don't provide so many constraints that the problem is unsolvable.
+  Each requirement must also be self-consistent. (In other words, it must be possible to achieve.)</p>
+
+<h4>Prioritized</h4>
+<p>When you start working on the project's schedule, it's likely you'll need to cut a few nice-to-haves
+  from the design. You might like to include every feature but don't have the time or budget, so
+  something's got to go.
+  At this point, you need to prioritize the requirements. If you've assigned costs (usually in terms of
+  time to implement) and priorities to the requirements, then you can defer the high-cost, low-priority
+  requirements until a later release.</p>
+
+<p>The exception occurs when you work on life-critical applications such as nuclear reactor cooling,
+  air traffi c control, and space shuttle fl ight software. In those types of applications, the customer
+  may have a lot of “must have” requirements that you can't remove without compromising the
+  applications' safety.</p>
+
+<b>The Moscow Method</b>
+<p><b>MOSCOW</b> is an acronym to help you remember a common system for prioritizing
+  application features. The consonants in MOSCOW stand for the following:</p>
+<p><b>M—Must</b>. These are required features that must d be included. They are necessary
+  for the project to be considered a success.</p>
+<p><b>S—Should</b>. These are important features that should be included if possible. If
+  there's a work-around and there's no room in the release 1 schedule, these may be
+  deferred until release 2.</p>
+<p><b>C—Could</b>. These are desirable features that can be omitted if they won't fi t in the
+  schedule. They can be pushed back into release 2, but they're not as important as
+  the “should” features, so they may not make it into release 2, either.</p>
+<p><b>W—Won't</b>. These are completely optional features that the customers have agreed
+  will not be included in the current release. They may be included in a future release
+  if time permits. (Or they may just be included in the requirements list to make
+  a particularly loud and politically connected</p>
+
+<h4>Verifiable</h4>
+<p>Requirements must be verifi able. If you can't verify a requirement, how do you know whether you've
+  met it? Being verifiable means the requirements must be limited and precisely defi ned. They can't be
+  open-ended statements.</p>
+
+<h4>Words to Avoid</h4>
+<p>Some words are ambiguous or subjective, and adding them to a requirement can make the whole
+  thing fuzzy and imprecise. The following list gives examples of words that may make requirements
+  less exact.
+  <ul>
+<li>Comparatives —Words like faster, better, more, and shinier. How much faster? Defi ne
+  “better.” How much more? These need to be quantifi ed.</li>
+<li>Imprecise adjectives —Words like fast, robust, user-friendly, effi cient, fl exible, and glorious.
+  These are just other forms of the comparatives. They look great in management reports,
+  business cases, and marketing material, but they're too imprecise to use in requirements.</li>
+<li>Vague commands —Words like minimize, maximize, improve, and optimize. Unless you use
+  these in a technical algorithmic sense (for example, if you optimize fl ow through a network),
+  these are just fancy ways to say, “Do your best.” Even in an algorithmic sense, these sorts of
+  words are often applied to hard problems where exact solutions may not exist. In any case,
+  you need to make the goals more concrete. Provide some numbers or other criteria you can
+  use to determine whether a requirement has been met.</li>
+</ul>
+</p>
+
+<h3>Requirement Categories</h3>
+<p>In general, requirements tell what an application is supposed to do. Good requirements share certain
+  characteristics (they're clear, unambiguous, consistent, prioritized, and verifi able), but there are
+  several kinds of requirements that are aimed at different audiences or that focus on different aspects
+  of the application.</p>
+  
+<h4>Audience-Oriented Requirements</h4>
+<p>These categories focus on different audiences and the different points of view that each audience
+  has. They use a somewhat business-oriented perspective to classify requirements according to the
+  people who care the most about them.</p>
+
+<p><b>Business requirements</b> lay out the project's high-level goals. They explain what the customer hopes
+  to achieve with the project.
+  Notice the word "hopes."" Customers sometimes try to include all their hopes and dreams in the
+  business requirements in addition to verifiable objectives. Sometimes, those vague goals are unavoidable 
+  in business requirements, but if possible you should
+  try to push them into the business case. The business case is a more marketing-style document that
+  attempts to justify the project. Those often include graphs and charts showing projected costs,
+  demand, sales fi gures, and other values that aren't known exactly in advance.</p>
+
+<p><b>User requirements</b> (which are also called <b>stakeholder requirements</b> by managers who like to use the
+  word "stakeholder"), describe how the project will be used by the eventual end users. They often
+  include things like sketches of forms, scripts that show the steps users will perform to accomplish
+  specifi c tasks, use cases, and prototypes. (The sections “Use Cases” and “Prototypes” later in this
+  chapter say more about the last two.)
+  Sometimes these requirements are very detailed, spelling out exactly what an application must do
+  under different circumstances. Other times they specify what the user needs to accomplish but not
+  necessarily how the application must accomplish it. Vague requirements are bad, but flexible 
+  requirements let you explore different options before you
+  start writing code. To keep requirements as fl exible as possible, try to make the requirements spell
+  out the project's needs without mandating a particular approach.</p>
+
+<p><b>Functional requirements</b> are detailed statements of the project's desired capabilities. They're
+  similar to the user requirements but they may also include things that the users won't see
+  directly. For example, they might describe reports that the application produces, interfaces
+  to other applications, and workfl ows that route orders from one user to another during
+  processing.
+  These are things the application should do.</p>
+
+<p><b>Nonfunctional requirements</b> are statements about the quality of the application's behavior or
+  constraints on how it produces a desired result. They specify things such as the application's
+  performance, reliability, and security characteristics.</p>
+
+<p><b>Implementation requirements</b> are temporary features that are needed to transition to using the new
+  system but that will be later discarded. For example, suppose you're designing an invoice-tracking
+  system to replace an existing system. After you fi nish testing the system and are ready to use it full
+  time, you need a method to copy any pending invoices from the old database into the new one. That
+  method is an implementation requirement. Other implementation requirements include hiring new staff, 
+  buying new hardware, preparing training materials, and actually training the users to use the new system.</p>
+
+<p><b></b></p>
+
+<p><b></b></p>
+
+<p><b></b></p>
+        
+<h4></h4>
+<p></p>
+<p></p>
+
+<h4></h4>
+<p></p>
+<p></p>
+
+<h4></h4>
+<p></p>
+<p></p>
+
+<h4></h4>
+<p></p>
+<p></p>
