@@ -24,7 +24,11 @@
   <li>
     <a href="VoidFunction/VoidFunction.cpp" target="_blank">VoidFunction.cpp</a>.
   </li>
-</ul></p>
+</ul>
+The void pointer is widely used in the world of software. The Linux function for creating threads assumes the <b>start_routine</b> accepts an argument 
+of type <b>void *</b>. See <a href="https://man7.org/linux/man-pages/man3/pthread_create.3.html" target="_blank">pthread_create</a>.<br>
+A simple example with Linux threads can be seen at <a href="VoidFunction/counter.cpp" target="_blank">counter.cpp</a>.
+</p>
 
 <p><em>LValues and RValues</em></p>
 <p>The following code is a great exercise on lvalues and rvalues. It demonstrates that lvalues are variables with some kind of storage, and rvalues are 
