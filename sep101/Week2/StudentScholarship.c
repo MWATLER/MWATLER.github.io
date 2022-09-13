@@ -35,7 +35,8 @@ int main(void)
 	runningTotal += mark3;
 	averageMark = runningTotal / numMarks;
 
-	printf("The student %s with id %d has marks of %f, %f, and %f\n", lastName, student_id, mark1, mark2, mark3);
+	printf("The student %s with id %d has marks of %f, %f, and %f\n",
+		lastName, student_id, mark1, mark2, mark3);
 	printf("%s has an average mark of %lf\n", lastName, averageMark);
 
 	if (mark1 >= 80) letterGrade1 = 'A';
@@ -62,7 +63,7 @@ int main(void)
 	else if (averageMark >= 50) letterAverage = 'D';
 	else                  letterAverage = 'F';
 
-	printf("The student %s with id %d has marks of %c, %c, and %c.\n", 
+	printf("The student %s with id %d has marks of %c, %c, and %c.\n",
 		lastName, student_id, letterGrade1, letterGrade2, letterGrade3);
 	if (letterAverage == 'A') {
 		printf("%s is an A student.\n\n", lastName);
@@ -70,17 +71,22 @@ int main(void)
 	else {
 		printf("%s is a %c student.\n\n", lastName, letterAverage);
 	}
-	switch (letterAverage) {
-	case 'A':
+	
+	switch (letterAverage) {//We have a specific letter average
+		                    //It could be 'A', 'B', 'C', 'D', or 'F'
+	case 'A'://The case for an A student
 		scholarship = 5000.00;
-		break;
-	case 'B':
+		break;//Don't forget the break
+		//There are cases where you want to fall through from
+		//one case to another. In such an instance, add a comment:
+		//fall-through
+	case 'B'://The case for a B student
 		scholarship = 2000.00;
 		break;
-	case 'C':
+	case 'C'://The case for a C student
 		scholarship = 500.00;
 		break;
-	default:
+	default://All other cases are handled here
 		scholarship = 0.0;
 	}
 
