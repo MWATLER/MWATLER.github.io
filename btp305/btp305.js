@@ -19,10 +19,6 @@ function SetContent(content) {
             elem[i].classList.remove("hidden");
         }
         elem=document.querySelector('#Summary');
-    } else if(content=='Workshops') {
-        elem=document.querySelector('#Workshops');
-    } else if(content=='Project') {
-        elem=document.querySelector('#Project');
     } else if(content=='OfficeHours') {
         elem=document.querySelector('#OfficeHours');
     } else if(content=='Contact') {
