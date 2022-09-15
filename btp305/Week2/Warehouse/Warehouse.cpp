@@ -39,7 +39,7 @@ Warehouse& Warehouse::operator=(const Warehouse& warehouse) {//copy assignment
 		numItems = warehouse.numItems;
 		//deep copy any resources
 		//remove existing resourse
-		delete[] item;
+		delete[] item;//will work with the latest version of C++ even if item is nullptr
 		if (numItems > 0) {
 			//allocate for a new resource and copy data over
 			item = new WarehouseItem[numItems];

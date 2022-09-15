@@ -6,8 +6,9 @@
 #include <iostream>
 
 enum Err_Status {
-	Err_Success,
-	Err_Failure
+	Err_Success,//=0
+	Err_Failure,//=1
+	Err_OutOfMemory//=2
 };
 
 class EmployeeInfo {
@@ -15,11 +16,11 @@ class EmployeeInfo {
 	std::string position;
 	int age;
 public:
-	static double runningTotal;//a running total of the ages of the employees
-	static int numEmployees;//number of objects of type EmployeeInfo
+	static double runningTotal;
+	static int numEmployees;
 	EmployeeInfo();
 	EmployeeInfo(std::string _name, std::string _position, int _age);
-	std::string GetName();
+	std::string GetName() const;
 	double GetAverageAge();
 	Err_Status PrintInfo();
 };

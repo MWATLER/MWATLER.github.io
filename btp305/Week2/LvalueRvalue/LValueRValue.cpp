@@ -6,9 +6,8 @@
 
 using namespace std;
 
-int GetValue() {//this is an rvalue
-	int x = 10;
-	return x;
+int GetValue() {
+	return 10;
 }
 
 int& GetValue2() {//returns a reference, must return an lvalue
@@ -19,11 +18,11 @@ int& GetValue2() {//returns a reference, must return an lvalue
 void SetValue(int value) {//can accept an lvalue or an rvalue
 
 }
-
+//SetValue2(10);//doesn't work, 10 is not an lvalue
 void SetValue2(int& value) {//can only accept an lvalue
 
 }
-
+//SetValue3(10);//works
 void SetValue3(const int& value) {//can accept an lvalue and an rvalue
 	                //because value has to be initialized to something
 }
@@ -36,7 +35,7 @@ void PrintName2(const string& name) {//needs a reference to an lvalue, can also 
 	                                 //because the const needs to be initialized to something
 	cout << name << endl;
 }
-
+//PrintName3(firstName + lastName);
 void PrintName3(string&& name) {//this accepts an rvalue reference (a reference to a temporary object)
 	//cannot accept a reference to an lvalue
 
