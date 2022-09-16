@@ -15,7 +15,7 @@ class Database {
 	std::string *value;
 	std::string dbFileName;
 
-	static Database* instance;
+	static Database* instance;//we only want one object or instance of class Database
 	Database();//Private constructors to prevent instancing
 public:
 	enum Err_Status {
@@ -23,11 +23,11 @@ public:
 		Err_NotFound,
 		Err_OutOfMemory
 	};
-	static Database* getInstance();
+	static Database* getInstance();//returns instance if an object exists, otherwise creates the object
 	static bool isInstance();
-	Err_Status GetValue(std::string key, std::string& value);
+	Err_Status GetValue(std::string key, std::string& value) const;
 	Err_Status SetValue(std::string key, std::string value);
-	int GetNumEntries();
+	int GetNumEntries() const;
 	~Database();
 };
 

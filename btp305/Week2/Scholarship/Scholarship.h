@@ -12,7 +12,7 @@ enum class MarkType {
 
 union Mark {
 	int percent;
-	char letterGrade;
+	char letterGrade;//when letterGrade is 'A', percent is 65
 };
 
 struct Student {

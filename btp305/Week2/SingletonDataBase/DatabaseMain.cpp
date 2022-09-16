@@ -30,7 +30,6 @@ int main() {
 	}
 
 	Database* dB2 = Database::getInstance();
-//	Database dB3;
 	key = "Leylah Fernandez";
 	status = dB->GetValue(key, value);
 	if (status == Database::Err_Status::Err_Success) {
