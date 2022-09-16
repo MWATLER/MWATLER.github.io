@@ -21,3 +21,65 @@
   <li><a href="Beginning_Software_Engineering_CH5_HIGH-LEVEL_DESIGN.pdf" target="_blank">Beginning Software Engineering Chapter 5</a>, High-Level Design</li>
   <li><a href="Software_Architect's_Handbook_CH5_Designing_Software_Architectures.pdf" target="_blank">Software Architect's Handbook Chapter 5</a>, Designing Software Architecture</li>
 </ul>
+
+<h3>High-Level Design</h3>
+
+<p>High-level design provides a view of the system at an abstract level. It shows how the major
+  pieces of the fi nished application will fi t together and interact with each other.
+  A high-level design should also specify assumptions about the environment in which the
+  fi nished application will run. For example, it should describe the hardware and software you
+  will use to develop the application, and the hardware that will eventually run the program.
+  The high-level design does not focus on the details of how the pieces of the application will
+  work. Those details can be worked out later during low-level design and implementation.</p>
+
+<p>You can view software development as a process that chops up the system into smaller and smaller
+  pieces until the pieces are small enough to implement. Using that viewpoint, high-level design is the
+  fi rst step in the chopping up process.
+  The goal is to divide the system into chunks that are self-contained enough that you could give them
+  to separate teams to implement.</p>
+  
+<h3>What to Specify</h3>
+<p>The stages of a software engineering project often blur together, and that's as true for highlevel
+  design as it is for any other part of development. Exactly what you should specify in the high-level 
+  design varies somewhat, but some things are constant for most projects.</p>
+  
+<h4>Security</h4>
+<p>The fi rst thing you see when you start most applications is a login screen. That's the fi rst obvious
+  sign of the application's security, but it's actually not the fi rst piece. Before you even log in to the
+  application, you need to log in to the computer.
+  Your high-level design should sketch out all the application's security needs. Those needs may
+  include the following:
+<ul>
+<li>Operating system security—This includes the type of login procedures, password expiration
+  policies, and password standards. (Those annoying rules that say your password must
+  include at least one letter, one number, one special character like # or %, and three Egyptian
+  hieroglyphs.)</li>
+<li>Application security—Some applications may rely on the operating system's security and not
+  provide their own. Others may use the operating system's security to make the user reenter
+  the same username and password. Still others may use a separate application username and
+  password. Application security also means providing the right level of access to different
+  users. For example, some users might not be allowed access to every part of the system. (I'll
+  say more about this in the section “User Access” later in the chapter.)</li>
+<li>Data security—You need to make sure your customer's credit card information doesn't fall
+  into the hands of Eastern European hackers.</li>
+<li>Network security—Even if your application and data are secure, cyber banditos might steal
+  your data from the network.</li>
+<li>Physical security—Many software engineers overlook physical security. Your application
+  won't do much good if the laptop it runs on is stolen from an unlocked office.</li>
+</ul>
+</p>
+    
+<p></p>
+  
+<h4></h4>
+<p></p>
+    
+<p></p>
+  
+<h4></h4>
+<p></p>
+    
+<p></p>
+        
+<p></p>
+  
