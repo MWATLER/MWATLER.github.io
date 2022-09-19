@@ -37,6 +37,9 @@ Database* Database::getInstance() {
 }
 
 bool Database::isInstance() {
+	//Can I use numEntries here? No, because this function exists
+	//even when there is no object of type Database
+	//Static functions can only use static variables
 	bool ret = true;
 	if (instance == nullptr) ret = false;
 	return ret;
@@ -44,7 +47,7 @@ bool Database::isInstance() {
 
 
 
-Database::Err_Status Database::GetValue(std::string key, std::string& value) {
+Database::Err_Status Database::GetValue(std::string key, std::string& value) const {
 	Err_Status status = Err_NotFound;
 	for (int i = 0; i < numEntries && status == Err_NotFound; ++i) {
 		if (key == this->key[i]) {
@@ -66,7 +69,7 @@ Database::Err_Status Database::SetValue(std::string key, std::string value) {
 	return status;
 }
 
-int Database::GetNumEntries() {
+int Database::GetNumEntries() const {
 	return numEntries;
 }
 
