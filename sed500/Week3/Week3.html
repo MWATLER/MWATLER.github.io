@@ -68,9 +68,156 @@
   won't do much good if the laptop it runs on is stolen from an unlocked office.</li>
 </ul>
 </p>
+  
+<h4>Hardware</h4>
+<p>You
+  can build systems to run on mainframes (yes, they still exist), desktops, laptops, tablets, and phones.
+  Mini-computers act sort of as a mini-mainframe that can serve a handful of users. Personal Digital
+  Assistants (PDAs) are small computers that are basically miniature tablets.
+  Wearable devices include such gadgets as computers strapped to the wearer's wrist (sort of like
+  a PDA with a wrist strap and possibly extra keys and buttons), wristbands, bracelets, watches,
+  eyeglasses, and headsets.
+  Additional hardware that you need to specify might include the following:
+<ul>
+<li>Printers</li>
+<li>Network components (cables, modems, gateways, and routers)</li>
+<li>Servers (database servers, web servers, and application servers)</li>
+<li>Specialized instruments (scales, microscopes, programmable signs, and GPS units)</li>
+<li>Audio and video hardware (webcams, headsets, and VOIP)</li>
+</ul>
+</p>
+    
+<h4>User Interface</h4>
+<p>During high-level design, you can sketch out the user interface, at least at a high level. For example,
+  you can indicate the main methods for navigating through the application.
+  Older-style desktop applications use forms with menus that display other forms. Often the user
+  can display many forms at the same time and switch between them by clicking with the mouse (or
+  touching if the hardware has a touch screen).
+  In contrast, newer tablet-style applications tend to use a single window (that typically covers the
+  entire tablet, or whatever hardware you're using) and buttons or arrows to navigate. When you click
+  a button, a new window appears and fi lls the device. Sometimes a Back button lets you move back
+  to the previous window.
+  Whichever navigational model you pick, you can specify the forms or windows that the application
+  will include. You can then verify that they allow the user to perform the tasks defi ned in the
+  requirements. In particular, you should walk through the user stories and use cases and make sure
+  you've included all the forms needed to handle them.</p>
+    
+<h4>Internal Interfaces</h4>
+<p>When you chop the program into pieces, you should specify how the pieces will interact. Then the
+  teams assigned to the pieces can work separately without needing constant coordination.
+  It's important that the high-level design specifi es these internal interactions clearly and
+  unambiguously so that the teams can work as independently as possible.</p>
+  
+<h4>External Interfaces</h4>
+<p>Many applications must interact with external systems. In a way, external interfaces are often easier to specify than internal ones because you usually don't
+  have control over both ends of the interface. If your application needs to interact with an existing
+  system, then that system already has interface requirements that you must meet.
+  Conversely, if you want future systems to interface with yours, you can probably specify whatever
+  interface makes sense to you. Systems developed later need to meet your requirements.</p>
+
+<h3>Architecture</h3>
+<p>An application's architecture describes how its pieces fi t together at a high level. Developers use
+  a lot of “standard” types of architectures. Many of these address particular characteristics of the
+  problem being solved.</p>
+    
+<h4>Monolithic</h4>
+<p>In a monolithic architecture, a single program does everything. It displays the user interface,
+  accesses data, processes customer orders, prints invoices, launches missiles, and does whatever else
+  the application needs to do.</p>
+    
+<p>This architecture has some significant drawbacks. In particular, the pieces of the system are tied
+  closely together, so it doesn't give you a lot of flexibility. A monolithic architecture also requires
+   that you understand how all the pieces of the system fit
+  together from the beginning of the project. If you get any of the details wrong, the tight coupling
+  between the pieces of the system makes fi xing them later diffi cult.</p>
+    
+<p>Monolithic architectures do have some advantages. Because everything is built into a single
+  program, there's no need for complicated communication across networks. That means you don't
+  need to write and debug communication routines; you don't need to worry about the network going
+  down; and you don't need to worry about network security. Monolithic architectures are also useful 
+  for small applications where a single programmer or team is working on the code.</p>
+
+<h4>Client/Server</h4>
+<p>A client/server architecture separates pieces of the system that need to use a
+  particular function (clients) from parts of the system that provide those functions
+  (servers). That decouples the client and server pieces of the system so that
+  developers can work on them separately.<br>
+<image src="clientServer1.jpg" alt="Client Server"></image>
+</p>
+    
+<p>One problem with this design is that multiple
+  users cannot use the same data. You can fix
+  that problem by moving to a two-tier
+  architecture where a client (the user interface)
+  is separated from the server (the database).</p>
+  
+<p>The two-tier architecture makes it easier to support multiple clients
+  with the same server, but it ties clients and servers relatively closely
+  together. The clients must know what format the server uses, and if
+  you change the way the server presents its data, you need to change
+  the client to match. That may not always be a big problem, but it can
+  mean a lot of extra work, particularly in the beginning of a project
+  when the client's and server's needs aren't completely known.<br>
+  <image src="clientServer2.jpg" alt="Two-Tier Client Server"></image></p>
+    
+<p>You can help to increase the separation between the clients and server
+  if you introduce another layer between the two to create the three tier
+  architecture.
+  In a three-tier architecture, the middle tier provides insulation between the clients and server.
+  The separation provided by the middle tier lets different teams work on the client and server without
+interfering with each other too much.<br>
+<image src="clientServer3.jpg" alt="Three-Tier Client Server"></image>
+</p>
+
+<p>You can define other multi-tier architectures (or N-tier architectures ) that use more than three tiers
+    if that would be helpful. For example, a data tier might store the data, a second tier might calculate
+    aggregates and perform other calculations on the data, a third tier might use artificial intelligence
+    techniques to make recommendations based on the second tier's data, and a fourth tier would be a
+    presentation tier that lets users see the results.</p>
+        
+<h4>Component-Based</h4>
+<p>In component-based software engineering (CBSE), you regard the system as a collection of loosely
+  coupled components that provide services for each other. A component-based architecture decouples the pieces of code
+  much as a multitier architecture does, but the pieces are all contained within the same executable
+  program, so they communicate directly instead of across a network.<br>
+  <image src="ComponentBased.jpg" alt="Three-Tier Client Server"></image></p>
+    
+<h4>Service-Oriented</h4>
+<p>A service-oriented architecture (SOA) is similar to a component-based architecture except the pieces
+  are implemented as services. A service is a self-contained program that runs on its own and provides
+  some kind of service for its clients.
+  Sometimes, services are implemented as web services. Those are simply programs that satisfy certain
+  standards, so they are easy to invoke over the Internet.</p>
+  
+<h4>Data-Centric</h4>
+<p>Data-centric or database-centric architectures come in a variety of fl avors that all use data in some
+  central way. The following list summarizes some typical data-centric designs:
+<ul>
+<li>Storing data in a relational database system. This is so common that it's easy to think of as a
+  simple technique for use in other architectures rather than an architecture of its own.</li>
+<li>Using tables instead of hard-wired code to control the application. Some artifi cial intelligence
+  applications such as rule-based systems use this approach.</li>
+<li>Using stored procedures inside the database to perform calculations and implement business
+  logic. This can be a lot like putting a middle tier inside the database.</li>
+</ul>
+</p>
+    
+<h4>Event-Driven</h4>
+<p>In an event-driven architecture ( EDA ), various parts of the system respond to events as they occur.
+  For example, as a customer order for robot parts moves through its life cycle, different pieces of
+  the system might respond at different times. When the order is created, a fulfillment module might
+  notice and print a list of the desired parts and an address label. When the order has been shipped,
+  an invoicing module might notice and print an invoice. When the customer hasn't paid the invoice
+  for 30 days, an enforcement module might notice and send RoboCop to investigate.  
+</p>
+
+<h4></h4>
+<p></p>
     
 <p></p>
-  
+        
+<p></p>
+    
 <h4></h4>
 <p></p>
     
