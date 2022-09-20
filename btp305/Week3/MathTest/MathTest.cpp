@@ -10,7 +10,7 @@ int main(void)
 	int a = 5;
 	double b = 1.2;
 	int num = 11, den = 5;
-	float num2 = 5.5f, den2 = 6.2f;
+	float num2 = (float)5.5, den2 = (float)6.2;
 
 	int intVal = square(a);
 	cout << "The square of " << a << " is " << intVal << endl << endl;
