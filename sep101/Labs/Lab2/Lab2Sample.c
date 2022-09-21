@@ -9,8 +9,8 @@ int main() {
 	int runningTotal = 0;
 	const int LowestPossibleMark = 0;
 	const int HighestPossibleMark = 100;
-	int highestMark = 0;
-	int lowestMark = 100;
+	int highestMark = LowestPossibleMark;
+	int lowestMark = HighestPossibleMark;
 	int indexHighestMark = 0;//should be 3
 	int indexLowestMark = 0;//should be 1
 	int validEntry = 0;//a flag variable, which makes the code more readable
@@ -31,6 +31,7 @@ int main() {
 			}
 		} while (validEntry == 0);
 
+		//Example: 60, 56, 77, 92, 81
 		runningTotal += marks[i];//to calculate the average
 		if (marks[i] > highestMark) {//the highest mark
 			highestMark = marks[i];
