@@ -56,7 +56,7 @@ The second program uses the same classes but demonstrates dynamic binding in a c
   </li>
 </ul></p>
 
-<p><em>MathTest, MathTest2, MathTest3</em></p>
+<p><em>MathTest</em></p>
 <p>The first program is simply a refresher on the use of templates. Here the functions perform a square on any type, 
   presented as a number, or as a fraction:
 <ul>
@@ -65,25 +65,30 @@ The second program uses the same classes but demonstrates dynamic binding in a c
     <a href="MathTest/MathTest.cpp" target="_blank">MathTest.cpp</a>.
   </li>
 </ul>
-The second program shows polymorphism with templated parameters. This is still ad-hoc polymorphism which relies on dynamic binding:
-<ul>
-  <li>
-    <a href="MathTest2/MathTest2.h" target="_blank">MathTest2.h</a> and
-    <a href="MathTest2/MathTest2.cpp" target="_blank">MathTest2.cpp</a>.
-  </li>
-</ul>
-The third program is an example of parametric polymorphism which relies on static binding:
-<ul>
-  <li>
-    <a href="MathTest3/MathAdd.h" target="_blank">MathAdd.h</a>,
-    <a href="MathTest3/MathMultiply.h" target="_blank">MathMultiply.h</a>,
-    <a href="MathTest3/MathCommon.h" target="_blank">MathCommon.h</a> and
-    <a href="MathTest3/MathTest3.cpp" target="_blank">MathTest3.cpp</a>.
-  </li>
-</ul>
-</p>
 
-<p><em>Stooge Factory</em></p>
+<p><em>Math Test with Polymorphism</em></p>
+<p>A second MathTest program has been created to show how to implement inheritance with templates. This math library performs calculation on a series of 
+  numbers. The calculations are to add the series, or to multiply the series. The numbers could be of any numerical type. The base class exposes one 
+  virtual function: Calculate(). There is a MathAdd derived class for adding a series of numbers and there is a MathMultiply 
+  function for multiplying a series of numbers. Templated are the type of numbers to be operated on, as well as the length of the series itself.<br>
+  The code is as follows:
+    <a href="MathTest2/MathTest2.h" target="_blank">MathTest2.h</a> and
+    <a href="MathTest2/MathTest2.cpp" target="_blank">MathTest2.cpp</a>.</p>
+
+<p><em>Math Test with Parametric Polymorphism</em></p>
+<p>A third MathTest program has been created to show how to implement parametric polymorphism with templates. This math library also performs calculation 
+  on a series of numbers. As with MathTest2, the calculations are to add the series (a MathAdd object), or to multiply the series (a MathMultiply object). 
+  The numbers to be added or multiplied could be of any numerical type. The common header file exposes the function Calculate() which takes as its first 
+  argument a math library object which could be of any type (in this case either MathAdd or MathMultiply), an array of numbers as its second argument,
+  and the array length as its third argument. Calculate determines which math object to access based on the type of its first argument. This requires 
+  both the MathAdd and MathMultiply objects to expose the same function, in this case Calculate().<br>
+  The code is as follows:
+    <a href="MathTest3/MathCommon.h" target="_blank">MathCommon.h</a>,
+    <a href="MathTest3/MathAdd.h" target="_blank">MathAdd.h</a>,
+    <a href="MathTest3/MathMultiply.h" target="_blank">MathMultiply.h</a>, and
+    <a href="MathTest3/MathTest3.cpp" target="_blank">MathTest3.cpp</a>.</p>
+
+    <p><em>Stooge Factory</em></p>
 <p>The Stooge factory is an example of the factory design pattern, which can create a set of related objects through a static <b>make_stooge()</b> function. 
   The program is based on the popular comedy "The Three Stooges". The factory can create three stooges: Larry, Curly and Moe. They are tied together 
   through a common base class. StoogeMain.cpp allows you to create whichever stooge you wish, up to three of them, via dynamic binding:
@@ -95,17 +100,6 @@ The third program is an example of parametric polymorphism which relies on stati
     <a href="StoogeFactory/Larry.h" target="_blank">Larry.h</a>,
     <a href="StoogeFactory/Moe.h" target="_blank">Moe.h</a> and
     <a href="StoogeFactory/StoogeMain.cpp" target="_blank">StoogeMain.cpp</a>.
-  </li>
-</ul>
-The second program is an example of implementing polymorphism through templates that circumvents dynamic binding. Since the program uses static 
-binding, the objects are not created during run-time.
-<ul>
-  <li>
-    <a href="StoogeTemplate/Stooge.h" target="_blank">Stooge.h</a>,
-    <a href="StoogeTemplate/Curly.h" target="_blank">Curly.h</a>,
-    <a href="StoogeTemplate/Larry.h" target="_blank">Larry.h</a>,
-    <a href="StoogeTemplate/Moe.h" target="_blank">Moe.h</a> and
-    <a href="StoogeTemplate/StoogeMain.cpp" target="_blank">StoogeMain.cpp</a>.
   </li>
 </ul>
 </p>
