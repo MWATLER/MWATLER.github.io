@@ -1,13 +1,12 @@
 <h1>Week 3 - High-Level Design</h1>
 
 <h3>Introduction</h3>
-<p>.</p>
+<p>This week we start our study on high-level design. We will look at some common architectures along with case studies.</p>
 
 <h3>Videos</h3>
 <table>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+  <tr><td>High Level Design:</td><td><a href="https://www.youtube.com/watch?v=H703ErIrby8" target="_blank">High Level Design vs Low Level Design</a></td></tr>
+  <tr><td>Software Architecture:</td><td><a href="https://www.youtube.com/watch?v=r6TEO6_XsiM" target="_blank">Software Architecture and High Level Design</a></td></tr>
 </table>
 
 <h3>Workshop(s)</h3>
@@ -211,13 +210,87 @@ interfering with each other too much.<br>
   for 30 days, an enforcement module might notice and send RoboCop to investigate.  
 </p>
 
+<h4>Rule-Based</h4>
+<p>A rule-based architecture uses a collection of rules to decide what to do next. These systems are
+  sometimes called expert systems or knowledge-based systems. Rule-based systems work well if you can 
+  identify the rules necessary to get the job done. Sometimes,
+  you can build good rules even for complicated systems; although that can be a lot of work.
+  Rule-based systems don't work well if the problem is poorly defi ned so you can't fi gure out what
+  rules to use. They also have trouble handling unexpected situations. Rule-based systems are great 
+  for handling common simple scenarios, but when they encounter
+  anything unexpected they're quite useless. For that reason, you should always give the user a way to
+  handle special situations manually.</p>
+    
+<h4>Distributed</h4>
+  <p>In a distributed architecture , different parts of the application run on different processors and may
+    run at the same time. The processors could be on different computers scattered across the network,
+    or they could be different cores on a single computer. (Most modern computers have multiple cores
+    that can execute code at the same time.)</p>
+      
+  <p>Service-oriented and multitier architectures are often distributed, with different parts of the system
+    running on different computers. Component-oriented architectures may also be distributed, with
+    different components running on different cores on the same computer. In general, distributed 
+    applications can be extremely confusing and hard to debug.</p>
+
+  <p>Distributed computing can suffer from a race condition . The two processes are racing to see which
+    one finishes processing first.
+    A distributed architecture can improve performance as long as you don't run afoul of race
+    conditions and other potential problems.</p>
+    
+  <h4>Mix and Match</h4>
+  <p>An application doesn't need to stick with a single architecture. Different pieces of the application
+    might use different design approaches. For example, you might create a distributed service-oriented
+    application. Some of the larger services might use a component-based approach to break their code into
+    decoupled pieces. Other services might use a multitier approach to separate their features from the data
+    storage layer.</p>
+      
+<h4>Architecture - A Summary</h4>
+<p>Suppose you want to pick an architecture for the ClassyDraw application described
+  in Chapter 4 of the text <a href="https://ebookcentral-proquest-com.libaccess.senecacollege.ca/lib/senecac/reader.action?docID=1895174&ppg=1" 
+  target="_blank">Beginning Software Engineering</a>. ClassyDraw is a drawing program somewhat similar to MS Paint
+  except it lets you select and manipulate drawing objects. One way to do that is to
+  think about each of the standard architectures and decide whether it would make
+  sense to use while building the program.
+<ol>
+<li>Monolithic —This is basically the default if none of the more elaborate architectures
+  apply. We'll come back to this one later.</li>
+<li>Client/server, multitier —ClassyDraw stores drawings in fi les, not a database,
+  so client/server and multitier architectures aren't needed. (You could store
+  drawings in a database if you wanted to, perhaps for an architectural firm
+  or some other use where there would be some benefit. For a simple drawing
+  application, it would be overkill.)</li>
+  <li>Component-based —You could think of different pieces of the application as
+  components providing services to each other. For example, you could think of
+  a “rectangle component” that draws a rectangle. For this simple application,
+  it's probably just as easy to think of a Rectangle class that draws a rectangle,
+  so I'm not going to think of this as a component-based approach.</li>
+  <li>Service-oriented —This is even less applicable than the component-based approach.
+  Spreading the application across multiple computers connected via web services
+  (or some other kind of service) wouldn't help a simple drawing application.</li>
+  <li>Data-centric —The user defi nes the drawings, so there's no data around which
+  to organize the program. (Although a more specialized program, perhaps a
+  drafting program for an architectural fi rm or an aerospace design program,
+  might interact with data in a meaningful way.)</li>
+  <li>Event-driven —The user interface will be event-driven. For example, the user
+  selects a tool and then clicks and drags to create a new shape.</li>
+  <li>Rule-based —There are no rules that the user must follow to make a drawing,
+  so this program isn't rule-based.</li>
+  <li>Distributed —This program doesn't perform extensive calculations, so distributing
+  pieces across multiple CPUs or cores probably wouldn't help.</li>
+</ol>
+</p>
+    
+<p>Because none of the more exotic architectures applied (such as multitier or serviceoriented),
+  this application can have a simple monolithic architecture with an eventdriven
+  user interface.</p>
+  
 <h4></h4>
 <p></p>
     
 <p></p>
         
 <p></p>
-    
+      
 <h4></h4>
 <p></p>
     
@@ -229,4 +302,4 @@ interfering with each other too much.<br>
 <p></p>
         
 <p></p>
-  
+    
