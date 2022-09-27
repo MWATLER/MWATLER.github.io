@@ -4,29 +4,37 @@
 #include <cstring>
 #include "Name.h"
 
-Name::Name(const char* n) : name{ new char[std::strlen(n) + 1] } {
+Name::Name(const char* n) {
+    int len = std::strlen(n);
+    name = new char[len + 1];
     std::strcpy(name, n);
 }
+
 Name::Name(const Name& src) {
     *this = src;
 }
+
 Name& Name::operator=(const Name& src) {
     if (this != &src) {
-		if(name!=nullptr) delete[] name;
-        name = new char[std::strlen(src.name) + 1];
+        delete[] name;
+        int len = std::strlen(src.name);
+        name = new char[len + 1];
         std::strcpy(name, src.name);
     }
     return *this;
 }
+
 Name::~Name() { 
-	if(name!=nullptr) delete[] name; 
+    delete[] name; 
 }
 
 const char* Name::get() const {
     return name;
 }
+
 void Name::set(const char* n) {
-    if(name!=nullptr) delete[] name;
-    name = new char[std::strlen(n) + 1];
+    delete[] name;
+    int len = std::strlen(n);
+    name = new char[len + 1];
     std::strcpy(name, n);
 }

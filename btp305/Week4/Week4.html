@@ -22,10 +22,10 @@
 
 <p><em>Composition</em></p>
 <p>It is possible for a class to contain an instance of another class (composition), a collection of instances of another class (aggregation), or an instance of another class which in turn 
-  contains an instance of the class itself (association). We will look at three examples, one of each type.
+  contains an instance of the class itself (association). We will look at three examples, one of each type.</p>
 <ul>
 <li>
-  In the first example, the class Person contains an instance of the class Name. This is implemented with a pointer:<br>
+  In the first example, the class Person contains an instance of the class Name. This is <b>composition</b>:<br>
   <a href="Composition/Name.h" target="_blank">Name.h</a>,
   <a href="Composition/Name.cpp" target="_blank">Name.cpp</a>,
   <a href="Composition/Person.h" target="_blank">Person.h</a>,
@@ -34,17 +34,8 @@
 </li>
 
 <li>
-  In the second example, the class Club contains an aggregation of Names:<br>
-  <a href="Aggregation/Name.h" target="_blank">Name.h</a>,
-  <a href="Aggregation/Name.cpp" target="_blank">Name.cpp</a>,
-  <a href="Aggregation/Club.h" target="_blank">Club.h</a>,
-  <a href="Aggregation/Club.cpp" target="_blank">Club.cpp</a> and
-  <a href="Aggregation/AggregationMain.cpp" target="_blank">AggregationMain.cpp</a>.
-</li>
-
-<li>
-  In the third example, a Course contains a Room, and a Room contains a Course. The room and course are associated with each other. The course and room 
-  each contain a name as well:<br>
+  In the second example, a Course contains a Room, and a Room contains a Course. The room and course are associated with each other. 
+  This is <b>association</b>. The course and room each contain a name as well:<br>
   <a href="Association/Name.h" target="_blank">Name.h</a>,
   <a href="Association/Name.cpp" target="_blank">Name.cpp</a>,
   <a href="Association/Course.h" target="_blank">Course.h</a>,
@@ -53,8 +44,37 @@
   <a href="Association/Room.cpp" target="_blank">Room.cpp</a> and
   <a href="Association/AssociationMain.cpp" target="_blank">AssociationMain.cpp</a>.
 </li>
+
+<li>
+  In the third example, the class Club contains an array of pointers to Names which have been created outside of the class. 
+  This is <b>aggregation</b>:<br>
+  <a href="Aggregation/Name.h" target="_blank">Name.h</a>,
+  <a href="Aggregation/Name.cpp" target="_blank">Name.cpp</a>,
+  <a href="Aggregation/Club.h" target="_blank">Club.h</a>,
+  <a href="Aggregation/Club.cpp" target="_blank">Club.cpp</a> and
+  <a href="Aggregation/AggregationMain.cpp" target="_blank">AggregationMain.cpp</a>.
+</li>
+<li>The third example above used an array of pointers where the size of the array is known. What if the size of the array is not known? We 
+  will have to use a <b>double pointer</b>! See the following code that allocates and de-allocates the array of pointers in batches of five:<br>
+  <a href="Aggregation2/Name.h" target="_blank">Name.h</a>,
+  <a href="Aggregation2/Name.cpp" target="_blank">Name.cpp</a>,
+  <a href="Aggregation2/Club.h" target="_blank">Club.h</a>,
+  <a href="Aggregation2/Club.cpp" target="_blank">Club.cpp</a> and
+  <a href="Aggregation2/AggregationMain.cpp" target="_blank">AggregationMain.cpp</a>.
+</li>
+<li>It is possible to have an aggregation of different types if these types are related. The following example shows an aggregation of different types 
+  which are related through a base class. The types are <b>Hammer</b> and <b>Screwdriver</b>. They are both tools and are derived from a <b>ToolIf</b> 
+  interface class:<br>
+  <a href="Toolbox/ToolIf.h" target="_blank">ToolIf.h</a>,
+  <a href="Toolbox/ToolIf.cpp" target="_blank">ToolIf.cpp</a>,
+  <a href="Toolbox/Hammer.h" target="_blank">Hammer.h</a>,
+  <a href="Toolbox/Screwdriver.h" target="_blank">Screwdriver.h</a>,
+  <a href="Toolbox/Toolbox.h" target="_blank">Toolbox.h</a> and
+  <a href="Toolbox/ToolMain.cpp" target="_blank">ToolMain.cpp</a>.<br>
+  A sample run is shown in <a href="Toolbox/SampleRun.txt" target="_blank">SampleRun.txt</a>.
+</li>
+
 </ul>
-</p>
 
 <p><em>Casts</em></p>
 <p>C++ introduces four types of casts.

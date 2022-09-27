@@ -18,6 +18,13 @@ int main() {
 		{"Mulopo Mbape", 11, 1000127},//index 4
 	};
 
+	for (int i = 0; i < SIZE; ++i) {
+		if (boyScout[i].number != 0) {//print out the valid boy scouts
+			printf("%s %d %d\n", boyScout[i].name, boyScout[i].age, boyScout[i].number);
+		}
+	}
+	printf("\n");
+
 	int number;
 	printf("Enter the number of someone to remove: ");
 	scanf_s("%d", &number);

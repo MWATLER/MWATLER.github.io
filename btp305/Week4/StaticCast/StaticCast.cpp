@@ -5,14 +5,21 @@
 using namespace std;
 
 class Employee {
-public:
 	string name{ "Smitty Werbenmanjensen" };
 	int number{ 1000123 };
+public:
+	virtual void PrintInfo() {
+		cout << "Employee:" << name << " " << number;
+	}
 };
 
 class Player : public Employee {
-public:
 	int points{ 48 };
+public:
+	void PrintInfo() {
+		Employee::PrintInfo();
+		cout << " " << points;
+	}
 };
 
 class Shape {
@@ -24,19 +31,21 @@ public:
 int main()
 {
 	Employee employee;
-	Player player;
+	Player player;//Player is derived from Employee
 
 	// #1: valid upcast
-	Employee* pEmployee = static_cast<Employee*>(&player);
+	Employee* pEmployee = static_cast<Employee*>(&player);//Employee acts like a player
+	pEmployee->PrintInfo();
 
 	// #2: valid downcast
-	Player* pPlayer = static_cast<Player*> (&employee);
+	Player* pPlayer = static_cast<Player*> (&employee);//Player acts like an employee
+	pPlayer->PrintInfo();
 
 	// #3: invalid, between unrelated classes
 //	Shape* pShape = static_cast<Shape*> (&player);
 
-	cout << "pEmployee: " << pEmployee->name << " " << pEmployee->number << " " /* << pEmployee->points */ << endl;
-	cout << "pPlayer: " << pPlayer->name << " " << pPlayer->number << " " << pPlayer->points << endl;
+//	cout << "pEmployee: " << pEmployee->name << " " << pEmployee->number << " "  << /*pEmployee->points <<*/ endl;
+//  cout << "pPlayer: " << pPlayer->name << " " << pPlayer->number << " " << pPlayer->points << endl;
 
 	return 0;
 }

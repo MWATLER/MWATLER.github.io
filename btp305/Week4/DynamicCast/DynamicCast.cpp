@@ -17,7 +17,7 @@ class Player : public Employee {
 public:
 	void PrintInfo() {
 		Employee::PrintInfo();
-		cout << " Player: " << points;
+		cout << " " << points;
 	}
 };
 
@@ -31,19 +31,20 @@ int main()
 	cout << endl << endl;
 
 	Employee* pEmployee = &employee;
-	Player* pPlayer = &player;
+	Player* pPlayer = &player;//Player is derived from Employee
 	pEmployee->PrintInfo();      // Employee::PrintInfo()
 	cout << endl;
 	pPlayer->PrintInfo();      // Player::PrintInfo()
 	cout << endl << endl;
 
 //	pEmployee = &player;        // allowed
-	pEmployee = dynamic_cast<Employee*> (&player);
+	pEmployee = dynamic_cast<Employee*> (&player);//Employee acts like a player
 	pEmployee->PrintInfo();
 	cout << endl;
 	//	pPlayer = &employee;      // not allowed
-	pPlayer = dynamic_cast<Player*>(&employee); // allowed but it returns NULL
-	if(pPlayer)	pPlayer->PrintInfo();
+	pPlayer = dynamic_cast<Player*>(&employee); // allowed but it returns NULL, Player cannot act like an employee
+	if(pPlayer)	
+		pPlayer->PrintInfo();
 
 	return 0;
 }
