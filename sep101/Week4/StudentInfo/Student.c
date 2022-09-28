@@ -35,10 +35,10 @@ int main(void)
 			runningTotal += student[i].marks[j];//j - index into the marks array.
 		}
 		student[i].average = (float)runningTotal / NUM_MARKS;
-		if (student[i].average > 80) {
+		if (student[i].average >= 80) {
 			student[i].scholarship = 5000.00;
 		}
-		else if (student[i].average > 70) {
+		else if (student[i].average >= 70) {
 			student[i].scholarship = 2500.00;
 		}
 		else {

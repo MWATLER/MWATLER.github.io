@@ -5,7 +5,7 @@
 //1234567890
 //Section XXY
 
-struct Product {
-	int sku;//barcode
-	double price;
-};
+struct Product {//we have created a new type called struct Product
+	int sku;//barcode, 8 bytes
+	double price;//8 bytes
+};//16 bytes in total

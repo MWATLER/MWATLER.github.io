@@ -15,10 +15,13 @@ int main(void)
 //		int sku;//barcode
 //		double price;
 //	};
+	//struct Product is the type
+	//product[] in this case are 4 objects of type struct Product
 	struct Product product[] = {//this is an array of 4 Product's
 	 {2156, 2.34}, {4633, 7.89},
 	 {3122, 6.56}, {5611, 9.32} 
 	};
+	//What is product[2].sku? 3122.
 	//product[0] <- address of the top of the array with offset of 0
 	//product[1] <- address of the top of the array with offset of 1
 	//product[2] <- address of the top of the array with offset of 2

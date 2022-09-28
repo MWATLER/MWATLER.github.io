@@ -12,7 +12,7 @@ struct EmployeeInformation {
 	int age;
 	float salary;//annual salary
 	int yearEmployed;
-/*	char address[32];
+/*	char address[LEN];
 	float bonuses;
 	int homePhone;
 	int employeeId;
