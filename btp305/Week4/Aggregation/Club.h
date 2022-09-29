@@ -12,8 +12,9 @@ constexpr int M{ 50 };//The principle difference between const and constexpr is 
 
 class Club {
     const Name* name[M]{};//an array of pointers
-	                      //we want to point to objects of type Name who attend this club
-	                      //objects of type name are created outside the class, and there are many of them
+	                      //we want to point to objects of type Name who attend this club.
+	                      //Objects of type name are created outside the class, and there 
+                          //are many of them
     int num{ 0 };//tracks how many names are in our club
 public:
     Club& operator+=(const Name&);//add a name to the club

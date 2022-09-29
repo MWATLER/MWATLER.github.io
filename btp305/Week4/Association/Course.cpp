@@ -9,6 +9,9 @@ Course::Course(const char* n, int c) {
     code = c;
 }
 
+//void Room::release() {
+//    course = nullptr;
+//}
 void Course::book(Room& r) {
     if (room) room->release();//Say I booked room A1001, but now I want to book B1001
 	                          //room A1001 will be released - its course pointer will be set to nullptr
