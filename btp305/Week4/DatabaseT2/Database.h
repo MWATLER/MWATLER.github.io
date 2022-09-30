@@ -65,7 +65,9 @@ public:
 			}
 		}
 		if (!found && numEntries < MAX_ENTRIES) {//add the key-value pair
-			keyValue[numEntries] = new KeyValue<K, V>(key, value);
+			keyValue[numEntries] = new KeyValue<K, V>(key, value);//this presents a problem. 
+			//In aggregation, objects are created outside of the class. 
+			//How do we know which to delete in the destructor?
 			status = Err_Status::Err_Success;
 			++numEntries;
 		}
