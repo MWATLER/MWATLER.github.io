@@ -4,5 +4,7 @@
 //miguel.watler@senecacollege.ca
 //1234567890
 //Section XXY
-double power(double base, int exponent);
-double square(double base);
+
+//function declarations or prototypes
+double power(double, int);
+double square(double);

@@ -35,8 +35,6 @@ int main()
 	int seekInt;
 	int seekIntIndex;
 
-	printf("Enter a number to search for: ");
-	scanf("%d", &seekInt);//88
 	int size = 0;
 	int done = 0;
 	do {
@@ -46,18 +44,23 @@ int main()
 			done = 1;
 		}
 		else {
-			++size;
+			++size;//keeps track of the size of the array
 		}
 	} while (done == 0 && size < SIZE);
 	//Let's say intArray is {11, 22, 33, 44, 55, 66, 77, 88, 99, 100}
-	//then size should be 8
-	seekIntIndex = SearchForInt(seekInt, intArray, size);
-//	seekIntIndex = SearchForInt(seekInt, &intArray[0]);//same as above
+	//then size should be 10
+	printf("Enter a number to search for: ");
+	scanf("%d", &seekInt);//88
 
-	if (seekIntIndex == -1)
+	seekIntIndex = SearchForInt(seekInt, intArray, size);
+//	seekIntIndex = SearchForInt(seekInt, &intArray[0], size);//same as above
+
+	if (seekIntIndex == -1) {
 		printf("The number %d appears does not appear in the array\n", seekInt);
-	else
+	}
+	else {
 		printf("The number %d appears at index %d in the array\n", seekInt, seekIntIndex);
+	}
 
 	return 0;
 }

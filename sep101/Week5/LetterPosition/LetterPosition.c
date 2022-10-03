@@ -10,6 +10,7 @@
 #define SIZE 32
 
 int TestForAlphaNumeric(char c);
+//int SearchForChar(char, const char*, int, int*);
 int SearchForChar(char theChar, const char theString[], int len, int* location);
 
 int main()
@@ -22,15 +23,17 @@ int main()
 	printf("Enter a character to search for: ");
 	scanf_s("%c", &seekChar);//'c'
 	printf("Enter a string: ");
-	scanf_s("%s", streamStr, SIZE);//"abcd1234"
-						   // 'c'    "abcd1234"
+	scanf_s("%s", streamStr, SIZE);//"abcd1234" + null terminator
 	int length = strlen(streamStr);//strlen() is from the stdio.h library
+	// Look for 'c'   in   "abcd1234"
 	int err = SearchForChar(seekChar, streamStr, length, &seekCharIndex);//int *location = &seekCharIndex;
 
-	if (err == -1)
+	if (err == -1) {
 		printf("The character %c does not appear in %s", seekChar, streamStr);
-	else
+	}
+	else {
 		printf("The character %c appears at index %d in %s", seekChar, seekCharIndex, streamStr);
+	}
 
 	return 0;
 }
@@ -65,9 +68,8 @@ int TestForAlphaNumeric(char c) {
 //Returns: 0 - found
 //        -1 - not found
 int SearchForChar(char theChar, const char theString[], int len, int* location) {//'c', "abcd1234", 8,
-	int result = -1;
-	*location = -1;//seekCharIndex is also equal to -1 here
-	for (int i = 0; (i < len) && (*location == -1); ++i) {
+	int result = -1;//status variable
+	for (int i = 0; (i < len) && (result == -1); ++i) {
 		if (TestForAlphaNumeric(theString[i]) == 0) {
 			if (theChar == theString[i]) {//'c'
 				*location = i;//seekCharIndex is also equal to i here
