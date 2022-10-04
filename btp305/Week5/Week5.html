@@ -98,10 +98,26 @@ class Derived:public Base {
   <a href="LambdaSelect/LambdaSelect.cpp" target="_blank">LambdaSelect.cpp</a>.
 </li>
 </ul>
+An example of a stand-alone lambda function inside the main function can be seen at:
+<ul>
+  <li>
+    <a href="Average/Average.cpp" target="_blank">Average.cpp</a>.
+  </li>
+</ul>
+  
 </p>
 
 <p><em>Exceptions</em></p>
-<p>We have looked at exceptions before. The following code shows how we can catch and handle a bad allocation exception and 
+<p>An exception is a form of software interrupt. They occur when something unusual happens, such as a divide-by-zero, trying to access an 
+  array outside of the array bounds, trying to allocate memory when there is no longer any available RAM, etc... What you may not know is 
+  that you can intercept this software interrupt in your code using exceptions. You can generate interrupts as well when you detect an unusual 
+  situation in your code. The following code generates exceptions for an array out of bounds error as well as a divide-by-zero error:
+<ul>
+  <li>
+    <a href="Exception/Exception.cpp" target="_blank">Exception.cpp</a>.
+  </li>
+</ul>
+The following code shows how we can catch and handle a bad allocation exception and 
   a bad cast exception:
 <ul>
 <li>
