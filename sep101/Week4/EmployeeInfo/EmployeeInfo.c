@@ -21,6 +21,8 @@ int main(void)
 	//	};
 	for (int i = 0; i < NUM_EMPLOYEES; ++i) {
 		printf("\nEnter the employee's first name and last name: ");
+		// employee[i].firstName is the address of the top of the array
+		//&employee[i].firstName[0] is also the address of the top of the array
 		scanf("%s %s", employee[i].firstName, employee[i].lastName);
 		printf("Enter the employee's age: ");
 		scanf("%d", &employee[i].age);
@@ -42,6 +44,7 @@ int main(void)
 			employee[i].firstName,
 			employee[i].lastName,
 			employee[i].yearEmployed);
+		//The variable yearsAgo is only visible inside the for-loop
 		int yearsAgo = CURRENT_YEAR - employee[i].yearEmployed;
 		printf("This was %d year(s) ago.\n\n", yearsAgo);
 	}

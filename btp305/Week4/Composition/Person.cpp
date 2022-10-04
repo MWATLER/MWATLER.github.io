@@ -9,7 +9,6 @@ Person::Person(const char* n, int a)
     name = new Name(n);
     age = a;
 }
-
 Person::Person(const Person& src) {
     *this = src;
 }
@@ -23,14 +22,14 @@ Person& Person::operator=(const Person& src) {
     return *this;
 }
 
-Person::~Person() { 
-    delete name; 
+void Person::set(const char* n) {
+    name->set(n); // forwarding
+}
+
+Person::~Person() {
+    delete name;
 }
 
 void Person::display() const {
     std::cout << age << ' ' << name->get() << std::endl;
-}
-
-void Person::set(const char* n) {
-    name->set(n); // forwarding
 }

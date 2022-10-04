@@ -64,7 +64,7 @@ public:
 		}
 		return status;
 	}
-	int GetNumEntries() {
+	int GetNumEntries() const {
 		return numEntries;
 	}
 	Database<K, V>& operator+=(const KeyValue<K, V>& kv) {

@@ -13,4 +13,6 @@ struct Book {
 	int year;
 	int barcode;
 	char category[MAX_STR];
+	//char publisher[MAX_STR]; 
+	//etc...
 };

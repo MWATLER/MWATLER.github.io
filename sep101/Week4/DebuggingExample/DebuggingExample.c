@@ -27,14 +27,14 @@ int main(void)
 		if (value < 0) {//Convert negative values to positive ones
 			value = value * (-1);
 			runningTotal += value;
-			count++;
+			++count;
 		}
 		else if (value > 0) {
 			runningTotal += value;
-			count++;
+			++count;
 		}
 	} while (value != 0);
-	if (count > 0) {
+	if (count != 0) {//risk avoidance
 		printf("The average value is %.2lf\n",
 			(double)runningTotal / count);
 	}

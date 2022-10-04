@@ -55,7 +55,9 @@
   <a href="Aggregation/AggregationMain.cpp" target="_blank">AggregationMain.cpp</a>.
 </li>
 <li>The third example above used an array of pointers where the size of the array is known. What if the size of the array is not known? We 
-  will have to use a <b>double pointer</b>! See the following code that allocates and de-allocates the array of pointers in batches of five:<br>
+  will have to use a <b>double pointer</b>! The <b>double pointer</b> is illustrated in the document 
+  <a href="Aggregation2/DoublePointer.rtf" target="_blank">DoublePointer.rtf</a>. 
+  See the following code that allocates and de-allocates the array of pointers in batches of five:<br>
   <a href="Aggregation2/Name.h" target="_blank">Name.h</a>,
   <a href="Aggregation2/Name.cpp" target="_blank">Name.cpp</a>,
   <a href="Aggregation2/Club.h" target="_blank">Club.h</a>,
@@ -99,15 +101,6 @@ Code that demonstrates each can be found at:
 </ul>
 </p>
 
-<p><em>Exceptions</em></p>
-<p>An exception is a form of software interrupt. They occur when something unusual happens, such as a divide-by-zero, trying to access 
-  an array outside of the array bounds, trying to allocate memory when there is no longer any available RAM, etc... What you may 
-  not know is that you can intercept this software interrupt in your code using exceptions. You can generate interrupts as well 
-  when you detect an unusual situation in your code. The following code generates exceptions for an array out of bounds error 
-  as well as a divide-by-zero error:<br>
-<a href="Exception/Exception.cpp" target="_blank">Exception.cpp</a>.
-</p>
-
 <p><em>Masks</em></p>
 <p>C++ masks are used for enabling or disabling features for an object such as a file. Since enable/disable is a binary operation, each feature 
   can be stored in one bit. All features together in one variable is called a <b>mask</b>. Generally speaking, a bit mask allows us to store 
@@ -138,10 +131,12 @@ Code that demonstrates each can be found at:
       <a href="DatabaseT/DatabaseMain.cpp" target="_blank">DatabaseMain.cpp</a>.
     </li>
   </ul>
-  A second example has been created where the database relies entirely on the <b>KeyValue</b> object for all its key-value pairs. Some 
-  objects of type <b>KeyValue</b> are created within the database, for instance when reading the initial values from a file, and some 
-  objects of type <b>KeyValue</b> are created in the main function and passed through by reference. This is not true aggregation, 
-  in that the destructor now does not know which objects of type <b>KeyValue</b> it should destroy. Normally it would destroy all 
+  A second example has been created where the database relies entirely on the <b>KeyValue</b> object for all 
+  its key-value pairs. Some objects of type <b>KeyValue</b> are created within the database, 
+  for instance when reading the initial values from a file, and some 
+  objects of type <b>KeyValue</b> are created in the main function and passed through by reference. 
+  This is not true aggregation, in that the destructor now does not know which objects of type 
+  <b>KeyValue</b> it should destroy. Normally it would destroy all 
   objects created by the database. The code is seen as follows:
   <ul>
     <li>

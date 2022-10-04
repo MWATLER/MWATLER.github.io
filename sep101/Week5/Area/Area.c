@@ -36,12 +36,13 @@ int main()
 //         -1 - failure
 int AreaCircle(double r, double* a) {//double *a = &area;
 	int res;
+	const double pi = 3.14159;
 	if (r < 0) {
 		printf("ERROR: Radius less than zero\n");
 		res = -1;//Error
 	}
 	else {
-		*a = 3.14159 * r * r;
+		*a = pi * r * r;//change the value at the address that 'a' points to
 		res = 0;//Success
 	}
 	return res;

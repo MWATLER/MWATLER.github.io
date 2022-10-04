@@ -18,7 +18,7 @@ int main() {
 	printf("What colour? ");
 	scanf_s("%s", pet.colour, LEN);
 	printf("How old is this pet? ");
-	scanf_s("%i", &pet.age);
+	scanf_s("%d", &pet.age);
 	printf("How much? ");
 	scanf_s("%lf", &pet.price);
 	printf("How heavy? ");

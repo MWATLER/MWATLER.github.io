@@ -12,10 +12,10 @@ int main() {
 			float price;
 		};*/
 
-	printf("What is the model: ");
-	scanf_s("%s", automobile.model, MAX_STR);
 	printf("What is the make: ");
 	scanf_s("%s", automobile.make, MAX_STR);
+	printf("What is the model: ");
+	scanf_s("%s", automobile.model, MAX_STR);
 	printf("What is its year: ");
 	scanf_s("%d", &automobile.year);
 	printf("What is the price: $");

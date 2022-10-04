@@ -8,6 +8,9 @@ Room::Room(const char* n) {
     name = n;
 }
 
+//void Course::release() {
+//    room = nullptr;//the course is no longer associated with the room
+//}
 void Room::book(Course& c) {
     if (course) course->release();
     course = &c;

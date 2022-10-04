@@ -11,10 +11,12 @@ Club& Club::operator+=(const Name& n) {
         const Name** tmp = new const Name * [num + BATCH_NUM];//the newly allocated array of pointers
         for (int i = 0; i < num; ++i) {//copy values to the newly allocated array of pointers
             tmp[i] = const_cast<Name*>(name[i]);//remove the constness so we can point to the names in the name array
+//          tmp[i] = (name[i]);//The latest version of Visual Studio does not require this cast
         }
         delete[] name;//get rid of the old allocated array of pointers
         name = tmp;//point to the newly allocated array of pointers
     }
+//  name[num++] = (&n);//The latest version of Visual Studio does not require this cast
     name[num++] = const_cast<Name*>(&n);//add the address of the new Name to the array of pointers
     return *this;
 }
