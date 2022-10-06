@@ -23,13 +23,8 @@ int main() {
 		{"Priti Patel", 87, 98, 86},
 		{"Olivia Cheng", 81,78, 79} };
 
-    ReportAveragePtr = ReportAverageLD;
+	ReportAveragePtr = ReportAverageLD;
 	ReportAveragePtr(student[0]);
-	//A State Machine is output that depends on input and also a state
-	//Which function is called depends on the input and the state of the software
-	//Function pointers are very useful here, because they can point to one of many
-	//functions, depending on the input and the state of the software
-//	ReportAverageLD(student[0]);
 	ReportAveragePtr(student[1]);
 
 	ReportAveragePtr = ReportAverageHD;

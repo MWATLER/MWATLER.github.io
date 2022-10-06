@@ -4,6 +4,14 @@
 
 class Ticket {
 public:
+
+//  enum classes - enumerator names are local to the enum and their values do not 
+//                 implicitly convert to other types(like another enum or int).
+//                 ADVANTAGE: Makes enumerations both strongly typed and strongly scoped.
+//   Plain enums - where enumerator names are in the same scope as the enum and 
+//                 their values implicitly convert to integers and other types.
+//                 LIMITATION: Two enumerations cannot share the same name.
+//                             No variable can have a name which is already in a plain enumeration.
     enum class TicketType {
         Adult, 
         Child

@@ -4,6 +4,13 @@
 
 //n! = n*(n-1)!
 //(n-1)! = (n-1)*(n-2)*(n-3)...*3*2*1
+//
+//5! = 5*(4*3*2*1)
+//5! = 5*4!
+//4! = 4*3!
+//3! = 3*2!
+//2! = 2*1! = 2
+//1! = 1
 unsigned factorialRecursion(unsigned x) {
     if (x > 2u) return x * factorialRecursion(x - 1);//the recursive case
     else return x;//the base case

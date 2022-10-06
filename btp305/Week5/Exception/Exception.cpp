@@ -39,4 +39,5 @@ int main() {
             cout << "Continuing ..." << endl;
         }
     } while (keepdividing);
+    return 0;
 }

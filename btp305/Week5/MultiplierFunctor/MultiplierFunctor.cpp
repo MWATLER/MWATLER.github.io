@@ -16,7 +16,7 @@ public:
 	double operator()(double _val1, double _val2) {
 		return _val1 * _val2;
 	}
-	double operator()() {
+	double operator()(void) {
 		return val1 * val2;
 	}
 };

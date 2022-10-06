@@ -16,18 +16,7 @@ void ReportAverageHD(const Student&);
 
 int main() {
 	const int NUM_STUDENTS = 4;
-	void (*ReportAveragePtr[])(const Student&) = {
-		ReportAverageLD,
-		ReportAverageHD
-	};
-	//An array of pointers can be written as
-	//Student* studentPtr[10];
-	//If you don't know the size of the array, you have a double pointer!!
-	//Student** studentPtr;
-	//
-	//char name[10];
-	//char *name;
-	//name=new char[size];
+	void (*ReportAveragePtr[])(const Student&) = { ReportAverageLD, ReportAverageHD };
 
 	Student student[NUM_STUDENTS] = { {"Henry Ford", 56, 67, 75},
 		{"Bette Midler", 62, 64, 71},
