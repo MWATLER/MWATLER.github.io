@@ -21,3 +21,138 @@
   <li><a href="../Beginning_Software_Engineering_WholeBook.pdf" target="_blank">Beginning Software Engineering</a> Chapter 6, Low-Level Design</li>
   <li><a href="Software_Architect's_Handbook_CH7_Software_Architecture_Patterns.pdf" target="_blank">Software Architect's Handbook Chapter 7</a>, Software Architecture Patterns</li>
 </ul>
+
+<h3>Database Design</h3>
+
+<p>There are many different kinds of databases that you can use to build an application. For example,
+  specialized kinds of databases store hierarchical data, documents, graphs and networks, key/value
+  pairs, and objects. However, the most popular kind of databases are relational databases. 
+  Relational databases are simple, easy to use, and provide a good set of tools for searching,
+  combining data from different tables, sorting results, and otherwise rearranging data.</p>
+
+<h4>Relational Databases</h4>
+
+<p>A relational database stores related data in tables. Each table holds records that contain pieces of
+  data that are related. Sometimes records are called tuples to emphasize that they contain a set of
+  related values.
+  The pieces of data in each record are called fields . Each field has a name and a data type. All the
+  values in different records for a particular field have that data type. 
+  The "relational" part of the term “relational database” comes from relationships defi ned between the
+  database's tables.</p>
+
+<p>One particularly useful kind of relationship is a foreign key relationship. A foreign key is a set of
+  one or more fields in one table with values that uniquely define a record in another table. For example,
+  the <b>CustomerId</b> field in the <b>Orders</b> table of Figure 6-5 below uniquely identifies a record 
+  in the <b>Customers</b> table in Figure 6.4.<br><br>
+<image src="TableRecords.jpg" alt="A Table's Records"></image><br><br>
+<image src="CustomerIdColumn.jpg" alt="The CustomerId Column"></image><br><br>
+The table containing the foreign key is often called the child table, and the table that contains the
+uniquely identified record is often called the parent table . In this example, the <b>Orders</b> table is the
+child table, and the <b>Customers</b> table is the parent table.
+</p>
+
+<p>A lookup table is a table that contains values just to use as foreign keys. For example, you could make a 
+  States table that lists the states that are allowed
+  by the application. If your company has customers only in New England, the
+  table might contain the values Maine, New Hampshire, Vermont, Massachusetts,
+  Connecticut, and Rhode Island.
+  The Customers table would be a child table connected to the States table with a
+  foreign key. That would prevent a user from adding a new customer in a state that
+  wasn't allowed.
+  In addition to validating user inputs, lookup tables allow the users to configure
+  the application. If you let users modify the States table, they can add new records
+  when they decide to work with customers in new states.</p>
+
+<p>Building a relational database is easy, but unless you design the database properly, you may
+  encounter unexpected problems. Those problems may be that:<br>
+<ul>
+  <li> Duplicate data can waste space and make updating values slow.</li>
+  <li> You may be unable to delete one piece of data without also deleting another unrelated piece
+  of data.</li>
+  <li> An otherwise unnecessary piece of data may need to exist so that you can represent some
+  other data.</li>
+  <li> The database may not allow multiple values when you need them.</li>
+</ul>
+The database-speak euphemism for these kinds of problems is anomalies.</p>
+
+<p>Database normalization is a process of rearranging a database to put it into a standard (normal)
+  form that prevents these kinds of anomalies. There are seven levels of database normalization that
+  deal with increasingly obscure kinds of anomalies. The following sections describe the fi rst three
+  levels of normalization, which handle the worst kinds of database problems.</p>
+
+<h4>First Normal Form</h4>
+
+<p>First normal form (1NF ) basically says the table can be placed meaningfully in a relational
+  database. It means the table has a sensible, down-to-earth structure. The official requirements 
+  for a table to be in 1NF are:
+<ol>
+<li>Each column must have a unique name.</li>
+<li>The order of the rows and columns doesn't matter.</li>
+<li>Each column must have a single data type.</li>
+<li>No two rows can contain identical values.</li>
+<li>Each column must contain a single value.</li>
+<li>Columns cannot contain repeating groups.</li>  
+</ol>
+In general, adding a number to field names to differentiate them is a bad idea. If
+the program doesn't need to differentiate between the two values, then adding a
+number to their names just creates a repeating group.
+The only time this makes sense is if the two fields contain similar items that truly
+have different meanings to the application. For example, suppose a space shuttle
+requires two pilots: one to be the primary pilot and one to be the backup in case the
+primary pilot is abducted by aliens. In that case, you could name the fields that store
+their names Pilot1 and Pilot2 because there really is a difference between them.
+Usually in cases like this, you can give the fields more descriptive names such as
+Pilot and Copilot .
+</p>
+
+<h4>Second Normal Form</h4>
+
+<p>A table is in second normal form ( 2NF ) if it satisfi es these rules:
+<ol>
+<li>It is in 1NF.</li>
+<li>All non-key fields depend on all key fields.</li>
+</ol>
+Without getting two technical, a key is a set of one or more fields that uniquely identifies a record. Any
+table in 1NF must have a key because 1NF Rule 4 says, “No two rows can contain identical values.” That
+means there must be a way to pick fields to guarantee uniqueness, even if the key must include every field.
+</p>
+
+<h4>Third Normal Form</h4>
+
+<p>A table is in third normal form (3NF ) if:
+<ol>
+<li>It is in 2NF.</li>
+<li>It contains no transitive dependencies.</li>
+</ol>
+  A transitive dependency is when a non-key field's value depends on another non-key field's value.
+  A major hint that there is a transitive dependency that there are lots
+  of duplicate values in different columns. Another way to think about this is that
+  there are “tuples” of data that go together.
+</p>
+
+<h4>Higher Levels of Normalization</h4>
+
+<p>Higher levels of normalization include Boyce-Codd normal form (BCNF), fourth normal form
+  (4NF), fifth normal form (5NF), and Domain/Key Normal Form (DKNF). 
+  Many database designs stop at 3NF because it handles most kinds of database anomalies without a
+  huge amount of effort. In fact, with a little practice, you can design database tables in 3NF from the
+  beginning, so you don't need to spend several steps normalizing them.
+  More complete levels of normalization can also lead to confusing database designs that may make
+  using the database harder and less intuitive, possibly giving rise to extra bugs and sometimes
+  reduced performance.
+</p>
+
+<p>One particular compromise that is often useful is to intentionally leave some data denormalized for
+  performance reasons. A classic example is in ZIP codes. ZIP codes and street addresses are related,
+  so if you know a street address, you can look up the corresponding ZIP code. For example, the ZIP
+  code for 1 Main St., Boston, MA is 02129-3786.<br>
+  Ideally, normalization would tell you to store only the street address and then use it to look up the
+  ZIP code as needed. Unfortunately, these relationships aren't as simple as, “All Main St. addresses in
+  Boston have the ZIP code 02129-3786.” ZIP codes depend on which part of the street contains the
+  address and sometimes even which side of the street the address is on. That means you can't build a
+  table to perform a simple lookup.</p>
+
+<p>You could build a much more complicated table to fi nd an address's ZIP code, perhaps with some
+  confusing code. Or you might use some sort of web service provided by the United States Postal Service.
+  Usually, however, developers just include the ZIP code as a separate field in the address. That means
+  there's a lot of “unnecessary”</p>
