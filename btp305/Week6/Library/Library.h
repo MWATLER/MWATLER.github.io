@@ -20,8 +20,8 @@ public:
 	}
 	std::string GetName() const { return name; }
 	void RegisterObserver(BookObserver* bObserver, void (*observer)(BookObserver* bObserver, Book::Type type)) {
-		bookObserver = bObserver;
-		onItemAdded = observer;
+		bookObserver = bObserver;//BookObserver::RegisterBook needs a pointer to a BookObserver object
+		onItemAdded = observer;//onItemAdded points to BookObserver::RegisterBook
 	}
 	Library& operator+=(const T& item) {
 		bool found = false;
@@ -46,12 +46,14 @@ public:
 					delete[] m_item;
 					m_item = tmp;
 					++m_count;
+					//onItemAdded points to BookObserver::RegisterBook
 					if(onItemAdded!=nullptr) onItemAdded(bookObserver, item.GetType());
 				}
 			}
 			else {
 				m_item[m_count] = item;
 				++m_count;
+				//onItemAdded points to BookObserver::RegisterBook
 				if (onItemAdded != nullptr) onItemAdded(bookObserver, item.GetType());
 			}
 		}
