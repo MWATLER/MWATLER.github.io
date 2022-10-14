@@ -66,7 +66,7 @@ public:
 		return m_item[idx];
 	}
 	~Library() {
-		if (m_item != nullptr) {
+		if (m_item != nullptr) {//MW: We actually no longer need this check
 			delete[] m_item;
 			m_item = nullptr;
 		}
