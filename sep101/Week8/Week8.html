@@ -1,11 +1,12 @@
-<h1>Week 8 - File Input/Output, Parsing</h1>
+<h1>Week 8 - File Input/Output, Parsing, An Introduction to Classes</h1>
 
 <h3>Introduction</h3>
-<p>This week we will review look at functions, data structures and passing arrays to functions.
-   We will look at file input/output and we will look at parsing.</p>
+<p>This week we will have an introduction to classes. We will also look at parsing and file input/output.</p>
 
 <h3>Videos</h3>
 <table>
+  <tr><td>Classes and Objects</td><td><a href="https://www.youtube.com/watch?v=iVLQeWbgbXs" target="_blank">C++ OOP (2020) - Introduction to classes and objects for beginners</a></td></tr>
+  <tr><td>Parsing</td><td><a href="https://www.youtube.com/watch?v=-7cSmcdMryo" target="_blank">How to parse a string in C (sscanf)</a></td></tr>
   <tr><td>File Input/Output</td><td><a href="https://www.youtube.com/watch?v=e-srF6c3TJ8" target="_blank">C Programming Tutorial for Beginners - C File I/O: Create, Open, Write and Close a File</a></td></tr>
   <tr><td></td><td><a href="https://www.youtube.com/watch?v=01QsW5_fuek" target="_blank">Intro to C Programming - File I/O Program</a></td></tr>
 </table>
@@ -29,6 +30,8 @@
 
 <h3>Sample Code</h3>
 <p><em>Student Marks</em></p>
+<p>This is a repeat of a problem we looked at in Week 7. This week we are going to transform the data structure and function prototypes into a class. The problem is 
+  restated here.</p>
 <p>We are given a problem where we want to record data for three students at a College. For each student we want to record the name, year of study, marks (up to 6 subjects), number of courses, and average. 
   We want to calculate the average for each student based on the sum of the marks divided by the number of courses. We want to be able to do this by pass-by-value and pass-by-address. At the end,
   we want to calculate the averages for all the students at once.</p>
@@ -75,6 +78,41 @@ implements a crude, object-oriented version of the above can be seen at: <a href
     </li>
 </ul>
 
+<!--<p><b>TODO: Make this a Lab!!</b></p>
+<p><em>Parsing a String with Pointers</em></p>
+<p>There are specialized function in our standard input/output library for parsings strings, but here we are going to parse a string from scratch using 
+  pointers. This is a good exercise in preparing for parsing other types of data, such as an ethernet packet from a network device.</p>
+<p>The format of the string we are going to parse is for book information. Data for a collection of books is found in a file <b>Books.txt</b> 
+  with the following format:<br> 
+  NAME;AUTHOR;YEAR OF PUBLICATION;PRICE;<br>
+  NAME;AUTHOR;YEAR OF PUBLICATION;PRICE;<br>
+  NAME;AUTHOR;YEAR OF PUBLICATION;PRICE;<br>
+  NAME;AUTHOR;YEAR OF PUBLICATION;PRICE;<br>
+  Etc...
+</p>
+<p>The following code reads and parses the information from <b>Book.txt</b> and prints it on the screen:<br>
+  <a href="StringParser/Book.txt" target="_blank">Book.txt</a>,
+  <a href="StringParser/Book.h" target="_blank">Book.h</a>,
+  <a href="StringParser/Book.cpp" target="_blank">Book.cpp</a> and
+  <a href="StringParser/BookMain.cpp" target="_blank">BookMain.cpp</a>.<br><br>
+  
+  
+The code assumes  <b>Book.txt</b> is 
+  in the same directory as your source code. The filename is passed through the command line. In order to 
+read something from the command line, you have to use the following format for the main function:<br>
+<b>int main(int argc, char* argv[])</b><br><br>
+<b>argc</b> are the number of arguments on the command line, including the program name, and <br>
+<b>argv[]</b> is an array of strings representing those arguments.<br><br>
+For instance, if the following were issued from the command line:<br>
+<b>BookMain.exe Book.txt</b>, then <b>argc=2</b> and <b>argv[0]="BookMain.exe"</b> and <b>argv[1]="Book.txt"</b>.<br><br>
+In Visual Studio, you can enter command line arguments as follows:
+<ul>
+  <li>Go to the <b>Solution Explorer</b> and right-click on the solution name</li>
+  <li>Click <b>Properties</b></li>
+  <li>Under <b>Configuration Properties</b> click <b>Debugging</b></li>
+  <li>Look for the field <b>Command Arguments</b> and in the empty space, enter <b>Book.txt</b></li>
+</ul>
+</p>-->
 
 <p><em>UDP Packet Parser</em></p>
 <p>This example is for those of you who want a challenge. Surprisingly, you know enough about C to perform a vital practice in industry, 

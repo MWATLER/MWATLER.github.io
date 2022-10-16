@@ -16,6 +16,7 @@
 <p><a href="../Assignments/Assignment1/Assignment1.html" target="_blank">Assignment 1</a>.</p>
 
 <h3>Midterm Review</h3>
+
 <p><em>College Rankings</em></p>
 <p>One thing high school graduates wonder is whether it is worth paying a lot of tuition to attend a particular higher learning institution. One thing that can be checked 
   is the employer satisfaction rating for a particular college or university. If one divides the employer satisfaction by the tuition, one can come up with a ratio to 
@@ -86,6 +87,22 @@ than by address, since no changes will be made to any object of type struct Coll
   <a href="TravelSimulator/Automobile.c" target="_blank">Automobile.c</a> and
   <a href="TravelSimulator/TravelSimulator.c" target="_blank">TravelSimulator.c</a>.
 </p>
+
+<p><em>Student Marks</em></p>
+<p>We are given a problem where we want to record data for three students at a College. For each student we want to record the name, year of study, marks (up to 6 subjects), number of courses, and average. 
+  We want to calculate the average for each student based on the sum of the marks divided by the number of courses. We want to be able to do this by pass-by-value and pass-by-address. At the end,
+  we want to calculate the averages for all the students at once.</p>
+<p>To resolve the above problem, first we have to find all the nouns/adjectives related to a student and group them in a structure. We see we need the student's name, year of study, an array of marks, 
+  the number of subjects, and the student's average. We have to decide the type for each of these variables.</p>
+<p>Now we have to find the verbs. We need to calculate a student's average by pass-by-value and pass-by-address. It would make sense to implement these in functions. The first could 
+  return the student's average taking in a student structure as argument. The student's average could then be assigned the return value of this function. In the second case where we
+  pass a student structure by address, the student's average could be set in the function itself, and the function could return an error status to indicate if everything went well. 
+  The third verb is calculating the average for all students. This could be done in a for-next loop where calculate average by address could be called for each student.</p>
+<ul>
+  <li>The data structure for the student and related function prototypes can be found in <a href="StudentMarks/Student.h" target="_blank">Student.h</a> and the function
+    definitions for each student can be found in <a href="StudentMarks/Student.c" target="_blank">Student.c</a>. The main program is
+    <a href="StudentMarks/StudentMain.c" target="_blank">StudentMain.c</a>.</li>
+</ul>
 
 <h3>Sample Code for Assignment 1</h3>
 <p><em>The Header Guard</em></p>
