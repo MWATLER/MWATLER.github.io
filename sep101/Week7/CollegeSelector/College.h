@@ -17,7 +17,7 @@ struct College {
 
 void utilClearInputBuffer();
 int CalculateSatisfactionToTuitionRatio(struct College* college);
-void DetermineRanking(struct College* college);
+void DetermineRanking(struct College* college, int size);
 void PrintReport(struct College college);
 
 #endif//_COLLEGE_H

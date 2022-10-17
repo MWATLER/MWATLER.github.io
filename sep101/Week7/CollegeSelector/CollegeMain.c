@@ -11,7 +11,7 @@ int main() {
 		char address[MAX_STR];
 		double tuition;
 		double employerSatisfaction;
-		double tuitionToRatingRatio;
+		double satisfactionToTuitionRatio;
 		int ranking;
 	};
 	*/
@@ -35,7 +35,8 @@ int main() {
 
 	if (ret == 0) {
 		//Get the ranking for each college.
-		DetermineRanking(college);
+		//pass through the array of colleges as well as the size of the array
+		DetermineRanking(college, NUM_COLLEGES);
 
 		//print out the information for each college
 		for (int i = 0; i < NUM_COLLEGES; ++i) {
