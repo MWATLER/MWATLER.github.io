@@ -61,7 +61,8 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
     <h1 id="sample-question-1">Sample Question #1</h1>
     <p>The code below contains <strong>five</strong> (5) syntactic errors under C++17 standard (errors that are caught by a compiler or generate crashes/undefined behaviour at runtime).</p>
     <pre>
-      <code class="language-cpp">01. // A.h
+      <code class="language-cpp">
+01. // A.h
 02. #ifndef A_H
 03. #define A_H
 04.
@@ -78,32 +79,21 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
 15.     double getValue() const { return m_val; }
 16. };
 17.
-18. decltype(A().getValue()) operator+=(double&amp; val, const A&amp; other);
-19.
-20. // "data" is an array of "N" elements of type "T"
-21. template &lt;typename T, double N&gt;
-22. T process(const T* data)
-23. {
-24.     T sum{};
-25.     for (const auto&amp; elem : data)
-26.         sum += elem;
-27.     return sum;
-28. }
-29. #endif
+18. // "data" is an array of "N" elements of type "T"
+19. template &lt;typename T, double N&gt;
+20. T process(const T* data)
+21. {
+22.     T sum{};
+23.     for (const auto&amp; elem : data)
+24.         sum += elem;
+25.     return sum;
+26. }
+27. #endif
 </code>
     </pre>
     <pre>
-      <code class="language-cpp">01. // A.cpp
-02. #include "A.h"
-03.
-04. decltype(A().getValue()) operator+=(double&amp; val, const A&amp; other)
-05. {
-06.     return val += other.getValue();
-07. }
-</code>
-    </pre>
-    <pre>
-      <code class="language-cpp">01. // main.cpp
+      <code class="language-cpp">
+01. // main.cpp
 02. #include &lt;iostream&gt;
 03. #include "A.h"
 04. using namespace std;
@@ -121,7 +111,8 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
     <p>Your task is to identify each one by the file name and line number and <strong>explain why the error appears, what C++ standard rule is broken, what C++ feature is misused and how the error should be fixed</strong>.  Your answer will be evaluated based on <strong>clarity of the text</strong> and the show of <strong>understanding of the concepts</strong> that are involved in the error.</p>
     <p>Write in the answer box your solution, using the following template:</p>
     <pre>
-      <code class="language-txt">Error 1:
+      <code class="language-txt">
+Error 1:
 
 
 
@@ -147,7 +138,8 @@ Error 5:
     <h2 id="test-question">Test Question</h2>
     <p>The code below contains <strong>one</strong> (1) syntactic errors under C++17 standard (that is caught by a compiler, generate memory leaks or crashes/undefined behaviour at runtime).</p>
     <pre>
-      <code class="language-cpp">01. // utilities.h
+      <code class="language-cpp">
+01. // utilities.h
 02. namespace utilities
 03. {
 04.     enum class Color
@@ -163,7 +155,8 @@ Error 5:
 </code>
     </pre>
     <pre>
-      <code class="language-cpp">01. // car.h
+      <code class="language-cpp">
+01. // car.h
 02. #include "utilities.h"
 03. using namespace utilities;
 04. 
@@ -179,7 +172,8 @@ Error 5:
 </code>
     </pre>
     <pre>
-      <code class="language-cpp">01. // main.cpp
+      <code class="language-cpp">
+01. // main.cpp
 02. #include &lt;string&gt;
 03. #include &lt;iostream&gt;
 04. #include &lt;iomanip&gt;
@@ -237,7 +231,8 @@ Error 5:
     <h2 id="test-question-1">Test Question</h2>
     <p>The code below contains <strong>one</strong> (1) syntactic errors under C++17 standard (that is caught by a compiler, generate memory leaks or crashes/undefined behaviour at runtime).</p>
     <pre>
-      <code class="language-cpp">01. #include &lt;iostream&gt;
+      <code class="language-cpp">
+01. #include &lt;iostream&gt;
 02. #include &lt;string&gt;
 03. 
 04. class A
