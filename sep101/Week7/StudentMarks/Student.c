@@ -18,19 +18,29 @@ bool CalculateAveragePassByAddress(struct Student* student) {
 	int num=0;
 	bool retVal = true;
 	for (int i = 0; i < student->numMarks && retVal; ++i) {
-		if (student->mark[i] < 0 || student->mark[i]>100) retVal = false;//invalid mark
-		runningTotal += student->mark[i];
-		++num;
+		                   // retVal is the same as retVal==true
+		                   //!retVal is the same as retVal==false
+		if (student->mark[i] < 0 || student->mark[i]>100) {
+			retVal = false;//invalid mark
+		}
+		else {
+			runningTotal += student->mark[i];
+			++num;
+		}
 	}
-	student->average = (double)runningTotal / num;//the average for the student is assigned here
+	if(retVal) student->average = (double)runningTotal / num;//the average for the student is assigned here
 	return retVal;//returns an error status
 }
 
-bool CalculateAverages(struct Student* student, int length) {
+bool CalculateAverages(struct Student* student, int length, double* average) {
 	bool retVal = true;
+	double runningTotal = 0;
 	for (int i = 0; i < length && retVal; ++i) {
-		retVal = CalculateAveragePassByAddress(&student[i]);
+//		retVal = CalculateAveragePassByAddress(&student[i]);
+		if (student[i].average < 0) retVal = false;
+		else runningTotal += student[i].average;
 	}
+	if(retVal) *average = runningTotal / length;
 	return retVal;
 }
 

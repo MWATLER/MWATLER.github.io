@@ -20,6 +20,7 @@ int main(void) {
 			printf("Enter the mark for course %d : ", j+1);
 			scanf("%d", &student[i].mark[j]);
 		}
+		CalculateAveragePassByAddress(&student[i]);
 		printf("\n");
 		while (getchar() != '\n');//clear the input buffer
 	}
@@ -37,11 +38,10 @@ int main(void) {
 		printf("\n");
 
 		//Calculate the average for all students
-		ret = CalculateAverages(student, NUM_STUDENTS);
+		double cumulativeAverage;
+		ret = CalculateAverages(student, NUM_STUDENTS, &cumulativeAverage);//struct Student student[NUM_STUDENTS];
 		if (ret) {
-			for (int i = 0; i < NUM_STUDENTS; ++i) {
-				printf("The average for %s in year %d is %.2lf\n", student[i].name, student[i].year, student[i].average);
-			}
+			printf("The average for all students is %.2lf\n", cumulativeAverage);
 		}
 	}
 

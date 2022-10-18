@@ -28,6 +28,12 @@ int main()
     car4.fuelEfficiency = 17.29;
     drive(&car4, 200.0);
 
+    //display the results
+    displayReport(car1);
+    displayReport(car2);
+    displayReport(car3);
+    displayReport(car4);
+    printf("\n");
     //Set fuel efficiency for highway driving then drive 300km
     printf("\nDriving 300km on the highway\n");
     car1.fuelEfficiency = 6.2;

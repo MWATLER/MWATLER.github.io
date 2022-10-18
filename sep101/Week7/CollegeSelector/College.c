@@ -10,12 +10,12 @@ int CalculateSatisfactionToTuitionRatio(struct College* college) {
 	return retVal;
 }
 
-void DetermineRanking(struct College* college) {
+void DetermineRanking(struct College* college, int size) {
 	//Get the ranking for each college.
 	//This can be done by assuming the rank is one, then incrementing rank whenever another college has a better employerSatisfaction
-	for (int i = 0; i < NUM_COLLEGES; ++i) {
+	for (int i = 0; i < size; ++i) {
 		college[i].ranking = 1;
-		for (int j = 0; j < NUM_COLLEGES; ++j) {
+		for (int j = 0; j < size; ++j) {
 			if (i != j) {//don't compare to yourself
 				if (college[i].satisfactionToTuitionRatio < college[j].satisfactionToTuitionRatio)
 					++college[i].ranking;

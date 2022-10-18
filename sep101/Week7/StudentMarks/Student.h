@@ -14,5 +14,5 @@ struct Student {
 };
 
 double CalculateAveragePassByValue(const struct Student* student);//effectively pass by value, faster than pass by value
-bool CalculateAveragePassByAddress(struct Student *student);
-bool CalculateAverages(struct Student *student, int length);
+bool CalculateAveragePassByAddress(struct Student *student);//preferred
+bool CalculateAverages(struct Student *student, int length, double* average);
