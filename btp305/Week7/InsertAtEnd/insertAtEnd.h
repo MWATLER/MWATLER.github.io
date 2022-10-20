@@ -23,6 +23,9 @@ public:
 		++size;
 		return m_val;
 	}
+	~InsertAtEnd() {
+		delete[] m_val;
+	}
 };
 
 #endif _INSERTATEND_H_

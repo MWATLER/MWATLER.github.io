@@ -4,7 +4,7 @@
 
 using namespace std;
 
-char* insertAtEnd     (const char arr[], size_t size, char elem){
+char* insertAtEnd(const char arr[], size_t size, char elem){
 	char* newArray = new char[size + 2];
     for (int i = 0; i < size; ++i) {
         newArray[i] = arr[i];
@@ -96,7 +96,7 @@ int main()
 
 	//Declare a function pointer that returns a float, but accepts a float and int as arguments
 	//This is a power function, that takes a float number, takes an int exponent, and returns a float
-	float (*powerPtr)(float num, int exp) = nullptr;
+//	float (*powerPtr)(float num, int exp) = nullptr;
 
     return 0;
 }

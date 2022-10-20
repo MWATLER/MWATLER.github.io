@@ -55,6 +55,7 @@ int main()
         arrC = insertAtEnd(arrC, 1, 'b');// ab\0
         arrC = insertAtEnd(arrC, 2, 'c');// abc\0
         cout << "arrC: " << arrC;
+        cout << endl << endl;
         delete[] arrC;
     }
 

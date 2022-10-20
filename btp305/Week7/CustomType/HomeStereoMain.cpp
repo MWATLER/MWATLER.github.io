@@ -13,9 +13,11 @@ int main() {
     strcpy_s(switch1.name, 20, "Switch 1");
     switch1.sState.stateAsBool = true;
     switch1.sType = StateType::boolean;
+
     strcpy_s(switch2.name, 20, "Switch 2");
     switch2.sState.stateAsChar = 'O';
     switch2.sType = StateType::character;
+    
     strcpy_s(switch3.name, 20, "Switch 3");
     switch3.sState.stateAsNum = 0;
     switch3.sType = StateType::number;

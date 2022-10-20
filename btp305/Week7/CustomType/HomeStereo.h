@@ -12,6 +12,8 @@ class HomeStereo {
 public:
 	HomeStereo(const Switch* theSwitches[], int num);
 	std::ostream& displayOutputState(std::ostream& os);
+	//missing the rule of 5
+	~HomeStereo();
 };
 
 

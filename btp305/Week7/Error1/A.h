@@ -4,9 +4,9 @@
 
 struct A
 {
-public:
+//public://MW: Not necessary
 	double m_val;
-public:
+//public://MW: Not necessary
 	A operator+=(const A& other)
 	{
 		this->m_val += other.m_val;
@@ -15,8 +15,6 @@ public:
 	double getValue() const { return m_val; }
 };
 
-decltype(A().getValue()) operator+=(double& val, const A& other);
-
 // "data" is an array of "N" elements of type "T"
 //template < typename T, double N>
 template < typename T, int N>
@@ -24,7 +22,7 @@ T process(const T* data)
 {
 	T sum{};
 //	for (const auto& elem : data)//MW: probably want to use N
-	for (int i = 0; i < N; ++i)//MW: probably want to use N
+	for (int i = 0; i < N; ++i)//MW: the more generic solution
 		sum += data[i];
 	return sum;
 }

@@ -8,7 +8,7 @@ using namespace std;
 HomeStereo::HomeStereo(const Switch* theSwitches[], int num) {
 	switches = new const Switch* [num];
 	for (int i = 0; i < num; ++i) {
-		switches[i] = theSwitches[i];
+		switches[i] = theSwitches[i];//these are addresses
 	}
 	numSwitches = num;
 }
@@ -37,4 +37,10 @@ ostream& HomeStereo::displayOutputState(ostream& os){
 	}
 
 	return os;
+}
+
+HomeStereo::~HomeStereo() {
+	//If we had used composition, we would have to delete each switch, then
+	//the array itself
+	delete[] switches;
 }
