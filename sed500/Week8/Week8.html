@@ -1,13 +1,20 @@
 <h1>Week 8 - Development</h1>
 
 <h3>Introduction</h3>
-<p>.</p>
+<p>One of the main goals for software architects is to design high-quality software
+  applications. There are a number of software design principles and best practices that can
+  be applied to achieve that goal.
+  Software architects can apply these principles and practices when designing software
+  architectures and encourage developers to use them in their implementations. These
+  principles and practices are used to improve quality, simplify maintenance, increase
+  reusability, find defects, and make software systems easier to test.</p>
 
 <h3>Videos</h3>
 <table>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+  <tr><td>Cohesion: </td><td><a href="https://www.youtube.com/watch?v=sxcwADhzi78" target="_blank">Cohesion | Software Engineering |</a></td></tr>
+  <tr><td>Coupling: </td><td><a href="https://www.youtube.com/watch?v=bhtFA2Iv7Wo" target="_blank">Coupling | Software Engineering |</a></td></tr>
+  <tr><td>Complexity: </td><td><a href="https://www.youtube.com/watch?v=X2FYGgOH1sQ" target="_blank">Managing complexity | Software fundamentals</a></td></tr>
+  <tr><td>Information Hiding: </td><td><a href="https://www.youtube.com/watch?v=L3unIDMYUbo" target="_blank">Information hiding</a></td></tr>
 </table>
 
 <h3>Workshop(s)</h3>
@@ -22,3 +29,443 @@
   <li><a href="Software_Architect's_Handbook_CH6_Software_Development_Principles_and_Practices.pdf" target="_blank">Software Architect's Handbook Chapter 6</a>, 
   Software Development Principles and Practices</li>
 </ul>
+
+<h3>Designing orthogonal software systems</h3>
+
+<p>In geometry, two Euclidean vectors are orthogonal if they are perpendicular (form a right
+  angle of 90 degrees). The two vectors meet at the origin point, but do not intersect. The two
+  vectors are independent of each other.</p>
+
+<p>Software that is well designed is orthogonal in that its modules are independent of each
+  other. Ideally, changes to one module in a software system should not require changes to
+  another module. Software systems will undergo many changes during their lifetime and
+  designing them with this in mind provides a number of benefits, including increased
+  productivity for those who work on them and lowered risk of introducing defects when
+  changes are made. Designing orthogonal systems may have higher upfront costs, but over
+  time, a highly maintainable and extendable system will be worth it.
+  Orthogonal systems are designed so that their elements are loosely coupled and highly
+  cohesive.</p>
+
+<h3>Loose coupling</h3>
+
+<p>Coupling is the degree to which a software module depends on another software module.
+  Coupling between modules is a measure of how closely connected they are, and it can
+  either be loose, sometimes described as low or weak, or it can be tight, sometimes referred
+  to as high or strong. The degree of coupling between modules reflects the quality of their
+  design.</p>
+
+<p>Software modules that are tightly coupled are more complex, which decreases their
+  maintainability. Tight coupling makes modifying the code more difficult because a change
+  in a tightly coupled module will likely require changes in other modules. This introduces a
+  higher degree of risk as there is a greater likelihood that a new defect could be introduced if
+  a software module is modified.</p>
+
+<p>It is also easy to engage in parallel development if the code is loosely coupled. One
+  developer can work on one part of the application independent of another developer who
+  is working on a different part of the application.</p>
+
+<h3>Types of coupling</h3>
+
+<p>There are different types of coupling. The following are details regarding those types, in
+  order of the tightest (least desirable) to loosest (most desirable) coupling. It should be noted
+  that it is possible for two modules to be coupled in more than one way. In those situations,
+  the coupling type is determined by the worst, or tightest, coupling type.</p>
+
+<h4>Content coupling</h4>
+
+<p>Content coupling is the highest type of coupling. It is considered so bad that it is also
+  referred to as pathological coupling. It occurs when one module directly references the
+  internal or private information in another module. For example, it exists when one module
+  accesses or changes private data in another module.
+  Modules should never be designed to have this type of coupling. If modules have content
+  coupling, they should be refactored so that there is a proper level of abstraction. The
+  modules should not directly rely on the internal workings of each other.</p>
+
+<h4>Common coupling</h4>
+
+<p>Common coupling, also known as global coupling, is a high level of coupling. This type of
+  coupling is highly undesirable. Although sometimes it is unavoidable, modules should be
+  designed to minimize the existence of this type of coupling.
+  Modules exhibit common coupling when they share the same global data, such as a global
+  variable. It is perfectly acceptable to share configuration data throughout an application.
+  However, as a general rule, if you are going to use other types of global data, it is better to
+  use something that has a fixed value, such as a constant, rather than a variable whose value
+  can vary at runtime.</p>
+
+<h4>External coupling</h4>
+
+<p>External coupling is another type of high coupling. It exists when multiple modules share
+  the same part of an environment that is external to the software. This could come in the
+  form of having to use an external data format, interface, communication format, tool, or
+  device.
+  Sometimes, external dependencies are imposed and unavoidable, but we should still seek
+  to limit the number of modules that have those dependencies. Doing so will ensure that if
+  the external dependency changes, only a limited number of modules are affected.</p>
+
+<h4>Control coupling</h4>
+
+<p>Control coupling is a moderate type of coupling. Two modules exhibit control coupling
+  when one module controls the internal logic of the other by passing it information. An
+  example of this is when a module passes a control flag to another module, which uses it to
+  control its flow.
+  This type of coupling may be acceptable, but an effort should be made to make it known
+  that the coupling exists so that the modules can be tested together. It is beneficial to detect
+  any problems with either of the modules earlier rather than later.</p>
+
+<h4>Stamp coupling (data-structured coupling)</h4>
+
+<p>Stamp coupling is a fairly low type of coupling. It is also known as data-structure coupling
+  because it occurs when modules share a composite data structure. By composite data
+  structure, we mean that it is data that has some internal structure to it, such as a record.
+  When a composite data structure is shared between two modules, some of the fields in the
+  data structure may not even be used. For example, a module passes a composite data
+  structure to another module, which then just uses one field in it.
+  It is similar to data coupling, except that the data shared is a composite data type rather
+  than primitive data values and that not all of the values shared may be used.</p>
+
+<h4>Data coupling</h4>
+
+<p>Data coupling occurs when two modules share some data which are just primitive data
+  values. It is another low type of coupling. A common type of data coupling is when a
+  module calls a method on another module, and inputs and outputs are shared in the form
+  of method parameters and the return value.</p>
+
+<p>When two modules need to interact, this is a common and acceptable type of coupling.
+  Unlike stamp collecting, where some of the values in the shared composite data structure
+  may not be used, all of the parameters in data coupling are used. If any parameters are not
+  needed, they should be removed.</p>
+
+<h4>Message coupling</h4>
+
+<p>Modules exhibit message coupling when one module calls a method on another and does
+  not send any parameters. The only coupling is on the name of the method, but nothing else.
+  It is the lowest type of coupling.</p>
+
+<h4>No coupling</h4>
+
+<p>There are, of course, situations where there is no coupling between modules. This is when
+  two modules have no direct communication at all. It is an ideal that allows the two modules
+  to be implemented, tested, and maintained independently.</p>
+
+<h3>The Law of Demeter (LoD) / principle of least knowledge</h3>
+
+<p>The Law of Demeter (LoD), or principle of least knowledge, is a design principle related
+to loose coupling. In order to minimize coupling between software modules, the principle
+can be followed when designing software.</p>
+
+<p>The principle follows the only talk to your friends idiom, which keeps coupling loose by
+limiting a module's communication with other modules. Ideally, a method should only call
+other methods in the same object, in objects that were passed into it, in direct component
+objects, in objects that it created/instantiated, or in objects in a global variable that are
+accessible.</p>
+
+<p>Another one of the tenets of LoD is that a software module should know as little as possible
+about other modules. This will ensure its independence from other modules, allowing
+coupling to remain loose.</p>
+
+<h3>Designing for loose coupling</h3>
+
+<p>During designs and implementations, your goal as a software architect should be to
+  minimize the amount of coupling that exists between modules. Modules should be
+  designed to be as independent as possible.</p>
+
+<p>Coupling typically affects the level of cohesion, so that loose coupling correlates with high
+  cohesion and tight coupling correlates with low cohesion.</p>
+
+<h3>High Cohesion</h3>
+
+<p>Cohesion is the degree to which the elements inside a module belong together. It is the
+  strength of the relationships of elements within a module, and how united they are in their
+  purpose. Cohesion is a qualitative measure of the consistency of purpose within a module.
+  There are different types of cohesion, and those that reflect a higher level of cohesion are
+  preferable. Highly cohesive modules have a single, well-defined purpose, and reflect a
+  better quality of design.</p>
+
+<p>Software modules with low cohesion are harder to maintain. If a module contains multiple
+  unrelated functions, changes to it are more likely to require changes in other modules. This
+  will require extra time and effort, not just in development, but also testing. The extra
+  complexity in modules with low cohesion make it more likely that defects may be
+  introduced when they are modified. They may also be harder to understand, making them
+  more difficult to modify.</p>
+
+<p>Reusability is lessened for modules with low cohesion. Modules with low cohesion,
+  performing many disparate functions, are less likely to be reused for other purposes. A
+  module that</p>
+
+<h3>Types of Cohesion</h3>
+
+<p>The level of cohesion in a module is represented by the type of cohesion. Let's examine the
+  different types of cohesion, from lowest (least desirable) to highest (most desirable).</p>
+
+<h4>Coincidental Cohesion</h4>
+
+<p>Coincidental cohesion occurs when elements in a module are grouped arbitrarily. There is
+  no relationship among the different elements, making it the lowest (worst) type of cohesion.
+  Sometimes, you will see this type of cohesion in a utilities or helpers class where a number of
+  unrelated functions have been placed together.</p>
+
+<p>Coincidental cohesion should be avoided and, if it is encountered in a module, the module
+  should be refactored. Each part of the module should be moved to an existing or new
+  module where it would make logical sense for it to exist.</p>
+
+<h4>Logical Cohesion</h4>
+
+<p>Modules exhibit logical cohesion when elements are grouped together because they are
+  related in some way logically. Even though the functionality of logically cohesive modules
+  might be of the same general category, they may be different in other ways. For this reason,
+  this type of cohesion is considered low. While better than coincidental cohesion, these types
+  of modules are not very cohesive.</p>
+
+<p>An example of logical cohesion would be a module that contains a set of functions that
+  handles I/O for the application. While they are related logically, the nature of the various
+  functions would be quite different. They would be more cohesive if each type of I/O was
+  handled by a separate module.</p>
+  
+<h4>Temporal Cohesion</h4>
+  
+<p>Temporal cohesion exists when the elements of a module are grouped together based on
+  when they are processed. This can occur when different elements are grouped together
+  simply because they need to be executed at a single moment in time. This is another type of
+  low cohesion.</p>
+
+<p>An example of temporal cohesion is grouping a bunch of elements together because they
+  are all related to system startup, system shutdown, or the handling of a system error. Even
+  though the elements are related temporally, they are only weakly related to each other. This
+  makes the module harder to maintain and reuse.
+  The elements should be grouped into different modules, with each module designed for a
+  single purpose.</p>
+    
+<h4>Procedural Cohesion</h4>
+  
+<p>A module exhibits procedural cohesion when its elements have been grouped together
+  because they always execute in a particular sequence. For example, payment processing for
+  a customer placing an order might involve particular steps being executed in a
+  particular sequence. Although the various parts are all related by the order of execution, some of the individual
+  activities are quite distinct from each other.
+  This type of cohesion is considered moderate. Although it is an acceptable level of cohesion,
+  it is not ideal. If possible, refactoring can be performed to improve the level of cohesion.</p>
+
+<h4>Communicational Cohesion</h4>
+
+<p>Communicational cohesion occurs when parts of a module are grouped together because
+  they use the same set of inputs and outputs. If a module has different elements that have
+  been grouped together because they access and modify the same data structure, it would
+  demonstrate communicational cohesion.</p>
+
+<p>For example, a data structure that represents the contents of a customer's shopping basket
+  might be used by a variety of elements in a single module. The elements might calculate
+  discounts, shipping, and taxes based on the same data structure.
+  This level of cohesion is moderate and usually considered acceptable.</p>
+  
+<h4>Sequential Cohesion</h4>
+  
+<p>Sequential cohesion exists when the different parts of a module are grouped together
+  because the output of one part serves as the input for another part. Modules of this type
+  have a moderate level of cohesion.
+  An example of a module that is sequentially cohesive would be one that is responsible for
+  formatting and validating a file. The output of an activity that formats a raw record</p>
+  
+<h4>Functional Cohesion</h4>
+  
+<p>Functional cohesion occurs when elements of a module are grouped together because they
+  are united for a single, well-defined purpose. All of the elements in the module work
+  together to fulfill that purpose. Functional cohesion in a module is ideal and is the highest
+  type of cohesion. Functional cohesion promotes the reusability of a module and makes it easier to
+  maintain. Examples of functionally cohesive modules include one that is responsible for
+  reading a particular file and one that is responsible for calculating shipping costs for an
+  order.
+</p>
+
+<h4>Design for High Cohesion</h4>
+
+<p>Software architects should design modules to have high cohesion. Each module should
+  have a single, well-defined purpose. The elements contained in the module should be
+  related and contribute to that purpose.
+  If there are auxiliary elements contained in a module that are not directly related to the
+  main purpose, consider moving them to either a new module or an existing module that
+  has the same purpose of the element being moved.
+  Cohesion and coupling are related in that high cohesion correlates with loose coupling and
+  low cohesion correlates with tight coupling.</p>
+
+<h3>Minimizing Complexity</h3>
+
+<p>Building software is inherently complex and a number of problems result from complexity.
+Higher levels of complexity in software:
+<ul>
+<li>Cause delays in schedules</li>
+<li>Lead to cost overruns</li>
+<li>May cause the software to behave in unintended ways or lead to an
+unanticipated application state</li>
+<li>May create security loopholes or prevent security issues from being discovered
+in a timely fashion</li>
+<li>Are a predictive measure of lower levels of some quality attributes, such as lower
+maintainability, extendibility, and reusability</li>
+</ul>
+In The Mythical Man-Month, Fred Brooks divides the problems facing software engineering
+into two categories, essential and accidental:<br>
+<em>"All software construction involves essential tasks, the fashioning of the complex
+conceptual structures that compose the abstract software entity, and accidental tasks, the
+representation of these abstract entities in programming languages and the mapping of
+these onto machine languages within space and speed constraints."</em>
+</p>
+
+<p>Accidental difficulties are problems that are just inherent to the production of software in
+  general. They are problems that software engineers can fix and may not even be directly
+  related to the problem they are trying to solve. Improvements in programming languages,
+  frameworks, design patterns, integrated development environments (IDEs), and software
+  development methodologies are just some examples of progress over the years in
+  eliminating or reducing accidental difficulties.</p>
+
+<p>Essential difficulties are the core problems that you are trying to solve and they can't
+  simply be removed to reduce complexity. Software development teams spend more time on
+  essential complexities than accidental ones.</p>
+
+<p>We try to manage and minimize the complexity, whether it is accidental or essential. As it
+  has probably become apparent by now, a recurring theme in this book is the importance of
+  managing and minimizing complexity. It has a direct relationship with the quality of the
+  software and is therefore a major focus for software architects.</p>
+
+<h3>KISS principle - "Keep It Simple, Stupid"</h3>
+
+<p>The KISS principle, which is an acronym for Keep It Simple, Stupid, has been used in
+  numerous contexts to convey the idea that systems generally work best if they are kept
+  simple. The principle is applicable to the design of software systems. A development team
+  should strive to not overcomplicate their solutions.</p>
+
+<h3>DRY - "Don't Repeat Yourself"</h3>
+
+<p>The DRY principle stands for Don't Repeat Yourself and strives to reduce duplication in a
+  codebase. Duplication is wasteful and makes a codebase unnecessarily larger and more
+  complex. This makes maintenance more difficult. When code that has been duplicated
+  needs to be changed, modifications are required in multiple locations. If the changes
+  applied everywhere are not consistent, defects may be introduced. Software architects and
+  developers should avoid duplication whenever possible.</p>
+
+<h4>Copy-and-Paste Programming</h4>
+
+<p>In poorly written codebases, code duplication often results from copy-and-paste
+  programming. This happens when a developer needs the exact same or very similar logic,
+  which exists somewhere else in the system, so they duplicate (copy and paste) the code.
+  This violates the DRY principle and lowers the quality of the code.
+  Copy-and-paste programming can sometimes be acceptable and serve a useful purpose.
+  Code snippets, which are small blocks of reusable code, may speed up development. Many
+  IDEs and text editors provide snippet management to make the use of snippets easier for
+  developers. However, beyond the appropriate application of snippets, it is usually not a
+  good idea to copy and paste your application code in multiple places.</p>
+
+<h4>Magic Strings</h4>
+
+<p>Magic strings are strings that appear directly in your code. Sometimes, these strings are
+  needed in multiple places and are duplicated, violating the DRY principle. Maintenance of
+  these strings can become a nightmare because if you want to change the value of the string,
+  you have to change it in multiple places. The problem is exacerbated when the string is
+  used, not just in multiple places within the same class, but within multiple classes.
+  There are many examples of magic strings, from exception messages, settings in
+  configuration files, parts of a file path, or a web URL.</p>
+
+<h4>How to Avoid Duplication</h4>
+
+<p>DRYness can be achieved by being mindful and taking action when appropriate. If you find
+  yourself copying and pasting code, or simply writing code that is identical or similar to
+  existing code, think about what you are trying to accomplish and how it can be made
+  reusable.
+  Duplication in logic can be eliminated by abstraction. This concept is referred to as the
+  abstraction principle (or the principle of abstraction). The principle is consistent with the
+  DRY principle and is a way to reduce duplication. The code that is needed in multiple
+  places should be abstracted out, and the locations that need it can then be routed through
+  the abstraction. Some refactoring may be necessary to make it generic enough to be reused,
+  but it is worth the effort. Once the logic is centralized, if it needs to be modified in the
+  future, perhaps to fix a defect or to enhance it in some way, you will be able to make the
+  changes in a single location.
+  As we saw in the case of magic strings, duplication with values can be eliminated by
+  placing the value in a central location, such as the declaration of a constant.</p>
+
+<h3>Information Hiding</h3>
+
+<p>Information hiding is a principle that advocates for software modules to be designed such
+  that they hide implementation details from the rest of the software system. Information 
+  hiding decouples the internal workings of a module from the places in the
+  system that call it. The details of a module that do not need to be revealed should be made
+  inaccessible. Information hiding defines constraints related to what properties and
+  behaviors can be accessed. Callers interact with the module's public interface and are
+  protected from the implementation details.</p>
+
+<h4>Reasons for Information Hiding</h4>
+
+<p>Information hiding is useful at all levels of design. Only exposing the details that need to be
+  known reduces complexity, which improves maintainability. Unless you are specifically
+  interested in the internal details, you do not need to concern yourself with them.
+  Another one of the key reasons for information hiding is to hide design decisions from the
+  rest of the software system. This is particularly beneficial if the design decision might
+  change. By hiding a design decision, if the decision needs to be changed, it minimizes the
+  amount and extent of the modifications that will be necessary. It provides the flexibility to
+  make changes later if it is necessary to do so.</p>
+
+<h4>What Needs to be Exposed/Hidden?</h4>
+
+<p>You and your team should really think about the properties and behaviors (methods) that
+  need to be exposed for a module. Everything else can be hidden. Through the use of a
+  public interface, we can define what we want to make available.
+  Information hiding assists with defining public interfaces. Rather than lazily exposing most
+  of a class, it forces us to consider what really needs to be made public. The public interface
+  defines a contract that the implementation must follow, and allows others to know what is
+  available. It is up to the implementation to decide how it is accomplished.</p>
+
+<h3>YAGNI - "You Aren't Gonna Need It"</h3>
+
+<p>YAGNI, which stands for You Aren't Gonna Need It, or You Ain't Gonna Need It, is a
+  principle from the software development methodology of Extreme Programming (XP). XP
+  is one of the first agile methods and was the dominant one until the rise of the popularity of
+  Scrum.</p>
+
+<h4>Avoid Over-Engineering a Solution</h4>
+
+<p>The idea behind YAGNI is that you should only implement functionality when you need it
+  and not just because you think you may need it some day. 
+  Following the YAGNI principle helps you to avoid over-engineering a solution. You don't
+  want to spend time on future scenarios that are unknown. The problem with implementing
+  a feature that you think might eventually be needed is that quite often the feature ends up
+  not being needed or the requirements for it change.
+  Code that is not written equates to time and money that is saved. Spending time and
+  money on a feature you don't need takes away from time and money you could have spent
+  on something that you do need. Resources are finite, and using them on something that is
+  unnecessary is a waste. As was the case with code duplication, adding unnecessary logic to
+  an application increases its size and complexity, which reduces maintainability.</p>
+
+<h4>Situations where YAGNI Doesn't Apply</h4>
+
+<p>YAGNI applies to presumptive features, as in functionality that is not currently needed. It
+  does not apply to code that would make the software system easier to maintain and modify
+  later. In fact, following YAGNI means you may be changing the system later to add a
+  feature, so the system should be well designed for this purpose. If a software system is not
+  maintainable, making changes later may be difficult.
+  You may come across times where, in hindsight, a change made sooner would have
+  prevented more expensive changes later. This may be particularly true for software
+  architects if the change is architecture related. Design decisions made for architecture are
+  among the earliest decisions made, and having to change them later can be costly.</p>
+
+<h3>Separation of Concerns (SoC)</h3>
+
+<p>Concerns are the different aspects of functionality that the software system
+  provides. Separation of Concerns (SoC) is a design principle that manages complexity by
+  partitioning the software system so that each partition is responsible for a separate concern,
+  minimizing the overlap of concerns as much as possible.</p>
+
+<p>Following the principle involves decomposing a larger problem into smaller, more
+  manageable concerns. SoC reduces complexity in a software system, which reduces the
+  effort needed to make changes and improves the overall quality of the software.
+  When the DRY principle is followed, and logic is not repeated, a SoC is usually a natural
+  result as long as the logic is organized properly.</p>
+
+<p>SoC is a principle that can be applied to multiple levels in a software application. At the
+  architecture level, software applications can follow a SoC by separating different logic such
+  as user-interface functionality, business logic, and infrastructure logic. 
+  We can apply SoC at a lower level, such as with classes. If we were providing order
+  processing functionality in a software system, the concern of validating credit card
+  information shouldn't exist in the same place as the concern for updating inventory. They
+  are distinct concerns that should not be placed together.</p>
+<p>An example of separating concerns by language in web programming is Hypertext
+  Markup Language (HTML), Cascading Style Sheets (CSS), and JavaScript. They
+  complement each other with one being focused on the content of web pages, one for the
+  presentation, and one for the behavior.</p>
+  
