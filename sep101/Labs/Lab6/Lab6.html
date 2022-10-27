@@ -1,141 +1,78 @@
-<h2>SEP101 – Lab 6: Corporate Information Database Access</h2>
+<h2>SEP101 - Lab 6: Parsing a Data Stream</h2>
 
 <h3>Due: November 11, 2022</h3>
 
-<p>This lab will test your ability to use structures, arrays and files.</p>
+<p>This lab will test your ability to parse data into a structure.</p>
 
-<h3>The Corporate Information</h3>
+<h3>The Book Information</h3>
 
-<p>A corporation maintains a database of employee information consisting of each employee's name, position, salary and age. The corporation wants to also keep track 
-    of some basic statistics such as the average salary, the average age, the maximum salary, and which employee has the maximum salary. Code for populating the 
-    corporate information structure has already been presented in the lecture of Week 8. Now it is time to add some database access functions.</p>
+<p>A text file contains information about a set of books. The token for separating information for each book is the colon <b>;</b>.
+    There is a separate line for each book entry.
+Each book in this text file has a name, an author, a year of publication and a price. Your mission is to extract this information from the file 
+and store it somewhere in your program. Once you have completed the extraction, you are to print out information for each of the books.</p>
 
-<h3>The Problem</h3>
-<p>We want to give the user the ability to perform the following on the database:</p>
-<ol>
-    <li>Get employee information by employee name</li>
-    <li>Get employee information for all employees</li>
-    <li>Correct an employee name given the employee name</li>
-    <li>Correct an employee age given the employee name</li>
-    <li>Change an employee position given the employee name</li>
-    <li>Change an employee salary given the employee name</li>
-    <li>Commit all changes to the database (write to the file EmployeeDB.txt)</li>
-</ol>
-<p>The user should also have the choice to exit the program.</p>
+<h3>Data Format</h3>
+<p>Information for each book is stored as follows:<br>
+    <b>NAME;AUTHOR;YEAR;PRICE;</b></p>
+<p>Note that the book's name and author might consist of many strings.
+    The text file containing all book information can be found at 
+    <a href="Book.txt" target="_blank">Book.txt</a>.<br><br> The data stored there is:<br>
+    <b>In Search of Lost Time;Marcel Proust;1913;17.99;<br>
+        Ulysses;James Joyce;1904;21.95;<br>
+        Don Quixote;Miguel de Cervantes;1605;21.49;<br>
+        One Hundred Years of Solitude;Gabriel Garcia Marquez;1982;28.09;<br>
+        The Great Gatsby;F. Scott Fitzgerald;1925;10.99;<br>
+        Moby Dick;Herman Melville;1851;6.23
+    </b>
+    </p>
 
 <h3>Complete the Code</h3>
-<p>The complete code for corporation information has been given to you with eight empty functions. You are to 
-    complete these functions based on their prototype and embedded instructions.
-    The data structure for the employee can be found in <a href="EmployeeInfo.h" target="_blank">EmployeeInfo.h</a>. The employee database can be found in the 
-    file <a href="EmployeeDB.txt" target="_blank">EmployeeDB.txt</a>.
-     The data structure for corporate information and related function prototypes can be found in <a href="CorporateInfo.h" target="_blank">CorporateInfo.h</a>
-     and the function definitions for the corporation can be found in <a href="CorporateInfo.c" target="_blank">CorporateInfo.c</a>. The main program is
-    <a href="CorporateInfoMain.c" target="_blank">CorporateInfoMain.c</a>.<br>
-    <b>Complete all eight incomplete functions inside <a href="CorporateInfo.c" target="_blank">CorporateInfo.c</a></b>. Some utility functions have been 
-    provided to facilitate data input from the keyboard.</p>
+<p>Three files have been provided for you: 
+    <a href="Book.h" target="_blank">Book.h</a>,
+    <a href="Book.cpp" target="_blank">Book.cpp</a> and
+    <a href="BookMain.cpp" target="_blank">BookMain.cpp</a>.
+<ul>
+    <li><b>Book.h</b> has some useful constants. You have to create a class or structure of type <b>Book</b>.</li>
+    <li><b>Book.cpp</b> has some useful suggestions on how to extract a string from a stream of data. In extracting a string, 
+    you are not allowed to use any of the C++ libraries in doing so. You are to use pointers only.</li>
+    <li><b>BookMain.cpp</b> has been started for you. Please complete the <b>TODO</b> sections.</li>
+</ul>
+</p>
 
-<p>Some sample code on how to handle invalid keyboard entries for an integer and double float can be seen at 
+<p>Unrelated to this lab is some sample code on how to handle invalid keyboard entries for an integer and double float can be seen at 
     <a href="GetValue/GetValue.c" target="_blank">GetValue.c</a>.</p>
 
 <h3>Sample Run</h3>
 
-<p>A sample run for some user inputs is as follows:<br><br>
+<p>A sample run is as follows (be sure to format your output):<br><br>
 <pre>
-    The average salary is $85083.33
-    The average age is 40.58 years
-    The maximum salary is $110000.00.
-    This salary belongs to Kumar Swamy, Software Architect, age 44.00.
-    (Press Enter to continue)
-</pre>
-<p>Pressing enter will clear the screen then you will see:</p>
-<pre>
-    1. Get Employee Information
-    2. Get All Employee Information
-    3. Correct Employee Name
-    4. Correct Employee Age
-    5. Change Employee Position
-    6. Change Employee Salary
-    7. Commit to database
-    0. Exit
+                               BOOK INFORMATION
 
-    choice (0-7):
-</pre>
-<p>Pressing 1 to get employee information for Carol Smith will display the following:</p>
-<pre>
-    1. Get Employee Information
-    2. Get All Employee Information
-    3. Correct Employee Name
-    4. Correct Employee Age
-    5. Change Employee Position
-    6. Change Employee Salary
-    7. Commit to database
-    0. Exit
-    
-    choice (0-7): 1
-    Enter the employee's full name: Carol Smith
-    Carol Smith, Project Manager, is 39.00 years old and has a salary of 99000.00
-    (Press Enter to continue)    
-</pre>
-<p>Pressing enter will clear the screen. Pressing 3 to correct the name of Wendell Chu results in the following:</p>
-<pre>
-    1. Get Employee Information
-    2. Get All Employee Information
-    3. Correct Employee Name
-    4. Correct Employee Age
-    5. Change Employee Position
-    6. Change Employee Salary
-    7. Commit to database
-    0. Exit
+       In Search of Lost Time             Marcel Proust   1913  $17.99
+                      Ulysses               James Joyce   1904  $21.95
+                  Don Quixote       Miguel de Cervantes   1605  $21.49
+One Hundred Years of Solitude    Gabriel Garcia Marquez   1982  $28.09
+             The Great Gatsby       F. Scott Fitzgerald   1925  $10.99
 
-    choice (0-7): 3
-    Enter the employee's full name: Wendell Chu
-    Enter the employee's new full name: Xian Chu
-    (Press Enter to continue)
-</pre>
-<p>Pressing enter will clear the screen. Pressing 6 to change an employee's salary results in the following:</p>
-<pre>
-    1. Get Employee Information
-    2. Get All Employee Information
-    3. Correct Employee Name
-    4. Correct Employee Age
-    5. Change Employee Position
-    6. Change Employee Salary
-    7. Commit to database
-    0. Exit
-    
-    choice (0-7): 6
-    Enter the employee's full name: Elizabeth Doe
-    Enter the employee's new salary: 98000
-    (Press Enter to continue)    
-</pre>
-<p>Pressing 7 to commit the changes to the database will result in the following:</p>
-<pre>
-    1. Get Employee Information
-    2. Get All Employee Information
-    3. Correct Employee Name
-    4. Correct Employee Age
-    5. Change Employee Position
-    6. Change Employee Salary
-    7. Commit to database
-    0. Exit
-    
-    choice (0-7): 7
-    Database committed!
-    (Press Enter to continue)    
-</pre>
-<p>You can now observe the changes in the file <b>EmployeeDB.txt</b>.</p>
-</p>
+</pre></p>
+
 <p>Be sure to document your code with the file name, your name and student number. Add comments throughout the code where necessary.</p>
+
+<p>The solution to a sample problem has been given to assist you with this lab. The scenario is a server that receives a stream of packets from 
+    the network, parses the data, and forwards the data on to the destination. The server maintains a list of clients and their IP addresses 
+    (more on this next year). It receives a packet that identifies the sender, the destination, the length of the data, and the data itself.
+    The server parses this data, then creates a send packet containing the sender, the destination IP address, the length of the data, and
+    the data itself. Usually with a server one thread tends to receiving packets and another tends to sending them out. The code can be seen at:<br>
+    <a href="Server/Server.h" target="_blank">Server.h</a> and
+    <a href="Server/ServerMain.cpp" target="_blank">ServerMain.cpp</a>.
+</p>
 
 <h3>Questions:</h3>
 <ol>
-    <li>Data members which are related are grouped into a data structure. What about functions that act on that data? Would it be convenient to somehow 
-        group functions that act on a data structure with that data structure somehow? Give reasons why or why not.
-    </li>
-    <li>If you pass an array to a function by address, is it possible for the function to know the length of the array? If not, how could we tell 
-        the function the length of the array?
-    </li>
-    <li>Databases are based on a schema. This is a schematic of how data is stored. What would be the schema for employee information?</li>
+    <li>There already exist many useful functions in the C++ input/output libraries for parsing text. Explain how you
+        might use them in the scenario presented in this lab.</li>
+    <li>This lab presented a stream of data stored in a text file. Can you name 2 other situations where you might have 
+        to parse streaming data?</li>
 </ol>
 
 <h3>Lab Submission:</h3>

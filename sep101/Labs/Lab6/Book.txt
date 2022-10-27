@@ -1,0 +1,6 @@
+In Search of Lost Time;Marcel Proust;1913;17.99;
+Ulysses;James Joyce;1904;21.95;
+Don Quixote;Miguel de Cervantes;1605;21.49;
+One Hundred Years of Solitude;Gabriel Garcia Marquez;1982;28.09;
+The Great Gatsby;F. Scott Fitzgerald;1925;10.99;
+Moby Dick;Herman Melville;1851;6.23
