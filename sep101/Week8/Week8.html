@@ -78,41 +78,15 @@ implements a crude, object-oriented version of the above can be seen at: <a href
     </li>
 </ul>
 
-<!--<p><b>TODO: Make this a Lab!!</b></p>
-<p><em>Parsing a String with Pointers</em></p>
-<p>There are specialized function in our standard input/output library for parsings strings, but here we are going to parse a string from scratch using 
-  pointers. This is a good exercise in preparing for parsing other types of data, such as an ethernet packet from a network device.</p>
-<p>The format of the string we are going to parse is for book information. Data for a collection of books is found in a file <b>Books.txt</b> 
-  with the following format:<br> 
-  NAME;AUTHOR;YEAR OF PUBLICATION;PRICE;<br>
-  NAME;AUTHOR;YEAR OF PUBLICATION;PRICE;<br>
-  NAME;AUTHOR;YEAR OF PUBLICATION;PRICE;<br>
-  NAME;AUTHOR;YEAR OF PUBLICATION;PRICE;<br>
-  Etc...
+<p><em>Packet Parser</em></p>
+<p>A simple packet is parsed in this example. The data is a stream of integers with the following format:<br>
+packet_number, packet_length, data1, data2,...<br><br>
+Our program parses the packet and puts the data into a structure. The code is seen at:
+<a href="Packet/PacketInfo.h" target="_blank">PacketInfo.h</a> and 
+<a href="Packet/PacketInfoMain.cpp" target="_blank">PacketInfoMain.cpp</a>.<br><br>
+Note in this example a pointer to integer is used instead of an array of integers. See the bottom 
+of <a href="Packet/PacketInfoMain.cpp" target="_blank">PacketInfoMain.cpp</a> for an explanation.
 </p>
-<p>The following code reads and parses the information from <b>Book.txt</b> and prints it on the screen:<br>
-  <a href="StringParser/Book.txt" target="_blank">Book.txt</a>,
-  <a href="StringParser/Book.h" target="_blank">Book.h</a>,
-  <a href="StringParser/Book.cpp" target="_blank">Book.cpp</a> and
-  <a href="StringParser/BookMain.cpp" target="_blank">BookMain.cpp</a>.<br><br>
-  
-  
-The code assumes  <b>Book.txt</b> is 
-  in the same directory as your source code. The filename is passed through the command line. In order to 
-read something from the command line, you have to use the following format for the main function:<br>
-<b>int main(int argc, char* argv[])</b><br><br>
-<b>argc</b> are the number of arguments on the command line, including the program name, and <br>
-<b>argv[]</b> is an array of strings representing those arguments.<br><br>
-For instance, if the following were issued from the command line:<br>
-<b>BookMain.exe Book.txt</b>, then <b>argc=2</b> and <b>argv[0]="BookMain.exe"</b> and <b>argv[1]="Book.txt"</b>.<br><br>
-In Visual Studio, you can enter command line arguments as follows:
-<ul>
-  <li>Go to the <b>Solution Explorer</b> and right-click on the solution name</li>
-  <li>Click <b>Properties</b></li>
-  <li>Under <b>Configuration Properties</b> click <b>Debugging</b></li>
-  <li>Look for the field <b>Command Arguments</b> and in the empty space, enter <b>Book.txt</b></li>
-</ul>
-</p>-->
 
 <p><em>UDP Packet Parser</em></p>
 <p>This example is for those of you who want a challenge. Surprisingly, you know enough about C to perform a vital practice in industry, 
