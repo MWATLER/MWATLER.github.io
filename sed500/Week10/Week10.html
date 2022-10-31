@@ -19,5 +19,271 @@
 <h3>Lecture Material</h3>
 <ul>
   <li><a href="../Beginning_Software_Engineering_WholeBook.pdf" target="_blank">Beginning Software Engineering</a> Chapter 8, Testing</li>
+  <li><a href="Software_Architect's_Handbook_CH6_Software_Development_Principles_and_Practices.pdf" target="_blank">Software Architect's Handbook Chapter 6</a>, Software Development Principles and Practices</li>
   <li><a href="Software_Architect's_Handbook_CH10_Performance_Considerations.pdf" target="_blank">Software Architect's Handbook Chapter 10</a>, Performance Considerations</li>
 </ul>
+
+<h3>Testing Goals</h3>
+
+<p>Ideally you would sit down, write code that perfectly satisfies the requirements, and you'd
+  be done. Unfortunately that rarely happens. More often than not, the first attempt at the
+  software satisfies some but not all the requirements. It may also incorrectly handle situations
+  that weren't specified in the requirements. For example, the code may not work in every
+  possible situation.
+  That's where testing comes in. Testing lets you study a piece of code to see whether it meets the
+  requirements and whether it works correctly under all circumstances. To get a complete picture of 
+  how a piece of code performs, you can carry out several different kinds of tests using a variety 
+  of techniques. It is worth knowing however that it's not always
+  worth removing every single bug from a program. Instead the goal is often to reduce the number
+  bugs and their frequency of occurrence so that users can get their jobs done with a minimum of
+  annoyance.</p>
+
+<h4>Reasons Bugs Never Die</h4>
+
+<p>Simply put, a bug is a flaw in a program that causes it to produce an incorrect result or to behave
+  unexpectedly. Bugs are generally evil (although occasionally they make games more fun), but it's
+  not always worth your effort to try to remove every bug. Removing some bugs is just more trouble
+  than it's worth.</p>
+
+<p>Finding the first few bugs in a newly written piece of software is relatively easy (and therefore
+  cheap). After a few months of testing, finding bugs may become extremely difficult. At some point,
+  finding the next bug would cost you more than you'll ever earn by selling the software. 
+  You might delay a release to fix high-profile bugs, but if the remaining bugs aren't too bad, you
+  might be forced to release before you would like.</p>
+
+<p>Sometimes a bug fix might have undesirable consequences. For example, suppose you're building
+  a drawing application and the tool that draws spirals isn't saving the spirals' colors correctly. You
+  could fix it, but that would require changing the format of the saved picture files. That would force
+  the users to convert their data files. In this example, it might be better to leave the spiral-saving code unfixed for now and include
+  a fix in the next major release. Users expect some pain in major releases, so you might get away
+  with it then.</p>
+
+<p>If you just released a version of a program, it may be too soon to give the users a new patch to fix a
+  minor bug. Users won't like you if you release new bug fixes every 3 days. As a rule of thumb:
+<ul>
+<li>If a bug is a security flaw, release a patch immediately, even if you just released a patch
+  yesterday. (If you did release a patch yesterday, you better be sure the new patch fixes things
+  correctly! Your reputation is at stake.) Include a note explaining how wonderful you are for
+  protecting the users' valuable data.</li>
+<li>If a bug makes users swear at your program more than once a day, release a patch as soon as
+  possible (as often as monthly). Include a profuse apology.</li>
+<li>If a bug is annoying enough to make users smirk at your program occasionally, fix it in a
+  minor release (as often as twice a year). Include a huge fanfare about how great you are for
+  looking after the users' needs.</li>
+<li>If a bug is just a nice-to-have new feature or a performance improvement, fix it in the next
+  major release (at most once per year). Explain how responsive you are and that the users'
+  needs are your number one concern.</li>
+</ul>
+  Too many releases will annoy users, so you need to weigh the benefit of any bug patch against the
+  inconvenience.</p>
+
+<p>Over time, some features may become less useful. Eventually they may go away entirely. In that
+  case, it may be better to just let the feature die rather than spending a lot of time fixing it.</p>
+
+<p>Sometimes users think a feature is a bug when actually they just don't understand what the program
+  is supposed to do. This is really a problem of user education. Sometimes the documentation isn't correct and
+  sometimes it's missing entirely. Sometimes the user isn't willing to read all the way through both
+  paragraphs of documentation and see that the feature is clearly described. If the documentation is 
+  incomplete or unclear, this is a “documentation bug” that you can fix the
+  next time you release a new version of the documentation. You can also greatly decrease this problem by 
+  using a good user interface design. If the application
+  groups features logically so users can fi nd them easily, the users won't complain that a feature
+  is missing when it isn't. If features are named clearly so it's obvious what they do, users won't
+  complain that a feature doesn't do what they think it's supposed to do.</p>
+
+<p>When you fix a bug, there's a chance that you'll fix it incorrectly, so your work doesn't actually help.
+  There's also a chance that you'll introduce one or more new bugs when you fix a bug.
+  In fact, you're significantly more likely to add a bug to a program when you're fixing a code than
+  when you're writing new code from scratch. When you write new code, you (hopefully) understand
+  what you want the code to do and how it should work. When you're fixing code sometime later, you
+  don't have the same level of understanding.</p>
+
+<h4>Which Bugs to Fix</h4>
+
+<p>ere may be some good reasons not to fix every bug, but in general bugs are bad, so you should
+  remove as many of them as possible. So how do you decide which bugs to fix and which to put in the
+  “fix later” category?
+  To decide which bugs you should fix, you should use a simple cost/benefit analysis to prioritize
+  them. For each bug, you should evaluate the following factors.
+<ul>
+<li>Severity —How painful is the bug for the users? How much work, time, money, or other
+  resources are lost?</li>
+<li>Work-arounds —Are there work-arounds?</li>
+<li>Frequency —How often does the bug occur?</li>
+<li>Difficulty —How hard would it be to fix the bug? (Of course, this is just a guess.)</li>
+<li>Riskiness —How risky would it be to fix the bug? If the bug is in particularly complex code,
+  fixing it may introduce new bugs.</li>
+</ul>
+  After you evaluate all the bugs, you can assign them priorities. Note that you may want the
+  priorities to change over time. If your next release is a long time away, you can focus on the most
+  severe bugs without work-arounds. If your time is limited, you can focus on the least risky bugs so
+  that you don't break anything else before the next release.</p>
+
+<h3>Unit Testing</h3>
+
+<p>Testing is one of those things that some developers do not enjoy doing, even though it is
+  essential to develop high-quality software applications. Developers should test early and
+  often, which is a practice of many agile software development methodologies.
+  If the practice of writing and executing unit tests is not already part of the organization,
+  software architects should institute the practice.</p>
+
+<p>Unit testing is the practice of testing the smallest testable units of a software system, such
+  as methods, to ensure that they are working properly. It plays an important role in
+  increasing the quality of your software. Functionality in a software system is decomposed
+  into discrete, testable behaviors that are then tested as units.</p>
+
+<p>Some of the principles we have discussed, such as creating loosely coupled code, following
+  principles such as DRY, SoC, and single responsibility, and using techniques such as DI,
+  create code that is independent and decoupled from dependencies. These qualities make
+  our code testable and allow us to focus a unit test on a single unit.</p>
+  
+<h4>Atomic</h4>
+
+<p>Unit tests should only test a single assumption about a small piece of functionality. This
+  assumption should focus on a behavior of the unit being tested, with the unit typically
+  being a single method. Therefore, multiple tests are necessary to check all of the
+  assumptions for a given unit. If you are testing multiple assumptions in a single test or
+  calling multiple methods in a single test, the scope of your unit test is probably too large.</p>
+
+<h4>Isolated and independent</h4>
+
+<p>Each unit test should have the ability to be run independently of other tests and in any
+  order. If tests are isolated and independent, it should be possible to execute any unit test at
+  any time.
+  Unit tests should not depend on anything except the class we are testing. It should not rely
+  on other classes, nor should it depend on things such as connecting to a database, using a
+  hardware device, accessing files on a file system, or communicating across a network.
+  With a testing framework and a DI framework, we can mock dependencies for our unit
+  tests. A mock object is a simulated object that is instantiated, perhaps with the help of a
+  testing/mocking framework, that mimics the behaviors of the real object. By mocking
+  objects for the dependencies of the class being tested, we keep the unit test independent of
+  other classes. We can control the mock and specify what it will return based on some input.</p>
+
+<h4>Arrange</h4>
+
+<p>In this section of the unit test method, you arrange any preconditions and inputs for the test.
+  This includes initializing values and setting up mock objects.
+  Depending on the unit test framework and programming language that you are using,
+  some of them provide a way to specify methods that will execute prior to the execution of
+  the unit tests for that test class. This allows you to centralize arrangement logic that you
+  want to execute prior to the execution of all of your tests.
+  However, each unit test method should have an arrange section where you are performing
+  initialization for that particular test.</p>
+
+<h4>Naming conventions for unit tests</h4>
+
+<p>When naming your unit test classes and methods, you should follow a naming convention.
+  This provides not just consistency, but allows your tests to be a form of documentation.
+  Unit tests are intention-revealing in that they describe the expected behavior. If meaningful
+  names are provided, everyone can know something about the purpose of the test class and
+  its methods just by looking at the names.</p>
+
+<h4>Code coverage for unit tests</h4>
+
+<p>Code coverage is a measure of how much of the source code is being covered by tests.
+  Many tools exist that will help you to calculate code coverage. Software architects should
+  stress the importance of aiming for exhaustive test coverage to ensure that all code paths
+  are tested.
+  Keep in mind that the code coverage percentage is just part of the consideration when
+  deciding whether or not you have adequate coverage. The code coverage percentage will
+  let you know what percentage of the paths are covered (as in paths that are executed at
+  least once). However, this does not mean that all of the important scenarios concerning
+  your functionality is covered. Code coverage calculations do not consider the range of
+  values that are possible for the various inputs, and additional tests may be necessary to
+  cover different situations.</p>
+
+<h4>Keeping unit tests up to date</h4>
+
+<p>Unit tests are a form of documentation for your system, describing its functionality and the
+  expected behavior. Software architects should encourage their team to not only execute unit
+  tests regularly but to keep them up to date. As requirements change or new functionality is
+  added, unit tests need to be changed or added.
+  After changes are made, developers should modify any tests that need to be changed and
+  then execute all of the unit tests to ensure there are no unintended consequences.</p>
+
+<h3>Integration Testing</h3>
+
+<p>After you write a chunk of code and use unit tests to verify that it works (or seems to work), it's time
+  to integrate it into the existing codebase. An integration test verifit es that the new method works and
+  plays well with others. It checks that existing code calls the new method correctly, and that the new
+  method can call other methods correctly.
+  Integration typically focuses on the new code and other pieces of code that interact with it, but it
+  should also spend some time verifying that the new code didn't mess up anything that seems unrelated.</p>
+
+<p>In regression testing , you test the program's
+  entire functionality to see if anything changed when you added new code to the project. These tests
+  look for ways the program may have “regressed” to a less useful version with missing or damaged
+  features.
+  Ideally, when you fi nish unit testing a piece of code, you would then perform integration testing to
+  make sure it fits in where it should and that it didn't break anything obvious. Then you perform
+  regression testing to see if it broke something non-obvious.
+  Unfortunately, performing regression testing on a large project can take a lot of time, so developers
+  often postpone regression testing until a signifi cant amount of code has been added or modified.
+  Then they run the regression tests. Of course, at that point there may be a lot of bugs and it may be
+  hard to fi gure out which change caused which bug. Some of the “new” code may also not be all that
+  new, so some of the bugs may be a bit older and therefore harder to fix.
+  To fix bugs as quickly as possible, you need to perform regression testing as often as possible.</p>
+
+<h4>Automated Testing</h4>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+
+<h3></h3>
+
+<p></p>
+
+<h4></h4>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+
+<h4></h4>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+
+<h4></h4>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+
+<h4></h4>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+
+<h4></h4>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+
+<h4></h4>
+
+<p></p>
+
+<p></p>
+
+<p></p>
