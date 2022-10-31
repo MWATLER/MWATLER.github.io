@@ -2,7 +2,17 @@
 
 #include "Student.h"
 
-bool Student::CalculateAverage() {
+/*
+class Student {
+public:
+	char name[BUF_LEN];
+	int year;
+	int mark[MAX_MARKS];
+	int numMarks;
+	double average;
+	bool CalculateAverage();//function prototype
+};*/
+bool Student::CalculateAverage() {//function implementation. class::function
 	bool ret = true;
 	int runningTotal = 0;
 	int num=0;
@@ -18,6 +28,10 @@ bool Student::CalculateAverage() {
 	if(ret)	average = (double)runningTotal / num;
 	return ret;
 }
+
+
+
+
 
 double CalculateOverallAverage(Student *student, int length) {
 	double runningTotal = 0;

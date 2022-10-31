@@ -30,7 +30,6 @@ int main(void)
 		0x65, 0x73, 0x73, 0x2c, 0x20, 0x66, 0x69, 0x74, 0x20, 0x79, 0x6f, 0x75, 0x6e, 0x67, 0x20, 0x6d,//0xD0
 		0x65, 0x6e, 0x2e };//0xD3                                                                      //UDP packet data
 
-	//0x04, 0x89 -> 0x04 x 0x100 + 89 = 0x0489
 //OCTET 1, 2	Source Port
 //OCTET 3, 4	Destination Port
 //OCTET 5, 6	Length
@@ -41,26 +40,21 @@ int main(void)
 	printf("UDP Packet Analyzer\n\n");
 
 	//Fill this in
-	dataPtr = rawData;//point to the first element in the rawData array
+	dataPtr = rawData;
 //	dataPtr = &rawData[0];
-	packet.sourcePort = (*dataPtr) * 0x0100; //0x04 * 0x0100 = 0x0400
-	++dataPtr;//advance the dataPtr to the second element in the rawData array
-	packet.sourcePort += *dataPtr;//0x89. We add 0x0400 to 0x89 = 0x0489
+	//If I wanted to merge 4 with 89 to create 489,
+	//I would multiply 4 by 100 and add it to 89
+	packet.sourcePort = (*dataPtr++) * 0x0100;//0x04, 0x89 => 0x0489
+	packet.sourcePort += *dataPtr++;
 
-	++dataPtr;//advance the dataPtr to the third element in the rawData array
-	packet.destPort = (*dataPtr) * 0x0100;
-	++dataPtr;//advance the dataPtr to the fourth element in the rawData array
-	packet.destPort += *dataPtr;
+	packet.destPort = (*dataPtr++) * 0x0100;
+	packet.destPort += *dataPtr++;
 
-	++dataPtr;
-	packet.length = (*dataPtr) * 0x0100;
-	++dataPtr;
-	packet.length += *dataPtr;
+	packet.length = (*dataPtr++) * 0x0100;
+	packet.length += *dataPtr++;
 
-	++dataPtr;
-	packet.checksum = (*dataPtr) * 0x0100;
-	++dataPtr;
-	packet.checksum += *dataPtr;
+	packet.checksum = (*dataPtr++) * 0x0100;
+	packet.checksum += *dataPtr++;
 
 	//So far, this is what we have
 	printf("source port:      %5u\n", packet.sourcePort);
@@ -73,14 +67,12 @@ int main(void)
 	unsigned int i;
 	//Fill this in
 	for (i = 0; i < packet.length - HEADER_LEN; ++i) {
-		++dataPtr;
-		packet.data[i] = *dataPtr;
+		packet.data[i] = *dataPtr++;
 	}
-	//Have you seen memcpy()?
 
 	printf("The data is:\n");
 	for (i = 0; i < packet.length - HEADER_LEN; ++i) {
-		printf("0x%02X ", packet.data[i]);//two digits, zero as filler, hex, capital letters
+		printf("0x%02X ", packet.data[i]);
 		if (i % 16 == 15) printf("\n");//Print 16 bytes per line
 	}
 	printf("\n\n");
@@ -88,7 +80,7 @@ int main(void)
 	printf("The data as text is:\n");
 	for (i = 0; i < packet.length - HEADER_LEN; ++i) {
 		printf("%c", packet.data[i]);
-		if (i % 64 == 63) printf("\n");//Print 64 characters per line
+		if (i % 16 == 15) printf("\n");//Print 16 bytes per line
 	}
 	printf("\n\n");
 

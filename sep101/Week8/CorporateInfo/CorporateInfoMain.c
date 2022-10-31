@@ -1,5 +1,6 @@
 //CorporateInfoMain.c - main function for corporate information
 
+#define _CRT_SECURE_NO_WARNINGS
 #include "CorporateInfo.h"
 
 int main(void) {
@@ -20,7 +21,7 @@ int main(void) {
 			fscanf(fp, "%lf", &corporation.employee[i].salary);
 			fscanf(fp, "%lf", &corporation.employee[i].age);
 			while (fgetc(fp) != '\n');//clear the file buffer before the next fscanf()
-		}//feof(fp)==EOF, tests for the end of file
+		}
 		fclose(fp);
 		corporation.averageSalary = INVALID_VALUE;
 		corporation.averageAge = INVALID_VALUE;

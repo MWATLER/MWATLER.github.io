@@ -3,7 +3,6 @@
 #include "CorporateInfo.h"
 
 bool CorporateInfo::GetAverageSalary() {
-	//retVal, runningTotal and num are only visible inside GetAverageSalary()
 	bool retVal = true;
 	double runningTotal = 0;
 	int num = 0;

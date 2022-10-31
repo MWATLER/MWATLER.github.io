@@ -2,7 +2,7 @@
 
 #include "CorporateInfo.h"
 
-bool GetAverageSalary(struct CorporateInfo* corp) {//corp = &corporation
+bool GetAverageSalary(struct CorporateInfo* corp) {
 	bool retVal = true;
 	double runningTotal = 0;
 	int num = 0;
@@ -24,7 +24,7 @@ bool GetAverageSalary(struct CorporateInfo* corp) {//corp = &corporation
 	return retVal;
 }
 
-bool GetAverageAge(struct CorporateInfo* corp) {//corp = &corporation
+bool GetAverageAge(struct CorporateInfo* corp) {
 	bool retVal = true;
 	double runningTotal = 0;
 	int num = 0;

@@ -3,7 +3,7 @@
 #define BUF_LEN 64
 #define MAX_MARKS 6
 
-#include <stdbool.h>//bool
+#include <stdbool.h>
 
 struct Student {
 	char name[BUF_LEN];
@@ -13,6 +13,6 @@ struct Student {
 	double average;
 };
 
-double CalculateAveragePassByValue(const struct Student* student);//effectively pass by value, faster than pass by value
-bool CalculateAveragePassByAddress(struct Student *student);
+double CalculateAveragePassByValue(struct Student student);
+bool CalculateAveragePassByAddress(struct Student *student);//preferable
 bool CalculateAverages(struct Student *student, int length);

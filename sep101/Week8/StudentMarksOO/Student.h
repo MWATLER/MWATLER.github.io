@@ -25,7 +25,7 @@ public:
 	int mark[MAX_MARKS];
 	int numMarks;
 	double average;
-	bool CalculateAverage();
+	bool CalculateAverage();//function prototype
 };
 
 double CalculateOverallAverage(Student* student, int length);
