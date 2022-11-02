@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>CEAB</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+          <h2>
+            <center>CEAB Accreditation</center>
+          </h2>
+          <p class="header-info">This webpage contains CEAB accreditation documents as well as review tracking and graduate attributes for each course.</p>
+    </div>
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav id="sidebar" class="flex-column">
+  
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#" onclick="SetContent('Documents')">Documents</a>
+                </li>
+                <li>
+                    <a href="#semester1Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semester 1</a>
+                    <ul class="collapse list-unstyled" id="semester1Submenu">
+                        <li>
+                            <a href="#" onclick="SetContent('mth110')">MTH110</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('sem105')">SEM105</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('sep101')">SEP101</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('sea100')">SEA100</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('mec110')">MEC110</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#semester2Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semester 2</a>
+                    <ul class="collapse list-unstyled" id="semester2Submenu">
+                        <li>
+                            <a href="#" onclick="SetContent('mth200')">MTH200</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('ses260')">SES260</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('sep200')">SEP200</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('sed200')">SED200</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('chm300')">CHM300</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#semester3Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semester 3</a>
+                    <ul class="collapse list-unstyled" id="semester3Submenu">
+                        <li>
+                            <a href="#" onclick="SetContent('sem305')">SEM305</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('ses300')">SES300</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('seh300')">SEH300</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('btd210')">BTD210</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('btp405')">BTP405</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#semester4Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semester 4</a>
+                    <ul class="collapse list-unstyled" id="semester4Submenu">
+                        <li>
+                            <a href="#" onclick="SetContent('sem405')">SEM405</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('sep400')">SEP400</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('sep420')">SEP420</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('btp500')">BTP500</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('sea400')">SEA400</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    
+        <!-- Page Content -->
+        <div id="tab-content">
+            <!-- Summary -->
+            <div id="Documents" class="tab-pane fade-in">
+                <iframe src="Documents.html"></iframe>
+            </div>
+            <div id="mth110" class="hidden tab-pane fade">
+                <iframe src="Semester1/MTH110/MTH110.html"></iframe>
+            </div>
+            <div id="sem105" class="hidden tab-pane fade">
+                <iframe src="Semester1/SEM105/SEM105.html"></iframe>
+            </div>
+            <div id="sep101" class="hidden tab-pane fade">
+                <iframe src="Semester1/SEP101/SEP101.html"></iframe>
+            </div>
+            <div id="sea100" class="hidden tab-pane fade">
+                <iframe src="Semester1/SEA100/SEA100.html"></iframe>
+            </div>
+            <div id="mec110" class="hidden tab-pane fade">
+                <iframe src="Semester1/MEC110/MEC110.html"></iframe>
+            </div>
+            <div id="mth200" class="hidden tab-pane fade">
+                <iframe src="Semester2/MTH200/MTH200.html"></iframe>
+            </div>
+            <div id="ses260" class="hidden tab-pane fade">
+                <iframe src="Semester2/SES260/SES260.html"></iframe>
+            </div>
+            <div id="sep200" class="hidden tab-pane fade">
+                <iframe src="Semester2/SEP200/SEP200.html"></iframe>
+            </div>
+            <div id="sed200" class="hidden tab-pane fade">
+                <iframe src="Semester2/SED200/SED200.html"></iframe>
+            </div>
+            <div id="chm300" class="hidden tab-pane fade">
+                <iframe src="Semester2/CHM300/CHM300.html"></iframe>
+            </div>
+            <div id="sem305" class="hidden tab-pane fade">
+                <iframe src="Semester3/SEM305/SEM305.html"></iframe>
+            </div>
+            <div id="ses300" class="hidden tab-pane fade">
+                <iframe src="Semester3/SES300/SES300.html"></iframe>
+            </div>
+            <div id="seh300" class="hidden tab-pane fade">
+                <iframe src="Semester3/SEH300/SEH300.html"></iframe>
+            </div>
+            <div id="btd200" class="hidden tab-pane fade">
+                <iframe src="Semester3/BTD210/BTD210.html"></iframe>
+            </div>
+            <div id="btp405" class="hidden tab-pane fade">
+                <iframe src="Semester3/BTP405/BTP405.html"></iframe>
+            </div>
+            <div id="sem405" class="hidden tab-pane fade">
+                <iframe src="Semester4/SEM405/SEM405.html"></iframe>
+            </div>
+            <div id="sep400" class="hidden tab-pane fade">
+                <iframe src="Semester4/SEP400/SEP400.html"></iframe>
+            </div>
+            <div id="sep420" class="hidden tab-pane fade">
+                <iframe src="Semester4/SEP420/SEP420.html"></iframe>
+            </div>
+            <div id="btp500" class="hidden tab-pane fade">
+                <iframe src="Semester4/BTP500/BTP500.html"></iframe>
+            </div>
+            <div id="sea400" class="hidden tab-pane fade">
+                <iframe src="Semester4/SEA400/SEA400.html"></iframe>
+            </div>
+        </div>
+    
+    </div>
+
+
+
+
+
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="ceab.js"></script>
+</body>
+</html>
