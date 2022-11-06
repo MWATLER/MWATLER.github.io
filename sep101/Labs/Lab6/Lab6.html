@@ -26,6 +26,26 @@ and store it somewhere in your program. Once you have completed the extraction, 
     </b>
     </p>
 
+<h3>Command Line Arguments</h3>
+<p>Book.txt must be passed through to your program by command line. Let's say your executable 
+    is called BookMain.exe, then BookMain.exe will be invoked from the command line as follows:<br>
+    <b>BookMain.exe Book.txt</b><br><br>
+Command line arguments are passed through to your program through the main function as follows:<br>
+<b>int main(int argc, char* argv[])</b><br><br>
+<b>argc</b> is the argument count (which in this case is 2), and argv[] is an array of strings 
+representing the arguments (in this case argv[0]="BookMain.exe" and argv[1]="Book.txt").
+</p>
+<p>In Visual Studio, you can set the command line arguments through the project's properties as follows:
+<ul>
+    <li>Click on the project name.</li>
+    <li>Right click on Properties.</li>
+    <li>Click on Configuration Properties, then click on Debugging.</li>
+    <li>Look for Command Arguments and enter in the command argument (which in this case is Book.txt)</li>
+</ul>
+See the following image:<br><br>
+<image src="CommandLine.PNG" alt="Command Line Arguments" width="75%" height="75%"></image><br>
+</p>
+
 <h3>Complete the Code</h3>
 <p>Three files have been provided for you: 
     <a href="Book.h" target="_blank">Book.h</a>,
