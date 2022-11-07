@@ -4,6 +4,10 @@
 
 using namespace std;
 
+string Person::GetName() const {
+	return name;
+}
+
 bool Person::SetName(std::string _name) {
 	bool ret = true;
 	if (_name.size() == 0) {//validation
@@ -17,7 +21,7 @@ bool Person::SetName(std::string _name) {
 
 bool Person::SetSin(int _sin) {
 	bool ret = true;
-	if (_sin < 0) {//validation
+	if (_sin < 100000000 || sin > 999999999) {//validation
 		ret = false;
 	}
 	else {
@@ -76,8 +80,8 @@ bool Person::SetRrspContributions(float _contrib) {
 	person->deductibles += (float)0.22 * person->rrspContribution;
 }*/
 //The C++ way:
-void Person::CalculateDeductible() {
-	deductibles = donations;
+void Person::CalculateDeductible() {//cannot be a const function because we are
+	deductibles = donations;        //making changes to the variable "deductibles"
 	deductibles += (float)1000.0 * dependencies;
 	deductibles += (float)0.22 * rrspContribution;
 }

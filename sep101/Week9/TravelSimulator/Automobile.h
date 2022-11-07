@@ -22,5 +22,5 @@ public:
     void setFuelEfficiency(double _efficiency);
     void addFuel(double _liters);
     void drive(double _distance);
-    void displayReport();
+    void displayReport() const;//no variables are being changed
 };

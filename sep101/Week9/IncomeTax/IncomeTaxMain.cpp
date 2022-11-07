@@ -53,6 +53,9 @@ int main(void) {
 		person[i].CalculateIncomeTax();
 	}
 
+    //test the getter function for name
+	cout << person[0].GetName() << endl;
+
 	//Print a report for all the clients
 	for (int i = 0; i < NUM_CLIENTS; ++i) {
 		cout << endl;
