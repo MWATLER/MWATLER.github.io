@@ -37,6 +37,7 @@ class Person {
 	float deductibles;
 	float incomeTax;
 public:
+	std::string GetName() const;//"getter" function for name
 	//Since the variables are private, we need "setter" functions to set their values.
 	//This allows us to validate the entered values before setting them.
 	bool SetName(std::string _name);

@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+//using namespace std;//bad practice: this will be included in all files that include Student.h
+
 /* This is what we had for the C language */
 /*
 #define BUF_LEN 64

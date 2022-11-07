@@ -28,19 +28,20 @@ void Automobile::drive(double _distance)
     //liters consumed = liters/100km divide by 100km to get liters/km
     //                  then multiply that by the distance in km
     double fuelConsumed = fuelEfficiency / 100 * _distance;
+    const int BUFSIZE = 128;
     fuelInTank -= fuelConsumed;
     if (fuelInTank < 0) {
         fuelInTank = 0;
-        char message[128];
+        char message[BUFSIZE];
 		//below we mix C and C++. sprintf("%s") expects a character array. We can 
 		//provide this from our strings by calling c_str() of each string.
-        sprintf(message, "WARNING: The %s %d %s %s has no gas left in the tank\n", 
+        sprintf_s(message, BUFSIZE, "WARNING: The %s %d %s %s has no gas left in the tank\n", 
 			colour.c_str(), year, make.c_str(), model.c_str());
         cout << message;
     }
 }
 
-void Automobile::displayReport()
+void Automobile::displayReport() const
 {
     cout << "The " << colour << " " << year << " " << make << " " << model << " has " << fuelInTank << "L left in the tank" << endl;
 }

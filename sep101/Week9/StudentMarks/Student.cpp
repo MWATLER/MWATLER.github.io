@@ -57,7 +57,8 @@ bool Student::SetMarks(int* _mark, int num) {
 	return ret;
 }
 
-//Getter functions, a value is returned without being changed. To enforce this, we declare these functions as const.
+//Getter functions, a value is returned without being changed. 
+//To enforce this, we declare these functions as const.
 string Student::GetName() const {
 	return name;
 }
