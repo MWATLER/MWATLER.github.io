@@ -210,7 +210,7 @@
   Integration typically focuses on the new code and other pieces of code that interact with it, but it
   should also spend some time verifying that the new code didn't mess up anything that seems unrelated.</p>
 
-<p>In regression testing , you test the program's
+<p>In regression testing, you test the program's
   entire functionality to see if anything changed when you added new code to the project. These tests
   look for ways the program may have “regressed” to a less useful version with missing or damaged
   features.
@@ -226,63 +226,282 @@
 
 <h4>Automated Testing</h4>
 
-<p></p>
+<p>Automated testing tools let you defi ne tests and
+  the results they should produce. Some of them let you record and replay keyboard events and mouse
+  movements so that a test can interact with your program's user interface.
+  After running a test, the testing tool can compare the results it got with expected results. Some tools
+  can even compare images to see if a result is correct.</p>
 
-<p></p>
+<p>Some testing tools can run load tests that simulate a lot of users all running simultaneously to
+  measure performance. For example, load tests can tell if too many users trying to access the same
+  database will cause problems in your fi nal release.</p>
+<p>A good testing tool should let you schedule tests so that you can run regression testing every night
+  after the developers all go home. (Or you could start the tests running before you leave for the night.)
+  When you come in the next morning, you can check the tests to see if there are any newly discovered
+  problems that you should fi x before you begin writing new code.</p>
 
-<p></p>
+<h4>Component Interface Testing</h4>
 
-<h3></h3>
+<p>Component interface testing studies the interactions between c g omponents. This is a bit like
+  regression testing in the sense that both examine the application as a whole to look for trouble, but
+  component interface testing focuses on component interactions.
+  A common strategy for component interface testing is to think of the interactions between
+  components as one component sending a message (a request or a response) to another. You can then
+  make each component record its interactions (plus a timestamp) in a fi le. To test the component
+  interfaces, you exercise the system and then review the timeline of recorded events to see if
+  everything makes sense.</p>
 
-<p></p>
+<p>Planning ahead of time for component interface testing can also help with the application's design.
+  Thinking in terms of loggable messages passed between components helps keep the components
+  decoupled and gives them a clearer separation. That makes them easier to implement and test
+  separately.</p>
 
-<h4></h4>
+<h3>System Testing</h3>
 
-<p></p>
+<p>As you may guess from its name, system testing is an end-to-end run-g through of the whole system.
+  Ideally, a system test exercises every part of the system to discover as many bugs as possible.
+  A thorough system test may need to explore many possible paths of interaction with the application.
+  Unfortunately, even simple programs usually contain a practically unlimited number of possible
+  paths of interaction.</p>
 
-<p></p>
+<p>For example, suppose you're writing a program to keep track of dirt characteristics for hikaru
+  dorodango (dirt polishing) enthusiasts, things like color, amount available, and grain size. Also
+  suppose the program includes only a login screen and a single form that uses a grid to display dirt
+  information. Then you would need to try each of the following operations:
+<ul>
+<li>Start the program and click Cancel on the login screen.
+<li>Start the program, enter invalid login, click OK, verify that you get an error message, and
+  finally click Cancel to close the login screen.</li>
+<li>Start the program, enter invalid login, click OK, verify that you get an error message, enter
+  valid login information, and click OK. Verify that you can log in.</li>
+<li>Log in, view saved information, and close the program. Log in again and verify that the
+  information is unchanged.</li>
+<li>Log in, add new dirt information, and close the program. Login in again and verify that the
+  information was saved.</li>
+<li>Log in, edit some dirt information, and close the program. Login in again and verify that the
+  changes were saved.</li>
+<li>Log in, delete a dirt information entry, and close the program. Login in again and verify that
+  the changes were saved.</li>
+</ul>
+You need all those tests for just two screens, neither of which can do much.
+</p>
 
-<p></p>
+<p>For more complicated applications, the number of combinations can be enormous. In the end, you'll
+  probably have to test the most common and most important scenarios, and leave some combinations
+  untested.</p>
 
-<h4></h4>
+<h4>Acceptance Testing</h4>
 
-<p></p>
+<p>The goal of acceptance testing is to determine whether the finished application meets the customers'
+  requirements. Normally, a user or other customer representative sits down with the application and
+  runs through all the user cases you identified during the requirements gathering phase to make sure
+  everything works as advertised.
+Remember that the requirements may have changed after the requirements phase. In that case, you
+  obviously verify that the application satisfi es the revised requirements.</p>
+<p>Acceptance testing is usually straightforward; although, depending on the number of use cases, it can
+  take a long time. A fairly simple application might need only a few use cases.
+  A large, complex application with detailed needs might have dozens or
+  hundreds of use cases. In that case it might take days or even weeks to go through them all.</p>
+<p>One mistake developers sometimes make is waiting until the application is finished before
+  starting acceptance testing. You do need to perform acceptance testing then, but if that's the first
+  time the customer sees the application, there may be problems. Customers may decide that their
+  interpretation of a use case is different from yours. Or they may decide that what they need is
+  different from what they thought they needed during requirements gathering.
+  In those cases, you're much better off if you do a quick run-through of each use case as soon as the
+  application can handle it. Then if you need to change the requirements, you can do it while there's
+  still some time left in the development schedule and not at the end of the project when all of the
+  programmers have scheduled overseas vacations.</p>
 
-<p></p>
+<h3>Other Testing Categories</h3>
 
-<p></p>
+<p>Unit test, integration test, component interface test, and system test categorize tests based on their
+  scale with unit test being at the smallest scale and system test including the entire application.
+  An acceptance test differs from a system test in the point of view of the tester: A system tester is
+  typically a developer or someone from product support, whereas an acceptance tester is a customer representative.
+  The following list summarizes other categories of testing that differ in their scope, focus, or point
+  of view.
+<ul>
+<li>Accessibility test —Tests the application for accessibility by those with visual, hearing, or
+  other impairments.
+<li>Alpha test —First round testing by selected customers or independent testers. Alpha tests
+  usually uncover lots of bugs and defects, so they generally aren't open to a huge number of
+  users because that might ruin your reputation for building good software.</li>
+<li>Beta test—Second round testing after alpha test. Generally, you shouldn't give users beta
+  versions until the application is quite solid or you might damage your reputation for building
+  good software. Sometimes, beta tests are used as a sneaky form of a limited trial to build
+  excitement for a new release in the user community.</li>
+<li>Compatibility test —Focuses on compatibility with different environments such as computers
+  running older operating system versions. Also checks compatibility with older versions of the
+  application's fi les, databases, and other saved data.</li>
+<li>Destructive test —Makes the application fail so that you can study its behavior when the
+  worst happens. (Obviously, if you have good backups, you won't actually destroy the code.
+  You'll destroy the application's performance.)</li>
+<li>Functional test —Deals with features the application provides. These are generally listed in
+  the requirements.</li>
+<li>Installation test —Makes sure you can successfully install the system on a fresh computer.</li>
+<li>Internationalization test —Tests the application on computers localized for different parts of
+  the world. This should be carried out by people who are natives of the locales.</li>
+<li>Nonfunctional test —Studies application characteristics that aren't related to specifi c
+  functions the users will perform. For example, these tests might check performance under
+  a heavy user load, with limited memory, or with missing network connections. These often
+  identify minimal requirements.</li>
+<li>Performance test —Studies the application's performance under various conditions such
+  as normal usage, heavy user load, limited resources (such as disk space), and time of day.
+  Records metrics such as the number of records processed per hour under different conditions.</li>
+<li>Security test —Studies the application's security. This includes security of the login process,
+  communications, and data.</li>
+<li>Usability test —Determines whether the user interface is intuitive and easy to use.</li>
+</ul>
+</p>
 
-<h4></h4>
+<h3>Testing Techniques</h3>
 
-<p></p>
+<p>The previous sections described some different levels of testing (unit, integration, component,
+  system, and acceptance) and alluded to some methods for testing (try out every combination of
+  actions that you can think of), but they didn't explain specific techniques for performing actual tests.
+  In particular, they didn't discuss generating data for tests. The following sections describe some 
+  approaches to designing tests to fi nd as many bugs as possible.</p>
 
-<p></p>
+<h4>Exhaustive Testing</h4>
 
-<p></p>
+<p>In some cases, you may be able to test a method with every possible input. Such 
+  exhaustive testing conclusively proves that a method works correctly under all
+circumstances, so it's the best you can possibly do. Unfortunately, most methods take too many
+combinations of input parameters for you to exhaustively try them all.
+</p>
 
-<h4></h4>
+<p>For a ridiculously simple example where an exhaustive test is impossible, suppose you write a
+  Maximum method that compares two 32-bit integers and returns the one that's larger. Each of the
+  two inputs can take roughly 4.3x  109 values (between -2,147,483,648 and 2,147,483,647), so there
+  are approximately 1.8 x 10 19 possible combinations. Even if you had a computer that could call the
+  method and verify its results 1 billion times per second, it would take more than 570 years to check
+  every combination.
+  Because most methods take too many possible inputs, exhaustive testing won't work most of the
+  time.</p>
 
-<p></p>
+<h4>Black-Box Testing</h4>
 
-<p></p>
+<p>In black-box testing , you pretend the method is a black box that you can't peek inside. You know
+  what it is supposed to do, but you have no idea how it works. You then throw all sorts of inputs at
+  the method to see what it does.</p>
+<p>You can start black-box testing by sending it a bunch of random inputs. Remember that you need
+  to perform these tests only occasionally, not every time the program runs, so you can test a lot of
+  random values. For example, you might throw a few million random pairs of values at the Maximum
+  method described in the previous section. It doesn't matter if it takes the test a few minutes to fi nish.
+  Even if you don't know how the method works, you can try to guess values that might mess it up.
+  Typically, those involve special values like 0 for numbers and blank for strings. They may also
+  include the largest and smallest possible values. For strings that might mean a string that's all blanks
+  or all ~ characters.</p>
+<p>Sometimes, you can trip up a method that expects to process names by using strings containing
+  numbers or special characters such as &#%!$ (which looks like a cartoon character swearing).
+  Some methods don't work well if their inputs include a lot of duplicates, so try that. For example,
+  quicksort is one of the fastest sorting algorithms usually, but it gives terrible performance if the
+  items it is sorting all have the same value. (Consult an algorithms book or search for quicksort
+  online if you want to see the details.)</p>
+</p>If a method takes a variable number of inputs, make sure it can handle 0 inputs and a really large
+  number of inputs. If it takes an array or list as a parameter, see what it does if the array or list is
+  empty or missing.</p>
 
-<p></p>
+<p>Finally, look at boundary values. If a method expects a floating point parameter between 0.0 and
+  1.0, make sure it can handle those two values.</p>
 
-<h4></h4>
+<h4>White-Box Testing</h4>
 
-<p></p>
+<p>In white-box testing, you get to know how the method does its work. You then use your extra
+  knowledge to design tests to try to make the method crash and burn.
+  White-box testing has the advantage that you know how the method works, so you can try to
+  pick particularly difficult test cases. Unfortunately it has the disadvantage that you know how the
+  method works, so you might skip some test cases that you assume work. </p>
 
-<p></p>
+<p>Use white-box testing to create tests you know will be troublesome, but don't skip tests that you
+  “know” the method can handle.</p>
 
-<p></p>
+<h4>Gray-Box Testing</h4>
 
-<p></p>
+<p>Gray-box testing is a combination of white-box and black-box testing. Here you know some but not
+  all the internals of the method you are testing. Your partial knowledge of the method lets you design
+  specific tests to attack it.</p>
 
-<p></p>
+<p>With black-box testing, if you truly don't know how a method works, then it's
+  harder to assume it handles specifi c cases correctly. Unfortunately with black-box
+  testing, you don't know where to look for weaknesses.
+  White-box testing lets you specifi cally attack a method's weaknesses, but as
+  mentioned a couple of times (both in this chapter and in Chapter 7 ) it's easy for
+  programmers to assume their code works. (That's the biggest drawback of white-box
+  testing.) That can make them skip some test cases that might uncover a bug.
+  You can get the best of both worlds by combining black-box and white-box testing.
+  One way to do that is to have two different people test a method. The programmer
+  who wrote it can build some white-box tests, and someone else can design some
+  black-box tests.</p>
 
-<h4></h4>
+<h3>Pair programming</h3>
 
-<p></p>
+<p>Pair programming is an agile software development technique where two developers work
+  together on the same deliverable, whether a technical design or coding. In the case of
+  programming, the person who is coding is the driver while the other person, who is
+  observing, is the navigator. The roles of driver and navigator can alternate at a prescribed
+  interval (for example, every hour) or the roles can be switched at any time that the two
+  people feel is appropriate. Regardless of the role, each person should be an active
+  participant.</p>
+
+<h4>Benefits of pair programming</h4>
+
+<p>Pair programming can improve code quality. Having an additional set of eyes looking at
+  the work may allow the pair to notice a problem or an opportunity that would not have
+  been apparent if each person was working alone. Also, the driver will have a tendency to be
+  more careful when coding with someone else watching, which may lead to better code
+  overall.</p>
+<p>Working collaboratively during pair programming to accomplish a goal can be beneficial. If
+  the two individuals have different skillsets, they can bring both to bear on the work, and
+  some of these skills will be transferred. In addition to getting work done, sessions can act
+  similar to a training session in this regard. Working together also helps to enforce and
+  spread knowledge of things such as coding standards.</p>
+<p>Pair programming allows developers to become more familiar with the codebase. It
+  provides opportunities for more than one person to be knowledgeable about a particular
+  part of the system. Eventually, if something has to be changed with the code, more than one
+  person will be familiar with it. Pair programming tends to create a culture of collective
+  ownership of the codebase.</p>
+<p>To fully realize this benefit, it is a good practice to rotate pairs and not just have the same
+  two people always pair up. More knowledge will be shared when the pairs are rotated.
+  Pair programming can serve as training for less experienced developers or those who may
+  be new to the project. Using this technique provides an opportunity for a software architect
+  or senior developer to teach someone.</p>
+
+<h4>Code reviews</h4>
+
+<p>Code reviews are evaluations of code, typically conducted by peers. Code reviews involve
+  one or more people, other than the developer of the code being reviewed, who examine
+  code changes to find any problems.</p>
+
+<p>The main focus of code reviews is to find both technical and business logic defects.
+  However, code is also reviewed for other things, such as ensuring coding standards are
+  being followed and finding opportunities for improvement.</p>
+
+<h4>Formal inspections</h4>
+
+<p>Formal inspections, as you might imagine from the name, are a more structured way of
+  reviewing deliverables. It is a group review method and has been found to be quite
+  effective at finding defects. The main goal of formal inspections is to evaluate and improve
+  the quality of the software system.
+  Formal inspections are meetings in which deliverables, such as a design or code, are
+  reviewed in order to find defects. Formal inspections are scheduled in advance, and
+  participants are invited to the meeting.</p>
+
+<h4>Walkthroughs</h4>
+
+<p>A walkthrough is an informal method of review. In a walkthrough, the author of a design
+  or code deliverable hosts a meeting in which they guide reviewers through the deliverable.
+  Unlike a formal inspection, participants are not assigned specific roles (other than the
+  host/author). Walkthroughs are flexible and an organization can choose how they want to
+  organize a walkthrough based on their needs.</p>
+<p>Participants can prepare for a walkthrough by looking at the deliverable beforehand. The
+  focus of the walkthrough is to identify potential defects. Although the focus is not to correct
+  any defects found, unlike formal inspections, the group can decide to allow suggestions of
+  changes that can be made to the deliverable. Similar to formal inspections, management
+  should not attend a walkthrough so as not to influence the meeting in any way.</p>
+<p>Walkthroughs have been found to not be as effective as other review methods for
+  evaluating and improving deliverables. However, they do allow a larger number of
+  reviewers to participate</p>
 
 <p></p>
 
