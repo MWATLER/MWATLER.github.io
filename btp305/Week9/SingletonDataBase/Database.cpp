@@ -46,7 +46,7 @@ Database::Err_Status Database::GetValue(std::string key, std::string& value) {
 	}
 	return status;
 }
-/* Incorrect
+
 Database::Err_Status Database::SetValue(std::string key, std::string value) {
 	Err_Status status = Err_Status::Err_OutOfMemory;
 	if (numEntries < MAX_ENTRIES) {
@@ -56,7 +56,7 @@ Database::Err_Status Database::SetValue(std::string key, std::string value) {
 		++numEntries;
 	}
 	return status;
-}*/
+}
 
 int Database::GetNumEntries() {
 	return numEntries;

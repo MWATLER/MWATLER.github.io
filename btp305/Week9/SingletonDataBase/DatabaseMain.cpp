@@ -17,7 +17,7 @@ int main() {
 	else {
 		cout << "Unable to retrieve earnings for " << key;
 	}
-/*	key = "Leylah Fernandez";
+	key = "Leylah Fernandez";
 	value = "$786,772";
 	status = dB->SetValue(key, value);
 	if (status == Database::Err_Status::Err_Success) {
@@ -25,7 +25,7 @@ int main() {
 	}
 	else {
 		cout << "Unable to set earnings for " << key;
-	}*/
+	}
 	//dB and dB2 will manage the same resource - the one and only instance of Database
 	std::shared_ptr<Database> dB2 = Database::getInstance();
 	key = "Leylah Fernandez";
