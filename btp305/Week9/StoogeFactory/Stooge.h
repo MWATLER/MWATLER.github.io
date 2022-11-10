@@ -9,7 +9,7 @@ class Stooge
 {
 public:
     // Factory Method
-    static std::unique_ptr<Stooge> make_stooge(int choice);
+    static std::unique_ptr<Stooge> make_stooge(int choice);//the factory method
     virtual void slap_stick() = 0;
     virtual ~Stooge() {
         std::cout << "~Stooge()" << std::endl;

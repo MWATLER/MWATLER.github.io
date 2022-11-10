@@ -17,8 +17,8 @@ int main() {
     std::cout << std::hex;
     std::cout << "*p: " << p << std::endl;
     std::cout << "*s: " << s << std::endl;
-    std::cout << " p = " << (int*)p << std::endl;
-    std::cout << " s = " << (int*)s << std::endl << std::endl;
+    std::cout << " p = " << (void*)p << std::endl;
+    std::cout << " s = " << (void*)s << std::endl << std::endl;
 
     swap(s, p);
 

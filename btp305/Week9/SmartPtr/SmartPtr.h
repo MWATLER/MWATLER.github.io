@@ -2,7 +2,7 @@
 
 template <typename T>
 class SmartPtr {
-    T* p{ nullptr };
+    T* p{ nullptr };//will point to "new Title(s)"
 public:
     explicit SmartPtr(T* ptr) : p(ptr) { };//the constructor cannot be used for implicit conversions and copy-initialization
     SmartPtr(const SmartPtr&) = delete;//do not use a compiler generated version of this function
@@ -20,7 +20,7 @@ public:
         return *this;
     }
     ~SmartPtr() {
-        delete p;
+        delete p;//deletes the Title object
     }
     T& operator*() {
         return *p;

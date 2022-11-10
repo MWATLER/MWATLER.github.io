@@ -5,7 +5,7 @@
 #include "SmartPtr.h"
 
 void display(const char* s) {
-	SmartPtr<Title> t(new Title(s));
+	SmartPtr<Title> t(new Title(s));//p points to this new Title object
 	t->display();
 }
 

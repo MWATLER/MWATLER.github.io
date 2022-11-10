@@ -9,7 +9,9 @@ class Title {
         return title;
     }
 public:
-    Title(const char* s) : title(s) {}
+    Title(const char* s) : title(s) {
+        std::cout << "Title: constructing Title" << std::endl;
+    }
     void display() const {
         std::cout << validTitle() << std::endl;
     }

@@ -24,7 +24,6 @@ public:
 		Err_OutOfMemory
 	};
 	static std::shared_ptr<Database> getInstance();
-	static bool isInstance();
 	Err_Status GetValue(std::string key, std::string& value);
 	Err_Status SetValue(std::string key, std::string value);
 	int GetNumEntries();

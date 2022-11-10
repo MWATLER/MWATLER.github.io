@@ -3,7 +3,14 @@
 #include <iostream>
 #include <memory>
 #include "Title.h"
-
+/*
+void display(const char* s)
+{
+    Title* t = new Title(s);
+    t->display(); // may throw an exception!
+    delete t;
+}
+*/
 void display(const char* s) {
     std::unique_ptr<Title> t(new Title(s));
     t->display();
