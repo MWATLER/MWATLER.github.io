@@ -37,6 +37,7 @@ bool LibraryBooks::ConvertPrice(double exchangeRate) {
 }
 
 int LibraryBooks::TotalPages() const {
+	//https://en.cppreference.com/w/cpp/algorithm/accumulate
 	double total = std::accumulate(m_books.begin(), m_books.end(), 0.0, [](const double& sum, const Book& book) {
 		return sum + book.pages;
 		});
@@ -47,12 +48,12 @@ bool LibraryBooks::sort(std::string field) {
 	bool retVal = true;
 	if (field == "price") {
 		std::sort(m_books.begin(), m_books.end(), [](const Book& a, const Book& b) {
-			return a.price < b.price;
+			return a.price < b.price;//sort less to greater
 			});
 	}
 	else if (field == "pages") {
 		std::sort(m_books.begin(), m_books.end(), [](const Book& a, const Book& b) {
-			return a.pages < b.pages;
+			return a.pages < b.pages;//sort less to greater
 			});
 	}
 	else {
