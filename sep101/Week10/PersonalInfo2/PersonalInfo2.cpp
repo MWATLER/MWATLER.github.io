@@ -15,15 +15,17 @@ PersonalInfo2::PersonalInfo2() {
 
 PersonalInfo2::PersonalInfo2(const std::string _name, const std::string _address, const int _age) {
 	cout << "PersonalInfo2::PersonalInfo2(" << _name << ", " << _address << ", " << _age << "):" << endl;
-	name = "";
-	address = "";
-	age = 0;
-	setInfo(_name, _address, _age);
+	bool ret=setInfo(_name, _address, _age);
+	if (!ret) {//if the parameters are invalid, set variables to an empty state
+		name = "";
+		address = "";
+		age = 0;
+	}
 }
 
 bool PersonalInfo2::setInfo(const std::string _name, const std::string _address, const int _age) {
 	bool retVal = true;
-	if (_name.size() <= 0 || _address.size() <= 0 || age < 0) {
+	if (_name.size() <= 0 || _address.size() <= 0 || _age < 0) {
 		retVal = false;
 		cout << "Invalid information" << endl;
 	}
@@ -31,8 +33,6 @@ bool PersonalInfo2::setInfo(const std::string _name, const std::string _address,
 		name = _name;
 		address = _address;
 		age = _age;
-
-		this->age = age;
 	}
 	return retVal;
 }

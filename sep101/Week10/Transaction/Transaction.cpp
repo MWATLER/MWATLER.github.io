@@ -26,11 +26,14 @@ void Transaction::enterTransaction(void) {
 void Transaction::display(void) {
 
     cout << "Account " << acct;
+    //   double value = (a==b) ? 100.0 : 10.0;//(comparison) ? true_case : false_case;
     cout << ((type == 'd') ? " Debit $" : " Credit $") << amount;
     cout << endl;
 }
 
-void Transaction::add(double& bal) {
-    if (type == 'd') bal -= amount;
+//double balance=0.0;
+//tr.add(balance);
+void Transaction::add(double& bal) {//bal is actually a reference to balance,
+    if (type == 'd') bal -= amount; //so whatever we do to bal we do to balance.
     else             bal += amount;
 }

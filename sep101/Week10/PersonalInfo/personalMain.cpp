@@ -55,4 +55,6 @@ int main(void) {
 	}
 
 	return (success ? 0 : -1);
-}
+}//main() goes out of scope. All variables and objects are destroyed here.
+ //This means the destructors of personal1, personal2, personal3, and personal4
+ //are invoked here.

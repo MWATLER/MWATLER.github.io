@@ -17,16 +17,18 @@ PersonalInfo::PersonalInfo() {
 
 PersonalInfo::PersonalInfo(const std::string _name, const std::string _address, const int _age) {
 	cout << "PersonalInfo::PersonalInfo(" << _name << ", " << _address << ", " << _age << "):" << endl;
-	name = "";
-	address = "";
-	age = 0;
 	bool ret = setInfo(_name, _address, _age);
-	if (!ret) cout << "PersonalInfo::PersonalInfo failed to initialize the variables" << endl;
+	if (!ret) {//if setInfo fails, set all variables to an empty state
+		name = "";
+		address = "";
+		age = 0;
+		cout << "PersonalInfo::PersonalInfo failed to initialize the variables" << endl;
+	}
 }
 
 bool PersonalInfo::setInfo(const std::string _name, const std::string _address, const int _age) {
 	bool retVal = true;
-	if (_name.size() <= 0 || _address.size() <= 0 || age < 0) {
+	if (_name.size() <= 0 || _address.size() <= 0 || _age < 0) {
 		retVal = false;
 		cout << "Invalid information" << endl;
 	}

@@ -10,11 +10,6 @@ using namespace std;
 int main(void) {
 	const int NUM = 10;
 	PersonalInfo2* personal[NUM];//array of pointers to objects of type PersonalInfo2
-/*	PersonalInfo2* personal[] = {//could do the same with dynamic memory allocation
-		{new PersonalInfo2("Babych", "34 Cedarwood Crescent", 18)},
-		{new PersonalInfo2("Yakabowich", "17 Tack Drive", 21)},
-	//  etc...
-	};*/
 	PersonalInfo2 personal1("Babych", "34 Cedarwood Crescent", 18);
 	PersonalInfo2 personal2("Yakabowich", "17 Tack Drive", 21);
 	PersonalInfo2 personal3("Park", "22-2617 Windwood Drive", 34);
@@ -58,7 +53,7 @@ int main(void) {
 			cout << "Enter the new address: ";
 			cin.ignore(1000, '\n');//get rid of extra characters until the carriage return
 			getline(cin, newAddress);
-			success = personal[person - 1]->setAddress(newAddress.c_str());
+			success = personal[person - 1]->setAddress(newAddress);
 			cout << endl;
 			if (success) {
 				for (int i = 0; i < NUM; ++i) {
@@ -68,5 +63,6 @@ int main(void) {
 		}
 	}
 
-	return (success ? 1 : 0);
-}
+//	personal[5]->~PersonalInfo2();//personal[5] points to personal6
+	return (success ? 0 : -1);
+}//destructors are invoked here

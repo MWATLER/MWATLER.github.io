@@ -10,7 +10,7 @@ int main() {
 
     display(6, 7, 8);
     display(6);
-    display(3, 4);
+    display(3, 4.5, 4);
     display();
 }
 

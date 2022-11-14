@@ -6,7 +6,7 @@
 int main() {
     const int NO_TRANSACTIONS = 3;
     Transaction tr;
-    double balance = 0;
+    double balance = 0.0;
 
     tr.enterAccount();
     for (int i = 0; i < NO_TRANSACTIONS; i++) {
