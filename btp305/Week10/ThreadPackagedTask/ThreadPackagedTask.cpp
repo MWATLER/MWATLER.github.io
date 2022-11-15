@@ -6,9 +6,10 @@
 #include <windows.h>
 
 double task(int x) { 
-    std::cout << "task:" << std::endl;
-    Sleep(2000);
-    return (double)x * 2; 
+    std::cout << "task: Begin" << std::endl;
+    Sleep(5000);
+    std::cout << "task: End" << std::endl;
+    return (double)x * 2;
 }
 
 int main() {
