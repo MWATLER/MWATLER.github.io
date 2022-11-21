@@ -11,8 +11,8 @@ class Account {
 public:
 	Account(std::string name, double age);
 	Account &SetUsername(std::string username);
-	~Account();
 	void GeneratePassword(void);//generates a password based on the username
 	void showUsernamePassword() const;
 	void destroy();
+	~Account();
 };

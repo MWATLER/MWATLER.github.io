@@ -9,11 +9,10 @@ int main(void) {
 	Plane* plane;
 	int numPlanes;
 	int numPilots;
-	string* pilot;
-
+	string* pilot = nullptr;
 	cout << "How many planes in your air force? ";
 	cin >> numPlanes;
-	plane = new Plane[numPlanes];
+	plane = new Plane[numPlanes];//you can now treat plane like an array
 
 	cout << endl;
 	for (int i = 0; i < numPlanes; ++i) {
@@ -26,7 +25,9 @@ int main(void) {
 		}
 		plane[i].SetName(pilot, numPilots);
 		plane[i].AddFuel(3000);
-		delete[] pilot;
+		delete[] pilot;//I am reusing this variable inside my for-loop.
+		               //It was allocated at the top of the for-loop,
+		               //so it must be deallocated before we leave the for-loop.
 		cout << endl;
 	}
 	cout << endl;

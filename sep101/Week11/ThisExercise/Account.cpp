@@ -7,17 +7,21 @@ using namespace std;
 Account::Account(std::string name, double age) {
 	//One use of the "this" pointer is to differentiate between a class
 	//variable and a parameter passed through the function
-	this->name = "";
-	this->age = 0.0;
-	this->username = "";
-	this->password = nullptr;//this->password is a pointer. We usually initialize pointers
-	                         //to point to nullptr if they are not yet pointing to allocated memory
 	if (name.size() > 0) {
 		this->name = name;//assign the class variable "name" to the parameter "name"
-	} 
+	}
+	else {
+		this->name = "";
+	}
 	if (age > 0) {
 		this->age = age;//assign the class variable "age" to the parameter "age"
 	}
+	else {
+		this->age = 0.0;
+	}
+	this->username = "";
+	this->password = nullptr;//this->password is a pointer. We usually initialize pointers
+	//to point to nullptr if they are not yet pointing to allocated memory
 }
 
 Account &Account::SetUsername(std::string username) {

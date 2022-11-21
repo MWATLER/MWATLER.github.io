@@ -14,26 +14,24 @@ Plane::Plane() {
 	fuel = 0;
 }
 
-Plane::Plane(std::string* _name, int num, double _fuel) {
+Plane::Plane(std::string* name, int num, double fuel) {
 	if (num > 0) {
-		name = new std::string[num];
+		this->name = new std::string[num];
 		for (int i = 0; i < num; ++i) {
-			name[i] = _name[i];
+			this->name[i] = name[i];
 		}
 	}
 	else {
-		name = nullptr;
+		this->name = nullptr;
 	}
-	numPilots = num;
-	fuel = _fuel;
+	this->numPilots = num;
+	this->fuel = fuel;
 }
 
 void Plane::SetName(std::string* name, int num) {//an array of names, the array size is 'num'
 	numPilots = num;
 	if (num > 0) {
-		if (this->name != nullptr) {
-			delete[] this->name;
-		}
+		delete[] this->name;
 		this->name = new std::string[num];
 		for (int i = 0; i < num; ++i) {
 			this->name[i] = name[i];
@@ -41,9 +39,9 @@ void Plane::SetName(std::string* name, int num) {//an array of names, the array 
 	}
 }
 
-void Plane::AddFuel(double _fuel) {
-	fuel += _fuel;
-	if (fuel > fuelCapacity) fuel = fuelCapacity;
+void Plane::AddFuel(double fuel) {
+	this->fuel += fuel;
+	if (this->fuel > fuelCapacity) this->fuel = fuelCapacity;
 }
 
 bool Plane::Travel(double km) {
@@ -68,8 +66,6 @@ void Plane::Report() {
 
 
 Plane::~Plane() {
-	if (name != nullptr) {
-		delete[] name;
-		name = nullptr;
-	}
+	delete[] name;
+	name = nullptr;
 }

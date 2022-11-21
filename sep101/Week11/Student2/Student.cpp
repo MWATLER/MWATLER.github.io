@@ -48,11 +48,13 @@ double Student::average() {
     return aveMark;
 }
 
-void Student::displayInformation() {
+void Student::displayInformation() const {
     cout << name << ", student number " << no << ", has an average of " << fixed << setprecision(2) << aveMark << endl << endl;
 }
 
 Student::~Student() {
+    //Since 2011, there is no longer a need to test if memory has
+    //actually been allocated before deleting it.
     delete[] name;
     delete[] marks;
 }
