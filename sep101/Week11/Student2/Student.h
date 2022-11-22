@@ -11,6 +11,6 @@ public:
     Student();
     void enterInformation();//allocates memory for name and marks
     double average();
-    void displayInformation();
+    void displayInformation() const;
     ~Student();//deallocates memory used for name and marks
 };

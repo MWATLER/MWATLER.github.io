@@ -61,10 +61,6 @@ void Account::CopyToAccount(Account& acct) {//the current object is acct1, acct 
 }
 
 void Account::destroy() {
-	if (password != nullptr) {
-		delete password;
-		password = nullptr;
-	}
 	delete this;//will invoke the destructor
 }
 

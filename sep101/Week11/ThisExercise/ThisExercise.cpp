@@ -24,4 +24,4 @@ int main(void) {
 //	acct1.destroy();
 
 	return 0;
-}
+}//acct1 is now out of scope, it will be deleted
