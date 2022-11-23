@@ -9,7 +9,9 @@
 <p>You will write a program that simulates a game of 21 with a few twists. The purpose of 21 is to draw cards that sum as closely to 21 without going over. The player with the highest sum 
     without going over 21 wins. In this game however, the players will have the option to steal the cards of other players.</p>
 
-<p>The player has a <b>name</b>, an unknown <b>number of cards</b> with values 1-10 each, and <b>cash</b>. The player will have to allocate the cards once the number of cards is known.</p>
+<p>The player has a <b>name</b>, an unknown <b>number of cards</b> with values 1-10 each, and <b>cash</b> 
+    (each player starts with $1000 of cash). 
+    The player will have to allocate the cards once the number of cards is known.</p>
 
 <p>The player <b>creates</b> itself given his/her name.<br>The player <b>draws cards</b> by deleting the cards it has and creating a new list of cards based on the number of cards requested. The value of each 
     card is according to a random number generator that generates a random number from 1 to 10: <b>(rand()%10)+1</b>.<br>The player <b>sums cards</b> by going through the list of cards it has and 
