@@ -5,9 +5,10 @@
 
 <h3>Videos</h3>
 <table>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
-  <tr><td></td><td><a href="" target="_blank"></a></td></tr>
+  <tr><td>Defect Analysis:</td><td><a href="https://www.youtube.com/watch?v=eRlLu8g5-qA" target="_blank">Defect Analysis and Prevention for Software Process Quality Improvement</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=2wYJnZTzLgM" target="_blank">Fishbone Cause and Effect Analysis and Example</a></td></tr>
+  <tr><td>Maintenance and Sustaining: </td><td><a href="https://www.youtube.com/watch?v=rq4HPm8kptg" target="_blank">Software Maintenance in Software Engineering</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=8swQr0kckZI" target="_blank">software maintenance | software engineering</a></td></tr>
 </table>
 
 <h3>Workshop(s)</h3>
@@ -20,3 +21,412 @@
 <ul>
   <li><a href="../Beginning_Software_Engineering_WholeBook.pdf" target="_blank">Beginning Software Engineering</a> Chapters 10 (Metrics) and 11 (Maintenance)</li>
 </ul>
+
+<h3>Defect Analysis</h3>
+
+<p>At the highest level, you can group all incorrect features into defects . You can then categorize
+  defects into bugs (code that was written incorrectly) and changes. (The code is doing what the
+  specification said to do, but the specification was wrong.)</p>
+
+<h4>Discoverer</h4>
+
+<p>One important way to group defects is by who reported them. Bugs that are found and fixed by
+  programmers are often invisible to the customers. The customers never need to know all the dirty
+  little secrets that went into building the fi nal application.
+  In contrast, changes that are requested by customers are obviously visible to the customers. Generally
+  you should satisfy as many change requests as possible, as long as they don't mess up the schedule. (They
+  give you brownie points you can spend later to resist the customers' efforts to shorten the schedule.)
+  The worst combination is a bug that is discovered by the customers. If a bug gets to the customers, it
+  must have snuck past code reviews, unit tests, and integration tests. They're somewhat embarrassing
+  and reduce the customers' confi dence in your team's ability to produce a high-quality application.
+  (They also reduce your brownie points.)
+  For each defect, ask three questions:
+<ul>
+<li>How could you have avoided the defect in the first place?</li>
+<li>How could you have detected the defect sooner?</li>
+<li>For customer-discovered defects, how could you have found the defect before the customers did?</li>
+</ul>
+</p>
+
+<p></p>
+
+<h4>Time Created</h4>
+
+<p>You can further categorize defects by when they were created. Defects tend to snowball, so those
+  created earlier in the project usually have greater consequences than those created later. For
+  example, a defect added during high-level design has a lot more potential to cause pandemonium
+  than a defect added in the last module written. Focus on the defects that were created
+  earliest because they can cause the most damage. For each defect, ask how you could have avoided
+  it, how you could have detected it sooner, and (for customer-discovered defects) how you could have
+  found it before the customers did.</p>
+
+<h4>Age at Fix</h4>
+
+<p>Defects are like cancer: The longer they go undetected, the greater the potential consequences.
+  Group defects by the length of time they existed before they were detected and fixed. Focus on those
+  that remained in hiding the longest and ask the usual three questions.</p>
+
+<h4>Task Type</h4>
+
+<p>Another way to categorize defects is by the type of task you were trying to accomplish when it was
+  created. The types of tasks you should use will depend on the project. Some typical task categories include the following:
+<ul>
+<li>Specification</li>
+<li>Design</li>
+<ul>
+<li>High-Level</li>
+<li>Security</li>
+<li>User Interface</li>
+<li>External Interface</li>
+<li>Database</li>
+<li>Algorithm</li>
+<li>Input/Output</li>
+</ul>
+<li>Programming</li>
+<ul>
+<li>Tools</li>
+<li>Security</li>
+<li>User Interface</li>
+<li>External Interface</li>
+<li>Database</li>
+<li>Algorithm</li>
+<li>Input/Output</li>
+</ul>
+<li>Documentation</li>
+<li>Hardware</li>
+</ul>
+</p>
+
+<p>The previous methods for categorizing defects focus on what's most important. The errors
+  discovered by users, have high severity, were created early, and that remained undiscovered for a
+  long time tend to have the greatest impact, so they're important. After you identify them, you can
+  ask the three questions to see how you can avoid the same problems in future projects.
+  In contrast, task categories don't identify the most important defects. Instead they try to group
+  defects by common causes. Defects that were added while performing similar tasks may have similar
+  causes and (hopefully) similar solutions.</p>
+
+<h4>Ishikawa Diagrams</h4>
+
+<p>To figure out in which category a defect belongs, ask what task was being performed when the
+  defect was created. Often, a defect is the end of a sequence of events that was started by some primordial
+  mistake. Sometimes discovering the root the root cause of a defect can be challenging. One tool that can help
+  is the Ishikawa diagram (named after Kaoru Ishikawa). These are also called fishbone diagrams
+  because they look sort of like a fish skeleton.</p>
+
+<p>To make an Ishikawa diagram, write the name of the defect you're trying to analyze (Incorrect
+  Username/Password Validation) on the right of a sheet of paper. (This is the head of the fish.)
+  Next draw a horizontal arrow pointing to the defect name from left to right. (This is the fish's backbone.)
+  Now think of possible causes and contributing factors for the defect. Represent them with angled arrows
+  leading into the spine. (These are the fish's ribs.) Label each arrow with the cause you identifi ed.
+  For each of the fish's ribs, think about causes and contributing factors for that rib. Add them, again
+  with labeled arrows. Continue adding contributing factors to each of the factors you've already
+  listed until you run out of ideas.</p>
+
+<p>The exact format of the diagram doesn't matter too much and there are several variations in style.
+  The only things that are really consistent among most diagrams are
+<ul>
+<li>The effect or outcome is on the right.</li>
+<li>There's a backbone.</li>
+<li>Arrows (or lines) lead from causes to intermediate causes or effects.</li>
+<li>Arrows (or lines) are labeled./li>
+</ul>
+</p>
+
+<h3>Software Metrics</h3>
+
+<p>The defect analysis techniques described in the previous sections are more or less qualitative. They
+  help you characterize defects based on their discoverer, severity, and age at time of removal.
+  In contrast, software metrics give you quantitative measurements of a project. Before you learn what
+  kinds of metrics you can analyze, you should know a few metric-related terms.
+  An attribute is something you can measure. It could be the number of lines of code, the number of
+  defects, or the number of times the word “mess” appears in code comments.
+  A metric is a value that you use to study some aspect of a project. Sometimes a m c etric is the same as an
+  attribute. For example, you might get useful information about a project from the number of bug reports
+  you have received. Often metrics are calculated values. For example, you may want to look at bug
+  reports per week or bug reports per line of code instead of just the total number of bug reports.
+  After you have metrics, you study them to see if any of them are good indicators of the project's
+  future.</p>
+
+<p>You can then do two things with your indicators. First, you can use them to predict the future of
+  your current project. The second thing you can do with indicators is make strategy improvements for future projects.
+  To summarize:
+<ul>
+<li>Measure relevant attributes.</li>
+<li>Use the attributes to derive meaningful metrics.</li>
+<li>Use metrics to create indicators.</li>
+<li>Use indicators to predict the project's future.</li>
+<li>Use indicators to make process improvements.</li>
+</ul>
+</p>
+
+<h4>Qualities of Good Attributes and Metrics</h4>
+
+<p>The following list gives characteristics that good attributes and metrics should ideally
+  have.
+<ul>
+<li>Simple —The easier the attribute is to understand, the better.</li>
+<li>Measureable —To be useful, you must measure the attribute.</li>
+<li>Relevant —If an attribute doesn't lead to a useful indicator, there's no point measuring it.</li>
+<li>Objective —It's easier to get meaningful results from objective data rather than subjective
+  opinions. The number of bugs is objective. The application's “warmth and coziness” is
+  not.</li>
+<li>Easily obtainable —You don't want to realize the team members' fears by making them spend
+  so much time gathering tracking data that they can't work on the actual project. Gathering
+  attribute data should not be a huge burden.</li>
+</ul>
+  Sometimes it's impossible to satisfy all these requirements. In particular, some important attributes
+  can be hard to measure. For example, customer satisfaction is extremely important, but it can be
+  hard to quantify.
+  For attributes such as this one, which are important but hard to measure, you may need to use
+  indirect measurements. For example, you can send out customer satisfaction surveys and track the
+  number of change requests you receive.</p>
+
+<h4>Things to Measure</h4>
+
+<p>At a high level there are two kinds of metrics you should track: inputs and outputs. Inputs are the
+  things you spend on the project. The following list describes some input metrics.
+<ul>
+<li>Cost —Money spent on the project for hardware, software, development tools, networking
+  services, paper, training, and so forth. (For business purposes, you may also want to track
+  salaries and overhead, but they're not as directly related to the project's performance. In
+  contrast, if you're not spending anything on development tools, you're probably not getting
+  the best result for your efforts.)</li>
+<li>Effort —This is the amount of work being put into the project. It is usually measured in personhours.
+  Effort is relatively easy to measure.</li>
+<li>Defect rates —The number of defects discovered over time. Defect rates are also fairly easy to
+  measure.</li>
+<li>Lines of code (LOC) —The number of lines of code produced per day. You might think this would
+  be easy to measure, but it's actually kind of hard to decide what to count as a line of code.
+  For example, do you count comments and blank lines? What about statements that are
+  split across multiple lines? All those things pump up the line count without adding anything
+  extra as far as the computer is concerned, but they also make the code easier to read and
+  understand, so you should encourage programmers to use them appropriately.
+  Some development organizations treat a command split across multiple lines as a single
+  line of code. Some ignore comments and blank lines. Others count blank lines up to
+  25 percent of the total code and ignore any blank lines over 25 percent.
+  It doesn't matter too much which approach you take as long as your rules are consistent
+  across projects and the programmers don't try to game the system. (If you count comments
+  and judge programmers on the number of lines of code they produce, you may get fi les with
+  dozens of comments per actual line of code.)</li>
+<li>Pages of documentation —There are several kinds of documentation that you might want to
+  track. Project documentation (such as the specification and design documents) are important
+  because they ensure that everyone is working toward a common vision. If you don't have
+  enough of this kind of documentation, different team members may end up working at crosspurposes,
+  resulting in extra defects and diffi cult long-term maintenance.
+  User documentation is obviously important to the end users. If you have too little, the
+  users won't figure out how to use your program.
+  User documentation also refl ects the complexity of the application. If you need a lot of
+  documentation to explain the program, that may mean the design is overly complicated, and
+  that may also indicate a lot of future defects and maintenance problems.</li>
+</ul>
+</p>
+
+<p>You can measure all those attributes fairly directly. (At least if you can decide what to measure for
+  LOC.) Some other attributes are harder to measure directly. They're either hard to quantify or they're
+  subjective. The following list describes some of those items and how you might try to measure them.
+<ul>
+<li>Functionality —How well does the application do what it is supposed to do? How well does
+  it let the users do their jobs? This is quite subjective, but you can measure things such as the
+  numbers of help requests, change requests, and user complaints.</li>
+<li>Quality —Do the users think of this as a high-quality application? Is it relatively bug-free?
+  Again, this is subjective, but you can track user complaints to get some idea. You can also
+  do user surveys. (You know, those annoying surveys that ask you how likely you are to
+  recommend a product to your friends.)</li>
+<li>Complexity —How complex is the project? This is hard to measure directly. The amount
+  of project documentation gives you a hint about the project's complexity. Lots of
+  documentation may indicate a complex project that needs a lot of explaining. (Or it may just
+  indicate you have a team member who loves to write.)
+  There are a lot of other ways to estimate complexity. You can count the if-then statements
+  in the code because they determine the number of paths through the code. You could also
+  count the number of loops or other complicated code features such as recursion and particular
+  data structures. Unfortunately, making all those counts is a fair amount of extra work.
+  Function points provide another method for estimating a project's complexity. The section
+  “Function Point Metrics” later in this chapter explains them in detail.</li>
+<li>Efficiency —How efficient is the application? In rare cases, you can calculate the theoretical
+  maximum efficiency possible and compare the application to that. For example, you might
+  determine that a routing program fi nds solutions within 15 percent of the optimal routes. In
+  general, however, this is hard to measure.
+  You can compare the users' performance to their performance before they started using
+  your application, but you won't know if there could be an even better way to do things. (Of
+  course, if the users were more productive before they started using your application, you
+  might need to either write a second version or update your resume.)</li>
+<li>Reliability —How reliable is the application? This one is a little easier to measure. You can
+  keep track of the number of times the program crashes or produces an incorrect result.</li>
+<li>Maintainability —How easy will it be to maintain the application in the long term? You can
+  get some notion of how hard maintenance will be by looking at other metrics such as the
+  amount and quality of the project documentation, the number of comments, and the code
+  complexity, but usually you won't really know how maintainable the project is until you've
+  been maintaining it for a while.</li>
+</ul>
+</p>
+
+<h3>Maintenance</h3>
+
+<p>You may wonder why maintenance is such a large percentage of a project's total cost. One reason
+  is that applications often live far longer than they were originally intended. A typical business
+  application might be in use years or even decades after it was written. Most businesses are stingy, so
+  writing a new program to replace an old one that still works is rarely an option. Also, to safely modify old code, you need
+  to spend time studying it. Because you didn't just write the code, it's not fresh in your mind. If you
+  don't dig into the code and make sure you understand how it works, you're just as likely to add bugs
+  to the code as remove them.
+  After you make your changes, you need to test them to verify that they work. You also need to
+  thoroughly test the rest of the application to make sure your changes didn't break anything.</p>
+
+<p>You can reduce maintenance costs by doing a good job when you write the initial code. For
+  example, develop simple but fl exible designs, use good programming practices, insert comments
+  to make the code easy to read, and provide documentation so future generations of maintenance
+  programmers can fi gure out what you were thinking when you wrote the code.</p>
+
+<p>Generally maintenance tasks are grouped into the following four categories:
+<ul>
+<li>Perfective —Improving existing features and adding new ones</li>
+<li>Adaptive —Modifying the application to meet changes in the application's environment</li>
+<li>Corrective —Fixing bugs</li>
+<li>Preventive —Restructuring the code to make it more maintainable</li>
+</ul>
+  The relative effort spent on each of these categories depends on the project.
+</p>
+
+<p>
+  For a typical large application, the relative effort spent on each of the categories (out of the
+  75 percent of the project's total cost represented by maintenance) might be:
+<ul>
+<li>Perfective —50 percent</li>
+<li>Adaptive —25 percent</li>
+<li>Corrective —20 percent</li>
+<li>Preventive —5 percent</li>
+</ul>
+</p>
+
+<h4>Perfective Tasks</h4>
+
+<p>For many applications, particularly large ones with long lifespans, this is often the biggest part of
+  maintenance. If you've done a good job building the initial application, the users may like it, but they
+  still want tweaks, adjustments, and improvements.</p>
+
+<p>Sometimes, the specification didn't represent exactly what the users need to do. Maybe the
+  specification didn't explain the user's needs correctly. (Although you should have caught that earlier
+  when the customers reviewed the specifications.) Or maybe the users didn't quite understand what
+  they would need to do after the application was in place.
+  Sometimes, the tools you built let the users think of ways to do things that they hadn't before. Often
+  the users don't know exactly what's possible until they see the program and have a chance to work
+  with it for a while. They know how they're doing their jobs now, but sometimes no one actually
+  knows how they will do their jobs with your new tools.
+  Users may also want completely new features that weren't in the original specification. They may
+  have been left out of the fi rst release to save time. Sometimes, it's another example of the “we didn't
+  know this was possible until now” scenario.
+  Even you and your fellow developers can think of improvements and modifications based on the
+  users' experiences. After you watch the users bashing away on your application, you may discover
+  whole new uncharted areas of new opportunities that the users can't see because they don't have
+  your software engineering background.</p>
+
+<h4>Feature Improvements</h4>
+
+<p>Feature improvements involve modifying existing code, so in some ways they're similar to bug fixes.
+  That means you should be aware of the same issues when you handle them. Adding new features to an application 
+  is a lot like writing code for the initial application, so you should follow the same steps:
+<ol>
+<li>Make a specification explaining what you will do.</li>
+<li>Get the users to sign off on the specification so that they agree that you're doing the right
+  thing.</li>
+<li>Create high-level and low-level designs.</li>
+<li>Write the code.</li>
+<li>Test, test, and test. (And save the tests in case you need to run them again later.)</li>
+<li>Use good practices (such as staging and gradual cutover) to deploy the new version of the
+  program.</li>
+</ol>  
+  Adding new features is almost like running a completely new mini-project.
+  If there are enough changes or the changes are big enough (for example, they require restructuring
+  the program's class hierarchy or architecture), you may want to create a new major version of the
+  application.
+  A new version is basically a whole new project.</p>
+
+<h4>The Second System Effect</h4>
+
+<p>You will learn a lot about the system you
+  need to build when you build it. After you're fi nished, you'll discover that you could have done a lot
+  of things better, so you throw the fi rst version away and write a new one. To avoid building one or more 
+  throwaway versions, you need to carefully follow all the normal steps of software development.</p>
+  
+<h4>Adaptive Tasks</h4>
+
+<p>Adaptive tasks help keep the application usable when the things around it change. If the users'
+  hardware, operating system (OS), database, other tools (such as spreadsheets or reporting tools),
+  network security, or other pieces of the users' environment change, it could break your application,
+  so you have to fix it. Unfortunately, the tools on which your application relies may also be interrelated, 
+  so changes to one may affect the others.</p>
+
+<h4>Corrective Tasks</h4>
+
+<p>Corrective tasks are simply bug fixes. One of the worst ways to fail to fix a bug is to lose track of it.
+  At least if you fix a bug incorrectly
+  you have some record of the original bug. If you lose track of a bug, there's little chance that it will
+  ever be fixed (unless a user reports it again). What may be just one of dozens or hundreds of bugs to
+  you, might be really important to some user patiently waiting for you to fix it.
+  To avoid losing bugs, you need a bug tracking system. There are several kinds of bug tracking
+  systems you can use.</p>
+  
+<h4>Preventive Tasks</h4>
+  
+<p>Preventive tasks involve restructuring the code to make it easier to debug and maintain in the future.
+  The fancy word for rewriting code to improve it is refactoring. Modifying code is more likely to
+  introduce new bugs than writing new code. If that's true, then why would you ever mess around
+  inside working code? Typically only
+  approximately 5 percent of a project's maintenance cost is spent on preventive tasks. That number is
+  low largely because of the risk involved with modifying working code. (Companies also usually have
+  a strong “if it ain't broke, don't fix it” bias, which is completely justified here.)
+  Despite the dangers, there are several reasons why you might want to refactor code, and a few
+  reasons not to. The following paragraphs describe some of the most important of those reasons.</p>
+
+  <p><b>Clarification.</b> If a piece of code is confusing, you should add comments to it explaining how it works. You should
+  do that as you're writing the code or immediately after you fi nish writing it, while the code is still
+  fresh in your mind. Later, when people need to read the code (including you after you've forgotten
+  how it works), they have a chance of understanding how the code works.</p>
+  
+<p><b>Code Reuse.</b> Sometimes when you're modifying code you realize you've done something similar before. Instead of
+  repeating yourself, it may make more sense to extract the common code into a new class or method
+  that you can call from multiple locations. Then when you need to do the same thing a third, fourth,
+  or fi fth time, you won't need to write the same code all over again.
+  Saving you the trouble of writing repeated code is nice, but the real benefi t here is in maintaining
+  the duplicated code.</p>
+  
+<p><b>Improved Flexibility.</b> Sometimes, when you modify a piece of code, you realize the code isn't as fl exible as you'd like.
+  It was written in a way that made sense at the time, but that prevents you from easily making the
+  changes you now need to make. If you need to make only a single change, you can simply make the
+  change, test it, fi x anything you've broken, and move on to the next item on your to-do list.
+  However, suppose you're going to make similar changes in the future. In that case, it may be worth
+  spending a little extra time now to clean up the code so that it's easier to make those changes later.</p>
+  
+<p><b>Bug Swarms.</b> Bugs tend to travel in swarms. What that means is some
+  methods, modules, or classes tend to be buggier than others. That can happen for several reasons.
+  Perhaps that chunk of code is exceptionally complicated or confusing. Perhaps it wasn't thought out
+  well in advance during high-level and low-level design. Perhaps the code was modifi ed several times
+  so its original elegant design has been shredded into confetti. Perhaps the code was written by a
+  beginning programmer who hadn't learned about for loops yet.
+  However they form, bug swarms are dangerous. A piece of code has produced a lot of bugs in the
+  past and is likely to continue spawning bugs in the future. At some point, it's better to step back,
+  study the code so that you understand what it's supposed to do, and rewrite it from scratch.
+  This can be risky. Buggy as it is, the code probably does more or less what it's supposed to do, so
+  there's a chance you'll replace ugly but working code with elegant but broken code.
+  That means you should perform at least a quick cost-benefi t analysis to decide whether it's worth the
+  risk. For example, if you've wasted two or three hours per week for the last few months fi xing bugs
+  in a 30-line method, it's probably worth rewriting that method.</p>
+
+<p><b>Bad Programming Practices.</b> Fixing bad programming practices is both a good reason and a bad reason to refactor code. It's a good
+  reason because the result can be code that is easier to understand, test, debug, and modify. It's a bad
+  reason because, in theory at least, you shouldn't have any bad programming practices in your code.
+  Ideally after you write a piece of code, you should review it (either yourself or in a formal code
+  review) and make sure you've followed good programming practices. Still, sometimes bad code slips
+  into a project.
+  Even if the code starts out good, it can be modifi ed and remodifi ed until it no longer follows good
+  programming practices. Over time a method that was initially short, elegant, and tightly-focused
+  can morph into an incomprehensible jungle of loops, branches, and unrelated tests.</p>
+
+<p><b>Not Invented Here.</b> This is the worst reason for rewriting code, but it's also probably the most common. When some
+  programmers see someone else's code, it doesn't look quite right. The problem isn't actually the code; it's that the second programmer didn't write it. Everyone thinks their
+  approach, naming convention, commenting style, and everything else is the best. If you weren't using
+  the best possible techniques for writing code, you'd do things differently. Thinking you need to rewrite a
+  piece of code just because someone else wrote it is called the not invented here syndrome (NIHS). 
+  When you see a piece of strange code, you shouldn't ask yourself whether it's the correct solution or the
+  best solution. Instead you should ask whether it satisfi es the criteria that mean it should be rewritten.
+  Just because it's not the solution you would have chosen doesn't mean it needs to be changed.</p>
