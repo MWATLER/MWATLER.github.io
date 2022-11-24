@@ -31,7 +31,7 @@ int main() {
 	int array[NROWS][NCOLS] = {//stored in contiguous memory as: 2,3,5,3,4,7,1,6,8
 		{2, 3, 5},
 		{3, 4, 7},
-		{1, 6, 8}
+		{1, 6, 8},
 	};
 
 	std::cout << "The array:" << std::endl;

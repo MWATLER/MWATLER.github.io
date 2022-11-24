@@ -5,15 +5,15 @@
 using namespace std;
 
 void CurveMarks(float **marks, int numRows, int rowSize[]) {
-	for (int i = 0; i < numRows; ++i) {
-		for (int j = 0; j < rowSize[i]; ++j) {
+	for (int i = 0; i < numRows; ++i) {//go through each row, or go through each student
+		for (int j = 0; j < rowSize[i]; ++j) {//go through each column, or go through each mark
 			marks[i][j] *= 1.1;//Curve the marks up by 10%
 			if (marks[i][j] > 100.0) marks[i][j] = 100.0;//cap at 100%
 		}
 	}
 }
 
-int main() {
+int main(int argc, char* argv[]) {//argv is a ragged array. For example, argv[0]: Array2d:exe, argv[1]: data.txt
 	float** studentMarks;//Row: a student, Col: the marks for that student
 	int numStudents;//The number of students
 	int* numMarks;//The number of marks for a given student
@@ -60,7 +60,10 @@ int main() {
 		cout << endl;
 	}
 	cout << endl;
-
+	for (int i = 0; i < numStudents; ++i) {
+		delete []studentMarks[i];
+	}
+	delete[] studentMarks;
 	delete[] numMarks;
 	return 0;
 }

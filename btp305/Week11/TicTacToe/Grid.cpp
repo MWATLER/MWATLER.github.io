@@ -7,7 +7,7 @@
 using namespace std;
 
 void Grid::DisplayGrid() {
-	system("cls");
+	system("cls");//windows command to clear the screen
 	cout << "   TIC TAC TOE" << endl << endl;
 	for (int y = 0; y < 5; ++y) {//y==0 first row
 								 //y==1 line

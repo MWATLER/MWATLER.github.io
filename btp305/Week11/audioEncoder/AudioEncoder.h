@@ -5,25 +5,28 @@
 
 #include <iostream>
 
+#define DEBUG
+#define Log(msg) std::cout<<msg<<std::endl;
+
 class Encoder {
 public:
-	char operator()(char in, int key) const {
+	unsigned char operator()(unsigned char in, int key) const {
 		return in + key;
 	}
 };
 
 class AudioEncoder {
-	char* data;
-	char* encodedData;
+	unsigned char* data;
+	unsigned char* encodedData;
 	int size;
 	int key;
 public:
 	AudioEncoder(std::string filename);
 	void Encode(int _key);
-	char* GetData() const {
+	unsigned char* GetData() const {
 		return data;
 	}
-	char* GetEncodedData() const {
+	unsigned char* GetEncodedData() const {
 		return encodedData;
 	}
 	int GetSize() const {
@@ -32,5 +35,5 @@ public:
 	~AudioEncoder();
 };
 
-void EncodeThread(char* dataPtr, char* encodedDataPtr, int key, int len, const Encoder& encoder);
+void EncodeThread(unsigned char* dataPtr, unsigned char* encodedDataPtr, int key, int len, const Encoder& encoder);
 #endif// _AUDIOENCODER_H_

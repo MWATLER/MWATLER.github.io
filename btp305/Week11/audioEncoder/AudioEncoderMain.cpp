@@ -9,8 +9,8 @@ int main() {
 	AudioEncoder audioEncoder(fileName);
 
 	audioEncoder.Encode(1);
-	char* originalData = audioEncoder.GetData();
-	char* encodedData = audioEncoder.GetEncodedData();
+	unsigned char* originalData = audioEncoder.GetData();
+	unsigned char* encodedData = audioEncoder.GetEncodedData();
 	int len = audioEncoder.GetSize();
 
 	cout << endl;
