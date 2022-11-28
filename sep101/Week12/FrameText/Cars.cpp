@@ -7,11 +7,16 @@ using namespace std;
 void CarName::GetNumberOfEntries() {
 	file.open("Cars.csv");
 	numNames = 0;
-	while (file) {
+    while (file) {//read to the end of the file
 		if (file.get() == ',') {
 			++numNames;
 		}
 	}
+/*  while (file) {
+		std::string temp;
+		getline(file, temp, ',');
+		if(temp!="") ++numNames;
+	}*/
 	++numNames;//there is no comma after the last entry
 	file.close();
 }
@@ -23,7 +28,7 @@ void CarName::GetEntries() {
 	}
 	carName = new string[numNames];
 	for (int i = 0; i < numNames; ++i) {
-		getline(file, carName[i], ',');
+		getline(file, carName[i], ',');//the comma is the delimiter
 	}
 	file.close();
 }

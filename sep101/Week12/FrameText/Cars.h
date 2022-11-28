@@ -15,7 +15,7 @@ public:
 		numNames = 0;
 		carName = nullptr;
 	}
-	void GetNumberOfEntries();
+	void GetNumberOfEntries();//not a const because it changes file and numNames
 	void GetEntries();
 	void DisplayEntries();
 	~CarName();//clean up memory allocation
