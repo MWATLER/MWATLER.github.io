@@ -9,7 +9,7 @@
 using namespace std;
 
 int main() {
-	Inductor inductor(0.01);//Inductance of 0.1 Henries
+	Inductor inductor(0.01);//Inductance of 0.01 Henries
 	const double delta = 0.0001;//timestep of 0.1ms
 	const double frequency = 50.0;//50Hz
 	ofstream file("L.dat");//over-writes an existing file
