@@ -17,11 +17,11 @@ public:
 	static const int VEHICLE_BOAT = 0x02;
 
 	AmphibiousVehicle(std::string _name);
-	Err_Status Travel(double distance);
-	Err_Status AddFuel(double amount);
+	Err_Status Travel(double distance);//pure virtual inside of Vehicle
+	Err_Status AddFuel(double amount);//pure virtual inside of Vehicle
 	std::string GetName() const;
-	double GetFuel() const;
-	double GetCost() const;
+	double GetFuel() const;//pure virtual inside of Vehicle
+	double GetCost() const;//pure virtual inside of Vehicle
 	Err_Status UnsetMode(unsigned short _mode);
 	Err_Status SetMode(unsigned short _mode);
 };

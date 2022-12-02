@@ -13,3 +13,15 @@ public:
     NLitObj(const char* n, ulong c);
     ulong emission() const;
 };
+
+/*
+#include "Name.h"
+
+class NCube : virtual public Name
+{
+    double len;
+public:
+    NCube(const char* n, double l);
+    double volume() const;
+};
+*/
