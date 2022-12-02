@@ -236,5 +236,29 @@ int main() {
 		cout << sp.name << " " << sp.age << " years old from " << sp.country << endl;
 		});
 
+	auto isYoung = [](const Sprinter& s)->bool {
+		bool ret = false;
+		if (s.age < 25 || s.country == "Jamaica") {
+			ret = true;
+		}
+		return true;
+	};
+
+	int count = 0;
+	auto total = std::accumulate(res.begin(), res.end(), 0.0, [&](double& sum, const Sprinter& s) {
+		if (isYoung(s)) {
+			sum += s.time100;
+			++count;
+		}
+		return sum;
+		});
+
+	if (count > 0) {
+		cout << endl << "The average 100m time for young sprinters is " << total / count << " seconds." << endl;
+	}
+	else {
+		cout << endl << "There are no young sprinters." << endl;
+	}
+
 	return 0;
 }
