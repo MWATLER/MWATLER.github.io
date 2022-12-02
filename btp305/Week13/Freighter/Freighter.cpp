@@ -51,7 +51,7 @@ Freighter& Freighter::operator-=(const std::string& _name) {
 	for (it = this->cargo.begin(); it != this->cargo.end() && !found; ++it) {
 		if (it->GetName() == _name) {
 			it = this->cargo.erase(it);
-			if (it == this->cargo.end())--it;//don't go past the end of the vector
+			--it;//don't go past the end of the vector
 			found = true;
 		}
 	}
