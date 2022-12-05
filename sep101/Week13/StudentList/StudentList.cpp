@@ -55,6 +55,7 @@ int main(void) {
 		delete[] marks;
 		marks = nullptr;
 	}
+	//string data is not accessible here. It has been "destroyed"
 	file.close();
 
 	//Print out the students
@@ -69,11 +70,23 @@ int main(void) {
 		for (int j = i+1; j < numStudents; ++j) {
 			if (student[i].GetAverage() > student[j].GetAverage()) {
 				student[j].IncrementRank();
-			} else {//ignore ties
-				student[i].IncrementRank();
-			}
+			} else if (student[i].GetAverage() < student[j].GetAverage()) {
+					student[i].IncrementRank();
+			}//ignore ties
 		}
 	}
+	//student[0].GetAverage() returns 80
+	//student[1].GetAverage() returns 70
+	//student[2].GetAverage() returns 90
+	//i=0, j=1. student[0].GetAverage() > student[1].GetAverage()
+	//          student[0].GetRank() returns 1, student[1].GetRank() returns 2
+	//i=0, j=2. student[0].GetAverage() > student[2].GetAverage()
+	//          student[0].GetRank() returns 2, student[2].GetRank() returns 1
+	//i=1, j=2. student[1].GetAverage() > student[2].GetAverage()
+	//          student[1].GetRank() returns 3, student[2].GetRank() returns 1
+	//RESULT: student[0].GetRank() returns 2
+	//        student[1].GetRank() returns 3
+	//        student[2].GetRank() returns 1
 
 	//Print out the students again
 	for (int i = 0; i < numStudents; ++i) {
@@ -106,8 +119,8 @@ int main(void) {
 	fout.close();
 
 	//Delete memory for the students
-	delete[] student;
-	delete[] studentSorted;
+	delete[] student;//the destructor is invoked for each student
+	delete[] studentSorted;//the destructor is invoked for each student
 
 	return 0;
 }

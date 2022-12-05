@@ -12,6 +12,8 @@ class Student {
 	int numMarks;
 	double average;
 	int rank;
+	void Destroy(void);//This function is only used by the class, make it private
+
 public:
 	Student();
 	bool CalculateAverage();

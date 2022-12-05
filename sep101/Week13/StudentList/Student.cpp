@@ -54,12 +54,17 @@ void Student::SetMarks(double* marks, int num) {
 	numMarks = num;
 	//reallocation: delete any allocated memory, then
 	//              allocate new memory for the new data
-	delete[] this->marks;//C++11 and later
+	Destroy();
 //	this->marks = nullptr;
 	this->marks = new double[numMarks];
 	for (int i = 0; i < numMarks; ++i) {
 		this->marks[i] = marks[i];
 	}
+}
+
+void Student::Destroy(void) {
+	delete[] this->marks;//C++11 and later
+	this->marks = nullptr;
 }
 
 double* Student::GetMarks() const {
@@ -79,6 +84,5 @@ int Student::GetRank() const {
 }
 
 Student::~Student() {
-	delete[] this->marks;
-	this->marks = nullptr;
+	Destroy();
 }
