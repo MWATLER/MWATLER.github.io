@@ -53,14 +53,29 @@ int main() {
     Queue q;
 
     // Push Data onto the Queue
-    q.push(3);//head->3->nullptr, tail->3->nullptr
-    q.push(5);//head->3->5->nullptr, tail->5->nullptr
-    q.push(9);//head->3->5->9->nullptr, tail->9->nullptr
-    q.push(8);//head->3->5->9->8->nullptr, tail->8->nullptr
+    q.push(3);//    3->nullptr
+              //    ^         
+              //    |         
+              //head/tail
+    q.push(5);// 3 -> 5->nullptr
+              // ^    ^
+              // |    |
+              //head tail
+    q.push(9);// 3->5->9->nullptr
+              // ^     ^
+              // |     |
+              //head  tail
+    q.push(8);// 3->5->9->8->nullptr
+              // ^        ^
+              // |        |
+              //head     tail
 
     // Remove First Node
-    q.pop();//data=3,head->5,delete 3
-	//head->5->9->8->nullptr, tail->8->nullptr
+    q.pop();//data=3,delete 3, head points to 5
+	// 5->9->8->nullptr
+    // ^     ^
+    // |     |
+    //head  tail
 
     // Pop Data Off the Queue
     while (!q.empty())

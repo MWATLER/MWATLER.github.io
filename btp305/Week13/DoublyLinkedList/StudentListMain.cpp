@@ -57,5 +57,12 @@ int main() {
 	cout << (*it) << endl;
 	cout << endl << "The size of our list now is " << studentList.size() << endl;
 
+	Student* studentPtr = studentList.GetNext();
+	cout << studentPtr->name << " " << studentPtr->average << endl;
+	studentPtr = studentList.GetNext();
+	cout << studentPtr->name << " " << studentPtr->average << endl;
+	studentPtr = studentList.GetPrev();
+	cout << studentPtr->name << " " << studentPtr->average << endl;
+
 	return 0;
 }

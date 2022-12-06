@@ -6,7 +6,9 @@ class Data {
     int data;
 public:
     Data(int d = 0) : data(d) {}
-    int out() const { return data; }
+    int out() const { 
+        return data; 
+    }
 };
 
 struct Node {//wraps around the data. Node takes data and adds linked list functionality to it
@@ -20,12 +22,15 @@ class Stack {//like a stack of dishes, you remove the last thing you put on the 
 public:
     Stack() : head(nullptr) {}
     ~Stack() {
-        while (Node* p = head) {
+        while (head) {
+            Node* p = head;
             head = head->next;
             delete p;
         }
     }
-    void push(int d) { head = new Node(d, head); }//head is always pointing to the most recent thing added
+    void push(int d) { 
+        head = new Node(d, head); 
+    }//head is always pointing to the most recent thing added
     Data pop() {
         Data data;
         if (head) {
@@ -47,14 +52,22 @@ int main() {
     s.push(5);//next points to 3, head points to 5
     s.push(9);//next points to 5, head points to 9
     s.push(8);//next points to 9, head points to 8
-    //head->8->9->5->3->nullptr
+    // 8->9->5->3->nullptr
+    // ^
+    // |
+    //head
 
     // Remove first Node
     s.pop();//data=8,head points to 9, 8 is deleted
-    //head->9->5->3->nullptr
+    // 9->5->3->nullptr
+    // ^
+    // |
+    //head
 
     // Pop Data Off Stack
     while (!s.empty())
         std::cout << s.pop().out() << ' ';//'s.pop() returns Data, effectively Data.out()
     std::cout << std::endl;
+
+    return 0;
 }

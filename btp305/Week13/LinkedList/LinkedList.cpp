@@ -19,7 +19,10 @@ int main() {
     head = new Element(5, head);//next points to 3, head points to 5
     head = new Element(9, head);//next points to 5, head points to 9
     head = new Element(8, head);//next points to 9, head points to 8
-    //head->8->9->5->3->nullptr, this is kind-of like a stack (LIFO)
+    // 8->9->5->3->nullptr, this is kind-of like a stack (LIFO)
+    // ^
+    // |
+    //head
 
     // Display elements from head to tail
     for (Element* p = head; p; p = p->next)
@@ -28,13 +31,19 @@ int main() {
 
     // Remove first two elements
     Element* remove = head;//remove->8
-    if(head->next!=nullptr) head = head->next;//head->9
+    if(head->next!=nullptr) head = head->next;//head points to 9
     delete remove;//removes 8
-	//head->9->5->3->nullptr
+	// 9->5->3->nullptr
+    // ^
+    // |
+    //head
     remove = head;//remove->9
-	if (head->next != nullptr) head = head->next;//head->5
+	if (head->next != nullptr) head = head->next;//head points to 5
     delete remove;//removes 9
-    //head->5->3->nullptr
+    // 5->3->nullptr
+    // ^
+    // |
+    //head
 
     // Display elements from head to tail
     for (Element* p = head; p; p = p->next)
@@ -42,8 +51,11 @@ int main() {
     std::cout << std::endl;
 
     // Deallocate memory one element at a time
-    while (Element* p = head) {
+    while (head) {
+        Element* p = head;
         head = head->next;
         delete p;
     }
+
+    return 0;
 }

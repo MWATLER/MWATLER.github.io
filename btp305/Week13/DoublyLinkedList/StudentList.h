@@ -13,6 +13,8 @@ struct Student {
 	Student* prev;
 };
 
+//This could be templatized for any kind of structure
+//template <class T>
 class StudentList {
 	Student* curr;
 	Student* head;
@@ -40,11 +42,16 @@ public:
 			return curr->name;
 		}
 	};
-	class iterator :public const_iterator {
+//	class iterator :public const_iterator {
+	class iterator {
 		friend class StudentList;
+		Student* curr;
 	public:
-		iterator(Student* _curr) :const_iterator(_curr) {}
-		iterator() :const_iterator() {}
+//		iterator(Student* _curr) :const_iterator(_curr) {}
+		iterator(Student* _curr) {
+			curr = _curr;
+		}
+//		iterator() :const_iterator() {}
 		iterator operator--() {
 			if (this->curr->prev) {
 				this->curr = this->curr->prev;
