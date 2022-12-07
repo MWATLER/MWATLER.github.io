@@ -38,6 +38,13 @@ public:
 			}
 			return *this;
 		}
+		const_iterator operator++() {
+			if (curr->next) {
+				curr = curr->next;
+			}
+			return *this;
+		}
+
 		std::string operator*() const{
 			return curr->name;
 		}
@@ -46,9 +53,9 @@ public:
 	class iterator {
 		friend class StudentList;
 		Student* curr;
-	public:
+	public://Should have copy assignment
 //		iterator(Student* _curr) :const_iterator(_curr) {}
-		iterator(Student* _curr) {
+		iterator(Student* _curr) {//goes here by default behaviour
 			curr = _curr;
 		}
 //		iterator() :const_iterator() {}

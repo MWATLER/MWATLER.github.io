@@ -58,15 +58,18 @@ int main() {
     //head
 
     // Remove first Node
-    s.pop();//data=8,head points to 9, 8 is deleted
+    Data d = s.pop();//data=8,head points to 9, 8 is deleted
+    std::cout << "Popped " << d.out() << " off the stack" << std::endl;
     // 9->5->3->nullptr
     // ^
     // |
     //head
 
     // Pop Data Off Stack
-    while (!s.empty())
-        std::cout << s.pop().out() << ' ';//'s.pop() returns Data, effectively Data.out()
+    while (!s.empty()) {
+        d = s.pop();
+        std::cout << "Popped " << d.out() << " off the stack" << std::endl;
+    }
     std::cout << std::endl;
 
     return 0;
