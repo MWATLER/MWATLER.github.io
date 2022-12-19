@@ -1,4 +1,73 @@
-<h1>Assignment 1 - </h1>
+<h1>Assignment 1 - Analog Circuit Simulator</h1>
 
-<p>Due - </p>
+<p>Due - end of week 7</p>
+
+<p>This is a group project of 2 or 3 students per group. The groups can be found in the document 
+    <a href="Assignment1_Groups.docx" target="_blank">Assignment1_Groups.docx</a>. Each group will 
+    also be assigned a page on Teams so you can work together online.</p>
+
+<h2>Introduction</h2>
+
+<h3>Numerical Methods for the Solution of Analog Electronic Circuits</h3>
+
+<p>Simulation is a very important part of design. Most hardware projects undergo rigorous simulations before 
+    implementation actually occurs. Simulating the behaviour of an analog circuit is quite simple. One can 
+    simply obtain the differential equation for the circuit, and use well known numerical methods to solve them.</p>
+
+<p>Several numerical algorithms are well know. Below is a summary of a few:
+<ul>
+<li><b>Euler's method.</b> The Euler method (also called forward Euler method) is a first-order numerical procedure 
+    for solving ordinary differential equations with a given initial value. It is the most basic explicit 
+    method for numerical integration of ordinary differential equations. The Euler method is a first-order method, 
+    which means that the local error (error per step) is proportional to the square of the step size, and the global 
+    error (error at a given time) is proportional to the step size. The Euler method often serves as the basis to 
+    construct more complex methods. One way to think about Euler's method is that it uses the
+    derivative at the current solution point (t0, u0) to create a linear prediction of the solution at the next time t1. </li>
+<li><b>Midpoint method.</b> The midpoint method tries for an improved prediction over the Euler's method. It does this
+    by taking an initial half step in time, sampling the derivative there, and then using that forward information as the slope.
+    In other words, it replaces the tangent line by a line that is starting to bend correctly.</li>
+<li><b>Runge-Kutta method.</b> One of the standard workhorses for solving ordinary differential equations is the called the Runge-Kutta 
+    method. This method is simply a higher order approximation to the midpoint method. Instead of shooting to the midpoint, estimating 
+    the derivative, the shooting across the entire interval - the Runge-Kutta method, in a sense takes, four steps, shooting
+    across one quarter of the interval, estimating the derivative, then shooting to the midpoint, and so on. The precise
+    manner in which the method propagates across a time step is done in the optimal way for the four steps</li>
+</ul>
+For more details, see the publication <a href="NumericalMethods.pdf" target="_blank">Numerical Methods for Differential Equations</a>.
+</p>
+
+<p>The problem of applying well known numerical methods to solving analog electronic circuits is that these methods assume 
+    linear behaviour. The key point that distinguishes a nonlinear circuit from a linear circuit is the relationship between 
+    the input and output signal. If you graph the output signal versus the input signal for a linear circuit, then the graph 
+    will be a straight line for all input signal levels. With a nonlinear circuit, the output will not be a straight line. 
+    Instead, the output will be a curve.</p>
+
+<p>It is likely that all the circuits you built were linear circuits, meaning they only contained resistors, capacitors, and non-ferritic 
+    inductors. While this is a great way to get an important introduction into the fundamentals of basic circuits, almost all modern 
+    circuits contain many more complicated elements and functionality. For a discussion of linear and nonlinear circuits, see 
+    <a href="https://resources.pcb.cadence.com/blog/2019-the-basics-of-linear-vs-nonlinear-circuits" target="_blank">The Basics of Linear vs. Nonlinear Circuits</a>.
+</p>
+
+<p>To summarize, linear devices include resistors, capacitors, and most inductors when driven with low current.
+    Nonlinear devices include semiconductor devices (transistors and diodes), ferrite inductors driven at high 
+    current where magnetic saturation occurs, all amplifiers, and almost all integrated circuits. Therefore, for 
+    non-linear circuits, we cannot rely on numerical methods and we have to take another approach.</p>
+
+<h3>The Machine Learning Cost Function</h3>
+
+<p>The machine learning cost function attempts to approximate real data with a hypothetical equation. Let us say we 
+wish to approximate data with a first order function:<br>
+h<sub>&#952;</sub>(x) = &#952;<sub>0</sub> + &#952;<sub>1</sub> x<br>
+The parameters we want to guess are &#952;<sub>0</sub> and &#952;<sub>1</sub>. We generate a cost function that determines the difference 
+between actual data and this approximation by taking the square of the difference between the points. We choose 
+&#952;<sub>0</sub> and &#952;<sub>1</sub> to minimize this difference. This is summarized below:<br><br>
+<img src="CostFunction.jpg" alt="The Cost Function" width="500" height="200"></img>
+</p>
+
+<p>It is possible to apply the machine learning cost function to non-linear electronic circuits if we expand 
+    h<sub>&#952;</sub>(x) to a much higher order equation. For instance:<br>
+h<sub>&#952;</sub>(x) = &#952;<sub>0</sub> + &#952;<sub>1</sub> x + &#952;<sub>2</sub> x<sup>2</sup> + &#952;<sub>2</sub> x<sup>3</sup> ...<br><br>
+We could apply voltages to the circuits and measure the currents we seek, determine the optimum &#952;'s, and use that to predict behaviour.
+</p>
+
+<h3>Heuristic Algorithms for the Solution of Analog Electronic Circuits</h3>
 
