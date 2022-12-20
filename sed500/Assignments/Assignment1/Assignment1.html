@@ -1,6 +1,6 @@
 <h1>Assignment 1 - Analog Circuit Simulator</h1>
 
-<p>Due - end of week 7</p>
+<p><b>Due - End of week 7</b></p>
 
 <p>This is a group project of 2 or 3 students per group. The groups can be found in the document 
     <a href="Assignment1_Groups.docx" target="_blank">Assignment1_Groups.docx</a>. Each group will 
@@ -71,3 +71,59 @@ We could apply voltages to the circuits and measure the currents we seek, determ
 
 <h3>Heuristic Algorithms for the Solution of Analog Electronic Circuits</h3>
 
+<p>A heuristic algorithm is one that is designed to solve a problem in a faster and more efficient fashion than traditional methods by sacrificing 
+   optimality, accuracy, precision, or completeness for speed. Heuristic algorithms often times used to solve NP-complete problems, a class of 
+   decision problems. In these problems, there is no known efficient way to find a solution quickly and accurately although solutions can be 
+   verified when given. Heuristics can produce a solution individually or be used to provide a good baseline and are supplemented with optimization 
+   algorithms. Heuristic algorithms are most often employed when approximate solutions are sufficient and exact solutions are necessarily computationally 
+   expensive.</p>
+
+<p>For a linear electronic circuit, a heuristic algorithm is not required, since all voltages and currents through the circuit can be solved using 
+    numerical analysis. For non-linear circuits, a heuristic approach is required. Consider the diode. The voltage current relationship is given as:<br>
+    i(v) = I<sub>S</sub>[e<sup>(v/(&#951;V<sub>T</sub>))</sup>-1], v>V<sub>Z</sub><br>
+    where I<sub>S</sub> is the reverse saturation current,<br>
+    v is the applied voltage (reverse bias is negative),<br>
+    V<sub>T</sub>=T/11,586 is the volt equivalence of temperature, and<br>
+    &#951; is the emission coefficient, which is 1 for germanium devices and 2 for silicon devices.<br><br>
+    Note that for v&leq;V<sub>Z</sub>, the diode is in breakdown and the ideal diode no longer applies.<br><br>
+    The ideal diode i-v characteristic curve is shown below:<br><br>
+<img src="DiodeEquation.jpg" alt="The Diode Equation"></img><br><br>
+
+Sometimes the inverse relation is more useful, and that is the voltage across a diode as a function of the current:<br>
+v(i) = &#951;V<sub>T</sub>ln[(i/I<sub>S</sub>)+1]
+</p>
+
+<p>There are many other non-linear circuit components. For instance, the transistor, the operational amplifier, any magnetic circuit where magnetic 
+    saturation occurs. In fact, such simple components such as the resistor, capacitor and inductor exhibit non-linear behaviour if they are pushed 
+    to their limits.</p>
+
+<h3>The Cost Function for Assignment 1</h3>
+
+<p>Assignment 1 revolves around a cost function. This is a function that tries to predict the currents of the components given 
+    the applied voltage. The following variables are used:
+<ul>
+<li>I1 is the predicted current. Several iterations are required to approach the correct current.</li>
+<li>J1 is the cost of the function for the current iteration. We try to reduce this to zero or close to zero.</li>
+<li>J0 is the cost of the function for the previous iteration. We use both J1 and J0 to predict the current.</li>
+<li>voltage is the voltage applied across the circuit.</li>
+<li>sumVoltage is the voltage summed across all component for a given current I1.</li>
+</ul>
+As you can see from the above, the idea is to repetitively guess I1 such that the cost J1 (sumVoltage-voltage) approaches zero.
+</p>
+
+<p>You may notice that the cost function has no intelligence. It does not learn. This heuristic algorithm does not comply 
+    with the principles of machine learning.</p>
+
+<h3>The Code for Assignment 1</h3>
+
+<p>Some files have been given to you. You can change these. The component class, which acts as a base class for all circuit components, 
+    is given to you. Each component will display its current in a different colour, and each component has a name. There are pure virtual 
+    functions which require implementation in derived classes. The header file for the analog circuit has been given to you. This class 
+    contains a list of circuit components, a static display function which can be called from all of its components, a run function for 
+    when you want to run the actual simulation, the cost function as described above, and a destructor. Some function implementations 
+    have been given in the CPP file for the analog circuit. Finally, a main function has been provided in full. See all files at:<br>
+    <a href="release/Component.h" target="_blank">Component.h</a>, (complete)<br>
+    <a href="release/AnalogCircuit.h" target="_blank">AnalogCircuit.h</a>, (complete)<br>
+    <a href="release/AnalogCircuit.cpp" target="_blank">AnalogCircuit.cpp</a> (incomplete) and<br>
+    <a href="release/AnalogCircuitMain.cpp" target="_blank">AnalogCircuitMain.cpp</a> (complete).
+</p>
