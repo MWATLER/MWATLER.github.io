@@ -80,7 +80,7 @@ We could apply voltages to the circuits and measure the currents we seek, determ
 
 <p>For a linear electronic circuit, a heuristic algorithm is not required, since all voltages and currents through the circuit can be solved using 
     numerical analysis. For non-linear circuits, a heuristic approach is required. Consider the diode. The voltage current relationship is given as:<br>
-    i(v) = I<sub>S</sub>[e<sup>(v/(&#951;V<sub>T</sub>))</sup>-1], v>V<sub>Z</sub><br>
+    <b>i(v) = I<sub>S</sub>[e<sup>(v/(&#951;V<sub>T</sub>))</sup>-1]</b>, v>V<sub>Z</sub><br>
     where I<sub>S</sub> is the reverse saturation current,<br>
     v is the applied voltage (reverse bias is negative),<br>
     V<sub>T</sub>=T/11,586 is the volt equivalence of temperature, and<br>
@@ -97,24 +97,28 @@ v(i) = &#951;V<sub>T</sub>ln[(i/I<sub>S</sub>)+1]
     saturation occurs. In fact, such simple components such as the resistor, capacitor and inductor exhibit non-linear behaviour if they are pushed 
     to their limits.</p>
 
-<h3>The Cost Function for Assignment 1</h3>
+<h2>Assignment 1 Tasks</h2>
+
+<p>There are several parts to assignment 1. First is the cost function, which is used to guess the current for a particular instant in time. The second 
+are the circuit components, the third is the graphics.</p>
+
+<h3>The Cost Function</h3>
 
 <p>Assignment 1 revolves around a cost function. This is a function that tries to predict the currents of the components given 
-    the applied voltage. The following variables are used:
+    the applied voltage. The cost function sums the voltages of the components and compares to the applied voltage. The "cost" is the 
+    difference between the applied voltage and the sum of the voltages across the components. Several iterations are taken until the cost 
+    is below a tolerance level, which is typically very low. The following variables are used:
 <ul>
-<li>I1 is the predicted current. Several iterations are required to approach the correct current.</li>
-<li>J1 is the cost of the function for the current iteration. We try to reduce this to zero or close to zero.</li>
-<li>J0 is the cost of the function for the previous iteration. We use both J1 and J0 to predict the current.</li>
-<li>voltage is the voltage applied across the circuit.</li>
-<li>sumVoltage is the voltage summed across all component for a given current I1.</li>
+<li><b>I1</b> is the predicted current. Several iterations are required to approach the correct current.</li>
+<li><b>J1</b> is the cost of the function for the current iteration. We try to reduce this to zero or close to zero.</li>
+<li><b>J0</b> is the cost of the function for the previous iteration. We use both J1 and J0 to predict the current.</li>
+<li><b>voltage</b> is the voltage applied across the circuit.</li>
+<li><b>sumVoltage</b> is the voltage summed across all component for a given current I1.</li>
 </ul>
-As you can see from the above, the idea is to repetitively guess I1 such that the cost J1 (sumVoltage-voltage) approaches zero.
+As you can see from the above, the idea is to repetitively guess <b>I1</b> such that the cost <b>J1</b> (sumVoltage-voltage) approaches zero.
 </p>
 
-<p>You may notice that the cost function has no intelligence. It does not learn. This heuristic algorithm does not comply 
-    with the principles of machine learning.</p>
-
-<h3>The Code for Assignment 1</h3>
+<h3>The Circuit Components</h3>
 
 <p>Some files have been given to you. You can change these. The component class, which acts as a base class for all circuit components, 
     is given to you. Each component will display its current in a different colour, and each component has a name. There are pure virtual 
@@ -127,3 +131,110 @@ As you can see from the above, the idea is to repetitively guess I1 such that th
     <a href="release/AnalogCircuit.cpp" target="_blank">AnalogCircuit.cpp</a> (incomplete) and<br>
     <a href="release/AnalogCircuitMain.cpp" target="_blank">AnalogCircuitMain.cpp</a> (complete).
 </p>
+
+<p>The analog circuit used in this assignment does not have non-linear components, but can be used to verify the functionality of your software. We will 
+    apply a sinusoidal voltage for 0.6 seconds, then 0 volts for the remainder of the simulation. The circuit looks as follows:<br>
+    <img src="RLC.png" alt="RLC Circuit" width="500" height="200"></img><br><br>
+    Recall from your physics and electronics classes, the voltages as a function of current across these components are as follows:
+<ul>
+    <li><b>Resistor:</b> V<sub>R</sub>(t) = i R</li>
+    <li><b>Inductor:</b> V<sub>L</sub>(t) = L di/dt</li>
+    <li><b>Capacitor:</b> V<sub>C</sub>(t) = V<sub>0</sub> + 1/C <span style='font-size:20px;'>&int;</span>i dt</li>
+</ul>
+</p>
+
+By using a small time-step, the above equations can be approximated using Euler's method as follows:
+<ul>
+    <li><b>The Resistor</b>. The resistor has a resistance in Ohms as well as a current running through it. The voltage across a resistor is simply 
+        the current going through the resistor times the resistance:<br>
+        <b>voltage = current * resistance</b>.</li>    
+    <li><b>The Inductor</b>. An inductor has an inductance in Henries and has current running through it in Amperes. If a current is applied to the inductor, 
+        the voltage across the inductor is given as follows:<br>
+        <b>voltage = inductance * (current[1] - current[0]) / timestep</b>, where current[1] is the applied current and current[0] is the current from the previous time step.<br>
+        Once the correct current has been determined, don't forget to update your current: current[1] = current[0].<br>
+    <li><b>The Capacitor</b>. The capacitor has a capacitance in Farads, a current running through it in Amperes, and a voltage stored in it in Volts. If a current is 
+        applied to the capacitor, the voltage across the capacitor is as follows:<br>
+        <b>voltage[1] = voltage[0] + current * timestep / capacitance</b>, where voltage[1] is the current voltage and voltage[0] is the voltage from the previous time step.<br>
+        Once the correct current has been determined, don't forget to update your voltage: voltage[1] = voltage[0].<br>
+</ul>
+
+<h3>The Graphics</h3>
+
+<p>The graphics library suggested for this assignment is OpenGL. The following link explains how to add OpenGL to Visual Studio:<br>
+<a href="https://content.byui.edu/file/2315e65e-a34a-48d3-814d-4175a2b74ed5/1/intro/165-opengl-visualStudio2017.html" target="_blank">Configuring Visual Studio for OpenGL Development</a>.</p>
+<p>To summarize:
+    <ul>
+        <li>Create a project.</li>
+        <li>Right-click on "References", then click on Manage Nuget Packages.</li>
+        <li>Select Package Manager Console.</li>
+        <li>Click on the prompt (where it says PM>), and type: Install-Package nupengl.core Then press enter.</li>
+    </ul>
+A manual of OpenGL API's can be found at:
+<a href="http://code.nabla.net/doc/OpenGL/index.html" target="_blank">OpenGL Documentation</a>.
+</p>
+
+<h2>Assignment 1 Tasks</h2>
+
+<ul>
+<li>You must provide a working prototype by the end of the fourth week.</li>
+<li>You must provide a project plan by the end of the fourth week.</li>
+<li>The project consists of three parts. You must have all parts working by the end of the assignment.
+<ul>
+    <li>Familiarize yourself with the graphics library.</li>
+    <li>Complete the classes for the Inductor, Capacitor and Resistor.</li>
+    <li>Complete the function implementations of the AnalogCircuit class.</li>
+</ul>
+</li>
+</ul>
+
+<h2>Questions</h2>
+
+<p>The questions comprise a large portion of this assignment. Here you must show me that you can analyze the project and make suggestions for improvements.</p>
+
+<ol>
+<li>You may notice that the cost function is based on Euler's method. What other method(s) might be applied to enable it to run more efficiently?</li>
+<li>You may notice that the cost function has no intelligence. It does not learn. This heuristic algorithm does not comply 
+    with the principles of machine learning. How might you add intelligence to our cost function to enable it to run more efficiently?</li>
+<li>Devise a completely different way to implement the cost function. Is there some quicker way of guessing the present current knowing the previous voltage and current?</li>
+<li>You may not like the way this project was designed and implemented. What changes would you suggest and why (ie. graphics, circuit components, using C++, ...).</li>
+</ol>
+
+<h2>Marking Rubric</h2>
+
+<style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    table {
+        width: 800;
+    }
+    </style>
+    <table>
+        <tr><th></th><th>Does not meet expectations</th><th>Satisfactory</th><th>Good</th><th>Exceeds Expectations</th></tr>
+        <tr><td><b>The Project Plan<br>(3 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+        <tr><td><b>The Prototype<br>(1 mark)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+        <tr><td><b>The Graphics Library<br>(2 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+        <tr><td><b>The Component Classes<br>(2 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+        <tr><td><b>The Analog Circuit Class<br>(2 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+        <tr><td><b>Code Documentation<br>(1 mark)</b></td><td>Does not contain documentation</td><td>Contains header documentation for either all files or for all functions within each file</td>
+            <td>Contains header documentation for all files and for most functions within each file</td><td>Contains header documentation for all files and for all functions within each file.
+                Documents unclear code.</td></tr>
+        <tr><td><b>Questions<br>(4 marks)</b></td><td>Answers no question correctly</td><td>Answers some questions correctly</td>
+            <td>Answers most questions correctly</td><td>Answers all Questions correctly</td></tr>
+    </table>
+    
+<h2><b><u>Submission</u></b></h2>
+    
+    <p>Please email all source code and answers to questions to:
+        <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+    
+    <p>Your answers to questions can be submitted in a separate document or embedded within your source code.</p>
+    
+<h2><b><u>Late Policy</u></b></h2>
+    
+    <p>You will be docked 10% if your assignment is submitted 1-2 days late.<br>
+       You will be docked 20% if your assignment is submitted 3-4 days late.<br>
+       You will be docked 30% if your assignment is submitted 5-6 days late.<br>
+       You will be docked 40% if your assignment is submitted 7 days late.<br>
+       You will be docked 50% if your assignment is submitted over 7 days late.</p>
+    
