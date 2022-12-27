@@ -1,3 +1,0 @@
-The maximum salary is 110000.00
-The average salary is 85083.33
-The average age is 40.58

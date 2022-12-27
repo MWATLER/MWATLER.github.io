@@ -1,3 +1,0 @@
-* Analog Circuit Simulator - heuristic algorithm
-* BWC - networking software
-* Events in the Hood - dB software

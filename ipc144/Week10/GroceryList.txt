@@ -1,6 +1,0 @@
-Chips 100013 0.79
-Chocolate 100014 1.12
-Cookies 100015 2.33
-Sprite 100017 1.00
-Chicken 100019 3.99
-Milk 100023 4.19

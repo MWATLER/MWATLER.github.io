@@ -1,1 +1,0 @@
-No communication. An exec'd process is not the child of an exec'ing process

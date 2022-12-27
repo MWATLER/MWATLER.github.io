@@ -1,7 +1,0 @@
-
-parent:main: pid:109009
-child:main: pid:109011
-intfMonitor:main: interface:ens33:  pid:109011
-child:main: pid:109010
-intfMonitor:main: interface:ens33:  pid:109010
-parent:systemMonitor: pid:109009

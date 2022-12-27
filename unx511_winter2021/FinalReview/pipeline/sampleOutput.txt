@@ -1,6 +1,0 @@
-$ ./pipeline
-process 29215 exits with 0
-$       5      10      70
-
-pipeline.cpp simply executes the following from the command line:
-du -a | wc
