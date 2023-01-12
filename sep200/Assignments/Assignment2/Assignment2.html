@@ -1,0 +1,290 @@
+<h2>SEP200 - Assignment 2: The Weighted List Datatype</h2>
+
+<h3>Due: April 14, 2023</h3>
+
+<h4><b><u>Business Case</u></b> (Marketing, Project Manager, Senior Executives)</h4>
+<p>Search algorithms are often compared based on their worst case. Comparisons with the average case are not often made. A poor search 
+    algorithm can be improved on with time if the trends of the search are taken into consideration. We need a search algorithm that 
+    "learns" to improve itself with time.</p>
+
+
+<h4><b><u>Requirements</u></b> (Marketing, Project Manager, Project Lead)</h4>
+<p>For a search algorithm to learn, it must provide the following:</p>
+<ol>
+    <li>Make commonly searched for items easier to find.</li>
+    <li>Make less commonly searched for items harder to find.</li>
+    <li>The datatype should present an interface similar to other datatypes.</li>
+    <li>The datatype should accommodate all kinds of datatypes, both standard and non-standard.</li>
+    <li>To test the search algorithm, let us apply it to the list datatype to create a weighted list datatype.</li>
+    <li>The search algorithm will be applied to other datatypes afterwards.</li>
+</ol>
+
+<h4><b><u>Design</u></b> (Project Lead, Senior Engineers)</h4>
+
+<p>The datatype will be based on an algorithm that moves searched for items closer to the front of the list. The list will only 
+    have a push_back() function for adding items to the list. Therefore, new items are put at the back of the list. 
+    It will have a pointer to the front of the list. When an item is searched for, that item moves "up" the list (closer to the front)
+    by one spot. Since there is only a pointer to the front of the list, an item is easier to find if it is closer to the front of 
+    the list. The datatype will expose the following functions to the programmer:</p>
+<ul>
+<li><b>WeightedList();</b>. A default constructor for the list.</li>
+<li><b>WeightedList(const WeightedList& rhs);</b>. A copy constructor for the list.</li>
+<li><b>WeightedList& operator=(const WeightedList& rhs);</b>. A copy assignment for the list.</li>
+<li><b>WeightedList(WeightedList&& rhs);</b>. A move constructor for the list.</li>
+<li><b>WeightedList& operator=(WeightedList&& rhs);</b>. A move assignment for the list.</li>
+<li><b>iterator begin();</b>. Return an iterator to the beginning of the list.</li>
+<li><b>iterator end();</b>. Return an iterator to the end of the list.</li>
+<li><b>void push_back(const T& data);</b>. Push data of type <b>T</b> to the end of the list.</li>
+<li><b>iterator search(const T& data);</b>. Search for an item with value <b>data</b>. Return the iterator to this item.</li>
+<li><b>iterator erase(iterator it);</b>. Erase a data item. Return the iterator to the next item.</li>
+<li><b>iterator erase(iterator begin, iterator end);</b>. Erase a range of data items from <b>begin</b> to <b>end</b> excluding <b>end</b>. Return an 
+iterator to <b>end</b>.</li>
+<li><b>bool empty() const;</b>. Return <it>true</it> if the list is empty, <it>false</it> otherwise.</li>
+<li><b>int size() const;</b>. Return the number of data items in the list.</li>
+<li><b>~WeightedList();</b>. A destructor for the weighted list.</li>
+<li><b>iterator operator++();</b>. Perform pre-increment on an iterator and return the next iterator.</li>
+<li><b>iterator operator++(int);</b>. Return the current iterator then perform a post-increment on it.</li>
+<li><b>bool operator==(iterator rhs);</b>. Return <it>true</it> if both iterators point to the same data item, <it>false</it> otherwise.</li>
+<li><b>bool operator!=(iterator rhs);</b>. Return <it>false</it> if both iterators point to the same data item, <it>true</it> otherwise.</li>
+<li><b>T& operator*();</b>. A reference to the data element referred to by the iterator.</li>
+</ul>
+
+<h4><b><u>Implementation</u></b> (Junior and Senior Engineers)</h4>
+<ul>
+<li><b>The Data Element</b>. The data element will be a private structure within the weighted list container class.
+    The structure will contain:
+    <ul><li>Data of a generic type,</li>
+    <li>A pointer to the next data element.</li>
+    <li>A constructor that passes the data through to the data element.</li>
+    </ul>
+</li>
+<li><b>The iterator class</b>. The iterator class will be public within the weighted list container class. <b>Do not implement 
+    a const_iterator class as well</b>. The iterator class will 
+    declare the weighted list container class as a friend so it will have access to all the data elements within the 
+    weighted list class. The iterator class will have a pointer to the current data element in the list of data 
+    elements within the container weighted list class. The iterator class will perform the following:
+    <ul>
+    <li><b>iterator operator++();</b>. Advance the current element pointer. Return the current element.</li>
+    <li><b>iterator operator++(int);</b>. Return the current element but advance the current element pointer to the next element.</li>
+    <li><b>bool operator==(iterator rhs);</b>. Perform a logical comparison between the current element and the rhs element. Return <it>true</it> 
+    if they are the same.</li>
+    <li><b>bool operator!=(iterator rhs);</b>. Perform a logical comparison between the current element and the rhs element. Return <it>true</it> 
+        if they are different.</li>
+    <li><b>T& operator*();</b>. Returns a reference to the current element.</li>
+    </ul>
+</li>
+<li><b>The weighted list class</b>. The weighted list class will contain:
+    <ul><li>A list of data elements.</li>
+        <li>The iterator class.</li>
+        <li>A pointer to the front data element.</li>
+        <li>A counter to keep track of the number of data elements.</li>
+    </ul>
+    The weighted list class will implement the following functions:
+    <ul>
+        <li><b>WeightedList();</b>. A default constructor for the list. Need to initialize the front and counter variables.</li>
+        <li><b>WeightedList(const WeightedList& rhs);</b>. A copy constructor for the list. Copy node by node from rhs.</li>
+        <li><b>WeightedList& operator=(const WeightedList& rhs);</b>. A copy assignment for the list. Delete the current list and copy node by node from rhs.</li>
+        <li><b>WeightedList(WeightedList&& rhs);</b>. A move constructor for the list. Set the front variable to the front variable of rhs. Then set the front variable 
+        of the rhs to nullptr. Copy the data element counter from the rhs then set the data element counter of the rhs to zero. The rhs is effectively an empty list.</li>
+        <li><b>WeightedList& operator=(WeightedList&& rhs);</b>. A move assignment for the list. Delete the current list then set the front 
+            variable to the front variable of rhs. Then set the front variable of the rhs to nullptr. Copy the data element counter from the 
+            rhs then set the data element counter of the rhs to zero. The rhs is effectively an empty list.</li>
+        <li><b>iterator begin();</b>. Return an iterator to the beginning of the list. Return the data element pointed to by the front pointer.</li>
+        <li><b>iterator end();</b>. Return an iterator to the end of the list. The last element of the list is actually nullptr by convention.</li>
+        <li><b>void push_back(const T& data);</b>. Push data of type <b>T</b> to the end of the list. This means starting from the front of the list, traversing all 
+        the way through to the end, then inserting your data element there.</li>
+        <li><b>iterator search(const T& data);</b>. Search for an item with value <b>data</b>. Return the iterator to this item. If the data element is found,
+        it is moved up by one space in the list. To do this you might have to have a pointer to the current element, the element before it, and the element 
+        before that one.</li>
+        <li><b>iterator erase(iterator it);</b>. Erase a data item. Return the iterator to the next item. To do this you might have to have a pointer 
+        to the current element and the one before it.</li>
+        <li><b>iterator erase(iterator begin, iterator end);</b>. Erase a range of data items from <b>begin</b> to <b>end</b> excluding <b>end</b>. Return an 
+        iterator to <b>end</b>. To do this you might have to have a pointer to the first element, a pointer to the element before it, and a pointer to the 
+        last element.</li>
+        <li><b>bool empty() const;</b>. Return <it>true</it> if the list is empty, <it>false</it> otherwise. If you have a variable that keeps track of the 
+        number of data elements, you can simply return <it>true</it> if this counter is zero, <it>false</it> otherwise.</li>
+        <li><b>int size() const;</b>. Return the number of data items in the list. If you have a counter that keeps track of the number of data elements, 
+        you can simply return the value of this number.</li>
+        <li><b>~WeightedList();</b>. A destructor for the weighted list. Be sure to delete all the data elements in the list.</li>               
+    </ul>
+</li>
+</ul>
+
+<h4><b><u>Testing and Rework</u></b> (Junior and Senior Engineers, Product Support)</h4>
+<ul>
+<li>A partially implemented weighted list class has been provided for you - <a href="WeightedList.h" target="_blank">WeightedList.h</a>.</li>
+<li>The test program <a href="WeightedListMain.cpp" target="_blank">WeightedListMain.cpp</a> with a correctly operating 
+    weighted list should produce an output as follows:<br>
+<pre>
+    Original list:
+    5
+    4
+    3
+    2
+    1
+    
+    search 3, 2, 1:
+    5
+    3
+    2
+    1
+    4
+    
+    erase first two:
+    2
+    1
+    4
+    
+    search 4, 4, 4:
+    4
+    2
+    1
+    
+    erase the second one:
+    4
+    1
+    
+    erase the second one again (should have advanced to the last):
+    4
+    
+    added 10, 20, 30, 40:
+    4
+    10
+    20
+    30
+    40
+    
+    search for 10:
+    10
+    4
+    20
+    30
+    40
+    
+    erase the entire list:
+    
+    added 15, 16, 17, 18. 19, 20:
+    15
+    16
+    17
+    18
+    19
+    20
+    
+    seached 20 four times and 18 once:
+    15
+    20
+    16
+    18
+    17
+    19
+    
+    erased a range (1,3) excluding 3:
+    15
+    18
+    17
+    19
+    
+    create wList2 from wList by copy constructor with search 19:
+    15
+    18
+    19
+    17
+    
+    wList2 empty:0 wList2 size:4
+    
+    create wList3 from wList by copy assignment with search 18:
+    18
+    15
+    17
+    19
+    
+    create wList4 from wList3 by move constructor:
+    18
+    15
+    17
+    19
+    
+    create wList5 from wList2 by move assignment:
+    15
+    18
+    19
+    17
+    
+    wList2 now became:
+    
+    wList3 now became:
+    </pre>
+</li>
+</ul>
+
+<h4><b><u>Questions</u></b></h4>
+<ol>
+    <li>Would the following work? Why or why not? (0.5 mark)<br>
+<b>for (auto e = wList.begin(); e != wList.end(); ++e) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;wList.erase(e);<br>
+}</b></li>
+    <li>Would the following work? Why or why not? (0.5 mark)<br>
+<b>for (auto e = wList.begin(); e != wList.end(); ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;e = wList.erase(e);<br>
+}</b></li>
+    <li>Compare the weighted list with STL's list. What pointers and functionality appear in 
+        STL's list that are missing in our weighted list? (0.5 mark)</li>
+    <li>The program <a href="WeightedListMainTimer.cpp" target="_blank">WeightedListMainTimer.cpp</a> was created to run in 
+        Linux (where there are higher resolution timers) to see if the search algorithm actually improves itself over time.
+        See the bottom 1/4 of the file for the test code. A weighted list was created with 10,000 elements and an element with 
+        data=6 was inserted at the end. The program performed a number of searches, with a search for data=6 every third search, 
+        to simulate a situation where data=6 starts in the worst case (at the back) but is searched for frequently. 
+        The time elapsed for each search for data=6 is recorded. Take a look at the data in the file 
+        <a href="searchTime.dat" target="_blank">searchTime.dat</a>. On the left is the number of the search attempt and on the 
+        right is the time elapsed in nanoseconds. You can see a graph of search time vs number of searches below.
+        What will you report to the company executives - did this search algorithm "learn"? Did it learn well enough to pursue 
+        applying this algorithm to other data types? If not, how would you improve this algorithm? (0.5 mark)<br> 
+        <img src="searchTime.PNG" alt="Search Time vs Number of Searches" style="width:1000px;height:600px;"></li>
+</ol>
+
+<h4><b><u>Timeline</u></b></h4>
+
+<p><b>Days 1-7:</b> The iterator class.</p>
+
+<p><b>Days 8-14:</b> The functions of the weighted list.</p>
+
+<p><b>Days 15-21:</b>Putting it all together. Test and Rework. Questions.</p>
+
+<h4><b><u>Marking Rubric</u></b></h4>
+
+<p>Assignment 2 is worth 15% of your final grade and as such is marked out of 15 as follows:</p>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+table {
+    width: 800;
+}
+</style>
+<table>
+    <tr><th></th><th>Does not meet expectations</th><th>Satisfactory</th><th>Good</th><th>Exceeds Expectations</th></tr>
+    <tr><td><b>The Iterator Class<br>(4 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>The Weighted List Class<br>(8 marks)</b></td><td>Does not meet requirements</td><td>Meets the most important requirements</td><td>Meets all requirements with minor errors</td><td>Meets all requirements with no errors</td></tr>
+    <tr><td><b>Documentation<br>(1 mark)</b></td><td>Does not contain documentation</td><td>Contains header documentation for either all files or for all functions within each file</td>
+        <td>Contains header documentation for all files and for most functions within each file</td><td>Contains header documentation for all files and for all functions within each file.
+            Documents unclear code.</td></tr>
+    <tr><td><b>Questions<br>(2 marks)</b></td><td>Answers no question correctly</td><td>Answers some questions correctly</td>
+        <td>Answers most questions correctly</td><td>Answers all Questions correctly</td></tr>
+</table>
+
+<h4><b><u>Submission</u></b></h4>
+
+<p>Please email all source code, diagram(s) and answers to questions to:
+    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+
+<p>Your questions can be submitted in a separate document or embedded within your source code.</p>
+
+<h4><b><u>Late Policy</u></b></h4>
+
+<p>You will be docked 10% if your assignment is submitted 1-2 days late.<br>
+   You will be docked 20% if your assignment is submitted 3-4 days late.<br>
+   You will be docked 30% if your assignment is submitted 5-6 days late.<br>
+   You will be docked 40% if your assignment is submitted 7 days late.<br>
+   You will be docked 50% if your assignment is submitted over 7 days late.</p>

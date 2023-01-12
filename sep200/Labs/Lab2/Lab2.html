@@ -1,0 +1,188 @@
+<h2>SEP200 - Lab 2: Real Estate</h2>
+
+<h3>Due: February 3, 2023</h3>
+
+<p>This lab will test your ability to perform deep and shallow copies, overload operators, friendship, and use the copy constructor and assignment as well as the move constructor and assignment.</p>
+
+<p>This program creates objects of type <b>House</b>. Each house has an owner, address, rooms, bathrooms, and a price. The class functions that operate on this data are as follows:
+<ul>
+    <li>House();//Default constructor</li>
+    <li>House(const char* _owner, const char* _address, const double _rooms, const double _bathrooms, const double _price);//Data for the house object</li>
+    <li>House(const House& house);//Copy constructor</li>
+    <li>House& operator=(const House& house);//Copy assignment</li>
+	<li>House(House&& house) noexcept;//Move constructor</li>
+	<li>House& operator=(House&& house) noexcept;//Move assignment</li>
+
+	<li>bool ChangeOwner(char* newOwner);//Change the owner. Test to see if the character array newOwner actually exists. If it doesn't, return <b>false</b>, otherwise return <b>true</b>.</li>
+	<li>bool ChangePrice(double newPrice);//Change the price. Test to see if the price is a positive number. If it isn't, return <b>false</b>, otherwise return <b>true</b>.</li>
+	<li>const House& operator+=(double amount);//increase/decrease the price of the house</li>
+	<li>void DisplayInfo() const;//Display the owner, address, rooms, bathrooms, and price. All double's should be printed to two decimal places.</li>
+	<li>~House();//Destructor</li>
+</ul>
+There are also two functions that operate on this data from outside the class. They are as follows:
+<ul>
+    <li>bool operator==(const House& house1, const House& house2);//Do the two houses have the same owner?</li>
+    <li>void operator>>(House& house1, House& house2);//Move contents from the house1 object to the house2 object</li>   
+</ul>
+Note that <b>operator==</b> might require access to private members of the House object, so you may have to modify <b>House.h</b>.<br>
+Also, you might decide that <b>operator==</b> and <b>operator>></b> can be implemented within the class. You are free to move them to 
+within the class if you wish.</p>
+
+<p>You have been given a header file for <b>House</b> and a main file for testing:
+    <a href="House.h" target="_blank">House.h</a> and
+    <a href="HouseMain.cpp" target="_blank">HouseMain.cpp</a>.<br>
+Complete <b>House.cpp</b>.</p>
+
+<p>A sample run is as follows:<br><br>
+<pre>
+    Owner:     Lionel Messi
+    Address:   34 Cedarwood Road
+    Rooms:     5.00
+    Bathrooms: 2.50
+    Price:    $2500000.00
+    
+    Owner:     Neymar da Silva Santos Junior
+    Address:   12 Broadway Street
+    Rooms:     7.00
+    Bathrooms: 4.00
+    Price:    $5600000.00
+    
+    Owner:     Lionel Messi
+    Address:   34 Cedarwood Road
+    Rooms:     5.00
+    Bathrooms: 2.50
+    Price:    $2500000.00
+    
+    Owner:     Neymar da Silva Santos Junior
+    Address:   12 Broadway Street
+    Rooms:     7.00
+    Bathrooms: 4.00
+    Price:    $5600000.00
+    
+    ----------------------------
+    
+    Owner:     none
+    Address:   none
+    Rooms:     0.00
+    Bathrooms: 0.00
+    Price:    $0.00
+    
+    Owner:     none
+    Address:   none
+    Rooms:     0.00
+    Bathrooms: 0.00
+    Price:    $0.00
+    
+    Owner:     Lionel Messi
+    Address:   34 Cedarwood Road
+    Rooms:     5.00
+    Bathrooms: 2.50
+    Price:    $2500000.00
+    
+    Owner:     Neymar da Silva Santos Junior
+    Address:   12 Broadway Street
+    Rooms:     7.00
+    Bathrooms: 4.00
+    Price:    $5600000.00
+    
+    Owner:     Lionel Messi
+    Address:   34 Cedarwood Road
+    Rooms:     5.00
+    Bathrooms: 2.50
+    Price:    $2500000.00
+    
+    Owner:     Neymar da Silva Santos Junior
+    Address:   12 Broadway Street
+    Rooms:     7.00
+    Bathrooms: 4.00
+    Price:    $5600000.00
+    
+    ----------------------------
+    
+    Houses 3 and 5 are the same
+    Houses 4 and 6 are the same
+    
+    ----------------------------
+    
+    Owner:     Lionel Messi
+    Address:   34 Cedarwood Road
+    Rooms:     5.00
+    Bathrooms: 2.50
+    Price:    $3500000.00
+    
+    Owner:     Neymar da Silva Santos Junior
+    Address:   12 Broadway Street
+    Rooms:     7.00
+    Bathrooms: 4.00
+    Price:    $6600000.00
+    
+    Owner:     Lionel Messi
+    Address:   34 Cedarwood Road
+    Rooms:     5.00
+    Bathrooms: 2.50
+    Price:    $2500000.00
+    
+    Owner:     Neymar da Silva Santos Junior
+    Address:   12 Broadway Street
+    Rooms:     7.00
+    Bathrooms: 4.00
+    Price:    $5600000.00
+    
+    ----------------------------
+    
+    Owner:     none
+    Address:   none
+    Rooms:     0.00
+    Bathrooms: 0.00
+    Price:    $0.00
+    
+    Owner:     none
+    Address:   none
+    Rooms:     0.00
+    Bathrooms: 0.00
+    Price:    $0.00
+    
+    Owner:     Lionel Messi
+    Address:   34 Cedarwood Road
+    Rooms:     5.00
+    Bathrooms: 2.50
+    Price:    $3500000.00
+    
+    Owner:     Neymar da Silva Santos Junior
+    Address:   12 Broadway Street
+    Rooms:     7.00
+    Bathrooms: 4.00
+    Price:    $6600000.00
+</pre>
+</p>
+
+<p>To assist you with this lab, you might want to look at the following sample code taken from our SEP101 final exam. A Warehouse class is implemented using 
+    operator overloading and copy/move constructor and assignment operators:<br>
+    <a href="Warehouse/Warehouse.h" target="_blank">Warehouse.h</a>,
+    <a href="Warehouse/Warehouse.cpp" target="_blank">Warehouse.cpp</a> and
+    <a href="Warehouse/WarehouseMain.cpp" target="_blank">WarehouseMain.cpp</a>.
+</p>
+
+<p>Be sure to document your code with the file name, your name and student number. Add comments throughout the code where necessary.</p>
+
+<h3>Questions</h3>
+<ol>
+    <li>Do you feel operator overloading in general might introduce risk to a program? How?</li>
+    <li>Does the overloading of the <b>>></b> operator add clarity to the program? If so, why? If not, why?</li>
+    <li>Give three operators which cannot be overloaded. Explain why for each.</li>
+</ol>
+
+<h3>Lab Submission:</h3>
+
+<p>Please email your <b>House.cpp</b> and <b>House.h</b> and the answers to the questions to:
+    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+<b>NOTE:</b> My last name is <b>Watler</b> not Walter.</p>
+
+<h4><b><u>Late Policy</u></b></h4>
+
+<p>You will be docked 10% if your lab is submitted 1-2 days late.<br>
+You will be docked 20% if your lab is submitted 3-4 days late.<br>
+You will be docked 30% if your lab is submitted 5-6 days late.<br>
+You will be docked 40% if your lab is submitted 7 days late.<br>
+You will be docked 50% if your lab is submitted over 7 days late.</p>
+

@@ -1,6 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+<title>SED200</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
 <body>
-    <p>Course material moved to <a href="https://github.senecacollege.ca/pages/miguel-watler/courses/sed200/" target="_blank">SED200</a></p>
+    <div>
+        <a class="header-info" href="https://github.senecacollege.ca/pages/miguel-watler/courses/sed200_winter2022/index.html" target="_blank"><u style="color:blue">SED200 (Winter 2022)</a></u>
+          <h2>
+            <center>SED200</center>
+          </h2>
+          <h2>
+            <center>Design and Analysis</center>
+          </h2>
+          <p class="header-info">Engineering design is the method that engineers use to identify and solve problems. It has been described 
+              and mapped out in many ways, but all descriptions include some common attributes: Engineering design is a process. This 
+              powerful approach to problem solving is flexible enough to work in almost any situation.</p>
+    </div>
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav id="sidebar" class="flex-column">
+  
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#" onclick="SetContent('Summary')">Summary</a>
+                </li>
+                <li>
+                    <a href="#testSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tests</a>
+                    <ul class="collapse list-unstyled" id="testSubmenu">
+                        <li>
+                            <a href="#" onclick="SetContent('MidTerm')">Mid-Term Test</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('FinalAssessment')">Final Assessment</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#assignmentSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Assignments</a>
+                    <ul class="collapse list-unstyled" id="assignmentSubmenu">
+                        <li>
+                            <a href="#" onclick="SetContent('Assignment1')">Assignment 1</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Assignment2')">Assignment 2</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Assignment3')">Assignment 3</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Assignment4')">Assignment 4</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#lectureSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Lectures</a>
+                    <ul class="collapse list-unstyled" id="lectureSubmenu">
+                        <li>
+                            <a href="#" onclick="SetContent('Week1')">Week 1</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week2')">Week 2</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week3')">Week 3</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week4')">Week 4</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week5')">Week 5</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week6')">Week 6</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week7')">Week 7</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week8')">Week 8</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week9')">Week 9</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week10')">Week 10</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week11')">Week 11</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week12')">Week 12</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week13')">Week 13</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="SetContent('Week14')">Week 14</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="SetContent('OfficeHours')">Office Hours</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" onclick="SetContent('Contact')">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    
+        <!-- Page Content -->
+        <div id="tab-content">
+            <!-- Summary -->
+            <div id="Summary" class="tab-pane fade-in">
+                <iframe src="Summary.html"></iframe>
+            </div>
+            <!-- Tests -->
+            <div id="MidTerm" class="hidden tab-pane fade">
+                <iframe src="Tests/MidTerm.html"></iframe>
+            </div>
+            <div id="FinalAssessment" class="hidden tab-pane fade">
+                <iframe src="Tests/FinalAssessment.html"></iframe>
+            </div>
+            <div id="Assignment1" class="hidden tab-pane fade">
+                <iframe src="Assignments/Assignment1/Assignment1.html"></iframe>
+            </div>
+            <div id="Assignment2" class="hidden tab-pane fade">
+                <iframe src="Assignments/Assignment2/Assignment2.html"></iframe>
+            </div>
+            <div id="Assignment3" class="hidden tab-pane fade">
+                <iframe src="Assignments/Assignment3/Assignment3.html"></iframe>
+            </div>
+            <div id="Assignment4" class="hidden tab-pane fade">
+                <iframe src="Assignments/Assignment4/Assignment4.html"></iframe>
+            </div>
+            <div id="Week1" class="hidden tab-pane fade">
+                <iframe src="Week1/Week1.html"></iframe>
+            </div>
+            <div id="Week2" class="hidden tab-pane fade">
+                <iframe src="Week2/Week2.html"></iframe>
+            </div>
+            <div id="Week3" class="hidden tab-pane fade">
+                <iframe src="Week3/Week3.html"></iframe>
+            </div>
+            <div id="Week4" class="hidden tab-pane fade">
+                <iframe src="Week4/Week4.html"></iframe>
+            </div>
+            <div id="Week5" class="hidden tab-pane fade">
+                <iframe src="Week5/Week5.html"></iframe>
+            </div>
+            <div id="Week6" class="hidden tab-pane fade">
+                <iframe src="Week6/Week6.html"></iframe>
+            </div>
+            <div id="Week7" class="hidden tab-pane fade">
+                <iframe src="Week7/Week7.html"></iframe>
+            </div>
+            <div id="Week8" class="hidden tab-pane fade">
+                <iframe src="Week8/Week8.html"></iframe>
+            </div>
+            <div id="Week9" class="hidden tab-pane fade">
+                <iframe src="Week9/Week9.html"></iframe>
+            </div>
+            <div id="Week10" class="hidden tab-pane fade">
+                <iframe src="Week10/Week10.html"></iframe>
+            </div>
+            <div id="Week11" class="hidden tab-pane fade">
+                <iframe src="Week11/Week11.html"></iframe>
+            </div>
+            <div id="Week12" class="hidden tab-pane fade">
+                <iframe src="Week12/Week12.html"></iframe>
+            </div>
+            <div id="Week13" class="hidden tab-pane fade">
+                <iframe src="Week13/Week13.html"></iframe>
+            </div>
+            <div id="Week14" class="hidden tab-pane fade">
+                <iframe src="Week14/Week14.html"></iframe>
+            </div>
+            <div id="OfficeHours" class="hidden tab-pane fade">
+                <iframe src="OfficeHours.html"></iframe>
+            </div>
+            <div id="Contact" class="hidden tab-pane fade">
+                <iframe src="Contact.html"></iframe>
+            </div>
+        </div>
+    
+    </div>
+
+
+
+
+
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="sed200.js"></script>
 </body>
 </html>

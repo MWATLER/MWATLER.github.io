@@ -1,0 +1,71 @@
+Add three persons to each of your databases.
+Enter the employee's name: Michel Goulet
+Enter the employee's position: Software Developer
+Enter the employee's base salary: 78000
+Enter the employee's annual profit sharing amount: 3000
+Enter the employee's annual performance bonus: 2000
+
+Enter the employee's name: Maryam Barakat
+Enter the employee's position: Project Manager
+Enter the employee's base salary: 110000
+Enter the employee's annual profit sharing amount: 4000
+Enter the employee's annual performance bonus: 4000
+
+Enter the employee's name: Mark Crawford
+Enter the employee's position: Senior Design Engineer
+Enter the employee's base salary: 97000
+Enter the employee's annual profit sharing amount: 5000
+Enter the employee's annual performance bonus: 3000
+
+
+Enter the executive's name: Rakesh Patel
+Enter the executive's position: Chief Technology Officer
+Enter the executive's base salary: 900000
+Enter the executive's annual stock option dividend: 1200000
+Enter the executive's annual perquisites: 45000
+
+Enter the executive's name: Christopher Smith
+Enter the executive's position: Vice President
+Enter the executive's base salary: 500000
+Enter the executive's annual stock option dividend: 100000
+Enter the executive's annual perquisites: 33000
+
+Enter the executive's name: Anna Pawlowska
+Enter the executive's position: President
+Enter the executive's base salary: 3000000
+Enter the executive's annual stock option dividend: 900000
+Enter the executive's annual perquisites: 160000
+
+
+Enter a name to search for in both databases: Christopher Smith
+Christopher Smith works as Vice President and earned $633000.00 last year.
+
+Add two more persons to your databases.
+Enter the employee's name: Taha Ali
+Enter the employee's position: Senior Test Engineer
+Enter the employee's base salary: 88000
+Enter the employee's annual profit sharing amount: 1000
+Enter the employee's annual performance bonus: 900
+
+Enter the employee's name: Parissa Belfort
+Enter the employee's position: Team Lead
+Enter the employee's base salary: 100000
+Enter the employee's annual profit sharing amount: 5000
+Enter the employee's annual performance bonus: 6000
+
+
+Enter the executive's name: Mark Cuban
+Enter the executive's position: Owner
+Enter the executive's base salary: 3000000
+Enter the executive's annual stock option dividend: 3000000
+Enter the executive's annual perquisites: 1000000
+
+Enter the executive's name: Trevor Hansen
+Enter the executive's position: Senior Vice President
+Enter the executive's base salary: 750000
+Enter the executive's annual stock option dividend: 120000
+Enter the executive's annual perquisites: 60000
+
+
+Enter another name to search for in both databases: Parissa Belfort
+Parissa Belfort works as Team Lead and earned $111000.00 last year.

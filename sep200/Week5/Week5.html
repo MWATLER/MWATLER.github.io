@@ -1,0 +1,95 @@
+<h1>Week 5 - Polymorphism, continued</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look more at polymorphism, specifically virtual functions and abstract base classes.</p>
+
+<h3>Videos</h3>
+<table>
+  <tr><td>Virtual Functions</td><td><a href="https://www.youtube.com/watch?v=oIV2KchSyGQ" target="_blank">Virtual Functions in C++</a></td></tr>
+  <tr><td>Interfaces</td><td><a href="https://www.youtube.com/watch?v=UWAdd13EfM8" target="_blank">Interfaces in C++ (Pure Virtual Functions)</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<p>.</p>
+
+<h3>Lecture Material</h3>
+<ul>
+  <li>Chapters 20 and 21 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapter 15 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+  <li><a href="VirtualFunctions.docx" target="_blank">Virtual Functions</a></li>
+  <li><a href="AbstractBaseClasses.docx" target="_blank">Abstract Base Classes</a></li>
+  <li><a href="NOTES.rtf" target="_blank">Rough Notes</a></li>
+</ul>
+
+<h3>Lab(s)</h3>
+<ul>
+  <li><a href="../Labs/Lab3/Lab3.html" target="_blank">Lab 3</a>.</li>
+  <li><a href="../Labs/Lab4/Lab4.html" target="_blank">Lab 4</a>.</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p>None.</p>
+
+<h3>Sample Code</h3>
+
+<p><em>Math Library</em></p>
+<ul>
+  <li>The advantage of using virtual functions with polymorphism is that all derived classes can be accessed through the base class. This means that all objects 
+    can be lumped together by the base class regardless of their derived types. The math library code contains a MathBase class with virtual functions for getting the 
+    area and the volume. The derived classes are Rectangle and Circle. Objects of type Rectancle and objects of type Circle can all be accessed through their base 
+    class MathBase. This makes writing loops much easier.<br>The code is contained in one file as follows: <a href="MathLib/MathLib.cpp" target="_blank">MathLib.cpp</a>.
+  </li>
+</ul>
+
+<p><em>Series Circuit</em></p>
+<ul>
+  <li>A simulator for an electronic circuit has been created, where the current through the circuit is set and the voltages across each component is calculated. The circuit 
+    consists of a resistor, inductor, and capacitor connected in series. This means the current through them is all the same, but the voltage across each component 
+    will be different. Each component will have its own way of calculating its voltage, but each component will keep a record each's current and voltage. We want all 
+    components to be accessible through the base class so this base class should have everything common to all components. This would include variables for voltage and current 
+    as well as functions for setting the current, getting the voltage and printing a report.<br>
+    The UML diagram for the series circuit is as follows: <a href="SeriesCircuit/SeriesCircuit.PNG" target="_blank">SeriesCircuit.PNG</a>.<br> The code is as follows:
+    <a href="SeriesCircuit/Component.h" target="_blank">Component.h</a>,
+    <a href="SeriesCircuit/Capacitor.h" target="_blank">Capacitor.h</a>,
+    <a href="SeriesCircuit/Capacitor.cpp" target="_blank">Capacitor.cpp</a>,
+    <a href="SeriesCircuit/Inductor.h" target="_blank">Inductor.h</a>,
+    <a href="SeriesCircuit/Inductor.cpp" target="_blank">Inductor.cpp</a>,
+    <a href="SeriesCircuit/Resistor.h" target="_blank">Resistor.h</a>,
+    <a href="SeriesCircuit/Resistor.cpp" target="_blank">Resistor.cpp</a> and
+    <a href="SeriesCircuit/SeriesCircuit.cpp" target="_blank">SeriesCircuit.cpp</a>.
+  </li>
+  <li>An simulator for an electronic circuit has been created, where the user actually selects the components. This program prompts the user for 8 electronic components. 
+    The user determines the type of each component (resistor, capacitor, inductor) and these components are connected in series. As before, the current through the circuit
+    is set and the voltages across each component is calculated.<br>
+    An abstract class is created which acts as an interface to the program, with pure virtual functions for setting the current and printing a report. A CreateComponent 
+    function is used to create the circuit components.<br>
+    The UML diagram is as follows: <a href="iSeriesCircuit/iSeriesCircuit.PNG" target="_blank">iSeriesCircuit.PNG</a>.<br> The code is as follows:
+    <a href="iSeriesCircuit/iComponent.h" target="_blank">iComponent.h</a>,
+    <a href="iSeriesCircuit/Component.h" target="_blank">Component.h</a>,
+    <a href="iSeriesCircuit/Component.cpp" target="_blank">Component.cpp</a>,
+    <a href="iSeriesCircuit/Capacitor.h" target="_blank">Capacitor.h</a>,
+    <a href="iSeriesCircuit/Capacitor.cpp" target="_blank">Capacitor.cpp</a>,
+    <a href="iSeriesCircuit/Inductor.h" target="_blank">Inductor.h</a>,
+    <a href="iSeriesCircuit/Inductor.cpp" target="_blank">Inductor.cpp</a>,
+    <a href="iSeriesCircuit/Resistor.h" target="_blank">Resistor.h</a>,
+    <a href="iSeriesCircuit/Resistor.cpp" target="_blank">Resistor.cpp</a> and
+    <a href="iSeriesCircuit/SeriesCircuit.cpp" target="_blank">SeriesCircuit.cpp</a>.
+  </li>
+</ul>
+
+<p><em>Stooge Factory</em></p>
+<p>The Stooge factory is an example of the factory design pattern, which can create a set of related objects through a static <b>make_stooge()</b> function. 
+  The program is based on the popular comedy "The Three Stooges". The factory can create three stooges: Larry, Curly and Moe. They are tied together 
+  through a common base class. StoogeMain.cpp allows you to create whichever stooge you wish, up to three of them, via dynamic binding:
+<ul>
+  <li>
+    <a href="StoogeFactory/Stooge.h" target="_blank">Stooge.h</a>,
+    <a href="StoogeFactory/Stooge.cpp" target="_blank">Stooge.cpp</a>,
+    <a href="StoogeFactory/Curly.h" target="_blank">Curly.h</a>,
+    <a href="StoogeFactory/Larry.h" target="_blank">Larry.h</a>,
+    <a href="StoogeFactory/Moe.h" target="_blank">Moe.h</a> and
+    <a href="StoogeFactory/StoogeMain.cpp" target="_blank">StoogeMain.cpp</a>.
+  </li>
+</ul>
+Note that a virtual destructor is declared in the abstract base class in order to invoke the 
+destructors in the derived classes.

@@ -1,0 +1,78 @@
+<h1>Week 4 - Polymorphism</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look at polymorphism, derived classes and functions in a hierarchy.</p>
+
+<h3>Videos</h3>
+<table>
+  <tr><td>Inheritance</td><td><a href="https://www.youtube.com/watch?v=gq2Igdc-OSI" target="_blank">Buckys C++ Programming Tutorials - Inheritance</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=X8nYM8wdNRE" target="_blank">Inheritance in C++</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<p>.</p>
+
+<h3>Lecture Material</h3>
+<ul>
+  <li>Chapter 20 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapter 15 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></li>
+  <li><a href="Polymorphism.docx" target="_blank">Polymorphism</a></li>
+  <li><a href="DerivedClasses.docx" target="_blank">Derived Classes</a></li>
+  <li><a href="DerivedClassResource.docx" target="_blank">Derived Class with a Resource</a></li>
+  <li><a href="FunctionsHierarchy.docx" target="_blank">Functions in a Hierarchy</a></li>
+</ul>
+
+<h3>Lab(s)</h3>
+<ul>
+  <li><a href="../Labs/Lab2/Lab2.html" target="_blank">Lab 2</a>.</li>
+  <li><a href="../Labs/Lab3/Lab3.html" target="_blank">Lab 3</a>.</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p>None.</p>
+
+<h3>Sample Code</h3>
+
+<p><em>Calculate Area</em></p>
+<ul>
+  <li>The program calculates the areas of three shapes: a square, circle, and rectangle. These are all shapes and have several things in common. For instance, they have 
+    dimensions, constuctors as well as a function for calculating the area. All these common items could be declared in a base class, and specialized in a derived class. 
+    For instance, a rectangle has a length and a width, a square just a length, and the circle a radius. The base class could assume a default shape of a rectangle 
+    and implement a calculate area for the rectangle. The other derived classes will have to implement their own calculate areas. The UML diagram and code are 
+    as follows:<br>
+    <a href="CalculateArea/CalculateArea.PNG" target="_blank">CalculateArea.PNG</a> and
+    <a href="CalculateArea/CalculateArea.cpp" target="_blank">CalculateArea.cpp</a>.
+  </li>
+</ul>
+
+<p><em>Travel Simulator</em></p>
+<ul>
+  <li>This program simulates the gas consumption of a car and a train. Both car and train have a make, model, colour, and year of production. They also have 
+    accessor functions for each of these as well as a function to display a report. Since these variables and functions are in common, they can be contained 
+    in a base class. The car and train have different ways of setting fuel efficiency and calculating fuel consumption. These are collected in derived 
+    classes for Car and Train.<br>
+    The UML diagram can be seen at <a href="Automobile/Automobile.PNG" target="_blank">Automobile.PNG</a>. The code can be seen at:<br>
+    <a href="Automobile/Vehicle.h" target="_blank">Vehicle.h</a>,
+    <a href="Automobile/Vehicle.cpp" target="_blank">Vehicle.cpp</a>,
+    <a href="Automobile/Car.h" target="_blank">Car.h</a>,
+    <a href="Automobile/Car.cpp" target="_blank">Car.cpp</a>,
+    <a href="Automobile/Train.h" target="_blank">Train.h</a>,
+    <a href="Automobile/Train.cpp" target="_blank">Train.cpp</a> and
+    <a href="Automobile/TravelSimulator.cpp" target="_blank">TravelSimulator.cpp</a>.
+  </li>
+</ul>
+
+<p><em>Sports Organization</em></p>
+<ul>
+  <li>This program represents a sports organization, where common elements are contained within a <b>SportsOrganization</b> base class, and specialized
+    elements are contained within <b>HockeyTeam</b> and <b>BaseballTeam</b> derived classes. The example shows copy construction/assignment and move 
+    construction/assignment with resources in both the base class and derived classes:<br>
+    <a href="SportsOrganization/SportsOrganization.h" target="_blank">SportsOrganization.h</a>,
+    <a href="SportsOrganization/SportsOrganization.cpp" target="_blank">SportsOrganization.cpp</a>,
+    <a href="SportsOrganization/HockeyTeam.h" target="_blank">HockeyTeam.h</a>,
+    <a href="SportsOrganization/HockeyTeam.cpp" target="_blank">HockeyTeam.cpp</a>,
+    <a href="SportsOrganization/BaseballTeam.h" target="_blank">BaseballTeam.h</a>,
+    <a href="SportsOrganization/BaseballTeam.cpp" target="_blank">BaseballTeam.cpp</a> and
+    <a href="SportsOrganization/SportsMain.cpp" target="_blank">SportsMain.cpp</a>.
+  </li>
+</ul>

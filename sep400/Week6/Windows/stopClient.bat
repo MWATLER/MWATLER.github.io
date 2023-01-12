@@ -1,0 +1,1 @@
+Taskkill /IM Client /F

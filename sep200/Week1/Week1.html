@@ -1,0 +1,142 @@
+<h1>Week 1 - Introduction</h1>
+
+<h3>Introduction</h3>
+<p>This week will be an introduction to object oriented programming. We will also look at compilers and linkage, as well as some fundamental types. 
+  We will look at static variables and functions, as well as external variables.
+  During our lab period, we will look at the preprocessor which performs preliminary operations on C and C++ files before they are passed to the compiler. 
+  The preprocessor can assist us with debugging our code.
+</p>
+
+<h3>Videos</h3>
+<table>
+  <tr><td>Object Oriented Programming</td><td><a href="https://www.youtube.com/watch?v=LBvRj5xq9Z0" target="_blank">Intro to Object Oriented Programming</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=pTB0EiLXUC8" target="_blank">Object-oriented Programming in 7 minutes</a></td></tr>
+  <tr><td>The Void Pointer</td><td><a href="https://www.youtube.com/watch?v=ij2jrsUmwCI" target="_blank">Understanding the Void Pointers</a></td></tr>
+  <tr><td>The Preprocessor</td><td><a href="https://www.youtube.com/watch?v=voGGB5TGsV4" target="_blank">Preprocessor Directives - C++ Tutorial For Beginners #21</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=M6Hd_EdP4JE" target="_blank">C++ Tutorial for Beginners Ep#10 - #define Macros and Macro Functions</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<p>None.</p>
+
+<h3>Lecture Material</h3>
+<ul>
+  <li>Chapter 3 and 12 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></li>
+  <li>Chapter 1 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997139820703226" target="_blank">C++ Primer</a></li>
+  <li><a href="Terminology.docx" target="_blank">Object Terminology</a></li>
+  <li><a href="Compilation.docx" target="_blank">Overview of Compilers</a></li>
+  <li><a href="Types.docx" target="_blank">Fundamental Types</a></li>
+  <li><a href="ClassEnumerations.docx" target="_blank">Class Variables</a></li>
+  <li><a href="PreProcessor.docx" target="_blank">The Preprocessor</a></li>
+</ul>
+
+<h3>Lab(s)</h3>
+<ul>
+  <li>All of the software development for this course will be done with <b>Microsoft Visual Studio</b>. Microsoft Visual Studio is a free product from Microsoft and is only distributed from Microsoft.
+    You can download this product here:
+    <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">Microsoft Visual Studio</a>.<br>
+    The key to sustaining your "licensing" beyond 30-days, is to register it using your Seneca college email address as the login when you set it up. Here’s a YouTube video that Seneca Faculty
+    Fardad Soleimanloo created to show how to install it:
+    <a href="https://www.youtube.com/watch?v=DJsHqi5itao&list=PLxB4x6RkylosAh1of4FnX7-g2fk0MUeyc&index=7&t=0s" target="_blank">Installing Microsoft Visual Studio</a>.</li>
+  <li><b>PuTTY</b> is an SSH and Telnet Client for Windows. This creates a Linux type client window inside of Windows. It can be downloaded for free from:
+    <a href="https://www.putty.org/" target="_blank">PuTTY</a>.<br>
+    Click on Download PuTTY and be sure to select the package suitable for your machine.</li>
+  <li>Another useful tool is <b>WinSCP</b> which is used to transfer files from one machine to another. It can be downloaded for free from:
+    <a href="https://winscp.net/eng/download.php" target="_blank">WinSCP</a>.</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p>None.</p>
+
+<h3>Sample Code</h3>
+
+<p><em>The Community Library</em></p>
+<p>This example shows most of the principles of object oriented programming that we will learn in the first half of the course. The software to implement the community library
+  represents a real-world situation that is implemented using object-oriented programming.</p>
+  <ul>
+    <li>A community library is described in <a href="CommunityLibrary/CommunityLibraryDescription.docx" target="_blank">CommunityLibraryDescription.docx</a>. This is based on the lending policy of the 
+      <a href="https://www.torontopubliclibrary.ca/using-the-library/borrowing-materials/" target="_blank">Toronto Public Library</a>, with exceptions. This library has patrons (customers) 
+    who borrow its resources, which could be books, DVDs, musical instruments etc...</li>
+    <li>A document which breaks down the components of the community library can be seen in the UML diagram <a href="CommunityLibrary/CommunityLibraryUML.docx" target="_blank">CommunityLibraryUML.docx</a>.
+    This document shows the relationships between the library resource and its component parts (eBook, standard book, DVD, musical instruments) as well as the patron which 
+    can borrow up to 5 library resources at a time.</li>
+    <li>The source code for the library resource can be found at <a href="CommunityLibrary/LibraryResource.h" target="_blank">LibraryResource.h</a> and <a href="CommunityLibrary/LibraryResource.cpp" target="_blank">LibraryResource.cpp</a>.</li>
+    <li>The source code for the book can be found at <a href="CommunityLibrary/Book.h" target="_blank">Book.h</a> and <a href="CommunityLibrary/Book.cpp" target="_blank">Book.cpp</a>.
+      The source code for the eBook and the standard paper book can be found at <a href="CommunityLibrary/ElectronicBook.h" target="_blank">ElectronicBook.h</a> and <a href="CommunityLibrary/ElectronicBook.cpp" target="_blank">ElectronicBook.cpp</a>,
+      <a href="CommunityLibrary/StandardPaperBook.h" target="_blank">StandardPaperBook.h</a> and <a href="CommunityLibrary/StandardPaperBook.cpp" target="_blank">StandardPaperBook.cpp</a>.</li>
+    <li>The source code for the DVD can be found at <a href="CommunityLibrary/DVD.h" target="_blank">DVD.h</a> and <a href="CommunityLibrary/DVD.cpp" target="_blank">DVD.cpp</a>.</li>
+    <li>The source code for the musical instrument can be found at <a href="CommunityLibrary/MusicalInstrument.h" target="_blank">MusicalInstrument.h</a> and <a href="CommunityLibrary/MusicalInstrument.cpp" target="_blank">MusicalInstrumentDVD.cpp</a>.</li>
+    <li>The source code for the patron (customer) can be found at <a href="CommunityLibrary/Patron.h" target="_blank">Patron.h</a> and <a href="CommunityLibrary/Patron.cpp" target="_blank">Patron.cpp</a>.</li>
+    <li>The main function for the community library can be found at <a href="CommunityLibrary/CommunityLibrary.cpp" target="_blank">CommunityLibrary.cpp</a> where two patrons are created, borrow library resources,
+      then return them three days later. A report for each patron is generated and printed to the screen.</li>
+  </ul>
+
+<p><em>Personal Statistics</em></p>
+<p>These two example shows the use of <b>extern</b> and <b>static</b> in C++ programming.</p>
+<ul>
+  <li>Code that uses <b>extern</b> can be seen with the following code:<br>
+    <a href="PersonalStats/PersonalMain.cpp" target="_blank">PersonalMain.cpp</a>,
+    <a href="PersonalStats/Insurance.cpp" target="_blank">Insurance.cpp</a>,
+    <a href="PersonalStats/Insurance.h" target="_blank">Insurance.h</a>,
+    <a href="PersonalStats/Pension.cpp" target="_blank">Pension.cpp</a>, and
+    <a href="PersonalStats/Pension.h" target="_blank">Pension.h</a>.
+  </li>
+  <li>Code that uses <b>static</b> can be seen with the following code:<br>
+    <a href="PersonalStats2/PersonalMain.cpp" target="_blank">PersonalMain.cpp</a>,
+    <a href="PersonalStats2/Insurance.cpp" target="_blank">Insurance.cpp</a>,
+    <a href="PersonalStats2/Insurance.h" target="_blank">Insurance.h</a>,
+    <a href="PersonalStats2/Pension.cpp" target="_blank">Pension.cpp</a>, and
+    <a href="PersonalStats2/Pension.h" target="_blank">Pension.h</a>.
+  </li>
+</ul>
+
+<p><em>Employee Information</em></p>
+<p>The example employee information shows the use of static class variables to keep track of how many objects have been created as well as a running total. The employee information 
+  class contains variables for an employee's name, position and age. The static variable <b>numEmployees</b> keeps track of the number of objects created of type <b>EmployeeInfo</b>. 
+  One of the functions of <b>EmployeeInfo</b> returns the average age. This function makes use of the static variable <b>runningTotal</b> where the average age is the running total 
+  of ages divided by the number of employees. It is very common to employ a static variable to keep track of the number of objects created from a given class.<br> 
+  The example shown also demonstrates the use of enumerations. A common application for enumerations is the error status returned by functions. See:<br>
+  <a href="EmployeeInfo/EmployeeInfo.h" target="_blank">EmployeeInfo.h</a>,
+  <a href="EmployeeInfo/EmployeeInfo.cpp" target="_blank">EmployeeInfo.cpp</a> and
+  <a href="EmployeeInfo/EmployeeInfoMain.cpp" target="_blank">EmployeeInfoMain.cpp</a>.</p>
+
+<p><em>Unions</em></p>
+<p>The members of a union are arranged in parallel in memory.  Unlike the members in a class or a struct, the members in a union share the same address in memory 
+  An object of union type can only hold the value of one of its members at any particular time. An example that shows how unions are used in conjunction with 
+  enumerations to resolve which variable in a unions is to be accessed can be found in <a href="Union/Product.cpp" target="_blank">Product.cpp</a>.</p>
+
+<p><em>Data Stream</em></p>
+<p>Often streams of data come with a fixed width - 8 bits, 16 bits, 32 bits,... C++ has types with specific bit sizes which are used for parsing data streams.
+  The code <a href="DataStream16/dataMain.cpp" target="_blank">dataMain.cpp</a> demonstrates the parsing of a 16 bit stream.</p>
+
+<p><em>Generic Parameter</em></p>
+<p>The data type (void *) represents no data type. Parameters can be passed to a function as (void *) and cast in that function to whatever type we wish. This is often used
+  with threads where a thread is represented by a function that runs on its own and accepts one paramater of type (void *). A parameter of any type can be passed through to
+  the thread. If multiple parameters need to be passed through to the thread, they can be packages into one structure and the structure passed through.
+  The code <a href="GenericParameter/GenericMain.cpp" target="_blank">GenericMain.cpp</a> demonstrates the passing of a parameter by value or address, as well as the 
+  passing of a structure by value or address.</p>
+
+<p><em>Pointers, References and Arrays</em></p>
+<p>There are many ways to initialize a pointer and use them in a for-next loop. The code
+  <a href="TypeInference/TypeInference.cpp" target="_blank">TypeInference.cpp</a> uses a for-loop with type inference.</p>
+
+  
+<p><em>Macros</em></p>
+<p>Macros in C++ have a wide variety of application. One such application is in debugging. Embedded debug can be enabled and disabled via 
+  a simple <b>define</b>. Code with embedded debugging can also apply levels or severity of the debug. Debug logs can be filtered according 
+  to their severity. Code with embedded debug can be seen at:<br>
+  <a href="Debugging/Automobile.h" target="_blank">Automobile.h</a>,
+  <a href="Debugging/Automobile.cpp" target="_blank">Automobile.cpp</a> and
+  <a href="Debugging/TravelSimulator.cpp" target="_blank">TravelSimulator.cpp</a>.
+</p>
+
+<p>With this second example, the embedded debug has been enhanced in this code example to include an enumeration of log levels 
+  (LOG_INFO, LOG_WARNING, LOG_ERROR, LOG_CRITICAL) as well as a nested-if inside the Log() macro:<br>
+  <a href="PreProcessor/Automobile.h" target="_blank">Automobile.h</a>,
+  <a href="PreProcessor/Automobile.cpp" target="_blank">Automobile.cpp</a> and
+  <a href="PreProcessor/TravelSimulator.cpp" target="_blank">TravelSimulator.cpp</a>.
+</p>
+
+<p>One has to be careful in using macros, because of the way it expands in-line code. The following code demonstrates how a macro is expanded in-line in the code:<br>
+  <a href="Cubed/Cubed.cpp" target="_blank">Cubed.cpp</a>.
+</p>

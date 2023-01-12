@@ -1,0 +1,161 @@
+<h1>Week 5 - February 6-10</h1>
+
+<h3>Introduction</h3>
+This week we will study the most common form of inter-process communications - sockets. We will look at Makefiles in more detail.
+
+<h3>Videos</h3>
+<table>
+    <tr><td></td><td>Sockets</td><td><a href="https://www.youtube.com/watch?v=eVYsIolL2gE" target="_blank">Sockets</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=pdkGTYyvbPQ" target="_blank">Sockets in Linux System Programming</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=FguacTmc-1A" target="_blank">Understanding the select system call in Linux</a></td></tr>
+    <tr><td></td><td></td><td><a href="https://www.youtube.com/watch?v=qyFwGyTYe-M" target="_blank">Linux Tutorial - select() function (timeout)</a></td></tr>
+</table>
+<h3>Quiz</h3>
+<ul>
+<li><b>Quiz 4</b> will be on sockets. Please study from <a href="http://www.linuxhowtos.org/C_C++/socket.htm" target="_blank">Sockets Tutorial</a>.
+A more advanced tutorial can be found at <a href="https://www.bogotobogo.com/cplusplus/sockets_server_client.php" target="_blank">C++ Tutorial: Sockets - Server and Client</a>.</li>
+</ul>
+
+<h3>Lecture Material</h3>
+<ul>
+    <li>Sockets - Chapter 3.6.1 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997143391103226" target="_blank">Operating System Concepts</a></li>
+    <li>Sockets: Introduction - Chapter 56 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
+    <li>Sockets: Unix Domain - Chapter 57 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
+    <li>Sockets: Internet Domains - Chapter 59 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
+    <li>Sockets: Server Design - Chapter 60 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
+    <li><a href="http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/" target="_blank">A Simple Makefile Tutorial</a></li>
+    <li><a href="http://www.linuxhowtos.org/C_C++/socket.htm" target="_blank">Sockets Tutorial</a>.</li>
+    <li><a href="https://www.bogotobogo.com/cplusplus/sockets_server_client.php" target="_blank">C++ Tutorial: Sockets - Server and Client</a>.</li>
+    <li>Another tutorial with TCP sockets <a href="https://www.cs.rutgers.edu/~pxk/417/notes/sockets/index.html" target="_blank">Introduction to Sockets Programming</a>.</li>
+    <li>Another tutorial with UDP sockets <a href="https://www.cs.rutgers.edu/~pxk/417/notes/sockets/udp.html" target="_blank">Programming with UDP sockets</a>.</li>
+</ul>
+
+<h3>Lab</h3>
+<ul>
+    <li><a href="../Labs/Lab3/Lab3.html" target="_blank">Lab 3</a> (due February 10) - Signals.</li>
+    <li><a href="../Labs/Lab4/Lab4.html" target="_blank">Lab 4</a> (due February 17) - server/client communications.</li>
+</ul>
+
+<h3>Sample Code</h3>
+
+<p><em>Makefiles, continued</em></p>
+<ul>
+    <li>Alternative forms of Makefile - see <a href="http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/" target="_blank">A Simple Makefile Tutorial</a>.<br>See also
+        <a href="AdvancedMakefiles/Makefile1/Makefile" target="_blank">Makefile1</a>,
+        <a href="AdvancedMakefiles/Makefile2/Makefile" target="_blank">Makefile2</a>,
+        <a href="AdvancedMakefiles/Makefile3/Makefile" target="_blank">Makefile3</a>, and
+        <a href="AdvancedMakefiles/Makefile4/Makefile" target="_blank">Makefile4</a> and the source code for
+        <a href="AdvancedMakefiles/Makefile1/hellomake.c" target="_blank">hellomake.c</a>,
+        <a href="AdvancedMakefiles/Makefile1/hellofunc.c" target="_blank">hellofunc.c</a> and
+        <a href="AdvancedMakefiles/Makefile1/hellomake.h" target="_blank">hellomake.h</a>.<br>
+        <a href="AdvancedMakefiles/Makefile5/src/Makefile" target="_blank">Makefile5</a>
+        assumes three directories which are next to each other on a file system: a <b>src</b> directory, an <b>obj</b> directory and an <b>include</b> directory.<br>
+        The <b>Makefile</b>, <b>hellomake.c</b>, <b>hellofunc.c</b> are in the <b>src</b> directory.
+        The file <b>hellomake.h</b> is in the <b>include</b> directory, and
+        all object files are in the <b>obj</b> directory.<br>
+        After <b>make clean all</b>, <b>du -a</b> would give:<br>
+        4       ./include/hellomake.h<br>
+        4       ./include<br>
+        4       ./obj/hellofunc.o<br>
+        4       ./obj/hellomake.o<br>
+        8       ./obj<br>
+        4       ./src/hellofunc.c<br>
+        12      ./src/hellomake<br>
+        4       ./src/hellomake.c<br>
+        4       ./src/Makefile<br>
+        24      ./src<br>
+        36      .
+    </li>
+</ul>
+
+<p><em>Sockets</em></p>
+<ul>
+<li>Please take note of the different socket domains.
+    <p><table border="1"><tr><td>Domain</td><td>Communication</td><td>Communication</td><td>Address</td><td>Address</td></tr>
+    <tr><td><b>AF_UNIX</b></td>       <td>performed</td><td>between applications</td><td>format</td><td>structure</td></tr>
+    <tr><td></td><td>within kernel</td><td>on same host</td><td>pathname</td><td><a href="https://linux.die.net/man/7/unix" target="_blank">sockaddr_un</a></td></tr>
+    <tr><td><b>AF_INET</b></td><td>via IPv4</td><td>on hosts connected</td><td>32-bit IPv4 address +</td><td><a href="http://man7.org/linux/man-pages/man7/ip.7.html" target="_blank">sockaddr_in</a></td></tr>
+    <tr><td></td><td></td><td>via an IPv4 network</td><td>16-bit port number</td><td></td></tr>
+    <tr><td><b>AF_INET6</b></td><td>via IPv6</td><td>on hosts connected</td><td>128-bit IPv6 address +</td><td><a href="http://man7.org/linux/man-pages/man7/ipv6.7.html" target="_blank">sockaddr_in6</a></td></tr>
+    <tr><td></td><td></td><td>via an IPv6 network</td><td>16-bit port number</td><td></td></tr></table></p>
+    </li>
+    <li>Every sockets implementation provides at least two types of sockets: stream and datagram. These socket types are supported in both the UNIX and the Internet domains.<br>
+    Stream sockets (<b>SOCK_STREAM</b>) provide a reliable, bidirectional, byte-stream communication channel.<br>
+    Datagram sockets (<b>SOCK_DGRAM</b>) allow data to be exchanged in the form of messages called datagrams. With datagram sockets, message boundaries are preserved, but data transmission is not reliable. Messages may arrive out of order, be duplicated, or not arrive at all.</li>
+    <li>When using IP addresses and IP ports for socket communications, keep in mind the <a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers" target="_blank">list of commonly used port numbers</a>.<br>
+    To get a list of ports that are free on a Linux machine, use the command line argument <a href="http://man7.org/linux/man-pages/man8/netstat.8.html" target="_blank">netstat</a> or
+    <a href="http://man7.org/linux/man-pages/man8/ss.8.html" target="_blank">ss</a>. For example:<br>
+    $ <b>netstat -lntup</b><br>
+    $ <b>ss -lntup</b><br>
+    -l listening sockets,<br>
+    -n numeric values rather than service names,<br>
+    -t all TCP connections,<br>
+    -u all UDP connections,<br>
+    -p application that is listening on a port.<br>
+    For more information on netstat, see also <a href="https://www.binarytides.com/linux-netstat-command-examples/" target="_blank">10 basic examples of linux netstat command</a>,
+    </li>
+    <li>Another tutorial with TCP sockets can be found at <a href="https://www.cs.rutgers.edu/~pxk/417/notes/sockets/index.html" target="_blank">Introduction to Sockets Programming</a>, and<br>
+    a tutorial with UDP sockets can be found at <a href="https://www.cs.rutgers.edu/~pxk/417/notes/sockets/udp.html" target="_blank">Programming with UDP sockets</a>.</li>
+	<li>For a discussion on UDP vs TCP, see the article <a href="https://www.comparitech.com/blog/vpn-privacy/udp-vs-tcp-ip/" target="_blank">UDP vs TCP: What are they and how do they differ?</a>.</li>
+    <li>For common socket function calls see
+    <a href="http://man7.org/linux/man-pages/man2/socket.2.html" target="_blank">socket()</a>,
+    <a href="http://man7.org/linux/man-pages/man2/bind.2.html" target="_blank">bind()</a>,
+    <a href="http://man7.org/linux/man-pages/man2/listen.2.html" target="_blank">listen()</a>,
+    <a href="http://man7.org/linux/man-pages/man2/connect.2.html" target="_blank">connect()</a>,
+    <a href="http://man7.org/linux/man-pages/man2/accept.2.html" target="_blank">accept()</a>,
+    <a href="http://man7.org/linux/man-pages/man2/select.2.html" target="_blank">select()/FD_SET()/FD_ISSET()</a>,
+    <a href="http://man7.org/linux/man-pages/man3/inet_pton.3.html" target="_blank">inet_pton()</a>,
+    <a href="http://man7.org/linux/man-pages/man3/inet_ntop.3.html" target="_blank">inet_ntop()</a>,
+    <a href="http://man7.org/linux/man-pages/man2/read.2.html" target="_blank">read()</a>,
+    <a href="http://man7.org/linux/man-pages/man2/write.2.html" target="_blank">write()</a>,
+    <a href="http://man7.org/linux/man-pages/man2/send.2.html" target="_blank">send()/sendto()</a>,
+    <a href="http://man7.org/linux/man-pages/man2/recv.2.html" target="_blank">recv()/recvfrom()</a>,
+    <a href="https://man7.org/linux/man-pages/man2/setsockopt.2.html" target="_blank">getsockopt()/setsockopt()</a>,
+    <a href="http://man7.org/linux/man-pages/man2/close.2.html" target="_blank">close()</a>, and
+    <a href="http://man7.org/linux/man-pages/man2/unlink.2.html" target="_blank">unlink()</a>.
+    </li>
+    <li>A simple client server application demonstrating UNIX type sockets can be found in
+    <a href="clientServer/client1.cpp" target="_blank">client1.cpp</a>,
+    <a href="clientServer/server.cpp" target="_blank">server.cpp</a>, and
+    <a href="clientServer/Makefile" target="_blank">Makefile</a>.<br>
+    </li>
+    <li>A simple client server application demonstrating INET type sockets can be found in
+    <a href="ipaddr/client.c" target="_blank">client.c</a>,
+    <a href="ipaddr/server.c" target="_blank">server.c</a>, and
+    <a href="ipaddr/Makefile" target="_blank">Makefile</a>. The address INADDR_ANY could have be used instead of the localhost (127.0.0.1):
+    <a href="https://man7.org/linux/man-pages/man7/ip.7.html" target="_blank">INADDR_ANY</a>.
+    When INADDR_ANY is specified in the bind() call, the socket will be bound to all local interfaces.<br><br>
+    </li>
+
+    <li>A simple client server application demonstrating inter-process communication between processes on two different machines can be found in
+        <a href="msgServer/msgClient.cpp" target="_blank">msgClient.cpp</a>,
+        <a href="msgServer/msgServer.cpp" target="_blank">msgServer.cpp</a>, and
+        <a href="msgServer/Makefile" target="_blank">Makefile</a>.<br>
+        For this to work, msgClient has to be on one machine and msgServer on another. This means you have to create another virtual linux machine, run msgServer on one and run msgClient on the other. Be sure to use the address of the machine that runs msgServer.
+        This example also introduces <a href="https://man7.org/linux/man-pages/man2/setsockopt.2.html" target="_blank">setsockopt()</a> to set the socket with a timeout of 5 seconds.
+    </li>
+    <li>An example with select (a server with 5 clients) can be seen at
+    <a href="Select5.docx" target="_blank">Select5.docx</a>.<br>
+    The source code for the server can be found at
+    <a href="select5/server.cpp" target="_blank">server.cpp</a>, and the source code for the clients
+    can be found at
+    <a href="select5/client.cpp" target="_blank">client.cpp</a><br>
+    A shell to start the clients can be found at
+    <a href="select5/startClient.sh" target="_blank">startClient.sh</a>, and the Makefile can be found at
+    <a href="select5/Makefile" target="_blank">Makefile</a>.
+    </li>
+  </ul>
+
+<p><em>Windows Sockets</em></p>
+<ul>
+  <li>A simple client server application in the Windows operating system demonstrating INET type sockets can be found at: 
+  <a href="Windows/ipaddr/server.c" target="_blank">server.c</a> and <a href="Windows/ipaddr/client.c" target="_blank">client.c</a>. 
+  This code demonstrates the use of sockets in Windows. See Chapter 12 of 
+  <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997144390103226" target="_blank">Windows System Programming</a>
+  for more details on how to program with sockets in Windows.</li>
+</ul>

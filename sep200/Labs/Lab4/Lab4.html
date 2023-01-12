@@ -1,0 +1,112 @@
+<h2>SEP200 - Lab 4: A Packet Parser</h2>
+
+<h3>Due: February 17, 2023</h3>
+
+<p>This lab will test your ability to use polymorphism with virtual functions.</p>
+
+<p>This program parses a network packet. This packet could be of type UDP or type TCP. Generally speaking, UDP is for unreliable but fast communications, and TCP is 
+    for reliable but slower communications. Each packet has its own format. This has been described in detail in <a href="PacketParserMain.cpp" target="_blank">PacketParserMain.cpp</a>.
+Both parsers will accept a packet of type char* and parse and store relevant information from that packet. Both parsers will also provide a report to an output stream. 
+The function prototypes can be found in the base class <a href="PacketParser.h" target="_blank">PacketParser.h</a>.</p>
+
+<h3>UDP Packet Parser</h3>
+<p>The UDP packet parser will extract the following information from the packet and store in class variables:</p>
+<ul>
+    <li>source_port. This is contained within the first two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to the lower byte.</li>
+    <li>dest_port. This is contained within the next two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to the lower byte.</li>
+    <li>length. This is the length of the data portion of the packet. This is contained within the next two bytes of the packet. The higher byte has to be
+        multiplied by 0x100 then added to the lower byte.</li>
+    <li>checksum. This is the sum of the source port, the destination port, and the length. You have to calculate the checksum of the packet and compare to the 
+        checksum found in the packet. If these numbers do not agree, then the data has been corrupted. The checksum in the packet is contained within the next
+        two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to the lower byte.</li>
+    <li>data. The data is found within the next "length" bytes of the packet. You have to perform a 
+        <a href="https://www.cplusplus.com/reference/cstring/memcpy/" target="_blank">memcpy</a> from the data within the packet to 
+    the data variable of your class.</li>
+</ul>
+<p>After the packet has been parsed, the UDP packet parser will report to an output stream the following in a separate function: the source port, the destination port, the data
+     length, and the data itself.</p>
+<p>Be sure to zero all members of the UDP packet parser on destruction.</p>
+
+<h3>TCP Packet Parser</h3>
+<p>The TCP packet parser will extract the following information from the packet and store in class variables:</p>
+<ul>
+    <li>source_port. This is contained within the first two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to the lower byte.</li>
+    <li>dest_port. This is contained within the next two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to the lower byte.</li>
+    <li>sequence_number. This is contained within the next four bytes of the packet. Add the bytes together as follows: the highest byte is multiplied by 0x1000000, 
+        the next highest by 0x10000, the next highest by 0x100, then add all these to the lowest byte.</li>
+    <li>ack_number. This is contained within the next four bytes of the packet. Add the bytes together as follows: the highest byte is multiplied by 0x1000000, 
+        the next highest by 0x10000, the next highest by 0x100, then add all these to the lowest byte.</li>
+    <li>ignore. The next four bytes are ignored.</li>
+    <li>checksum. This is the sum of the source port, the destination port, the sequence number, the acknowledge number, ignore and ignore2 and the length. 
+        You have to calculate the checksum of the packet and compare to the checksum found in the packet. If these numbers do not agree, then the data has been
+        corrupted. The checksum in the packet is contained within the next two bytes of the packet. The higher byte has to be multiplied by 0x100 then added to
+        the lower byte.</li>
+    <li>ignore2. The next two bytes are ignored.</li>
+    <li>length. This is the length of the data portion of the packet. This is contained within the next two bytes of the packet. The higher byte has to be
+        multiplied by 0x100 then added to the lower byte.</li>
+    <li>data. The data is found within the next "length" bytes of the packet. You have to perform a 
+        <a href="https://www.cplusplus.com/reference/cstring/memcpy/" target="_blank">memcpy</a>
+        from the data within the packet to the data variable of your class.</li>
+</ul>
+<p>After the packet has been parsed, the TCP packet parser will report to an output stream the following in a separate function: the source port, the destination port, 
+    the sequence number, the acknowledgement number, the data length, and the data itself.</p>
+<p>Be sure to zero all members of the TCP packet parser on destruction.</p>
+
+<h3>Sample Run</h3>
+
+<p>A sample run is as follows:<br><br>
+<pre>
+    Report for UDP Packet Parser
+    source port: 9
+    dest port:   19
+    data length: 36
+    data:        The Toronto Maple Leafs lose again!!
+    
+    
+    Report for TCP Packet Parser
+    source port: 5
+    dest port:   6
+    seq number:  5
+    ack number:  4
+    data length: 41
+    data:        The rain in Spain is mainly on the plane.
+</pre>
+</p>
+
+<p>To assist you with this lab, you might want to look at the UDP Packet parser of Week 8 of <a href="https://mwatler.github.io/sep101/" target="_blank">SEP101</a>.</p>
+
+<p>To also assist you with this lab, you might want to look at the following sample code that keeps track of marks for students in three different ways. 
+    The default way is by percentages. The other two ways are to have letter grades (A,B,C,D,F) or to have number grades (0-5). All students are 
+    accessed through a pointer to their base class:<br>
+    <a href="Student/Student.h" target="_blank">Student.h</a>,
+    <a href="Student/Student.cpp" target="_blank">Student.cpp</a>,
+    <a href="Student/LetterStudent.h" target="_blank">LetterStudent.h</a>,
+    <a href="Student/LetterStudent.cpp" target="_blank">LetterStudent.cpp</a>,
+    <a href="Student/NumberStudent.h" target="_blank">NumberStudent.h</a>,
+    <a href="Student/NumberStudent.cpp" target="_blank">NumberStudent.cpp</a> and
+    <a href="Student/StudentMain.cpp" target="_blank">StudentMain.cpp</a>.
+</p>
+
+<p>Be sure to document your code with the file name, your name and student number. Add comments throughout the code where necessary.</p>
+
+<h3>Questions</h3>
+<ol>
+    <li>Why are you able to use a for-next loop in this example for two different types of parsers?</li>
+    <li>The tester for this program hardcodes a UDP packet parser and a TCP packet parser. Describe in general how would you use an
+        interface (abstract class) that prompts the user for two types of packet parsers?</li>
+</ol>
+
+<h3>Lab Submission:</h3>
+
+<p>Please email all your code and the answers to the questions to:
+    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+<b>NOTE:</b> My last name is <b>Watler</b> not Walter.</p>
+
+<h4><b><u>Late Policy</u></b></h4>
+
+<p>You will be docked 10% if your lab is submitted 1-2 days late.<br>
+You will be docked 20% if your lab is submitted 3-4 days late.<br>
+You will be docked 30% if your lab is submitted 5-6 days late.<br>
+You will be docked 40% if your lab is submitted 7 days late.<br>
+You will be docked 50% if your lab is submitted over 7 days late.</p>
+

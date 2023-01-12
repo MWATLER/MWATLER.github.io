@@ -1,0 +1,174 @@
+<h2>SEP200 - Lab 5: A Company Database</h2>
+
+<h3>Due: February 24, 2023</h3>
+
+<p>This lab will test your ability to use templates as a means of parametric polmorphism.</p>
+
+<p>This week you are going to use templates with  parametric polmorphism to build two company databases - one for regular employees and one for executives. The function 
+    prototypes for accessing these databases are identical. What these functions do and the type of data they take are different.</p>
+    
+<h3>Company Common</h3>
+<p>The common header file for this program will expose the structures for the databases and the functions which are common to both databases. 
+    These functions are as follows.</p>
+<ul>
+    <li><b>AddPersonnel()</b>. This function will take as arguments a database object and the number of persons to be added to the database. It returns true if these persons have 
+        been successfully added, false otherwise.</li>
+    <li><b>FindPersonnel()</b>. This function will take as arguments a database object, the name of the person to be found, and a reference to 
+    the person found. That person could be a regular employee or an executive. The function returns true if the person is found, false otherwise.</li>
+    <li><b>CalculateSalary()</b>. This function takes as arguments a database object the name of a person and returns the person's salary. If the person is not found, 0.00 is returned.</li>
+</ul>
+<p>The header file for company base is partially complete. See <a href="CompanyCommon.h" target="_blank">CompanyCommon.h</a>.</p>
+<p>In the header file you can see the structure for a standard employee and the structure for an executive.</p>
+<p>Please note that in those functions where you are changing values in the database, you might have to pass the database as a reference instead of by value.</p>
+    
+<h3>Company Employee</h3>
+<p>The database for the company employees will contain up to MAX_SIZE items of data.</p>
+<ul>
+    <li>The company employee list is based on the StandardEmployee structure. You will have to keep track of the number of employees.</li>
+    <li>The company employee constructor should initialize any pointers to nullptr and any variables to 0 or "".</li>
+    <li><b>AddPersonnel()</b>. This function will take as an argument the number of persons to be added to the database. It returns true if 
+        these persons have been successfully added, false otherwise. It should test to see if 
+    the maximum size has not been encroached. Any new employees have to be added to the list of employees. This means creating a new list 
+    copied from the old list with space for the new employees at the end. Be sure to delete the old list. Each employee should be asked 
+    the following:
+    <ul>
+        <li>Enter the employee's name: </li>
+        <li>Enter the employee's position: </li>
+        <li>Enter the employee's base salary: </li>
+        <li>Enter the employee's annual profit sharing amount: </li>
+        <li>Enter the employee's annual performance bonus: </li>
+    </ul></li>
+    <li><b>FindPersonnel()</b>. This function will take as arguments the name of the person to be found, and a reference to the person found. 
+        That person is of type StandardEmployee. The function returns true if the person is found, false otherwise.</li>
+    <li><b>CalculateSalary()</b>. This function takes as an argument the name of a person and returns the person's salary. If the person is not
+        found, 0.00 is returned. If the person is found, then salary is the base salary plus the annual profit sharing amount plus the annual 
+        performance bonus.</li>
+</ul>
+<p>Be sure to clean up on destruction.</p>
+
+<h3>Company Executive</h3>
+<p>The database for the company exeutives will contain up to MAX_SIZE items of data.</p>
+<ul>
+    <li>The company executive list is based on the ExecutiveEmployee structure. You will have to keep track of the number of executives.</li>
+    <li>The company executive constructor should initialize any pointers to nullptr and any variables to 0 or "".</li>
+    <li><b>AddPersonnel()</b>. This function will take as an argument the number of persons to be added to the database. It returns true if 
+        these persons have been successfully added, false otherwise. It should test to see if 
+    the maximum size has not been encroached. Any new executives have to be added to the list of executives. This means creating a new list 
+    copied from the old list with space for the new executives at the end. Be sure to delete the old list. Each executive should be asked 
+    the following:
+    <ul>
+        <li>Enter the executive's name: </li>
+        <li>Enter the executive's position: </li>
+        <li>Enter the executive's base salary: </li>
+        <li>Enter the executive's annual stock option dividend: </li>
+        <li>Enter the executive's annual perquisites: </li>
+    </ul></li>
+    <li><b>FindPersonnel()</b>. This function will take as arguments the name of the person to be found, and a reference to the person found. 
+        That person is of type ExecutiveEmployee. The function returns true if the person is found, false otherwise.</li>
+    <li><b>CalculateSalary()</b>. This function takes as an argument the name of a person and returns the person's salary. If the person is not
+        found, 0.00 is returned. If the person is found, then salary is the base salary plus the annual stock option dividend plus 
+        the annual perquisites.</li>
+</ul>
+<p>Be sure to clean up on destruction.</p>
+
+<h3>Sample Run</h3>
+<p>The main function has been given to you in the file <a href="CompanyMain.cpp" target="_blank">CompanyMain.cpp</a>.</p>
+<p>A sample run is as follows:<br><br>
+<pre>
+    Add three persons to each of your databases.
+    Enter the employee's name: Michel Goulet
+    Enter the employee's position: Software Developer
+    Enter the employee's base salary: 78000
+    Enter the employee's annual profit sharing amount: 3000
+    Enter the employee's annual performance bonus: 2000
+    
+    Enter the employee's name: Maryam Barakat
+    Enter the employee's position: Project Manager
+    Enter the employee's base salary: 110000
+    Enter the employee's annual profit sharing amount: 4000
+    Enter the employee's annual performance bonus: 4000
+    
+    Enter the employee's name: Mark Crawford
+    Enter the employee's position: Senior Design Engineer
+    Enter the employee's base salary: 97000
+    Enter the employee's annual profit sharing amount: 5000
+    Enter the employee's annual performance bonus: 3000
+    
+    
+    Enter the executive's name: Rakesh Patel
+    Enter the executive's position: Chief Technology Officer
+    Enter the executive's base salary: 900000
+    Enter the executive's annual stock option dividend: 1200000
+    Enter the executive's annual perquisites: 45000
+    
+    Enter the executive's name: Christopher Smith
+    Enter the executive's position: Vice President
+    Enter the executive's base salary: 500000
+    Enter the executive's annual stock option dividend: 100000
+    Enter the executive's annual perquisites: 33000
+    
+    Enter the executive's name: Anna Pawlowska
+    Enter the executive's position: President
+    Enter the executive's base salary: 3000000
+    Enter the executive's annual stock option dividend: 900000
+    Enter the executive's annual perquisites: 160000
+    
+    
+    Enter a name to search for in both databases: Christopher Smith
+    Christopher Smith works as Vice President and earned $633000.00 last year.
+    
+    Add two more persons to your databases.
+    Enter the employee's name: Taha Ali
+    Enter the employee's position: Senior Test Engineer
+    Enter the employee's base salary: 88000
+    Enter the employee's annual profit sharing amount: 1000
+    Enter the employee's annual performance bonus: 900
+    
+    Enter the employee's name: Parissa Belfort
+    Enter the employee's position: Team Lead
+    Enter the employee's base salary: 100000
+    Enter the employee's annual profit sharing amount: 5000
+    Enter the employee's annual performance bonus: 6000
+    
+    
+    Enter the executive's name: Mark Cuban
+    Enter the executive's position: Owner
+    Enter the executive's base salary: 3000000
+    Enter the executive's annual stock option dividend: 3000000
+    Enter the executive's annual perquisites: 1000000
+    
+    Enter the executive's name: Trevor Hansen
+    Enter the executive's position: Senior Vice President
+    Enter the executive's base salary: 750000
+    Enter the executive's annual stock option dividend: 120000
+    Enter the executive's annual perquisites: 60000
+    
+    
+    Enter another name to search for in both databases: Parissa Belfort
+    Parissa Belfort works as Team Lead and earned $111000.00 last year.    
+</pre>
+</p>
+
+<p>Be sure to document your code with the file name, your name and student number. Add comments throughout the code where necessary.</p>
+
+<h3>Questions</h3>
+<ol>
+    <li>Describe in general the types of polymorphism in C++.</li>
+    <li>Explain the differences and similarities between parametric polymorphism and adhoc polymorphism.</li>
+    <li>Why should templated code be implemented in a header file?</li>
+</ol>
+
+<h3>Lab Submission:</h3>
+
+<p>Please email all your code and the answers to the questions to:
+    <a href="mailto: miguel.watler@senecacollege.ca">miguel.watler@senecacollege.ca</a></p>
+<b>NOTE:</b> My last name is <b>Watler</b> not Walter.</p>
+
+<h4><b><u>Late Policy</u></b></h4>
+
+<p>You will be docked 10% if your lab is submitted 1-2 days late.<br>
+You will be docked 20% if your lab is submitted 3-4 days late.<br>
+You will be docked 30% if your lab is submitted 5-6 days late.<br>
+You will be docked 40% if your lab is submitted 7 days late.<br>
+You will be docked 50% if your lab is submitted over 7 days late.</p>
+

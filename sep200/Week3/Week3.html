@@ -1,0 +1,81 @@
+<h1>Week 3 - Classes and Resources, Operator Overloading, continued</h1>
+
+<h3>Introduction</h3>
+<p>This week we will look at classes and resources. We will look further at operator overloading, specifically the copy constructor, the copy assignment, the move constructor and move assignment operators.</p>
+
+<h3>Videos</h3>
+<table>
+  <tr><td>Copy Constructor and Assignment</td><td><a href="https://www.youtube.com/watch?v=upxJVLNevoc" target="_blank">C++ Tutorial: Operator Overloading - Copy Constructor + Assignment Operator</a></td></tr>
+  <tr><td>Move Constructor and Assignment</td><td><a href="https://www.youtube.com/watch?v=ehMg6zvXuMY" target="_blank">Move Semantics in C++</a></td></tr>
+  <tr><td></td><td><a href="https://www.youtube.com/watch?v=OWNeCTd7yQE&t=329s" target="_blank"></a>std::move and the Move Assignment Operator in C++</a></td></tr>
+  <tr><td>Overloading Input/Output Operators</td><td><a href="https://www.youtube.com/watch?v=TwW2Nl45FvE" target="_blank">Overloading C++ Stream Insertion, Extraction Operators</a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<p>.</p>
+
+<h3>Lecture Material</h3>
+<table>
+  <tr><td>Text Reference:</td><td>Chapters 18 and 19 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997259304203226" target="_blank">The C++ Programming Language</a></td></tr>
+  <tr><td></td><td>Chapters 7, 8 and 14 of <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/1g8f6u9/cdi_safari_books_9780133053043" target="_blank">C++ Primer</a></td></tr>
+  <tr><td>Rvalue References:</td><td><a href="https://www.cprogramming.com/c++11/rvalue-references-and-move-semantics-in-c++11.html" target="_blank">Move semantics and rvalue references in C++11</a></td></tr>
+  <tr><td>Lecture Notes:</td><td><a href="ClassesResources.docx" target="_blank">Classes and Resources</a></td></tr>
+  <tr><td></td><td><a href="References.docx" target="_blank">References</a></td></tr>
+  <tr><td></td><td><a href="MoveOperators.docx" target="_blank">Move Operators</a></td></tr>
+  <tr><td></td><td><a href="NOTES.rtf" target="_blank">Rough Notes from today's lecture</a></td></tr>
+</table>
+
+<h3>Lab(s)</h3>
+<ul>
+  <li><a href="../Labs/Lab1/Lab1.html" target="_blank">Lab 1</a>.</li>
+  <li><a href="../Labs/Lab2/Lab2.html" target="_blank">Lab 2</a>.</li>
+</ul>
+
+<h3>Assignment(s)</h3>
+<p>None.</p>
+
+<h3>Sample Code</h3>
+
+<p><em>LValues and RValues</em></p>
+<p>Modern C++ (C++0x and greater) has introduced rvalue references: a new type that can bind to temporary objects, giving you the ability to modify them. 
+  The following code is a great exercise on lvalues and rvalues. It demonstrates that lvalues are variables with some kind of storage, and rvalues are 
+  temporary values. The concepts gained here are used in the move constructor and move assignment operator:
+  <ul>
+    <li><a href="LvalueRvalue/LValueRValue.cpp" target="_blank">LValueRValue.cpp</a>.</li>
+  </ul>
+</p>
+
+<p><em>Copy/Move Constructor/Assignment</em></p>
+<ul>
+  <li>The following program demonstrates the copy constructor, copy assignment move constructor and move assignment via a circuit simulator which simulates a series electrical circuit
+    with an inductor, resistor and capacitor. Each electrical component is characterized in a class. For instance, the class <b>Inductor</b> records
+    the component's inductance and can calculate the voltage across the inductor for a given current. The code is:<br>
+    <a href="SeriesCircuit/Inductor.h" target="_blank">Inductor.h</a>,
+    <a href="SeriesCircuit/Inductor.cpp" target="_blank">Inductor.cpp</a>,
+    <a href="SeriesCircuit/Resistor.h" target="_blank">Resistor.h</a>,
+    <a href="SeriesCircuit/Resistor.cpp" target="_blank">Resistor.cpp</a>,
+    <a href="SeriesCircuit/Capacitor.h" target="_blank">Capacitor.h</a>,
+    <a href="SeriesCircuit/Capacitor.cpp" target="_blank">Capacitor.cpp</a>, and
+    <a href="SeriesCircuit/SeriesCircuit.cpp" target="_blank">SeriesCircuit.cpp</a>.
+  </li>
+
+<p><em>Operator Overloading, continued</em></p>
+  <li>The following program shows the overloading of the <b>>></b> and <b><<</b> operators by a card game played by some of the characters in the TV show
+  "The Sopranos". The code can be found at:<br>
+  <a href="CardGame/Player.h" target="_blank">Player.h</a>,
+  <a href="CardGame/Player.cpp" target="_blank">Player.cpp</a>, and
+  <a href="CardGame/CardGame.cpp" target="_blank">CardGame.cpp</a>.
+  </li>
+</ul>
+
+<p><em>A Singleton Database</em></p>
+The following code makes use of the Singleton design pattern to ensure there is only one instance of the database class. The code demonstrates 
+static class variables, static class functions, class enumerations, and embedded debug logging:
+<ul>
+  <li>
+    <a href="SingletonDataBase/Data.txt" target="_blank">Data.txt</a>,
+    <a href="SingletonDataBase/Database.h" target="_blank">Database.h</a>,
+    <a href="SingletonDataBase/Database.cpp" target="_blank">Database.cpp</a> and
+    <a href="SingletonDataBase/DatabaseMain.cpp" target="_blank">DatabaseMain.cpp</a>.
+  </li>
+</ul>

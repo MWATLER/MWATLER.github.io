@@ -1,0 +1,94 @@
+<h1>Week 13 - April 10-14</h1>
+<h3>Introduction</h3>
+<p>This week we are going to look at storage management.
+</p>
+
+<h3>Videos</h3>
+<table>
+    <tr><td>USB</td><td><a href="https://www.youtube.com/watch?v=-tDquvejreE" target="_blank">How To Mount USB Drive in Linux</a></td></tr>
+    <tr><td>ISO</td><td><a href="https://www.youtube.com/watch?v=V1n_Z3drqKc" target="_blank">How to mount / umount an ISO file in Linux Ubuntu using terminal </a></td></tr>
+    <tr><td>Linux Commands</td><td><a href="https://www.youtube.com/watch?v=DflWASw7JMU" target="_blank">Linux Commands mount, umount, fdisk & mkfs </a></td></tr>
+</table>
+
+<h3>Quiz</h3>
+<ul>
+    <li><b>Quiz 11</b> will be on memory mounting. Study chapter 14 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
+</ul>
+
+<h3>Lecture Material</h3>
+<ul>
+    <li>Chapter 10 of 
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/iq0dqm/alma997143391103226" target="_blank">Operating System Concepts</a></li>
+    <li>Chapters 13 and 14 of
+        <a href="https://senecacollege.primo.exlibrisgroup.com/permalink/01SENC_INST/17thfn4/alma997359010403226" target="_blank">The Linux Programming Interface</a></li>
+</ul>
+
+<h3>Labs</h3>
+<ul>
+    <li><a href="../Labs/Lab10/Lab10.html" target="_blank">Lab 10</a> (April 14) - Work Package.</li>
+</ul>
+
+<h3>Assignment</h3>
+<p><a href="../Assignments/Assignment2/Assignment2.html" target="_blank">Assignment 2</a> (due April 14).</p>
+
+
+<h3>Additional Lecture Material</h3>
+<p><b>Useful Linux Commands:</b> <a href="https://www.cyberithub.com/umount-mount-command-examples-in-linux/" target="_blank">18 Popular mount/umount commands</a></p>
+<p>
+<table>
+<tr><td><b>More Useful Linux commands:</b></td><td>NOTE: for most of these you have to be super-user</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man8/mount.8.html" target="_blank">mount</a></td><td> lists all currently mounted devices</td></tr>
+<tr><td># cat /proc/mounts </td><td>a list of the currently mounted file systems</td></tr>
+<tr><td># cat /etc/mtab </td><td>slightly more detailed list of currently mounted file systems</td></tr>
+<tr><td># cat /etc/fstab </td><td>descriptions of all of the available file systems</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man8/mount.8.html" target="_blank">mount</a> /dev/sdc1 /u01 </td><td>mount a device partition</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man8/umount.8.html" target="_blank"> umount</a> /u01/ </td><td>unmount a partition</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man1/df.1.html" target="_blank"> df</a> -h </td><td>disk drives on your system</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man1/df.1.html" target="_blank"> df</a> -Th </td><td>disk drives on your system with the types</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man8/mount.8.html" target="_blank"> mount</a>  </td><td>view all mount information</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man8/mount.8.html" target="_blank"> mount</a> -V </td><td>mount command version</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man8/mount.8.html" target="_blank"> mount</a> -a </td><td>mount all filesystems of /etc/fstab</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man8/umount.8.html" target="_blank"> umount</a> -a </td><td>unmount all filesystems of /etc/fstab</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man8/mount.8.html" target="_blank"> mount</a> -t tmpfs</td><td>check all mounting information of a specific filesystem</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man8/fdisk.8.html" target="_blank"> fdisk</a> -l </td><td>list the entire filesystem</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man8/lsblk.8.html" target="_blank"> lsblk</a> -f </td><td>directory trees for block devices</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man8/parted.8.html" target="_blank"> parted</a> -l</td><td>the partition table</td></tr>
+<tr><td># <a href="https://man7.org/linux/man-pages/man8/findmnt.8.html" target="_blank"> findmnt</a></td><td>target source for the root directory tree</td></tr>
+</table>
+</p>
+<h3>Sample Code</h3>
+
+<p><em>Mounting /dev/sr0</em></p>
+<ul>
+    <li>Code that demonstrates mounting and unmounting programmatically mounts <b>/dev/sr0</b> to a local directory </b>cdrom</b>. The type of the filesystem is RAM.
+        The code can be found at:<br>
+        <a href="mount/Makefile" target="_blank">Makefile</a>,
+        <a href="mount/Mount.cpp" target="_blank">Mount.cpp</a> and
+        <a href="mount/UMount.cpp" target="_blank">UMount.cpp</a>.<br>
+        Multiple mounting points <b>cdrom0</b>, <b>cdrom1</b>, <b>cdrom2</b>, <b>cdrom3</b> for <b>dev/sr0</b> is demonstrated in the following code:<br>
+        <a href="mount/Makefile" target="_blank">Makefile</a>,
+        <a href="mount/MultipleMount.cpp" target="_blank">MultipleMount.cpp</a> and
+        <a href="mount/MultipleUMount.cpp" target="_blank">MultipleUMount.cpp</a>.
+     </li>
+     <li>Code that demonstrates the binding of mount directories, where <b>/dev/sr0</b> is mounted to <b>cdrom0</b> and <b>cdrom1</b>, and 
+        <b>cdrom0</b> and <b>cdrom1</b> are bound together can be seen at:<br>
+        <a href="mount2/Makefile" target="_blank">Makefile</a>,
+        <a href="mount2/BindMount.cpp" target="_blank">BindMount.cpp</a> and
+        <a href="mount2/MultipleUMount.cpp" target="_blank">MultipleUMount.cpp</a>.
+     </li>
+</ul>
+
+<p><em>Mounting /dev/sda5 and /dev/sr0</em></p>
+<ul>
+    <li>Code that mounts <b>/dev/sda5</b> to <b>cdrom0</b> with filesystem type ext4, and mounts <b>/dev/sr0</b> to </b>cdrom1</b> can be found at:<br>
+        <a href="mountExt4/Makefile" target="_blank">Makefile</a>,
+        <a href="mountExt4/MountExt4.cpp" target="_blank">MountExt4.cpp</a> and
+        <a href="mountExt4/MultipleUMount.cpp" target="_blank">MultipleUMount.cpp</a>.
+     </li>
+     <li>Code that gets the statistics for these mounts can be found at:<br>
+        <a href="statvfs/" target="_blank">Makefile</a>,
+        <a href="statvfs/MountStatvfs.cpp" target="_blank">MountStatvfs.cpp</a> and
+        <a href="statvfs/MultipleUMount.cpp" target="_blank">MultipleUMount.cpp</a>.
+     </li>
+</ul>

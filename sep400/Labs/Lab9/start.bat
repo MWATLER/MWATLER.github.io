@@ -1,0 +1,21 @@
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+./nLoop2 &
+sudo ./hack &
