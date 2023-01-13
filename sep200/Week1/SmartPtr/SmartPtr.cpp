@@ -9,7 +9,8 @@ void display(const char* s) {
 //  Title* t = new Title(s);
     SmartPtr<Title> t(new Title(s));//The SmartPtr is removed once the function is out of scope
 
-    if (!t->display()) return;
+    if (!t->display()) 
+        return;
 //  delete t;
     std::cout << "Leaving display()" << std::endl;
 }
@@ -20,5 +21,6 @@ int main() {
 
     for (int i = 0; i < SIZE; ++i) {
         display(s[i]);
+        std::cout << std::endl;
     }
 }

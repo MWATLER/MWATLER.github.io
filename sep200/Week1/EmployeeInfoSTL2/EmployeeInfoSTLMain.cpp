@@ -27,7 +27,7 @@ int main() {
 	cout << endl;
 
 	cout << "The number of employees by static variable is " << EmployeeInfoSTL::numEmployees << endl;
-	cout << "The number of employees by vector size is " << empl.size() << endl;
+	cout << "The number of employees by list size is " << empl.size() << endl;
 	cout << endl;
 
     //Add an employee to the front of the list
@@ -48,7 +48,7 @@ int main() {
 	cout << endl;
 
 	cout << "The number of employees by static variable is " << EmployeeInfoSTL::numEmployees << endl;
-	cout << "The number of employees by vector size is " << empl.size() << endl;
+	cout << "The number of employees by list size is " << empl.size() << endl;
 	cout << endl;
 
 	return 0;

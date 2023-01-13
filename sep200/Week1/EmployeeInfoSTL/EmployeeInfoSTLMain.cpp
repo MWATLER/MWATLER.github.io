@@ -30,6 +30,9 @@ int main() {
 	cout << "The number of employees by vector size is " << empl.size() << endl;
 	cout << endl;
 
+	cout << "The size of the vector is "<< empl.size() <<endl;
+	cout << "The capacity of the vector is "<< empl.capacity() <<endl;
+
     //Add an employee to the front and delete the last employee
 	EmployeeInfoSTL empl4("Bill Durnham", "Product Support Specialist", 84000.00);
 	empl.front() = empl4;
@@ -44,6 +47,15 @@ int main() {
 	cout << "The number of employees by static variable is " << EmployeeInfoSTL::numEmployees << endl;
 	cout << "The number of employees by vector size is " << empl.size() << endl;
 	cout << endl;
+
+	cout << "The size of the vector is " << empl.size() << endl;
+	cout << "The capacity of the vector is " << empl.capacity() << endl;
+
+	for (int i = 0; i < 1000; ++i) {
+		empl.push_back(EmployeeInfoSTL("Employee", "Position", 50000.00));
+		cout << "The size of the vector is " << empl.size() << endl;
+		cout << "The capacity of the vector is " << empl.capacity() << endl;
+	}
 
 	return 0;
 }

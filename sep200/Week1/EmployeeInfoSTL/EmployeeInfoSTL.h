@@ -19,9 +19,9 @@ public:
 	static double runningTotal;
 	EmployeeInfoSTL();
 	EmployeeInfoSTL(std::string _name, std::string _position, double _salary);
-	std::string GetName();
-	double GetAverageSalary();
-	Err_Status PrintInfo();
+	std::string GetName() const;
+	double GetAverageSalary() const;
+	Err_Status PrintInfo() const;
 };
 
 #endif// _EMPLOYEEINFOSTL_H_

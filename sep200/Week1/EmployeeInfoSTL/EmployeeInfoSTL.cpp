@@ -22,17 +22,17 @@ EmployeeInfoSTL::EmployeeInfoSTL(std::string _name, std::string _position, doubl
 	runningTotal += salary;
 }
 
-std::string EmployeeInfoSTL::GetName() {
+std::string EmployeeInfoSTL::GetName() const {
 	return name;
 }
 
-double EmployeeInfoSTL::GetAverageSalary() {
+double EmployeeInfoSTL::GetAverageSalary() const {
 	double retVal = 0.0;
 	if (numEmployees > 0) retVal = (double)runningTotal / numEmployees;
 	return retVal;
 }
 
-Err_Status EmployeeInfoSTL::PrintInfo() {
+Err_Status EmployeeInfoSTL::PrintInfo() const {
 	Err_Status retVal = Err_Success;
 	if (name == "" || position == "" || salary <= 0.0 || numEmployees == 0) retVal = Err_Failure;
 	else {
