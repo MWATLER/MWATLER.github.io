@@ -20,8 +20,8 @@ int main()
     ssize_t numRead, numWrite;
     int rc=0;
 
-    char inFile[] = "/home/miguelwatler/sep400/Week1/Makefile/Math.cpp";
-    char outFile[]= "/home/miguelwatler/sep400/Week1/Makefile/MathCopy.cpp";
+    char inFile[] = "/home/watler/sep400/Week1/Makefile/Math.cpp";
+    char outFile[]= "/home/watler/sep400/Week1/Makefile/MathCopy.cpp";
 
     fdIn = open(inFile, O_RDONLY);
     if(fdIn<0) {

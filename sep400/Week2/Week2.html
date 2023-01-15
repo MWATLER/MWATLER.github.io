@@ -6,7 +6,7 @@
 <h3>Videos</h3>
 <table>
   <tr><td>Static and Shared Libraries</td><td><a href="https://www.youtube.com/watch?v=-vp9cFQCQCo" target="_blank">Linux static and shared libraries</a></td></tr>
-  <tr><td>File I/O</td><td><a href="https://www.youtube.com/watch?v=dP3N8g7h8gY" target="_blank">Linux file input/output</a></td></tr>
+  <tr><td>File I/O</td><td><a href="https://www.youtube.com/watch?v=w6Sev65B2KA" target="_blank"> File I/O in Linux </a></td></tr>
   <tr><td></td><td><a href="https://www.youtube.com/watch?v=BQJBe4IbsvQ" target="_blank">open() vs fopen()</a></td></tr>
   <tr><td>Debugging</td><td><a href="https://www.youtube.com/watch?v=J7L2x1ATOgk" target="_blank">gdb And How To Debug C And C++ Code</a></td></tr>
   <tr><td>dup(), dup2()</td><td><a href="https://www.youtube.com/watch?v=EqndHT606Tw" target="_blank">Linux file dup(), dup2()</a></td></tr>
@@ -105,6 +105,10 @@
   <li>For an example of a program that simply copies a file from one location to another, see <a href="SimpleFile/SimpleFile.cpp" target="_blank">SimpleFile.cpp</a>.</li>
   <li>For an example of a program that does exactly the same thing but uses lseek to start 100 bytes into the input file, see <a href="SimpleFile/SeekFile.cpp" target="_blank">SeekFile.cpp</a>.</li>
   <li>For a simple makefile to create these, see <a href="SimpleFile/Makefile" target="_blank">Makefile</a>.</li>
+  <li>The C library function fopen is compared with the Linux system function open via two test files - <a href="speedTest/openTest.cpp" target="_blank">openTest.cpp</a> and 
+    <a href="speedTest/fopenTest.cpp" target="_blank">fopenTest.cpp</a>. They both copy large amounts of data (<a href="speedTest/LargeOpen.txt" target="_blank">LargeOpen.txt</a> 
+    and <a href="speedTest/LargeFOpen.txt" target="_blank">LargeFOpen.txt</a>) and the time to copy is measured as a function of open's buffer size. 
+    For the makefile see <a href="speedTest/Makefile" target="_blank">Makefile</a>.</li>
 </ul>
 
 <p><em>GDB - a Linux debugger</em></p>
@@ -140,7 +144,7 @@
   <b>$ sudo apt install valgrind</b></li>
 </ul>
 
-<p><em>Advanced File I/O, Debugging with The Standard Error Channel</em></p>
+<p><em>Advanced File I/O, Debugging with The Standard Error Channel</em> (out of scope)</p>
 <ul>
  <li>Sometimes it is useful to duplicate a file descriptor and redirect output from or to a file. The source code for a file which redirects the standard error 
    channel via <a href="http://man7.org/linux/man-pages/man2/dup.2.html" target="_blank">dup() and dup2()</a> can be found in <a href="dup/fileDup.cpp" target="_blank">fileDup.cpp</a></li>
